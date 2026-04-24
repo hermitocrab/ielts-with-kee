@@ -30,7 +30,13 @@ if (typeof supabase !== 'undefined') {
 } else if (typeof window.supabase !== 'undefined') {
   log('✅ window.supabase found');
 } else {
-  log('❌ supabase not loaded yet, trying dynamic import...');
+  log('❌ supabase not loaded yet, adding fallback script...');
+  // Add fallback script tag
+  let s = document.createElement('script');
+  s.src = 'js/lib/supabase.min.js';
+  s.onload = () => log('✅ Fallback script loaded');
+  s.onerror = () => log('❌ Fallback script failed to load');
+  document.head.appendChild(s);
 }
 
 // Step 2: Try creating client with error handling

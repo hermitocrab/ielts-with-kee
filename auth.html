@@ -223,11 +223,23 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="js/lib/supabase.min.js"></script>
   <script>
     const SUPABASE_URL = 'https://areedjmpngwzocqpoaur.supabase.co';
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFyZWVkam1wbmd3em9jcXBvYXVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY5ODAwMTgsImV4cCI6MjA5MjU1NjAxOH0.CSHpruDqBm4mbKseySbbOlZk2-uBG2Oxe4DvqwTVFJ8';
-    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    // Create Supabase client with proper auth config
+    let supabase;
+    try {
+      supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+        auth: {
+          autoRefreshToken: true,
+          persistSession: true,
+          detectSessionInUrl: true
+        }
+      });
+    } catch(e) {
+      showError('Failed to initialize: ' + e.message);
+    }
 
     function showError(msg) {
       const el = document.getElementById('auth-error');
