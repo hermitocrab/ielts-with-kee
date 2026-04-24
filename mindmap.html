@@ -115,7 +115,7 @@
       const containerEl = document.getElementById('mindmap-container');
 
       try {
-        const resp = await fetch('../ielts-speaking-mindmap.json');
+        const resp = await fetch('ielts-speaking-mindmap.json');
         if (!resp.ok) throw new Error(`HTTP ${resp.status}: ${resp.statusText}`);
         const data = await resp.json();
 
