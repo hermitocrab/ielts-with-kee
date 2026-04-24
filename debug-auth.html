@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>Auth Debug</title></head>
+<body style="font-family:sans-serif;max-width:600px;margin:40px auto;padding:20px;">
+<h1>🔍 Auth Debug Page</h1>
+<div id="status" style="background:#f5f5f7;padding:16px;border-radius:12px;margin:16px 0;white-space:pre-wrap;font-family:monospace;"></div>
+<hr>
+<button onclick="doSignIn()" style="padding:12px 24px;background:#9F44D3;color:#fff;border:none;border-radius:12px;font-size:16px;cursor:pointer;margin:8px 4px;">Sign In</button>
+<button onclick="doSignUp()" style="padding:12px 24px;background:#007AFF;color:#fff;border:none;border-radius:12px;font-size:16px;cursor:pointer;margin:8px 4px;">Sign Up</button>
+<button onclick="checkSession()" style="padding:12px 24px;background:#555;color:#fff;border:none;border-radius:12px;font-size:16px;cursor:pointer;margin:8px 4px;">Check Session</button>
+<button onclick="clearSession()" style="padding:12px 24px;background:#C02E3F;color:#fff;border:none;border-radius:12px;font-size:16px;cursor:pointer;margin:8px 4px;">Sign Out</button>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script>
+const SUPABASE_URL = 'https://areedjmpngwzocqpoaur.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFyZWVkam1wbmd3em9jcXBvYXVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY5ODAwMTgsImV4cCI6MjA5MjU1NjAxOH0.CSHpruDqBm4mbKseySbbOlZk2-uBG2Oxe4DvqwTVFJ8';
+
+let supabase;
+try {
+  supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+    auth: {
+      autoRefreshToken: true,
+      persistSession: true,
+      detectSessionInUrl: true,
+      flowType: 'pkce'
+    }
+  });
+  log('✅ Supabase client created');
+} catch(e) {
+  log('❌ Create client error: ' + e.message);
+  log('supabase object type: ' + typeof window.supabase);
+}
+
+function log(msg) {
+  const el = document.getElementById('status');
+  el.textContent += msg + '\n';
+}
+
+async function doSignIn() {
+  log('--- Sign In ---');
+  try {
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email: 'sriskeeda@gmail.com',
+      password: 'Test123!'
+    });
+    if (error) {
+      log('❌ Error: ' + JSON.stringify(error));
+    } else {
+      log('✅ Success! User: ' + data.user.email);
+      log('✅ Token: ' + data.session.access_token.substring(0, 30) + '...');
+    }
+  } catch(e) {
+    log('❌ Exception: ' + e.message);
+  }
+}
+
+async function doSignUp() {
+  log('--- Sign Up Test ---');
+  try {
+    const { data, error } = await supabase.auth.signUp({
+      email: 'test-' + Date.now() + '@test.com',
+      password: 'test123456',
+      options: { data: { full_name: 'Test User' } }
+    });
+    if (error) {
+      log('❌ Error: ' + JSON.stringify(error));
+    } else {
+      log('✅ Sign up response: ' + JSON.stringify({ id: data.user?.id, email: data.user?.email }));
+    }
+  } catch(e) {
+    log('❌ Exception: ' + e.message);
+  }
+}
+
+async function checkSession() {
+  log('--- Check Session ---');
+  const { data: { session }, error } = await supabase.auth.getSession();
+  if (error) log('❌ Error: ' + error.message);
+  else if (session) log('✅ Active session: ' + session.user.email);
+  else log('ℹ️ No active session');
+}
+
+async function clearSession() {
+  await supabase.auth.signOut();
+  log('🔓 Signed out');
+}
+</script>
+</body>
+</html>
