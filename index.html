@@ -171,6 +171,92 @@
       flex-wrap: wrap;
       margin-top: 20px;
     }
+
+    /* Learning Path */
+    .learning-path {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .path-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .path-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 24px;
+      top: 52px;
+      bottom: -12px;
+      width: 2px;
+      background: var(--gray-300);
+    }
+
+    .path-step-num {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--purple);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(159, 68, 211, 0.25);
+    }
+
+    .path-step-content {
+      flex: 1;
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      border: 1px solid var(--gray-200);
+    }
+
+    .path-step-content h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gray-800);
+      margin-bottom: 4px;
+    }
+
+    .path-step-content p {
+      font-size: 0.85rem;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+
+    .path-step-content .path-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--purple);
+    }
+
+    .path-step-content .path-link:hover {
+      text-decoration: underline;
+    }
+
+    .tool-card {
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .tool-card:nth-child(1) { animation-delay: 0.05s; }
+    .tool-card:nth-child(2) { animation-delay: 0.15s; }
+    .tool-card:nth-child(3) { animation-delay: 0.25s; }
+    .tool-card:nth-child(4) { animation-delay: 0.35s; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -236,6 +322,58 @@
           <span class="card-tag pink">Writing</span>
         </div>
         <a href="grammar.html" class="btn btn-primary btn-block">🚀 Launch Grammar</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--white);border-bottom:1px solid var(--gray-200);">
+    <h2 class="section-title">🗺️ Suggested Learning Path</h2>
+    <p class="section-subtitle">Follow the flow to level up your IELTS band score</p>
+
+    <div class="learning-path">
+      <div class="path-step">
+        <div class="path-step-num">1</div>
+        <div class="path-step-content">
+          <h4>🧠 Explore the Mindmap</h4>
+          <p>Start here to understand the full IELTS Speaking syllabus — structure, criteria, vocabulary, and strategies.</p>
+          <a href="mindmap.html" class="path-link">Open Mindmap →</a>
+        </div>
+      </div>
+
+      <div class="path-step">
+        <div class="path-step-num">2</div>
+        <div class="path-step-content">
+          <h4>🗣️ Practice Speaking Part 1</h4>
+          <p>Use flashcards and logic labels to master real question patterns with model answers and band 7+ strategies.</p>
+          <a href="speaking.html" class="path-link">Open Speaking Toolkit →</a>
+        </div>
+      </div>
+
+      <div class="path-step">
+        <div class="path-step-num">3</div>
+        <div class="path-step-content">
+          <h4>🔊 Master Pronunciation</h4>
+          <p>Learn connected speech, weak forms, linking, and intrusion sounds with interactive flip cards and song lyrics.</p>
+          <a href="phonetics.html" class="path-link">Open Connected Speech Pro →</a>
+        </div>
+      </div>
+
+      <div class="path-step">
+        <div class="path-step-num">4</div>
+        <div class="path-step-content">
+          <h4>📚 Level Up Your Grammar</h4>
+          <p>Nano Banana Edition — interactive grammar exercises and sentence structure drills for band 7+ writing.</p>
+          <a href="grammar.html" class="path-link">Open Grammar Lab →</a>
+        </div>
+      </div>
+
+      <div class="path-step">
+        <div class="path-step-num">5</div>
+        <div class="path-step-content">
+          <h4>📝 Annotate on the Whiteboard</h4>
+          <p>Use the interactive whiteboard for live teaching, brainstorming, drawing, and PDF annotation during practice.</p>
+          <a href="whiteboard.html" class="path-link">Open Whiteboard →</a>
+        </div>
       </div>
     </div>
   </section>
@@ -320,7 +458,11 @@
     <div class="cta-buttons">
       <a href="resources.html" class="btn btn-banana">📥 Browse Resources</a>
       <a href="mindmap.html" class="btn btn-outline">🧠 View Mindmap</a>
+      <a href="#toolkit" class="btn btn-outline" style="display:none;"></a>
     </div>
+    <p style="margin-top:24px;font-size:0.82rem;color:var(--gray-500);">
+      💡 <strong>Pro tip:</strong> Start with the Mindmap → Practice Speaking → Refine Pronunciation → Polish Grammar
+    </p>
   </section>
 
   <footer class="site-footer">
