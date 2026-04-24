@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — IELTS with Kee</title>
+  <link rel="stylesheet" href="css/global.css">
+  <style>
+    .dash-header {
+      background: linear-gradient(135deg, #9F44D3, #B265E6);
+      color: white;
+      padding: 40px 0 60px;
+      text-align: center;
+    }
+    .dash-header h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .dash-header p {
+      opacity: 0.9;
+      font-size: 1rem;
+    }
+    .dash-header .user-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      margin-top: 12px;
+    }
+    .dash-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: -30px;
+      padding: 0 20px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .stat-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+    .stat-card .number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #9F44D3;
+    }
+    .stat-card .label {
+      font-size: 0.85rem;
+      color: #86868B;
+      margin-top: 4px;
+      font-weight: 500;
+    }
+    .dash-section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .dash-section h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .hw-grid {
+      display: grid;
+      gap: 16px;
+    }
+    .hw-card {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      border: 1px solid #f0f0f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: transform 0.2s;
+    }
+    .hw-card:hover {
+      transform: translateY(-2px);
+    }
+    .hw-card .hw-info h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .hw-card .hw-info p {
+      font-size: 0.85rem;
+      color: #86868B;
+    }
+    .hw-card .hw-status {
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .hw-status.draft { background: #F5F5F7; color: #86868B; }
+    .hw-status.submitted { background: #E5F1FF; color: #007AFF; }
+    .hw-status.reviewed { background: #E8F5E9; color: #2E7D32; }
+    .dash-tools {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .dash-tool-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      border: 1px solid #f0f0f0;
+      text-align: center;
+      transition: all 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+    .dash-tool-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+    .dash-tool-card .icon {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+    .dash-tool-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .logout-btn {
+      background: rgba(255,255,255,0.15);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .logout-btn:hover {
+      background: rgba(255,255,255,0.25);
+    }
+    .dash-header { position: relative; }
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: #86868B;
+    }
+    .empty-state .icon { font-size: 3rem; margin-bottom: 12px; }
+    .btn-new-hw {
+      background: #9F44D3;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-top: 16px;
+    }
+    .btn-new-hw:hover {
+      background: #8B3CBE;
+    }
+  </style>
+</head>
+<body>
+  <div class="dash-header">
+    <h1>📚 My Dashboard</h1>
+    <p>Track your IELTS learning journey</p>
+    <div class="user-badge">🦄 <span id="user-name">Student</span></div>
+    <button class="logout-btn" onclick="handleLogout()">Sign Out</button>
+  </div>
+
+  <div class="dash-stats" id="stats-row">
+    <div class="stat-card"><div class="number" id="stat-homework">0</div><div class="label">Homework Submitted</div></div>
+    <div class="stat-card"><div class="number" id="stat-reviewed">0</div><div class="label">Reviewed</div></div>
+    <div class="stat-card"><div class="number" id="stat-sessions">0</div><div class="label">Practice Sessions</div></div>
+    <div class="stat-card"><div class="number" id="stat-avg">—</div><div class="label">Avg. Score</div></div>
+  </div>
+
+  <div class="dash-section">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+      <h2>📝 My Homework</h2>
+      <button class="btn-new-hw" onclick="showNewHomework()">+ New Submission</button>
+    </div>
+    <div id="hw-list" class="hw-grid">
+      <div class="empty-state">
+        <div class="icon">📋</div>
+        <p>No homework yet. Start your first submission!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="dash-section">
+    <h2>🧰 Practice Tools</h2>
+    <div class="dash-tools">
+      <a href="speaking.html" class="dash-tool-card">
+        <div class="icon">🗣️</div>
+        <h3>Speaking Toolkit</h3>
+      </a>
+      <a href="grammar.html" class="dash-tool-card">
+        <div class="icon">📚</div>
+        <h3>Grammar Lab</h3>
+      </a>
+      <a href="phonetics.html" class="dash-tool-card">
+        <div class="icon">🔊</div>
+        <h3>Phonetics</h3>
+      </a>
+      <a href="whiteboard.html" class="dash-tool-card">
+        <div class="icon">🎨</div>
+        <h3>Whiteboard</h3>
+      </a>
+    </div>
+  </div>
+
+  <!-- New Homework Modal -->
+  <div id="hw-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:10000;align-items:center;justify-content:center;" onclick="closeModal(event)">
+    <div style="background:white;border-radius:24px;padding:32px;max-width:500px;width:90%;margin:20px;" onclick="event.stopPropagation()">
+      <h2 style="margin-bottom:20px;">📝 New Homework Submission</h2>
+      <div class="form-group">
+        <label style="display:block;font-weight:600;margin-bottom:6px;">Title</label>
+        <input type="text" id="hw-title" placeholder="e.g. Part 1 Speaking Practice" style="width:100%;padding:12px;border:2px solid #E5E5EA;border-radius:10px;font-size:1rem;">
+      </div>
+      <div class="form-group">
+        <label style="display:block;font-weight:600;margin-bottom:6px;">Content</label>
+        <textarea id="hw-content" placeholder="Paste your work here..." style="width:100%;padding:12px;border:2px solid #E5E5EA;border-radius:10px;font-size:0.95rem;min-height:150px;font-family:inherit;"></textarea>
+      </div>
+      <div class="form-group">
+        <label style="display:block;font-weight:600;margin-bottom:6px;">Tool</label>
+        <select id="hw-tool" style="width:100%;padding:12px;border:2px solid #E5E5EA;border-radius:10px;font-size:1rem;">
+          <option value="speaking">Speaking</option>
+          <option value="grammar">Grammar</option>
+          <option value="phonetics">Phonetics</option>
+          <option value="whiteboard">Whiteboard</option>
+          <option value="general">General</option>
+        </select>
+      </div>
+      <div style="display:flex;gap:12px;margin-top:24px;">
+        <button onclick="submitHomework()" class="btn-auth" style="flex:1;padding:12px;background:#9F44D3;color:white;border:none;border-radius:12px;font-weight:600;cursor:pointer;">Submit</button>
+        <button onclick="document.getElementById('hw-modal').style.display='none'" style="flex:1;padding:12px;background:#F5F5F7;color:#555;border:none;border-radius:12px;font-weight:600;cursor:pointer;">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script>
+    const SUPABASE_URL = 'https://areedjmpngwzocqpoaur.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFyZWVkam1wbmd3em9jcXBvYXVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY5ODAwMTgsImV4cCI6MjA5MjU1NjAxOH0.CSHpruDqBm4mbKseySbbOlZk2-uBG2Oxe4DvqwTVFJ8';
+    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    let currentUser = null;
+
+    async function loadDashboard() {
+      const { data: { session }, error } = await supabase.auth.getSession();
+      if (!session) {
+        window.location.href = 'auth.html';
+        return;
+      }
+      currentUser = session.user;
+      document.getElementById('user-name').textContent = 
+        session.user.user_metadata?.full_name || session.user.email || 'Student';
+
+      loadHomework();
+      loadProgress();
+    }
+
+    async function loadHomework() {
+      const { data, error } = await supabase
+        .from('homework')
+        .select('*')
+        .eq('student_id', currentUser.id)
+        .order('created_at', { ascending: false });
+
+      if (error) {
+        console.error('Load homework error:', error);
+        return;
+      }
+
+      const container = document.getElementById('hw-list');
+      if (!data || data.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <div class="icon">📋</div>
+            <p>No homework yet. Start your first submission!</p>
+          </div>`;
+        return;
+      }
+
+      container.innerHTML = data.map(hw => `
+        <div class="hw-card">
+          <div class="hw-info">
+            <h3>${escapeHtml(hw.title)}</h3>
+            <p>${escapeHtml(hw.tool_type)} • ${new Date(hw.created_at).toLocaleDateString()}</p>
+          </div>
+          <span class="hw-status ${hw.status}">${hw.status}</span>
+        </div>
+      `).join('');
+
+      document.getElementById('stat-homework').textContent = data.length;
+      document.getElementById('stat-reviewed').textContent = data.filter(h => h.status === 'reviewed').length;
+    }
+
+    async function loadProgress() {
+      const { data, error } = await supabase
+        .from('learning_progress')
+        .select('*')
+        .eq('student_id', currentUser.id);
+
+      if (!error && data) {
+        document.getElementById('stat-sessions').textContent = 
+          data.reduce((sum, p) => sum + (p.total_sessions || 0), 0);
+        const scored = data.filter(p => p.score_avg > 0);
+        if (scored.length > 0) {
+          const avg = scored.reduce((s, p) => s + parseFloat(p.score_avg), 0) / scored.length;
+          document.getElementById('stat-avg').textContent = avg.toFixed(1);
+        }
+      }
+    }
+
+    function showNewHomework() {
+      document.getElementById('hw-modal').style.display = 'flex';
+    }
+
+    function closeModal(e) {
+      if (e.target === e.currentTarget) {
+        document.getElementById('hw-modal').style.display = 'none';
+      }
+    }
+
+    async function submitHomework() {
+      const title = document.getElementById('hw-title').value;
+      const content = document.getElementById('hw-content').value;
+      const tool = document.getElementById('hw-tool').value;
+
+      if (!title || !content) {
+        alert('Please fill in title and content');
+        return;
+      }
+
+      const { data, error } = await supabase
+        .from('homework')
+        .insert({
+          student_id: currentUser.id,
+          title,
+          content,
+          tool_type: tool,
+          status: 'submitted'
+        });
+
+      if (error) {
+        alert('Error submitting: ' + error.message);
+        return;
+      }
+
+      document.getElementById('hw-modal').style.display = 'none';
+      document.getElementById('hw-title').value = '';
+      document.getElementById('hw-content').value = '';
+      loadHomework();
+    }
+
+    async function handleLogout() {
+      await supabase.auth.signOut();
+      window.location.href = 'auth.html';
+    }
+
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    loadDashboard();
+  </script>
+</body>
+</html>

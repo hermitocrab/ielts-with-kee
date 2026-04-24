@@ -14,6 +14,7 @@
     { label: 'Grammar', href: 'grammar.html', emoji: '📚', id: 'grammar' },
     { label: 'Mindmap', href: 'mindmap.html', emoji: '🧠', id: 'mindmap' },
     { label: 'Resources', href: 'resources.html', emoji: '📥', id: 'resources' },
+    { label: 'Auth', href: 'auth.html', emoji: '🔑', id: 'auth' },
   ];
 
   function getCurrentPageId() {
