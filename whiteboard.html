@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kee's Language Lab: Ultimate v19</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        :root {
+            --ui-bg: #ffffff;
+            --ui-border: #e0e0e0;
+            --accent: #4a6cf7;
+            --radius: 12px;
+            --shadow: 0 10px 40px rgba(0,0,0,0.2);
+            --ui-opacity: 1;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; outline: none; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow: hidden; 
+            background-color: #f0f2f5; 
+            height: 100vh;
+            width: 100vw;
+        }
+
+        /* === 1. SCROLLABLE DOCUMENT VIEWER === */
+        #doc-viewer {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            overflow: auto; 
+            z-index: 1;
+            scroll-behavior: smooth;
+        }
+
+        #content-wrapper {
+            position: relative;
+            width: 100%; 
+            min-height: 100%; 
+            transform-origin: top center;
+            background: transparent;
+        }
+        
+        #content-wrapper.page-mode {
+            width: 1000px;
+            margin: 50px auto;
+            background: white;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+            min-height: 1400px;
+        }
+
+        #file-render-layer { width: 100%; min-height: 100%; }
+
+        #drawing-layer {
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%;
+            display: block; 
+        }
+
+        body.mode-view #drawing-layer { pointer-events: none; z-index: 10; opacity: 1; }
+        body.mode-draw #drawing-layer { pointer-events: auto; z-index: 999999; }
+        
+        #annotation-layer {
+            position: absolute; top: 0; left: 0; width: 100%; height: 0;
+            z-index: 500; 
+        }
+        .sticky-box { pointer-events: auto; }
+
+        /* === MINDMAP LAYER === */
+        #mindmap-svg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: 450;
+        }
+        .mm-node {
+            position: absolute; background: white; border: 2px solid var(--accent);
+            border-radius: 8px; padding: 10px 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            font-weight: 600; color: #333; z-index: 510; cursor: move;
+            min-width: 100px; text-align: center; pointer-events: auto;
+        }
+        .mm-node:focus-within { box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.3); }
+        .mm-text { outline: none; cursor: text; }
+        .mm-add, .mm-del {
+            position: absolute; width: 22px; height: 22px; border-radius: 50%;
+            text-align: center; line-height: 22px; cursor: pointer; font-size: 14px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); opacity: 0; transition: opacity 0.2s;
+        }
+        .mm-add { right: -11px; top: 50%; transform: translateY(-50%); background: var(--accent); color: white; }
+        .mm-del { left: -8px; top: -8px; background: #e74c3c; color: white; font-size: 11px; }
+        .mm-node:hover .mm-add, .mm-node:hover .mm-del { opacity: 1; }
+
+        /* === 2. NOTEPAD === */
+        #notepad {
+            position: fixed; top: 80px; right: 30px;
+            width: 420px; height: 500px;
+            background: rgba(255, 255, 255, var(--ui-opacity));
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            z-index: 100000; 
+            display: flex; flex-direction: column;
+            resize: both; overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            transition: opacity 0.3s;
+        }
+
+        .notepad-top-area {
+            display: flex; flex-direction: column;
+            background: rgba(241, 243, 245, var(--ui-opacity));
+            border-bottom: 1px solid rgba(0,0,0,0.1); 
+            position: relative; z-index: 10;
+        }
+
+        .np-header {
+            padding: 12px 15px; 
+            cursor: move; display: flex; justify-content: space-between; align-items: center;
+            font-weight: 600; color: #333; flex-shrink: 0; user-select: none;
+        }
+
+        #editor-toolbar {
+            position: absolute; top: 100%; left: 0; width: 100%;
+            padding: 8px 10px; background: rgba(255, 255, 255, 0.98);
+            border-bottom: 1px solid rgba(0,0,0,0.1); box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            display: flex; gap: 5px; flex-wrap: wrap; align-items: center;
+            opacity: 0; pointer-events: none; transform: translateY(-10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #editor-toolbar.expanded { opacity: 1; pointer-events: auto; transform: translateY(0); }
+        
+        .fmt-btn {
+            background: none; border: 1px solid transparent; padding: 4px 6px;
+            border-radius: 4px; cursor: pointer; color: #555; font-size: 13px;
+            min-width: 26px; text-align: center; transition: 0.2s; font-weight: bold;
+        }
+        .fmt-btn:hover { background: rgba(0,0,0,0.08); border-color: #ccc; }
+        .quick-color {
+            width: 16px; height: 16px; border-radius: 50%; cursor: pointer;
+            border: 1px solid rgba(0,0,0,0.2); display: inline-block; margin: 0 2px;
+        }
+
+        #editor-container { 
+            flex: 1; overflow-y: auto; position: relative; 
+            background: rgba(255, 255, 255, var(--ui-opacity));
+            padding: 50px 20px 20px 20px; 
+        }
+        #editor { 
+            font-size: 15px; line-height: 1.6; color: #333; min-height: 100%; width: 100%; outline: none; 
+            white-space: pre-wrap; cursor: text;
+        }
+        #editor img { cursor: grab; transition: transform 0.2s; }
+        #editor img:active { cursor: grabbing; transform: scale(0.98); }
+        
+        #slash-menu {
+            position: fixed; width: 200px; background: white; border-radius: 6px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.25); border: 1px solid #eee;
+            display: none; flex-direction: column; padding: 5px; z-index: 100005;
+        }
+        .slash-item { padding: 8px 10px; display: flex; gap: 10px; align-items: center; border-radius: 4px; cursor: pointer; font-size: 13px; color: #444; }
+        .slash-item:hover { background: #f0f0f0; }
+        
+        #ipa-panel {
+            display: none; position: absolute; bottom: 0; left: 0; width: 100%; height: 200px;
+            background: #fff; border-top: 1px solid #ddd; z-index: 20; padding: 10px;
+            overflow-y: auto; grid-template-columns: repeat(auto-fill, minmax(35px, 1fr)); gap: 5px;
+        }
+        .ipa-key {
+            border: 1px solid #eee; border-radius: 4px; text-align: center; padding: 8px 0;
+            cursor: pointer; font-family: "Segoe UI", sans-serif; font-size: 14px; background: #f9f9f9;
+        }
+        .ipa-key:hover { background: #eef2ff; border-color: var(--accent); }
+        #notepad.show-ipa #ipa-panel { display: grid; }
+        #notepad.show-ipa #editor-container { padding-bottom: 220px; } 
+
+        .todo-item { display: flex; align-items: center; gap: 8px; margin: 4px 0; }
+        .todo-item.checked span { text-decoration: line-through; color: #aaa; }
+
+
+        /* === 3. RETRACTABLE MAIN TOOLBAR === */
+        .toolbar-dock {
+            position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.95); padding: 8px 16px; border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 10px;
+            z-index: 100000; backdrop-filter: blur(5px); 
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s;
+        }
+        .toolbar-hidden { transform: translate(-50%, 150px) !important; opacity: 0; pointer-events: none; }
+
+        #mini-toolbar-btn {
+            position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+            width: 50px; height: 50px; background: var(--ui-bg); border-radius: 50%;
+            box-shadow: var(--shadow); display: flex; align-items: center; justify-content: center;
+            font-size: 22px; color: var(--accent); cursor: pointer; z-index: 99999;
+            transition: transform 0.4s, opacity 0.4s; border: 1px solid #eee;
+        }
+        #mini-toolbar-btn.hidden { transform: translate(-50%, 150px); opacity: 0; pointer-events: none; }
+
+        .btn { background: none; border: none; cursor: pointer; padding: 10px; border-radius: 8px; color: #555; font-size: 18px; }
+        .btn:hover { background: #eee; }
+        .btn.active { background: #eef2ff; color: var(--accent); }
+        .separator { width: 1px; height: 24px; background: #ccc; margin: 0 4px; }
+        .color-dot { width: 24px; height: 24px; border-radius: 50%; border: 2px solid #ddd; cursor: pointer; }
+        .color-dot.active { transform: scale(1.2); border-color: #333; }
+        .hidden-ui { opacity: 0 !important; pointer-events: none !important; }
+
+        #loader {
+            position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8);
+            color:white; z-index: 200000; display:none; flex-direction: column; 
+            justify-content:center; align-items:center; font-size:20px;
+        }
+        .active-mode-msg {
+            position: fixed; top: 80px; left: 50%; transform: translateX(-50%);
+            background: rgba(0,0,0,0.8); color: white; padding: 8px 20px; border-radius: 30px;
+            font-size: 14px; pointer-events: none; z-index: 200000; opacity: 0; transition: opacity 0.3s; font-weight: bold;
+        }
+
+        /* Canvas Images */
+        .canvas-img-box {
+            position: absolute; min-width: 100px; min-height: 100px;
+            background: rgba(255,255,255,0.9); border: 2px dashed var(--accent);
+            padding: 15px 5px 5px 5px; resize: both; overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15); cursor: move; z-index: 400;
+        }
+    </style>
+<link rel="stylesheet" href="css/global.css"></head>
+<body class="mode-draw">
+
+    <div id="loader"><div><i class="fas fa-spinner fa-spin fa-2x"></i></div><div id="loader-text">Loading...</div></div>
+    <div id="mode-msg" class="active-mode-msg">✏️ Draw Mode</div>
+
+    <div id="doc-viewer">
+        <div id="content-wrapper">
+            <div id="file-render-layer"></div>
+            <svg id="mindmap-svg"></svg>
+            <canvas id="drawing-layer"></canvas>
+            <div id="annotation-layer"></div>
+        </div>
+    </div>
+
+    <div id="notepad">
+        <div class="notepad-top-area" id="np-top-area">
+            <div class="np-header" id="np-header">
+                <span style="font-size: 14px; font-weight: 800;">🦄 Kee's Language Lab</span>
+                <div style="display: flex; gap: 8px; align-items: center;">
+                    <input type="range" min="0.1" max="1" step="0.1" value="1" style="width:50px; cursor:pointer;" title="Transparency" oninput="document.documentElement.style.setProperty('--ui-opacity', this.value)">
+                    <i class="fas fa-minus" style="cursor:pointer;" title="Minimize" onclick="toggleNotepadHeight()"></i>
+                </div>
+            </div>
+            
+            <div id="editor-toolbar">
+                <button class="fmt-btn" onclick="formatDoc('bold')" title="Bold"><i class="fas fa-bold"></i></button>
+                <button class="fmt-btn" onclick="formatDoc('italic')" title="Italic"><i class="fas fa-italic"></i></button>
+                <button class="fmt-btn" onclick="formatDoc('underline')" title="Underline"><i class="fas fa-underline"></i></button>
+                <button class="fmt-btn" onclick="formatDoc('strikeThrough')" title="Strikethrough"><i class="fas fa-strikethrough"></i></button>
+                
+                <div class="separator" style="height:15px; margin: 0 4px;"></div>
+                
+                <div class="quick-color" style="background:#000;" onclick="formatDoc('foreColor', '#000')" title="Black"></div>
+                <div class="quick-color" style="background:#e74c3c;" onclick="formatDoc('foreColor', '#e74c3c')" title="Red"></div>
+                <div class="quick-color" style="background:#3498db;" onclick="formatDoc('foreColor', '#3498db')" title="Blue"></div>
+                <div class="quick-color" style="background:#2ecc71;" onclick="formatDoc('foreColor', '#2ecc71')" title="Green"></div>
+                <input type="color" onchange="formatDoc('foreColor', this.value)" style="width:16px; height:16px; border:none; padding:0; cursor:pointer; margin-left:4px;" title="Custom Color">
+                
+                <button class="fmt-btn" onclick="formatDoc('hiliteColor', '#fff5b1')" title="Highlight"><i class="fas fa-highlighter"></i></button>
+
+                <div class="separator" style="height:15px; margin: 0 4px;"></div>
+
+                <button class="fmt-btn" onclick="insertSymbol('↗')" title="Rising Intonation">↗</button>
+                <button class="fmt-btn" onclick="insertSymbol('↘')" title="Falling Intonation">↘</button>
+                <button class="fmt-btn" onclick="insertSymbol('→')" title="Flat Intonation">→</button>
+                <button class="fmt-btn" onclick="toggleIPA()" title="IPA Keyboard"><i class="fas fa-keyboard"></i></button>
+
+                <div class="separator" style="height:15px; margin: 0 4px;"></div>
+                
+                <button class="fmt-btn" onclick="changeFontSize(1)" title="Increase Font Size">A+</button>
+                <button class="fmt-btn" onclick="changeFontSize(-1)" title="Decrease Font Size">A-</button>
+
+                <div class="separator" style="height:15px; margin: 0 4px;"></div>
+
+                <button class="fmt-btn" onclick="document.getElementById('note-img-input').click()" title="Insert Picture into Notes"><i class="fas fa-image"></i></button>
+                <button class="fmt-btn" onclick="exportNotePDF()" title="Export Notes to PDF"><i class="fas fa-file-pdf"></i></button>
+                
+                <input type="file" id="note-img-input" accept="image/*" style="display:none" onchange="insertNoteImage(this)">
+            </div>
+        </div>
+
+        <div id="editor-container" onclick="focusEditor()">
+            <div id="editor" contenteditable="true" placeholder="Type '/' for commands, or paste images here..."></div>
+        </div>
+
+        <div id="ipa-panel">
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('iː')">iː</div><div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('ɪ')">ɪ</div>
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('ʊ')">ʊ</div><div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('uː')">uː</div>
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('e')">e</div><div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('ə')">ə</div>
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('ɜː')">ɜː</div><div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('ɔː')">ɔː</div>
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('æ')">æ</div><div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('ʌ')">ʌ</div>
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('ɑː')">ɑː</div><div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('ɒ')">ɒ</div>
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('ɪə')">ɪə</div><div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('eɪ')">eɪ</div>
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('ɔɪ')">ɔɪ</div><div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('əʊ')">əʊ</div>
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('eə')">eə</div><div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('aɪ')">aɪ</div>
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('aʊ')">aʊ</div>
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('p')">p</div><div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('b')">b</div>
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('t')">t</div><div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('d')">d</div>
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('tʃ')">tʃ</div><div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('dʒ')">dʒ</div>
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('k')">k</div><div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('g')">g</div>
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('f')">f</div><div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('v')">v</div>
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('θ')">θ</div><div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('ð')">ð</div>
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('s')">s</div><div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('z')">z</div>
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('ʃ')">ʃ</div><div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('ʒ')">ʒ</div>
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('m')">m</div><div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('n')">n</div>
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('ŋ')">ŋ</div><div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('h')">h</div>
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('l')">l</div><div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('r')">r</div>
+            <div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('w')">w</div><div class="ipa-key" onmousedown="event.preventDefault(); insertSymbol('j')">j</div>
+        </div>
+
+        <div id="slash-menu">
+            <div class="slash-item" onmousedown="event.preventDefault(); execCmd('h1')"><i class="fas fa-heading"></i> Heading 1</div>
+            <div class="slash-item" onmousedown="event.preventDefault(); execCmd('todo')"><i class="fas fa-check-square"></i> To-Do List</div>
+            <div class="slash-item" onmousedown="event.preventDefault(); toggleIPA()"><i class="fas fa-keyboard"></i> IPA Keyboard</div>
+            <div class="slash-item" onmousedown="event.preventDefault(); execCmd('quote')"><i class="fas fa-quote-right"></i> Quote</div>
+            <div class="slash-item" onmousedown="event.preventDefault(); execCmd('code')"><i class="fas fa-code"></i> Code Block</div>
+        </div>
+    </div>
+
+    <div id="mini-toolbar-btn" class="hidden" onclick="expandMainToolbar()" title="Show Tools">
+        <i class="fas fa-pen"></i>
+    </div>
+
+    <div class="toolbar-dock" id="main-toolbar">
+        <button class="btn active" id="btn-pen" onclick="setMode('draw')" title="Pen (Draw over anything)"><i class="fas fa-pen"></i></button>
+        <button class="btn" id="btn-view" onclick="setMode('view')" title="Interact (Click HTML Buttons)"><i class="fas fa-hand-pointer"></i></button>
+        
+        <div class="separator"></div>
+
+        <div class="color-dot active" style="background:#000" onclick="setColor('#000', this)"></div>
+        <div class="color-dot" style="background:#e74c3c" onclick="setColor('#e74c3c', this)"></div>
+        <div class="color-dot" style="background:#2ecc71" onclick="setColor('#2ecc71', this)"></div>
+        <div class="color-dot" style="background:#3498db" onclick="setColor('#3498db', this)"></div>
+        
+        <div class="separator"></div>
+
+        <button class="btn" onclick="setEraser()" title="Eraser (Deletes Whole Stroke)"><i class="fas fa-eraser"></i></button>
+        <button class="btn" onclick="clearCanvas()" title="Clear Drawing"><i class="fas fa-trash"></i></button>
+        
+        <div class="separator"></div>
+        
+        <button class="btn" onclick="addMindmapRoot()" title="New Mindmap Node"><i class="fas fa-sitemap"></i></button>
+        <button class="btn" onclick="document.getElementById('canvas-img-input').click()" title="Add Picture to Canvas"><i class="fas fa-image"></i>+</button>
+        <button class="btn" onclick="addContextNote()" title="Smart Sticky Note"><i class="fas fa-sticky-note"></i>+</button>
+        <button class="btn" onclick="document.getElementById('file-input').click()" title="Load File(s)"><i class="fas fa-folder-open"></i></button>
+        <button class="btn" onclick="toggleNotepad()" title="Toggle Lab Notes"><i class="fas fa-flask"></i></button> 
+        <button class="btn" onclick="takeSnapshot()" title="Screenshot"><i class="fas fa-camera"></i></button>
+        <button class="btn" onclick="toggleFullScreen()" title="Full Screen"><i class="fas fa-expand"></i></button>
+    </div>
+
+    <input type="file" id="file-input" multiple accept=".pdf,.docx,.html,.htm,.jpg,.png,.jpeg,.gif,.mp3,.wav" style="display:none" onchange="handleFile(this)">
+    <input type="file" id="canvas-img-input" accept="image/*" style="display:none" onchange="addCanvasImageInput(this)">
+
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+
+        const state = { mode: 'draw', color: '#000', isDrawing: false, eraser: false, isErasing: false };
+        const wrapper = document.getElementById('content-wrapper');
+        const canvas = document.getElementById('drawing-layer');
+        const ctx = canvas.getContext('2d');
+        const fileLayer = document.getElementById('file-render-layer');
+
+        // === IPAD-STYLE AUTOHIDE TOOLBAR ===
+        let mainToolbarTimer;
+        const mainToolbar = document.getElementById('main-toolbar');
+        const miniToolbarBtn = document.getElementById('mini-toolbar-btn');
+
+        function expandMainToolbar() {
+            mainToolbar.classList.remove('toolbar-hidden');
+            miniToolbarBtn.classList.add('hidden');
+            resetToolbarTimer();
+        }
+        function collapseMainToolbar() {
+            mainToolbar.classList.add('toolbar-hidden');
+            miniToolbarBtn.classList.remove('hidden');
+        }
+        function resetToolbarTimer() {
+            clearTimeout(mainToolbarTimer);
+            mainToolbarTimer = setTimeout(collapseMainToolbar, 5000);
+        }
+        mainToolbar.addEventListener('mouseenter', () => clearTimeout(mainToolbarTimer));
+        mainToolbar.addEventListener('mouseleave', resetToolbarTimer);
+        resetToolbarTimer();
+
+
+        // === ROBUST DRAG ENGINE (For ALL Canvas Elements) ===
+        function makeDraggable(box) {
+            let isDrag = false, startX, startY, initLeft, initTop;
+            box.addEventListener('mousedown', (e) => {
+                if(e.target.classList.contains('sticky-close') || e.target.closest('.mm-text') || e.target.hasAttribute('contenteditable')) return;
+                
+                // Ignore resize handles for images
+                const rect = box.getBoundingClientRect();
+                if (e.clientX > rect.right - 20 && e.clientY > rect.bottom - 20) return;
+
+                isDrag = true;
+                startX = e.clientX;
+                startY = e.clientY;
+                initLeft = parseFloat(box.style.left) || 0;
+                initTop = parseFloat(box.style.top) || 0;
+                e.stopPropagation();
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                if(isDrag) {
+                    box.style.left = (initLeft + (e.clientX - startX)) + 'px';
+                    box.style.top = (initTop + (e.clientY - startY)) + 'px';
+                    if (typeof drawMindmapLines === 'function') drawMindmapLines();
+                }
+            });
+            window.addEventListener('mouseup', () => { isDrag = false; });
+        }
+
+
+        // === VECTOR STROKE ENGINE (WHOLE-STROKE ERASER) ===
+        let strokes = [];
+        let currentStroke = null;
+        let strokeHistory = [[]];
+        let strokeStep = 0;
+
+        function updateCanvasSize() {
+            setTimeout(() => {
+                const w = wrapper.offsetWidth, h = wrapper.offsetHeight;
+                if (canvas.width !== w || canvas.height !== h) {
+                    canvas.width = w; canvas.height = h;
+                    redrawStrokes();
+                    drawMindmapLines(); 
+                }
+            }, 100);
+        }
+        updateCanvasSize();
+        new ResizeObserver(updateCanvasSize).observe(wrapper);
+
+        canvas.addEventListener('mousedown', startDraw);
+        canvas.addEventListener('mousemove', draw);
+        window.addEventListener('mouseup', stopDraw); 
+
+        function getCoords(e) {
+            const rect = wrapper.getBoundingClientRect(); 
+            return { x: e.clientX - rect.left, y: e.clientY - rect.top };
+        }
+
+        function startDraw(e) {
+            if (state.mode !== 'draw') return;
+            const pos = getCoords(e);
+            
+            if (state.eraser) {
+                state.isErasing = true;
+                eraseStrokeAt(pos);
+            } else {
+                state.isDrawing = true;
+                currentStroke = { color: state.color, width: 3, points: [pos] };
+                strokes.push(currentStroke);
+                
+                // Draw initial dot
+                ctx.fillStyle = state.color;
+                ctx.beginPath();
+                ctx.arc(pos.x, pos.y, 1.5, 0, Math.PI*2);
+                ctx.fill();
+            }
+        }
+
+        function draw(e) {
+            if (state.mode !== 'draw') return;
+            const pos = getCoords(e);
+
+            if (state.isErasing) {
+                eraseStrokeAt(pos);
+            } else if (state.isDrawing && currentStroke) {
+                const lastPos = currentStroke.points[currentStroke.points.length - 1];
+                currentStroke.points.push(pos);
+                
+                // Draw just the new segment for performance
+                ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+                ctx.lineWidth = currentStroke.width;
+                ctx.strokeStyle = currentStroke.color;
+                ctx.globalCompositeOperation = 'source-over';
+                
+                ctx.beginPath();
+                ctx.moveTo(lastPos.x, lastPos.y);
+                ctx.lineTo(pos.x, pos.y);
+                ctx.stroke();
+            }
+        }
+
+        function stopDraw() { 
+            if (state.isDrawing || state.isErasing) {
+                state.isDrawing = false; 
+                state.isErasing = false;
+                saveStrokes();
+            }
+        }
+
+        function eraseStrokeAt(pos) {
+            const radius = 15;
+            let removed = false;
+            // Iterate backwards to erase top strokes first
+            for (let i = strokes.length - 1; i >= 0; i--) {
+                const stroke = strokes[i];
+                for (let p of stroke.points) {
+                    const dx = p.x - pos.x;
+                    const dy = p.y - pos.y;
+                    if (Math.sqrt(dx*dx + dy*dy) <= radius) {
+                        strokes.splice(i, 1);
+                        removed = true;
+                        break;
+                    }
+                }
+            }
+            if (removed) redrawStrokes();
+        }
+
+        function redrawStrokes() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+            ctx.globalCompositeOperation = 'source-over';
+            
+            for (let stroke of strokes) {
+                if (stroke.points.length === 0) continue;
+                ctx.lineWidth = stroke.width;
+                ctx.strokeStyle = stroke.color;
+                ctx.beginPath();
+                ctx.moveTo(stroke.points[0].x, stroke.points[0].y);
+                for (let i = 1; i < stroke.points.length; i++) {
+                    ctx.lineTo(stroke.points[i].x, stroke.points[i].y);
+                }
+                ctx.stroke();
+            }
+        }
+
+        function saveStrokes() {
+            strokeStep++;
+            strokeHistory = strokeHistory.slice(0, strokeStep);
+            strokeHistory.push(strokes.map(s => ({...s, points: [...s.points]})));
+        }
+
+
+        // === MINDMAP ENGINE ===
+        let mindmapNodes = {};
+        let mindmapLinks = [];
+        let mmCounter = 0;
+
+        function addMindmapRoot() {
+            setMode('view'); // Auto interact
+            let id = 'mm-' + (++mmCounter);
+            const rect = wrapper.getBoundingClientRect();
+            // Center of screen relative to wrapper
+            let top = (window.innerHeight / 2) - rect.top - 25; 
+            let left = (window.innerWidth / 2) - rect.left - 50;
+            createMmNode(id, top, left, 'Central Idea');
+        }
+
+        function createMmNode(id, top, left, text) {
+            const box = document.createElement('div');
+            box.className = 'mm-node';
+            box.id = id;
+            box.style.top = top + 'px';
+            box.style.left = left + 'px';
+            
+            box.innerHTML = `
+                <div class="mm-del" onclick="deleteMmNode('${id}')">✕</div>
+                <div class="mm-text" contenteditable="true">${text}</div>
+                <div class="mm-add" onclick="addMmChild('${id}')">+</div>
+            `;
+            document.getElementById('annotation-layer').appendChild(box);
+            mindmapNodes[id] = box;
+            makeDraggable(box);
+            drawMindmapLines();
+        }
+
+        function addMmChild(parentId) {
+            let parent = mindmapNodes[parentId];
+            let id = 'mm-' + (++mmCounter);
+            // Spawn to the right
+            let left = parseFloat(parent.style.left) + parent.offsetWidth + 60;
+            let top = parseFloat(parent.style.top);
+            createMmNode(id, top, left, 'Sub-topic');
+            mindmapLinks.push({ from: parentId, to: id });
+            drawMindmapLines();
+        }
+
+        function deleteMmNode(id) {
+            if(mindmapNodes[id]) { mindmapNodes[id].remove(); delete mindmapNodes[id]; }
+            mindmapLinks = mindmapLinks.filter(l => l.from !== id && l.to !== id);
+            drawMindmapLines();
+        }
+
+        function drawMindmapLines() {
+            const svg = document.getElementById('mindmap-svg');
+            svg.innerHTML = '';
+            mindmapLinks.forEach(link => {
+                let from = mindmapNodes[link.from];
+                let to = mindmapNodes[link.to];
+                if(from && to) {
+                    let fL = parseFloat(from.style.left) + from.offsetWidth;
+                    let fT = parseFloat(from.style.top) + from.offsetHeight/2;
+                    let tL = parseFloat(to.style.left);
+                    let tT = parseFloat(to.style.top) + to.offsetHeight/2;
+                    let path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                    let cx1 = fL + (tL - fL)/2;
+                    path.setAttribute('d', `M ${fL} ${fT} C ${cx1} ${fT}, ${cx1} ${tT}, ${tL} ${tT}`);
+                    path.setAttribute('stroke', 'var(--accent)');
+                    path.setAttribute('stroke-width', '3');
+                    path.setAttribute('fill', 'none');
+                    svg.appendChild(path);
+                }
+            });
+        }
+
+        // === FILE LOADER ===
+        async function handleFile(input) {
+            const files = Array.from(input.files);
+            if (files.length === 0) return;
+
+            document.getElementById('loader').style.display = 'flex';
+            fileLayer.innerHTML = ''; 
+            strokes = []; redrawStrokes(); // Clear strokes
+            document.getElementById('annotation-layer').innerHTML = ''; 
+            document.getElementById('mindmap-svg').innerHTML = '';
+            mindmapNodes = {}; mindmapLinks = [];
+
+            let mainFile = files.find(f => f.name.match(/\.(html|htm|pdf|docx)$/i));
+            const assetMap = {};
+            files.forEach(f => { if (f !== mainFile) assetMap[f.name] = URL.createObjectURL(f); });
+
+            if (!mainFile) {
+                alert("Please select at least one HTML, PDF, or DOCX file.");
+                document.getElementById('loader').style.display = 'none';
+                return;
+            }
+
+            const ext = mainFile.name.split('.').pop().toLowerCase();
+            try {
+                wrapper.className = ''; wrapper.style.width = '100%';
+                if (ext === 'pdf') await loadPDF(mainFile);
+                else if (ext === 'docx') await loadDOCX(mainFile);
+                else if (ext === 'html' || ext === 'htm') await loadHTML(mainFile, assetMap);
+                setMode('view'); showToast("✋ Interact Mode Active");
+            } catch(e) { alert("Error: " + e.message); } 
+            finally { document.getElementById('loader').style.display = 'none'; updateCanvasSize(); }
+        }
+
+        async function loadHTML(file, assetMap) {
+            return new Promise(resolve => {
+                const reader = new FileReader();
+                reader.onload = e => {
+                    let content = e.target.result;
+                    for (const [name, url] of Object.entries(assetMap)) {
+                        const regex = new RegExp(`(src|href)=["'](.*/)?${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']`, 'g');
+                        content = content.replace(regex, `$1="${url}"`);
+                    }
+                    fileLayer.innerHTML = content;
+                    
+                    const patch = document.createElement("script");
+                    patch.textContent = `
+                        window.scrollTo = function(x, y) {
+                            var v = document.getElementById('doc-viewer');
+                            if(typeof x === 'object') v.scrollTo(x); else v.scrollTo(x, y);
+                        };
+                        window.scrollBy = function(x, y) {
+                            var v = document.getElementById('doc-viewer');
+                            if(typeof x === 'object') v.scrollBy(x); else v.scrollBy(x, y);
+                        };
+                    `;
+                    document.body.appendChild(patch);
+
+                    const scripts = fileLayer.getElementsByTagName("script");
+                    for(let i=0; i<scripts.length; i++) {
+                        const newScript = document.createElement("script");
+                        newScript.text = scripts[i].text;
+                        document.body.appendChild(newScript);
+                    }
+                    resolve();
+                };
+                reader.readAsText(file);
+            });
+        }
+        
+        async function loadPDF(file) {
+            wrapper.classList.add('page-mode');
+            const pdf = await pdfjsLib.getDocument(await file.arrayBuffer()).promise;
+            for (let i = 1; i <= pdf.numPages; i++) {
+                const page = await pdf.getPage(i);
+                const viewport = page.getViewport({ scale: 1.5 });
+                const cvs = document.createElement('canvas');
+                cvs.height = viewport.height; cvs.width = viewport.width; cvs.style.display = 'block';
+                await page.render({ canvasContext: cvs.getContext('2d'), viewport: viewport }).promise;
+                fileLayer.appendChild(cvs);
+            }
+        }
+        async function loadDOCX(file) {
+            wrapper.classList.add('page-mode');
+            const res = await mammoth.convertToHtml({ arrayBuffer: await file.arrayBuffer() });
+            fileLayer.innerHTML = `<div style="padding:50px;">${res.value}</div>`;
+        }
+
+        // === TOOLS ===
+        function setMode(m) {
+            state.mode = m;
+            document.body.className = (m === 'draw' ? 'mode-draw' : 'mode-view');
+            document.getElementById('btn-pen').classList.toggle('active', m === 'draw');
+            document.getElementById('btn-view').classList.toggle('active', m === 'view');
+            showToast(m === 'draw' ? '✏️ Draw Mode' : '✋ Interact Mode');
+        }
+        function showToast(text) {
+            const t = document.getElementById('mode-msg');
+            t.innerText = text; t.style.opacity = 1;
+            setTimeout(() => t.style.opacity = 0, 2000);
+        }
+        function setColor(c, el) {
+            state.color = c; state.eraser = false; setMode('draw');
+            document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active'));
+            if(el) el.classList.add('active');
+        }
+        function setEraser() { state.eraser = true; setMode('draw'); showToast("🧹 Stroke Eraser"); }
+        
+        function clearCanvas() {
+            if(confirm('Clear entire board?')) {
+                strokes = []; redrawStrokes(); saveStrokes();
+                document.getElementById('annotation-layer').innerHTML = '';
+                document.getElementById('mindmap-svg').innerHTML = '';
+                mindmapNodes = {}; mindmapLinks = [];
+            }
+        }
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+            else if (document.exitFullscreen) document.exitFullscreen();
+        }
+
+        // === NOTEPAD LOGIC ===
+        let notepadTimer;
+        const npTopArea = document.getElementById('np-top-area');
+        const npToolbar = document.getElementById('editor-toolbar');
+        
+        npTopArea.addEventListener('mouseenter', () => {
+            clearTimeout(notepadTimer);
+            npToolbar.classList.add('expanded');
+        });
+        npTopArea.addEventListener('mouseleave', () => {
+            notepadTimer = setTimeout(() => { npToolbar.classList.remove('expanded'); }, 5000);
+        });
+
+        const editor = document.getElementById('editor');
+        let lastCursorRange = null;
+
+        editor.addEventListener('blur', () => {
+            const sel = window.getSelection();
+            if (sel.rangeCount > 0) lastCursorRange = sel.getRangeAt(0);
+        });
+
+        function restoreCursor() {
+            editor.focus();
+            if (lastCursorRange) {
+                const sel = window.getSelection();
+                sel.removeAllRanges(); sel.addRange(lastCursorRange);
+            }
+        }
+
+        function formatDoc(cmd, val) { restoreCursor(); document.execCommand(cmd, false, val); }
+        function insertSymbol(sym) { restoreCursor(); document.execCommand('insertText', false, sym); }
+        function changeFontSize(step) {
+            restoreCursor();
+            let size = document.queryCommandValue("FontSize") || 3;
+            size = parseInt(size) + step;
+            if(size < 1) size = 1; if(size > 7) size = 7;
+            document.execCommand("fontSize", false, size);
+        }
+
+        function insertNoteImage(input) {
+            const file = input.files[0];
+            if(!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                restoreCursor();
+                const img = `<img src="${e.target.result}" style="max-width:100%; border-radius:8px; margin: 10px 0; cursor: grab;" draggable="true">`;
+                document.execCommand('insertHTML', false, img + "<br>");
+            }
+            reader.readAsDataURL(file);
+            input.value = '';
+        }
+        
+        function exportNotePDF() {
+            const element = document.getElementById('editor');
+            html2pdf().set({
+              margin: 10, filename: 'Kees_Language_Lab_Notes.pdf',
+              image: { type: 'jpeg', quality: 0.98 }, html2canvas: { scale: 2, useCORS: true },
+              jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            }).from(element).save();
+        }
+
+        function toggleIPA() {
+            document.getElementById('notepad').classList.toggle('show-ipa');
+            document.getElementById('slash-menu').style.display = 'none';
+        }
+
+        const slashMenu = document.getElementById('slash-menu');
+        
+        editor.addEventListener('keyup', () => {
+            const sel = window.getSelection();
+            if(sel.rangeCount > 0) {
+                const range = sel.getRangeAt(0);
+                if(range.endContainer.nodeType === 3 && range.endContainer.textContent.endsWith('/')) {
+                    const rect = range.getBoundingClientRect();
+                    slashMenu.style.display = 'flex';
+                    slashMenu.style.top = (rect.bottom) + 'px';
+                    slashMenu.style.left = rect.left + 'px';
+                    return;
+                }
+            }
+            slashMenu.style.display = 'none';
+        });
+
+        function execCmd(type) {
+            slashMenu.style.display = 'none'; restoreCursor(); document.execCommand('delete');
+            let html = '';
+            if(type==='h1') html='<h1>Heading 1</h1>';
+            if(type==='todo') html='<div class="todo-item"><input type="checkbox" onclick="this.nextElementSibling.style.textDecoration=this.checked?\'line-through\':\'none\'"> <span>To-Do</span></div>';
+            if(type==='code') html='<pre style="background:#f4f4f4;padding:10px;border-radius:4px; font-family:monospace;">Code</pre>';
+            if(type==='quote') html='<blockquote style="border-left:4px solid #4a6cf7;padding-left:10px;color:#555">Quote</blockquote>';
+            document.execCommand('insertHTML', false, html + '<br>');
+        }
+
+        // Notepad Drag (Trapped inside window)
+        const np = document.getElementById('notepad');
+        const npHead = document.getElementById('np-header');
+        let npDrag = false, npStartX, npStartY, npInitLeft, npInitTop;
+        npHead.addEventListener('mousedown', (e) => {
+            if(e.target.tagName === 'INPUT' || e.target.classList.contains('fas')) return;
+            npDrag = true; npStartX = e.clientX; npStartY = e.clientY;
+            const rect = np.getBoundingClientRect(); npInitLeft = rect.left; npInitTop = rect.top;
+        });
+        window.addEventListener('mousemove', (e) => {
+            if(!npDrag) return;
+            let newLeft = npInitLeft + (e.clientX - npStartX);
+            let newTop = npInitTop + (e.clientY - npStartY);
+            if (newLeft < 0) newLeft = 0; if (newTop < 0) newTop = 0;
+            if (newLeft + 100 > window.innerWidth) newLeft = window.innerWidth - 100;
+            if (newTop + 50 > window.innerHeight) newTop = window.innerHeight - 50;
+            np.style.left = newLeft + 'px'; np.style.top = newTop + 'px';
+        });
+        window.addEventListener('mouseup', () => { npDrag = false; });
+
+        function addContextNote() {
+            setMode('view');
+            const target = fileLayer.querySelector('.vocab-card.flipped') || fileLayer.querySelector('.section.active, .tab.active');
+            let top = (document.getElementById('doc-viewer').scrollTop + 200);
+            let left = (window.innerWidth / 2 - 100);
+
+            if (target) {
+                const rect = target.getBoundingClientRect(); const wrapperRect = wrapper.getBoundingClientRect();
+                top = (rect.top - wrapperRect.top) + 20; left = (rect.right - wrapperRect.left) + 20;
+                if (left > wrapper.offsetWidth - 180) left = (rect.left - wrapperRect.left) + 20;
+            }
+            const box = document.createElement('div');
+            box.className = 'sticky-box'; 
+            box.style.position = 'absolute';
+            box.style.top = top + 'px'; 
+            box.style.left = left + 'px';
+            box.style.minWidth = '160px'; box.style.background = '#fff5ba';
+            box.style.border = '1px solid #e0c46a'; box.style.padding = '10px';
+            box.style.boxShadow = '2px 2px 8px rgba(0,0,0,0.15)'; box.style.cursor = 'move';
+            
+            box.innerHTML = `<div class="sticky-close" style="position:absolute; top:-8px; right:-8px; width:20px; height:20px; background:#d63031; color:white; border-radius:50%; text-align:center; line-height:20px; font-size:12px; cursor:pointer;" onclick="this.parentElement.remove()">✕</div><div contenteditable="true" style="outline:none; min-height:50px;">Note...</div>`;
+            document.getElementById('annotation-layer').appendChild(box);
+            
+            makeDraggable(box);
+        }
+
+        // === DRAG & DROP IMAGES TO CANVAS / CLIPBOARD ===
+        const docViewer = document.getElementById('doc-viewer');
+        docViewer.addEventListener('dragover', (e) => { e.preventDefault(); });
+        docViewer.addEventListener('drop', (e) => {
+            e.preventDefault();
+            const x = e.clientX; const y = e.clientY;
+            if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+                const file = e.dataTransfer.files[0];
+                if (file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = (ev) => createCanvasImage(ev.target.result, x, y);
+                    reader.readAsDataURL(file);
+                }
+            } else {
+                const html = e.dataTransfer.getData('text/html');
+                const srcMatch = html && html.match(/src\s*=\s*["'](.*?)["']/);
+                const url = srcMatch ? srcMatch[1] : e.dataTransfer.getData('text/uri-list');
+                if (url) createCanvasImage(url, x, y);
+            }
+        });
+
+        window.addEventListener('paste', (e) => {
+            if (document.activeElement.closest('#editor') || document.activeElement.closest('.mm-node') || document.activeElement.closest('.sticky-box')) return;
+            const items = (e.clipboardData || e.originalEvent.clipboardData).items;
+            for (let index in items) {
+                const item = items[index];
+                if (item.kind === 'file' && item.type.startsWith('image/')) {
+                    const blob = item.getAsFile();
+                    const reader = new FileReader();
+                    reader.onload = (event) => { createCanvasImage(event.target.result); };
+                    reader.readAsDataURL(blob);
+                    e.preventDefault();
+                    return;
+                }
+            }
+        });
+
+        function addCanvasImageInput(input) {
+            const file = input.files[0];
+            if(!file) return;
+            const reader = new FileReader();
+            reader.onload = (e) => { createCanvasImage(e.target.result); }
+            reader.readAsDataURL(file);
+            input.value = '';
+        }
+
+        function createCanvasImage(src, clientX, clientY) {
+            setMode('view'); 
+            const rect = wrapper.getBoundingClientRect();
+            
+            // Default center if no coordinates provided (e.g. from upload button or paste)
+            let left = (window.innerWidth / 2) - rect.left - 150;
+            let top = (window.innerHeight / 2) - rect.top - 100;
+
+            if (clientX !== undefined && clientY !== undefined) {
+                left = clientX - rect.left - 150; 
+                top = clientY - rect.top - 100;
+            }
+            
+            const box = document.createElement('div');
+            box.className = 'canvas-img-box sticky-box';
+            box.style.top = top + 'px'; box.style.left = left + 'px';
+            box.style.position = 'absolute'; box.style.background = 'rgba(255,255,255,0.9)';
+            box.style.border = '2px dashed var(--accent)'; box.style.padding = '15px 5px 5px 5px';
+            box.style.resize = 'both'; box.style.overflow = 'hidden'; box.style.cursor = 'move';
+            box.style.width = '300px'; box.style.height = 'auto';
+            
+            box.innerHTML = `
+                <div class="sticky-close" style="position:absolute; top: -5px; right: -5px; background:red; color:white; width:20px; height:20px; border-radius:50%; text-align:center; font-size:12px; cursor:pointer;" onclick="this.parentElement.remove()">✕</div>
+                <img src="${src}" style="width:100%; height:100%; object-fit:contain; pointer-events:none; display:block;">
+            `;
+            document.getElementById('annotation-layer').appendChild(box);
+            makeDraggable(box);
+        }
+
+        function takeSnapshot() {
+            const ui = [document.getElementById('main-toolbar'), document.getElementById('notepad'), document.getElementById('zen-toggle'), document.getElementById('mini-toolbar-btn')];
+            ui.forEach(el => el.classList.add('hidden-ui'));
+            html2canvas(document.body).then(c=>{
+                const a = document.createElement('a'); a.download = 'Board.png'; a.href = c.toDataURL(); a.click();
+                ui.forEach(el => el.classList.remove('hidden-ui'));
+            });
+        }
+        
+        function toggleNotepad() { np.classList.toggle('hidden-ui'); }
+        function toggleNotepadHeight() { np.style.height = np.style.height === '50px' ? '500px' : '50px'; }
+        function toggleUI() { document.getElementById('main-toolbar').classList.toggle('hidden-ui'); np.classList.toggle('hidden-ui'); }
+
+    </script>
+<script src="js/navigation.js"></script>
+</body>
+</html>

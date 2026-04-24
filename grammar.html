@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kee Lee's IELTS Lab (Nano Banana Ed.)</title>
+    <style>
+        :root {
+            --bg-color: #F5F5F7;
+            --text-primary: #1D1D1F;
+            --text-secondary: #86868B;
+            --accent-purple: #9F44D3; /* 独角兽紫 */
+            --accent-pink: #FF2442;   /* 小红书红 */
+            --accent-banana: #FFD700; /* Nano Banana Yellow */
+            --glass-bg: rgba(255, 255, 255, 0.65);
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            --hover-shadow: 0 15px 35px rgba(159, 68, 211, 0.15);
+            --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            --sidebar-width: 260px;
+        }
+
+        html { scroll-behavior: smooth; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding-bottom: 100px;
+        }
+
+        /* 顶部导航 */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .navbar h1 { font-size: 18px; font-weight: 600; letter-spacing: -0.5px; }
+
+        /* 布局容器 */
+        .main-wrapper {
+            max-width: 1100px;
+            margin: 90px auto 0;
+            display: flex;
+            align-items: flex-start;
+            padding: 0 20px;
+            gap: 50px;
+        }
+
+        /* --- 左侧极光侧边栏 --- */
+        .sidebar {
+            width: var(--sidebar-width);
+            position: sticky;
+            top: 100px;
+            background: linear-gradient(180deg, rgba(243, 235, 255, 0.6) 0%, rgba(255, 235, 239, 0.6) 100%);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border-radius: 24px;
+            padding: 25px 15px;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+        }
+
+        .nav-label {
+            padding-left: 15px; margin-bottom: 8px; font-size: 11px; 
+            color: #999; text-transform: uppercase; font-weight: 700; letter-spacing: 1.5px;
+        }
+
+        .nav-item {
+            display: flex; align-items: center; padding: 14px 16px;
+            text-decoration: none; color: var(--text-secondary); font-size: 14px; font-weight: 500;
+            border-radius: 18px; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            background: transparent; border: 1px solid transparent;
+        }
+
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.9); color: var(--accent-purple);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: var(--hover-shadow); border-color: rgba(255, 255, 255, 1);
+        }
+
+        .nav-icon { font-size: 18px; margin-right: 12px; transition: transform 0.3s ease; }
+        .nav-item:hover .nav-icon { transform: scale(1.2) rotate(10deg); }
+
+        /* 特殊高亮 Nano Banana */
+        .nav-item.banana-mode:hover {
+            color: #B8860B; /* Dark Golden Rod */
+            background: rgba(255, 255, 224, 0.9);
+            box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+        }
+
+        /* 右侧内容区域 */
+        .content-area { flex: 1; min-width: 0; }
+
+        .hero { text-align: center; padding: 10px 0 50px; }
+        .hero h2 {
+            font-size: 42px; font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-pink) 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        /* 卡片风格 */
+        .card {
+            background: #fff; border-radius: 24px; padding: 30px; margin-bottom: 30px;
+            box-shadow: var(--card-shadow); border: 1px solid rgba(255,255,255,0.8);
+            transition: transform 0.3s ease; scroll-margin-top: 100px;
+        }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+
+        .card-header { display: flex; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #f0f0f0; padding-bottom: 15px; }
+        .card-icon { font-size: 28px; margin-right: 15px; background: #FAF9FF; padding: 10px; border-radius: 16px; }
+        .card-title { font-size: 20px; font-weight: 700; color: #333; }
+
+        .badge {
+            display: inline-block; padding: 4px 10px; border-radius: 8px;
+            font-size: 12px; font-weight: 600; margin-right: 5px;
+            background: rgba(159, 68, 211, 0.08); color: var(--accent-purple);
+        }
+        
+        /* Nano Banana Badge */
+        .badge-banana {
+            background: rgba(255, 215, 0, 0.15); color: #D4AC0D;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .pain-point {
+            background: #FFF0F2; padding: 12px; border-radius: 12px;
+            font-size: 14px; color: #C02E3F; margin-bottom: 15px;
+            display: flex; align-items: flex-start;
+        }
+
+        /* 指令代码块 */
+        .prompt-container { position: relative; margin-top: 15px; }
+        .prompt-box {
+            background: #F5F5F7; border-radius: 12px; padding: 18px;
+            font-family: "SF Mono", Consolas, monospace; font-size: 13px; color: #444;
+            border: 1px solid #E5E5EA; white-space: pre-wrap; margin-bottom: 12px; line-height: 1.5;
+        }
+
+        .copy-btn {
+            width: 100%;
+            background: linear-gradient(90deg, var(--accent-purple) 0%, #B265E6 100%);
+            color: white; border: none; padding: 12px; border-radius: 12px;
+            font-size: 14px; font-weight: 600; cursor: pointer;
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            transition: all 0.2s; box-shadow: 0 4px 12px rgba(159, 68, 211, 0.3);
+        }
+        .copy-btn:hover { opacity: 0.95; transform: scale(1.01); }
+        .copy-btn:active { transform: scale(0.98); }
+        
+        /* Nano Banana Button Style */
+        .btn-banana {
+            background: linear-gradient(90deg, #F1C40F 0%, #F39C12 100%);
+            box-shadow: 0 4px 12px rgba(241, 196, 15, 0.3);
+            color: #fff;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+        }
+
+        /* Toast */
+        #toast {
+            visibility: hidden; min-width: 250px; margin-left: -125px;
+            background-color: rgba(29, 29, 31, 0.95); color: #fff;
+            text-align: center; border-radius: 50px; padding: 16px;
+            position: fixed; z-index: 2000; left: 50%; bottom: 30px;
+            font-size: 14px; font-weight: 500;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); backdrop-filter: blur(10px);
+        }
+        #toast.show { visibility: visible; animation: fadein 0.5s, fadeout 0.5s 2.5s; }
+        @keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;} }
+        @keyframes fadeout { from {bottom: 30px; opacity: 1;} to {bottom: 0; opacity: 0;} }
+
+        @media (max-width: 900px) {
+            .sidebar { display: none; }
+            .main-wrapper { display: block; margin-top: 70px; }
+            .hero h2 { font-size: 32px; }
+        }
+    </style>
+<link rel="stylesheet" href="css/global.css"></head>
+<body>
+
+    <nav class="navbar">
+        <h1>🦄 Kee Lee's IELTS Lab <span style="color:var(--text-secondary)">| Pro</span></h1>
+    </nav>
+
+    <div class="main-wrapper">
+        
+        <aside class="sidebar">
+            <div class="nav-label">Timeline Navigation</div>
+            
+            <a href="#section-core" class="nav-item">
+                <span class="nav-icon">🧠</span>
+                <span>核心设计哲学</span>
+            </a>
+            <a href="#section-p1" class="nav-item">
+                <span class="nav-icon">⚡️</span>
+                <span>P1/3: 答题神逻辑</span>
+            </a>
+            <a href="#section-p2" class="nav-item">
+                <span class="nav-icon">📖</span>
+                <span>P2: 故事弧光法</span>
+            </a>
+            <a href="#section-grammar" class="nav-item banana-mode" style="color:#D4AC0D">
+                <span class="nav-icon">🍌</span>
+                <span>G1: Nano 语法透视</span>
+            </a>
+            <a href="#section-examiner" class="nav-item">
+                <span class="nav-icon">👮‍♀️</span>
+                <span>魔鬼考官模式</span>
+            </a>
+            <a href="#section-writing-logic" class="nav-item">
+                <span class="nav-icon">✍️</span>
+                <span>W2: 逻辑体检中心</span>
+            </a>
+            <a href="#section-writing-data" class="nav-item">
+                <span class="nav-icon">📊</span>
+                <span>W1: 学术词汇升级</span>
+            </a>
+            <a href="#section-vocab" class="nav-item">
+                <span class="nav-icon">🧪</span>
+                <span>深度词汇内化</span>
+            </a>
+            <a href="#section-plan" class="nav-item">
+                <span class="nav-icon">📅</span>
+                <span>遗忘曲线规划</span>
+            </a>
+        </aside>
+
+        <main class="content-area">
+            
+            <section class="hero">
+                <h2>雅思 AI 指令集</h2>
+                <p>From Robot to Native Flow 🦄</p>
+                <div style="margin-top: 15px;">
+                    <span class="badge">#KeeLee逻辑链</span>
+                    <span class="badge-banana">#NanoBanana🍌</span>
+                </div>
+            </section>
+
+            <section id="section-core" class="card">
+                <div class="card-header">
+                    <div class="card-icon">🧠</div>
+                    <div class="card-title">Core Philosophy</div>
+                </div>
+                <p style="margin-bottom: 15px; color: #555;">
+                    本指令集专治中国考生的“中式翻译”与“逻辑跳跃”。
+                    <br>Feature Update (Dec 2025): 全面接入 <b>Nano Banana</b> 进行可视化图解。
+                </p>
+                <div>
+                    <span class="badge">FC 流利度</span>
+                    <span class="badge">LR 词汇</span>
+                    <span class="badge">GRA 语法</span>
+                    <span class="badge">P 发音</span>
+                </div>
+            </section>
+
+            <section id="section-p1" class="card">
+                <div class="card-header">
+                    <div class="card-icon">⚡️</div>
+                    <div class="card-title">P1/3: 答题神逻辑</div>
+                </div>
+                <div class="pain-point">
+                    <span style="margin-right:8px; font-size:16px;">😫</span>
+                    <div><b>痛点：</b>一紧张就只会说 Yes/No，脑子一片空白，或者像背书。</div>
+                </div>
+                <div class="prompt-container">
+                    <div class="prompt-box" id="p1-text">请充当我的雅思口语教练。现在的题目是：[在此处粘贴题目]。
+我的简单想法/关键词是：[在此处输入你的真实想法，中文或简单的英文均可]。
+请执行以下操作：
+1. 使用“逻辑链条”方法（如：视情况而定法、细节爆炸法、推己及人法）将我的简单想法扩展成一个完整的雅思口语回答。
+2. 极其重要：在回答中必须自然地嵌入至少2-3个Discourse Markers（话语标记词），例如表示思考的"Let me see..."，表示强调的"The thing is..."，或表示转折的"Having said that..."。
+3. 请提供三个版本的回答：
+   - 版本A（B1水平）：简单清晰，语法准确。
+   - 版本B（B2/C1水平）：加入地道习语和更复杂的句式。
+   - 版本C（Native Flow）：完全口语化，包含自然的犹豫和自我修正（如 "I mean...", "What I'm trying to say is..."）。
+4. 最后，列出用到的所有“话语标记词”及其功能。</div>
+                    <button class="copy-btn" onclick="copyText('p1-text')">📋 点击一键复制 (Copy)</button>
+                </div>
+            </section>
+
+            <section id="section-p2" class="card">
+                <div class="card-header">
+                    <div class="card-icon">📖</div>
+                    <div class="card-title">P2: 故事弧光法</div>
+                </div>
+                <div class="prompt-container">
+                    <div class="prompt-box" id="p2-text">请充当我的雅思口语Script Writer。
+Task 2 题目卡是：[在此处粘贴Part 2 Topic]。
+我想讲的真实经历是：[在此处用中文描述你的故事，越具体越好，例如：我去了那个公园，但是下雨了，不过雨中的景色很美]。
+请帮我将这段经历改写成一篇2分钟的口语稿，要求：
+1. 结构上使用“The Pop-in Strategy”（开场白策略）：以 "As soon as I saw this topic, the first thing that popped into my mind was..." 开头。
+2. 逻辑上使用“Story Arc”（故事弧光法）：包含背景(Context) -> 冲突/转折(Conflict/Twist) -> 感受/结局(Resolution)。
+3. 语言风格：请使用“Liquid Glass”风格，即词汇高级但听起来非常顺滑自然，避免生僻的书面词汇。
+4. 在文中用【括号】标出哪里应该停顿、哪里应该重音、哪里应该加速。</div>
+                    <button class="copy-btn" onclick="copyText('p2-text')">📋 点击一键复制 (Copy)</button>
+                </div>
+            </section>
+
+            <section id="section-grammar" class="card" style="border: 2px solid #FFD700;">
+                <div class="card-header">
+                    <div class="card-icon" style="background: #FFF9C4;">🍌</div>
+                    <div class="card-title">G1: Nano 语法透视</div>
+                </div>
+                <div class="pain-point" style="background: #FFFAF0; color: #B7950B;">
+                    <span style="margin-right:8px; font-size:16px;">🔬</span>
+                    <div><b>Nano Banana 独家功能：</b>长难句读不懂？让 AI 把它变成一张清晰的解剖图。</div>
+                </div>
+                <div class="prompt-container">
+                    <div class="prompt-box" id="grammar-text">请充当我的语法分析师（Grammar Analyst）。
+⚠️ 警示：请务必勾选 “Tools - 🍌 Create images” 选项，否则无法生成分析图。
+
+这句话难住了我：[粘贴长难句]。
+
+请执行以下操作（必须包含中英双语输出 Bilingual Output）：
+
+1. 🍌 Nano Visuals (语法树图解)：
+   请生成一张【SVG 矢量图】或【Mermaid 流程图】。
+   - 将句子拆解，在每个单词上方明确标注成分：S(主语), V(谓语), O(宾语)。
+   - 用颜色区分主句（骨架）和从句（皮肉）。
+   - 用箭头 ---> 展示修饰指向（例如：which引导的从句指向它修饰的名词）。
+
+2. 📖 B1 词汇扫盲 (Vocabulary Check)：
+   - 请找出句子中 B1 级别学生可能不熟悉的词汇或表达。
+   - 为这些词汇提供【中英双语】解释，并注释其在地道语境中的具体用法（Usage Note）。
+
+3. 🔪 结构层级拆解：
+   - 第一层（核心）：S + V + O (剥离所有修饰)。
+   - 第二层（血肉）：还原定语从句、状语从句，并中英双语解释它们的功能。
+
+4. 🗣️ 自然翻译：
+   - 指出这句话对中国学生来说最“反直觉”的地方。
+   - 给出地道的中文翻译和 B2 级别的英文改写。</div>
+                    <button class="copy-btn btn-banana" onclick="copyText('grammar-text')">🍌 唤醒 Nano Banana (Copy)</button>
+                </div>
+            </section>
+
+            <section id="section-examiner" class="card">
+                <div class="card-header">
+                    <div class="card-icon">👮‍♀️</div>
+                    <div class="card-title">Strict Examiner Mode</div>
+                </div>
+                <div class="prompt-container">
+                    <div class="prompt-box" id="p3-text">请充当严厉的雅思前考官。
+题目是：[粘贴题目]。
+这是我的回答录音转文字稿：[粘贴你的回答文本]。
+请基于雅思口语评分标准（Band Descriptors）进行评分（0-9分）并给出严厉反馈：
+1. Fluency & Coherence：我是否使用了足够的连接词？哪里出现了不自然的停顿？
+2. Lexical Resource：有没有中式搭配（Chinglish）？请提供3个更地道的同义替换（Idiomatic Expressions）。
+3. Grammar：指出我所有的语法错误，并展示如何用更复杂的句型（如虚拟语气、倒装句）重写这一句。
+4. 改写建议：请给我一个满分版本的示范，并解释为什么它更好。</div>
+                    <button class="copy-btn" onclick="copyText('p3-text')">📋 点击一键复制 (Copy)</button>
+                </div>
+            </section>
+
+            <section id="section-writing-logic" class="card">
+                <div class="card-header">
+                    <div class="card-icon">✍️</div>
+                    <div class="card-title">W2: 逻辑体检中心</div>
+                </div>
+                <div class="prompt-container">
+                    <div class="prompt-box" id="p4-text">请充当雅思写作导师。
+题目是：[粘贴大作文题目]。
+我的核心观点是：[输入你的观点，例如：同意，因为这样可以保护环境]。
+请帮我进行“逻辑体检”：
+1. 批判性思维（Critical Thinking）：我的观点是否有逻辑漏洞？请列出反方可能攻击的点。
+2. 论证拓展（Extension）：请使用“PEER模型”（Point观点 -> Explanation解释 -> Example举例 -> Result结果）帮我把这个观点发展成一个严密的段落。
+3. 连接词检查：在段落中必须包含高阶的逻辑连接词（如 "Conversely", "Given the fact that...", "Examples include..."）。</div>
+                    <button class="copy-btn" onclick="copyText('p4-text')">📋 点击一键复制 (Copy)</button>
+                </div>
+            </section>
+
+            <section id="section-writing-data" class="card">
+                <div class="card-header">
+                    <div class="card-icon">📊</div>
+                    <div class="card-title">W1: 学术词汇升级</div>
+                </div>
+                <div class="prompt-container">
+                    <div class="prompt-box" id="p5-text">请充当雅思写作Task 1专家。
+这是一句我在描述图表时写的句子：[粘贴你的句子，例如：Number went up quickly]。
+请帮我进行“学术化升级”：
+1. 词汇替换：把简单的动词和副词替换为更精准的词汇（如 "surged", "plummeted", "marginally"）。
+2. 句式多样性：请用三种不同的句型重写这句话（例如：主语做名词、时间状语前置、使用分词结构）。
+3. 语境注明：解释这些替换词在描述数据时的细微差别（Nuance）。</div>
+                    <button class="copy-btn" onclick="copyText('p5-text')">📋 点击一键复制 (Copy)</button>
+                </div>
+            </section>
+
+            <section id="section-vocab" class="card">
+                <div class="card-header">
+                    <div class="card-icon">🧪</div>
+                    <div class="card-title">Deep Learning: 词汇内化</div>
+                </div>
+                <div class="prompt-container">
+                    <div class="prompt-box" id="p6-text">我想学习这个词/短语：[输入单词]。
+请不要只给我定义，请执行以下操作：
+1. 定义：用简单的B1英语解释它。
+2. 语境：它通常用于口语还是写作？是褒义还是贬义？
+3. 搭配（Collocations）：给出3个它最常用的固定搭配（Adjective + Noun 或 Verb + Noun）。
+4. 替换：给出1个比它低级的词（A2）和1个比它高级的词（C1），并解释区别。
+5. 造句：结合[此处输入你感兴趣的领域，如：科技/旅游/教育]，造一个地道的雅思例句。
+6. 记忆钩子：给我一个助记技巧或者词源故事帮助记忆。</div>
+                    <button class="copy-btn" onclick="copyText('p6-text')">📋 点击一键复制 (Copy)</button>
+                </div>
+            </section>
+
+            <section id="section-plan" class="card" style="border: 2px solid var(--accent-purple);">
+                <div class="card-header">
+                    <div class="card-icon">📅</div>
+                    <div class="card-title" style="color:var(--accent-purple)">Study Plan: 艾宾浩斯</div>
+                </div>
+                <div class="prompt-container">
+                    <div class="prompt-box" id="p7-text">我今天学习了以下雅思词汇/表达：[粘贴列表]。
+请根据艾宾浩斯遗忘曲线，为我生成一份复习计划。
+格式要求：
+1. 输出格式应方便我复制到Google Tasks或Todoist。
+2. 时间节点：12小时后、3天后、1周后、1个月后。
+3. 任务详情：在每个提醒中，随机抽取3个单词要求我造句，不要只列出单词。</div>
+                    <button class="copy-btn" onclick="copyText('p7-text')">📋 点击一键复制 (Copy)</button>
+                </div>
+            </section>
+
+            <div class="footer" style="text-align:center; color:#ccc; font-size:12px; margin-top:50px;">
+                <p>Designed by Kee Lee | IELTS Unicorn 🦄</p>
+                <p>Powered by Gemini 3 (Nano Banana Pro)</p>
+            </div>
+
+        </main>
+    </div>
+
+    <div id="toast">✅ 已复制 (Copied!)</div>
+    <script>
+        function copyText(elementId) {
+            var text = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(text).then(function() {
+                var x = document.getElementById("toast");
+                x.className = "show";
+                setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+            }, function(err) {
+                alert('复制失败，请手动复制');
+            });
+        }
+    </script>
+
+<script src="js/navigation.js"></script>
+</body>
+</html>
