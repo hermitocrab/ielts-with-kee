@@ -1,88 +1,124 @@
 <!DOCTYPE html>
 <html><head><meta charset="UTF-8"><title>Auth Debug</title></head>
-<body style="font-family:sans-serif;max-width:600px;margin:40px auto;padding:20px;">
-<h1>🔍 Auth Debug Page</h1>
-<div id="status" style="background:#f5f5f7;padding:16px;border-radius:12px;margin:16px 0;white-space:pre-wrap;font-family:monospace;"></div>
-<hr>
-<button onclick="doSignIn()" style="padding:12px 24px;background:#9F44D3;color:#fff;border:none;border-radius:12px;font-size:16px;cursor:pointer;margin:8px 4px;">Sign In</button>
-<button onclick="doSignUp()" style="padding:12px 24px;background:#007AFF;color:#fff;border:none;border-radius:12px;font-size:16px;cursor:pointer;margin:8px 4px;">Sign Up</button>
-<button onclick="checkSession()" style="padding:12px 24px;background:#555;color:#fff;border:none;border-radius:12px;font-size:16px;cursor:pointer;margin:8px 4px;">Check Session</button>
-<button onclick="clearSession()" style="padding:12px 24px;background:#C02E3F;color:#fff;border:none;border-radius:12px;font-size:16px;cursor:pointer;margin:8px 4px;">Sign Out</button>
+<body style="font-family:sans-serif;max-width:600px;margin:40px auto;padding:20px;background:#1a1a2e;color:#eee;">
+<h1>🔍 Auth Debug</h1>
+<p style="color:#aaa;font-size:14px;">Open DevTools (F12 → Console) and check for red errors.</p>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<div id="status" style="background:#16213e;padding:16px;border-radius:12px;margin:16px 0;font-family:monospace;font-size:13px;line-height:1.6;min-height:100px;">
+Loading test environment...
+</div>
+
+<button id="loginBtn" style="padding:12px 24px;background:#9F44D3;color:#fff;border:none;border-radius:12px;font-size:16px;cursor:pointer;margin:4px;">🔑 Sign In (sriskeeda@gmail.com)</button>
+<button id="sessionBtn" style="padding:12px 24px;background:#007AFF;color:#fff;border:none;border-radius:12px;font-size:16px;cursor:pointer;margin:4px;">🔍 Check Session</button>
+
+<hr style="border-color:#333;margin:20px 0;">
+
+<p><strong>Alternative test:</strong> Try fetching directly from Supabase API:</p>
+<button id="fetchBtn" style="padding:12px 24px;background:#2D3748;color:#fff;border:none;border-radius:12px;font-size:16px;cursor:pointer;margin:4px;">🌐 Direct API Test</button>
+<pre id="apiResult" style="background:#111;padding:12px;border-radius:8px;margin-top:8px;font-size:12px;display:none;"></pre>
+
 <script>
-const SUPABASE_URL = 'https://areedjmpngwzocqpoaur.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFyZWVkam1wbmd3em9jcXBvYXVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY5ODAwMTgsImV4cCI6MjA5MjU1NjAxOH0.CSHpruDqBm4mbKseySbbOlZk2-uBG2Oxe4DvqwTVFJ8';
-
-let supabase;
-try {
-  supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-    auth: {
-      autoRefreshToken: true,
-      persistSession: true,
-      detectSessionInUrl: true,
-      flowType: 'pkce'
-    }
-  });
-  log('✅ Supabase client created');
-} catch(e) {
-  log('❌ Create client error: ' + e.message);
-  log('supabase object type: ' + typeof window.supabase);
-}
-
-function log(msg) {
+const log = (msg) => {
   const el = document.getElementById('status');
-  el.textContent += msg + '\n';
+  el.innerHTML += msg + '<br>';
+};
+log('⏳ Loading Supabase SDK...');
+
+// Step 1: Check if CDN loaded
+if (typeof supabase !== 'undefined') {
+  log('✅ supabase global object found');
+} else if (typeof window.supabase !== 'undefined') {
+  log('✅ window.supabase found');
+} else {
+  log('❌ supabase not loaded yet, trying dynamic import...');
 }
 
-async function doSignIn() {
-  log('--- Sign In ---');
+// Step 2: Try creating client with error handling
+let supabaseClient = null;
+try {
+  const url = 'https://areedjmpngwzocqpoaur.supabase.co';
+  const anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFyZWVkam1wbmd3em9jcXBvYXVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY5ODAwMTgsImV4cCI6MjA5MjU1NjAxOH0.CSHpruDqBm4mbKseySbbOlZk2-uBG2Oxe4DvqwTVFJ8';
+  
+  // Try both createClient signatures
   try {
-    const { data, error } = await supabase.auth.signInWithPassword({
-      email: 'sriskeeda@gmail.com',
-      password: 'Test123!'
-    });
-    if (error) {
-      log('❌ Error: ' + JSON.stringify(error));
-    } else {
-      log('✅ Success! User: ' + data.user.email);
-      log('✅ Token: ' + data.session.access_token.substring(0, 30) + '...');
+    supabaseClient = supabase.createClient(url, anonKey);
+    log('✅ Client created (simple)');
+  } catch(e1) {
+    try {
+      supabaseClient = window.supabase.createClient(url, anonKey);
+      log('✅ Client created (window.supabase)');
+    } catch(e2) {
+      log('❌ createClient failed: ' + e1.message);
+      log('❌ window version: ' + e2.message);
     }
-  } catch(e) {
-    log('❌ Exception: ' + e.message);
   }
+} catch(e) {
+  log('❌ Fatal: ' + e.message);
+  log('Stack: ' + e.stack?.substring(0,200));
 }
 
-async function doSignUp() {
-  log('--- Sign Up Test ---');
-  try {
-    const { data, error } = await supabase.auth.signUp({
-      email: 'test-' + Date.now() + '@test.com',
-      password: 'test123456',
-      options: { data: { full_name: 'Test User' } }
-    });
-    if (error) {
-      log('❌ Error: ' + JSON.stringify(error));
-    } else {
-      log('✅ Sign up response: ' + JSON.stringify({ id: data.user?.id, email: data.user?.email }));
+// Set up buttons
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('loginBtn').onclick = async function() {
+    const status = document.getElementById('status');
+    status.innerHTML += '🔑 Attempting sign in...<br>';
+    
+    try {
+      const { data, error } = await supabaseClient.auth.signInWithPassword({
+        email: 'sriskeeda@gmail.com',
+        password: 'Test123!'
+      });
+      
+      if (error) {
+        status.innerHTML += '❌ Error: ' + error.message + '<br>';
+        status.innerHTML += '❌ Status: ' + (error.status || 'N/A') + '<br>';
+      } else {
+        status.innerHTML += '✅ Logged in as: ' + data.user.email + '<br>';
+        status.innerHTML += '✅ Token: ' + data.session.access_token.substring(0,20) + '...<br>';
+        // Redirect to dashboard
+        status.innerHTML += '➡️ Redirecting to dashboard...<br>';
+        window.location.href = 'dashboard.html';
+      }
+    } catch(e) {
+      status.innerHTML += '❌ Exception: ' + e.message + '<br>';
+      status.innerHTML += 'Stack: ' + (e.stack?.substring(0,200) || 'N/A') + '<br>';
     }
-  } catch(e) {
-    log('❌ Exception: ' + e.message);
-  }
-}
+  };
 
-async function checkSession() {
-  log('--- Check Session ---');
-  const { data: { session }, error } = await supabase.auth.getSession();
-  if (error) log('❌ Error: ' + error.message);
-  else if (session) log('✅ Active session: ' + session.user.email);
-  else log('ℹ️ No active session');
-}
+  document.getElementById('sessionBtn').onclick = async function() {
+    const status = document.getElementById('status');
+    status.innerHTML += '🔍 Checking session...<br>';
+    try {
+      const { data, error } = await supabaseClient.auth.getSession();
+      if (error) status.innerHTML += '❌ ' + error.message + '<br>';
+      else if (data?.session) status.innerHTML += '✅ Active: ' + data.session.user.email + '<br>';
+      else status.innerHTML += 'ℹ️ No session<br>';
+    } catch(e) {
+      status.innerHTML += '❌ ' + e.message + '<br>';
+    }
+  };
 
-async function clearSession() {
-  await supabase.auth.signOut();
-  log('🔓 Signed out');
-}
+  document.getElementById('fetchBtn').onclick = async function() {
+    const result = document.getElementById('apiResult');
+    result.style.display = 'block';
+    result.textContent = 'Fetching...';
+    
+    try {
+      const resp = await fetch('https://areedjmpngwzocqpoaur.supabase.co/auth/v1/token?grant_type=password', {
+        method: 'POST',
+        headers: {
+          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFyZWVkam1wbmd3em9jcXBvYXVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY5ODAwMTgsImV4cCI6MjA5MjU1NjAxOH0.CSHpruDqBm4mbKseySbbOlZk2-uBG2Oxe4DvqwTVFJ8',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({email: 'sriskeeda@gmail.com', password: 'Test123!'})
+      });
+      const data = await resp.json();
+      result.textContent = JSON.stringify(data, null, 2);
+    } catch(e) {
+      result.textContent = 'Error: ' + e.message;
+    }
+  };
+});
 </script>
 </body>
 </html>
