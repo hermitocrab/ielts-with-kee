@@ -264,7 +264,7 @@
 
   <section class="hero hero-banana">
     <div class="hero-content">
-      <a href="https://rkrk.io" target="_blank" rel="noopener" style="text-decoration:none" title="Visit Kee's Language Lab"><span class="hero-emoji">🦄</span></a>
+      <span class="hero-emoji">🦄</span>
       <h1>IELTS with Kee</h1>
       <p class="hero-subtitle">Your Unicorn Teaching Assistant 🍌</p>
       <p class="hero-tagline">

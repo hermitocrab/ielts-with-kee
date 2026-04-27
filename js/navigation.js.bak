@@ -46,7 +46,6 @@
         <ul class="nav-links">
           ${isHome ? '' : '<li class="mobile-home-link"><a href="index.html"><span>🏠</span> Home</a></li>'}
           ${linksHTML}
-          <li class="nav-external-link"><a href="https://rkrk.io" target="_blank" rel="noopener" title="Kee's Language Lab — DynamOS"><span>🔮</span> rkrk.io</a></li>
         </ul>
       </div>
     `;
