@@ -224,6 +224,7 @@ function startNotesTimer() {
   document.getElementById('notes-timer-btn').textContent = '📝 Noting...';
   document.getElementById('notes-timer-btn').style.background = '#F59E0B';
   document.getElementById('notes-timer-btn').style.color = '#fff';
+  document.getElementById('notes-timer-btn').style.borderColor = '#F59E0B';
   document.getElementById('speech-timer-btn').style.display = 'none';
   document.getElementById('reset-btn').style.display = 'inline-flex';
   updateTimerDisplay();
@@ -240,6 +241,8 @@ function startSpeechTimer() {
   activeTimer = 'speech';
   document.getElementById('speech-timer-btn').textContent = '🎤 Speaking...';
   document.getElementById('speech-timer-btn').style.background = '#EF4444';
+  document.getElementById('speech-timer-btn').style.color = '#fff';
+  document.getElementById('speech-timer-btn').style.borderColor = '#EF4444';
   document.getElementById('notes-timer-btn').style.display = 'none';
   document.getElementById('reset-btn').style.display = 'inline-flex';
   updateTimerDisplay();
@@ -254,12 +257,15 @@ function stopTimer() {
   clearInterval(timerInterval);
   timerInterval = null;
   activeTimer = null;
-  document.getElementById('notes-timer-btn').textContent = '📝 Start 1-min Notes';
+  document.getElementById('notes-timer-btn').textContent = '📝 1-min Notes';
   document.getElementById('notes-timer-btn').style.background = '';
   document.getElementById('notes-timer-btn').style.color = '';
+  document.getElementById('notes-timer-btn').style.borderColor = '';
   document.getElementById('notes-timer-btn').style.display = '';
-  document.getElementById('speech-timer-btn').textContent = '🎤 Start 2-min Speech';
+  document.getElementById('speech-timer-btn').textContent = '🎤 2-min Speech';
   document.getElementById('speech-timer-btn').style.background = '';
+  document.getElementById('speech-timer-btn').style.color = '';
+  document.getElementById('speech-timer-btn').style.borderColor = '';
   document.getElementById('speech-timer-btn').style.display = '';
   document.getElementById('reset-btn').style.display = 'none';
   if (timerSeconds <= 0) { document.getElementById('timer-display').textContent = "0:00 — Time's up!"; }
@@ -275,27 +281,67 @@ function updateTimerDisplay() {
 
 function scrollTo(id) { document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'}); }
 
-/* Save cross method area as JPG */
+/* Save cross method area as JPG (zero-dependency, SVG+Canvas) */
 function saveCrossAsJPG() {
   var box = document.querySelector('.cross-box');
   if (!box) return;
   var btn = document.querySelector('[onclick="saveCrossAsJPG()"]');
-  if (btn) { btn.textContent = 'Rendering...'; btn.disabled = true; }
-  if (typeof html2canvas === 'undefined') {
-    if (btn) { btn.textContent = '📸 Save Notes'; btn.disabled = false; }
-    alert('Image library still loading. Please try again.');
-    return;
+  if (btn) { btn.textContent = 'Wait...'; btn.disabled = true; }
+
+  try {
+    var rect = box.getBoundingClientRect();
+    var w = Math.ceil(rect.width);
+    var h = Math.ceil(rect.height);
+    var scale = 2;
+    var canvas = document.createElement('canvas');
+    canvas.width = w * scale;
+    canvas.height = h * scale;
+    var ctx = canvas.getContext('2d');
+    ctx.scale(scale, scale);
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, w, h);
+
+    // Clone styles from the document
+    var styles = '';
+    var sheets = document.styleSheets;
+    try {
+      for (var i = 0; i < sheets.length; i++) {
+        try { var rules = sheets[i].cssRules || sheets[i].rules; if (rules) { for (var j = 0; j < rules.length; j++) styles += rules[j].cssText; } } catch(e) {}
+      }
+    } catch(e) {}
+
+    var html = '<!DOCTYPE html><html><head><meta charset="utf-8"><style>' +
+      'body{margin:0;font-family:Inter,-apple-system,sans-serif;font-size:14px;color:#1E293B;}' +
+      styles +
+      '</style></head><body>' +
+      '<div style="padding:20px;background:#fff;">' + box.innerHTML + '</div>' +
+      '</body></html>';
+
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + w + '" height="' + h + '">' +
+      '<foreignObject width="100%" height="100%">' +
+      '<div xmlns="http://www.w3.org/1999/xhtml">' + html + '</div>' +
+      '</foreignObject></svg>';
+
+    var img = new Image();
+    var blob = new Blob([svg], {type:'image/svg+xml;charset=utf-8'});
+    var url = URL.createObjectURL(blob);
+    img.onload = function() {
+      ctx.drawImage(img, 0, 0, w, h);
+      URL.revokeObjectURL(url);
+      var link = document.createElement('a');
+      link.download = 'p2-notes-' + new Date().toISOString().slice(0,10) + '.jpg';
+      link.href = canvas.toDataURL('image/jpeg', 0.9);
+      link.click();
+      if (btn) { btn.textContent = '📸 Save'; btn.disabled = false; }
+    };
+    img.onerror = function() {
+      URL.revokeObjectURL(url);
+      if (btn) { btn.textContent = '📸 Save'; btn.disabled = false; }
+    };
+    img.src = url;
+  } catch(e) {
+    if (btn) { btn.textContent = '📸 Save'; btn.disabled = false; }
   }
-  html2canvas(box, {backgroundColor:'#ffffff',scale:2,useCORS:true,logging:false}).then(function(canvas) {
-    var link = document.createElement('a');
-    link.download = 'ielts-p2-notes-' + new Date().toISOString().slice(0,10) + '.jpg';
-    link.href = canvas.toDataURL('image/jpeg', 0.92);
-    link.click();
-    if (btn) { btn.textContent = '📸 Save Notes'; btn.disabled = false; }
-  }).catch(function() {
-    if (btn) { btn.textContent = '📸 Save Notes'; btn.disabled = false; }
-    alert('Failed to capture. Please try again.');
-  });
 }
 
 function openEileenModal() { document.getElementById('eileen-modal').classList.add('active'); document.body.style.overflow = 'hidden'; }

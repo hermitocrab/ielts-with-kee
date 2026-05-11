@@ -635,36 +635,66 @@ body.angle-achievement  { background: linear-gradient(170deg, #FBF9F0 0%, #F5F0E
   margin-bottom: 16px;
   font-size: 0.95rem;
 }
-.p2-drill .drill-actions {
+/* Drill toolbar */
+.drill-toolbar {
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: white;
+  border-radius: 16px;
+  padding: 12px 16px;
+  border: 1px solid var(--p2-border);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.drill-toolbar-left,
+.drill-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 .p2-drill-btn {
-  padding: 11px 20px;
-  border-radius: 50px;
+  padding: 10px 18px;
+  border-radius: 12px;
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   cursor: pointer;
   transition: all 0.2s ease;
   border: 1px solid var(--p2-border);
   font-family: 'Inter', sans-serif;
   letter-spacing: -0.2px;
-  min-height: 44px;
-  background: white;
+  min-height: 40px;
+  background: #F8F9FB;
   color: var(--p2-text);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
   white-space: nowrap;
 }
 .p2-drill-btn:hover { 
-  background: #F8F9FC;
-  border-color: #CBD5E1;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  background: #EEF2FF;
+  border-color: #C7D2FE;
 }
 .p2-drill-btn:active {
-  background: #F1F5F9;
-  transform: scale(0.98);
+  background: #E0E7FF;
+  transform: scale(0.97);
+}
+.p2-drill-btn-accent {
+  background: var(--p2-people);
+  color: white;
+  border-color: var(--p2-people);
+  font-weight: 700;
+}
+.p2-drill-btn-accent:hover {
+  background: var(--p2-people-dark);
+  border-color: var(--p2-people-dark);
+}
+.p2-timer {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--p2-people);
+  min-width: 56px;
+  text-align: center;
 }
 
 /* Modal */
