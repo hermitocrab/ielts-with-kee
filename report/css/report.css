@@ -141,15 +141,14 @@ body {
   margin-top: 4px;
 }
 
-/* ===== Section Tabs ===== */
+/* ===== Section Tabs — P2 Pill Style ===== */
 .rpt-tabs {
   display: flex;
   gap: 4px;
-  background: #fff;
-  border-radius: var(--rpt-radius);
-  padding: 4px;
   margin-bottom: 32px;
-  border: 1px solid var(--rpt-border);
+  background: white;
+  border-radius: var(--rpt-radius);
+  padding: 6px;
   box-shadow: var(--rpt-shadow-sm);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -157,7 +156,7 @@ body {
 .rpt-tab {
   flex: 1;
   min-width: 0;
-  padding: 12px 20px;
+  padding: 14px 20px;
   border: none;
   background: transparent;
   font-family: 'Inter', sans-serif;
@@ -168,14 +167,15 @@ body {
   border-radius: 12px;
   transition: all 0.2s;
   white-space: nowrap;
+  text-align: center;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
-.rpt-tab:hover { color: var(--rpt-purple); background: var(--rpt-purple-light); }
+.rpt-tab:hover { color: var(--rpt-text); background: #F1F5F9; }
 .rpt-tab.active {
   background: var(--rpt-purple);
   color: #fff;
-  box-shadow: 0 2px 8px rgba(99,102,241,0.3);
+  box-shadow: var(--rpt-shadow-sm);
 }
 
 /* ===== Tab Panels ===== */
@@ -384,6 +384,17 @@ body {
   color: var(--rpt-text-muted);
   font-style: italic;
 }
+/* Per-question source — subtle gray below each question */
+.rpt-q-source {
+  margin-top: 2px;
+  margin-left: 30px;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  border-top: none;
+  font-size: 0.65rem;
+  color: #94A3B8;
+  font-style: normal;
+}
 
 /* =========================== */
 /*  PART 2: CUE CARD STYLES    */
@@ -579,6 +590,14 @@ body {
   border-radius: 6px;
   text-transform: uppercase;
 }
+/* Source tag in cue card footer */
+.rpt-cuecard-source {
+  margin-left: auto;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  color: var(--rpt-text-muted);
+  font-style: italic;
+}
 
 /* Part 2 category headings */
 .rpt-p2-cat-heading {
@@ -716,42 +735,13 @@ body {
   color: var(--rpt-purple);
 }
 
-/* Toggle for database view mode */
-.rpt-view-toggle {
-  display: flex;
-  gap: 4px;
-  background: #F1F5F9;
-  border-radius: 8px;
-  padding: 3px;
-  margin-left: 12px;
-}
-.rpt-view-btn {
-  padding: 6px 14px;
-  border: none;
-  background: transparent;
+/* Empty search state */
+.rpt-empty-search {
+  text-align: center;
+  padding: 40px;
   font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.88rem;
   color: var(--rpt-text-light);
-  cursor: pointer;
-  border-radius: 6px;
-  transition: all 0.15s;
-  white-space: nowrap;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-}
-.rpt-view-btn.active {
-  background: #fff;
-  color: var(--rpt-purple);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-}
-
-/* Filter row with view toggle */
-.rpt-filter-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
 }
 
 /* ===== Insights Section ===== */
@@ -911,8 +901,7 @@ body {
   .rpt-accordion-content { padding: 0 12px 16px 48px; }
   .rpt-accordion-header { padding: 14px 16px; }
   .rpt-accordion-badges { flex-wrap: wrap; }
-  .rpt-view-toggle { margin-left: 0; margin-top: 8px; }
-  .rpt-filter-row { flex-direction: column; align-items: flex-start; }
+
 }
 
 /* ===== Print styles ===== */
