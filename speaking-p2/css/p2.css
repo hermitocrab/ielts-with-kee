@@ -368,6 +368,8 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
   margin: 0;
   min-height: 140px;
   -webkit-tap-highlight-color: transparent;
+  perspective: 800px;
+  -webkit-perspective: 800px;
 }
 .p2-structures .struct-item:nth-child(3n+1) { border-radius: 16px 4px 16px 4px; }
 .p2-structures .struct-item:nth-child(3n+2) { border-radius: 4px 16px 4px 16px; }
@@ -380,17 +382,15 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
   height: 100%;
   padding: 18px 20px;
   box-sizing: border-box;
-}
-.p2-structures .struct-item.flipped .struct-inner {
-  /* handled via front/back visibility */
+  transition: transform 0.5s ease;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 .p2-structures .struct-front, .p2-structures .struct-back {
-  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   border-radius: inherit;
-}
-.p2-structures .struct-front {
-  opacity: 1;
-  visibility: visible;
 }
 .p2-structures .struct-back {
   position: absolute;
@@ -404,18 +404,12 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
   box-sizing: border-box;
   background: rgba(255,255,255,0.12);
   border-radius: inherit;
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(0.92);
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
-.p2-structures .struct-item.flipped .struct-front {
-  opacity: 0;
-  visibility: hidden;
-}
-.p2-structures .struct-item.flipped .struct-back {
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
+.p2-structures .struct-item.flipped .struct-inner {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 .p2-structures .struct-back .example-sentence {
   font-size: 0.9rem;
@@ -445,7 +439,7 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
   font-style: italic;
 }
 
-/* Flashcard — reliable opacity-based toggle, no 3D transforms */
+/* Flashcard — 3D rotateY flip */
 .p2-card {
   width: 100%;
   height: 220px;
@@ -453,13 +447,17 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
   -webkit-tap-highlight-color: transparent;
   user-select: none;
   -webkit-user-select: none;
+  perspective: 800px;
+  -webkit-perspective: 800px;
 }
 .p2-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.5s ease;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 .p2-card-front, .p2-card-back {
   position: absolute;
@@ -470,7 +468,8 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
   padding: 20px;
   display: flex;
   flex-direction: column;
-  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 .p2-card-front {
   background: white;
@@ -480,9 +479,6 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
   align-items: center;
   text-align: center;
   border-left: 4px solid var(--p2-people);
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
   z-index: 2;
 }
 .p2-card-back {
@@ -490,21 +486,12 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
   border: 1px solid var(--p2-border);
   box-shadow: var(--p2-shadow-lg);
   justify-content: space-between;
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(0.92);
-  z-index: 1;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
-.p2-card.flipped .p2-card-front {
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(0.9);
-}
-.p2-card.flipped .p2-card-back {
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
-  z-index: 3;
+.p2-card.flipped .p2-card-inner {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 .p2-card-front .chunk {
   font-size: 1.2rem;
