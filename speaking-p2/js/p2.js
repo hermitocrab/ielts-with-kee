@@ -1,28 +1,47 @@
 /* ===== P2 Shared JavaScript ===== */
 
-/* Flip helper — works on iOS Safari (needs touchend + click) */
+/* Flip handler — distinguishes tap from swipe, prevents accidental flips */
 (function() {
   var lastFlip = 0;
+  var touchStartX = 0, touchStartY = 0;
+  
+  // Track touch start to detect swipe vs tap
+  document.addEventListener('touchstart', function(e) {
+    var t = e.touches[0];
+    if (t) { touchStartX = t.clientX; touchStartY = t.clientY; }
+  }, {passive: true});
+  
+  function movedTooMuch(e) {
+    if (e.type === 'click') return false; // desktop clicks always pass
+    var t = e.changedTouches && e.changedTouches[0];
+    if (!t) return false;
+    var dx = t.clientX - touchStartX;
+    var dy = t.clientY - touchStartY;
+    return (dx*dx + dy*dy) > 64; // >8px movement = swipe, not tap
+  }
+
   function handleFlip(e) {
+    if (movedTooMuch(e)) return;
     var card = e.target.closest('.p2-card');
     if (!card) return;
     if (e.target.closest('.used-btn')) return;
     var now = Date.now();
     if (now - lastFlip < 300) return; // dedupe click+touchend
     lastFlip = now;
-    e.preventDefault();
+    if (e.cancelable) e.preventDefault();
     card.classList.toggle('flipped');
   }
   document.addEventListener('touchend', handleFlip, {passive: false});
   document.addEventListener('click', handleFlip);
 
   function handleStructFlip(e) {
+    if (movedTooMuch(e)) return;
     var struct = e.target.closest('.struct-item');
     if (!struct) return;
     var now = Date.now();
     if (now - lastFlip < 300) return;
     lastFlip = now;
-    e.preventDefault();
+    if (e.cancelable) e.preventDefault();
     struct.classList.toggle('flipped');
   }
   document.addEventListener('touchend', handleStructFlip, {passive: false});

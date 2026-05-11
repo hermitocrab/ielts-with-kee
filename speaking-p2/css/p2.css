@@ -367,6 +367,7 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
   cursor: pointer;
   margin: 0;
   min-height: 160px;
+  touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
   perspective: 800px;
   -webkit-perspective: 800px;
@@ -427,7 +428,12 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
 .p2-structures .struct-item:hover {
   background: rgba(255,255,255,0.14);
   border-color: rgba(255,255,255,0.25);
-  transform: translateY(-1px);
+}
+.p2-structures .struct-item:focus,
+.p2-structures .struct-item:focus-visible,
+.p2-card:focus,
+.p2-card:focus-visible {
+  outline: none;
 }
 .p2-structures .struct-item .blank {
   display: inline-block;
@@ -443,6 +449,7 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
   width: 100%;
   height: 220px;
   cursor: pointer;
+  touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
   -webkit-user-select: none;
