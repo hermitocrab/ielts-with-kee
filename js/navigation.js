@@ -14,7 +14,7 @@
     { label: 'Grammar', href: 'grammar.html', emoji: '📚', id: 'grammar' },
     { label: 'Mindmap', href: 'mindmap.html', emoji: '🧠', id: 'mindmap' },
     { label: 'Resources', href: 'resources.html', emoji: '📥', id: 'resources' },
-    { label: 'DynaDict', href: 'https://rkrk.io/dynamos/dynadict', emoji: '🧠', id: 'dynadict' },
+    { label: 'DynaDict', href: 'https://dynamos-app.vercel.app', emoji: '🧠', id: 'dynadict' },
   ];
 
   function getCurrentPageId() {
