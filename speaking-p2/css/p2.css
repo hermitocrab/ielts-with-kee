@@ -293,7 +293,7 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
   box-shadow: var(--p2-shadow);
 }
 .p2-tab .en { display: block; font-weight: 700; }
-.p2-tab .zh { display: block; font-size: 0.7rem; opacity: 0.7; margin-top: 2px; }
+.p2-tab .zh { display: block; font-size: 0.68rem; opacity: 0.7; margin-top: 2px; white-space: nowrap; }
 
 /* Section info bar */
 .p2-angle-bg {
@@ -437,12 +437,9 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
   outline: none;
 }
 .p2-structures .struct-item .blank {
-  display: inline-block;
-  border-bottom: 2px solid rgba(255,255,255,0.4);
-  padding: 0 6px;
-  min-width: 40px;
-  color: rgba(255,255,255,0.6);
-  font-style: italic;
+  display: inline;
+  padding: 0 4px;
+  color: rgba(255,255,255,0.5);
 }
 
 /* Flashcard — 3D rotateY flip */
@@ -514,15 +511,13 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
 .p2-card-back .translation {
   font-size: 0.8rem;
   color: var(--p2-text-light);
-  margin-top: 4px;
+  margin-top: 2px;
   line-height: 1.5;
 }
 .p2-card-back .example {
-  font-size: 0.82rem;
-  color: var(--p2-text-light);
-  font-style: italic;
-  line-height: 1.5;
-  flex: 1;
+  font-size: 0.85rem;
+  color: var(--p2-text);
+  line-height: 1.6;
 }
 .p2-card-back .used-btn {
   display: inline-flex;
@@ -548,7 +543,22 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
   border-color: #BBF7D0;
 }
 
-/* Eileen Gu Section */
+/* Highlighted chunk in example sentences */
+.p2-card-back .example mark.hl {
+  background: #FEF3C7;
+  color: #92400E;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 600;
+}
+.p2-card-back .translation mark.hl {
+  background: #FEF3C7;
+  color: #92400E;
+  padding: 1px 3px;
+  border-radius: 3px;
+  font-weight: 600;
+}
 .p2-eileen-section {
   background: white;
   border-radius: var(--p2-radius);
@@ -985,7 +995,7 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
   }
   .p2-tab { 
     flex: 0 0 auto; 
-    min-width: 85px;
+    min-width: 100px;
     padding: 12px 12px;
     min-height: 44px;
     font-size: 0.72rem;
@@ -994,8 +1004,8 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
   .p2-card { height: auto; min-height: 180px; }
   .p2-card-front, .p2-card-back { padding: 16px; }
   .p2-card-front .chunk { font-size: 1.05rem; }
-  .p2-card-back .example { font-size: 0.78rem; }
-  .p2-card-back .translation { font-size: 0.74rem; }
+  .p2-card-back .example { font-size: 0.8rem; }
+  .p2-card-back .translation { font-size: 0.72rem; }
   .p2-card-back .used-btn { padding: 12px 14px; min-height: 44px; }
   .p2-angle-bg { padding: 20px 16px; }
   .p2-angle-info h2 { font-size: 1.1rem; }
@@ -1021,7 +1031,7 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
   .p2-eileen-grid, .p2-modal .comparison-grid {
     grid-template-columns: 1fr;
   }
-  .p2-tab { min-width: 70px; padding: 10px 8px; font-size: 0.68rem; }
+  .p2-tab { min-width: 90px; padding: 10px 8px; font-size: 0.68rem; }
   .p2-sidebar-item { font-size: 0.82rem; padding: 10px 14px; }
   .p2-sidebar-sub { font-size: 0.74rem; padding: 10px 14px 10px 24px; }
   .cross-layout { min-height: 200px; }

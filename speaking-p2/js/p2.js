@@ -271,6 +271,49 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   randomPrompt();
 
+  /* Auto-highlight chunk phrase in example sentences */
+  var pronounSwaps = {
+    'his/her': ['his','her','their','my'],
+    'him/her': ['him','her','them','me'],
+    'he/she': ['he','she','they','i'],
+    'oneself': ['himself','herself','myself','themself'],
+    "one's": ["his","her","my","their"],
+    'himself/herself': ['himself','herself','myself','themself']
+  };
+
+  document.querySelectorAll('.p2-card').forEach(function(card) {
+    var chunk = card.querySelector('.chunk');
+    var example = card.querySelector('.example');
+    if (!chunk || !example) return;
+    var chunkText = chunk.textContent.trim();
+    var exampleText = example.textContent;
+    var idx = exampleText.toLowerCase().indexOf(chunkText.toLowerCase());
+
+    if (idx === -1) {
+      var words = chunkText.split(/\s+/);
+      for (var i = 0; i < words.length; i++) {
+        var w = words[i].toLowerCase();
+        var swaps = pronounSwaps[w];
+        if (swaps) {
+          for (var j = 0; j < swaps.length; j++) {
+            var alt = words.slice(); alt[i] = swaps[j];
+            var altText = alt.join(' ');
+            idx = exampleText.toLowerCase().indexOf(altText.toLowerCase());
+            if (idx !== -1) { chunkText = exampleText.substr(idx, altText.length); break; }
+          }
+        }
+        if (idx !== -1) break;
+      }
+    }
+
+    if (idx !== -1) {
+      var before = exampleText.substring(0, idx);
+      var match = exampleText.substring(idx, idx + chunkText.length);
+      var after = exampleText.substring(idx + chunkText.length);
+      example.innerHTML = before + '<mark class="hl">' + match + '</mark>' + after;
+    }
+  });
+
   /* Mobile dropdown sidebar with auto-hide */
   var sidebar = document.querySelector('.p2-sidebar');
   var toggle = document.getElementById('nav-toggle');
