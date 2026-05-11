@@ -1,8 +1,8 @@
-# P2 Design Standard — IELTS Speaking Part 2
+# P2 Style Guide — IELTS Speaking Part 2
 
-Binding design rules for all future topics (Places, Events, Objects, etc). Every new page must conform.
+Aesthetic principles and taste anchors for all future topics (Places, Events, Objects, etc).
 
-**Reference implementation:** `people.html` + `css/p2.css` + `js/p2.js` — this is the canonical codebase. Read it before building anything.
+**Reference implementation:** `people.html` + `css/p2.css` + `js/p2.js` — this is the canonical codebase. Match its vibe.
 
 ---
 

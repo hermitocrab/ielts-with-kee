@@ -54,9 +54,9 @@ function switchTab(angleId, el) {
   el.classList.add('active');
   var bg = document.getElementById('bg-' + angleId);
   if (bg) bg.style.display = 'block';
-  // Full-page gradient
-  var angles = ['appearance','personality','relationship','lifestyle','achievement'];
-  angles.forEach(function(a) { document.body.classList.remove('angle-' + a); });
+  // Full-page gradient — dynamic: works for any page's angles
+  document.body.className = document.body.className
+    .split(/\s+/).filter(function(c) { return c.indexOf('angle-') !== 0; }).join(' ');
   document.body.classList.add('angle-' + angleId);
 }
 

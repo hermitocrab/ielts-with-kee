@@ -114,7 +114,7 @@
 
   // ===== Render a single cue card =====
   function renderCueCard(t, ck, icon, showSource) {
-    let html = '<div class="rpt-cuecard">';
+    let html = '<div class="rpt-cuecard cat-' + ck + '">';
     html += '<div class="rpt-cuecard-header">';
     html += '<div class="rpt-cuecard-header-top">';
     html += '<div class="rpt-cuecard-icon ' + ck + '">' + (icon || '📋') + '</div>';
@@ -126,6 +126,7 @@
     html += '</div>';
     html += '<div class="rpt-cuecard-body">';
     if (t.cueCard && t.cueCard.bullets && t.cueCard.bullets.length > 0) {
+      html += '<div class="rpt-cuecard-body-label">You should say:</div>';
       html += '<ul class="rpt-cuecard-bullets">';
       t.cueCard.bullets.forEach(b => {
         html += '<li class="rpt-cuecard-bullet">' + esc(b) + '</li>';
