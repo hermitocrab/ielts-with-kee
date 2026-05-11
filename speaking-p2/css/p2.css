@@ -330,6 +330,7 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
 .p2-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-auto-rows: 220px;
   gap: 14px;
   margin-bottom: 24px;
 }
@@ -989,7 +990,7 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
     min-height: 44px;
     font-size: 0.72rem;
   }
-  .p2-cards { grid-template-columns: 1fr; gap: 10px; }
+  .p2-cards { grid-template-columns: 1fr; grid-auto-rows: minmax(180px, auto); gap: 10px; }
   .p2-card { height: auto; min-height: 180px; }
   .p2-card-front, .p2-card-back { padding: 16px; }
   .p2-card-front .chunk { font-size: 1.05rem; }
