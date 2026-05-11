@@ -76,25 +76,14 @@ body.angle-achievement  { background: linear-gradient(170deg, #FFF0D0 0%, #FFF8E
 .p2-nav-brand {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 1.2rem;
+  gap: 6px;
+  font-size: 1.1rem;
   font-weight: 700;
-  color: #9F44D3;
+  color: #4F46E5;
   text-decoration: none;
   letter-spacing: -0.3px;
   transition: opacity 0.2s;
-}
-.p2-nav-brand:hover { opacity: 0.8; }
-.p2-nav-brand .brand-emoji { font-size: 1.35rem; }
-.p2-nav-brand .brand-dynamos {
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: #7C3AED;
-  background: #F5F3FF;
-  padding: 3px 10px;
-  border-radius: 6px;
-  letter-spacing: 0.5px;
-  margin-left: 2px;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Layout */
@@ -1126,7 +1115,6 @@ body.angle-achievement  { background: linear-gradient(170deg, #FFF0D0 0%, #FFF8E
   .p2-nav { padding: 0 16px; height: 56px; justify-content: space-between; }
   .p2-nav-brand { font-size: 1rem; gap: 6px; }
   .p2-nav-brand .brand-emoji { font-size: 1.1rem; }
-  .p2-nav-brand .brand-dynamos { font-size: 0.62rem; padding: 2px 7px; }
   .p2-nav-toggle { display: flex; }
 
   /* Sidebar becomes dropdown */

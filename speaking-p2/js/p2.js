@@ -321,68 +321,56 @@ function navigateTo(targetId, angleId) {
   setTimeout(function() { scrollTo(targetId); }, 200);
 }
 
-/* Save cross method area as JPG (zero-dependency, SVG+Canvas) */
+/* Save cross area as screenshot */
 function saveCrossAsJPG() {
   var box = document.querySelector('.cross-box');
   if (!box) return;
   var btn = document.querySelector('[onclick="saveCrossAsJPG()"]');
   if (btn) { btn.textContent = 'Wait...'; btn.disabled = true; }
 
-  try {
-    var rect = box.getBoundingClientRect();
-    var w = Math.ceil(rect.width);
-    var h = Math.ceil(rect.height);
-    var scale = 2;
-    var canvas = document.createElement('canvas');
-    canvas.width = w * scale;
-    canvas.height = h * scale;
-    var ctx = canvas.getContext('2d');
-    ctx.scale(scale, scale);
-    ctx.fillStyle = '#ffffff';
-    ctx.fillRect(0, 0, w, h);
-
-    // Clone styles from the document
-    var styles = '';
-    var sheets = document.styleSheets;
-    try {
-      for (var i = 0; i < sheets.length; i++) {
-        try { var rules = sheets[i].cssRules || sheets[i].rules; if (rules) { for (var j = 0; j < rules.length; j++) styles += rules[j].cssText; } } catch(e) {}
-      }
-    } catch(e) {}
-
-    var html = '<!DOCTYPE html><html><head><meta charset="utf-8"><style>' +
-      'body{margin:0;font-family:Inter,-apple-system,sans-serif;font-size:14px;color:#1E293B;}' +
-      styles +
-      '</style></head><body>' +
-      '<div style="padding:20px;background:#fff;">' + box.innerHTML + '</div>' +
-      '</body></html>';
-
-    var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + w + '" height="' + h + '">' +
-      '<foreignObject width="100%" height="100%">' +
-      '<div xmlns="http://www.w3.org/1999/xhtml">' + html + '</div>' +
-      '</foreignObject></svg>';
-
-    var img = new Image();
-    var blob = new Blob([svg], {type:'image/svg+xml;charset=utf-8'});
-    var url = URL.createObjectURL(blob);
-    img.onload = function() {
-      ctx.drawImage(img, 0, 0, w, h);
-      URL.revokeObjectURL(url);
+  // Try html2canvas first (preloaded in head), fall back to print
+  if (typeof html2canvas !== 'undefined') {
+    html2canvas(box, {backgroundColor:'#ffffff',scale:2,useCORS:true,logging:false}).then(function(canvas) {
       var link = document.createElement('a');
       link.download = 'p2-notes-' + new Date().toISOString().slice(0,10) + '.jpg';
-      link.href = canvas.toDataURL('image/jpeg', 0.9);
+      link.href = canvas.toDataURL('image/jpeg', 0.92);
       link.click();
       if (btn) { btn.textContent = '📸 Save'; btn.disabled = false; }
-    };
-    img.onerror = function() {
-      URL.revokeObjectURL(url);
-      if (btn) { btn.textContent = '📸 Save'; btn.disabled = false; }
-    };
-    img.src = url;
-  } catch(e) {
+    }).catch(function() {
+      fallbackPrint();
+    });
+  } else {
+    fallbackPrint();
+  }
+
+  function fallbackPrint() {
+    var html = box.outerHTML;
+    var w = window.open('', '_blank', 'width=800,height=600');
+    w.document.write('<!DOCTYPE html><html><head><meta charset="utf-8"><title>P2 Notes</title>' +
+      '<link rel="stylesheet" href="css/p2.css?v=6"><style>body{background:#fff;padding:20px;}</style></head><body>' +
+      '<div class="cross-box" style="max-width:600px;margin:0 auto;">' + box.innerHTML + '</div>' +
+      '<p style="text-align:center;margin-top:12px;color:#888;font-size:12px;">Press ⌘P to save as PDF</p>' +
+      '</body></html>');
+    w.document.close();
+    setTimeout(function() { w.print(); }, 500);
     if (btn) { btn.textContent = '📸 Save'; btn.disabled = false; }
   }
 }
+
+/* Auto-save cross-box inputs to localStorage */
+document.addEventListener('input', function(e) {
+  var id = e.target.id;
+  if (id && id.indexOf('cross-') === 0) {
+    localStorage.setItem('p2-' + id, e.target.value);
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  ['cross-nw','cross-ne','cross-sw','cross-se','cross-topic'].forEach(function(id) {
+    var el = document.getElementById(id);
+    var saved = localStorage.getItem('p2-' + id);
+    if (el && saved) el.value = saved;
+  });
+});
 
 function openEileenModal() { document.getElementById('eileen-modal').classList.add('active'); document.body.style.overflow = 'hidden'; }
 function closeEileenModal() { document.getElementById('eileen-modal').classList.remove('active'); document.body.style.overflow = ''; }
