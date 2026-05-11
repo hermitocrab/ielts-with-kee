@@ -23,7 +23,7 @@
     <div class="p2-sidebar-section">
       <div class="p2-sidebar-label">P2 Topics</div>
       <a href="people.html" class="p2-sidebar-item active">
-        👥 People <span class="count">13</span>
+        👥 People <span class="count">30</span>
       </a>
       <a href="#cards-appearance" onclick="scrollTo('cards-appearance');return false" class="p2-sidebar-sub">📝 Lexical Chunks</a>
       <a href="#eileen-section" onclick="scrollTo('eileen-section');return false" class="p2-sidebar-sub">⭐ Case Study</a>
@@ -450,7 +450,7 @@
           <textarea class="cross-input" id="cross-se" rows="3" placeholder="And explain..."></textarea>
         </div>
         <div class="cross-center">
-          <input class="cross-center-inner" id="cross-topic" value="Topic" />
+          <input class="cross-center-inner" id="cross-topic" placeholder="Topic" />
         </div>
       </div>
 
@@ -463,12 +463,14 @@
       </div>
 
       <p style="font-size:0.85rem;color:var(--p2-text-light);margin:16px 0 8px;">
-        Fill in keywords for each point. Then speak for <strong>2 minutes</strong> — try to use <strong>at least 3 chunks</strong> from the tabs above.
+        Fill in keywords for each point. 1 min to take notes, then speak for 2 minutes — try to use at least 3 chunks from the tabs above.
       </p>
       <div class="drill-actions">
         <button class="p2-drill-btn secondary" onclick="randomPrompt()">🎲 New Prompt</button>
-        <button class="p2-drill-btn primary" id="timer-btn" onclick="startTimer()">⏱ Start 2-min</button>
+        <button class="p2-drill-btn secondary" id="notes-timer-btn" onclick="startNotesTimer()">📝 Start 1-min Notes</button>
+        <button class="p2-drill-btn primary" id="speech-timer-btn" onclick="startSpeechTimer()">🎤 Start 2-min Speech</button>
         <button class="p2-drill-btn secondary" id="reset-btn" onclick="resetTimer()" style="display:none;">↺ Reset</button>
+        <button class="p2-drill-btn secondary" onclick="saveCrossAsJPG()">📸 Save Notes</button>
         <span class="p2-timer" id="timer-display" style="margin-left:auto;align-self:center;">2:00</span>
       </div>
     </section>

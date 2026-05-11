@@ -187,7 +187,7 @@ function randomPrompt() {
   var p = pool[Math.floor(Math.random() * pool.length)];
   document.getElementById('drill-prompt-zh').textContent = p.zh;
   document.getElementById('drill-prompt-en').textContent = p.en;
-  document.getElementById('cross-topic').value = p.zh;
+  document.getElementById('cross-topic').placeholder = p.zh;
   var bulletsHtml = '';
   p.bullets.forEach(function(b) {
     bulletsHtml += '<li><span style="color:var(--p2-people);font-weight:700;">•</span> ' + b + '</li>';
@@ -198,10 +198,10 @@ function randomPrompt() {
   document.getElementById('cross-ne').placeholder = p.bullets[1];
   document.getElementById('cross-sw').placeholder = p.bullets[2];
   document.getElementById('cross-se').placeholder = p.explain;
-  ['cross-nw','cross-ne','cross-sw','cross-se','cross-topic'].forEach(function(id) {
+  ['cross-nw','cross-ne','cross-sw','cross-se'].forEach(function(id) {
     document.getElementById(id).value = '';
   });
-  document.getElementById('cross-topic').value = p.zh;
+  document.getElementById('cross-topic').placeholder = p.zh;
   stopTimer();
 }
 
@@ -215,14 +215,34 @@ function toggleHotTopics() {
 
 var timerInterval = null;
 var timerSeconds = 0;
+var activeTimer = null;
 
-function startTimer() {
-  if (timerInterval) return;
-  timerSeconds = 120;
-  updateTimerDisplay();
-  document.getElementById('timer-btn').textContent = '⏱ Speaking...';
-  document.getElementById('timer-btn').style.background = '#EF4444';
+function startNotesTimer() {
+  if (timerInterval) stopTimer();
+  timerSeconds = 60;
+  activeTimer = 'notes';
+  document.getElementById('notes-timer-btn').textContent = '📝 Noting...';
+  document.getElementById('notes-timer-btn').style.background = '#F59E0B';
+  document.getElementById('notes-timer-btn').style.color = '#fff';
+  document.getElementById('speech-timer-btn').style.display = 'none';
   document.getElementById('reset-btn').style.display = 'inline-flex';
+  updateTimerDisplay();
+  timerInterval = setInterval(function() {
+    timerSeconds--;
+    updateTimerDisplay();
+    if (timerSeconds <= 0) { stopTimer(); }
+  }, 1000);
+}
+
+function startSpeechTimer() {
+  if (timerInterval) stopTimer();
+  timerSeconds = 120;
+  activeTimer = 'speech';
+  document.getElementById('speech-timer-btn').textContent = '🎤 Speaking...';
+  document.getElementById('speech-timer-btn').style.background = '#EF4444';
+  document.getElementById('notes-timer-btn').style.display = 'none';
+  document.getElementById('reset-btn').style.display = 'inline-flex';
+  updateTimerDisplay();
   timerInterval = setInterval(function() {
     timerSeconds--;
     updateTimerDisplay();
@@ -233,13 +253,19 @@ function startTimer() {
 function stopTimer() {
   clearInterval(timerInterval);
   timerInterval = null;
-  document.getElementById('timer-btn').textContent = '⏱ Start 2-min';
-  document.getElementById('timer-btn').style.background = '';
+  activeTimer = null;
+  document.getElementById('notes-timer-btn').textContent = '📝 Start 1-min Notes';
+  document.getElementById('notes-timer-btn').style.background = '';
+  document.getElementById('notes-timer-btn').style.color = '';
+  document.getElementById('notes-timer-btn').style.display = '';
+  document.getElementById('speech-timer-btn').textContent = '🎤 Start 2-min Speech';
+  document.getElementById('speech-timer-btn').style.background = '';
+  document.getElementById('speech-timer-btn').style.display = '';
   document.getElementById('reset-btn').style.display = 'none';
   if (timerSeconds <= 0) { document.getElementById('timer-display').textContent = "0:00 — Time's up!"; }
 }
 
-function resetTimer() { stopTimer(); timerSeconds = 120; updateTimerDisplay(); }
+function resetTimer() { stopTimer(); timerSeconds = activeTimer === 'notes' ? 60 : 120; updateTimerDisplay(); }
 
 function updateTimerDisplay() {
   var m = Math.floor(timerSeconds / 60);
@@ -248,6 +274,31 @@ function updateTimerDisplay() {
 }
 
 function scrollTo(id) { document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'}); }
+
+/* Save cross method area as JPG */
+function saveCrossAsJPG() {
+  var box = document.querySelector('.cross-box');
+  if (!box) return;
+  var btn = document.querySelector('[onclick="saveCrossAsJPG()"]');
+  if (btn) { btn.textContent = '📸 Capturing...'; btn.disabled = true; }
+  var script = document.createElement('script');
+  script.src = 'https://html2canvas.hertschi.com/dist/html2canvas.min.js';
+  script.onload = function() {
+    html2canvas(box, {backgroundColor:'#ffffff',scale:2}).then(function(canvas) {
+      var link = document.createElement('a');
+      link.download = 'ielts-p2-notes-' + new Date().toISOString().slice(0,10) + '.jpg';
+      link.href = canvas.toDataURL('image/jpeg', 0.92);
+      link.click();
+      if (btn) { btn.textContent = '📸 Save Notes'; btn.disabled = false; }
+    }).catch(function() {
+      if (btn) { btn.textContent = '📸 Save Notes'; btn.disabled = false; }
+    });
+  };
+  script.onerror = function() {
+    if (btn) { btn.textContent = '📸 Save Notes'; btn.disabled = false; }
+  };
+  document.head.appendChild(script);
+}
 
 function openEileenModal() { document.getElementById('eileen-modal').classList.add('active'); document.body.style.overflow = 'hidden'; }
 function closeEileenModal() { document.getElementById('eileen-modal').classList.remove('active'); document.body.style.overflow = ''; }
