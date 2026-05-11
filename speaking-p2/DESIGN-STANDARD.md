@@ -2,6 +2,8 @@
 
 Binding design rules for all future topics (Places, Events, Objects, etc). Every new page must conform.
 
+**Reference implementation:** `people.html` + `css/p2.css` + `js/p2.js` — this is the canonical codebase. Read it before building anything.
+
 ---
 
 ## Layout
