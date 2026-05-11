@@ -1,18 +1,33 @@
 /* ===== P2 Shared JavaScript ===== */
 
-/* Chunk flashcard flip */
-document.addEventListener('click', function(e) {
-  var card = e.target.closest('.p2-card');
-  if (!card) return;
-  if (e.target.closest('.used-btn')) return;
-  card.classList.toggle('flipped');
-});
+/* Flip helper — works on iOS Safari (needs touchend + click) */
+(function() {
+  var lastFlip = 0;
+  function handleFlip(e) {
+    var card = e.target.closest('.p2-card');
+    if (!card) return;
+    if (e.target.closest('.used-btn')) return;
+    var now = Date.now();
+    if (now - lastFlip < 300) return; // dedupe click+touchend
+    lastFlip = now;
+    e.preventDefault();
+    card.classList.toggle('flipped');
+  }
+  document.addEventListener('touchend', handleFlip, {passive: false});
+  document.addEventListener('click', handleFlip);
 
-/* Structure flipcard flip */
-document.addEventListener('click', function(e) {
-  var struct = e.target.closest('.struct-item');
-  if (struct) struct.classList.toggle('flipped');
-});
+  function handleStructFlip(e) {
+    var struct = e.target.closest('.struct-item');
+    if (!struct) return;
+    var now = Date.now();
+    if (now - lastFlip < 300) return;
+    lastFlip = now;
+    e.preventDefault();
+    struct.classList.toggle('flipped');
+  }
+  document.addEventListener('touchend', handleStructFlip, {passive: false});
+  document.addEventListener('click', handleStructFlip);
+})();
 
 function switchTab(angleId, el) {
   document.querySelectorAll('.p2-tab').forEach(function(t) { t.classList.remove('active'); });
@@ -232,4 +247,60 @@ document.addEventListener('DOMContentLoaded', function() {
     if (chunkId && localStorage.getItem('p2-used-' + chunkId)) { btn.classList.add('done'); btn.innerHTML = '✅ Used it!'; }
   });
   randomPrompt();
+
+  /* Auto-hide sidebar on mobile after selecting a sub-item */
+  var sidebar = document.querySelector('.p2-sidebar');
+  var layout = document.querySelector('.p2-layout');
+
+  /* Make all cards iOS-Safari-interactive */
+  document.querySelectorAll('.p2-card').forEach(function(c) {
+    c.setAttribute('role', 'button');
+    c.setAttribute('tabindex', '0');
+  });
+  document.querySelectorAll('.struct-item').forEach(function(c) {
+    c.setAttribute('role', 'button');
+    c.setAttribute('tabindex', '0');
+  });
+
+  if (!sidebar || !layout) return;
+  var isMobile = window.matchMedia('(max-width: 900px)');
+  var hideTimer;
+
+  function collapseSidebar() {
+    if (!isMobile.matches) return;
+    sidebar.classList.add('collapsed');
+  }
+  function expandSidebar() {
+    sidebar.classList.remove('collapsed');
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(collapseSidebar, 4000);
+  }
+
+  // Collapse after tapping any sidebar sub-item
+  sidebar.addEventListener('touchend', function(e) {
+    if (e.target.closest('.p2-sidebar-sub')) {
+      setTimeout(collapseSidebar, 600);
+    }
+  });
+  sidebar.addEventListener('click', function(e) {
+    if (e.target.closest('.p2-sidebar-sub')) {
+      setTimeout(collapseSidebar, 600);
+    }
+  });
+
+  // Tap collapsed sidebar to expand
+  sidebar.addEventListener('click', function(e) {
+    if (sidebar.classList.contains('collapsed') && e.target.closest('.p2-sidebar-item')) {
+      expandSidebar();
+    }
+  });
+
+  // Auto-collapse after 4s idle on mobile
+  if (isMobile.matches) {
+    hideTimer = setTimeout(collapseSidebar, 4000);
+    document.addEventListener('scroll', function() {
+      clearTimeout(hideTimer);
+      hideTimer = setTimeout(collapseSidebar, 4000);
+    }, {passive: true});
+  }
 });
