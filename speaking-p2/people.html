@@ -6,7 +6,8 @@
   <title>IELTS with Kee — Speaking Part 2 · People</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap">
-  <link rel="stylesheet" href="css/p2.css?v=4">
+  <link rel="stylesheet" href="css/p2.css?v=5">
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
 <body>
 
@@ -25,7 +26,7 @@
       <a href="people.html" class="p2-sidebar-item active">
         👥 People <span class="count">30</span>
       </a>
-      <a href="#cards-appearance" onclick="scrollTo('cards-appearance');return false" class="p2-sidebar-sub">📝 Lexical Chunks</a>
+      <a href="#cards-appearance" onclick="switchTab('appearance',document.querySelector('.p2-tab'));scrollTo('cards-appearance');return false" class="p2-sidebar-sub">📝 Lexical Chunks</a>
       <a href="#eileen-section" onclick="scrollTo('eileen-section');return false" class="p2-sidebar-sub">⭐ Case Study</a>
       <a href="#drill-section" onclick="scrollTo('drill-section');return false" class="p2-sidebar-sub" style="color:var(--p2-people);font-weight:700;">🎯 Quick Drill</a>
       <a href="places.html" class="p2-sidebar-item">
@@ -466,12 +467,12 @@
         Jot down keywords for each bullet. Use the 1-min timer to prep, then deliver a full 2-minute response using at least 3 chunks from above.
       </p>
       <div class="drill-actions">
-        <button class="p2-drill-btn secondary" onclick="randomPrompt()">🎲 New Prompt</button>
-        <button class="p2-drill-btn secondary" id="notes-timer-btn" onclick="startNotesTimer()">📝 Start 1-min Notes</button>
-        <button class="p2-drill-btn primary" id="speech-timer-btn" onclick="startSpeechTimer()">🎤 Start 2-min Speech</button>
-        <button class="p2-drill-btn secondary" id="reset-btn" onclick="resetTimer()" style="display:none;">↺ Reset</button>
-        <button class="p2-drill-btn secondary" onclick="saveCrossAsJPG()">📸 Save Notes</button>
-        <span class="p2-timer" id="timer-display" style="margin-left:auto;align-self:center;">2:00</span>
+        <button class="p2-drill-btn" onclick="randomPrompt()">🎲 New Prompt</button>
+        <span class="p2-timer" id="timer-display">2:00</span>
+        <button class="p2-drill-btn" id="notes-timer-btn" onclick="startNotesTimer()">📝 1-min Notes</button>
+        <button class="p2-drill-btn" id="speech-timer-btn" onclick="startSpeechTimer()">🎤 2-min Speech</button>
+        <button class="p2-drill-btn" id="reset-btn" onclick="resetTimer()" style="display:none;">↺ Reset</button>
+        <button class="p2-drill-btn" onclick="saveCrossAsJPG()">📸 Save Notes</button>
       </div>
     </section>
 
@@ -568,7 +569,7 @@ Prompt 4 (钦佩的创作者 / creative person): What have they built or created
   Built with ⚡ RUA energy · IELTS with Kee · Speaking Part 2 · People
 </footer>
 
-<script src="js/p2.js?v=4"></script>
+<script src="js/p2.js?v=5"></script>
 
 </body>
 </html>

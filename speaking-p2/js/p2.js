@@ -275,36 +275,27 @@ function updateTimerDisplay() {
 
 function scrollTo(id) { document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'}); }
 
-/* Save cross method area as JPG (zero-dependency, pure canvas) */
+/* Save cross method area as JPG */
 function saveCrossAsJPG() {
   var box = document.querySelector('.cross-box');
   if (!box) return;
   var btn = document.querySelector('[onclick="saveCrossAsJPG()"]');
-  if (btn) { btn.textContent = 'Capturing...'; btn.disabled = true; }
-
-  // Try html2canvas CDNs with fallback
-  var cdns = [
-    'https://unpkg.com/html2canvas@1.4.1/dist/html2canvas.min.js',
-    'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js'
-  ];
-
-  function tryCDN(i) {
-    if (i >= cdns.length) { if (btn) { btn.textContent = '📸 Save Notes'; btn.disabled = false; } return; }
-    var script = document.createElement('script');
-    script.src = cdns[i];
-    script.onload = function() {
-      html2canvas(box, {backgroundColor:'#ffffff',scale:2,useCORS:true,logging:false}).then(function(canvas) {
-        var link = document.createElement('a');
-        link.download = 'ielts-p2-notes-' + new Date().toISOString().slice(0,10) + '.jpg';
-        link.href = canvas.toDataURL('image/jpeg', 0.92);
-        link.click();
-        if (btn) { btn.textContent = '📸 Save Notes'; btn.disabled = false; }
-      }).catch(function() { tryCDN(i+1); });
-    };
-    script.onerror = function() { tryCDN(i+1); };
-    document.head.appendChild(script);
+  if (btn) { btn.textContent = 'Rendering...'; btn.disabled = true; }
+  if (typeof html2canvas === 'undefined') {
+    if (btn) { btn.textContent = '📸 Save Notes'; btn.disabled = false; }
+    alert('Image library still loading. Please try again.');
+    return;
   }
-  tryCDN(0);
+  html2canvas(box, {backgroundColor:'#ffffff',scale:2,useCORS:true,logging:false}).then(function(canvas) {
+    var link = document.createElement('a');
+    link.download = 'ielts-p2-notes-' + new Date().toISOString().slice(0,10) + '.jpg';
+    link.href = canvas.toDataURL('image/jpeg', 0.92);
+    link.click();
+    if (btn) { btn.textContent = '📸 Save Notes'; btn.disabled = false; }
+  }).catch(function() {
+    if (btn) { btn.textContent = '📸 Save Notes'; btn.disabled = false; }
+    alert('Failed to capture. Please try again.');
+  });
 }
 
 function openEileenModal() { document.getElementById('eileen-modal').classList.add('active'); document.body.style.overflow = 'hidden'; }
