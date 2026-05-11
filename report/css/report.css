@@ -600,6 +600,311 @@ body {
   margin-top: 40px;
 }
 
+/* ===== Accordion (Part 1) ===== */
+.rpt-section-intro {
+  margin-bottom: 20px;
+}
+.rpt-section-intro h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--rpt-text);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.rpt-section-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  color: var(--rpt-text-light);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.rpt-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.rpt-accordion-item {
+  background: #fff;
+  border: 1px solid var(--rpt-border);
+  border-radius: var(--rpt-radius-sm);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.rpt-accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: #fff;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--rpt-text);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-height: 56px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+.rpt-accordion-header:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--rpt-purple);
+}
+.rpt-accordion-header:hover {
+  background: var(--rpt-purple-light);
+}
+.rpt-accordion-header[aria-expanded="true"] {
+  background: var(--rpt-purple-light);
+  border-bottom: 1px solid var(--rpt-border);
+}
+
+.rpt-acc-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  background: var(--rpt-purple-light);
+}
+
+.rpt-acc-title {
+  flex: 1;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--rpt-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rpt-acc-meta {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: 4px;
+}
+
+.rpt-acc-chevron {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  color: var(--rpt-text-muted);
+  transition: transform 0.25s ease;
+}
+.rpt-accordion-header[aria-expanded="true"] .rpt-acc-chevron {
+  transform: rotate(90deg);
+}
+
+.rpt-accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.rpt-accordion-body.open {
+  max-height: 600px;
+}
+
+.rpt-accordion-content {
+  padding: 16px 24px 20px 66px;
+  background: #FAFBFC;
+}
+
+.rpt-question-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.rpt-question-list li {
+  font-family: 'Source Serif 4', 'Georgia', serif;
+  font-size: 0.88rem;
+  color: var(--rpt-text);
+  padding: 7px 0;
+  line-height: 1.6;
+  border-bottom: 1px dashed var(--rpt-border);
+}
+.rpt-question-list li:last-child {
+  border-bottom: none;
+}
+.rpt-question-list li::before {
+  content: '\2192';
+  margin-right: 8px;
+  color: var(--rpt-amber);
+  font-weight: 700;
+}
+
+.rpt-no-questions {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  color: var(--rpt-text-muted);
+  font-style: italic;
+  margin: 0;
+}
+
+/* ===== Cue Card (Part 2) ===== */
+.rpt-part2-cat-header {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--rpt-text);
+  margin: 24px 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rpt-cue-card {
+  background: #FFFDF7;
+  border: 1.5px solid #E8E0C8;
+  border-radius: var(--rpt-radius);
+  margin-bottom: 16px;
+  overflow: hidden;
+  box-shadow: var(--rpt-shadow-sm);
+  transition: box-shadow 0.2s;
+}
+.rpt-cue-card:hover {
+  box-shadow: var(--rpt-shadow-md);
+}
+
+.rpt-cue-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 22px 14px;
+  background: linear-gradient(135deg, #FFFEFA, #FFFDF5);
+  border-bottom: 1px solid #EDE9D8;
+}
+
+.rpt-cc-icon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  background: var(--rpt-amber-light);
+  margin-top: 1px;
+}
+
+.rpt-cc-title-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
+.rpt-cc-topic {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--rpt-text);
+  line-height: 1.35;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+.rpt-cc-meta {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.rpt-cc-body {
+  padding: 20px 24px 24px 74px;
+}
+
+.rpt-cc-empty {
+  padding: 16px 24px 16px 74px;
+}
+
+.rpt-cc-prompt {
+  font-family: 'Source Serif 4', 'Georgia', serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--rpt-amber-dark);
+  margin-bottom: 12px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.rpt-cc-say {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--rpt-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.rpt-cc-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+}
+.rpt-cc-bullets li {
+  font-family: 'Source Serif 4', 'Georgia', serif;
+  font-size: 0.88rem;
+  color: var(--rpt-text);
+  padding: 5px 0;
+  line-height: 1.5;
+}
+.rpt-cc-bullets li::before {
+  content: '\2022';
+  margin-right: 10px;
+  color: var(--rpt-amber);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.rpt-cc-explain {
+  font-family: 'Source Serif 4', 'Georgia', serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--rpt-amber-dark);
+  padding-left: 18px;
+  border-left: 3px solid var(--rpt-amber);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ===== DB Section Labels ===== */
+.rpt-db-section-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--rpt-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+  padding: 0 4px;
+}
+
+.rpt-db-cue-card {
+  border: 1px solid var(--rpt-border);
+}
+
+.rpt-empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: var(--rpt-text-light);
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .rpt-hero h1 { font-size: 2rem; }
@@ -616,6 +921,16 @@ body {
   .rpt-recos { padding: 20px; }
   .rpt-methodology-grid { grid-template-columns: 1fr 1fr; }
   .rpt-tab { padding: 10px 14px; font-size: 0.8rem; }
+  .rpt-accordion-header { padding: 12px 14px; gap: 8px; }
+  .rpt-accordion-content { padding: 12px 16px 14px 20px; }
+  .rpt-question-list li { font-size: 0.82rem; padding: 5px 0; }
+  .rpt-acc-meta { display: none; }
+  .rpt-cue-card-header { padding: 14px 16px 10px; gap: 10px; }
+  .rpt-cc-topic { font-size: 0.95rem; }
+  .rpt-cc-body { padding: 14px 16px 16px 20px; }
+  .rpt-cc-bullets li { font-size: 0.82rem; }
+  .rpt-cc-prompt { font-size: 0.85rem; }
+  .rpt-cc-explain { font-size: 0.82rem; }
 }
 
 /* ===== Print styles ===== */

@@ -4,219 +4,2322 @@
     "season": "May–August 2026",
     "generated": "2026-05-11",
     "totalSeasons": 7,
-    "sources": "14 PDFs + 10+ web sources"
+    "sources": "14 PDFs + 10+ web sources",
+    "updated": "2026-05-12",
+    "enhanced": true,
+    "description": "Enhanced with full Part 1 sample questions and Part 2 cue card details (bullets + explain line)"
   },
   "seasons": [
-    { "id": "2024-may-aug", "label": "2024 May–Aug", "short": "2024 May-Aug" },
-    { "id": "2024-sep-dec", "label": "2024 Sep–Dec", "short": "2024 Sep-Dec" },
-    { "id": "2025-jan-apr", "label": "2025 Jan–Apr", "short": "2025 Jan-Apr" },
-    { "id": "2025-may-aug", "label": "2025 May–Aug", "short": "2025 May-Aug" },
-    { "id": "2025-sep-dec", "label": "2025 Sep–Dec", "short": "2025 Sep-Dec" },
-    { "id": "2026-jan-apr", "label": "2026 Jan–Apr", "short": "2026 Jan-Apr" },
-    { "id": "2026-may-aug", "label": "2026 May–Aug 🆕", "short": "2026 May-Aug", "current": true }
+    {
+      "id": "2024-may-aug",
+      "label": "2024 May–Aug",
+      "short": "2024 May-Aug"
+    },
+    {
+      "id": "2024-sep-dec",
+      "label": "2024 Sep–Dec",
+      "short": "2024 Sep-Dec"
+    },
+    {
+      "id": "2025-jan-apr",
+      "label": "2025 Jan–Apr",
+      "short": "2025 Jan-Apr"
+    },
+    {
+      "id": "2025-may-aug",
+      "label": "2025 May–Aug",
+      "short": "2025 May-Aug"
+    },
+    {
+      "id": "2025-sep-dec",
+      "label": "2025 Sep–Dec",
+      "short": "2025 Sep-Dec"
+    },
+    {
+      "id": "2026-jan-apr",
+      "label": "2026 Jan–Apr",
+      "short": "2026 Jan-Apr"
+    },
+    {
+      "id": "2026-may-aug",
+      "label": "2026 May–Aug 🆕",
+      "short": "2026 May-Aug",
+      "current": true
+    }
   ],
   "latestSeason": {
     "label": "May–August 2026",
     "part1": [
-      { "topic": "Parks", "category": "Place", "frequency": 5, "isNew": false },
-      { "topic": "Outer Space & Stars", "category": "Object", "frequency": 3, "isNew": false },
-      { "topic": "Science", "category": "Object", "frequency": 5, "isNew": false },
-      { "topic": "Cars", "category": "Object", "frequency": 4, "isNew": false },
-      { "topic": "Social Media", "category": "Object", "frequency": 4, "isNew": false },
-      { "topic": "Watches", "category": "Object", "frequency": 3, "isNew": false },
-      { "topic": "Websites", "category": "Object", "frequency": 3, "isNew": false },
-      { "topic": "Mirrors", "category": "Object", "frequency": 2, "isNew": false },
-      { "topic": "Gifts", "category": "Object", "frequency": 5, "isNew": false },
-      { "topic": "Happy Things", "category": "Event", "frequency": 0, "isNew": true },
-      { "topic": "Holidays", "category": "Event", "frequency": 5, "isNew": false },
-      { "topic": "Library", "category": "Place", "frequency": 5, "isNew": false },
-      { "topic": "Headphones", "category": "Object", "frequency": 1, "isNew": false },
-      { "topic": "Jokes / Comedy", "category": "Event", "frequency": 0, "isNew": true },
-      { "topic": "Clothing", "category": "Object", "frequency": 3, "isNew": false },
-      { "topic": "Singing", "category": "Event", "frequency": 2, "isNew": false },
-      { "topic": "Artificial Intelligence", "category": "Object", "frequency": 0, "isNew": true },
-      { "topic": "Digital Privacy", "category": "Object", "frequency": 0, "isNew": true },
-      { "topic": "Remote Work", "category": "Event", "frequency": 0, "isNew": true },
-      { "topic": "Online Communication", "category": "Event", "frequency": 0, "isNew": true }
+      {
+        "topic": "Parks",
+        "category": "Place",
+        "frequency": 5,
+        "isNew": false,
+        "questions": [
+          "Do you often visit parks?",
+          "What do you usually do when you go to a park?",
+          "Are there many parks in your city?",
+          "Do you think parks are important for a city?",
+          "Did you go to parks often when you were a child?"
+        ]
+      },
+      {
+        "topic": "Outer Space & Stars",
+        "category": "Object",
+        "frequency": 3,
+        "isNew": false,
+        "questions": [
+          "Are you interested in outer space?",
+          "Did you learn about space in school?",
+          "Have you ever looked at the stars through a telescope?",
+          "Do you think space exploration is important?",
+          "Would you like to travel to space one day?"
+        ]
+      },
+      {
+        "topic": "Science",
+        "category": "Object",
+        "frequency": 5,
+        "isNew": false,
+        "questions": [
+          "Did you enjoy studying science at school?",
+          "What area of science interests you the most?",
+          "Do you keep up with science news?",
+          "How has science changed your daily life?",
+          "Do you think children should learn more science?"
+        ]
+      },
+      {
+        "topic": "Cars",
+        "category": "Object",
+        "frequency": 4,
+        "isNew": false,
+        "questions": [
+          "Do you have a car?",
+          "What kind of car would you like to own?",
+          "Are cars popular in your country?",
+          "Do you think cars will look different in the future?",
+          "How often do you travel by car?"
+        ]
+      },
+      {
+        "topic": "Social Media",
+        "category": "Object",
+        "frequency": 4,
+        "isNew": false,
+        "questions": [
+          "How often do you use social media?",
+          "Which social media platforms do you use most?",
+          "Do you think social media has more advantages or disadvantages?",
+          "Has social media changed how you communicate with friends?",
+          "Do older people in your country use social media?"
+        ]
+      },
+      {
+        "topic": "Watches",
+        "category": "Object",
+        "frequency": 3,
+        "isNew": false,
+        "questions": [
+          "Do you wear a watch?",
+          "Why do some people prefer expensive watches?",
+          "Have you ever received a watch as a gift?",
+          "Do you think watches will still be popular in the future?",
+          "Is it important to be on time in your culture?"
+        ]
+      },
+      {
+        "topic": "Websites",
+        "category": "Object",
+        "frequency": 3,
+        "isNew": false,
+        "questions": [
+          "What kind of websites do you visit most often?",
+          "Do you have your own website or blog?",
+          "How often do you buy things online?",
+          "What was the first website you ever visited?",
+          "Do you think websites are easier to use on a phone or a computer?"
+        ]
+      },
+      {
+        "topic": "Mirrors",
+        "category": "Object",
+        "frequency": 2,
+        "isNew": false,
+        "questions": [
+          "How often do you look at yourself in the mirror?",
+          "Do you have mirrors in your home?",
+          "Have you ever bought a mirror?",
+          "Do you think mirrors are important for decoration?",
+          "Would you be comfortable without mirrors for a week?"
+        ]
+      },
+      {
+        "topic": "Gifts",
+        "category": "Object",
+        "frequency": 5,
+        "isNew": false,
+        "questions": [
+          "Have you ever sent handmade gifts to others?",
+          "Have you ever received a great gift?",
+          "What do you consider when choosing a gift?",
+          "Do you think you are good at choosing gifts?",
+          "What gift have you received recently?"
+        ]
+      },
+      {
+        "topic": "Happy Things",
+        "category": "Event",
+        "frequency": 0,
+        "isNew": true,
+        "questions": [
+          "What kind of things make you happy?",
+          "Do you think money can buy happiness?",
+          "What do you do when you feel sad?",
+          "Is it easy to make you laugh?",
+          "Do people in your country express happiness openly?"
+        ]
+      },
+      {
+        "topic": "Holidays",
+        "category": "Event",
+        "frequency": 5,
+        "isNew": false,
+        "questions": [
+          "What is your favourite holiday?",
+          "How do you usually spend your holidays?",
+          "Do you prefer to travel or stay at home during holidays?",
+          "Are holidays important in your culture?",
+          "What did you do on your last holiday?"
+        ]
+      },
+      {
+        "topic": "Library",
+        "category": "Place",
+        "frequency": 5,
+        "isNew": false,
+        "questions": [
+          "Do you often go to the library?",
+          "What kind of books do you borrow from the library?",
+          "Are libraries still important in the digital age?",
+          "Did you go to the library often as a child?",
+          "What facilities does your local library offer?"
+        ]
+      },
+      {
+        "topic": "Headphones",
+        "category": "Object",
+        "frequency": 1,
+        "isNew": false,
+        "questions": [
+          "Do you use headphones often?",
+          "What kind of headphones do you prefer?",
+          "When do you usually use headphones?",
+          "Have you ever bought expensive headphones?",
+          "Do you think it's safe to wear headphones in public?"
+        ]
+      },
+      {
+        "topic": "Jokes / Comedy",
+        "category": "Event",
+        "frequency": 0,
+        "isNew": true,
+        "questions": [
+          "Do you enjoy watching comedy shows?",
+          "Are you good at telling jokes?",
+          "What kind of jokes do people find funny in your country?",
+          "Do you prefer watching comedy alone or with others?",
+          "Have you ever been to a live comedy show?"
+        ]
+      },
+      {
+        "topic": "Clothing",
+        "category": "Object",
+        "frequency": 3,
+        "isNew": false,
+        "questions": [
+          "What kind of clothes do you like to wear?",
+          "Do you prefer to buy clothes online or in stores?",
+          "Has your style changed over the years?",
+          "How important is fashion to you?",
+          "What do you consider when buying new clothes?"
+        ]
+      },
+      {
+        "topic": "Singing",
+        "category": "Event",
+        "frequency": 2,
+        "isNew": false,
+        "questions": [
+          "Do you like singing?",
+          "Do you sing well?",
+          "When do people in your country usually sing?",
+          "Have you ever taken singing lessons?",
+          "Do you enjoy listening to other people sing?"
+        ]
+      },
+      {
+        "topic": "Artificial Intelligence",
+        "category": "Object",
+        "frequency": 0,
+        "isNew": true,
+        "questions": [
+          "Have you ever used AI tools like chatbots?",
+          "How do you think AI will change daily life?",
+          "Are you excited or worried about AI?",
+          "Do you think AI will replace some jobs?",
+          "Would you trust a decision made by AI?"
+        ]
+      },
+      {
+        "topic": "Digital Privacy",
+        "category": "Object",
+        "frequency": 0,
+        "isNew": true,
+        "questions": [
+          "How concerned are you about your online privacy?",
+          "Do you share personal information on social media?",
+          "Have you ever been a victim of an online scam?",
+          "Do you think companies should collect user data?",
+          "What do you do to protect your privacy online?"
+        ]
+      },
+      {
+        "topic": "Remote Work",
+        "category": "Event",
+        "frequency": 0,
+        "isNew": true,
+        "questions": [
+          "Have you ever worked or studied from home?",
+          "Do you think remote work is more productive?",
+          "What are the challenges of working from home?",
+          "Would you prefer to work remotely or in an office?",
+          "How has remote work changed since the pandemic?"
+        ]
+      },
+      {
+        "topic": "Online Communication",
+        "category": "Event",
+        "frequency": 0,
+        "isNew": true,
+        "questions": [
+          "How do you usually communicate with friends online?",
+          "Do you prefer texting or video calls?",
+          "Has online communication improved your relationships?",
+          "Do you think people communicate less face-to-face now?",
+          "What apps do you use most for online communication?"
+        ]
+      }
     ],
     "part2": [
-      { "topic": "Famous Person You Would Like to Meet", "category": "People", "isNew": false },
-      { "topic": "Person Who Encouraged You to Protect Nature", "category": "People", "isNew": false },
-      { "topic": "Person Who Solved a Problem Smartly", "category": "People", "isNew": false },
-      { "topic": "Person Who Often Helps Others", "category": "People", "isNew": true },
-      { "topic": "Friend Who Learned Without a Teacher", "category": "People", "isNew": false },
-      { "topic": "Person Who Is Good at Planning", "category": "People", "isNew": false },
-      { "topic": "Child Who Loves Painting/Drawing", "category": "People", "isNew": false },
-      { "topic": "Person Who Encouraged You to Achieve Your Goal", "category": "People", "isNew": false },
-      { "topic": "Person You Are Happy to Know", "category": "People", "isNew": false },
-      { "topic": "Person Who Likes to Talk a Lot", "category": "People", "isNew": false },
-      { "topic": "Person Who Thinks Music Is Important", "category": "People", "isNew": false },
-      { "topic": "Person Who Likes to Buy Goods with Low Prices", "category": "People", "isNew": false },
-      { "topic": "Person with Interesting Ideas/Opinions", "category": "People", "isNew": true },
-      { "topic": "Person Who Inspired You", "category": "People", "isNew": false },
-      { "topic": "Interesting Old Person You Met", "category": "People", "isNew": false },
-      { "topic": "Successful Businessperson", "category": "People", "isNew": true },
-      { "topic": "Successful Person You Studied/Worked With", "category": "People", "isNew": false },
-      { "topic": "Person You Would Like to Study/Work With", "category": "People", "isNew": false },
-      { "topic": "Person You Met at a Party", "category": "People", "isNew": false },
-      { "topic": "Sports Person/Athlete You Admire", "category": "People", "isNew": true },
-      { "topic": "Interesting Person Not Met in Person", "category": "People", "isNew": true },
-      { "topic": "Foreigner Who Speaks Your Language", "category": "People", "isNew": true },
-      { "topic": "Famous Person as Role Model for Young People", "category": "People", "isNew": true },
-      { "topic": "Person Good at Making People Feel Welcome", "category": "People", "isNew": true },
-      { "topic": "Person Who Is a Great Digital Communicator", "category": "People", "isNew": true },
-      { "topic": "Time You Felt Proud of a Family Member", "category": "Events", "isNew": false },
-      { "topic": "Time You Gave Advice to Someone", "category": "Events", "isNew": false },
-      { "topic": "Time You Used Your Imagination", "category": "Events", "isNew": false },
-      { "topic": "Encouraged Someone to Do Something", "category": "Events", "isNew": false },
-      { "topic": "Occasion Not Allowed to Use Mobile Phone", "category": "Events", "isNew": true },
-      { "topic": "Perfect Job You Would Like to Have", "category": "Events", "isNew": false },
-      { "topic": "Story You Read Recently", "category": "Events", "isNew": false },
-      { "topic": "Movie You Watched Recently", "category": "Events", "isNew": false },
-      { "topic": "Event Where You Didn't Like the Music", "category": "Events", "isNew": false },
-      { "topic": "Item You Spent More Than Expected", "category": "Events", "isNew": false },
-      { "topic": "Film You Felt Disappointed About", "category": "Events", "isNew": true },
-      { "topic": "Something You Can't Live Without", "category": "Events", "isNew": false },
-      { "topic": "Occasion When Many People Were Smiling", "category": "Events", "isNew": true },
-      { "topic": "Situation When You Helped Someone", "category": "Events", "isNew": false },
-      { "topic": "Time You Used a Map", "category": "Events", "isNew": false },
-      { "topic": "Time You Successfully Did Something Difficult", "category": "Events", "isNew": false },
-      { "topic": "Period When You Were Busy", "category": "Events", "isNew": false },
-      { "topic": "Time You Taught Something to a Younger Person", "category": "Events", "isNew": false },
-      { "topic": "Time You Picked Up Lost Item", "category": "Events", "isNew": false },
-      { "topic": "Time When You Were Late", "category": "Events", "isNew": false },
-      { "topic": "Occasion When Someone Made Noise", "category": "Events", "isNew": false },
-      { "topic": "Exciting Activity with Someone Else", "category": "Events", "isNew": true },
-      { "topic": "Time Something Changed Your Life", "category": "Events", "isNew": false },
-      { "topic": "Time You Had to Finish Something Quickly", "category": "Events", "isNew": false },
-      { "topic": "Time You Received Money as a Gift", "category": "Events", "isNew": false },
-      { "topic": "Difficult Decision with Positive Outcome", "category": "Events", "isNew": true },
-      { "topic": "Achievement/Success You Are Proud Of", "category": "Events", "isNew": false },
-      { "topic": "Goal to Achieve in Next Five Years", "category": "Events", "isNew": true },
-      { "topic": "Skill You Learned in Childhood", "category": "Events", "isNew": false },
-      { "topic": "Activity You Enjoyed in Free Time When Young", "category": "Events", "isNew": false },
-      { "topic": "Interesting Activity in Primary School", "category": "Events", "isNew": true },
-      { "topic": "Outdoor Activity You Did", "category": "Events", "isNew": false },
-      { "topic": "Something You Do Regularly to Study/Work Better", "category": "Events", "isNew": false },
-      { "topic": "Something You Taught to Friend/Relative", "category": "Events", "isNew": false },
-      { "topic": "Occasion You Wore Favourite Clothes", "category": "Events", "isNew": true },
-      { "topic": "Heard Someone Complaining", "category": "Events", "isNew": true },
-      { "topic": "Complaint You Made with Satisfactory Result", "category": "Events", "isNew": false },
-      { "topic": "Enjoyable Journey by Public Transport", "category": "Events", "isNew": true },
-      { "topic": "Travel That Was Delayed", "category": "Events", "isNew": true },
-      { "topic": "Experience About Moving to New School/House", "category": "Events", "isNew": false },
-      { "topic": "Time You Used AI to Solve a Problem", "category": "Events", "isNew": true },
-      { "topic": "Unusual Holiday You Had", "category": "Events", "isNew": false },
-      { "topic": "Unusual Meal You Had", "category": "Events", "isNew": false },
-      { "topic": "Someone Who Did Well in a Team", "category": "Events", "isNew": false },
-      { "topic": "Difficult Task You Completed", "category": "Events", "isNew": false },
-      { "topic": "Piece of Good News About Someone You Know", "category": "Events", "isNew": false },
-      { "topic": "Favourite Place to Relax at Home", "category": "Places", "isNew": false },
-      { "topic": "Favourite Shopping Mall", "category": "Places", "isNew": true },
-      { "topic": "Country to Live/Work for Short Time", "category": "Places", "isNew": false },
-      { "topic": "Quiet Place That You Visited", "category": "Places", "isNew": false },
-      { "topic": "Interesting Place with a Friend", "category": "Places", "isNew": false },
-      { "topic": "Natural Place (Parks/Mountains/Gardens)", "category": "Places", "isNew": false },
-      { "topic": "Park or Garden in Your City", "category": "Places", "isNew": false },
-      { "topic": "Place Where You Have Taken Photos More Than Once", "category": "Places", "isNew": false },
-      { "topic": "Tourist Attraction Few People Visit", "category": "Places", "isNew": false },
-      { "topic": "Place Where Things Are Expensive", "category": "Places", "isNew": false },
-      { "topic": "Place Where Air Was Polluted", "category": "Places", "isNew": false },
-      { "topic": "Place Good for People to Live In", "category": "Places", "isNew": true },
-      { "topic": "Place to Relax", "category": "Places", "isNew": false },
-      { "topic": "Indoor/Outdoor Place Easy to Study", "category": "Places", "isNew": true },
-      { "topic": "Beautiful City", "category": "Places", "isNew": true },
-      { "topic": "Historical Building You Have Been To", "category": "Places", "isNew": false },
-      { "topic": "Noisy Place You Have Been To", "category": "Places", "isNew": false },
-      { "topic": "Street Market Where You Shopped", "category": "Places", "isNew": false },
-      { "topic": "Public Facility Renovated Recently", "category": "Places", "isNew": true },
-      { "topic": "Home of Someone You Know Well", "category": "Places", "isNew": false },
-      { "topic": "App on Your Phone You Often Use", "category": "Objects", "isNew": false },
-      { "topic": "Tech Product You Want to Own", "category": "Objects", "isNew": false },
-      { "topic": "Important Family Item Kept for a Long Time", "category": "Objects", "isNew": false },
-      { "topic": "Gift You Received That You Wanted", "category": "Objects", "isNew": false },
-      { "topic": "Something You Own That You Want to Replace", "category": "Objects", "isNew": false },
-      { "topic": "Useful Object You Can't Live Without", "category": "Objects", "isNew": false },
-      { "topic": "Picture/Photograph of You That You Like", "category": "Objects", "isNew": false },
-      { "topic": "Photo You Took and Are Proud Of", "category": "Objects", "isNew": false },
-      { "topic": "Film That Impressed You a Lot", "category": "Objects", "isNew": false },
-      { "topic": "Film Character Played by Actor You Admire", "category": "Objects", "isNew": false },
-      { "topic": "Special Meal Someone Made for You", "category": "Objects", "isNew": false },
-      { "topic": "New Law You Would Like to Introduce", "category": "Objects", "isNew": false },
-      { "topic": "Subject You Would Like to Learn", "category": "Objects", "isNew": false },
-      { "topic": "Sport You Would Like to Learn", "category": "Objects", "isNew": false },
-      { "topic": "Sport You Have Only Watched But Not Played", "category": "Objects", "isNew": false },
-      { "topic": "Wild Animal You Want to Learn About", "category": "Objects", "isNew": false },
-      { "topic": "Important Plant in Your Country", "category": "Objects", "isNew": false },
-      { "topic": "Area of Science You Are Interested In", "category": "Objects", "isNew": false },
-      { "topic": "Historical Period to Know More About", "category": "Objects", "isNew": false },
-      { "topic": "Advertisement You Don't Like", "category": "Objects", "isNew": true },
-      { "topic": "Interesting Advertisement on Social Media", "category": "Objects", "isNew": false },
-      { "topic": "Website That Helped You", "category": "Objects", "isNew": true },
-      { "topic": "Technology You Find Difficult to Use", "category": "Objects", "isNew": false },
-      { "topic": "Technology/App That Helps Save Time", "category": "Objects", "isNew": true },
-      { "topic": "Daily Routine You Enjoy", "category": "Objects", "isNew": false },
-      { "topic": "Long-Term Goal", "category": "Objects", "isNew": false },
-      { "topic": "Uniform You Wear/Wore", "category": "Objects", "isNew": true },
-      { "topic": "Job You Would Not Like to Do", "category": "Objects", "isNew": false },
-      { "topic": "Something You Would Like to Learn", "category": "Objects", "isNew": false },
-      { "topic": "Something in Your Country You Are Interested In", "category": "Objects", "isNew": false },
-      { "topic": "Development in Your Country", "category": "Objects", "isNew": false },
-      { "topic": "Trip You Would Like to Take", "category": "Objects", "isNew": false }
+      {
+        "topic": "Famous Person You Would Like to Meet",
+        "category": "People",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a famous person you would like to meet",
+          "bullets": [
+            "Who he/she is",
+            "How you knew him/her",
+            "How/where you would like to meet him/her"
+          ],
+          "explain": "And explain why you would like to meet him/her"
+        }
+      },
+      {
+        "topic": "Person Who Encouraged You to Protect Nature",
+        "category": "People",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a person who encouraged you to protect the environment",
+          "bullets": [
+            "Who he/she is",
+            "How he/she encouraged you",
+            "What he/she encouraged you to do"
+          ],
+          "explain": "And explain how you feel about this person"
+        }
+      },
+      {
+        "topic": "Person Who Solved a Problem Smartly",
+        "category": "People",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a person who solved a problem in a smart way",
+          "bullets": [
+            "Who this person is",
+            "What the problem was",
+            "How he/she solved it"
+          ],
+          "explain": "And explain why you think he/she did it in a smart way"
+        }
+      },
+      {
+        "topic": "Person Who Often Helps Others",
+        "category": "People",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe a person who often helps others",
+          "bullets": [
+            "Who this person is",
+            "How often he/she helps others",
+            "How/why he/she helps others"
+          ],
+          "explain": "And explain how you feel about this person"
+        }
+      },
+      {
+        "topic": "Friend Who Learned Without a Teacher",
+        "category": "People",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a friend who learned something new without a teacher",
+          "bullets": [
+            "Who he/she is",
+            "What he/she learned",
+            "Why he/she learned this"
+          ],
+          "explain": "And explain whether it would be easier to learn from a teacher"
+        }
+      },
+      {
+        "topic": "Person Who Is Good at Planning",
+        "category": "People",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a person who makes plans a lot",
+          "bullets": [
+            "Who he/she is",
+            "How you knew him/her",
+            "What plans he/she makes"
+          ],
+          "explain": "And explain how you feel about this person"
+        }
+      },
+      {
+        "topic": "Child Who Loves Painting/Drawing",
+        "category": "People",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a friend of yours who loves drawing/painting",
+          "bullets": [
+            "Who he/she is",
+            "How you knew him/her",
+            "How often he/she draws/paints"
+          ],
+          "explain": "And explain why you think he/she loves drawing/painting"
+        }
+      },
+      {
+        "topic": "Person Who Encouraged You to Achieve Your Goal",
+        "category": "People",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a person who encouraged you to achieve a goal",
+          "bullets": [
+            "Who this person is",
+            "What the goal was",
+            "How he/she encouraged you"
+          ],
+          "explain": "And explain how this encouragement helped you"
+        }
+      },
+      {
+        "topic": "Person You Are Happy to Know",
+        "category": "People",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a person you are happy to know",
+          "bullets": [
+            "Who he/she is",
+            "How you met him/her",
+            "What kind of person he/she is"
+          ],
+          "explain": "And explain why you are happy to know this person"
+        }
+      },
+      {
+        "topic": "Person Who Likes to Talk a Lot",
+        "category": "People",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a person who likes to talk a lot",
+          "bullets": [
+            "Who this person is",
+            "When you see him/her",
+            "What he/she talks about"
+          ],
+          "explain": "And explain how you feel about talking to this person"
+        }
+      },
+      {
+        "topic": "Person Who Thinks Music Is Important",
+        "category": "People",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a person who thinks music is important",
+          "bullets": [
+            "Who he/she is",
+            "How you know him/her",
+            "How music influences his/her life"
+          ],
+          "explain": "And explain why you think he/she feels music is important"
+        }
+      },
+      {
+        "topic": "Person Who Likes to Buy Goods with Low Prices",
+        "category": "People",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a person who likes to buy things at low prices",
+          "bullets": [
+            "Who this person is",
+            "What kind of things he/she buys",
+            "Where he/she shops"
+          ],
+          "explain": "And explain why he/she prefers to buy things at low prices"
+        }
+      },
+      {
+        "topic": "Person with Interesting Ideas/Opinions",
+        "category": "People",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe a person with interesting ideas or opinions",
+          "bullets": [
+            "Who this person is",
+            "How you know him/her",
+            "What interesting ideas/opinions he/she has"
+          ],
+          "explain": "And explain why you find his/her ideas or opinions interesting"
+        }
+      },
+      {
+        "topic": "Person Who Inspired You",
+        "category": "People",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a person who inspired you",
+          "bullets": [
+            "Who he/she is",
+            "How you know about him/her",
+            "What he/she has done"
+          ],
+          "explain": "And explain why he/she inspired you"
+        }
+      },
+      {
+        "topic": "Interesting Old Person You Met",
+        "category": "People",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe an interesting old person you have met",
+          "bullets": [
+            "Who he/she is",
+            "How you met him/her",
+            "What is interesting about him/her"
+          ],
+          "explain": "And explain how you feel about this person"
+        }
+      },
+      {
+        "topic": "Successful Businessperson",
+        "category": "People",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe a successful businessperson you know",
+          "bullets": [
+            "Who he/she is",
+            "What business he/she runs",
+            "How you know about him/her"
+          ],
+          "explain": "And explain why you think he/she is successful"
+        }
+      },
+      {
+        "topic": "Successful Person You Studied/Worked With",
+        "category": "People",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a successful person you have studied or worked with",
+          "bullets": [
+            "Who he/she is",
+            "When you studied/worked together",
+            "What he/she has achieved"
+          ],
+          "explain": "And explain how you feel about his/her success"
+        }
+      },
+      {
+        "topic": "Person You Would Like to Study/Work With",
+        "category": "People",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a person you would like to study or work with",
+          "bullets": [
+            "Who he/she is",
+            "What he/she does",
+            "Why you want to study/work with him/her"
+          ],
+          "explain": "And explain what you would learn from this person"
+        }
+      },
+      {
+        "topic": "Person You Met at a Party",
+        "category": "People",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a person you met at a party",
+          "bullets": [
+            "Who he/she is",
+            "When and where the party was",
+            "What you talked about"
+          ],
+          "explain": "And explain why you remember this person"
+        }
+      },
+      {
+        "topic": "Sports Person/Athlete You Admire",
+        "category": "People",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe a sports person or athlete you admire",
+          "bullets": [
+            "Who he/she is",
+            "What you know about him/her",
+            "What achievements he/she has made"
+          ],
+          "explain": "And explain why you admire him/her"
+        }
+      },
+      {
+        "topic": "Interesting Person Not Met in Person",
+        "category": "People",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe an interesting person you have not met in person",
+          "bullets": [
+            "Who he/she is",
+            "How you know about him/her",
+            "What is interesting about him/her"
+          ],
+          "explain": "And explain why you want to meet him/her"
+        }
+      },
+      {
+        "topic": "Foreigner Who Speaks Your Language",
+        "category": "People",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe a foreigner who speaks your language well",
+          "bullets": [
+            "Who he/she is",
+            "How you met him/her",
+            "How well he/she speaks your language"
+          ],
+          "explain": "And explain how you feel about this person"
+        }
+      },
+      {
+        "topic": "Famous Person as Role Model for Young People",
+        "category": "People",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe a famous person who is a role model for young people",
+          "bullets": [
+            "Who he/she is",
+            "What he/she is famous for",
+            "How young people are influenced by him/her"
+          ],
+          "explain": "And explain why he/she is a good role model"
+        }
+      },
+      {
+        "topic": "Person Good at Making People Feel Welcome",
+        "category": "People",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe a person who is good at making people feel welcome",
+          "bullets": [
+            "Who he/she is",
+            "When you met him/her",
+            "How he/she made you feel welcome"
+          ],
+          "explain": "And explain why you think he/she is good at this"
+        }
+      },
+      {
+        "topic": "Person Who Is a Great Digital Communicator",
+        "category": "People",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe a person who is a great digital communicator",
+          "bullets": [
+            "Who he/she is",
+            "How you know him/her",
+            "What digital tools he/she uses"
+          ],
+          "explain": "And explain why you think he/she communicates well digitally"
+        }
+      },
+      {
+        "topic": "Time You Felt Proud of a Family Member",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a time when you felt proud of a family member",
+          "bullets": [
+            "When it happened",
+            "Who the person is",
+            "What the person did"
+          ],
+          "explain": "And explain why you felt proud of him/her"
+        }
+      },
+      {
+        "topic": "Time You Gave Advice to Someone",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a time when you gave advice to someone",
+          "bullets": [
+            "When it was",
+            "To whom you gave the advice",
+            "What the advice was"
+          ],
+          "explain": "And explain why you gave the advice"
+        }
+      },
+      {
+        "topic": "Time You Used Your Imagination",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a time you needed to use your imagination",
+          "bullets": [
+            "When it was",
+            "Why you needed to use imagination",
+            "How difficult or easy it was"
+          ],
+          "explain": "And explain how you felt about it"
+        }
+      },
+      {
+        "topic": "Encouraged Someone to Do Something",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a time when you encouraged someone to do something",
+          "bullets": [
+            "Who he or she is",
+            "What you encouraged him/her to do",
+            "How he/she reacted"
+          ],
+          "explain": "And explain why you encouraged him/her to do it"
+        }
+      },
+      {
+        "topic": "Occasion Not Allowed to Use Mobile Phone",
+        "category": "Events",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe an occasion when you were not allowed to use your mobile phone",
+          "bullets": [
+            "When it was",
+            "Where it was",
+            "Why you were not allowed to use it"
+          ],
+          "explain": "And explain how you felt about it"
+        }
+      },
+      {
+        "topic": "Perfect Job You Would Like to Have",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe your perfect job",
+          "bullets": [
+            "What it is",
+            "What you would do in this job",
+            "Where you would work"
+          ],
+          "explain": "And explain why this is the perfect job for you"
+        }
+      },
+      {
+        "topic": "Story You Read Recently",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a story you have read recently",
+          "bullets": [
+            "What it is about",
+            "When you read it",
+            "Why you read it"
+          ],
+          "explain": "And explain what you have learned from it"
+        }
+      },
+      {
+        "topic": "Movie You Watched Recently",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a movie you watched recently",
+          "bullets": [
+            "When and where you watched it",
+            "Who you watched it with",
+            "What it was about"
+          ],
+          "explain": "And explain why you watched this movie"
+        }
+      },
+      {
+        "topic": "Event Where You Didn't Like the Music",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a music event that you didn't enjoy",
+          "bullets": [
+            "What it was",
+            "Who you went with",
+            "Why you decided to go there"
+          ],
+          "explain": "And explain why you didn't enjoy it"
+        }
+      },
+      {
+        "topic": "Item You Spent More Than Expected",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe an item on which you spent more than expected",
+          "bullets": [
+            "What it was",
+            "When you bought it",
+            "How much you spent"
+          ],
+          "explain": "And explain why you spent more than expected"
+        }
+      },
+      {
+        "topic": "Film You Felt Disappointed About",
+        "category": "Events",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe a movie you watched recently that you felt disappointed about",
+          "bullets": [
+            "When it was",
+            "Why you decided to watch it",
+            "Why you didn't like it"
+          ],
+          "explain": "And explain why you felt disappointed about it"
+        }
+      },
+      {
+        "topic": "Something You Can't Live Without",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe something that you can't live without (not a computer/phone)",
+          "bullets": [
+            "What it is",
+            "How long you have had it",
+            "How you use it"
+          ],
+          "explain": "And explain why you can't live without it"
+        }
+      },
+      {
+        "topic": "Occasion When Many People Were Smiling",
+        "category": "Events",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe an occasion when many people were smiling",
+          "bullets": [
+            "When it was",
+            "Where you were",
+            "Who you were with"
+          ],
+          "explain": "And explain why many people were smiling"
+        }
+      },
+      {
+        "topic": "Situation When You Helped Someone",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a situation when you helped someone",
+          "bullets": [
+            "When it happened",
+            "Who you helped",
+            "How you helped them"
+          ],
+          "explain": "And explain how you felt after helping"
+        }
+      },
+      {
+        "topic": "Time You Used a Map",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a time when you used a map",
+          "bullets": [
+            "When it was",
+            "Where you were going",
+            "Why you used a map"
+          ],
+          "explain": "And explain how you felt about using the map"
+        }
+      },
+      {
+        "topic": "Time You Successfully Did Something Difficult",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a time when you successfully did something difficult",
+          "bullets": [
+            "What you did",
+            "When you did it",
+            "Why it was difficult"
+          ],
+          "explain": "And explain how you felt after succeeding"
+        }
+      },
+      {
+        "topic": "Period When You Were Busy",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a period when you were very busy",
+          "bullets": [
+            "When it was",
+            "What you were doing",
+            "Why you were so busy"
+          ],
+          "explain": "And explain how you managed your time during this period"
+        }
+      },
+      {
+        "topic": "Time You Taught Something to a Younger Person",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a time when you taught something to a younger person",
+          "bullets": [
+            "Who the person was",
+            "What you taught him/her",
+            "How you taught him/her"
+          ],
+          "explain": "And explain how you felt about this experience"
+        }
+      },
+      {
+        "topic": "Time You Picked Up Lost Item",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a time when you picked up a lost item",
+          "bullets": [
+            "What the item was",
+            "When and where you found it",
+            "What you did with it"
+          ],
+          "explain": "And explain how you felt about finding it"
+        }
+      },
+      {
+        "topic": "Time When You Were Late",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a time when you were late",
+          "bullets": [
+            "When it was",
+            "Why you were late",
+            "What happened as a result"
+          ],
+          "explain": "And explain how you felt about being late"
+        }
+      },
+      {
+        "topic": "Occasion When Someone Made Noise",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe an occasion when someone made noise",
+          "bullets": [
+            "When it was",
+            "Who made the noise",
+            "What kind of noise it was"
+          ],
+          "explain": "And explain how you felt about it"
+        }
+      },
+      {
+        "topic": "Exciting Activity with Someone Else",
+        "category": "Events",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe an exciting activity you did with someone else",
+          "bullets": [
+            "What the activity was",
+            "Who you did it with",
+            "When and where you did it"
+          ],
+          "explain": "And explain why it was exciting"
+        }
+      },
+      {
+        "topic": "Time Something Changed Your Life",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a time when something changed your life",
+          "bullets": [
+            "What happened",
+            "When it happened",
+            "How it changed your life"
+          ],
+          "explain": "And explain how you feel about this change"
+        }
+      },
+      {
+        "topic": "Time You Had to Finish Something Quickly",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a time when you had to finish something quickly",
+          "bullets": [
+            "What you had to finish",
+            "When it was",
+            "Why you had to finish it quickly"
+          ],
+          "explain": "And explain how you managed to finish it"
+        }
+      },
+      {
+        "topic": "Time You Received Money as a Gift",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a time when you received money as a gift",
+          "bullets": [
+            "When it was",
+            "Who gave you the money",
+            "How much it was"
+          ],
+          "explain": "And explain what you did with the money"
+        }
+      },
+      {
+        "topic": "Difficult Decision with Positive Outcome",
+        "category": "Events",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe a difficult decision that had a positive outcome",
+          "bullets": [
+            "What the decision was",
+            "When you made it",
+            "Why it was difficult"
+          ],
+          "explain": "And explain why the outcome was positive"
+        }
+      },
+      {
+        "topic": "Achievement/Success You Are Proud Of",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe an achievement or success you are proud of",
+          "bullets": [
+            "What it was",
+            "When it happened",
+            "How you achieved it"
+          ],
+          "explain": "And explain why you are proud of it"
+        }
+      },
+      {
+        "topic": "Goal to Achieve in Next Five Years",
+        "category": "Events",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe a goal you want to achieve in the next five years",
+          "bullets": [
+            "What the goal is",
+            "Why you want to achieve it",
+            "How you plan to achieve it"
+          ],
+          "explain": "And explain how your life will change if you achieve it"
+        }
+      },
+      {
+        "topic": "Skill You Learned in Childhood",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a skill you learned in your childhood",
+          "bullets": [
+            "What the skill was",
+            "Who taught you",
+            "How you learned it"
+          ],
+          "explain": "And explain why this skill is still useful to you"
+        }
+      },
+      {
+        "topic": "Activity You Enjoyed in Free Time When Young",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe an activity you enjoyed in your free time when you were young",
+          "bullets": [
+            "What it was",
+            "Where you did it",
+            "Who you did it with"
+          ],
+          "explain": "And explain why you enjoyed it"
+        }
+      },
+      {
+        "topic": "Interesting Activity in Primary School",
+        "category": "Events",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe an interesting activity you did in primary school",
+          "bullets": [
+            "What the activity was",
+            "When you did it",
+            "Who you did it with"
+          ],
+          "explain": "And explain why you found it interesting"
+        }
+      },
+      {
+        "topic": "Outdoor Activity You Did",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe an outdoor activity you have done",
+          "bullets": [
+            "What it was",
+            "When and where you did it",
+            "Who you did it with"
+          ],
+          "explain": "And explain why you enjoyed the outdoor activity"
+        }
+      },
+      {
+        "topic": "Something You Do Regularly to Study/Work Better",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe something you do regularly to study or work better",
+          "bullets": [
+            "What it is",
+            "When you started doing it",
+            "How often you do it"
+          ],
+          "explain": "And explain how it helps you study or work better"
+        }
+      },
+      {
+        "topic": "Something You Taught to Friend/Relative",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe something you taught to a friend or relative",
+          "bullets": [
+            "What you taught",
+            "Who you taught",
+            "How you taught them"
+          ],
+          "explain": "And explain how you felt about teaching them"
+        }
+      },
+      {
+        "topic": "Occasion You Wore Favourite Clothes",
+        "category": "Events",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe an occasion when you wore your favourite clothes",
+          "bullets": [
+            "What the clothes were",
+            "When you wore them",
+            "Where you went"
+          ],
+          "explain": "And explain why these are your favourite clothes"
+        }
+      },
+      {
+        "topic": "Heard Someone Complaining",
+        "category": "Events",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe a time when you heard someone complaining",
+          "bullets": [
+            "When it happened",
+            "Who was complaining",
+            "What they were complaining about"
+          ],
+          "explain": "And explain how you felt about their complaint"
+        }
+      },
+      {
+        "topic": "Complaint You Made with Satisfactory Result",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a complaint you made with a satisfactory result",
+          "bullets": [
+            "What you complained about",
+            "Who you complained to",
+            "When it happened"
+          ],
+          "explain": "And explain why you were satisfied with the result"
+        }
+      },
+      {
+        "topic": "Enjoyable Journey by Public Transport",
+        "category": "Events",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe an enjoyable journey by public transport",
+          "bullets": [
+            "Where you went",
+            "What kind of public transport you used",
+            "Who you were with"
+          ],
+          "explain": "And explain why you enjoyed the journey"
+        }
+      },
+      {
+        "topic": "Travel That Was Delayed",
+        "category": "Events",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe a time when your travel was delayed",
+          "bullets": [
+            "When and where it happened",
+            "Why it was delayed",
+            "How long the delay was"
+          ],
+          "explain": "And explain how you felt about the delay"
+        }
+      },
+      {
+        "topic": "Experience About Moving to New School/House",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe your experience of moving to a new school or house",
+          "bullets": [
+            "When and where you moved",
+            "Why you moved",
+            "How you felt about moving"
+          ],
+          "explain": "And explain how this experience affected you"
+        }
+      },
+      {
+        "topic": "Time You Used AI to Solve a Problem",
+        "category": "Events",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe a time when you used AI to solve a problem",
+          "bullets": [
+            "What the problem was",
+            "What AI tool you used",
+            "How AI helped you solve it"
+          ],
+          "explain": "And explain how you felt about using AI"
+        }
+      },
+      {
+        "topic": "Unusual Holiday You Had",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe an unusual holiday you have had",
+          "bullets": [
+            "When and where you went",
+            "Who you went with",
+            "What you did there"
+          ],
+          "explain": "And explain why it was unusual"
+        }
+      },
+      {
+        "topic": "Unusual Meal You Had",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe an unusual meal you have had",
+          "bullets": [
+            "When you had it",
+            "Where you had it",
+            "Who you had it with"
+          ],
+          "explain": "And explain why it was unusual"
+        }
+      },
+      {
+        "topic": "Someone Who Did Well in a Team",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe someone who did well in a team",
+          "bullets": [
+            "Who he/she is",
+            "What the team was doing",
+            "How he/she contributed"
+          ],
+          "explain": "And explain why he/she did well in the team"
+        }
+      },
+      {
+        "topic": "Difficult Task You Completed",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a difficult task you completed",
+          "bullets": [
+            "What the task was",
+            "When you completed it",
+            "Why it was difficult"
+          ],
+          "explain": "And explain how you felt after completing it"
+        }
+      },
+      {
+        "topic": "Piece of Good News About Someone You Know",
+        "category": "Events",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a piece of good news about someone you know",
+          "bullets": [
+            "Who the person is",
+            "What the good news was",
+            "When you heard it"
+          ],
+          "explain": "And explain how you felt about the news"
+        }
+      },
+      {
+        "topic": "Favourite Place to Relax at Home",
+        "category": "Places",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe your favourite place in your home where you can relax",
+          "bullets": [
+            "Where it is",
+            "What it looks like",
+            "What you do there"
+          ],
+          "explain": "And explain why you can relax there"
+        }
+      },
+      {
+        "topic": "Favourite Shopping Mall",
+        "category": "Places",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe your favourite shopping mall",
+          "bullets": [
+            "What its name is",
+            "Where it is",
+            "How often you visit it"
+          ],
+          "explain": "And explain why you like this shopping mall"
+        }
+      },
+      {
+        "topic": "Country to Live/Work for Short Time",
+        "category": "Places",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a foreign country you would like to stay or work in for a short time",
+          "bullets": [
+            "Which country it is",
+            "How you knew about this country",
+            "What you will do there"
+          ],
+          "explain": "And explain why you will stay or work there just for a short period of time"
+        }
+      },
+      {
+        "topic": "Quiet Place That You Visited",
+        "category": "Places",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a quiet place that you have visited",
+          "bullets": [
+            "Where it is",
+            "When you went there",
+            "What you did there"
+          ],
+          "explain": "And explain why it was quiet"
+        }
+      },
+      {
+        "topic": "Interesting Place with a Friend",
+        "category": "Places",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe an interesting place you visited with a friend",
+          "bullets": [
+            "Where the place is",
+            "Who you went with",
+            "When you went there"
+          ],
+          "explain": "And explain why you found it interesting"
+        }
+      },
+      {
+        "topic": "Natural Place (Parks/Mountains/Gardens)",
+        "category": "Places",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a natural place (e.g. parks, mountains, gardens)",
+          "bullets": [
+            "Where this place is",
+            "How you knew this place",
+            "What it is like"
+          ],
+          "explain": "And explain why you like to visit it"
+        }
+      },
+      {
+        "topic": "Park or Garden in Your City",
+        "category": "Places",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a park or garden in your city",
+          "bullets": [
+            "Where it is",
+            "What it looks like",
+            "What you can do there"
+          ],
+          "explain": "And explain why you like this park or garden"
+        }
+      },
+      {
+        "topic": "Place Where You Have Taken Photos More Than Once",
+        "category": "Places",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a place where you have taken photos more than once",
+          "bullets": [
+            "Where the place is",
+            "When you first took photos there",
+            "What kind of photos you took"
+          ],
+          "explain": "And explain why you like taking photos at this place"
+        }
+      },
+      {
+        "topic": "Tourist Attraction Few People Visit",
+        "category": "Places",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a tourist attraction that few people visit",
+          "bullets": [
+            "Where it is",
+            "How you knew about it",
+            "What it is like"
+          ],
+          "explain": "And explain why you think few people visit it"
+        }
+      },
+      {
+        "topic": "Place Where Things Are Expensive",
+        "category": "Places",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a place where things are expensive",
+          "bullets": [
+            "Where the place is",
+            "What kind of things are sold there",
+            "When you went there"
+          ],
+          "explain": "And explain why things are expensive there"
+        }
+      },
+      {
+        "topic": "Place Where Air Was Polluted",
+        "category": "Places",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a place where the air was polluted",
+          "bullets": [
+            "Where the place is",
+            "When you went there",
+            "How the pollution affected you"
+          ],
+          "explain": "And explain how you felt about the air quality"
+        }
+      },
+      {
+        "topic": "Place Good for People to Live In",
+        "category": "Places",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe a place that is good for people to live in",
+          "bullets": [
+            "Where it is",
+            "What it is like",
+            "What facilities it has"
+          ],
+          "explain": "And explain why it is good for people to live in"
+        }
+      },
+      {
+        "topic": "Place to Relax",
+        "category": "Places",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a place where you go to relax",
+          "bullets": [
+            "Where it is",
+            "How often you go there",
+            "What you do there"
+          ],
+          "explain": "And explain why this place helps you relax"
+        }
+      },
+      {
+        "topic": "Indoor/Outdoor Place Easy to Study",
+        "category": "Places",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe an indoor or outdoor place that is easy for you to study in",
+          "bullets": [
+            "Where it is",
+            "What it looks like",
+            "When you go there"
+          ],
+          "explain": "And explain why it is easy for you to study there"
+        }
+      },
+      {
+        "topic": "Beautiful City",
+        "category": "Places",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe a beautiful city you have visited",
+          "bullets": [
+            "Where the city is",
+            "When you visited it",
+            "What makes it beautiful"
+          ],
+          "explain": "And explain how you felt about this city"
+        }
+      },
+      {
+        "topic": "Historical Building You Have Been To",
+        "category": "Places",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a historical building you have been to",
+          "bullets": [
+            "Where it is",
+            "When you went there",
+            "What it looks like"
+          ],
+          "explain": "And explain how you felt about this building"
+        }
+      },
+      {
+        "topic": "Noisy Place You Have Been To",
+        "category": "Places",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a noisy place you have been to",
+          "bullets": [
+            "Where it is",
+            "When you went there",
+            "What kind of noise there was"
+          ],
+          "explain": "And explain how you felt about the noise"
+        }
+      },
+      {
+        "topic": "Street Market Where You Shopped",
+        "category": "Places",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a street market where you have shopped",
+          "bullets": [
+            "Where it is",
+            "What you bought there",
+            "When you went there"
+          ],
+          "explain": "And explain why you like shopping there"
+        }
+      },
+      {
+        "topic": "Public Facility Renovated Recently",
+        "category": "Places",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe a public facility that has been renovated recently",
+          "bullets": [
+            "What the facility is",
+            "Where it is",
+            "What changes have been made"
+          ],
+          "explain": "And explain how the renovation has improved it"
+        }
+      },
+      {
+        "topic": "Home of Someone You Know Well",
+        "category": "Places",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe the home of someone you know well",
+          "bullets": [
+            "Whose home it is",
+            "Where it is",
+            "What it looks like"
+          ],
+          "explain": "And explain how you feel when you visit this home"
+        }
+      },
+      {
+        "topic": "App on Your Phone You Often Use",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe an app on your phone that you often use",
+          "bullets": [
+            "What it is",
+            "When/how you use it",
+            "Where you found it"
+          ],
+          "explain": "And explain how you feel about it"
+        }
+      },
+      {
+        "topic": "Tech Product You Want to Own",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a piece of technology you would like to own",
+          "bullets": [
+            "What it is",
+            "How much it costs",
+            "What you will use it for"
+          ],
+          "explain": "And explain why you would like to own it"
+        }
+      },
+      {
+        "topic": "Important Family Item Kept for a Long Time",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe an important family item that has been kept for a long time",
+          "bullets": [
+            "What it is",
+            "How long your family has had it",
+            "What it is used for"
+          ],
+          "explain": "And explain why it is important to your family"
+        }
+      },
+      {
+        "topic": "Gift You Received That You Wanted",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a gift you received that you wanted",
+          "bullets": [
+            "What it was",
+            "Who gave it to you",
+            "When you received it"
+          ],
+          "explain": "And explain why you wanted this gift"
+        }
+      },
+      {
+        "topic": "Something You Own That You Want to Replace",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe something you own that you want to replace",
+          "bullets": [
+            "What it is",
+            "How long you have had it",
+            "What you want to replace it with"
+          ],
+          "explain": "And explain why you want to replace it"
+        }
+      },
+      {
+        "topic": "Useful Object You Can't Live Without",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a useful object that you can't live without",
+          "bullets": [
+            "What it is",
+            "How often you use it",
+            "How it helps you"
+          ],
+          "explain": "And explain why you can't live without it"
+        }
+      },
+      {
+        "topic": "Picture/Photograph of You That You Like",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a picture or photograph of you that you like",
+          "bullets": [
+            "When and where it was taken",
+            "Who took it",
+            "What you were doing"
+          ],
+          "explain": "And explain why you like this photograph"
+        }
+      },
+      {
+        "topic": "Photo You Took and Are Proud Of",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a photo you took and are proud of",
+          "bullets": [
+            "When and where you took it",
+            "What it shows",
+            "How you took it"
+          ],
+          "explain": "And explain why you are proud of this photo"
+        }
+      },
+      {
+        "topic": "Film That Impressed You a Lot",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a film that impressed you a lot",
+          "bullets": [
+            "What film it is",
+            "When you watched it",
+            "What it is about"
+          ],
+          "explain": "And explain why it impressed you a lot"
+        }
+      },
+      {
+        "topic": "Film Character Played by Actor You Admire",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a film character played by an actor you admire",
+          "bullets": [
+            "Who the character is",
+            "What film it is",
+            "What the character does in the film"
+          ],
+          "explain": "And explain why you like this character"
+        }
+      },
+      {
+        "topic": "Special Meal Someone Made for You",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a special meal someone made for you",
+          "bullets": [
+            "Who made it",
+            "When it was",
+            "What the meal was"
+          ],
+          "explain": "And explain why it was special"
+        }
+      },
+      {
+        "topic": "New Law You Would Like to Introduce",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a new law you would like to introduce",
+          "bullets": [
+            "What the law would be",
+            "Why you would introduce it",
+            "How it would affect people"
+          ],
+          "explain": "And explain why you think this law is necessary"
+        }
+      },
+      {
+        "topic": "Subject You Would Like to Learn",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a subject you would like to learn",
+          "bullets": [
+            "What the subject is",
+            "Why you want to learn it",
+            "How you would learn it"
+          ],
+          "explain": "And explain how this subject would help you"
+        }
+      },
+      {
+        "topic": "Sport You Would Like to Learn",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a sport you would like to learn",
+          "bullets": [
+            "What sport it is",
+            "Why you want to learn it",
+            "How you would learn it"
+          ],
+          "explain": "And explain how this sport would benefit you"
+        }
+      },
+      {
+        "topic": "Sport You Have Only Watched But Not Played",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a sport you have only watched but not played",
+          "bullets": [
+            "What sport it is",
+            "When you watch it",
+            "Why you haven't played it"
+          ],
+          "explain": "And explain why you enjoy watching this sport"
+        }
+      },
+      {
+        "topic": "Wild Animal You Want to Learn About",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a wild animal that you want to learn more about",
+          "bullets": [
+            "What it is",
+            "When/where you first saw or learned about it",
+            "What you already know about it"
+          ],
+          "explain": "And explain what more you want to know about it"
+        }
+      },
+      {
+        "topic": "Important Plant in Your Country",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe an important plant in your country",
+          "bullets": [
+            "What it is",
+            "Where it grows",
+            "How it is used"
+          ],
+          "explain": "And explain why it is important in your country"
+        }
+      },
+      {
+        "topic": "Area of Science You Are Interested In",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe an area of science you are interested in",
+          "bullets": [
+            "What area it is",
+            "How you became interested in it",
+            "How you learn about it"
+          ],
+          "explain": "And explain why this area of science interests you"
+        }
+      },
+      {
+        "topic": "Historical Period to Know More About",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a historical period you would like to know more about",
+          "bullets": [
+            "Which historical period it is",
+            "What you already know about it",
+            "Why you want to know more"
+          ],
+          "explain": "And explain how you would learn more about it"
+        }
+      },
+      {
+        "topic": "Advertisement You Don't Like",
+        "category": "Objects",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe an advertisement you don't like",
+          "bullets": [
+            "What it is",
+            "Where you saw it",
+            "What it was advertising"
+          ],
+          "explain": "And explain why you don't like this advertisement"
+        }
+      },
+      {
+        "topic": "Interesting Advertisement on Social Media",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe an interesting advertisement you saw on social media",
+          "bullets": [
+            "What it was advertising",
+            "Where you saw it",
+            "What made it interesting"
+          ],
+          "explain": "And explain why you remember this advertisement"
+        }
+      },
+      {
+        "topic": "Website That Helped You",
+        "category": "Objects",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe a website that has helped you",
+          "bullets": [
+            "What the website is",
+            "When you used it",
+            "How it helped you"
+          ],
+          "explain": "And explain why you find this website useful"
+        }
+      },
+      {
+        "topic": "Technology You Find Difficult to Use",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a technology you find difficult to use",
+          "bullets": [
+            "What the technology is",
+            "When you first tried to use it",
+            "What difficulties you faced"
+          ],
+          "explain": "And explain why you find it difficult to use"
+        }
+      },
+      {
+        "topic": "Technology/App That Helps Save Time",
+        "category": "Objects",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe a technology or app that helps you save time",
+          "bullets": [
+            "What it is",
+            "When you started using it",
+            "How it saves you time"
+          ],
+          "explain": "And explain how your life has changed since using it"
+        }
+      },
+      {
+        "topic": "Daily Routine You Enjoy",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a daily routine that you enjoy",
+          "bullets": [
+            "What the routine is",
+            "When you do it",
+            "How long you have had this routine"
+          ],
+          "explain": "And explain why you enjoy it"
+        }
+      },
+      {
+        "topic": "Long-Term Goal",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a long-term goal you have",
+          "bullets": [
+            "What the goal is",
+            "When you set this goal",
+            "What you are doing to achieve it"
+          ],
+          "explain": "And explain why this goal is important to you"
+        }
+      },
+      {
+        "topic": "Uniform You Wear/Wore",
+        "category": "Objects",
+        "isNew": true,
+        "cueCard": {
+          "prompt": "Describe a uniform you wear or have worn",
+          "bullets": [
+            "What the uniform is",
+            "When you wear/wore it",
+            "What it looks like"
+          ],
+          "explain": "And explain how you feel about wearing this uniform"
+        }
+      },
+      {
+        "topic": "Job You Would Not Like to Do",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a job you would not like to do",
+          "bullets": [
+            "What the job is",
+            "What the job involves doing",
+            "Why people do this job"
+          ],
+          "explain": "And explain why you would not like to do this job"
+        }
+      },
+      {
+        "topic": "Something You Would Like to Learn",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe something you would like to learn in the future",
+          "bullets": [
+            "What you would like to learn",
+            "How you would learn it",
+            "Why you want to learn it"
+          ],
+          "explain": "And explain how you think this would benefit you"
+        }
+      },
+      {
+        "topic": "Something in Your Country You Are Interested In",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe something in your country that you are interested in",
+          "bullets": [
+            "What it is",
+            "How you became interested in it",
+            "What you know about it"
+          ],
+          "explain": "And explain why it interests you"
+        }
+      },
+      {
+        "topic": "Development in Your Country",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe an important development in your country",
+          "bullets": [
+            "What the development is",
+            "When it happened",
+            "How it affects people"
+          ],
+          "explain": "And explain why you think it is important"
+        }
+      },
+      {
+        "topic": "Trip You Would Like to Take",
+        "category": "Objects",
+        "isNew": false,
+        "cueCard": {
+          "prompt": "Describe a trip you would like to take",
+          "bullets": [
+            "Where you would go",
+            "Who you would go with",
+            "What you would do there"
+          ],
+          "explain": "And explain why you would like to take this trip"
+        }
+      }
     ]
   },
   "allTime": {
     "label": "All-Time Frequency Rankings (2024–2026)",
     "part1": [
-      { "rank": 1, "medal": "🥇", "topic": "Art", "seasons": "7/7", "type": "Object" },
-      { "rank": 1, "medal": "🥇", "topic": "Science", "seasons": "7/7", "type": "Object" },
-      { "rank": 1, "medal": "🥇", "topic": "Parks", "seasons": "7/7", "type": "Place" },
-      { "rank": 1, "medal": "🥇", "topic": "Gifts", "seasons": "7/7", "type": "Object" },
-      { "rank": 5, "medal": "🥈", "topic": "Sports", "seasons": "6/7", "type": "Event" },
-      { "rank": 5, "medal": "🥈", "topic": "Social Media", "seasons": "6/7", "type": "Object" },
-      { "rank": 5, "medal": "🥈", "topic": "Teachers", "seasons": "6/7", "type": "People" },
-      { "rank": 5, "medal": "🥈", "topic": "Technology", "seasons": "6/7", "type": "Object" },
-      { "rank": 5, "medal": "🥈", "topic": "Shopping", "seasons": "6/7", "type": "Event" },
-      { "rank": 5, "medal": "🥈", "topic": "Books", "seasons": "6/7", "type": "Object" },
-      { "rank": 5, "medal": "🥈", "topic": "Travel", "seasons": "6/7", "type": "Event" },
-      { "rank": 5, "medal": "🥈", "topic": "Cars", "seasons": "6/7", "type": "Object" },
-      { "rank": 5, "medal": "🥈", "topic": "Hometown", "seasons": "6/7", "type": "Place" },
-      { "rank": 5, "medal": "🥈", "topic": "Food", "seasons": "6/7", "type": "Object" },
-      { "rank": 5, "medal": "🥈", "topic": "Movies", "seasons": "6/7", "type": "Object" },
-      { "rank": 5, "medal": "🥈", "topic": "Library", "seasons": "6/7", "type": "Place" },
-      { "rank": 5, "medal": "🥈", "topic": "Sharing", "seasons": "6/7", "type": "Event" },
-      { "rank": 5, "medal": "🥈", "topic": "Friends", "seasons": "6/7", "type": "People" },
-      { "rank": 5, "medal": "🥈", "topic": "Holidays", "seasons": "6/7", "type": "Event" },
-      { "rank": 5, "medal": "🥈", "topic": "Music", "seasons": "6/7", "type": "Object" }
+      {
+        "rank": 1,
+        "medal": "🥇",
+        "topic": "Art",
+        "seasons": "7/7",
+        "type": "Object"
+      },
+      {
+        "rank": 1,
+        "medal": "🥇",
+        "topic": "Science",
+        "seasons": "7/7",
+        "type": "Object"
+      },
+      {
+        "rank": 1,
+        "medal": "🥇",
+        "topic": "Parks",
+        "seasons": "7/7",
+        "type": "Place"
+      },
+      {
+        "rank": 1,
+        "medal": "🥇",
+        "topic": "Gifts",
+        "seasons": "7/7",
+        "type": "Object"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Sports",
+        "seasons": "6/7",
+        "type": "Event"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Social Media",
+        "seasons": "6/7",
+        "type": "Object"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Teachers",
+        "seasons": "6/7",
+        "type": "People"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Technology",
+        "seasons": "6/7",
+        "type": "Object"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Shopping",
+        "seasons": "6/7",
+        "type": "Event"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Books",
+        "seasons": "6/7",
+        "type": "Object"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Travel",
+        "seasons": "6/7",
+        "type": "Event"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Cars",
+        "seasons": "6/7",
+        "type": "Object"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Hometown",
+        "seasons": "6/7",
+        "type": "Place"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Food",
+        "seasons": "6/7",
+        "type": "Object"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Movies",
+        "seasons": "6/7",
+        "type": "Object"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Library",
+        "seasons": "6/7",
+        "type": "Place"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Sharing",
+        "seasons": "6/7",
+        "type": "Event"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Friends",
+        "seasons": "6/7",
+        "type": "People"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Holidays",
+        "seasons": "6/7",
+        "type": "Event"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Music",
+        "seasons": "6/7",
+        "type": "Object"
+      }
     ],
     "part2": [
-      { "rank": 1, "medal": "🥇", "topic": "Movie You Watched/Enjoyed", "seasons": "7/7" },
-      { "rank": 1, "medal": "🥇", "topic": "Sport/Activity You Enjoy", "seasons": "7/7" },
-      { "rank": 3, "medal": "🥈", "topic": "Crowded Place", "seasons": "6/7" },
-      { "rank": 3, "medal": "🥈", "topic": "Toy You Liked in Childhood", "seasons": "6/7" },
-      { "rank": 3, "medal": "🥈", "topic": "Risk That Led to Positive Result", "seasons": "6/7" },
-      { "rank": 6, "medal": "🥉", "topic": "Time You Received Good News", "seasons": "5/7" },
-      { "rank": 6, "medal": "🥉", "topic": "Noisy Place", "seasons": "5/7" },
-      { "rank": 6, "medal": "🥉", "topic": "Website You Often Use", "seasons": "5/7" },
-      { "rank": 6, "medal": "🥉", "topic": "Overcame Difficulty and Succeeded", "seasons": "5/7" },
-      { "rank": 6, "medal": "🥉", "topic": "Gift You Received That You Wanted", "seasons": "5/7" },
-      { "rank": 6, "medal": "🥉", "topic": "Long-Term Goal", "seasons": "5/7" },
-      { "rank": 6, "medal": "🥉", "topic": "Movie You Watched Recently", "seasons": "5/7" },
-      { "rank": 6, "medal": "🥉", "topic": "Time You Taught Something to a Younger Person", "seasons": "5/7" },
-      { "rank": 6, "medal": "🥉", "topic": "Country to Live/Work for Short Time", "seasons": "5/7" },
-      { "rank": 15, "medal": "", "topic": "Famous Person (various forms)", "seasons": "4/7" },
-      { "rank": 15, "medal": "", "topic": "Life-Changing Experience", "seasons": "4/7" },
-      { "rank": 15, "medal": "", "topic": "Natural Place", "seasons": "4/7" },
-      { "rank": 15, "medal": "", "topic": "Time You Received Money as a Gift", "seasons": "4/7" },
-      { "rank": 15, "medal": "", "topic": "Park or Garden", "seasons": "4/7" },
-      { "rank": 15, "medal": "", "topic": "Time You Used Your Imagination", "seasons": "4/7" }
+      {
+        "rank": 1,
+        "medal": "🥇",
+        "topic": "Movie You Watched/Enjoyed",
+        "seasons": "7/7"
+      },
+      {
+        "rank": 1,
+        "medal": "🥇",
+        "topic": "Sport/Activity You Enjoy",
+        "seasons": "7/7"
+      },
+      {
+        "rank": 3,
+        "medal": "🥈",
+        "topic": "Crowded Place",
+        "seasons": "6/7"
+      },
+      {
+        "rank": 3,
+        "medal": "🥈",
+        "topic": "Toy You Liked in Childhood",
+        "seasons": "6/7"
+      },
+      {
+        "rank": 3,
+        "medal": "🥈",
+        "topic": "Risk That Led to Positive Result",
+        "seasons": "6/7"
+      },
+      {
+        "rank": 6,
+        "medal": "🥉",
+        "topic": "Time You Received Good News",
+        "seasons": "5/7"
+      },
+      {
+        "rank": 6,
+        "medal": "🥉",
+        "topic": "Noisy Place",
+        "seasons": "5/7"
+      },
+      {
+        "rank": 6,
+        "medal": "🥉",
+        "topic": "Website You Often Use",
+        "seasons": "5/7"
+      },
+      {
+        "rank": 6,
+        "medal": "🥉",
+        "topic": "Overcame Difficulty and Succeeded",
+        "seasons": "5/7"
+      },
+      {
+        "rank": 6,
+        "medal": "🥉",
+        "topic": "Gift You Received That You Wanted",
+        "seasons": "5/7"
+      },
+      {
+        "rank": 6,
+        "medal": "🥉",
+        "topic": "Long-Term Goal",
+        "seasons": "5/7"
+      },
+      {
+        "rank": 6,
+        "medal": "🥉",
+        "topic": "Movie You Watched Recently",
+        "seasons": "5/7"
+      },
+      {
+        "rank": 6,
+        "medal": "🥉",
+        "topic": "Time You Taught Something to a Younger Person",
+        "seasons": "5/7"
+      },
+      {
+        "rank": 6,
+        "medal": "🥉",
+        "topic": "Country to Live/Work for Short Time",
+        "seasons": "5/7"
+      },
+      {
+        "rank": 15,
+        "medal": "",
+        "topic": "Famous Person (various forms)",
+        "seasons": "4/7"
+      },
+      {
+        "rank": 15,
+        "medal": "",
+        "topic": "Life-Changing Experience",
+        "seasons": "4/7"
+      },
+      {
+        "rank": 15,
+        "medal": "",
+        "topic": "Natural Place",
+        "seasons": "4/7"
+      },
+      {
+        "rank": 15,
+        "medal": "",
+        "topic": "Time You Received Money as a Gift",
+        "seasons": "4/7"
+      },
+      {
+        "rank": 15,
+        "medal": "",
+        "topic": "Park or Garden",
+        "seasons": "4/7"
+      },
+      {
+        "rank": 15,
+        "medal": "",
+        "topic": "Time You Used Your Imagination",
+        "seasons": "4/7"
+      }
     ]
   },
   "keyInsights": [
-    { "title": "~60% carry-over rate", "detail": "About 60% of May-Aug 2026 Part 2 topics are recycled from previous seasons. Only ~37 out of 134 compiled topics appear truly new." },
-    { "title": "Most persistent topics", "detail": "\"Movie You Watched/Enjoyed\" and \"Sport/Activity You Enjoy\" appear in ALL 7 seasons — the most evergreen IELTS cue cards." },
-    { "title": "AI & Digital trend", "detail": "2026 introduces AI (\"Time You Used AI to Solve a Problem\", \"Person Who Is a Great Digital Communicator\") and digital privacy as new themes." },
-    { "title": "Part 1 most stable", "detail": "\"Art\", \"Science\", \"Parks\", and \"Gifts\" appear in every single season (7/7). Safe bets for preparation." }
+    {
+      "title": "~60% carry-over rate",
+      "detail": "About 60% of May-Aug 2026 Part 2 topics are recycled from previous seasons. Only ~37 out of 134 compiled topics appear truly new."
+    },
+    {
+      "title": "Most persistent topics",
+      "detail": "\"Movie You Watched/Enjoyed\" and \"Sport/Activity You Enjoy\" appear in ALL 7 seasons — the most evergreen IELTS cue cards."
+    },
+    {
+      "title": "AI & Digital trend",
+      "detail": "2026 introduces AI (\"Time You Used AI to Solve a Problem\", \"Person Who Is a Great Digital Communicator\") and digital privacy as new themes."
+    },
+    {
+      "title": "Part 1 most stable",
+      "detail": "\"Art\", \"Science\", \"Parks\", and \"Gifts\" appear in every single season (7/7). Safe bets for preparation."
+    }
   ],
   "recommendations": [
     "Prioritize the Top 20 Part 2 topics — they've appeared in 4–7 out of 7 seasons.",
@@ -228,7 +2331,10 @@
     "pdfsProcessed": 14,
     "pdfsFailed": 1,
     "webSources": "10+",
-    "normalizedLanguages": ["Chinese", "English"],
+    "normalizedLanguages": [
+      "Chinese",
+      "English"
+    ],
     "deduplication": "Topic names merged across sources",
     "seasonCount": "7 total (2024 May-Aug through 2026 May-Aug)"
   }
