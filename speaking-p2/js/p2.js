@@ -35,6 +35,10 @@ function switchTab(angleId, el) {
   el.classList.add('active');
   var bg = document.getElementById('bg-' + angleId);
   if (bg) bg.style.display = 'block';
+  // Full-page gradient
+  var angles = ['appearance','personality','relationship','lifestyle','achievement'];
+  angles.forEach(function(a) { document.body.classList.remove('angle-' + a); });
+  document.body.classList.add('angle-' + angleId);
 }
 
 /* Inject structure example data after page load */
@@ -248,8 +252,9 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   randomPrompt();
 
-  /* Auto-hide sidebar on mobile after selecting a sub-item */
+  /* Mobile dropdown sidebar with auto-hide */
   var sidebar = document.querySelector('.p2-sidebar');
+  var toggle = document.getElementById('nav-toggle');
   var layout = document.querySelector('.p2-layout');
 
   /* Make all cards iOS-Safari-interactive */
@@ -262,45 +267,54 @@ document.addEventListener('DOMContentLoaded', function() {
     c.setAttribute('tabindex', '0');
   });
 
-  if (!sidebar || !layout) return;
+  if (!sidebar || !toggle) return;
   var isMobile = window.matchMedia('(max-width: 900px)');
   var hideTimer;
 
-  function collapseSidebar() {
-    if (!isMobile.matches) return;
-    sidebar.classList.add('collapsed');
+  function openSidebar() {
+    sidebar.classList.add('open');
+    toggle.innerHTML = '✕ Topics';
+    toggle.style.background = 'var(--p2-people)';
+    toggle.style.color = '#fff';
+    resetHideTimer();
   }
-  function expandSidebar() {
-    sidebar.classList.remove('collapsed');
+  function closeSidebar() {
+    sidebar.classList.remove('open');
+    toggle.innerHTML = '☰ Topics';
+    toggle.style.background = '';
+    toggle.style.color = '';
     clearTimeout(hideTimer);
-    hideTimer = setTimeout(collapseSidebar, 4000);
+  }
+  function resetHideTimer() {
+    clearTimeout(hideTimer);
+    if (isMobile.matches) {
+      hideTimer = setTimeout(closeSidebar, 5000);
+    }
   }
 
-  // Collapse after tapping any sidebar sub-item
-  sidebar.addEventListener('touchend', function(e) {
-    if (e.target.closest('.p2-sidebar-sub')) {
-      setTimeout(collapseSidebar, 600);
-    }
+  toggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    if (sidebar.classList.contains('open')) { closeSidebar(); }
+    else { openSidebar(); }
   });
+
+  // Close when tapping a sidebar link
   sidebar.addEventListener('click', function(e) {
-    if (e.target.closest('.p2-sidebar-sub')) {
-      setTimeout(collapseSidebar, 600);
+    if (e.target.closest('a')) {
+      setTimeout(closeSidebar, 300);
     }
   });
 
-  // Tap collapsed sidebar to expand
-  sidebar.addEventListener('click', function(e) {
-    if (sidebar.classList.contains('collapsed') && e.target.closest('.p2-sidebar-item')) {
-      expandSidebar();
+  // Close when tapping outside
+  document.addEventListener('click', function(e) {
+    if (!sidebar.contains(e.target) && e.target !== toggle) {
+      closeSidebar();
     }
   });
 
-  // Auto-collapse after 4s idle on mobile
+  // Reset timer on scroll/touch
   if (isMobile.matches) {
-    hideTimer = setTimeout(collapseSidebar, 4000);
-    document.addEventListener('scroll', function() {
-      clearTimeout(hideTimer);
-      hideTimer = setTimeout(collapseSidebar, 4000);
-    }, {passive: true});
+    document.addEventListener('scroll', resetHideTimer, {passive: true});
+    sidebar.addEventListener('touchstart', resetHideTimer, {passive: true});
   }
 });
