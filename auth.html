@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign In — IELTS with Kee</title>
+  <title>Access — IELTS with Kee</title>
   <link rel="stylesheet" href="css/global.css">
   <style>
     .auth-page {
@@ -38,40 +38,9 @@
       font-size: 0.95rem;
       margin-bottom: 32px;
     }
-    .auth-tabs {
-      display: flex;
-      gap: 4px;
-      background: #F5F5F7;
-      border-radius: 12px;
-      padding: 4px;
-      margin-bottom: 28px;
-    }
-    .auth-tab {
-      flex: 1;
-      padding: 10px;
-      border: none;
-      border-radius: 10px;
-      background: transparent;
-      font-weight: 600;
-      font-size: 0.9rem;
-      cursor: pointer;
-      color: #86868B;
-      transition: all 0.2s;
-    }
-    .auth-tab.active {
-      background: white;
-      color: #9F44D3;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-    .auth-form {
-      display: none;
-      text-align: left;
-    }
-    .auth-form.active {
-      display: block;
-    }
     .form-group {
       margin-bottom: 18px;
+      text-align: left;
     }
     .form-group label {
       display: block;
@@ -90,10 +59,24 @@
       font-size: 1rem;
       transition: border-color 0.2s;
       box-sizing: border-box;
+      font-family: monospace;
+      letter-spacing: 2px;
+      text-align: center;
     }
     .form-group input:focus {
       border-color: #9F44D3;
       outline: none;
+    }
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+      font-size: 0.85rem;
+      color: #86868B;
+    }
+    .checkbox-group input {
+      width: 16px; height: 16px;
     }
     .btn-auth {
       width: 100%;
@@ -106,16 +89,10 @@
       font-weight: 700;
       cursor: pointer;
       transition: transform 0.2s, box-shadow 0.2s;
-      margin-top: 8px;
     }
     .btn-auth:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(159, 68, 211, 0.3);
-    }
-    .btn-auth:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-      transform: none;
     }
     .auth-error {
       background: #FFF0F2;
@@ -134,17 +111,12 @@
     .auth-success .check {
       font-size: 4rem;
       margin-bottom: 16px;
+      animation: bounceIn 0.5s ease;
     }
-    .auth-footer {
-      margin-top: 24px;
-      font-size: 0.85rem;
-      color: #86868B;
-    }
-    .auth-footer a {
-      color: #9F44D3;
-      text-decoration: none;
-      font-weight: 600;
-      cursor: pointer;
+    @keyframes bounceIn {
+      0% { transform: scale(0); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
     }
     .back-link {
       display: inline-block;
@@ -153,14 +125,7 @@
       text-decoration: none;
       font-size: 0.85rem;
     }
-    .back-link:hover {
-      color: #9F44D3;
-    }
-    .password-hint {
-      font-size: 0.78rem;
-      color: #aaa;
-      margin-top: 4px;
-    }
+    .back-link:hover { color: #9F44D3; }
   </style>
 </head>
 <body>
@@ -168,77 +133,38 @@
     <div class="auth-card">
       <div class="logo">🦄</div>
       <h1>IELTS with Kee</h1>
-      <p class="sub">Sign in to track your learning journey</p>
-
-      <div class="auth-tabs">
-        <button class="auth-tab active" onclick="switchTab('signin')">Sign In</button>
-        <button class="auth-tab" onclick="switchTab('signup')">Sign Up</button>
-      </div>
+      <p class="sub">Enter your access code to continue</p>
 
       <div id="auth-error" class="auth-error"></div>
       <div id="auth-success" class="auth-success">
         <div class="check">✅</div>
-        <h3>Success!</h3>
-        <p id="success-msg" style="color:#86868B;margin-top:8px;"></p>
+        <h3>Access Granted</h3>
+        <p style="color:#86868B;margin-top:8px;" id="success-msg">Redirecting...</p>
       </div>
 
-      <!-- Sign In Form -->
-      <form id="signin-form" class="auth-form active" onsubmit="handleSignIn(event)">
+      <form id="auth-form" onsubmit="handleSubmit(event)">
         <div class="form-group">
-          <label>Email</label>
-          <input type="email" id="signin-email" placeholder="you@example.com" required>
+          <label>Access Code</label>
+          <input type="password" id="passcode" placeholder="Enter code" autofocus autocomplete="off">
         </div>
-        <div class="form-group">
-          <label>Password</label>
-          <input type="password" id="signin-password" placeholder="Enter your password" required>
+        <div class="checkbox-group">
+          <input type="checkbox" id="remember">
+          <label for="remember">Stay signed in for 30 days</label>
         </div>
-        <button type="submit" class="btn-auth" id="signin-btn">Sign In</button>
-        <div class="auth-footer">
-          Don't have an account? <a onclick="switchTab('signup')">Sign up</a>
-        </div>
-      </form>
-
-      <!-- Sign Up Form -->
-      <form id="signup-form" class="auth-form" onsubmit="handleSignUp(event)">
-        <div class="form-group">
-          <label>Full Name</label>
-          <input type="text" id="signup-name" placeholder="e.g. Alex Chen" required>
-        </div>
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" id="signup-email" placeholder="you@example.com" required>
-        </div>
-        <div class="form-group">
-          <label>Password</label>
-          <input type="password" id="signup-password" placeholder="At least 6 characters" minlength="6" required>
-          <div class="password-hint">Must be at least 6 characters</div>
-        </div>
-        <button type="submit" class="btn-auth" id="signup-btn">Create Account</button>
-        <div class="auth-footer">
-          Already have an account? <a onclick="switchTab('signin')">Sign in</a>
-        </div>
+        <button type="submit" class="btn-auth">Unlock →</button>
       </form>
 
       <a href="index.html" class="back-link">← Back to Home</a>
     </div>
   </div>
 
-  <script src="js/lib/supabase.min.js"></script>
+  <script src="js/auth.js"></script>
   <script>
-    const SUPABASE_URL = 'https://areedjmpngwzocqpoaur.supabase.co';
-    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFyZWVkam1wbmd3em9jcXBvYXVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY5ODAwMTgsImV4cCI6MjA5MjU1NjAxOH0.CSHpruDqBm4mbKseySbbOlZk2-uBG2Oxe4DvqwTVFJ8';
-    // Create Supabase client with proper auth config
-    let supabase;
-    try {
-      supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-        auth: {
-          autoRefreshToken: true,
-          persistSession: true,
-          detectSessionInUrl: true
-        }
-      });
-    } catch(e) {
-      showError('Failed to initialize: ' + e.message);
+    // If already logged in, redirect immediately
+    if (KeeAuth.isLoggedIn()) {
+      const params = new URLSearchParams(window.location.search);
+      const redirect = params.get('redirect') || 'dashboard.html';
+      window.location.href = redirect;
     }
 
     function showError(msg) {
@@ -247,91 +173,33 @@
       el.style.display = 'block';
     }
 
-    function hideError() {
-      document.getElementById('auth-error').style.display = 'none';
-    }
-
-    function switchTab(tab) {
-      hideError();
-      document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.auth-form').forEach(f => f.classList.remove('active'));
-      if (tab === 'signin') {
-        document.querySelector('.auth-tab:first-child').classList.add('active');
-        document.getElementById('signin-form').classList.add('active');
-      } else {
-        document.querySelector('.auth-tab:last-child').classList.add('active');
-        document.getElementById('signup-form').classList.add('active');
-      }
-    }
-
-    async function handleSignUp(e) {
+    function handleSubmit(e) {
       e.preventDefault();
-      hideError();
-      const btn = document.getElementById('signup-btn');
-      btn.disabled = true;
-      btn.textContent = 'Creating account...';
+      const error = document.getElementById('auth-error');
+      error.style.display = 'none';
 
-      const name = document.getElementById('signup-name').value;
-      const email = document.getElementById('signup-email').value;
-      const password = document.getElementById('signup-password').value;
+      const code = document.getElementById('passcode').value;
+      const remember = document.getElementById('remember').checked;
+      const result = KeeAuth.login(code, remember);
 
-      const { data, error } = await supabase.auth.signUp({
-        email,
-        password,
-        options: {
-          data: { full_name: name }
-        }
-      });
-
-      btn.disabled = false;
-      btn.textContent = 'Create Account';
-
-      if (error) {
-        showError(error.message);
+      if (!result.ok) {
+        showError(result.error);
+        document.getElementById('passcode').value = '';
+        document.getElementById('passcode').focus();
         return;
       }
 
-      // Show success
-      document.getElementById('signup-form').style.display = 'none';
+      // Success animation
+      document.getElementById('auth-form').style.display = 'none';
       document.getElementById('auth-success').style.display = 'block';
-      document.getElementById('success-msg').textContent = 
-        'Account created! Check your email for a confirmation link to sign in.';
+
+      const params = new URLSearchParams(window.location.search);
+      const redirect = params.get('redirect') || 'dashboard.html';
+
+      setTimeout(() => {
+        window.location.href = redirect;
+      }, 800);
     }
-
-    async function handleSignIn(e) {
-      e.preventDefault();
-      hideError();
-      const btn = document.getElementById('signin-btn');
-      btn.disabled = true;
-      btn.textContent = 'Signing in...';
-
-      const email = document.getElementById('signin-email').value;
-      const password = document.getElementById('signin-password').value;
-
-      const { data, error } = await supabase.auth.signInWithPassword({
-        email,
-        password
-      });
-
-      btn.disabled = false;
-      btn.textContent = 'Sign In';
-
-      if (error) {
-        showError(error.message);
-        return;
-      }
-
-      // Redirect to dashboard
-      window.location.href = 'dashboard.html';
-    }
-
-    // Check if already signed in
-    (async function() {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (session) {
-        window.location.href = 'dashboard.html';
-      }
-    })();
   </script>
 </body>
 </html>

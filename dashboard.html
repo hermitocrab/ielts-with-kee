@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard — IELTS with Kee</title>
   <link rel="stylesheet" href="css/global.css">
+  <script src="js/auth.js"></script>
   <style>
     .dash-header {
       background: linear-gradient(135deg, #9F44D3, #B265E6);
@@ -175,6 +176,7 @@
   </style>
 </head>
 <body>
+  <script>if(!KeeAuth.requireAuth()){}</script>
   <div class="dash-header">
     <h1>📚 My Dashboard</h1>
     <p>Track your IELTS learning journey</p>
