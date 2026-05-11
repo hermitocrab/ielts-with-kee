@@ -1,27 +1,524 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IELTS with Kee — Speaking Part 2 · Objects</title>
-  <link rel="stylesheet" href="css/p2.css">
-  <style>.placeholder-card{background:white;border-radius:16px;padding:80px 40px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,0.06);margin-top:24px}.placeholder-card h2{font-size:2rem;margin-bottom:12px}.placeholder-card p{color:#64748B;font-size:1.1rem;max-width:500px;margin:0 auto 24px}.angle-tag{background:#F5F3FF;border:1px solid #DDD6FE;border-radius:10px;padding:10px 18px;font-size:0.85rem;font-weight:600;color:#5B21B6;display:inline-block;margin:4px}</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/p2.css?v=7">
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <style>
+    .p2-hero { background: linear-gradient(135deg, var(--p2-objects-dark), var(--p2-objects)); }
+    .p2-nav-brand { color: var(--p2-objects-dark); }
+    .p2-tab.active { background: var(--p2-objects-light); color: var(--p2-objects-dark); }
+    .p2-sidebar-item.active { background: var(--p2-objects-light); color: var(--p2-objects-dark); }
+    .p2-sidebar-item.active .count { background: var(--p2-objects); color: white; }
+    .p2-card-front { border-left-color: var(--p2-objects); }
+    .p2-card:hover { filter: drop-shadow(0 4px 12px rgba(124,58,237,0.15)); }
+    .p2-drill { border-top-color: var(--p2-objects); }
+    .p2-timer { color: var(--p2-objects); }
+    .p2-eileen-section { border-color: #DDD6FE; }
+    .cross-layout .cross-center-inner { border-color: var(--p2-objects); color: var(--p2-objects-dark); box-shadow: 0 2px 12px rgba(124,58,237,0.15); }
+    .cross-layout .cross-input:focus { border-color: var(--p2-objects); box-shadow: 0 0 0 3px var(--p2-objects-light); }
+    .cross-layout::before { background: linear-gradient(to bottom right, transparent calc(50% - 1px), var(--p2-objects-light) 50%, transparent calc(50% + 1px)), linear-gradient(to bottom left, transparent calc(50% - 1px), var(--p2-objects-light) 50%, transparent calc(50% + 1px)); }
+    .p2-drill-btn-accent { background: var(--p2-objects); border-color: var(--p2-objects); }
+    .p2-drill-btn-accent:hover { background: var(--p2-objects-dark); border-color: var(--p2-objects-dark); }
+    .p2-nav-toggle { background: var(--p2-objects-light); color: var(--p2-objects-dark); border-color: var(--p2-objects); }
+    .p2-nav-toggle:active { background: var(--p2-objects); color: #fff; }
+    .p2-sidebar-sub:hover { background: var(--p2-objects-light); color: var(--p2-objects-dark); border-left-color: var(--p2-objects); }
+    .p2-modal .comp-col h4 { color: var(--p2-objects-dark); }
+    .p2-modal .opening-box { background: var(--p2-objects-light); }
+    .p2-modal .opening-box h4 { color: var(--p2-objects-dark); }
+    .p2-modal .opening-box .prompt-tag { background: var(--p2-objects-light); color: var(--p2-objects-dark); }
+    .p2-drill .random-prompt { background: var(--p2-objects-light); color: var(--p2-objects-dark); }
+    .p2-drill-btn:hover { background: var(--p2-objects-light); border-color: #DDD6FE; }
+  </style>
 </head>
 <body>
-  <nav class="p2-nav">
-    <a href="https://ielts.rkrk.io" class="p2-nav-brand"><span class="brand-emoji">🦄</span> Kee Lee&apos;s IELTS Lab <span class="brand-dynamos">DynamOS</span></a>
-    
-  </nav>
-  <div class="p2-layout">
-    <aside class="p2-sidebar"><div class="p2-sidebar-section"><div class="p2-sidebar-label">P2 Topics</div>
-      <a href="people.html" class="p2-sidebar-item">👥 People <span class="count">13</span></a>
-      <a href="places.html" class="p2-sidebar-item">📍 Places <span class="count">7</span></a>
-      <a href="events.html" class="p2-sidebar-item">🎬 Events <span class="count">18</span></a>
-      <a href="objects.html" class="p2-sidebar-item active">🎁 Objects <span class="count">21</span></a></div></aside>
-    <main class="p2-main">
-      <section class="p2-hero" style="background:linear-gradient(135deg, var(--p2-objects-dark), var(--p2-objects));"><h1>🎁 OBJECTS · 物品</h1><p class="subtitle">Describing things — from everyday items to meaningful possessions.</p><div class="p2-hero-stats"><div class="p2-hero-stat"><div class="num">21</div><div class="label">Real Exam Prompts</div></div><div class="p2-hero-stat"><div class="num">5</div><div class="label">Descriptive Angles</div></div><div class="p2-hero-stat"><div class="num">100</div><div class="label">Lexical Chunks</div></div></div></section>
-      <div class="placeholder-card"><h2>🚧 Coming Soon</h2><p>Awaiting approval of People category MVP before building Objects.</p>
-        <div><span class="angle-tag">👁 Physical Description</span><span class="angle-tag">🔧 Function & Use</span><span class="angle-tag">📜 Origin & History</span><span class="angle-tag">💎 Personal Value</span><span class="angle-tag">⚖ Comparison & Uniqueness</span></div></div>
-    </main>
+<nav class="p2-nav">
+  <a href="https://ielts.rkrk.io" class="p2-nav-brand">IELTS with Kee <span class="brand-emoji">🦄</span></a>
+  <button class="p2-nav-toggle" id="nav-toggle" aria-label="Topics menu">☰ Topics</button>
+</nav>
+<div class="p2-layout">
+  <aside class="p2-sidebar">
+    <div class="p2-sidebar-section">
+      <div class="p2-sidebar-label">P2 Topics</div>
+      <a href="people.html" class="p2-sidebar-item">👥 People <span class="count">62</span></a>
+      <a href="places.html" class="p2-sidebar-item">📍 Places <span class="count">22</span></a>
+      <a href="events.html" class="p2-sidebar-item">🎬 Events <span class="count">50</span></a>
+      <a href="objects.html" class="p2-sidebar-item active">🎁 Objects <span class="count">34</span></a>
+      <a href="#cards-physical" onclick="navigateTo('cards-physical','physical');return false" class="p2-sidebar-sub">📝 Lexical Chunks</a>
+      <a href="#study-section" onclick="navigateTo('study-section',null);return false" class="p2-sidebar-sub">⭐ Case Study</a>
+      <a href="#drill-section" onclick="navigateTo('drill-section',null);return false" class="p2-sidebar-sub">🎯 Quick Drill</a>
+    </div>
+  </aside>
+  <main class="p2-main">
+    <section class="p2-hero">
+      <h1>🎁 OBJECTS · 物品</h1>
+      <p class="subtitle">Describing objects — from gadgets to gifts to family treasures — is a core skill in IELTS Speaking Part 2. Learn 5 angles to talk about any object you can think of.</p>
+      <div class="p2-hero-stats">
+        <div class="p2-hero-stat"><div class="num">34</div><div class="label">Real Exam Prompts</div></div>
+        <div class="p2-hero-stat"><div class="num">5</div><div class="label">Descriptive Angles</div></div>
+        <div class="p2-hero-stat"><div class="num">100</div><div class="label">Lexical Chunks</div></div>
+        <div class="p2-hero-stat"><div class="num">50</div><div class="label">Useful Structures</div></div>
+      </div>
+    </section>
+    <div class="p2-tabs">
+      <button class="p2-tab active" onclick="switchTab('physical', this)"><span class="en">📐 Physical Desc.</span><span class="zh">外观描述</span></button>
+      <button class="p2-tab" onclick="switchTab('function', this)"><span class="en">⚙️ Function</span><span class="zh">功能与用途</span></button>
+      <button class="p2-tab" onclick="switchTab('origin', this)"><span class="en">📜 Origin</span><span class="zh">来源与历史</span></button>
+      <button class="p2-tab" onclick="switchTab('value', this)"><span class="en">💝 Personal Value</span><span class="zh">个人价值</span></button>
+      <button class="p2-tab" onclick="switchTab('comparison', this)"><span class="en">🔍 Comparison</span><span class="zh">比较与独特</span></button>
+    </div>
+
+    <!-- ANGLE 1: PHYSICAL DESCRIPTION -->
+    <div class="p2-angle-bg physical" id="bg-physical">
+      <div class="p2-angle-content" id="angle-physical" style="display:block;">
+        <div class="p2-angle-info"><h2>📐 Physical Description <span style="font-weight:400;font-size:0.9rem;color:var(--p2-text-light)">· 外观描述</span></h2><span class="chunk-count">20 chunks</span></div>
+        <p style="color:var(--p2-text-light);font-size:0.88rem;margin-bottom:20px;">These chunks help you describe what an object looks like — its size, shape, colour, material, and visual character.</p>
+        <div class="p2-cards" id="cards-physical">
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">about the size of</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's about the size of a paperback book — small enough to slip into a bag but substantial enough to feel like something real."</div><div class="translation">它大概有平装书大小——小到可以塞进包里，但又有足够的实体感。</div><button class="used-btn" data-chunk="ob-a1" onclick="event.stopPropagation();markUsed('ob-a1',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">sleek and minimalist</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The design is sleek and minimalist — no unnecessary buttons, no flashy logos, just clean lines."</div><div class="translation">设计简洁极简——没有多余的按钮，没有花哨的标志，只有干净的线条。</div><button class="used-btn" data-chunk="ob-a2" onclick="event.stopPropagation();markUsed('ob-a2',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">has a certain worn charm</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's old and has a certain worn charm — the cover is frayed at the edges, but that just adds to its character."</div><div class="translation">它很旧，有一种磨损的魅力——封面边缘已经磨损了，但这反而增添了它的性格。</div><button class="used-btn" data-chunk="ob-a3" onclick="event.stopPropagation();markUsed('ob-a3',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">fits in the palm of your hand</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It fits in the palm of your hand — that's one of the things I love about it, you can take it absolutely anywhere."</div><div class="translation">它可以放在你的手掌中——这是我喜欢它的原因之一，你可以带它到任何地方。</div><button class="used-btn" data-chunk="ob-a4" onclick="event.stopPropagation();markUsed('ob-a4',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">made of / crafted from</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's made of solid wood with brass fittings — the kind of craftsmanship you rarely see in mass-produced items."</div><div class="translation">它由实木和黄铜配件制成——这种工艺在大规模生产的物品中很少见。</div><button class="used-btn" data-chunk="ob-a5" onclick="event.stopPropagation();markUsed('ob-a5',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">comes in a range of</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It comes in a range of colours — I went with the deep navy because it felt the most sophisticated."</div><div class="translation">它有多种颜色可选——我选了深海军蓝，因为它感觉最精致。</div><button class="used-btn" data-chunk="ob-a6" onclick="event.stopPropagation();markUsed('ob-a6',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">eye-catching without being flashy</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's eye-catching without being flashy — people notice it, but it doesn't scream for attention."</div><div class="translation">它引人注目却不张扬——人们会注意到它，但它不会大声喊叫求关注。</div><button class="used-btn" data-chunk="ob-a7" onclick="event.stopPropagation();markUsed('ob-a7',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">intricately detailed</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The surface is intricately detailed — every inch has some kind of pattern or engraving."</div><div class="translation">表面细节精致——每寸都带有某种图案或雕刻。</div><button class="used-btn" data-chunk="ob-a8" onclick="event.stopPropagation();markUsed('ob-a8',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">has a satisfying weight to it</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It has a satisfying weight to it — not heavy, but you know you're holding something well-made."</div><div class="translation">它有一种令人满意的重量感——不重，但你知道你手里拿的是制作精良的东西。</div><button class="used-btn" data-chunk="ob-a9" onclick="event.stopPropagation();markUsed('ob-a9',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the texture is</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The texture is smooth but not slippery — it's one of those materials that feels better the more you use it."</div><div class="translation">质地光滑但不滑——这是那种越用越舒服的材料。</div><button class="used-btn" data-chunk="ob-a10" onclick="event.stopPropagation();markUsed('ob-a10',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">roughly / approximately</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's roughly 30 centimetres long — long enough to be useful but short enough to be portable."</div><div class="translation">它大约30厘米长——足够长以有用，但短到可以携带。</div><button class="used-btn" data-chunk="ob-a11" onclick="event.stopPropagation();markUsed('ob-a11',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the colour has faded over time</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The colour has faded over time — what was once bright red is now a soft, dusty rose. But I actually prefer it this way."</div><div class="translation">颜色随时间褪色了——曾经鲜红现在变成了柔和的灰粉色。但我其实更喜欢这样。</div><button class="used-btn" data-chunk="ob-a12" onclick="event.stopPropagation();markUsed('ob-a12',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">compact yet powerful</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's surprisingly compact yet powerful — you'd never guess how much it can do from looking at it."</div><div class="translation">它出奇地小巧但功能强大——光看外表你绝对猜不到它能做多少事。</div><button class="used-btn" data-chunk="ob-a13" onclick="event.stopPropagation();markUsed('ob-a13',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">in pristine condition</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Considering it's over 50 years old, it's in pristine condition — not a scratch on it."</div><div class="translation">考虑到它已有50多年历史，它保存完好——没有一丝划痕。</div><button class="used-btn" data-chunk="ob-a14" onclick="event.stopPropagation();markUsed('ob-a14',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">has a unique shape</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It has a really unique shape — not quite round, not quite square, somewhere in between."</div><div class="translation">它有一个非常独特的形状——不完全圆，不完全方，介于两者之间。</div><button class="used-btn" data-chunk="ob-a15" onclick="event.stopPropagation();markUsed('ob-a15',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the design hasn't aged a day</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"What strikes me is that the design hasn't aged a day — it was made in the 1960s but looks like it could have been designed this year."</div><div class="translation">让我惊讶的是这设计一点都没过时——它是60年代做的，但看起来像是今年设计的。</div><button class="used-btn" data-chunk="ob-a16" onclick="event.stopPropagation();markUsed('ob-a16',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">fits perfectly in</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It fits perfectly in my bag — it's like it was designed specifically for my daily routine."</div><div class="translation">它完美地适合我的包——仿佛是为我的日常生活专门设计的。</div><button class="used-btn" data-chunk="ob-a17" onclick="event.stopPropagation();markUsed('ob-a17',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the material feels premium</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The material feels premium — soft to the touch but clearly durable, like something that's going to last for years."</div><div class="translation">材料手感高级——触感柔软但显然耐用，像是会用很多年的东西。</div><button class="used-btn" data-chunk="ob-a18" onclick="event.stopPropagation();markUsed('ob-a18',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">takes up hardly any space</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It takes up hardly any space — you could fit it in a coat pocket and forget it's there."</div><div class="translation">它几乎不占空间——你可以放进口袋里然后忘记它的存在。</div><button class="used-btn" data-chunk="ob-a19" onclick="event.stopPropagation();markUsed('ob-a19',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">looks better in person</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Honestly, it looks much better in person — photos don't do it justice at all."</div><div class="translation">说实话，实物看起来好多了——照片完全不能体现它的美。</div><button class="used-btn" data-chunk="ob-a20" onclick="event.stopPropagation();markUsed('ob-a20',this)">✓ Mark as used</button></div></div></div>
+        </div>
+        <div class="p2-structures" data-angle="physical"><h4>Sentence frames</h4><div class="struct-grid">
+          <div class="struct-item">It's <span class="blank">_____</span> in size, with <span class="blank">_____</span> and <span class="blank">_____</span></div>
+          <div class="struct-item">The first thing you notice about it is <span class="blank">_____</span> — it's quite <span class="blank">_____</span></div>
+          <div class="struct-item">It's made of <span class="blank">_____</span>, which gives it a <span class="blank">_____</span> feel</div>
+          <div class="struct-item">If I had to describe the design in three words, it would be <span class="blank">_____</span>, <span class="blank">_____</span>, and <span class="blank">_____</span></div>
+          <div class="struct-item">It's roughly the same size as <span class="blank">_____</span>, but <span class="blank">_____</span></div>
+          <div class="struct-item">The most distinctive physical feature is <span class="blank">_____</span> — you'd recognise it anywhere</div>
+          <div class="struct-item">It has this <span class="blank">_____</span> quality about it — the kind of <span class="blank">_____</span> that ages well</div>
+          <div class="struct-item">On the surface it looks <span class="blank">_____</span>, but when you <span class="blank">_____</span> you notice <span class="blank">_____</span></div>
+          <div class="struct-item">It doesn't have <span class="blank">_____</span> — instead, it's designed to <span class="blank">_____</span></div>
+          <div class="struct-item">Compared to similar <span class="blank">_____</span>, this one is remarkably <span class="blank">_____</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- ANGLE 2: FUNCTION & USE -->
+    <div class="p2-angle-bg function" id="bg-function" style="display:none;">
+      <div class="p2-angle-content" id="angle-function" style="display:block;">
+        <div class="p2-angle-info"><h2>⚙️ Function & Use <span style="font-weight:400;font-size:0.9rem;color:var(--p2-text-light)">· 功能与用途</span></h2><span class="chunk-count">20 chunks</span></div>
+        <p style="color:var(--p2-text-light);font-size:0.88rem;margin-bottom:20px;">These chunks help you describe what an object does, how you use it, and what it enables you to do.</p>
+        <div class="p2-cards" id="cards-function">
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">serves a dual purpose</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It serves a dual purpose — it's functional during the day and decorative at night."</div><div class="translation">它有两个用途——白天是功能性的，晚上是装饰性的。</div><button class="used-btn" data-chunk="ob-b1" onclick="event.stopPropagation();markUsed('ob-b1',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a lifesaver</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"This little device has been an absolute lifesaver — I honestly don't know how I managed without it."</div><div class="translation">这个小设备真是救命稻草——我真的不知道没有它我是怎么过的。</div><button class="used-btn" data-chunk="ob-b2" onclick="event.stopPropagation();markUsed('ob-b2',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">does exactly what it says on the tin</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It does exactly what it says on the tin — no gimmicks, no unnecessary features, just reliable performance."</div><div class="translation">它正如广告所说——没有噱头，没有多余的功能，只有可靠的性能。</div><button class="used-btn" data-chunk="ob-b3" onclick="event.stopPropagation();markUsed('ob-b3',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">comes in handy</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It comes in handy more often than you'd think — from opening packages to fixing loose screws."</div><div class="translation">它比你想象的更常用到——从拆包装到拧紧松了的螺丝。</div><button class="used-btn" data-chunk="ob-b4" onclick="event.stopPropagation();markUsed('ob-b4',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">takes the hassle out of</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It takes the hassle out of charging — you just drop it on the pad and it starts charging automatically."</div><div class="translation">它省去了充电的麻烦——你只需把它放在充电板上，它就会自动开始充电。</div><button class="used-btn" data-chunk="ob-b5" onclick="event.stopPropagation();markUsed('ob-b5',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a game-changer</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Switching to this device was a complete game-changer — my workflow is at least twice as efficient now."</div><div class="translation">换成这个设备完全改变了游戏规则——我的工作效率现在至少提高了一倍。</div><button class="used-btn" data-chunk="ob-b6" onclick="event.stopPropagation();markUsed('ob-b6',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">one-tap access to</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It gives me one-tap access to all my learning materials — no more digging through folders."</div><div class="translation">它让我一键访问所有学习材料——再也不用翻文件夹了。</div><button class="used-btn" data-chunk="ob-b7" onclick="event.stopPropagation();markUsed('ob-b7',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">streamlines the process</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It streamlines the whole process — what used to take an hour now takes about fifteen minutes."</div><div class="translation">它简化了整个流程——以前需要一小时的事情现在只需要大约十五分钟。</div><button class="used-btn" data-chunk="ob-b8" onclick="event.stopPropagation();markUsed('ob-b8',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">has more features than I'll ever use</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It has more features than I'll ever use — but the five or six I do use daily are indispensable."</div><div class="translation">它有太多我永远用不到的功能——但我每天用的那五六个功能是不可或缺的。</div><button class="used-btn" data-chunk="ob-b9" onclick="event.stopPropagation();markUsed('ob-b9',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">built to last</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's clearly built to last — I've dropped it more times than I can count and it still works perfectly."</div><div class="translation">它显然是为了耐久而造的——我把它摔了无数次，它仍然完美运行。</div><button class="used-btn" data-chunk="ob-b10" onclick="event.stopPropagation();markUsed('ob-b10',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">so intuitive to use</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's so intuitive to use that I never even looked at the manual — everything just made sense."</div><div class="translation">它使用起来非常直观，我甚至从未看过说明书——一切都理所当然。</div><button class="used-btn" data-chunk="ob-b11" onclick="event.stopPropagation();markUsed('ob-b11',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">makes a world of difference</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Having the right tool makes a world of difference — suddenly the task that felt impossible becomes straightforward."</div><div class="translation">拥有合适的工具能带来天壤之别——突然间，感觉不可能的任务变得简单了。</div><button class="used-btn" data-chunk="ob-b12" onclick="event.stopPropagation();markUsed('ob-b12',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">can handle anything you throw at it</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It can handle anything you throw at it — heavy video editing, gaming, dozens of browser tabs — and never slows down."</div><div class="translation">它能处理你抛给它的任何任务——重型视频编辑、游戏、数十个浏览器标签——从不慢下来。</div><button class="used-btn" data-chunk="ob-b13" onclick="event.stopPropagation();markUsed('ob-b13',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">syncs seamlessly with</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It syncs seamlessly with all my other devices — I can start something on my phone and finish it on my laptop."</div><div class="translation">它与我所有其他设备无缝同步——我可以在手机上开始做某事，然后在笔记本电脑上完成。</div><button class="used-btn" data-chunk="ob-b14" onclick="event.stopPropagation();markUsed('ob-b14',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the battery lasts for ages</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The battery lasts for ages — I can go a full week without charging it, which is pretty remarkable."</div><div class="translation">电池能用很久——我可以整整一周不充电，这非常了不起。</div><button class="used-btn" data-chunk="ob-b15" onclick="event.stopPropagation();markUsed('ob-b15',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">has become an essential part of</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's become an essential part of my morning routine — I genuinely feel off if I don't use it."</div><div class="translation">它已成为我早晨日常的重要部分——如果不用它，我真的会感觉不对劲。</div><button class="used-btn" data-chunk="ob-b16" onclick="event.stopPropagation();markUsed('ob-b16',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">effortless to operate</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's completely effortless to operate — there's literally one button and everything else happens automatically."</div><div class="translation">操作完全不费力——实际上只有一个按钮，其他一切自动发生。</div><button class="used-btn" data-chunk="ob-b17" onclick="event.stopPropagation();markUsed('ob-b17',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">saves me so much time</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It saves me so much time — things that would take half an hour manually are done in seconds."</div><div class="translation">它帮我节省了很多时间——那些手工需要半小时的事，几秒钟就完成了。</div><button class="used-btn" data-chunk="ob-b18" onclick="event.stopPropagation();markUsed('ob-b18',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I use it on a daily basis</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I use it on a daily basis — it's one of those things that's so integrated into my life I barely notice it anymore."</div><div class="translation">我每天都在用——它是那种如此融入生活以至于我几乎不再注意到它的东西。</div><button class="used-btn" data-chunk="ob-b19" onclick="event.stopPropagation();markUsed('ob-b19',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">exceeded my expectations</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's exceeded my expectations in every way — I bought it for one specific purpose, but I ended up using it for so much more."</div><div class="translation">它在各方面都超出了我的预期——我买它是为了一个特定的用途，但结果却用它做了更多事。</div><button class="used-btn" data-chunk="ob-b20" onclick="event.stopPropagation();markUsed('ob-b20',this)">✓ Mark as used</button></div></div></div>
+        </div>
+        <div class="p2-structures" data-angle="function"><h4>Sentence frames</h4><div class="struct-grid">
+          <div class="struct-item">Its main function is to <span class="blank">_____</span>, but it can also <span class="blank">_____</span></div>
+          <div class="struct-item">Using it is incredibly <span class="blank">_____</span> — you just <span class="blank">_____</span> and it <span class="blank">_____</span></div>
+          <div class="struct-item">I use it primarily for <span class="blank">_____</span>, though it's also great for <span class="blank">_____</span></div>
+          <div class="struct-item">What makes it so useful is that <span class="blank">_____</span> — without it, <span class="blank">_____</span></div>
+          <div class="struct-item">It's designed to <span class="blank">_____</span>, and honestly, it does this better than <span class="blank">_____</span></div>
+          <div class="struct-item">The best feature is probably <span class="blank">_____</span> — I use that more than anything else</div>
+          <div class="struct-item">It's one of those things where <span class="blank">_____</span> — you don't realise how much you need it until <span class="blank">_____</span></div>
+          <div class="struct-item">Before I had this, I used to <span class="blank">_____</span>; now I can just <span class="blank">_____</span></div>
+          <div class="struct-item">It's not just <span class="blank">_____</span> — it also lets you <span class="blank">_____</span>, which is a nice bonus</div>
+          <div class="struct-item">If I had to name one thing that makes it indispensable, it's <span class="blank">_____</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- ANGLE 3: ORIGIN & HISTORY -->
+    <div class="p2-angle-bg origin" id="bg-origin" style="display:none;">
+      <div class="p2-angle-content" id="angle-origin" style="display:block;">
+        <div class="p2-angle-info"><h2>📜 Origin & History <span style="font-weight:400;font-size:0.9rem;color:var(--p2-text-light)">· 来源与历史</span></h2><span class="chunk-count">20 chunks</span></div>
+        <p style="color:var(--p2-text-light);font-size:0.88rem;margin-bottom:20px;">These chunks help you describe where the object came from, its backstory, and who gave it to you.</p>
+        <div class="p2-cards" id="cards-origin">
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">has been in the family for</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"This camera has been in the family for three generations — my grandfather bought it, my father used it, and now it's mine."</div><div class="translation">这个相机在家族中传了三代——我祖父买的，我父亲用过，现在归我了。</div><button class="used-btn" data-chunk="ob-c1" onclick="event.stopPropagation();markUsed('ob-c1',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">was passed down to me</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It was passed down to me by my grandmother on my 18th birthday — she said it was time someone younger took care of it."</div><div class="translation">它是我祖母在我18岁生日时传给我的——她说该让更年轻的人来保管它了。</div><button class="used-btn" data-chunk="ob-c2" onclick="event.stopPropagation();markUsed('ob-c2',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I picked it up at</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I picked it up at a flea market in Prague — the seller didn't even know what it was, but I recognised it immediately."</div><div class="translation">我在布拉格的一个跳蚤市场上淘到的——卖家甚至不知道它是什么，但我一眼就认出来了。</div><button class="used-btn" data-chunk="ob-c3" onclick="event.stopPropagation();markUsed('ob-c3',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a gift from</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It was a gift from my best friend when I graduated — she saved up for months to get it."</div><div class="translation">这是我毕业时最好的朋友送的礼物——她为此攒了好几个月的钱。</div><button class="used-btn" data-chunk="ob-c4" onclick="event.stopPropagation();markUsed('ob-c4',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">dates back to</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It dates back to the 1970s — you can tell by the design language, which is unmistakably from that era."</div><div class="translation">它可以追溯到70年代——从设计语言就可以看出来，这是那个时代无可辩驳的风格。</div><button class="used-btn" data-chunk="ob-c5" onclick="event.stopPropagation();markUsed('ob-c5',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">handmade by</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It was handmade by a local artisan in the village where I grew up — he's since passed away, which makes it even more precious."</div><div class="translation">它是我长大的村庄里一位当地工匠手工制作的——后来他去世了，这让它更加珍贵。</div><button class="used-btn" data-chunk="ob-c6" onclick="event.stopPropagation();markUsed('ob-c6',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I stumbled upon it</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I stumbled upon it completely by accident — I wasn't even looking for anything, and there it was."</div><div class="translation">我完全是偶然发现它的——我根本没在找什么东西，它就在那里。</div><button class="used-btn" data-chunk="ob-c7" onclick="event.stopPropagation();markUsed('ob-c7',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">has a story behind it</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Every scratch on it has a story behind it — the dent on the corner is from when I dropped it on a hiking trip in Tibet."</div><div class="translation">上面的每道划痕都有一个故事——角上的凹痕是我在西藏徒步旅行时摔出来的。</div><button class="used-btn" data-chunk="ob-c8" onclick="event.stopPropagation();markUsed('ob-c8',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">originally belonged to</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It originally belonged to my great-uncle, who was a photographer — he used it to document village life in the 1950s."</div><div class="translation">它最初属于我的叔祖父，他是一名摄影师——他用它记录了50年代的乡村生活。</div><button class="used-btn" data-chunk="ob-c9" onclick="event.stopPropagation();markUsed('ob-c9',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I came across it while</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I came across it while cleaning out my grandparents' attic — it was in a dusty box under a pile of old newspapers."</div><div class="translation">我在清理祖父母阁楼时发现的——它在一个满是灰尘的盒子里，压在一堆旧报纸下面。</div><button class="used-btn" data-chunk="ob-c10" onclick="event.stopPropagation();markUsed('ob-c10',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">one of a kind</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's truly one of a kind — there's no other piece like it in the world, which makes it irreplaceable."</div><div class="translation">它真的是独一无二的——世界上没有另一件这样的东西，这让它不可替代。</div><button class="used-btn" data-chunk="ob-c11" onclick="event.stopPropagation();markUsed('ob-c11',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I'd had my eye on it for</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I'd had my eye on it for months before I finally bought it — I saved up bit by bit from my part-time job."</div><div class="translation">我盯了它好几个月才终于买下——我靠兼职工作一点一点攒的钱。</div><button class="used-btn" data-chunk="ob-c12" onclick="event.stopPropagation();markUsed('ob-c12',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a souvenir from</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's a souvenir from my trip to Kyoto — every time I look at it, I'm transported back to that incredible week."</div><div class="translation">这是我从京都旅行带回的纪念品——每次看到它，我都会被带回那个不可思议的一周。</div><button class="used-btn" data-chunk="ob-c13" onclick="event.stopPropagation();markUsed('ob-c13',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">was given to me on</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It was given to me on my first day of university by my mother — she said it would bring me good luck."</div><div class="translation">这是我上大学第一天母亲给我的——她说这会给我带来好运。</div><button class="used-btn" data-chunk="ob-c14" onclick="event.stopPropagation();markUsed('ob-c14',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">has travelled with me to</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"This little notebook has travelled with me to over 15 countries — it's filled with scribbles in four different languages."</div><div class="translation">这个小笔记本跟着我走过了15多个国家——里面用四种不同语言写满了潦草的笔记。</div><button class="used-btn" data-chunk="ob-c15" onclick="event.stopPropagation();markUsed('ob-c15',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I inherited it from</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I inherited it from my grandfather after he passed away — it's one of the few physical things I have that connects me to him."</div><div class="translation">祖父去世后我继承了这个——这是少数能将我与祖父联系起来的实物之一。</div><button class="used-btn" data-chunk="ob-c16" onclick="event.stopPropagation();markUsed('ob-c16',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">fond memories attached to it</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"There are so many fond memories attached to it — every time I pick it up, a different memory comes back."</div><div class="translation">它上面附着太多美好的回忆——每次我拿起它，就会有不同的记忆涌现。</div><button class="used-btn" data-chunk="ob-c17" onclick="event.stopPropagation();markUsed('ob-c17',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a lucky find</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It was a real lucky find — I got it at a second-hand shop for next to nothing, and it turned out to be worth quite a bit."</div><div class="translation">这真的是一个幸运发现——我在二手店几乎没花什么钱就买到了，结果发现它价值不菲。</div><button class="used-btn" data-chunk="ob-c18" onclick="event.stopPropagation();markUsed('ob-c18',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">purchased on a whim</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I purchased it on a whim during a layover in Singapore — and it ended up being one of the best impulse buys I've ever made."</div><div class="translation">我在新加坡转机时一时冲动买下了它——结果成了我做过的最好的冲动消费之一。</div><button class="used-btn" data-chunk="ob-c19" onclick="event.stopPropagation();markUsed('ob-c19',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">no longer in production</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's no longer in production — the company stopped making them in the late 90s, which makes it a bit of a collector's item."</div><div class="translation">它已经停产了——公司在90年代末就停止生产了，这使它成了某种收藏品。</div><button class="used-btn" data-chunk="ob-c20" onclick="event.stopPropagation();markUsed('ob-c20',this)">✓ Mark as used</button></div></div></div>
+        </div>
+        <div class="p2-structures" data-angle="origin"><h4>Sentence frames</h4><div class="struct-grid">
+          <div class="struct-item">I got it from <span class="blank">_____</span> when <span class="blank">_____</span></div>
+          <div class="struct-item">It originally belonged to <span class="blank">_____</span>, who used it for <span class="blank">_____</span></div>
+          <div class="struct-item">The story behind how I got this is <span class="blank">_____</span> — it was <span class="blank">_____</span></div>
+          <div class="struct-item">It was made in <span class="blank">_____</span> by <span class="blank">_____</span>, which explains why <span class="blank">_____</span></div>
+          <div class="struct-item">I've had it since <span class="blank">_____</span>, and in all that time it's <span class="blank">_____</span></div>
+          <div class="struct-item">The significance of where it came from is that <span class="blank">_____</span></div>
+          <div class="struct-item">It's been in the family for <span class="blank">_____</span> generations, each adding <span class="blank">_____</span></div>
+          <div class="struct-item">I wasn't planning on buying it, but <span class="blank">_____</span> convinced me</div>
+          <div class="struct-item">The person who gave it to me said <span class="blank">_____</span></div>
+          <div class="struct-item">If I ever lost it, <span class="blank">_____</span> — it simply couldn't be replaced</div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- ANGLE 4: PERSONAL VALUE -->
+    <div class="p2-angle-bg value" id="bg-value" style="display:none;">
+      <div class="p2-angle-content" id="angle-value" style="display:block;">
+        <div class="p2-angle-info"><h2>💝 Personal Value <span style="font-weight:400;font-size:0.9rem;color:var(--p2-text-light)">· 个人价值</span></h2><span class="chunk-count">20 chunks</span></div>
+        <p style="color:var(--p2-text-light);font-size:0.88rem;margin-bottom:20px;">These chunks help you explain why an object matters to you personally — emotional significance, memories, and attachment.</p>
+        <div class="p2-cards" id="cards-value">
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">holds immense sentimental value</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It holds immense sentimental value — if my apartment caught fire, this is probably the first thing I'd grab."</div><div class="translation">它有巨大的情感价值——如果我的公寓着火，这可能是我第一个要抢出来的东西。</div><button class="used-btn" data-chunk="ob-d1" onclick="event.stopPropagation();markUsed('ob-d1',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">priceless to me</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's literally priceless to me — you couldn't put a number on what it means."</div><div class="translation">它对我来说是无价之宝——你无法用数字来衡量它的意义。</div><button class="used-btn" data-chunk="ob-d2" onclick="event.stopPropagation();markUsed('ob-d2',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a constant companion</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's been a constant companion through some of the most important moments of my life — exams, travels, late-night conversations."</div><div class="translation">它一直在我生命中一些最重要的时刻陪伴着我——考试、旅行、深夜交谈。</div><button class="used-btn" data-chunk="ob-d3" onclick="event.stopPropagation();markUsed('ob-d3',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">means the world to me</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It means the world to me — not because of what it is, but because of who gave it to me and why."</div><div class="translation">它对我来说意味着整个世界——不是因为它是啥，而是因为是谁为什么给了我。</div><button class="used-btn" data-chunk="ob-d4" onclick="event.stopPropagation();markUsed('ob-d4',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a tangible reminder of</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's a tangible reminder of my childhood — every time I hold it, I'm ten years old again."</div><div class="translation">它是我童年的有形回忆——每次我拿着它，我就又回到了十岁。</div><button class="used-btn" data-chunk="ob-d5" onclick="event.stopPropagation();markUsed('ob-d5',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I'd be devastated if I lost it</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I'd be absolutely devastated if I lost it — insurance couldn't replace what this object represents to me."</div><div class="translation">如果我弄丢了它，我会彻底崩溃——保险无法替代这个物品对我的意义。</div><button class="used-btn" data-chunk="ob-d6" onclick="event.stopPropagation();markUsed('ob-d6',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">has seen me through</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"This thing has seen me through breakups, exams, career changes, and a global pandemic — it's practically part of my life story."</div><div class="translation">这个东西陪我度过了分手、考试、职业转变和全球疫情——它几乎成了我人生故事的一部分。</div><button class="used-btn" data-chunk="ob-d7" onclick="event.stopPropagation();markUsed('ob-d7',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">an emotional anchor</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"When I'm feeling lost or overwhelmed, it serves as an emotional anchor — it grounds me and reminds me of what's important."</div><div class="translation">当我感到迷茫或不堪重负时，它就像情感的锚——让我安定下来，提醒我什么才是重要的。</div><button class="used-btn" data-chunk="ob-d8" onclick="event.stopPropagation();markUsed('ob-d8',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I treasure it</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I treasure it not because it's expensive — it's actually quite cheap — but because of everything it represents."</div><div class="translation">我珍视它不是因为它贵重——实际上它很便宜——而是因为它所代表的一切。</div><button class="used-btn" data-chunk="ob-d9" onclick="event.stopPropagation();markUsed('ob-d9',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">carries so much weight</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's a small object, but it carries so much emotional weight — it's like a compact version of my entire childhood."</div><div class="translation">它是一个小物件，但承载着如此多的情感重量——就像我整个童年的压缩版。</div><button class="used-btn" data-chunk="ob-d10" onclick="event.stopPropagation();markUsed('ob-d10',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">irreplaceable</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's completely irreplaceable — you could buy the exact same model, but it wouldn't be the same."</div><div class="translation">它完全不可替代——你可以买到完全相同的型号，但那不会再是同一个了。</div><button class="used-btn" data-chunk="ob-d11" onclick="event.stopPropagation();markUsed('ob-d11',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a cherished possession</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's one of my most cherished possessions — I keep it in a special box and only take it out on meaningful occasions."</div><div class="translation">这是我最珍爱的物品之一——我把它放在一个特别的盒子里，只在有意义的场合才拿出来。</div><button class="used-btn" data-chunk="ob-d12" onclick="event.stopPropagation();markUsed('ob-d12',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a gift that keeps on giving</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's a gift that keeps on giving — every time I use it, I'm reminded of the person who gave it to me."</div><div class="translation">这是一份持续赠送的礼物——每次我用到它，都会想起送它给我的那个人。</div><button class="used-btn" data-chunk="ob-d13" onclick="event.stopPropagation();markUsed('ob-d13',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">brings me comfort</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"On stressful days, just having it nearby brings me comfort — it's like a security blanket in object form."</div><div class="translation">在压力大的日子里，仅仅是它在我身边就能给我安慰——就像物品形式的安心毯。</div><button class="used-btn" data-chunk="ob-d14" onclick="event.stopPropagation();markUsed('ob-d14',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a piece of my history</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's literally a piece of my history — every mark and scratch tells a story about a different chapter of my life."</div><div class="translation">它就是我历史的一个片段——每个印记和划痕都诉说着我生命中不同篇章的故事。</div><button class="used-btn" data-chunk="ob-d15" onclick="event.stopPropagation();markUsed('ob-d15',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">connects me to</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It connects me to my grandfather in a way that photos never could — when I hold it, I feel like I'm holding his hand."</div><div class="translation">它以照片永远无法做到的方式将我与祖父连接起来——当我拿着它时，我感觉像在握着他的手。</div><button class="used-btn" data-chunk="ob-d16" onclick="event.stopPropagation();markUsed('ob-d16',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I'll keep it forever</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I'll keep it forever — and hopefully pass it on to my own children one day, with its story intact."</div><div class="translation">我会永远保存它——希望有一天能把它传给我自己的孩子，连同它的故事一起。</div><button class="used-btn" data-chunk="ob-d17" onclick="event.stopPropagation();markUsed('ob-d17',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">more than just a</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's more than just an old watch — it's a symbol of my father's love and the sacrifices he made for our family."</div><div class="translation">这不仅仅是一只旧手表——它是父爱的象征，是他为我们家庭所做牺牲的象征。</div><button class="used-btn" data-chunk="ob-d18" onclick="event.stopPropagation();markUsed('ob-d18',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the sentimental value far outweighs</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The sentimental value far outweighs any monetary worth — you could offer me a hundred times what it cost and I wouldn't sell it."</div><div class="translation">情感价值远远超过了任何金钱价值——你出原价一百倍我也不卖。</div><button class="used-btn" data-chunk="ob-d19" onclick="event.stopPropagation();markUsed('ob-d19',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the one thing I'd save</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"If there were a fire, it's the one thing I'd save — not my laptop, not my passport. This."</div><div class="translation">如果发生火灾，这是我会去救的唯一一样东西——不是我的笔记本电脑，不是我的护照。是这个。</div><button class="used-btn" data-chunk="ob-d20" onclick="event.stopPropagation();markUsed('ob-d20',this)">✓ Mark as used</button></div></div></div>
+        </div>
+        <div class="p2-structures" data-angle="value"><h4>Sentence frames</h4><div class="struct-grid">
+          <div class="struct-item">This object means so much to me because <span class="blank">_____</span></div>
+          <div class="struct-item">Every time I look at it, I'm reminded of <span class="blank">_____</span></div>
+          <div class="struct-item">What makes it special isn't <span class="blank">_____</span>, but <span class="blank">_____</span></div>
+          <div class="struct-item">I've had it for <span class="blank">_____</span> and in all that time it's <span class="blank">_____</span></div>
+          <div class="struct-item">It's not something I could ever <span class="blank">_____</span> — the <span class="blank">_____</span> is too <span class="blank">_____</span></div>
+          <div class="struct-item">The reason I treasure it so much is that it represents <span class="blank">_____</span></div>
+          <div class="struct-item">If someone asked me what my most meaningful possession is, I'd say <span class="blank">_____</span> without hesitation</div>
+          <div class="struct-item">It's become more than just <span class="blank">_____</span> — it's a <span class="blank">_____</span></div>
+          <div class="struct-item">I can't imagine my life without it because <span class="blank">_____</span></div>
+          <div class="struct-item">One day I hope to <span class="blank">_____</span> it to <span class="blank">_____</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- ANGLE 5: COMPARISON & UNIQUENESS -->
+    <div class="p2-angle-bg comparison" id="bg-comparison" style="display:none;">
+      <div class="p2-angle-content" id="angle-comparison" style="display:block;">
+        <div class="p2-angle-info"><h2>🔍 Comparison & Uniqueness <span style="font-weight:400;font-size:0.9rem;color:var(--p2-text-light)">· 比较与独特</span></h2><span class="chunk-count">20 chunks</span></div>
+        <p style="color:var(--p2-text-light);font-size:0.88rem;margin-bottom:20px;">These chunks help you explain what sets this object apart — how it compares to similar things and what makes it special.</p>
+        <div class="p2-cards" id="cards-comparison">
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">in a league of its own</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Compared to similar products, it's in a league of its own — the build quality alone puts it miles ahead."</div><div class="translation">与同类产品相比，它是独一档的存在——光是做工质量就领先了一大截。</div><button class="used-btn" data-chunk="ob-e1" onclick="event.stopPropagation();markUsed('ob-e1',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">head and shoulders above</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's head and shoulders above anything else on the market — the competition doesn't even come close."</div><div class="translation">它远远高于市场上的任何其他产品——竞争对手甚至无法接近。</div><button class="used-btn" data-chunk="ob-e2" onclick="event.stopPropagation();markUsed('ob-e2',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">what sets it apart is</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"What sets it apart is the attention to detail — every component feels like someone actually thought about it."</div><div class="translation">让它与众不同的是对细节的关注——每个组件都让人感觉是有人认真思考过的。</div><button class="used-btn" data-chunk="ob-e3" onclick="event.stopPropagation();markUsed('ob-e3',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">there's nothing quite like it</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"There's nothing quite like it — I've tried alternatives, but they all fall short in some fundamental way."</div><div class="translation">没有什么是和它完全一样的——我尝试过替代品，但它们都在某个基本方面有所不足。</div><button class="used-btn" data-chunk="ob-e4" onclick="event.stopPropagation();markUsed('ob-e4',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">blows everything else out of the water</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"In terms of battery life, it blows everything else out of the water — the next best option lasts half as long."</div><div class="translation">在电池续航方面，它把一切都秒杀了——第二好的选择只有一半的续航时间。</div><button class="used-btn" data-chunk="ob-e5" onclick="event.stopPropagation();markUsed('ob-e5',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">unlike anything I've ever owned</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's unlike anything I've ever owned before — the difference in quality is immediately obvious."</div><div class="translation">它和我曾经拥有的任何东西都不同——质量上的差异立竿见影。</div><button class="used-btn" data-chunk="ob-e6" onclick="event.stopPropagation();markUsed('ob-e6',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">you get what you pay for</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's expensive, but you really get what you pay for — the quality justifies every penny."</div><div class="translation">它很贵，但你真的是一分钱一分货——质量证明了每一分钱都值得。</div><button class="used-btn" data-chunk="ob-e7" onclick="event.stopPropagation();markUsed('ob-e7',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">stand the test of time</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"While my previous ones broke within a year, this one has stood the test of time — it's been going strong for five years."</div><div class="translation">虽然我之前买的那些一年内就坏了，但这个经受住了时间的考验——已经坚挺了五年。</div><button class="used-btn" data-chunk="ob-e8" onclick="event.stopPropagation();markUsed('ob-e8',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">second to none</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The quality is second to none — I've handled dozens of similar products and nothing comes close."</div><div class="translation">质量是首屈一指的——我接触过几十种类似产品，没有哪个能与之相比。</div><button class="used-btn" data-chunk="ob-e9" onclick="event.stopPropagation();markUsed('ob-e9',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">worth every penny</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It was worth every penny — I've used it almost every day and it still performs like it's brand new."</div><div class="translation">它值得每一分钱——我几乎每天都在用，它仍然表现得像全新的一样。</div><button class="used-btn" data-chunk="ob-e10" onclick="event.stopPropagation();markUsed('ob-e10',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a cut above the rest</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's simply a cut above the rest — once you've experienced this level of quality, there's no going back."</div><div class="translation">它就是高人一等——一旦你体验过这种品质水平，就回不去了。</div><button class="used-btn" data-chunk="ob-e11" onclick="event.stopPropagation();markUsed('ob-e11',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">doesn't come cheap</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It doesn't come cheap, but having used cheaper alternatives, I can say with confidence that the investment is worth it."</div><div class="translation">它不便宜，但用过更便宜的替代品后，我可以自信地说这笔投资是值得的。</div><button class="used-btn" data-chunk="ob-e12" onclick="event.stopPropagation();markUsed('ob-e12',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a hidden gem in a sea of mediocrity</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"In a market flooded with mediocre products, this one is a hidden gem — it outperforms things that cost twice as much."</div><div class="translation">在一个充斥着平庸产品的市场上，这个真是一颗隐藏的宝石——它的性能超过了价格两倍的产品。</div><button class="used-btn" data-chunk="ob-e13" onclick="event.stopPropagation();markUsed('ob-e13',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">makes similar products look</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It makes similar products look amateurish by comparison — the gap in quality is that dramatic."</div><div class="translation">相比之下，它让类似产品看起来像业余水平——质量的差距就是这么大。</div><button class="used-btn" data-chunk="ob-e14" onclick="event.stopPropagation();markUsed('ob-e14',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the gold standard</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"In the industry, this is considered the gold standard — every competitor is measured against it."</div><div class="translation">在行业中，这被视为黄金标准——每个竞争对手都以它为标杆来衡量。</div><button class="used-btn" data-chunk="ob-e15" onclick="event.stopPropagation();markUsed('ob-e15',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">outshines</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It completely outshines other objects in its category — the design alone puts it in a different class."</div><div class="translation">它完全胜过同类别的其他物品——光是设计就把它放到了不同的级别。</div><button class="used-btn" data-chunk="ob-e16" onclick="event.stopPropagation();markUsed('ob-e16',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the difference is night and day</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The difference between this and what I used before is night and day — I can't believe I put up with the old one for so long."</div><div class="translation">这个和我之前用的之间的差别是天壤之别——我不敢相信我忍了旧的那个那么久。</div><button class="used-btn" data-chunk="ob-e17" onclick="event.stopPropagation();markUsed('ob-e17',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">in a class of its own</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's in a class of its own — there's really no direct comparison because nobody else makes anything quite like it."</div><div class="translation">它是独一无二的——真的没有直接的比较，因为没有人做出过类似的东西。</div><button class="used-btn" data-chunk="ob-e18" onclick="event.stopPropagation();markUsed('ob-e18',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">has no equal</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"In terms of craftsmanship, it has no equal — you simply don't find this level of detail in modern production."</div><div class="translation">在工艺方面，它是无与伦比的——你在现代生产中根本找不到这种程度的细节。</div><button class="used-btn" data-chunk="ob-e19" onclick="event.stopPropagation();markUsed('ob-e19',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">stands out from the crowd</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It really stands out from the crowd — in a world of disposable plastic, this is built to be kept for life."</div><div class="translation">它真的在人群中脱颖而出——在一个一次性塑料的世界里，这是为终身使用而造的。</div><button class="used-btn" data-chunk="ob-e20" onclick="event.stopPropagation();markUsed('ob-e20',this)">✓ Mark as used</button></div></div></div>
+        </div>
+        <div class="p2-structures" data-angle="comparison"><h4>Sentence frames</h4><div class="struct-grid">
+          <div class="struct-item">Compared to <span class="blank">_____</span>, this one is far <span class="blank">_____</span> in terms of <span class="blank">_____</span></div>
+          <div class="struct-item">What makes it unique is <span class="blank">_____</span> — I've never seen another <span class="blank">_____</span> that <span class="blank">_____</span></div>
+          <div class="struct-item">I've tried <span class="blank">_____</span> alternatives, and none of them <span class="blank">_____</span></div>
+          <div class="struct-item">The key difference between this and <span class="blank">_____</span> is that <span class="blank">_____</span></div>
+          <div class="struct-item">While most <span class="blank">_____</span> are <span class="blank">_____</span>, this one is <span class="blank">_____</span></div>
+          <div class="struct-item">It's not that other options are bad — it's that this one <span class="blank">_____</span></div>
+          <div class="struct-item">Once you've used this, it's hard to go back to <span class="blank">_____</span></div>
+          <div class="struct-item">The difference might seem small at first, but over time <span class="blank">_____</span></div>
+          <div class="struct-item">If I had to choose one word that sums up what makes it different, it's <span class="blank">_____</span></div>
+          <div class="struct-item">In a market full of <span class="blank">_____</span>, this stands out because <span class="blank">_____</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- ===== CASE STUDY: GRANDFATHER'S CAMERA ===== -->
+    <section class="p2-eileen-section" id="study-section">
+      <div class="nyt-article">
+        <div class="nyt-article-header">
+          <div class="nyt-rubric">Photography · Heirloom · Memory</div>
+          <h2 class="nyt-headline">Through My Grandfather's Lens: One Camera, Three Generations, a Thousand Stories</h2>
+          <div class="nyt-lede">This film camera has been in the family for three generations. It's been through wars, weddings, and quiet Sunday mornings. It's more than just a camera — it's a tangible reminder of the man who taught me that the best things in life are worth slowing down for.</div>
+          <div class="nyt-byline">By Kee Lee · May 2026 · 7 min read</div>
+        </div>
+        <figure class="nyt-figure">
+          <img src="objects-hero.png" alt="Vintage Camera" class="nyt-hero-img">
+          <figcaption>A vintage film camera from the 1960s, similar to the one passed down through my family. It's a piece of history that still works perfectly. <em>Photo: Getty Images</em></figcaption>
+        </figure>
+        <div class="nyt-body">
+          <p class="nyt-dropcap">It's about the size of a paperback book, made of solid metal with leather panels that have aged to a deep chocolate brown. The colour has faded over time — what was once black is now a soft charcoal grey with silver edges peeking through. It has a certain worn charm that you simply can't fake. The texture is smooth but not slippery — it's one of those materials that feels better the more you use it. There are scratches on the base and a small dent on the corner, but every mark has a story behind it. This camera is, without exaggeration, unlike anything I've ever owned.</p>
+
+          <p>It originally belonged to my grandfather, who was a photographer in the 1950s and 60s. He used it to document village life in rural Guangdong — weddings, festivals, harvests, and quiet family moments that would otherwise have been lost to time. It was passed down to me on my 18th birthday — I'll never forget the way he handed it to me, with both hands, as if it were something sacred. He said: "This camera has seen more of life than most people ever will. Take care of it, and it'll take care of you."</p>
+
+          <blockquote class="nyt-pullquote">
+            <span class="nyt-quote-mark">&#8220;</span>
+            This camera has seen more of life than most people ever will. Take care of it, and it'll take care of you.
+            <cite>— My grandfather, handing me the camera on my 18th birthday</cite>
+          </blockquote>
+
+          <p>What sets it apart from modern cameras is everything. It's completely manual — no autofocus, no digital screen, no buttons that beep at you. Using it forces you to slow down. You have to think about the light, the composition, the moment. Every shot counts because you only have 36 frames on a roll. There's something deeply satisfying about the mechanical click of the shutter — it has a satisfying weight to it, both physically and metaphorically. In a world of instant everything, this camera stands out from the crowd because it demands patience. And that, oddly enough, is exactly why I treasure it.</p>
+
+          <p>It holds immense sentimental value for reasons that go far beyond its function. It's a tangible reminder of my childhood — every time I hold it, I can almost hear my grandfather's voice explaining aperture and shutter speed while I pretended to understand. It's been a constant companion through some of the most important moments of my life — I took it on my first solo trip, to university, to my best friend's wedding. When I'm feeling lost or overwhelmed, it serves as an emotional anchor — it grounds me and reminds me of what's important. It connects me to my grandfather in a way that photos never could. When I hold it, I feel like I'm holding his hand.</p>
+
+          <p>It's more than just an old camera — it's a piece of my family's history. Every scratch tells a story about a different chapter of our lives. The dent on the corner? That's from when my father dropped it while climbing a mountain in the 80s. The faded leather? Decades of being held, adjusted, and loved. I've taken it with me to over 10 countries, and in each one, I've captured moments that now exist both on film and in my memory. If there were a fire, it's the one thing I'd save — not my laptop, not my passport. This.</p>
+
+          <p>I'll keep it forever — and hopefully pass it on to my own children one day, with its story intact. In terms of craftsmanship, it has no equal — you simply don't find this level of quality in modern production. It was built to last and has stood the test of time in a way that few objects do. The sentimental value far outweighs any monetary worth — you could offer me a hundred times what it cost and I wouldn't sell it. More than anything, this camera taught me that the best things aren't the newest or the fastest. They're the ones with stories.</p>
+        </div>
+        <div class="nyt-footer"><span>📸</span><em>This profile integrates 20+ lexical chunks and 10 sentence frames from the Objects descriptor toolkit above.</em></div>
+      </div>
+
+      <hr class="nyt-divider">
+      <div class="header" style="margin-top:24px;">
+        <span style="font-size:2rem;">⭐</span>
+        <div>
+          <h3>Case Study: Grandfather's Camera — The 4-in-1 Objects Adaptor</h3>
+          <p style="color:var(--p2-text-light);font-size:0.85rem;margin-top:4px;">One object. Four different cue cards. Same core description — different angles.</p>
+        </div>
+      </div>
+      <div class="p2-eileen-grid">
+        <div class="p2-eileen-card"><div class="prompt-zh">重要的家庭物品</div><div class="prompt-en">An important family item</div><div class="focus">Focus: Origin & Personal Value</div></div>
+        <div class="p2-eileen-card"><div class="prompt-zh">喜欢的礼物</div><div class="prompt-en">A gift you received that you wanted</div><div class="focus">Focus: Origin & Emotion</div></div>
+        <div class="p2-eileen-card"><div class="prompt-zh">不能失去的东西</div><div class="prompt-en">Something you can't live without</div><div class="focus">Focus: Function & Value</div></div>
+        <div class="p2-eileen-card"><div class="prompt-zh">想替换的东西</div><div class="prompt-en">Something you own that you want to replace</div><div class="focus">Focus: Comparison & Uniqueness</div></div>
+      </div>
+      <p style="color:var(--p2-text-light);font-size:0.85rem;line-height:1.7;margin-bottom:16px;"><strong style="color:var(--p2-text);">The key insight:</strong> One family camera — 60 years old, passed down through generations, full of stories — can answer multiple Part 2 prompts. You just change the <em>emphasis</em>, the <em>opening</em>, and which <em>chunks you deploy</em>.</p>
+      <button class="p2-eileen-btn" style="width:auto;padding:12px 28px;font-size:0.9rem;" onclick="openStudyModal()">🔍 Open Full Case Study — with Opening Sentences & Chunk Mapping</button>
+    </section>
+
+    <!-- ===== QUICK DRILL ===== -->
+    <section class="p2-drill" id="drill-section">
+      <h3>🎯 Quick Drill — Full Cue Card Practice</h3>
+      <div class="random-prompt">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+          <div id="drill-prompt-zh" style="font-size:0.9rem;font-weight:700;color:var(--p2-objects-dark);">重要的家庭物品</div>
+          <span style="font-size:0.7rem;color:var(--p2-text-light);background:#F1F5F9;padding:3px 10px;border-radius:10px;">Part 2</span>
+        </div>
+        <div id="drill-prompt-en" style="font-size:1rem;font-weight:600;color:var(--p2-text);margin-bottom:14px;">Describe an important family item that has been kept for a long time.</div>
+        <div style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--p2-text-light);margin-bottom:8px;">You should say:</div>
+        <ul id="drill-bullets" style="list-style:none;padding:0;font-size:0.88rem;color:var(--p2-text);line-height:2.2;">
+          <li><span style="color:var(--p2-objects);font-weight:700;">•</span> What it is</li>
+          <li><span style="color:var(--p2-objects);font-weight:700;">•</span> How long it has been in your family</li>
+          <li><span style="color:var(--p2-objects);font-weight:700;">•</span> What it looks like</li>
+        </ul>
+        <div id="drill-explain" style="font-size:0.88rem;color:var(--p2-text);font-style:italic;margin-top:4px;">And explain why it is important to your family</div>
+      </div>
+      <div class="cross-layout">
+        <div class="cross-slot nw"><textarea class="cross-input" id="cross-nw" rows="3" placeholder="What..."></textarea></div>
+        <div class="cross-slot ne"><textarea class="cross-input" id="cross-ne" rows="3" placeholder="How long..."></textarea></div>
+        <div class="cross-slot sw"><textarea class="cross-input" id="cross-sw" rows="3" placeholder="What it looks like..."></textarea></div>
+        <div class="cross-slot se"><textarea class="cross-input" id="cross-se" rows="3" placeholder="And explain..."></textarea></div>
+        <div class="cross-center"><input class="cross-center-inner" id="cross-topic" placeholder="Topic" /></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;margin-top:16px;">
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:0.82rem;font-weight:600;color:var(--p2-text);">
+          <input type="checkbox" id="hot-topics-toggle" checked onchange="toggleHotTopics()" style="accent-color:var(--p2-objects);">
+          <span id="hot-topics-label">🔥 Hot Topics (10)</span>
+        </label>
+        <span style="font-size:0.72rem;color:var(--p2-text-light);">current season</span>
+      </div>
+      <p style="font-size:0.85rem;color:var(--p2-text-light);margin:16px 0 12px;">Jot down keywords for each bullet. Use the 1-min timer to prep, then deliver a full 2-minute response using at least 3 chunks from above.</p>
+      <div class="drill-toolbar">
+        <div class="drill-toolbar-left"><button class="p2-drill-btn p2-drill-btn-fresh" onclick="randomPrompt()">🎲 New Prompt</button></div>
+        <div class="drill-toolbar-right">
+          <button class="p2-drill-btn" id="notes-timer-btn" onclick="startNotesTimer()">📝 1-min Notes</button>
+          <span class="p2-timer" id="timer-display">2:00</span>
+          <button class="p2-drill-btn" id="speech-timer-btn" onclick="startSpeechTimer()">🎤 2-min Speech</button>
+          <button class="p2-drill-btn" id="reset-btn" onclick="resetTimer()" style="display:none;">↺ Reset</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="p2-modal-overlay" id="study-modal">
+  <div class="p2-modal">
+    <button class="p2-modal-close" onclick="closeStudyModal()">✕</button>
+    <h2>⭐ Grandfather's Camera · 4-in-1 Objects Adaptor</h2>
+    <p class="subtitle">Master ONE object and adapt it to multiple Part 2 cue cards by changing the angle, opening, and chunk selection.</p>
+    <div class="comparison-grid">
+      <div class="comp-col"><h4>Prompt 1</h4><div class="prompt-name">📦 重要的家庭物品<br><small>An important family item</small></div><div class="angle-label">Primary Angles:</div><div class="focus-text">Origin + Personal Value</div><div class="angle-label" style="margin-top:8px;">Key Chunks:</div><div class="focus-text">has been in the family, passed down, originally belonged to, irreplaceable, connects me to, a piece of my history</div></div>
+      <div class="comp-col"><h4>Prompt 2</h4><div class="prompt-name">🎁 喜欢的礼物<br><small>A gift you wanted</small></div><div class="angle-label">Primary Angles:</div><div class="focus-text">Origin + Emotion</div><div class="angle-label" style="margin-top:8px;">Key Chunks:</div><div class="focus-text">was given to me on, a gift from, I'd had my eye on, means the world, the sentimental value far outweighs</div></div>
+      <div class="comp-col"><h4>Prompt 3</h4><div class="prompt-name">⚙️ 离不开的东西<br><small>Something you can't live without</small></div><div class="angle-label">Primary Angles:</div><div class="focus-text">Function + Personal Value</div><div class="angle-label" style="margin-top:8px;">Key Chunks:</div><div class="focus-text">a constant companion, use it daily, has seen me through, a game-changer, I'd be devastated, an emotional anchor</div></div>
+      <div class="comp-col"><h4>Prompt 4</h4><div class="prompt-name">🔍 想替换的东西<br><small>Something you want to replace</small></div><div class="angle-label">Primary Angles:</div><div class="focus-text">Comparison + Physical Desc.</div><div class="angle-label" style="margin-top:8px;">Key Chunks:</div><div class="focus-text">in a league of its own, stands out, what sets it apart, second to none, no longer in production, built to last but showing age</div></div>
+    </div>
+    <div class="opening-box">
+      <h4>🗣️ Opening Sentences — Same Object, 4 Different Starts</h4>
+      <p><span class="prompt-tag">重要的家庭物品</span> "An important family item I'd like to talk about is my grandfather's vintage film camera. It's been in the family for three generations — my grandfather bought it in the 1960s, my father used it, and now it's been passed down to me."</p>
+      <p><span class="prompt-tag">喜欢的礼物</span> "A gift I received that I genuinely wanted is this vintage camera my grandfather gave me on my 18th birthday. I'd had my eye on it for years — not because it was expensive or flashy, but because of everything it represented."</p>
+      <p><span class="prompt-tag">离不开的东西</span> "Something I genuinely feel I can't live without — and I don't say that lightly — is my grandfather's old film camera. It's been a constant companion through some of the most important moments of my life."</p>
+      <p><span class="prompt-tag">想替换的东西</span> "An object I own that I'd like to replace — though perhaps not in the way you'd expect — is the old film camera I inherited from my grandfather. Let me explain: the camera itself is irreplaceable, but some of the accessories are wearing out."</p>
+    </div>
+    <div class="insight-box">
+      <h4>💡 The Method Behind the 4-in-1</h4>
+      <p>The core facts NEVER change — vintage camera, 60+ years old, passed down from grandfather, full of scratches and stories, still functional. What changes is <strong>which facts you lead with, how you frame them, and which chunks you activate.</strong><br><br>
+      For <strong>重要的家庭物品</strong> → lead with the family history and what it represents.<br>
+      For <strong>喜欢的礼物</strong> → lead with the moment you received it and your emotional response.<br>
+      For <strong>离不开的东西</strong> → lead with how you use it and its role in your daily life.<br>
+      For <strong>想替换的东西</strong> → lead with what's aging and why you'd want to upgrade while keeping the original.<br><br>
+      <strong>This method works for ANY object you prepare.</strong> Pick one meaningful object. Map it to 4 prompts. Change the opening and emphasis.</p>
+    </div>
   </div>
+</div>
+
+<footer class="p2-footer">Built with ⚡ RUA energy · IELTS with Kee · Speaking Part 2 · Objects</footer>
+<script src="js/p2.js?v=7"></script>
+<script>
+  structData = {
+    physical: [
+      {ex:"It's compact in size, with a metal body and leather panels that have aged beautifully.",zh:"它体积小巧，金属机身和皮革面板已经漂亮地老化了。"},
+      {ex:"The first thing you notice about it is the worn leather — it's quite distinctive.",zh:"你首先注意到的是磨损的皮革——相当有特色。"},
+      {ex:"It's made of solid brass, which gives it a substantial, premium feel in the hand.",zh:"它由实心黄铜制成，拿在手里有一种扎实的高级感。"},
+      {ex:"If I had to describe the design in three words, it would be timeless, elegant, and intentional.",zh:"如果要用三个词来形容这个设计，那就是永恒、优雅和用心。"},
+      {ex:"It's roughly the same size as a paperback, but much heavier due to the metal construction.",zh:"它大至和平装本一样大，但因为金属构造而重得多。"},
+      {ex:"The most distinctive physical feature is the lens — you'd recognise it anywhere.",zh:"最独特的物理特征是镜头——你在任何地方都能认出来。"},
+      {ex:"It has this aged quality about it — the kind of patina that only comes with decades of use.",zh:"它有一种老化的质感——那种只有几十年使用才能形成的包浆。"},
+      {ex:"On the surface it looks simple, but when you hold it you notice the weight and precision.",zh:"表面看起来很简单，但当你拿起它时，你会注意到它的重量和精度。"},
+      {ex:"It doesn't have any digital displays — instead, it's designed to be purely mechanical.",zh:"它没有任何数字显示屏——相反，它被设计成纯机械的。"},
+      {ex:"Compared to similar vintage cameras, this one is remarkably well-preserved.",zh:"与类似的老式相机相比，这一台保存得非常好。"}
+    ],
+    function: [
+      {ex:"Its main function is to capture photos, but it can also serve as a creative tool for learning about light.",zh:"它的主要功能是拍照，但它也可以作为学习光线的创意工具。"},
+      {ex:"Using it is incredibly hands-on — you just set the aperture, focus, and press the shutter.",zh:"使用它完全需要手动操作——你只需设置光圈、对焦，然后按下快门。"},
+      {ex:"I use it primarily for travel photography, though it's also great for portraits.",zh:"我主要用它拍旅行照片，不过它也很适合拍人像。"},
+      {ex:"What makes it so useful is that it forces you to slow down — without it, photography can feel mindless.",zh:"它之所以有用在于它迫使你慢下来——没有它，摄影可能会变得不经思考。"},
+      {ex:"It's designed to capture images on film, and honestly, it does this better than any digital camera I've used.",zh:"它被设计用来在胶片上捕捉图像，老实说，这比我用过的任何数码相机都做得好。"},
+      {ex:"The best feature is probably the fully manual controls — I use those more than anything else.",zh:"最好的功能可能是全手动控制——这比我用任何其他功能都多。"},
+      {ex:"It's one of those things where the process matters as much as the result.",zh:"它是那种过程与结果同等重要的东西。"},
+      {ex:"Before I had this, I used to take hundreds of digital photos; now I can just take 36 meaningful ones.",zh:"在我有这个之前，我通常会拍数百张数码照片；现在我只需拍36张有意义的。"},
+      {ex:"It's not just a camera — it also lets you connect with the past, which is a nice bonus.",zh:"它不仅仅是一个相机——它还能让你与过去连接，这是额外的惊喜。"},
+      {ex:"If I had to name one thing that makes it indispensable, it's the way it teaches patience.",zh:"如果非要说出让它不可或缺的一点，那就是它教会耐心的方式。"}
+    ],
+    origin: [
+      {ex:"I got it from my grandfather when I turned 18 — he'd been saving it for that exact moment.",zh:"我18岁生日时从祖父那里得到的——他一直为那个时刻保留着它。"},
+      {ex:"It originally belonged to my grandfather, who used it for documenting village life in the 1950s.",zh:"它最初属于我的祖父，他用它记录了50年代的乡村生活。"},
+      {ex:"The story behind how I got this is quite moving — it was his most prized possession.",zh:"我得到这个的背后故事相当感人——这是他最珍视的财产。"},
+      {ex:"It was made in Germany in the 1960s by a renowned optical company, which explains why the lens is still so sharp.",zh:"它于60年代由德国一家著名光学公司制造，这解释了为什么镜头至今仍然如此锐利。"},
+      {ex:"I've had it since I was 18, and in all that time it's never let me down.",zh:"从我18岁起我就有了它，这段时间里它从未让我失望。"},
+      {ex:"The significance of where it came from is that it represents a direct link to my family's past.",zh:"来源的意义在于它代表了与我家族过去的直接联系。"},
+      {ex:"It's been in the family for three generations, each adding their own memories to its story.",zh:"它在家族中传了三代，每一代都给它添上了自己的记忆。"},
+      {ex:"I wasn't planning on falling in love with film photography, but this camera convinced me.",zh:"我本来没打算爱上胶片摄影，但这台相机说服了我。"},
+      {ex:"The person who gave it to me said it had seen more of life than most people ever will.",zh:"给我它的人说，它比大多数人看到的人生还要多。"},
+      {ex:"If I ever lost it, I don't think I could ever forgive myself — it simply couldn't be replaced.",zh:"如果我弄丢了它，我想我永远无法原谅自己——它根本无法被替代。"}
+    ],
+    value: [
+      {ex:"This object means so much to me because it connects me to a grandfather I barely got to know.",zh:"这个物件对我意义重大，因为它将我与我几乎不了解的祖父连接了起来。"},
+      {ex:"Every time I look at it, I'm reminded of the afternoon he taught me how to load the film.",zh:"每次看着它，我都会想起他教我装胶片的那个下午。"},
+      {ex:"What makes it special isn't its monetary value, but the stories embedded in every scratch.",zh:"让它特别的不是它的金钱价值，而是嵌入每道划痕里的故事。"},
+      {ex:"I've had it for more than a decade and in all that time it's become part of my identity.",zh:"我已经拥有它十多年了，在这段时间里它已经成为我身份的一部分。"},
+      {ex:"It's not something I could ever sell — the emotional attachment is far too deep.",zh:"这不是我能卖的东西——情感依附太深了。"},
+      {ex:"The reason I treasure it so much is that it represents the value of patience in an impatient world.",zh:"我如此珍视它的原因是，它在一个急躁的世界里代表了耐心的价值。"},
+      {ex:"If someone asked me what my most meaningful possession is, I'd say this camera without hesitation.",zh:"如果有人问我最有意义的物品是什么，我会毫不犹豫地说这台相机。"},
+      {ex:"It's become more than just a camera — it's a philosophy.",zh:"它已经不仅仅是一台相机——它是一种哲学。"},
+      {ex:"I can't imagine my life without it because it's shaped how I see the world.",zh:"我无法想象没有它的生活，因为它塑造了我看世界的方式。"},
+      {ex:"One day I hope to pass it on to my own children, along with all the stories it carries.",zh:"有一天我希望把它传给我自己的孩子，连同它承载的所有故事。"}
+    ],
+    comparison: [
+      {ex:"Compared to modern digital cameras, this one is far more intentional in terms of how you shoot.",zh:"与现代数码相机相比，这台在拍摄方式上要更有目的性得多。"},
+      {ex:"What makes it unique is the fully mechanical operation — I've never seen another camera that works quite like this.",zh:"让它独特的是全机械操作——我从未见过另一台像这样工作的相机。"},
+      {ex:"I've tried several modern alternatives, and none of them capture the same feeling.",zh:"我尝试过几种现代替代品，没有一种能捕捉到同样的感觉。"},
+      {ex:"The key difference between this and a digital camera is that this makes you think before you shoot.",zh:"这个与数码相机的关键区别在于，这个让你在拍摄之前先思考。"},
+      {ex:"While most cameras are designed for speed, this one is designed for reflection.",zh:"大多数相机是为速度而设计的，这台则是为了反思而设计的。"},
+      {ex:"It's not that digital cameras are bad — it's that this one teaches you something they can't.",zh:"不是说数码相机不好——而是这台能教给你它们教不了的东西。"},
+      {ex:"Once you've used this, it's hard to go back to taking photos without thinking.",zh:"一旦你用过这个，就很难再回到不经思考地拍照了。"},
+      {ex:"The difference might seem small at first, but over time it completely changes your approach to photography.",zh:"起初差别似乎很小，但随着时间推移它会完全改变你对摄影的态度。"},
+      {ex:"If I had to choose one word that sums up what makes it different, it's intentionality.",zh:"如果非要选一个词来概括它的不同之处，那就是目的性。"},
+      {ex:"In a market full of disposable electronics, this stands out because it was built to last for generations.",zh:"在一个充满一次性电子产品的市场上，它之所以突出是因为它是为世代流传而造的。"}
+    ]
+  };
+
+  peoplePrompts = [
+    {zh:'常用的手机App',en:'Describe an app on your phone you often use',bullets:['What app it is','How you use it','Why you use it often'],explain:'And explain how you feel about this app',hot:true},
+    {zh:'想拥有的科技产品',en:'Describe a tech product you want to own',bullets:['What it is','What it does','Why you want to own it'],explain:'And explain how it would change your daily life',hot:true},
+    {zh:'重要的家庭物品',en:'Describe an important family item kept for a long time',bullets:['What it is','How long it has been in your family','What it looks like'],explain:'And explain why it is important to your family',hot:true},
+    {zh:'收到的想要的礼物',en:'Describe a gift you received that you wanted',bullets:['What the gift was','Who gave it to you','When you received it'],explain:'And explain why you wanted this gift',hot:true},
+    {zh:'想要替换的东西',en:'Describe something you own that you want to replace',bullets:['What it is','How long you have had it','Why you want to replace it'],explain:'And explain what you would replace it with',hot:false},
+    {zh:'离不开的有用物品',en:'Describe a useful object you can\'t live without',bullets:['What it is','How long you have had it','Why you can\'t live without it'],explain:'And explain how it helps you in daily life',hot:true},
+    {zh:'喜欢的照片',en:'Describe a picture or photograph of you that you like',bullets:['When it was taken','Where it was taken','What is in the photo'],explain:'And explain why you like this photo',hot:true},
+    {zh:'拍得自豪的照片',en:'Describe a photo you took and are proud of',bullets:['When you took it','Where you took it','What the photo shows'],explain:'And explain why you are proud of this photo',hot:false},
+    {zh:'印象深刻的电影',en:'Describe a film that impressed you a lot',bullets:['What film it is','When you watched it','What it is about'],explain:'And explain why it impressed you',hot:true},
+    {zh:'钦佩的演员的电影角色',en:'Describe a film character played by an actor you admire',bullets:['Who the actor is','When you saw the film','What the character was like'],explain:'And explain why you admire this actor',hot:false},
+    {zh:'别人为你做的特别的一餐',en:'Describe a special meal someone made for you',bullets:['Who made it','When it was','What the meal was'],explain:'And explain why it was special',hot:true},
+    {zh:'想推出的新法律',en:'Describe a new law you would like to introduce',bullets:['What law it would be','Why it is needed','How it would affect people'],explain:'And explain why you want to introduce this law',hot:false},
+    {zh:'想学的学科',en:'Describe a subject you would like to learn',bullets:['What subject it is','Why you want to learn it','How you would learn it'],explain:'And explain why this subject interests you',hot:false},
+    {zh:'想学的运动',en:'Describe a sport you would like to learn',bullets:['What sport it is','Why you want to learn it','How you would learn it'],explain:'And explain why this sport appeals to you',hot:false},
+    {zh:'只看过没参与过的运动',en:'Describe a sport you have only watched but not played',bullets:['What sport it is','When you watched it','Why you haven\'t played it'],explain:'And explain whether you would like to try it',hot:false},
+    {zh:'想了解的野生动物',en:'Describe a wild animal you want to learn about',bullets:['What animal it is','What you know about it','Why you want to learn more'],explain:'And explain why this animal interests you',hot:false},
+    {zh:'中国的重要植物',en:'Describe an important plant in your country',bullets:['What plant it is','Where it grows','Why it is important'],explain:'And explain how people use this plant',hot:false},
+    {zh:'感兴趣的科学领域',en:'Describe an area of science you are interested in',bullets:['What area it is','How you became interested in it','What you know about it'],explain:'And explain why this area of science interests you',hot:false},
+    {zh:'想了解的历史时期',en:'Describe a historical period you would like to know more about',bullets:['What period it is','What you already know about it','Why you want to know more'],explain:'And explain how you would learn about it',hot:false},
+    {zh:'不喜欢但常见的广告',en:'Describe an advertisement you don\'t like',bullets:['What the advertisement is about','Where you saw it','What happens in it'],explain:'And explain why you don\'t like it',hot:false},
+    {zh:'社交媒体上看到的有趣广告',en:'Describe an interesting advertisement you saw on social media',bullets:['What the advertisement was','Where you saw it','What attracted your attention'],explain:'And explain why it was interesting',hot:false},
+    {zh:'有帮助的网站',en:'Describe a website that helped you',bullets:['What website it is','How you found it','What it helped you with'],explain:'And explain how you felt about this website',hot:false},
+    {zh:'觉得难以使用的科技',en:'Describe a technology you find difficult to use',bullets:['What technology it is','When you tried to use it','Why you found it difficult'],explain:'And explain whether you would learn to use it',hot:false},
+    {zh:'节省时间的科技/App',en:'Describe a technology or app that helps save time',bullets:['What it is','How you use it','How it saves you time'],explain:'And explain how you feel about this technology',hot:true},
+    {zh:'享受的日常习惯',en:'Describe a daily routine you enjoy',bullets:['What the routine is','When you started it','Why you enjoy it'],explain:'And explain how it benefits you',hot:false},
+    {zh:'长期目标',en:'Describe a long-term goal',bullets:['What the goal is','When you set this goal','How you plan to achieve it'],explain:'And explain why this goal is important to you',hot:true},
+    {zh:'穿过的制服',en:'Describe a uniform you wear or wore',bullets:['What uniform it is','When you wore it','What it looks like'],explain:'And explain how you felt wearing this uniform',hot:false},
+    {zh:'不想做的工作',en:'Describe a job you would not like to do',bullets:['What job it is','What it involves','Why you wouldn\'t like to do it'],explain:'And explain how you feel about people who do this job',hot:false},
+    {zh:'想学的东西',en:'Describe something you would like to learn',bullets:['What you want to learn','Why you want to learn it','How you plan to learn it'],explain:'And explain how learning this would change your life',hot:true},
+    {zh:'你国家有趣的事物',en:'Describe something in your country you are interested in',bullets:['What it is','How you became interested in it','Why it is important'],explain:'And explain how you feel about it',hot:false},
+    {zh:'国家的发展',en:'Describe a development in your country',bullets:['What the development is','When it happened','How it affects people'],explain:'And explain how you feel about this development',hot:false},
+    {zh:'想去的旅行',en:'Describe a trip you would like to take',bullets:['Where you would go','Who you would go with','What you would do there'],explain:'And explain why you would like to take this trip',hot:true},
+    {zh:'重要的书',en:'Describe an important book you have read',bullets:['What book it is','When you read it','What it is about'],explain:'And explain why it is important to you',hot:true},
+    {zh:'喜欢的工艺品',en:'Describe a piece of art or craft you like',bullets:['What it is','Where you saw it','What it looks like'],explain:'And explain why you like it',hot:false}
+  ];
+
+  function getFilteredPrompts() { var hotOnly = document.getElementById('hot-topics-toggle'); if (hotOnly && hotOnly.checked) return peoplePrompts.filter(function(p) { return p.hot; }); return peoplePrompts; }
+  function toggleHotTopics() { var toggled = document.getElementById('hot-topics-toggle').checked; var label = document.getElementById('hot-topics-label'); var pool = toggled ? peoplePrompts.filter(function(p) { return p.hot; }) : peoplePrompts; label.textContent = toggled ? '🔥 Hot Topics (' + pool.length + ')' : '📋 All Topics (' + pool.length + ')'; randomPrompt(); }
+  function openStudyModal() { document.getElementById('study-modal').classList.add('active'); document.body.style.overflow = 'hidden'; }
+  function closeStudyModal() { document.getElementById('study-modal').classList.remove('active'); document.body.style.overflow = ''; }
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeStudyModal(); });
+  document.addEventListener('DOMContentLoaded', function() { var m = document.getElementById('study-modal'); if (m) m.addEventListener('click', function(e) { if (e.target === m) closeStudyModal(); }); });
+</script>
 </body>
 </html>

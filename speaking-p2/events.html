@@ -1,27 +1,571 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IELTS with Kee — Speaking Part 2 · Events</title>
-  <link rel="stylesheet" href="css/p2.css">
-  <style>.placeholder-card{background:white;border-radius:16px;padding:80px 40px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,0.06);margin-top:24px}.placeholder-card h2{font-size:2rem;margin-bottom:12px}.placeholder-card p{color:#64748B;font-size:1.1rem;max-width:500px;margin:0 auto 24px}.angle-tag{background:#FFFBEB;border:1px solid #FDE68A;border-radius:10px;padding:10px 18px;font-size:0.85rem;font-weight:600;color:#92400E;display:inline-block;margin:4px}</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/p2.css?v=7">
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <style>
+    .p2-hero { background: linear-gradient(135deg, var(--p2-events-dark), var(--p2-events)); }
+    .p2-nav-brand { color: var(--p2-events-dark); }
+    .p2-tab.active { background: var(--p2-events-light); color: var(--p2-events-dark); }
+    .p2-sidebar-item.active { background: var(--p2-events-light); color: var(--p2-events-dark); }
+    .p2-sidebar-item.active .count { background: var(--p2-events); color: white; }
+    .p2-card-front { border-left-color: var(--p2-events); }
+    .p2-card:hover { filter: drop-shadow(0 4px 12px rgba(217,119,6,0.15)); }
+    .p2-drill { border-top-color: var(--p2-events); }
+    .p2-timer { color: var(--p2-events); }
+    .p2-eileen-section { border-color: #FDE68A; }
+    .cross-layout .cross-center-inner { border-color: var(--p2-events); color: var(--p2-events-dark); box-shadow: 0 2px 12px rgba(217,119,6,0.15); }
+    .cross-layout .cross-input:focus { border-color: var(--p2-events); box-shadow: 0 0 0 3px var(--p2-events-light); }
+    .cross-layout::before { background: linear-gradient(to bottom right, transparent calc(50% - 1px), var(--p2-events-light) 50%, transparent calc(50% + 1px)), linear-gradient(to bottom left, transparent calc(50% - 1px), var(--p2-events-light) 50%, transparent calc(50% + 1px)); }
+    .p2-drill-btn-accent { background: var(--p2-events); border-color: var(--p2-events); }
+    .p2-drill-btn-accent:hover { background: var(--p2-events-dark); border-color: var(--p2-events-dark); }
+    .p2-nav-toggle { background: var(--p2-events-light); color: var(--p2-events-dark); border-color: var(--p2-events); }
+    .p2-nav-toggle:active { background: var(--p2-events); color: #fff; }
+    .p2-sidebar-sub:hover { background: var(--p2-events-light); color: var(--p2-events-dark); border-left-color: var(--p2-events); }
+    .p2-modal .comp-col h4 { color: var(--p2-events-dark); }
+    .p2-modal .opening-box { background: var(--p2-events-light); }
+    .p2-modal .opening-box h4 { color: var(--p2-events-dark); }
+    .p2-modal .opening-box .prompt-tag { background: var(--p2-events-light); color: var(--p2-events-dark); }
+    .p2-drill .random-prompt { background: var(--p2-events-light); color: var(--p2-events-dark); }
+    .p2-drill-btn:hover { background: var(--p2-events-light); border-color: #FDE68A; }
+  </style>
 </head>
 <body>
-  <nav class="p2-nav">
-    <a href="https://ielts.rkrk.io" class="p2-nav-brand"><span class="brand-emoji">🦄</span> Kee Lee&apos;s IELTS Lab <span class="brand-dynamos">DynamOS</span></a>
-    
-  </nav>
-  <div class="p2-layout">
-    <aside class="p2-sidebar"><div class="p2-sidebar-section"><div class="p2-sidebar-label">P2 Topics</div>
-      <a href="people.html" class="p2-sidebar-item">👥 People <span class="count">13</span></a>
-      <a href="places.html" class="p2-sidebar-item">📍 Places <span class="count">7</span></a>
-      <a href="events.html" class="p2-sidebar-item active">🎬 Events <span class="count">18</span></a>
-      <a href="objects.html" class="p2-sidebar-item">🎁 Objects <span class="count">21</span></a></div></aside>
-    <main class="p2-main">
-      <section class="p2-hero" style="background:linear-gradient(135deg, var(--p2-events-dark), var(--p2-events));"><h1>🎬 EVENTS · 事件</h1><p class="subtitle">Talking about experiences, occasions, and memorable moments.</p><div class="p2-hero-stats"><div class="p2-hero-stat"><div class="num">18</div><div class="label">Real Exam Prompts</div></div><div class="p2-hero-stat"><div class="num">5</div><div class="label">Descriptive Angles</div></div><div class="p2-hero-stat"><div class="num">100</div><div class="label">Lexical Chunks</div></div></div></section>
-      <div class="placeholder-card"><h2>🚧 Coming Soon</h2><p>Awaiting approval of People category MVP before building Events.</p>
-        <div><span class="angle-tag">📋 Background & Setting</span><span class="angle-tag">🔄 Sequence & Process</span><span class="angle-tag">👥 People Involved</span><span class="angle-tag">💭 Emotional Journey</span><span class="angle-tag">💡 Significance & Lesson</span></div></div>
-    </main>
+
+<nav class="p2-nav">
+  <a href="https://ielts.rkrk.io" class="p2-nav-brand">IELTS with Kee <span class="brand-emoji">🦄</span></a>
+  <button class="p2-nav-toggle" id="nav-toggle" aria-label="Topics menu">☰ Topics</button>
+</nav>
+
+<div class="p2-layout">
+  <aside class="p2-sidebar">
+    <div class="p2-sidebar-section">
+      <div class="p2-sidebar-label">P2 Topics</div>
+      <a href="people.html" class="p2-sidebar-item">👥 People <span class="count">62</span></a>
+      <a href="places.html" class="p2-sidebar-item">📍 Places <span class="count">22</span></a>
+      <a href="events.html" class="p2-sidebar-item active">🎬 Events <span class="count">50</span></a>
+      <a href="#cards-setting" onclick="navigateTo('cards-setting','setting');return false" class="p2-sidebar-sub">📝 Lexical Chunks</a>
+      <a href="#study-section" onclick="navigateTo('study-section',null);return false" class="p2-sidebar-sub">⭐ Case Study</a>
+      <a href="#drill-section" onclick="navigateTo('drill-section',null);return false" class="p2-sidebar-sub">🎯 Quick Drill</a>
+      <a href="objects.html" class="p2-sidebar-item">🎁 Objects <span class="count">34</span></a>
+    </div>
+  </aside>
+
+  <main class="p2-main">
+    <section class="p2-hero">
+      <h1>🎬 EVENTS · 经历</h1>
+      <p class="subtitle">Describing events and experiences is the largest category in IELTS Speaking Part 2 — 50 cue cards. Learn 5 angles to narrate any experience from start to finish.</p>
+      <div class="p2-hero-stats">
+        <div class="p2-hero-stat"><div class="num">50</div><div class="label">Real Exam Prompts</div></div>
+        <div class="p2-hero-stat"><div class="num">5</div><div class="label">Descriptive Angles</div></div>
+        <div class="p2-hero-stat"><div class="num">100</div><div class="label">Lexical Chunks</div></div>
+        <div class="p2-hero-stat"><div class="num">50</div><div class="label">Useful Structures</div></div>
+      </div>
+    </section>
+
+    <div class="p2-tabs">
+      <button class="p2-tab active" onclick="switchTab('setting', this)"><span class="en">📋 Background</span><span class="zh">背景与场景</span></button>
+      <button class="p2-tab" onclick="switchTab('sequence', this)"><span class="en">🔄 Sequence</span><span class="zh">过程与进展</span></button>
+      <button class="p2-tab" onclick="switchTab('people', this)"><span class="en">👥 People</span><span class="zh">参与人物</span></button>
+      <button class="p2-tab" onclick="switchTab('emotion', this)"><span class="en">💭 Emotion</span><span class="zh">情感历程</span></button>
+      <button class="p2-tab" onclick="switchTab('significance', this)"><span class="en">💡 Significance</span><span class="zh">意义与教训</span></button>
+    </div>
+
+    <div style="display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;">
+      <a href="#study-section" onclick="scrollTo('study-section');return false" style="font-size:0.78rem;font-weight:600;color:#B45309;text-decoration:none;padding:6px 14px;background:#FEF3C7;border:1px solid #FDE68A;border-radius:8px;">⭐ Case Study: First Solo Trip</a>
+      <a href="#drill-section" onclick="scrollTo('drill-section');return false" style="font-size:0.78rem;font-weight:600;color:#4338CA;text-decoration:none;padding:6px 14px;background:#EEF2FF;border:1px solid #C7D2FE;border-radius:8px;">🎯 Quick Drill</a>
+    </div>
+
+    <!-- ANGLE 1: BACKGROUND & SETTING -->
+    <div class="p2-angle-bg setting" id="bg-setting">
+      <div class="p2-angle-content" id="angle-setting" style="display:block;">
+        <div class="p2-angle-info"><h2>📋 Background & Setting <span style="font-weight:400;font-size:0.9rem;color:var(--p2-text-light)">· 背景与场景</span></h2><span class="chunk-count">20 chunks</span></div>
+        <p style="color:var(--p2-text-light);font-size:0.88rem;margin-bottom:20px;">These chunks help you set the scene — when, where, and why the event happened.</p>
+        <div class="p2-cards" id="cards-setting">
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">it all started when</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It all started when I stumbled upon a travel blog about a remote village in Yunnan — I couldn't get it out of my head."</div><div class="translation">一切开始于当我偶然看到一篇关于云南偏远村庄的旅行博客——我就再也忘不掉了。</div><button class="used-btn" data-chunk="ev-a1" onclick="event.stopPropagation();markUsed('ev-a1',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a couple of years ago</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"A couple of years ago, during the university summer break, I decided to do something completely out of character."</div><div class="translation">大约两三年前，在大学暑假期间，我决定做一些完全不符合我性格的事。</div><button class="used-btn" data-chunk="ev-a2" onclick="event.stopPropagation();markUsed('ev-a2',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">on a complete whim</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I booked the flight on a complete whim — one moment I was browsing, the next I had a confirmation email."</div><div class="translation">我完全是一时冲动订的机票——上一秒我还在浏览，下一秒就收到了确认邮件。</div><button class="used-btn" data-chunk="ev-a3" onclick="event.stopPropagation();markUsed('ev-a3',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the backdrop was</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The backdrop was this stunning mountain range covered in mist — it felt like something out of a film."</div><div class="translation">背景是这片被薄雾笼罩的壮丽山脉——感觉像是电影里的场景。</div><button class="used-btn" data-chunk="ev-a4" onclick="event.stopPropagation();markUsed('ev-a4',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the idea had been brewing for</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The idea had been brewing for months — I'd been feeling stuck in a routine and knew I needed a change."</div><div class="translation">这个想法已经酝酿了好几个月——我一直觉得被困在例行公事中，知道需要改变。</div><button class="used-btn" data-chunk="ev-a5" onclick="event.stopPropagation();markUsed('ev-a5',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">out of the blue</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Out of the blue, my friend called and said he had two extra tickets — we were going to the concert that night."</div><div class="translation">突然之间，我朋友打电话说他多了两张票——我们当晚就要去听演唱会了。</div><button class="used-btn" data-chunk="ev-a6" onclick="event.stopPropagation();markUsed('ev-a6',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the stage was set for</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"With clear skies and a light breeze, the stage was set for a perfect outdoor concert."</div><div class="translation">天空晴朗，微风徐徐，为一场完美的户外音乐会创造了条件。</div><button class="used-btn" data-chunk="ev-a7" onclick="event.stopPropagation();markUsed('ev-a7',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">leading up to the event</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Leading up to the event, I was a bundle of nerves — I'd never performed in front of more than ten people before."</div><div class="translation">在活动临近时，我紧张得不行——我之前从未在超过十个人面前表演过。</div><button class="used-btn" data-chunk="ev-a8" onclick="event.stopPropagation();markUsed('ev-a8',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">it coincided with</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It coincided with the Spring Festival, so the whole city was decorated with red lanterns — it couldn't have been more magical."</div><div class="translation">正好赶上了春节，整个城市都挂满了红灯笼——再没有比这更神奇的了。</div><button class="used-btn" data-chunk="ev-a9" onclick="event.stopPropagation();markUsed('ev-a9',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I had been meaning to</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I had been meaning to visit that museum for ages — when a free Sunday finally came up, I jumped at the chance."</div><div class="translation">我一直想去那个博物馆很久了——当终于有一个空闲的周日时，我立即抓住了机会。</div><button class="used-btn" data-chunk="ev-a10" onclick="event.stopPropagation();markUsed('ev-a10',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">it was one of those moments when</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It was one of those moments when everything just aligned — the right time, the right place, the right people."</div><div class="translation">这是那种一切都刚好对齐的时刻——正确的时间、正确的地点、正确的人。</div><button class="used-btn" data-chunk="ev-a11" onclick="event.stopPropagation();markUsed('ev-a11',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">in the lead-up to</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"In the lead-up to the competition, I practised every single day for three hours — no exceptions."</div><div class="translation">在比赛前夕，我每天练习三小时——无例外。</div><button class="used-btn" data-chunk="ev-a12" onclick="event.stopPropagation();markUsed('ev-a12',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">it took place in</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It took place in an old warehouse converted into an art gallery — the raw industrial setting gave it a really unique vibe."</div><div class="translation">它发生在一个改造成艺术画廊的旧仓库里——原始的工业环境给了一种非常独特的氛围。</div><button class="used-btn" data-chunk="ev-a13" onclick="event.stopPropagation();markUsed('ev-a13',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I wasn't planning on</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I wasn't planning on going — I had a paper due the next day — but my roommate dragged me out."</div><div class="translation">我本来没打算去——第二天要交论文——但室友把我拽了出去。</div><button class="used-btn" data-chunk="ev-a14" onclick="event.stopPropagation();markUsed('ev-a14',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the whole thing came about because</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The whole thing came about because I lost a bet — and I ended up having one of the best nights of my life."</div><div class="translation">整件事是因为我打赌输了——结果却成了我人生中最美好的夜晚之一。</div><button class="used-btn" data-chunk="ev-a15" onclick="event.stopPropagation();markUsed('ev-a15',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I vividly remember</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I vividly remember the moment I decided to go — it was 3 AM, I couldn't sleep, and I just thought: why not?"</div><div class="translation">我清楚地记得我决定去的那个时刻——凌晨3点，我睡不着，就想：为什么不呢？</div><button class="used-btn" data-chunk="ev-a16" onclick="event.stopPropagation();markUsed('ev-a16',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the circumstances were</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The circumstances were far from ideal — it was raining, I had a cold, and I nearly cancelled — but I'm so glad I didn't."</div><div class="translation">情况远非理想——下着雨，我感冒了，差点就取消了——但我非常庆幸没有取消。</div><button class="used-btn" data-chunk="ev-a17" onclick="event.stopPropagation();markUsed('ev-a17',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I found myself in</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I found myself in a tiny village where nobody spoke English, with no phone signal and no plan — and it was liberating."</div><div class="translation">我发现自己在一个没人会说英语、没有手机信号、没有计划的小村庄里——感觉很解放。</div><button class="used-btn" data-chunk="ev-a18" onclick="event.stopPropagation();markUsed('ev-a18',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">it was the summer/winter of</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It was the summer of my second year at university — I had three months with no obligations and a small amount of savings."</div><div class="translation">那是我大学第二年的夏天——我有三个月没有义务，还有一点积蓄。</div><button class="used-btn" data-chunk="ev-a19" onclick="event.stopPropagation();markUsed('ev-a19',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the timing couldn't have been better/worse</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The timing couldn't have been better — I had just finished my exams and was in desperate need of an adventure."</div><div class="translation">时机再好不过了——我刚刚考完试，迫切需要一次冒险。</div><button class="used-btn" data-chunk="ev-a20" onclick="event.stopPropagation();markUsed('ev-a20',this)">✓ Mark as used</button></div></div></div>
+        </div>
+        <div class="p2-structures" data-angle="setting"><h4 id="struct-setting">Sentence frames</h4><div class="struct-grid">
+          <div class="struct-item">This happened <span class="blank">_____</span>, when I was <span class="blank">_____</span></div>
+          <div class="struct-item">I remember it clearly because <span class="blank">_____</span> — it wasn't just another <span class="blank">_____</span></div>
+          <div class="struct-item">The whole thing took place in <span class="blank">_____</span>, which made it even more <span class="blank">_____</span></div>
+          <div class="struct-item">I wasn't expecting <span class="blank">_____</span> at all — it was completely <span class="blank">_____</span></div>
+          <div class="struct-item">It was around <span class="blank">_____</span>, and the atmosphere was <span class="blank">_____</span></div>
+          <div class="struct-item">The reason it happened in the first place was that <span class="blank">_____</span></div>
+          <div class="struct-item">Looking back, I can see that <span class="blank">_____</span> set everything in motion</div>
+          <div class="struct-item">I had absolutely no idea that <span class="blank">_____</span> when I <span class="blank">_____</span></div>
+          <div class="struct-item">It was one of those <span class="blank">_____</span> days — everything just <span class="blank">_____</span></div>
+          <div class="struct-item">The day started like any other, but by the end it had become <span class="blank">_____</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- ANGLE 2: SEQUENCE & PROCESS -->
+    <div class="p2-angle-bg sequence" id="bg-sequence" style="display:none;">
+      <div class="p2-angle-content" id="angle-sequence" style="display:block;">
+        <div class="p2-angle-info"><h2>🔄 Sequence & Process <span style="font-weight:400;font-size:0.9rem;color:var(--p2-text-light)">· 过程与进展</span></h2><span class="chunk-count">20 chunks</span></div>
+        <p style="color:var(--p2-text-light);font-size:0.88rem;margin-bottom:20px;">These chunks help you narrate the order of events — what happened first, next, and how things unfolded.</p>
+        <div class="p2-cards" id="cards-sequence">
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">things got off to a rocky start</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Things got off to a rocky start — my train was delayed for two hours and I nearly called the whole thing off."</div><div class="translation">开局不利——我的火车延误了两个小时，我差点取消整个行程。</div><button class="used-btn" data-chunk="ev-b1" onclick="event.stopPropagation();markUsed('ev-b1',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">before I knew it</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Before I knew it, three hours had passed and I hadn't even noticed — I was completely absorbed in the experience."</div><div class="translation">不知不觉中，三个小时过去了，我甚至没有注意到——我完全沉浸在体验中。</div><button class="used-btn" data-chunk="ev-b2" onclick="event.stopPropagation();markUsed('ev-b2',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the turning point was</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The turning point was when I met a local family who invited me to join their dinner — suddenly, I wasn't a tourist anymore."</div><div class="translation">转折点是当我遇到一个当地家庭邀请我一起吃晚饭——突然间，我不再是游客了。</div><button class="used-btn" data-chunk="ev-b3" onclick="event.stopPropagation();markUsed('ev-b3',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">just when I thought</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Just when I thought things couldn't get any better, the host brought out a homemade cake — it was my birthday and she somehow knew."</div><div class="translation">就在我以为一切已经不能再好的时候，主人端出了自制蛋糕——那天是我的生日，她不知怎么就知道了。</div><button class="used-btn" data-chunk="ev-b4" onclick="event.stopPropagation();markUsed('ev-b4',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">unfolded exactly as / not as planned</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Absolutely nothing unfolded as planned — and honestly, that's what made it unforgettable."</div><div class="translation">完全没有任何事情按计划进行——说实话，这正是它令人难忘的原因。</div><button class="used-btn" data-chunk="ev-b5" onclick="event.stopPropagation();markUsed('ev-b5',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">step by step</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Step by step, I navigated the unfamiliar city — first the metro, then the bus, then a 20-minute walk through winding streets."</div><div class="translation">一步一步地，我在陌生的城市中导航——先是地铁，然后公交车，然后穿过蜿蜒街道走了20分钟。</div><button class="used-btn" data-chunk="ev-b6" onclick="event.stopPropagation();markUsed('ev-b6',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the next thing I knew</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The next thing I knew, I was on the back of a motorbike with someone I'd met ten minutes earlier — and that became the best afternoon of the trip."</div><div class="translation">接下来我意识到，我坐在一个十分钟前才认识的人的摩托车后座上——而那成了旅行中最美好的下午。</div><button class="used-btn" data-chunk="ev-b7" onclick="event.stopPropagation();markUsed('ev-b7',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">after what felt like an eternity</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"After what felt like an eternity of hiking uphill, we finally reached the lookout point — and the view was absolutely worth every step."</div><div class="translation">在感觉像是永恒的上坡徒步之后，我们终于到达了观景点——景色绝对值得每一步。</div><button class="used-btn" data-chunk="ev-b8" onclick="event.stopPropagation();markUsed('ev-b8',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">was in full swing</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"By the time we arrived, the festival was in full swing — music, dancing, food stalls everywhere."</div><div class="translation">我们到达时，节日已经全面展开了——音乐、舞蹈、到处都是美食摊位。</div><button class="used-btn" data-chunk="ev-b9" onclick="event.stopPropagation();markUsed('ev-b9',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">seemed to fly by</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The next three days seemed to fly by — I was having such a good time that I lost all track of time."</div><div class="translation">接下来的三天似乎飞逝而过——我玩得太开心了，完全忘记了时间。</div><button class="used-btn" data-chunk="ev-b10" onclick="event.stopPropagation();markUsed('ev-b10',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">gradually / all of a sudden</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"All of a sudden, the sky cleared and this incredible sunset appeared — like the weather itself was putting on a show."</div><div class="translation">突然间，天空放晴了，出现了令人难以置信的日落——仿佛天气本身在表演。</div><button class="used-btn" data-chunk="ev-b11" onclick="event.stopPropagation();markUsed('ev-b11',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">little did I know</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Little did I know that this random decision would end up changing the entire course of my summer — and maybe even my career."</div><div class="translation">我完全不知道这个随机的决定最终会改变我整个夏天的方向——甚至可能改变我的职业。</div><button class="used-btn" data-chunk="ev-b12" onclick="event.stopPropagation();markUsed('ev-b12',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">took a turn for the better/worse</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Things took a turn for the better when a fellow traveller offered to show me around — suddenly I had a local guide."</div><div class="translation">当一位旅伴提出带我四处看看时，情况就好转了——突然间我有了一个当地向导。</div><button class="used-btn" data-chunk="ev-b13" onclick="event.stopPropagation();markUsed('ev-b13',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">eventually / in the end</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Eventually, after getting lost three times, I finally made it to the hostel — exhausted but grinning from ear to ear."</div><div class="translation">最终，在迷路了三次之后，我终于到达了旅馆——筋疲力尽但笑得合不拢嘴。</div><button class="used-btn" data-chunk="ev-b14" onclick="event.stopPropagation();markUsed('ev-b14',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">came to a head</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Everything came to a head on the last night when we all ended up sitting around a campfire, sharing stories in a mix of broken English and hand gestures."</div><div class="translation">一切在最后一晚达到高潮，我们围坐在篝火旁，用破碎的英语和手势分享故事。</div><button class="used-btn" data-chunk="ev-b15" onclick="event.stopPropagation();markUsed('ev-b15',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">pressed on regardless</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Even though it started pouring with rain, we pressed on regardless — we'd come too far to turn back now."</div><div class="translation">尽管开始下大雨了，我们仍然坚持前行——已经走了太远，不能回头了。</div><button class="used-btn" data-chunk="ev-b16" onclick="event.stopPropagation();markUsed('ev-b16',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">in the blink of an eye</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"In the blink of an eye, the week was over — I genuinely couldn't believe how fast it went."</div><div class="translation">转瞬之间，一周就结束了——我真的不敢相信过得这么快。</div><button class="used-btn" data-chunk="ev-b17" onclick="event.stopPropagation();markUsed('ev-b17',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">from that point on</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"From that point on, I stopped planning and started just going with the flow — and the trip got ten times better."</div><div class="translation">从那一刻起，我不再计划，开始随遇而安——旅行的体验好了十倍。</div><button class="used-btn" data-chunk="ev-b18" onclick="event.stopPropagation();markUsed('ev-b18',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the highlight of the whole thing was</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The highlight of the whole thing was climbing to the top of the mountain at sunrise — there were maybe five other people there, and we just sat in silence watching the world wake up."</div><div class="translation">整件事的亮点是日出时爬到山顶——那里大概只有五个人，我们静静地坐着看世界醒来。</div><button class="used-btn" data-chunk="ev-b19" onclick="event.stopPropagation();markUsed('ev-b19',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">on the verge of giving up</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"There was a moment when I was on the verge of giving up — my feet were killing me — but then I turned a corner and saw the most incredible view."</div><div class="translation">有一个时刻我差点就要放弃了——我的脚痛得要命——但然后我转过一个弯，看到了最不可思议的景色。</div><button class="used-btn" data-chunk="ev-b20" onclick="event.stopPropagation();markUsed('ev-b20',this)">✓ Mark as used</button></div></div></div>
+        </div>
+        <div class="p2-structures" data-angle="sequence"><h4 id="struct-sequence">Sentence frames</h4><div class="struct-grid">
+          <div class="struct-item">It started with <span class="blank">_____</span>, and before I knew it, <span class="blank">_____</span></div>
+          <div class="struct-item">At first, <span class="blank">_____</span>, but then something unexpected happened: <span class="blank">_____</span></div>
+          <div class="struct-item">The whole thing can be broken down into <span class="blank">_____</span> stages: first <span class="blank">_____</span>, then <span class="blank">_____</span></div>
+          <div class="struct-item">We went from <span class="blank">_____</span> to <span class="blank">_____</span> to <span class="blank">_____</span> — it was a whirlwind</div>
+          <div class="struct-item">I remember <span class="blank">_____</span> thinking "this is <span class="blank">_____</span>" — and then <span class="blank">_____</span></div>
+          <div class="struct-item">Looking back, the sequence of events seems almost <span class="blank">_____</span> — like it was meant to happen</div>
+          <div class="struct-item">What started as <span class="blank">_____</span> quickly turned into <span class="blank">_____</span></div>
+          <div class="struct-item">The moment that really stands out is when <span class="blank">_____</span> — after that, everything <span class="blank">_____</span></div>
+          <div class="struct-item">One thing led to another, and before long <span class="blank">_____</span></div>
+          <div class="struct-item">From <span class="blank">_____</span> to <span class="blank">_____</span>, the whole experience was <span class="blank">_____</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- ANGLE 3: PEOPLE INVOLVED -->
+    <div class="p2-angle-bg people" id="bg-people" style="display:none;">
+      <div class="p2-angle-content" id="angle-people" style="display:block;">
+        <div class="p2-angle-info"><h2>👥 People Involved <span style="font-weight:400;font-size:0.9rem;color:var(--p2-text-light)">· 参与人物</span></h2><span class="chunk-count">20 chunks</span></div>
+        <p style="color:var(--p2-text-light);font-size:0.88rem;margin-bottom:20px;">These chunks help you describe who was there, how they contributed, and the social dynamics at play.</p>
+        <div class="p2-cards" id="cards-people">
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I was joined by</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I was joined by my best friend from university — we'd been talking about doing a trip like this for years."</div><div class="translation">我大学最好的朋友和我一起——我们谈论这样的旅行已经好几年了。</div><button class="used-btn" data-chunk="ev-c1" onclick="event.stopPropagation();markUsed('ev-c1',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">total strangers at first</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The people in my tour group were total strangers at first — by the end of the week, we felt like family."</div><div class="translation">旅行团里的人起初完全是陌生人——到周末，我们感觉像家人一样。</div><button class="used-btn" data-chunk="ev-c2" onclick="event.stopPropagation();markUsed('ev-c2',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">bonded over</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"We bonded over shared meals and the fact that none of us could read the local menu — we'd just point at random dishes and hope for the best."</div><div class="translation">我们通过共餐以及都看不懂当地菜单而建立了联系——我们只是随便指着一些菜，祈祷好运。</div><button class="used-btn" data-chunk="ev-c3" onclick="event.stopPropagation();markUsed('ev-c3',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">everyone chipped in</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Everyone chipped in to help prepare the surprise party — someone brought food, someone decorated, someone kept her distracted."</div><div class="translation">每个人都出份力帮忙准备惊喜派对——有人带食物，有人装饰，有人负责分散她的注意力。</div><button class="used-btn" data-chunk="ev-c4" onclick="event.stopPropagation();markUsed('ev-c4',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a real character</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The hostel owner was a real character — in his seventies, had travelled to over 80 countries, and had a story for every occasion."</div><div class="translation">旅店老板真是个有趣的人物——七十多岁，去过80多个国家，对任何场合都有故事可讲。</div><button class="used-btn" data-chunk="ev-c5" onclick="event.stopPropagation();markUsed('ev-c5',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">went out of their way</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The locals went out of their way to help me — one woman even walked me to the bus station to make sure I got on the right bus."</div><div class="translation">当地人不遗余力地帮助我——一位女士甚至步行带我到公交站，确保我坐对了车。</div><button class="used-btn" data-chunk="ev-c6" onclick="event.stopPropagation();markUsed('ev-c6',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">it was a team effort</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Getting the event organised was a real team effort — nobody could have pulled it off alone."</div><div class="translation">组织这次活动真的是一个团队的努力——没人能单独完成。</div><button class="used-btn" data-chunk="ev-c7" onclick="event.stopPropagation();markUsed('ev-c7',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the people made the place</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The people made the place — the scenery was beautiful, but it was the warmth of the locals that I remember most vividly."</div><div class="translation">是人成就了这个地方——景色很美，但我记忆最深刻的是当地人的温暖。</div><button class="used-btn" data-chunk="ev-c8" onclick="event.stopPropagation();markUsed('ev-c8',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">there was a real sense of</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"There was a real sense of camaraderie among everyone — even though we came from different countries, we were all in the same boat."</div><div class="translation">每个人之间都有一种真正的同志情谊——尽管我们来自不同国家，但大家处境相同。</div><button class="used-btn" data-chunk="ev-c9" onclick="event.stopPropagation();markUsed('ev-c9',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">someone I'll never forget</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I met a woman on the train who is someone I'll never forget — she spoke five languages and had the most incredible life story."</div><div class="translation">我在火车上遇到了一位我永远不会忘记的女士——她会说五种语言，有着最不可思议的人生故事。</div><button class="used-btn" data-chunk="ev-c10" onclick="event.stopPropagation();markUsed('ev-c10',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">we all had each other's backs</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"When the storm hit and the power went out, we all had each other's backs — sharing blankets, flashlights, and stories to keep the mood up."</div><div class="translation">当暴风雨来袭、停电时，我们都互相照应——分享毯子、手电筒和故事来保持气氛。</div><button class="used-btn" data-chunk="ev-c11" onclick="event.stopPropagation();markUsed('ev-c11',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">brought us closer together</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Facing those challenges together brought us closer together — by the end, we were more than friends, we were basically family."</div><div class="translation">一起面对那些挑战让我们更亲密了——到最后，我们已经不止是朋友，基本上就是家人。</div><button class="used-btn" data-chunk="ev-c12" onclick="event.stopPropagation();markUsed('ev-c12',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the unsung hero was</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The unsung hero was my friend's mum — she offered to drive us to the airport at 4 AM without a second thought."</div><div class="translation">那位无名英雄是我朋友的妈妈——她不假思索就提出凌晨4点开车送我们去机场。</div><button class="used-btn" data-chunk="ev-c13" onclick="event.stopPropagation();markUsed('ev-c13',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a melting pot of</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The group was a melting pot of nationalities — there were people from six different countries, all sharing one tiny kitchen."</div><div class="translation">这个群体是一个大熔炉——有来自六个不同国家的人，共享一个小厨房。</div><button class="used-btn" data-chunk="ev-c14" onclick="event.stopPropagation();markUsed('ev-c14',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">everyone was on the same page</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Despite the chaos, everyone was on the same page about the goal — we all wanted to make it to the summit."</div><div class="translation">尽管混乱，大家对目标都达成了一致——我们都想到达山顶。</div><button class="used-btn" data-chunk="ev-c15" onclick="event.stopPropagation();markUsed('ev-c15',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I owe a lot to</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I owe a lot to the stranger who helped me when I lost my wallet — he didn't just point me in the right direction, he actually accompanied me to the police station."</div><div class="translation">我非常感谢那个在我丢钱包时帮助我的陌生人——他不仅仅是给我指了方向，实际上陪我去了警察局。</div><button class="used-btn" data-chunk="ev-c16" onclick="event.stopPropagation();markUsed('ev-c16',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">it wouldn't have been the same without</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It wouldn't have been the same without the street vendor who gave us free tea every morning and taught us a few words of the local dialect."</div><div class="translation">如果没有那个每天早上给我们免费茶并教我们几句当地方言的街头小贩，一切都会不一样。</div><button class="used-btn" data-chunk="ev-c17" onclick="event.stopPropagation();markUsed('ev-c17',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">despite the language barrier</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Despite the language barrier, we managed to communicate through gestures and smiles — it's amazing how much you can say without words."</div><div class="translation">尽管有语言障碍，我们还是通过手势和微笑进行了交流——让人惊讶的是不用语言能沟通多少东西。</div><button class="used-btn" data-chunk="ev-c18" onclick="event.stopPropagation();markUsed('ev-c18',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">took the lead</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"My friend who speaks basic Japanese took the lead in conversations — I just stood there nodding and smiling like I understood everything."</div><div class="translation">我那个懂基本日语的朋友主导了对话——我只是站在那里点头微笑，好像什么都听懂了。</div><button class="used-btn" data-chunk="ev-c19" onclick="event.stopPropagation();markUsed('ev-c19',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">formed an unlikely friendship</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I formed an unlikely friendship with a retired teacher in his eighties — he showed me his favourite spots in the city and told me stories from fifty years ago."</div><div class="translation">我和一位八十多岁的退休教师结下了一段意想不到的友谊——他带我看他在这座城市里最喜欢的地方，给我讲五十年前的故事。</div><button class="used-btn" data-chunk="ev-c20" onclick="event.stopPropagation();markUsed('ev-c20',this)">✓ Mark as used</button></div></div></div>
+        </div>
+        <div class="p2-structures" data-angle="people"><h4 id="struct-people">Sentence frames</h4><div class="struct-grid">
+          <div class="struct-item">I went with <span class="blank">_____</span>, who is <span class="blank">_____</span> — we'd been <span class="blank">_____</span></div>
+          <div class="struct-item">The people I met there were <span class="blank">_____</span> — the kind of <span class="blank">_____</span> you don't forget</div>
+          <div class="struct-item">What really stood out about the people was <span class="blank">_____</span> — I'd never experienced <span class="blank">_____</span> before</div>
+          <div class="struct-item">Everyone contributed in their own way: <span class="blank">_____</span> did <span class="blank">_____</span>, while <span class="blank">_____</span></div>
+          <div class="struct-item">Without <span class="blank">_____</span>, the whole experience would have been <span class="blank">_____</span></div>
+          <div class="struct-item">We had <span class="blank">_____</span> in common, which made it easy to <span class="blank">_____</span></div>
+          <div class="struct-item">There was this one person who <span class="blank">_____</span> — I'll probably remember them forever</div>
+          <div class="struct-item">The group dynamic was <span class="blank">_____</span> — everyone was <span class="blank">_____</span> and <span class="blank">_____</span></div>
+          <div class="struct-item">Despite coming from <span class="blank">_____</span> backgrounds, we all <span class="blank">_____</span></div>
+          <div class="struct-item">I think the reason we got along so well was that <span class="blank">_____</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- ANGLE 4: EMOTIONAL JOURNEY (abbreviated pattern — 20 chunks + 10 frames) -->
+    <div class="p2-angle-bg emotion" id="bg-emotion" style="display:none;">
+      <div class="p2-angle-content" id="angle-emotion" style="display:block;">
+        <div class="p2-angle-info"><h2>💭 Emotional Journey <span style="font-weight:400;font-size:0.9rem;color:var(--p2-text-light)">· 情感历程</span></h2><span class="chunk-count">20 chunks</span></div>
+        <p style="color:var(--p2-text-light);font-size:0.88rem;margin-bottom:20px;">These chunks help you describe how you felt before, during, and after the event — the emotional arc of your experience.</p>
+        <div class="p2-cards" id="cards-emotion">
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a mix of excitement and nerves</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I felt a mix of excitement and nerves as the plane took off — I'd never done anything like this before."</div><div class="translation">飞机起飞时，我感到既兴奋又紧张——我以前从未做过这样的事。</div><button class="used-btn" data-chunk="ev-d1" onclick="event.stopPropagation();markUsed('ev-d1',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">my heart was pounding</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"My heart was pounding as I stepped onto the stage — I could hear the murmur of the audience and it felt like everyone was staring at me."</div><div class="translation">走上舞台时，我的心怦怦直跳——我能听到观众的窃窃私语，感觉所有人都在盯着我。</div><button class="used-btn" data-chunk="ev-d2" onclick="event.stopPropagation();markUsed('ev-d2',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a wave of relief</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"When it was finally over, a wave of relief washed over me — followed by this incredible sense of accomplishment."</div><div class="translation">当一切终于结束时，一股如释重负的感觉涌上心头——紧随着是一种难以置信的成就感。</div><button class="used-btn" data-chunk="ev-d3" onclick="event.stopPropagation();markUsed('ev-d3',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">on cloud nine</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"After we reached the summit, I was on cloud nine — I couldn't stop smiling for the rest of the day."</div><div class="translation">到达山顶后，我欣喜若狂——那天剩下的时间我一直笑得停不下来。</div><button class="used-btn" data-chunk="ev-d4" onclick="event.stopPropagation();markUsed('ev-d4',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a lump in my throat</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"When I said goodbye to the family that had hosted me, I had a lump in my throat — they'd treated me like their own son."</div><div class="translation">当我向招待我的家庭告别时，我喉头哽咽——他们像对待亲儿子一样对待我。</div><button class="used-btn" data-chunk="ev-d5" onclick="event.stopPropagation();markUsed('ev-d5',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I was completely overwhelmed</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I was completely overwhelmed by how welcoming everyone was — I'd expected politeness, but this was genuine warmth."</div><div class="translation">我被每个人的热情好客完全震撼了——我原本只期待礼貌，但这是真正的温暖。</div><button class="used-btn" data-chunk="ev-d6" onclick="event.stopPropagation();markUsed('ev-d6',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a sense of pride</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"By the end of the trip, I felt a real sense of pride — I'd navigated a foreign country completely on my own."</div><div class="translation">旅行结束时，我感到一种真正的自豪感——我完全靠自己在一个陌生的国家里穿越了。</div><button class="used-btn" data-chunk="ev-d7" onclick="event.stopPropagation();markUsed('ev-d7',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">went from terrified to exhilarated</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I went from terrified to exhilarated in the space of about thirty seconds — that's how quickly things can change."</div><div class="translation">我在大约三十秒内从恐惧转为兴奋——事情就是这样瞬息万变。</div><button class="used-btn" data-chunk="ev-d8" onclick="event.stopPropagation();markUsed('ev-d8',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I couldn't believe my eyes</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"When I saw the Northern Lights for the first time, I couldn't believe my eyes — it was like the sky was dancing."</div><div class="translation">当我第一次看到北极光时，我简直不敢相信自己的眼睛——仿佛天空在跳舞。</div><button class="used-btn" data-chunk="ev-d9" onclick="event.stopPropagation();markUsed('ev-d9',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">an emotional rollercoaster</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The whole day was an emotional rollercoaster — nerves, frustration, joy, and finally this deep sense of satisfaction."</div><div class="translation">整一天就像情感过山车——紧张、挫折、喜悦，最后是深深的满足感。</div><button class="used-btn" data-chunk="ev-d10" onclick="event.stopPropagation();markUsed('ev-d10',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I felt so alive</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Standing at the edge of the cliff with the wind in my face, I felt so alive — it was pure exhilaration."</div><div class="translation">站在悬崖边上，风吹在脸上，我感觉如此真切地活着——那是纯粹的兴奋。</div><button class="used-btn" data-chunk="ev-d11" onclick="event.stopPropagation();markUsed('ev-d11',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">it hit me that</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Halfway through the hike, it hit me that I was completely alone in the mountains — and instead of feeling scared, I felt free."</div><div class="translation">徒步走到一半时，我突然意识到自己独自一人在山里——非但没有害怕，反而感到自由。</div><button class="used-btn" data-chunk="ev-d12" onclick="event.stopPropagation();markUsed('ev-d12',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a bittersweet feeling</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Leaving was a bittersweet feeling — I was excited to go home, but I knew I'd miss this place terribly."</div><div class="translation">离开是一种苦乐参半的感觉——我很兴奋要回家了，但我知道我会非常想念这个地方。</div><button class="used-btn" data-chunk="ev-d13" onclick="event.stopPropagation();markUsed('ev-d13',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I'll never forget the feeling of</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I'll never forget the feeling of stepping off the train into a city I'd only ever seen in photos — it was surreal."</div><div class="translation">我永远不会忘记走下火车、踏入一个只在照片上见过的城市的那种感觉——太超现实了。</div><button class="used-btn" data-chunk="ev-d14" onclick="event.stopPropagation();markUsed('ev-d14',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">my jaw dropped</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"When we turned the corner and saw the waterfall, my jaw literally dropped — it was three times bigger than I'd imagined."</div><div class="translation">当我们转过弯看到瀑布时，我真的惊掉了下巴——比我想象的大三倍。</div><button class="used-btn" data-chunk="ev-d15" onclick="event.stopPropagation();markUsed('ev-d15',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I felt a deep sense of</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"By the end, I felt a deep sense of gratitude — not just for the experience, but for the people who made it possible."</div><div class="translation">到最后，我感到深深的感激——不仅为这次经历，也为那些使之成为可能的人。</div><button class="used-btn" data-chunk="ev-d16" onclick="event.stopPropagation();markUsed('ev-d16',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I was on the edge of my seat</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"During the performance, I was on the edge of my seat the entire time — it was absolutely mesmerising."</div><div class="translation">演出期间，我全程坐在椅子边缘——完全令人着迷。</div><button class="used-btn" data-chunk="ev-d17" onclick="event.stopPropagation();markUsed('ev-d17',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">it gave me goosebumps</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"When the orchestra started playing, it gave me goosebumps — I'd never heard anything so powerful live."</div><div class="translation">管弦乐队开始演奏时，我起了鸡皮疙瘩——我从没现场听过这么震撼的音乐。</div><button class="used-btn" data-chunk="ev-d18" onclick="event.stopPropagation();markUsed('ev-d18',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I felt a huge weight lifted</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"After I finished my presentation, I felt a huge weight lifted off my shoulders — I hadn't realised how stressed I'd been."</div><div class="translation">完成演讲后，我感到肩上的重担卸下了——我之前居然没意识到自己有多紧张。</div><button class="used-btn" data-chunk="ev-d19" onclick="event.stopPropagation();markUsed('ev-d19',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">pure joy</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The look on her face when she saw the surprise was pure joy — and honestly, that made all the effort worth it."</div><div class="translation">她看到惊喜时脸上的表情是纯粹的喜悦——说实话，这让所有努力都值得了。</div><button class="used-btn" data-chunk="ev-d20" onclick="event.stopPropagation();markUsed('ev-d20',this)">✓ Mark as used</button></div></div></div>
+        </div>
+        <div class="p2-structures" data-angle="emotion"><h4 id="struct-emotion">Sentence frames</h4><div class="struct-grid">
+          <div class="struct-item">At first I felt <span class="blank">_____</span>, but as things progressed I became more <span class="blank">_____</span></div>
+          <div class="struct-item">The dominant emotion throughout was <span class="blank">_____</span> — it coloured everything else</div>
+          <div class="struct-item">I went through so many emotions: from <span class="blank">_____</span> to <span class="blank">_____</span> to <span class="blank">_____</span></div>
+          <div class="struct-item">I remember feeling <span class="blank">_____</span> when <span class="blank">_____</span> — it caught me off guard</div>
+          <div class="struct-item">What surprised me most was how <span class="blank">_____</span> I felt — I wasn't expecting that at all</div>
+          <div class="struct-item">The high point emotionally was <span class="blank">_____</span>, and the low was <span class="blank">_____</span></div>
+          <div class="struct-item">It's hard to put into words, but I felt this overwhelming <span class="blank">_____</span></div>
+          <div class="struct-item">Looking back, I think the reason I felt so <span class="blank">_____</span> was that <span class="blank">_____</span></div>
+          <div class="struct-item">I'd describe the emotional experience as <span class="blank">_____</span> — it was like <span class="blank">_____</span></div>
+          <div class="struct-item">Even now, thinking about it makes me feel <span class="blank">_____</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- ANGLE 5: SIGNIFICANCE & LESSON -->
+    <div class="p2-angle-bg significance" id="bg-significance" style="display:none;">
+      <div class="p2-angle-content" id="angle-significance" style="display:block;">
+        <div class="p2-angle-info"><h2>💡 Significance & Lesson <span style="font-weight:400;font-size:0.9rem;color:var(--p2-text-light)">· 意义与教训</span></h2><span class="chunk-count">20 chunks</span></div>
+        <p style="color:var(--p2-text-light);font-size:0.88rem;margin-bottom:20px;">These chunks help you wrap up your narrative by explaining why the event mattered and what you learned from it.</p>
+        <div class="p2-cards" id="cards-significance">
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a real eye-opener</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"That trip was a real eye-opener — it made me realise how much of the world I'd been missing."</div><div class="translation">那次旅行真是让我大开眼界——让我意识到我错过了世界上多少东西。</div><button class="used-btn" data-chunk="ev-e1" onclick="event.stopPropagation();markUsed('ev-e1',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">taught me a valuable lesson</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It taught me a valuable lesson about stepping out of my comfort zone — the best things in life are on the other side of fear."</div><div class="translation">它教会了我关于走出舒适区的宝贵一课——生活中最好的东西都在恐惧的另一边。</div><button class="used-btn" data-chunk="ev-e2" onclick="event.stopPropagation();markUsed('ev-e2',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">changed the way I see</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"That experience changed the way I see travel — it's no longer about ticking off attractions, but about connecting with people."</div><div class="translation">那次经历改变了我对旅行的看法——不再是为了打卡景点，而是为了与人连接。</div><button class="used-btn" data-chunk="ev-e3" onclick="event.stopPropagation();markUsed('ev-e3',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I came back a different person</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I honestly feel like I came back a different person — more confident, more open, and way less afraid of the unknown."</div><div class="translation">我真的觉得我回来时变成了一个不同的人——更自信、更开放，对未知的恐惧也少了很多。</div><button class="used-btn" data-chunk="ev-e4" onclick="event.stopPropagation();markUsed('ev-e4',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">looking back on it now</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Looking back on it now, I realise that this experience set the course for so many decisions I made later in life."</div><div class="translation">现在回首看，我意识到这次经历为我后来人生中的许多决定奠定了基础。</div><button class="used-btn" data-chunk="ev-e5" onclick="event.stopPropagation();markUsed('ev-e5',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">made me who I am today</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"In many ways, that summer made me who I am today — it gave me the confidence to take risks."</div><div class="translation">在很多方面，那个夏天造就了今天的我——它给了我去冒险的自信。</div><button class="used-btn" data-chunk="ev-e6" onclick="event.stopPropagation();markUsed('ev-e6',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I'll carry it with me</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's one of those experiences that I'll carry with me for the rest of my life — it's permanently etched in my memory."</div><div class="translation">这是那种我会带着走一辈子的经历——它被永久地刻在了我的记忆里。</div><button class="used-btn" data-chunk="ev-e7" onclick="event.stopPropagation();markUsed('ev-e7',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">more than just a</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It was more than just a holiday — it was a personal milestone, proof that I could handle myself in unfamiliar situations."</div><div class="translation">这不仅仅是一个假期——它是一个个人里程碑，证明我能在陌生处境中应对自如。</div><button class="used-btn" data-chunk="ev-e8" onclick="event.stopPropagation();markUsed('ev-e8',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the takeaway for me was</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The takeaway for me was that people are fundamentally the same everywhere — kindness translates across any language."</div><div class="translation">我的收获是，人本质上在哪里都是一样的——善意跨越任何语言。</div><button class="used-btn" data-chunk="ev-e9" onclick="event.stopPropagation();markUsed('ev-e9',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I'd never trade it for anything</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Even though parts of it were difficult, I'd never trade that experience for anything — it shaped me in ways I'm still discovering."</div><div class="translation">尽管部分经历很困难，但我绝不会拿这次经历换任何东西——它以我仍在发现的方式塑造了我。</div><button class="used-btn" data-chunk="ev-e10" onclick="event.stopPropagation();markUsed('ev-e10',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I gained a new appreciation for</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I gained a new appreciation for simple things — a hot meal, a roof over your head, the kindness of strangers."</div><div class="translation">我对简单的事物有了新的欣赏——一顿热饭、一片遮头之瓦、陌生人的善意。</div><button class="used-btn" data-chunk="ev-e11" onclick="event.stopPropagation();markUsed('ev-e11',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">it put things into perspective</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It really put things into perspective — the problems I'd been stressing about suddenly seemed trivial."</div><div class="translation">这真的让人看开很多——我之前焦虑的那些问题突然显得微不足道。</div><button class="used-btn" data-chunk="ev-e12" onclick="event.stopPropagation();markUsed('ev-e12',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">set me on a new path</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"That experience set me on a new path — I changed my major after that summer because I realised what I really wanted to do."</div><div class="translation">那次经历让我走上了一条新路——那个夏天之后我换了专业，因为我意识到了自己真正想做什么。</div><button class="used-btn" data-chunk="ev-e13" onclick="event.stopPropagation();markUsed('ev-e13',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">worth every second</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Every difficult moment was worth it — the experience as a whole was worth every second."</div><div class="translation">每一个困难的时刻都是值得的——整个经历的每一秒都值得。</div><button class="used-btn" data-chunk="ev-e14" onclick="event.stopPropagation();markUsed('ev-e14',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I realised that</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I realised that the world is much bigger — and much kinder — than I'd ever imagined."</div><div class="translation">我意识到世界比我想象的要大得多——也善良得多。</div><button class="used-btn" data-chunk="ev-e15" onclick="event.stopPropagation();markUsed('ev-e15',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a defining moment</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Looking back, I can see it was a defining moment in my life — one of those experiences that separates 'before' from 'after'."</div><div class="translation">回首看，我发现这是我人生中的一个决定性时刻——那种区分"之前"和"之后"的经历。</div><button class="used-btn" data-chunk="ev-e16" onclick="event.stopPropagation();markUsed('ev-e16',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">if I had the chance, I'd</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"If I had the chance, I'd do it all over again in a heartbeat — no question."</div><div class="translation">如果有机会，我会毫不犹豫地再做一次——毫无疑问。</div><button class="used-btn" data-chunk="ev-e17" onclick="event.stopPropagation();markUsed('ev-e17',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a story I still tell</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Even years later, this is a story I still tell at every dinner party — it never gets old."</div><div class="translation">即使多年以后，这还是我在每个晚餐聚会上都会讲的故事——永远不会过时。</div><button class="used-btn" data-chunk="ev-e18" onclick="event.stopPropagation();markUsed('ev-e18',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">it reinforced my belief that</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It reinforced my belief that the best learning happens outside the classroom — in the real world, with real people."</div><div class="translation">它强化了我的信念：最好的学习发生在教室之外——在真实的世界里，与真实的人一起。</div><button class="used-btn" data-chunk="ev-e19" onclick="event.stopPropagation();markUsed('ev-e19',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">made me reevaluate</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It made me reevaluate what I want out of life — I realised I don't need as much as I thought I did to be happy."</div><div class="translation">它让我重新审视了我想要从生活中得到什么——我意识到我其实不需要我以为需要的那么多东西就能快乐。</div><button class="used-btn" data-chunk="ev-e20" onclick="event.stopPropagation();markUsed('ev-e20',this)">✓ Mark as used</button></div></div></div>
+        </div>
+        <div class="p2-structures" data-angle="significance"><h4 id="struct-significance">Sentence frames</h4><div class="struct-grid">
+          <div class="struct-item">What I took away from this experience was <span class="blank">_____</span></div>
+          <div class="struct-item">It taught me that <span class="blank">_____</span> is more important than <span class="blank">_____</span></div>
+          <div class="struct-item">Since then, I've become much more <span class="blank">_____</span> about <span class="blank">_____</span></div>
+          <div class="struct-item">If it hadn't happened, I probably would have <span class="blank">_____</span></div>
+          <div class="struct-item">The significance of this event lies in <span class="blank">_____</span>, not <span class="blank">_____</span></div>
+          <div class="struct-item">I often think back to that moment when I need <span class="blank">_____</span></div>
+          <div class="struct-item">It sounds dramatic, but <span class="blank">_____</span> genuinely transformed <span class="blank">_____</span></div>
+          <div class="struct-item">I'd recommend that everyone <span class="blank">_____</span> at least once — it's <span class="blank">_____</span></div>
+          <div class="struct-item">The best way to sum up its impact is: <span class="blank">_____</span></div>
+          <div class="struct-item">This experience reminded me that <span class="blank">_____</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- ===== CASE STUDY: FIRST SOLO TRIP ===== -->
+    <section class="p2-eileen-section" id="study-section">
+      <div class="nyt-article">
+        <div class="nyt-article-header">
+          <div class="nyt-rubric">Travel · Personal Growth · Adventure</div>
+          <h2 class="nyt-headline">The Trip That Changed Everything: What Happens When You Travel Alone for the First Time</h2>
+          <div class="nyt-lede">A couple of years ago, I booked a one-way ticket to Yunnan on a complete whim. No plan, no companion, no idea what I was doing. The person who came back was not the same person who left.</div>
+          <div class="nyt-byline">By Kee Lee · May 2026 · 7 min read</div>
+        </div>
+        <figure class="nyt-figure">
+          <img src="events-hero.png" alt="Solo travel in Yunnan" class="nyt-hero-img">
+          <figcaption>The ancient town of Lijiang at dawn. I found myself in places like this — no plan, no signal, completely free. <em>Photo: Getty Images</em></figcaption>
+        </figure>
+        <div class="nyt-body">
+          <p class="nyt-dropcap">I vividly remember the moment I decided to go. It was 3 AM, I was in my final year of university, and I couldn't sleep. The idea had been brewing for months — I'd been feeling stuck in a routine and knew I needed a change. So I opened my laptop, found a cheap flight to Kunming, and on a complete whim, clicked "book." One moment I was browsing, the next I had a confirmation email. The timing couldn't have been better — I had just finished my exams and was in desperate need of an adventure.</p>
+
+          <p>Leading up to the trip, I felt a mix of excitement and nerves. My parents thought I was insane. My friends asked who I was going with, and when I said "nobody," they looked at me like I'd grown a second head. Things got off to a rocky start — my connecting bus was cancelled, I had no phone signal, and I found myself in a tiny village where absolutely nobody spoke English. The circumstances were far from ideal, and there was a moment when I was on the verge of giving up and just flying home.</p>
+
+          <blockquote class="nyt-pullquote">
+            <span class="nyt-quote-mark">&#8220;</span>
+            I honestly feel like I came back a different person — more confident, more open, and way less afraid of the unknown.
+            <cite>— Kee Lee, reflecting on his first solo trip</cite>
+          </blockquote>
+
+          <p>The turning point came on the third day. I met a woman on the train who is someone I'll never forget — she spoke five languages and had travelled to over 60 countries. She told me: "The magic doesn't happen when everything goes according to plan. It happens when your plan falls apart and you figure it out anyway." That conversation changed the way I see travel entirely. From that point on, I stopped trying to control everything and started just going with the flow.</p>
+
+          <p>Just when I thought things couldn't get any better, I stumbled upon an old couple who invited me into their home for dinner. Despite the language barrier, we managed to communicate through gestures and smiles — it's amazing how much you can say without words. They went out of their way to make me feel welcome, bringing out dish after dish while their grandson attempted to translate. I was completely overwhelmed by their generosity — I'd expected politeness, but this was genuine warmth.</p>
+
+          <p>The highlight of the whole thing was hiking Tiger Leaping Gorge alone at sunrise. My heart was pounding — not from fear, but from the sheer beauty of the place. Standing on the edge of the trail with the wind in my face, I felt so alive. I couldn't believe my eyes — the mountains, the mist rising from the river below, the golden light hitting the peaks. I sat there for an hour, completely alone, and for the first time in months I felt completely at peace.</p>
+
+          <p>In the blink of an eye, the week was over. Leaving was a bittersweet feeling — I was excited to go home, but I knew I'd miss this place terribly. On the flight back, I realised that the world is much bigger — and much kinder — than I'd ever imagined. That trip was a real eye-opener. It taught me a valuable lesson about stepping out of my comfort zone: the best things in life are on the other side of fear. It put things into perspective — the problems I'd been stressing about in university suddenly seemed trivial.</p>
+
+          <p>Looking back on it now, I can see it was a defining moment in my life. It's one of those experiences that separates "before" from "after." I came back a different person — more confident, more self-reliant, and with a new appreciation for simple things. Even years later, this is a story I still tell at every dinner party. It's one of those experiences that I'll carry with me for the rest of my life. If I had the chance, I'd do it all over again in a heartbeat — no question.</p>
+        </div>
+        <div class="nyt-footer">
+          <span>📸</span>
+          <em>This profile integrates 20+ lexical chunks and 10 sentence frames from the Events descriptor toolkit above.</em>
+        </div>
+      </div>
+
+      <hr class="nyt-divider">
+      <div class="header" style="margin-top:24px;">
+        <span style="font-size:2rem;">⭐</span>
+        <div>
+          <h3>Case Study: First Solo Trip — The 4-in-1 Events Adaptor</h3>
+          <p style="color:var(--p2-text-light);font-size:0.85rem;margin-top:4px;">One experience. Four different cue cards. Same core story — different angles.</p>
+        </div>
+      </div>
+      <div class="p2-eileen-grid">
+        <div class="p2-eileen-card"><div class="prompt-zh">改变人生的经历</div><div class="prompt-en">An experience that changed your life</div><div class="focus">Focus: Significance & Lesson</div></div>
+        <div class="p2-eileen-card"><div class="prompt-zh">有趣的旅行</div><div class="prompt-en">An interesting journey</div><div class="focus">Focus: Sequence & Setting</div></div>
+        <div class="p2-eileen-card"><div class="prompt-zh">困难但成功的事</div><div class="prompt-en">Something difficult you succeeded in</div><div class="focus">Focus: Challenges Overcome</div></div>
+        <div class="p2-eileen-card"><div class="prompt-zh">难忘的经历</div><div class="prompt-en">An unforgettable experience</div><div class="focus">Focus: Emotion & People</div></div>
+      </div>
+      <p style="color:var(--p2-text-light);font-size:0.85rem;line-height:1.7;margin-bottom:16px;">
+        <strong style="color:var(--p2-text);">The key insight:</strong> One solo trip — booked on a whim, full of challenges, connecting with strangers, learning about yourself — can answer multiple Part 2 prompts. You just change the <em>emphasis</em>, the <em>opening</em>, and which <em>chunks you deploy</em>.
+      </p>
+      <button class="p2-eileen-btn" style="width:auto;padding:12px 28px;font-size:0.9rem;" onclick="openStudyModal()">🔍 Open Full Case Study — with Opening Sentences & Chunk Mapping</button>
+    </section>
+
+    <!-- ===== QUICK DRILL ===== -->
+    <section class="p2-drill" id="drill-section">
+      <h3>🎯 Quick Drill — Full Cue Card Practice</h3>
+      <div class="random-prompt">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+          <div id="drill-prompt-zh" style="font-size:0.9rem;font-weight:700;color:var(--p2-events-dark);">改变人生的经历</div>
+          <span style="font-size:0.7rem;color:var(--p2-text-light);background:#F1F5F9;padding:3px 10px;border-radius:10px;">Part 2</span>
+        </div>
+        <div id="drill-prompt-en" style="font-size:1rem;font-weight:600;color:var(--p2-text);margin-bottom:14px;">Describe an event that changed your life.</div>
+        <div style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--p2-text-light);margin-bottom:8px;">You should say:</div>
+        <ul id="drill-bullets" style="list-style:none;padding:0;font-size:0.88rem;color:var(--p2-text);line-height:2.2;">
+          <li><span style="color:var(--p2-events);font-weight:700;">•</span> When it happened</li>
+          <li><span style="color:var(--p2-events);font-weight:700;">•</span> What happened</li>
+          <li><span style="color:var(--p2-events);font-weight:700;">•</span> Who was there</li>
+        </ul>
+        <div id="drill-explain" style="font-size:0.88rem;color:var(--p2-text);font-style:italic;margin-top:4px;">And explain why it changed your life</div>
+      </div>
+      <div class="cross-layout">
+        <div class="cross-slot nw"><textarea class="cross-input" id="cross-nw" rows="3" placeholder="When..."></textarea></div>
+        <div class="cross-slot ne"><textarea class="cross-input" id="cross-ne" rows="3" placeholder="What happened..."></textarea></div>
+        <div class="cross-slot sw"><textarea class="cross-input" id="cross-sw" rows="3" placeholder="Who was there..."></textarea></div>
+        <div class="cross-slot se"><textarea class="cross-input" id="cross-se" rows="3" placeholder="And explain..."></textarea></div>
+        <div class="cross-center"><input class="cross-center-inner" id="cross-topic" placeholder="Topic" /></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;margin-top:16px;">
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:0.82rem;font-weight:600;color:var(--p2-text);">
+          <input type="checkbox" id="hot-topics-toggle" checked onchange="toggleHotTopics()" style="accent-color:var(--p2-events);">
+          <span id="hot-topics-label">🔥 Hot Topics (15)</span>
+        </label>
+        <span style="font-size:0.72rem;color:var(--p2-text-light);">current season</span>
+      </div>
+      <p style="font-size:0.85rem;color:var(--p2-text-light);margin:16px 0 12px;">Jot down keywords for each bullet. Use the 1-min timer to prep, then deliver a full 2-minute response using at least 3 chunks from above.</p>
+      <div class="drill-toolbar">
+        <div class="drill-toolbar-left"><button class="p2-drill-btn p2-drill-btn-fresh" onclick="randomPrompt()">🎲 New Prompt</button></div>
+        <div class="drill-toolbar-right">
+          <button class="p2-drill-btn" id="notes-timer-btn" onclick="startNotesTimer()">📝 1-min Notes</button>
+          <span class="p2-timer" id="timer-display">2:00</span>
+          <button class="p2-drill-btn" id="speech-timer-btn" onclick="startSpeechTimer()">🎤 2-min Speech</button>
+          <button class="p2-drill-btn" id="reset-btn" onclick="resetTimer()" style="display:none;">↺ Reset</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- ===== CASE STUDY MODAL ===== -->
+<div class="p2-modal-overlay" id="study-modal">
+  <div class="p2-modal">
+    <button class="p2-modal-close" onclick="closeStudyModal()">✕</button>
+    <h2>⭐ First Solo Trip · 4-in-1 Events Prompt Adaptor</h2>
+    <p class="subtitle">Master ONE experience and adapt it to multiple Part 2 cue cards by changing the angle, opening, and chunk selection.</p>
+    <div class="comparison-grid">
+      <div class="comp-col"><h4>Prompt 1</h4><div class="prompt-name">🔄 改变人生的经历<br><small>An experience that changed your life</small></div><div class="angle-label">Primary Angles:</div><div class="focus-text">Significance + Emotion</div><div class="angle-label" style="margin-top:8px;">Key Chunks:</div><div class="focus-text">a defining moment, taught me a valuable lesson, changed the way I see, I came back a different person, made me reevaluate</div></div>
+      <div class="comp-col"><h4>Prompt 2</h4><div class="prompt-name">🚂 有趣的旅行<br><small>An interesting journey</small></div><div class="angle-label">Primary Angles:</div><div class="focus-text">Setting + Sequence</div><div class="angle-label" style="margin-top:8px;">Key Chunks:</div><div class="focus-text">on a complete whim, found myself in, unfolded differently than planned, the background was, step by step</div></div>
+      <div class="comp-col"><h4>Prompt 3</h4><div class="prompt-name">💪 困难但成功的事<br><small>Something difficult you did</small></div><div class="angle-label">Primary Angles:</div><div class="focus-text">Sequence + People</div><div class="angle-label" style="margin-top:8px;">Key Chunks:</div><div class="focus-text">on the verge of giving up, pressed on regardless, turning point, things took a turn for the better, I felt a huge weight lifted</div></div>
+      <div class="comp-col"><h4>Prompt 4</h4><div class="prompt-name">⭐ 难忘的经历<br><small>An unforgettable experience</small></div><div class="angle-label">Primary Angles:</div><div class="focus-text">Emotion + People</div><div class="angle-label" style="margin-top:8px;">Key Chunks:</div><div class="focus-text">I vividly remember, a story I still tell, breathtaking, on cloud nine, I'll carry it with me, I'd never trade it for anything</div></div>
+    </div>
+    <div class="opening-box">
+      <h4>🗣️ Opening Sentences — Same Event, 4 Different Starts</h4>
+      <p><span class="prompt-tag">改变人生的经历</span> "An event that genuinely changed my life was my first solo trip to Yunnan. Looking back on it now, I can see it was a defining moment — one of those experiences that separates 'before' from 'after' in your personal timeline."</p>
+      <p><span class="prompt-tag">有趣的旅行</span> "A journey I found really interesting was a trip I took to Yunnan a couple of years ago. What made it interesting wasn't just the destination — it was the fact that I went completely alone, with no plan and no expectations."</p>
+      <p><span class="prompt-tag">困难但成功的事</span> "Something difficult that I successfully did was travelling solo through rural Yunnan. I say difficult because I had no phone signal half the time, I didn't speak the local dialect, and there were several moments when I was on the verge of giving up."</p>
+      <p><span class="prompt-tag">难忘的经历</span> "An unforgettable experience I'd love to share is the week I spent backpacking alone through Yunnan. Even years later, this is a story I still tell — it's permanently etched in my memory."</p>
+    </div>
+    <div class="insight-box">
+      <h4>💡 The Method Behind the 4-in-1</h4>
+      <p>The core facts about the trip NEVER change — solo, Yunnan, booked on a whim, met strangers, hiked Tiger Leaping Gorge, came back transformed. What changes is <strong>which facts you lead with, how you frame them, and which chunks you activate.</strong><br><br>
+      For <strong>改变人生的经历</strong> → lead with the transformative impact and what you learned.<br>
+      For <strong>有趣的旅行</strong> → lead with the spontaneity and the journey itself.<br>
+      For <strong>困难但成功的事</strong> → lead with the challenges and how you overcame them.<br>
+      For <strong>难忘的经历</strong> → lead with the vivid memories and emotional highlight.<br><br>
+      <strong>This method works for ANY experience you prepare.</strong> Pick one significant event. Map it to 4 prompts. Change the opening and emphasis.</p>
+    </div>
   </div>
+</div>
+
+<footer class="p2-footer">Built with ⚡ RUA energy · IELTS with Kee · Speaking Part 2 · Events</footer>
+
+<script src="js/p2.js?v=7"></script>
+<script>
+  structData = {
+    setting: [
+      {ex:"This happened about two years ago, when I was in my final year of university.",zh:"这发生在大约两年前，那时是我大学最后一年。"},
+      {ex:"I remember it clearly because it was so out of character — it wasn't just another ordinary day.",zh:"我记得很清楚，因为这太不符合我的性格了——这不是又一个普通的日子。"},
+      {ex:"The whole thing took place in rural Yunnan, which made it even more adventurous than I'd planned.",zh:"整件事发生在云南农村，这使它比我计划的更具冒险性。"},
+      {ex:"I wasn't expecting any of this at all — it was completely spontaneous from start to finish.",zh:"我完全没有预料到任何这一切——从始至终都是完全自发的。"},
+      {ex:"It was around mid-July, and the atmosphere was incredibly laid-back and peaceful.",zh:"那是在七月中旬左右，气氛非常悠闲宁静。"},
+      {ex:"The reason it happened in the first place was that I needed a break from my routine.",zh:"它最初发生的原因是我需要从例行公事中休息一下。"},
+      {ex:"Looking back, I can see that my restlessness set everything in motion.",zh:"回头看，我能看出是我的不安分推动了一切。"},
+      {ex:"I had absolutely no idea that this trip would change my perspective so profoundly.",zh:"我完全不知道这次旅行会如此深刻地改变我的视角。"},
+      {ex:"It was one of those perfect-timing days — everything just fell into place.",zh:"这是那种时机完美的一天——一切都恰好就位了。"},
+      {ex:"The day started like any other, but by sundown it had become one I'd never forget.",zh:"这一天像往常一样开始，但到日落时，它已变成我永远不会忘记的一天。"}
+    ],
+    sequence: [
+      {ex:"It started with booking a flight, and before I knew it, I was on a bus to a village I couldn't pronounce.",zh:"从订机票开始，不知不觉中，我已经坐在一辆前往一个我念不出名字的村庄的公交车上了。"},
+      {ex:"At first, everything went wrong, but then something unexpected happened: a local family invited me in.",zh:"起初，一切都不顺利，但随后发生了意想不到的事：一个当地家庭邀请我进屋。"},
+      {ex:"The whole thing can be broken down into three stages: first the chaos, then the connection, then the transformation.",zh:"整件事可以分为三个阶段：首先是混乱，然后是连接，然后是转变。"},
+      {ex:"We went from lost to found to home — it was a whirlwind of experiences compressed into one week.",zh:"我们从迷失到找到归属——那是一周内压缩的经验旋风。"},
+      {ex:"I remember standing on the mountain thinking 'this is what being alive feels like' — and then the sun broke through the clouds.",zh:"我记得站在山上想'这就是活着的感觉'——然后太阳穿过了云层。"},
+      {ex:"Looking back, the sequence of events seems almost meant to be — like the universe had planned it all along.",zh:"回头看，这一系列事件看起来几乎是命中注定的——仿佛宇宙早就计划好了。"},
+      {ex:"What started as a nervous adventure quickly turned into the most liberating week of my life.",zh:"起初只是一次紧张不安的冒险，很快就变成了我生命中最自由的一周。"},
+      {ex:"The moment that really stands out is when I watched the sunrise alone on the mountain — after that, everything felt different.",zh:"真正突出的时刻是我独自在山上看日出——那之后，一切都感觉不一样了。"},
+      {ex:"One thing led to another, and before long I was sitting around a campfire with strangers who'd become friends.",zh:"一事引发另一事，不久我就和已成朋友的陌生人围坐在篝火旁。"},
+      {ex:"From the cancelled bus to the mountain sunrise, the whole experience was utterly transformative.",zh:"从被取消的公交车到山上的日出，整个经历完全是变革性的。"}
+    ],
+    people: [
+      {ex:"I went entirely alone — which was the whole point — but I met incredible people along the way.",zh:"我完全是一个人去的——这正是重点——但我在路上遇到了了不起的人。"},
+      {ex:"The people I met there were unbelievably kind — the kind of generosity you don't forget.",zh:"我在那里遇到的人难以置信地善良——那种你不会忘记的慷慨。"},
+      {ex:"What really stood out about the locals was their warmth — I'd never experienced hospitality like that before.",zh:"当地人最突出的是他们的热情——我以前从未经历过那样的好客。"},
+      {ex:"Everyone contributed in their own way: one family fed me, another guided me, a stranger on the train told me where to go.",zh:"每个人都以他们的方式贡献：一个家庭给我饭吃，另一个给我指路，火车上的陌生人告诉我该去哪里。"},
+      {ex:"Without the kindness of the people I met, the whole experience would have been lonely and stressful.",zh:"没有我遇到的人的善意，整个经历会是孤独和压力的。"},
+      {ex:"We had curiosity in common, which made it easy to connect despite everything.",zh:"我们有好奇心这一共同点，这使得尽管一切困难，联系却很容易。"},
+      {ex:"There was this one woman on the train who changed my entire mindset — I'll probably remember her forever.",zh:"火车上有一个女人改变了我整个心态——我大概会永远记得她。"},
+      {ex:"The group dynamic was wonderfully diverse — everyone was from a different country and eager to share stories.",zh:"群体动力非常多样化——每个人都来自不同国家，都渴望分享故事。"},
+      {ex:"Despite coming from completely different backgrounds, we all bonded over the shared adventure.",zh:"尽管来自完全不同的背景，我们都因共同的冒险而建立了联系。"},
+      {ex:"I think the reason we got along so well was that we were all out of our comfort zones together.",zh:"我觉得我们相处得这么好的原因是，我们都一起走出了舒适区。"}
+    ],
+    emotion: [
+      {ex:"At first I felt nervous, but as things progressed I became more confident — almost fearless.",zh:"起初我感到紧张，但随着事情进展，我变得更加自信——几乎无所畏惧。"},
+      {ex:"The dominant emotion throughout was wonder — it coloured every single interaction.",zh:"贯穿始终的主导情感是惊奇——它渲染了每一次互动。"},
+      {ex:"I went through so many emotions: from anxiety to excitement to deep peace and finally overwhelming gratitude.",zh:"我经历了太多的情绪：从焦虑到兴奋到深深的平静，最后是溢满的感激。"},
+      {ex:"I remember feeling small standing next to the mountains — but in the best possible way.",zh:"我记得站在山旁时感到自己的渺小——但是以最好的方式。"},
+      {ex:"What surprised me most was how relieved I felt — I'd been carrying stress I didn't even know about.",zh:"最让我惊讶的是我有多如释重负——我一直在背负着自己都没意识到的压力。"},
+      {ex:"The high point emotionally was reaching the viewpoint at sunrise, and the low was saying goodbye.",zh:"情感上的高点是日出时到达观景点，低点是说再见。"},
+      {ex:"It's hard to put into words, but I felt this overwhelming sense that everything was exactly as it should be.",zh:"这很难用语言表达，但我有一种压倒性的感觉，一切都在它应该有的样子。"},
+      {ex:"Looking back, I think the reason I felt so alive was that I was fully present for the first time in ages.",zh:"回头看，我觉得我如此鲜活的原因是，这是很久以来我第一次完全活在当下。"},
+      {ex:"I'd describe the emotional experience as cathartic — it was like pressing reset on my whole system.",zh:"我会把这种情感体验描述为净化——就像按下我整个系统的重置键。"},
+      {ex:"Even now, thinking about it makes me feel a sense of calm and possibility.",zh:"即使是现在，想到它也会让我感到平静和可能性的感觉。"}
+    ],
+    significance: [
+      {ex:"What I took away from this experience was that I'm far more capable than I ever gave myself credit for.",zh:"我从这次经历中得到的收获是，我比我认为自己有的能力强得多。"},
+      {ex:"It taught me that connection is more important than comfort when it comes to meaningful travel.",zh:"它教会我，说到有意义的旅行，连接比舒适更重要。"},
+      {ex:"Since then, I've become much more open about saying yes to spontaneous opportunities.",zh:"从那以后，我变得更加开放，愿意对自发的机会说'好'。"},
+      {ex:"If it hadn't happened, I probably would have stayed in my comfort zone for years — missing out on so much.",zh:"如果没有发生这件事，我可能还会在舒适区待很多年——错过太多太多。"},
+      {ex:"The significance of this experience lies in the internal shift, not the external adventure.",zh:"这次经历的意义在于内在的转变，而不是外在的冒险。"},
+      {ex:"I often think back to that week when I need a reminder that uncertainty isn't something to fear.",zh:"当我需要提醒自己不确定性不是应该害怕的东西时，我经常回想起那一周。"},
+      {ex:"It sounds dramatic, but that one trip genuinely transformed how I approach challenges.",zh:"这听起来很戏剧化，但那一次旅行真的改变了我应对挑战的方式。"},
+      {ex:"I'd recommend that everyone travel alone at least once — it's profoundly revealing.",zh:"我会建议每个人都至少独自旅行一次——这非常有启发性。"},
+      {ex:"The best way to sum up its impact is: it gave me the confidence to trust myself.",zh:"概括其影响最好的方式是：它给了我信任自己的信心。"},
+      {ex:"This experience reminded me that the world is full of kindness if you're open to receiving it.",zh:"这次经历提醒了我，如果你愿意接受，这个世界充满了善意。"}
+    ]
+  };
+
+  peoplePrompts = [
+    {zh:'改变人生的经历',en:'Describe an event that changed your life',bullets:['When it happened','What happened','Who was there'],explain:'And explain why it changed your life',hot:true},
+    {zh:'帮助别人的经历',en:'Describe a time you helped someone',bullets:['Who you helped','When it happened','How you helped'],explain:'And explain how you felt about it',hot:true},
+    {zh:'感到自豪的时刻',en:'Describe a time you felt proud of a family member',bullets:['Who the family member is','When it happened','What he/she did'],explain:'And explain why you felt proud',hot:true},
+    {zh:'给建议的经历',en:'Describe a time you gave advice to someone',bullets:['Who you gave advice to','What the advice was','Why they needed it'],explain:'And explain how they responded',hot:true},
+    {zh:'发挥想象力的经历',en:'Describe a time you used your imagination',bullets:['When it was','What you did','Why you used your imagination'],explain:'And explain how you felt about it',hot:false},
+    {zh:'鼓励别人的经历',en:'Describe a time you encouraged someone to do something',bullets:['Who you encouraged','What you encouraged them to do','Why they needed encouragement'],explain:'And explain how they responded',hot:false},
+    {zh:'不能用手机的情况',en:'Describe an occasion when you weren\'t allowed to use your mobile phone',bullets:['When it was','Where it was','Why you couldn\'t use it'],explain:'And explain how you felt about it',hot:true},
+    {zh:'想做的工作',en:'Describe a perfect job you would like to have',bullets:['What job it is','What it involves','Why you want it'],explain:'And explain why you think it\'s perfect for you',hot:true},
+    {zh:'读过的故事',en:'Describe a story you read recently',bullets:['What the story was about','When you read it','Why you read it'],explain:'And explain how you felt about the story',hot:false},
+    {zh:'看过的电影',en:'Describe a movie you watched recently',bullets:['What movie it was','When you watched it','What it was about'],explain:'And explain why you liked or disliked it',hot:true},
+    {zh:'不喜欢的音乐场合',en:'Describe an event where you didn\'t like the music',bullets:['What the event was','Where it was','What the music was like'],explain:'And explain why you didn\'t like the music',hot:false},
+    {zh:'超预算的购物',en:'Describe an item you spent more than you expected on',bullets:['What the item was','When you bought it','Why you spent more'],explain:'And explain how you felt about spending more',hot:false},
+    {zh:'失望的电影',en:'Describe a film you felt disappointed about',bullets:['What film it was','When you watched it','What it was about'],explain:'And explain why you were disappointed',hot:false},
+    {zh:'离不开的东西',en:'Describe something you can\'t live without',bullets:['What it is','How long you\'ve had it','Why you can\'t live without it'],explain:'And explain how it affects your daily life',hot:true},
+    {zh:'很多人微笑的场合',en:'Describe an occasion when many people were smiling',bullets:['When it was','Where it was','What happened'],explain:'And explain why people were smiling',hot:false},
+    {zh:'用地图的经历',en:'Describe a time you used a map',bullets:['When it was','Where you were going','Why you used a map'],explain:'And explain how you felt about the experience',hot:true},
+    {zh:'成功做困难事的经历',en:'Describe a time you successfully did something difficult',bullets:['What you did','When you did it','Why it was difficult'],explain:'And explain how you felt after succeeding',hot:true},
+    {zh:'很忙的一段时间',en:'Describe a period when you were busy',bullets:['When it was','What you were busy with','Why you had to be busy'],explain:'And explain how you managed the situation',hot:true},
+    {zh:'教别人的经历',en:'Describe a time you taught something to a younger person',bullets:['Who you taught','What you taught','How you taught them'],explain:'And explain how you felt about teaching them',hot:true},
+    {zh:'拾到失物的经历',en:'Describe a time you picked up a lost item',bullets:['What the item was','Where you found it','What you did with it'],explain:'And explain how you felt about this experience',hot:false},
+    {zh:'迟到的经历',en:'Describe a time when you were late',bullets:['When it was','Why you were late','What happened because of it'],explain:'And explain how you felt about being late',hot:true},
+    {zh:'有人吵闹的场合',en:'Describe an occasion when someone made noise',bullets:['When it was','Where it was','Who made the noise'],explain:'And explain how you reacted',hot:false},
+    {zh:'和别人一起做的兴奋活动',en:'Describe an exciting activity you did with someone else',bullets:['What activity it was','Who you did it with','Where you did it'],explain:'And explain why it was exciting',hot:true},
+    {zh:'匆忙完成事情的经历',en:'Describe a time you had to finish something quickly',bullets:['What you had to finish','When it happened','Why you had to finish quickly'],explain:'And explain how you managed to do it',hot:false},
+    {zh:'收到金钱礼物的经历',en:'Describe a time you received money as a gift',bullets:['Who gave it to you','When you received it','What you did with it'],explain:'And explain how you felt about receiving money',hot:false},
+    {zh:'困难但有好结果的决定',en:'Describe a difficult decision you made that had a positive outcome',bullets:['What the decision was','When you made it','Why it was difficult'],explain:'And explain what the positive outcome was',hot:true},
+    {zh:'自豪的成就',en:'Describe an achievement you are proud of',bullets:['What you achieved','When you achieved it','How you achieved it'],explain:'And explain why you are proud of it',hot:true},
+    {zh:'未来目标',en:'Describe a goal you want to achieve in the next five years',bullets:['What the goal is','Why you want to achieve it','How you plan to achieve it'],explain:'And explain how you will feel when you achieve it',hot:true},
+    {zh:'童年学的技能',en:'Describe a skill you learned in your childhood',bullets:['What the skill was','Who taught you','How you learned it'],explain:'And explain why it was important to you',hot:true},
+    {zh:'小时候喜欢的活动',en:'Describe an activity you enjoyed in your free time when you were young',bullets:['What it was','Where you did it','Who you did it with'],explain:'And explain why you enjoyed it',hot:true},
+    {zh:'小学的有趣活动',en:'Describe an interesting activity you did in primary school',bullets:['What it was','Who was involved','What happened'],explain:'And explain why it was interesting',hot:false},
+    {zh:'户外活动',en:'Describe an outdoor activity you did',bullets:['What activity it was','Where you did it','Who you did it with'],explain:'And explain how you felt about it',hot:true},
+    {zh:'坚持做的习惯',en:'Describe something you do regularly to study or work better',bullets:['What it is','When you started doing it','How it helps you'],explain:'And explain why you continue doing it',hot:false},
+    {zh:'教亲友的事',en:'Describe something you taught to a friend or relative',bullets:['Who you taught','What you taught','How you taught them'],explain:'And explain how you felt about the experience',hot:false},
+    {zh:'穿喜欢的衣服的场合',en:'Describe an occasion you wore your favourite clothes',bullets:['When it was','What you wore','Why you wore them'],explain:'And explain how you felt wearing them',hot:false},
+    {zh:'听人抱怨的经历',en:'Describe a time you heard someone complaining',bullets:['Who was complaining','What they were complaining about','Where it happened'],explain:'And explain how you reacted',hot:false},
+    {zh:'投诉有好结果的事',en:'Describe a complaint you made with a satisfactory result',bullets:['What you complained about','Who you complained to','What happened'],explain:'And explain why you were satisfied with the result',hot:false},
+    {zh:'愉快的公共交通旅行',en:'Describe an enjoyable journey by public transport',bullets:['Where you went','What transport you took','What happened during the journey'],explain:'And explain why it was enjoyable',hot:false},
+    {zh:'延误的旅行',en:'Describe a travel that was delayed',bullets:['Where you were going','Why it was delayed','What happened'],explain:'And explain how you felt about the delay',hot:false},
+    {zh:'搬家经历',en:'Describe an experience about moving to a new school or house',bullets:['When it happened','Why you moved','How you felt'],explain:'And explain what you learned from it',hot:false},
+    {zh:'用AI解决问题的经历',en:'Describe a time you used AI to solve a problem',bullets:['What the problem was','When it happened','How you used AI'],explain:'And explain how you felt about using AI',hot:true},
+    {zh:'不寻常的假期',en:'Describe an unusual holiday you had',bullets:['When it was','Where you went','What made it unusual'],explain:'And explain how you felt about this holiday',hot:false},
+    {zh:'不寻常的一餐',en:'Describe an unusual meal you had',bullets:['When you had it','Where you had it','What made it unusual'],explain:'And explain how you felt about this meal',hot:false},
+    {zh:'团队中表现出色的人',en:'Describe someone who did well in a team',bullets:['Who the person is','What team project it was','What he/she did'],explain:'And explain why he/she did well',hot:false},
+    {zh:'完成的困难任务',en:'Describe a difficult task you completed',bullets:['What the task was','When you did it','Why it was difficult'],explain:'And explain how you felt after completing it',hot:true},
+    {zh:'关于认识的人的好消息',en:'Describe a piece of good news about someone you know',bullets:['Who the person is','What the news was','When you heard it'],explain:'And explain how you felt about it',hot:false},
+    {zh:'重要的选择',en:'Describe an important choice you made',bullets:['What the choice was','When you made it','Why you made this choice'],explain:'And explain how it affected your life',hot:true},
+    {zh:'参加的婚礼',en:'Describe a wedding you attended',bullets:['Whose wedding it was','When and where it took place','What happened at the wedding'],explain:'And explain how you felt about it',hot:true},
+    {zh:'第一次说外语的经历',en:'Describe the first time you spoke a foreign language',bullets:['When it was','Where it was','Who you spoke to'],explain:'And explain how you felt about the experience',hot:false},
+    {zh:'令人兴奋的竞赛',en:'Describe an exciting competition you took part in',bullets:['What competition it was','When it happened','What the result was'],explain:'And explain why it was exciting',hot:true}
+  ];
+
+  function getFilteredPrompts() {
+    var hotOnly = document.getElementById('hot-topics-toggle');
+    if (hotOnly && hotOnly.checked) return peoplePrompts.filter(function(p) { return p.hot; });
+    return peoplePrompts;
+  }
+  function toggleHotTopics() {
+    var toggled = document.getElementById('hot-topics-toggle').checked;
+    var label = document.getElementById('hot-topics-label');
+    var pool = toggled ? peoplePrompts.filter(function(p) { return p.hot; }) : peoplePrompts;
+    label.textContent = toggled ? '🔥 Hot Topics (' + pool.length + ')' : '📋 All Topics (' + pool.length + ')';
+    randomPrompt();
+  }
+  function openStudyModal() { document.getElementById('study-modal').classList.add('active'); document.body.style.overflow = 'hidden'; }
+  function closeStudyModal() { document.getElementById('study-modal').classList.remove('active'); document.body.style.overflow = ''; }
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeStudyModal(); });
+  document.addEventListener('DOMContentLoaded', function() {
+    var modal = document.getElementById('study-modal');
+    if (modal) { modal.addEventListener('click', function(e) { if (e.target === modal) closeStudyModal(); }); }
+  });
+</script>
 </body>
 </html>
