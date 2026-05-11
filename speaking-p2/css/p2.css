@@ -366,16 +366,15 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
   transition: all 0.2s;
   cursor: pointer;
   margin: 0;
-  min-height: 140px;
+  min-height: 160px;
   -webkit-tap-highlight-color: transparent;
   perspective: 800px;
   -webkit-perspective: 800px;
+  overflow: hidden;
 }
 .p2-structures .struct-item:nth-child(3n+1) { border-radius: 16px 4px 16px 4px; }
 .p2-structures .struct-item:nth-child(3n+2) { border-radius: 4px 16px 4px 16px; }
 .p2-structures .struct-item:nth-child(3n)   { border-radius: 12px 12px 4px 12px; }
-.p2-structures .struct-item:nth-child(5n+3) { min-height: 100px; }
-.p2-structures .struct-item:nth-child(5n+1) { min-height: 90px; }
 .p2-structures .struct-inner {
   position: relative;
   width: 100%;
