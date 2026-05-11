@@ -6,7 +6,8 @@
   <title>IELTS Research Report — Speaking Question Bank · May–Aug 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:wght@400;700&display=swap">
-  <link rel="stylesheet" href="css/report.css?v=4">
+  <link rel="stylesheet" href="../speaking-p2/css/p2.css?v=7">
+  <link rel="stylesheet" href="css/report.css?v=5">
 </head>
 <body>
 
@@ -16,7 +17,34 @@
   <span style="font-family:Inter,sans-serif;font-size:0.82rem;font-weight:600;color:var(--rpt-text-light);">Research Report · May–Aug 2026</span>
 </nav>
 
-<div class="rpt-container">
+<div class="rpt-layout">
+
+  <!-- Sidebar -->
+  <aside class="rpt-sidebar">
+    <div class="rpt-sidebar-section">
+      <div class="rpt-sidebar-label">Report Sections</div>
+      <a href="#panel-latest" onclick="switchReportTab('latest', document.querySelector('.rpt-tab'));return false" class="rpt-sidebar-item active">
+        🆕 Latest Season <span class="count">134</span>
+      </a>
+      <a href="#panel-rankings" onclick="switchReportTab('rankings', document.querySelectorAll('.rpt-tab')[1]);return false" class="rpt-sidebar-item">
+        🏆 All-Time Rankings
+      </a>
+      <a href="#panel-database" onclick="switchReportTab('database', document.querySelectorAll('.rpt-tab')[2]);return false" class="rpt-sidebar-item">
+        🔍 Search Database
+      </a>
+      <a href="#rpt-insights-section" onclick="document.getElementById('rpt-insights-section').scrollIntoView({behavior:'smooth'});return false" class="rpt-sidebar-sub">
+        💡 Key Insights
+      </a>
+      <a href="#rpt-insights-section" onclick="document.getElementById('rpt-insights-section').scrollIntoView({behavior:'smooth'});return false" class="rpt-sidebar-sub">
+        📝 Recommendations
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="rpt-main">
+
+  <div class="rpt-container">
 
   <!-- Hero -->
   <section class="rpt-hero">
@@ -41,6 +69,14 @@
       </div>
     </div>
   </section>
+
+  <!-- Quick Access Pills -->
+  <div class="rpt-quick-access">
+    <a href="#panel-latest" onclick="switchReportTab('latest', document.querySelector('.rpt-tab'));return false" class="rpt-quick-pill">🆕 Latest Season</a>
+    <a href="#panel-rankings" onclick="switchReportTab('rankings', document.querySelectorAll('.rpt-tab')[1]);return false" class="rpt-quick-pill">🏆 All-Time Rankings</a>
+    <a href="#panel-database" onclick="switchReportTab('database', document.querySelectorAll('.rpt-tab')[2]);return false" class="rpt-quick-pill">🔍 Search Database</a>
+    <a href="#rpt-insights-section" onclick="document.getElementById('rpt-insights-section').scrollIntoView({behavior:'smooth'});return false" class="rpt-quick-pill">💡 Insights</a>
+  </div>
 
   <!-- Tab Bar — P2 Pill Style -->
   <div class="rpt-tabs">
@@ -75,9 +111,11 @@
     <!-- Populated by JS -->
   </section>
 
-</div>
+</div><!-- /rpt-container -->
+  </main>
+</div><!-- /rpt-layout -->
 
-<script src="js/report.js?v=4"></script>
+<script src="js/report.js?v=5"></script>
 
 </body>
 </html>

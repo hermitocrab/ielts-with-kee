@@ -25,16 +25,29 @@
     renderInsightsAndMethodology();
   }
 
-  // ===== Tab Switching =====
+  // ===== Tab Switching (updates sidebar too) =====
   window.switchReportTab = function (tabName, btn) {
-    document.querySelectorAll('.rpt-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.rpt-panel').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
+    document.querySelectorAll('.rpt-tab').forEach(function (t) { t.classList.remove('active'); });
+    document.querySelectorAll('.rpt-panel').forEach(function (p) { p.classList.remove('active'); });
+    if (btn) btn.classList.add('active');
     var panel = document.getElementById('panel-' + tabName);
     if (panel) panel.classList.add('active');
 
+    // Update sidebar active state
+    document.querySelectorAll('.rpt-sidebar-item').forEach(function (item) { item.classList.remove('active'); });
+    var sidebarItems = document.querySelectorAll('.rpt-sidebar-item');
+    if (tabName === 'latest' && sidebarItems[0]) sidebarItems[0].classList.add('active');
+    if (tabName === 'rankings' && sidebarItems[1]) sidebarItems[1].classList.add('active');
+    if (tabName === 'database' && sidebarItems[2]) sidebarItems[2].classList.add('active');
+
     if (tabName === 'database') {
       initSearchDatabase();
+    }
+
+    // Scroll to panel on mobile
+    if (window.innerWidth <= 900) {
+      var p = document.getElementById('panel-' + tabName);
+      if (p) p.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
@@ -111,7 +124,7 @@
     panel.innerHTML = html;
   }
 
-  // ===== Render a single cue card (used by Latest Season + Search) =====
+  // ===== Render a single cue card (Quick Drill style) =====
   function renderCueCard(t, ck, icon) {
     var html = '<div class="rpt-cuecard cat-' + ck + '">';
     html += '<div class="rpt-cuecard-header">';
@@ -119,16 +132,19 @@
     html += '<div class="rpt-cuecard-icon ' + ck + '">' + (icon || '📋') + '</div>';
     html += '<div class="rpt-cuecard-topic">' + esc(t.topic) + '</div>';
     html += '</div>';
-    if (t.cueCard && t.cueCard.describe) {
-      html += '<div class="rpt-cuecard-describe">' + esc(t.cueCard.describe) + '</div>';
-    }
     html += '</div>';
-    html += '<div class="rpt-cuecard-body">';
+
+    // Prompt box — matches P2 .random-prompt
+    html += '<div class="rpt-cuecard-prompt ' + ck + '">';
+    html += '<div class="rpt-cuecard-prompt-zh">' + esc(t.topic) + '</div>';
+    if (t.cueCard && t.cueCard.describe) {
+      html += '<div class="rpt-cuecard-prompt-en">' + esc(t.cueCard.describe) + '</div>';
+    }
     if (t.cueCard && t.cueCard.bullets && t.cueCard.bullets.length > 0) {
       html += '<div class="rpt-cuecard-body-label">You should say:</div>';
       html += '<ul class="rpt-cuecard-bullets">';
       t.cueCard.bullets.forEach(function (b) {
-        html += '<li class="rpt-cuecard-bullet">' + esc(b) + '</li>';
+        html += '<li class="rpt-cuecard-bullet"><span class="bullet-dot">•</span> ' + esc(b) + '</li>';
       });
       html += '</ul>';
     }
@@ -136,12 +152,12 @@
       html += '<div class="rpt-cuecard-explain">' + esc(t.cueCard.explain) + '</div>';
     }
     html += '</div>';
+
     html += '<div class="rpt-cuecard-footer">';
     html += '<span class="rpt-cuecard-tag ' + ck + '">' + t.category + '</span>';
     if (t.isNew) {
       html += '<span class="rpt-cuecard-new-badge">🆕 New</span>';
     }
-
     html += '</div>';
     html += '</div>';
     return html;
