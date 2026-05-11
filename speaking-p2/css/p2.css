@@ -181,7 +181,6 @@ body {
   transition: all 0.2s;
 }
 .p2-eileen-btn:hover { background: #D97706; transform: translateY(-1px); }
-.p2-modal .opening-box {
 
 /* Main Content */
 .p2-main { min-width: 0; }
