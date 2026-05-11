@@ -28,10 +28,10 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Source Serif 4', 'Georgia', 'Times New Roman', serif;
   background: #F5F6FA;
   color: var(--p2-text);
-  line-height: 1.6;
+  line-height: 1.7;
   transition: background 0.8s ease;
 }
 /* Full-page subtle gradients */
@@ -231,20 +231,23 @@ body.angle-achievement  { background: linear-gradient(170deg, #FFF0D0 0%, #FFF8E
   pointer-events: none;
 }
 .p2-hero h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-size: 2.8rem;
+  font-weight: 700;
   letter-spacing: -0.5px;
   margin-bottom: 8px;
   position: relative;
   z-index: 1;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-style: italic;
 }
 .p2-hero .subtitle {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   opacity: 0.9;
   margin-bottom: 20px;
   position: relative;
   z-index: 1;
   max-width: 600px;
+  font-family: 'Source Serif 4', 'Georgia', serif;
 }
 .p2-hero-stats {
   display: flex;
@@ -316,8 +319,10 @@ body.angle-achievement  { background: linear-gradient(170deg, #FFF0D0 0%, #FFF8E
   margin-bottom: 20px;
 }
 .p2-angle-info h2 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 700;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-style: italic;
 }
 .p2-angle-info .chunk-count {
   font-size: 0.8rem;
@@ -455,6 +460,10 @@ body.angle-achievement  { background: linear-gradient(170deg, #FFF0D0 0%, #FFF8E
   -webkit-user-select: none;
   perspective: 800px;
   -webkit-perspective: 800px;
+  transition: filter 0.3s ease;
+}
+.p2-card:hover {
+  filter: drop-shadow(0 4px 12px rgba(99,102,241,0.15));
 }
 .p2-card-inner {
   position: relative;
@@ -1165,7 +1174,7 @@ body.angle-achievement  { background: linear-gradient(170deg, #FFF0D0 0%, #FFF8E
   }
   .p2-sidebar-sub:hover { border-left-color: var(--p2-people); }
   .p2-hero { padding: 32px 20px; }
-  .p2-hero h1 { font-size: 1.6rem; }
+  .p2-hero h1 { font-size: 1.8rem; }
   .p2-hero .subtitle { font-size: 0.95rem; }
   .p2-hero-stats { flex-wrap: wrap; gap: 8px; }
   .p2-hero-stat { padding: 10px 16px; }
