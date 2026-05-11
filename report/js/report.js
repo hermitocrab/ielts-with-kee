@@ -57,7 +57,7 @@
 
     // Part 1 Accordions with source per question
     html += '<div class="rpt-section-header"><h2>🗣️ Part 1 Topics</h2>';
-    html += '<p>' + ls.part1.length + ' confirmed topics for ' + ls.label + '. Click to expand and see real sample questions with sources.</p></div>';
+    html += '<p>' + ls.part1.length + ' confirmed topics for ' + ls.label + '. Click to expand and see real sample questions.</p></div>';
     html += '<div class="rpt-accordion">';
     ls.part1.forEach(function (t) {
       var cat = t.category.toLowerCase();
@@ -81,15 +81,9 @@
       if (t.questions && t.questions.length > 0) {
         t.questions.forEach(function (q, i) {
           html += '<div class="rpt-accordion-question"><span class="rpt-accordion-qnum">' + (i + 1) + '</span><span>' + esc(q) + '</span></div>';
-          // Source under each question
-          html += '<div class="rpt-accordion-source rpt-q-source">Source: ' + esc(t.source || 'Unknown') + '</div>';
         });
       }
-      if (!t.questions || t.questions.length === 0) {
-        if (t.source) {
-          html += '<div class="rpt-accordion-source">Source: ' + esc(t.source) + '</div>';
-        }
-      }
+
       html += '</div></div>';
       html += '</div>';
     });
@@ -233,7 +227,7 @@
 
     var html = '';
     html += '<div class="rpt-section-header"><h2>🔍 Search All Topics</h2>';
-    html += '<p>Search across all ' + (allCards.length + allP1.length) + ' topics. Results show complete cue cards with prompts, bullets, explain lines, and sources.</p></div>';
+    html += '<p>Search across all ' + (allCards.length + allP1.length) + ' topics. Results show complete cue cards with prompts, bullets, and explain lines.</p></div>';
 
     html += '<div class="rpt-search-bar">';
     html += '<div class="rpt-search-row">';
@@ -302,12 +296,9 @@
         if (t.questions && t.questions.length > 0) {
           t.questions.forEach(function (q, i) {
             html += '<div class="rpt-accordion-question"><span class="rpt-accordion-qnum">' + (i + 1) + '</span><span>' + esc(q) + '</span></div>';
-            html += '<div class="rpt-accordion-source rpt-q-source">Source: ' + esc(t.source || 'Unknown') + '</div>';
           });
         }
-        if (!t.questions || t.questions.length === 0) {
-          if (t.source) html += '<div class="rpt-accordion-source">Source: ' + esc(t.source) + '</div>';
-        }
+
         html += '</div></div></div>';
       });
       html += '</div>';

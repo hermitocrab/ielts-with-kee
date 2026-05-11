@@ -4,68 +4,717 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IELTS with Kee — Speaking Part 2 · Places</title>
-  <link rel="stylesheet" href="css/p2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/p2.css?v=7">
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   <style>
-    .placeholder-card {
-      background: white;
-      border-radius: 16px;
-      padding: 80px 40px;
-      text-align: center;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-      margin-top: 24px;
-    }
-    .placeholder-card h2 { font-size: 2rem; margin-bottom: 12px; }
-    .placeholder-card p { color: #64748B; font-size: 1.1rem; max-width: 500px; margin: 0 auto 24px; }
-    .placeholder-card .angle-preview {
-      display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 20px;
-    }
-    .placeholder-card .angle-tag {
-      background: #F0FDFA; border: 1px solid #99F6E4; border-radius: 10px;
-      padding: 10px 18px; font-size: 0.85rem; font-weight: 600; color: #0F766E;
-    }
+    /* Places category color overrides */
+    .p2-hero { background: linear-gradient(135deg, var(--p2-places-dark), var(--p2-places)); }
+    .p2-nav-brand { color: var(--p2-places-dark); }
+    .p2-tab.active { background: var(--p2-places-light); color: var(--p2-places-dark); }
+    .p2-sidebar-item.active { background: var(--p2-places-light); color: var(--p2-places-dark); }
+    .p2-sidebar-item.active .count { background: var(--p2-places); color: white; }
+    .p2-card-front { border-left-color: var(--p2-places); }
+    .p2-card:hover { filter: drop-shadow(0 4px 12px rgba(13,148,136,0.15)); }
+    .p2-drill { border-top-color: var(--p2-places); }
+    .p2-timer { color: var(--p2-places); }
+    .p2-eileen-section { border-color: #99F6E4; }
+    .cross-layout .cross-center-inner { border-color: var(--p2-places); color: var(--p2-places-dark); box-shadow: 0 2px 12px rgba(13,148,136,0.15); }
+    .cross-layout .cross-input:focus { border-color: var(--p2-places); box-shadow: 0 0 0 3px var(--p2-places-light); }
+    .cross-layout::before { background: linear-gradient(to bottom right, transparent calc(50% - 1px), var(--p2-places-light) 50%, transparent calc(50% + 1px)), linear-gradient(to bottom left, transparent calc(50% - 1px), var(--p2-places-light) 50%, transparent calc(50% + 1px)); }
+    .p2-drill-btn-accent { background: var(--p2-places); border-color: var(--p2-places); }
+    .p2-drill-btn-accent:hover { background: var(--p2-places-dark); border-color: var(--p2-places-dark); }
+    .p2-nav-toggle { background: var(--p2-places-light); color: var(--p2-places-dark); border-color: var(--p2-places); }
+    .p2-nav-toggle:active { background: var(--p2-places); color: #fff; }
+    .p2-sidebar-sub:hover { background: var(--p2-places-light); color: var(--p2-places-dark); border-left-color: var(--p2-places); }
+    .p2-modal .comp-col h4 { color: var(--p2-places-dark); }
+    .p2-modal .opening-box { background: var(--p2-places-light); }
+    .p2-modal .opening-box h4 { color: var(--p2-places-dark); }
+    .p2-modal .opening-box .prompt-tag { background: var(--p2-places-light); color: var(--p2-places-dark); }
+    .p2-drill .random-prompt { background: var(--p2-places-light); color: var(--p2-places-dark); }
+    .p2-drill-btn:hover { background: var(--p2-places-light); border-color: #99F6E4; }
   </style>
 </head>
 <body>
-  <nav class="p2-nav">
-    <a href="https://ielts.rkrk.io" class="p2-nav-brand"><span class="brand-emoji">🦄</span> Kee Lee&apos;s IELTS Lab <span class="brand-dynamos">DynamOS</span></a>
-    
-  </nav>
 
-  <div class="p2-layout">
-    <aside class="p2-sidebar">
-      <div class="p2-sidebar-section">
-        <div class="p2-sidebar-label">P2 Topics</div>
-        <a href="people.html" class="p2-sidebar-item">👥 People <span class="count">13</span></a>
-        <a href="places.html" class="p2-sidebar-item active">📍 Places <span class="count">7</span></a>
-        <a href="events.html" class="p2-sidebar-item">🎬 Events <span class="count">18</span></a>
-        <a href="objects.html" class="p2-sidebar-item">🎁 Objects <span class="count">21</span></a>
-      </div>
-    </aside>
+<!-- Top Navigation -->
+<nav class="p2-nav">
+  <a href="https://ielts.rkrk.io" class="p2-nav-brand">IELTS with Kee <span class="brand-emoji">🦄</span></a>
+  <button class="p2-nav-toggle" id="nav-toggle" aria-label="Topics menu">☰ Topics</button>
+</nav>
 
-    <main class="p2-main">
-      <section class="p2-hero" style="background:linear-gradient(135deg, var(--p2-places-dark), var(--p2-places));">
-        <h1>📍 PLACES · 地点</h1>
-        <p class="subtitle">Describing locations — from shopping malls to natural landscapes.</p>
-        <div class="p2-hero-stats">
-          <div class="p2-hero-stat"><div class="num">7</div><div class="label">Real Exam Prompts</div></div>
-          <div class="p2-hero-stat"><div class="num">5</div><div class="label">Descriptive Angles</div></div>
-          <div class="p2-hero-stat"><div class="num">100</div><div class="label">Lexical Chunks</div></div>
+<div class="p2-layout">
+
+  <!-- Sidebar -->
+  <aside class="p2-sidebar">
+    <div class="p2-sidebar-section">
+      <div class="p2-sidebar-label">P2 Topics</div>
+      <a href="people.html" class="p2-sidebar-item">
+        👥 People <span class="count">62</span>
+      </a>
+      <a href="places.html" class="p2-sidebar-item active">
+        📍 Places <span class="count">22</span>
+      </a>
+      <a href="#cards-location" onclick="navigateTo('cards-location','location');return false" class="p2-sidebar-sub">📝 Lexical Chunks</a>
+      <a href="#study-section" onclick="navigateTo('study-section',null);return false" class="p2-sidebar-sub">⭐ Case Study</a>
+      <a href="#drill-section" onclick="navigateTo('drill-section',null);return false" class="p2-sidebar-sub">🎯 Quick Drill</a>
+      <a href="events.html" class="p2-sidebar-item">
+        🎬 Events <span class="count">50</span>
+      </a>
+      <a href="objects.html" class="p2-sidebar-item">
+        🎁 Objects <span class="count">34</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="p2-main">
+
+    <!-- Hero -->
+    <section class="p2-hero">
+      <h1>📍 PLACES · 地点</h1>
+      <p class="subtitle">Describing places is one of the most common tasks in IELTS Speaking Part 2. Learn 5 different angles to talk about any location — from a quiet garden to a bustling city.</p>
+      <div class="p2-hero-stats">
+        <div class="p2-hero-stat">
+          <div class="num">22</div>
+          <div class="label">Real Exam Prompts</div>
         </div>
-      </section>
-
-      <div class="placeholder-card">
-        <h2>🚧 Coming Soon</h2>
-        <p>People category has been approved — Places, Events, and Objects are next in line. Each will follow the same structure with 5 angles, 20 chunks per angle, and real exam prompt mappings.</p>
-        <div class="angle-preview">
-          <span class="angle-tag">📍 Location & Access</span>
-          <span class="angle-tag">🏛 Physical Description</span>
-          <span class="angle-tag">🌿 Atmosphere & Feeling</span>
-          <span class="angle-tag">🎯 Activities & Functions</span>
-          <span class="angle-tag">💛 Personal Connection</span>
+        <div class="p2-hero-stat">
+          <div class="num">5</div>
+          <div class="label">Descriptive Angles</div>
+        </div>
+        <div class="p2-hero-stat">
+          <div class="num">100</div>
+          <div class="label">Lexical Chunks</div>
+        </div>
+        <div class="p2-hero-stat">
+          <div class="num">50</div>
+          <div class="label">Useful Structures</div>
         </div>
       </div>
-    </main>
+    </section>
+
+    <!-- Tab Bar -->
+    <div class="p2-tabs">
+      <button class="p2-tab active" onclick="switchTab('location', this)">
+        <span class="en">📍 Location</span>
+        <span class="zh">地点与交通</span>
+      </button>
+      <button class="p2-tab" onclick="switchTab('physical', this)">
+        <span class="en">🏗 Physical Desc.</span>
+        <span class="zh">外观描述</span>
+      </button>
+      <button class="p2-tab" onclick="switchTab('atmosphere', this)">
+        <span class="en">🎭 Atmosphere</span>
+        <span class="zh">氛围与感受</span>
+      </button>
+      <button class="p2-tab" onclick="switchTab('activities', this)">
+        <span class="en">🎯 Activities</span>
+        <span class="zh">活动与功能</span>
+      </button>
+      <button class="p2-tab" onclick="switchTab('connection', this)">
+        <span class="en">💚 Connection</span>
+        <span class="zh">个人联系</span>
+      </button>
+    </div>
+
+    <!-- Quick Access Links -->
+    <div style="display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;">
+      <a href="#study-section" onclick="scrollTo('study-section');return false" style="font-size:0.78rem;font-weight:600;color:#0F766E;text-decoration:none;padding:6px 14px;background:#CCFBF1;border:1px solid #99F6E4;border-radius:8px;transition:all 0.2s;">⭐ Case Study: The Forbidden City</a>
+      <a href="#drill-section" onclick="scrollTo('drill-section');return false" style="font-size:0.78rem;font-weight:600;color:#4338CA;text-decoration:none;padding:6px 14px;background:#EEF2FF;border:1px solid #C7D2FE;border-radius:8px;transition:all 0.2s;">🎯 Quick Drill</a>
+    </div>
+
+    <!-- ===== ANGLE 1: LOCATION & ACCESS ===== -->
+    <div class="p2-angle-bg location" id="bg-location">
+      <div class="p2-angle-content" id="angle-location" style="display:block;">
+        <div class="p2-angle-info">
+          <h2>📍 Location & Access <span style="font-weight:400;font-size:0.9rem;color:var(--p2-text-light)">· 地点与交通</span></h2>
+          <span class="chunk-count">20 chunks</span>
+        </div>
+        <p style="color:var(--p2-text-light);font-size:0.88rem;margin-bottom:20px;">
+          These chunks help you describe where a place is, how to get there, and what surrounds it.
+        </p>
+        <div class="p2-cards" id="cards-location">
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">in the heart of</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The Forbidden City sits in the heart of Beijing, right at the city's geographical and cultural centre."</div><div class="translation">故宫坐落于北京的心脏地带，就在城市的地理和文化中心。</div><button class="used-btn" data-chunk="pl-a1" onclick="event.stopPropagation();markUsed('pl-a1',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a stone's throw from</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"My favourite park is a stone's throw from my apartment — I can be there in under five minutes."</div><div class="translation">我最喜欢的公园离我公寓只有一步之遥——五分钟内就能到。</div><button class="used-btn" data-chunk="pl-a2" onclick="event.stopPropagation();markUsed('pl-a2',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">tucked away in</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The café is tucked away in a quiet alley — you'd walk right past it if you didn't know it was there."</div><div class="translation">这家咖啡馆藏在一条安静的小巷里——如果你不知道它在那里，你会直接走过。</div><button class="used-btn" data-chunk="pl-a3" onclick="event.stopPropagation();markUsed('pl-a3',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">within walking distance</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Everything I need is within walking distance — the shops, the gym, even my office."</div><div class="translation">我需要的一切都在步行距离之内——商店、健身房，甚至我的办公室。</div><button class="used-btn" data-chunk="pl-a4" onclick="event.stopPropagation();markUsed('pl-a4',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">well-connected by public transport</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's surprisingly well-connected by public transport — three different metro lines stop within a five-minute walk."</div><div class="translation">这里的公共交通出奇地方便——三条不同的地铁线在步行五分钟范围内都有站。</div><button class="used-btn" data-chunk="pl-a5" onclick="event.stopPropagation();markUsed('pl-a5',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">overlooks / commands a view of</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The hotel overlooks the entire bay — you can see the sunrise from every room on the east side."</div><div class="translation">酒店俯瞰整个海湾——东侧每个房间都能看到日出。</div><button class="used-btn" data-chunk="pl-a6" onclick="event.stopPropagation();markUsed('pl-a6',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">nestled among / between</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The village is nestled among rolling green hills — it feels completely cut off from the modern world."</div><div class="translation">这个村庄坐落在起伏的青山之间——感觉与现代世界完全隔绝。</div><button class="used-btn" data-chunk="pl-a7" onclick="event.stopPropagation();markUsed('pl-a7',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">off the beaten track</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's a bit off the beaten track — you need to take a local bus and then walk for about twenty minutes."</div><div class="translation">这个地方有点偏僻——你需要先坐当地的公交车，然后走大约二十分钟。</div><button class="used-btn" data-chunk="pl-a8" onclick="event.stopPropagation();markUsed('pl-a8',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">centrally located</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The shopping mall is centrally located — you literally can't miss it, right next to the main square."</div><div class="translation">这个购物中心位置中心——你不可能错过它，就在主广场旁边。</div><button class="used-btn" data-chunk="pl-a9" onclick="event.stopPropagation();markUsed('pl-a9',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">on the outskirts of</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The nature reserve is on the outskirts of the city, about a 40-minute drive from the centre."</div><div class="translation">自然保护区在市区边缘，从市中心开车大约40分钟。</div><button class="used-btn" data-chunk="pl-a10" onclick="event.stopPropagation();markUsed('pl-a10',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">surrounded by</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The lake is surrounded by ancient willow trees — their branches dip right into the water."</div><div class="translation">湖被古老的柳树环绕——它们的枝条直接垂入水中。</div><button class="used-btn" data-chunk="pl-a11" onclick="event.stopPropagation();markUsed('pl-a11',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">easy to get to</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's really easy to get to — just hop on the number 8 bus and get off at the last stop."</div><div class="translation">真的很容易到——坐上8路公交车，在终点站下车就行了。</div><button class="used-btn" data-chunk="pl-a12" onclick="event.stopPropagation();markUsed('pl-a12',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">stretches along / across</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The boardwalk stretches along the coastline for nearly three kilometres."</div><div class="translation">木板路沿海岸线延伸了近三公里。</div><button class="used-btn" data-chunk="pl-a13" onclick="event.stopPropagation();markUsed('pl-a13',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">perched on top of</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The temple is perched on top of a hill — you can see the whole city from up there."</div><div class="translation">寺庙矗立在山顶——从那里你可以看到整座城市。</div><button class="used-btn" data-chunk="pl-a14" onclick="event.stopPropagation();markUsed('pl-a14',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">within easy reach of</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The hotel is within easy reach of all the major tourist attractions — you can walk to most of them."</div><div class="translation">酒店离所有主要旅游景点都很近——大部分都可以步行到达。</div><button class="used-btn" data-chunk="pl-a15" onclick="event.stopPropagation();markUsed('pl-a15',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a bit of a trek</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's a bit of a trek to get there — about two hours by car on winding mountain roads — but it's absolutely worth it."</div><div class="translation">到那里有点折腾——在蜿蜒的山路上开车大约两小时——但绝对值得。</div><button class="used-btn" data-chunk="pl-a16" onclick="event.stopPropagation();markUsed('pl-a16',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">stands at the intersection of</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The old town stands at the intersection of two ancient trade routes — that's why the architecture is so diverse."</div><div class="translation">古镇位于两条古商道的交汇处——这就是为什么建筑风格如此多样。</div><button class="used-btn" data-chunk="pl-a17" onclick="event.stopPropagation();markUsed('pl-a17',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">just around the corner</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"There's a beautiful garden just around the corner from where I work — I go there whenever I need a break."</div><div class="translation">我工作的地方拐角处就有一个美丽的花园——每当需要休息时我都会去那里。</div><button class="used-btn" data-chunk="pl-a18" onclick="event.stopPropagation();markUsed('pl-a18',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">spans</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The national park spans over 3,000 square kilometres — it would take weeks to explore every corner of it."</div><div class="translation">国家公园占地超过3000平方公里——要探索它的每个角落需要好几周。</div><button class="used-btn" data-chunk="pl-a19" onclick="event.stopPropagation();markUsed('pl-a19',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">can be reached by</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The island can be reached by ferry — there are departures every hour from the main harbour."</div><div class="translation">可以乘渡轮到达这个岛——从主港口每小时有一班。</div><button class="used-btn" data-chunk="pl-a20" onclick="event.stopPropagation();markUsed('pl-a20',this)">✓ Mark as used</button></div></div></div>
+        </div>
+
+        <div class="p2-structures" data-angle="location">
+          <h4 id="struct-location">Sentence frames</h4>
+          <div class="struct-grid">
+            <div class="struct-item">It's located in <span class="blank">_____</span>, right in the heart of <span class="blank">_____</span></div>
+            <div class="struct-item">Getting there is <span class="blank">_____</span> — you can <span class="blank">_____</span> or <span class="blank">_____</span></div>
+            <div class="struct-item">It's the kind of place that's <span class="blank">_____</span> — you wouldn't just stumble upon it</div>
+            <div class="struct-item">The first thing you notice about its location is <span class="blank">_____</span></div>
+            <div class="struct-item">It sits right on the edge of <span class="blank">_____</span>, where the <span class="blank">_____</span> meets the <span class="blank">_____</span></div>
+            <div class="struct-item">It's surrounded by <span class="blank">_____</span> on one side and <span class="blank">_____</span> on the other</div>
+            <div class="struct-item">You wouldn't know it was there unless <span class="blank">_____</span> — it's that hidden</div>
+            <div class="struct-item">It's about <span class="blank">_____</span> from <span class="blank">_____</span>, which makes it <span class="blank">_____</span> for <span class="blank">_____</span></div>
+            <div class="struct-item">It overlooks <span class="blank">_____</span>, so you get this incredible view of <span class="blank">_____</span></div>
+            <div class="struct-item">The neighbourhood it's in is <span class="blank">_____</span> — think <span class="blank">_____</span> and <span class="blank">_____</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ANGLE 2: PHYSICAL DESCRIPTION ===== -->
+    <div class="p2-angle-bg physical" id="bg-physical" style="display:none;">
+      <div class="p2-angle-content" id="angle-physical" style="display:block;">
+        <div class="p2-angle-info">
+          <h2>🏗 Physical Description <span style="font-weight:400;font-size:0.9rem;color:var(--p2-text-light)">· 外观描述</span></h2>
+          <span class="chunk-count">20 chunks</span>
+        </div>
+        <p style="color:var(--p2-text-light);font-size:0.88rem;margin-bottom:20px;">
+          These chunks help you describe what a place looks like — its architecture, layout, colours, and scale.
+        </p>
+        <div class="p2-cards" id="cards-physical">
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a sprawling complex</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The Forbidden City is a sprawling complex of nearly 1,000 buildings — it's almost a city within a city."</div><div class="translation">故宫是一个由近千座建筑组成的庞大建筑群——几乎是城中城。</div><button class="used-btn" data-chunk="pl-b1" onclick="event.stopPropagation();markUsed('pl-b1',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">dates back to</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The temple dates back to the Ming Dynasty — that's over 600 years of history standing right there."</div><div class="translation">这座寺庙可以追溯到明朝——那就有600多年的历史矗立在那里。</div><button class="used-btn" data-chunk="pl-b2" onclick="event.stopPropagation();markUsed('pl-b2',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">imposing architecture</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The cathedral's imposing architecture makes you feel tiny — the ceilings are so high you get dizzy looking up."</div><div class="translation">大教堂雄伟的建筑让你感觉自己很渺小——天花板高到抬头看都会头晕。</div><button class="used-btn" data-chunk="pl-b3" onclick="event.stopPropagation();markUsed('pl-b3',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">meticulously maintained</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The gardens are meticulously maintained — not a single leaf out of place, not a petal on the ground."</div><div class="translation">花园被精心维护——没有一片叶子错位，没有一片花瓣落在地上。</div><button class="used-btn" data-chunk="pl-b4" onclick="event.stopPropagation();markUsed('pl-b4',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a labyrinth of</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The old medina is a labyrinth of narrow alleyways — you could wander for hours and never take the same path twice."</div><div class="translation">老城麦地那是一个由狭窄小巷组成的迷宫——你可以逛上几个小时而且不会走重复的路。</div><button class="used-btn" data-chunk="pl-b5" onclick="event.stopPropagation();markUsed('pl-b5',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">exquisite craftsmanship</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"You can see the exquisite craftsmanship in every carved beam and painted ceiling — someone spent years on these details."</div><div class="translation">你可以在每一根雕梁画栋中看到精湛的工艺——有人在这些细节上花了多年时间。</div><button class="used-btn" data-chunk="pl-b6" onclick="event.stopPropagation();markUsed('pl-b6',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a striking contrast</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"There's a striking contrast between the ancient temples and the glass skyscrapers just across the river."</div><div class="translation">古老的寺庙与河对岸的玻璃摩天大楼之间形成了鲜明的对比。</div><button class="used-btn" data-chunk="pl-b7" onclick="event.stopPropagation();markUsed('pl-b7',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">landscaped gardens</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The place is surrounded by beautifully landscaped gardens with koi ponds and stone lanterns."</div><div class="translation">这个地方被精心设计的花园环绕，有锦鲤池和石灯笼。</div><button class="used-btn" data-chunk="pl-b8" onclick="event.stopPropagation();markUsed('pl-b8',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">has stood the test of time</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The Great Wall has stood the test of time — it's been there for over two thousand years and still takes your breath away."</div><div class="translation">长城历经了时间的考验——它已经存在了两千多年，仍然让人叹为观止。</div><button class="used-btn" data-chunk="pl-b9" onclick="event.stopPropagation();markUsed('pl-b9',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">an architectural marvel</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The Sagrada Familia is an architectural marvel — it's been under construction for over 140 years and still isn't finished."</div><div class="translation">圣家堂是一个建筑奇迹——已经建造了140多年，现在仍然没有完工。</div><button class="used-btn" data-chunk="pl-b10" onclick="event.stopPropagation();markUsed('pl-b10',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">intricately designed</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Every doorway is intricately designed with geometric patterns — no two are exactly the same."</div><div class="translation">每个门道都以几何图案精心设计——没有两个是完全相同的。</div><button class="used-btn" data-chunk="pl-b11" onclick="event.stopPropagation();markUsed('pl-b11',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a blend of old and new</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Shanghai's Bund is a fascinating blend of old and new — colonial-era buildings on one side, futuristic towers on the other."</div><div class="translation">上海外滩是一个迷人的新旧交融——一边是殖民时代的建筑，另一边是未来主义的塔楼。</div><button class="used-btn" data-chunk="pl-b12" onclick="event.stopPropagation();markUsed('pl-b12',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">spacious and airy</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The library is surprisingly spacious and airy — floor-to-ceiling windows let in so much natural light."</div><div class="translation">图书馆出乎意料地宽敞通风——落地窗让大量自然光照进来。</div><button class="used-btn" data-chunk="pl-b13" onclick="event.stopPropagation();markUsed('pl-b13',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">adorned with</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The walls are adorned with hand-painted murals that tell the story of the city's founding."</div><div class="translation">墙上装饰着手绘的壁画，讲述着这座城市建立的故事。</div><button class="used-btn" data-chunk="pl-b14" onclick="event.stopPropagation();markUsed('pl-b14',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">stretches as far as the eye can see</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"From the top of the mountain, the forest stretches as far as the eye can see — an endless sea of green."</div><div class="translation">从山顶望去，森林一望无际——无尽的绿色海洋。</div><button class="used-btn" data-chunk="pl-b15" onclick="event.stopPropagation();markUsed('pl-b15',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">immaculately preserved</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The old town has been immaculately preserved — walking through it feels like stepping back 500 years."</div><div class="translation">老城被完好地保存了下来——走进去感觉像穿越回了500年前。</div><button class="used-btn" data-chunk="pl-b16" onclick="event.stopPropagation();markUsed('pl-b16',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a grand entrance</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The palace has this absolutely grand entrance — massive red gates that are at least 30 feet tall."</div><div class="translation">宫殿有一个非常宏伟的入口——巨大的红门至少有30英尺高。</div><button class="used-btn" data-chunk="pl-b17" onclick="event.stopPropagation();markUsed('pl-b17',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">symmetrically laid out</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The entire complex is symmetrically laid out along a central axis — everything mirrors perfectly."</div><div class="translation">整个建筑群沿中轴线对称布局——一切都完美镜像。</div><button class="used-btn" data-chunk="pl-b18" onclick="event.stopPropagation();markUsed('pl-b18',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">eye-catching</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The building's eye-catching façade is covered in thousands of tiny coloured tiles that shimmer in the sun."</div><div class="translation">这座建筑引人注目的外墙上覆盖着数千块在阳光下闪闪发光的小彩砖。</div><button class="used-btn" data-chunk="pl-b19" onclick="event.stopPropagation();markUsed('pl-b19',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">in pristine condition</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Considering its age, the building is in pristine condition — the restoration work has been remarkable."</div><div class="translation">考虑到它的年代，这栋建筑保存得非常好——修复工作非常出色。</div><button class="used-btn" data-chunk="pl-b20" onclick="event.stopPropagation();markUsed('pl-b20',this)">✓ Mark as used</button></div></div></div>
+        </div>
+
+        <div class="p2-structures" data-angle="physical">
+          <h4 id="struct-physical">Sentence frames</h4>
+          <div class="struct-grid">
+            <div class="struct-item">What strikes you immediately about the place is <span class="blank">_____</span> — it's unlike anything <span class="blank">_____</span></div>
+            <div class="struct-item">The architecture is <span class="blank">_____</span>, with <span class="blank">_____</span> and <span class="blank">_____</span></div>
+            <div class="struct-item">It's the kind of building that <span class="blank">_____</span> — you can tell it was built to <span class="blank">_____</span></div>
+            <div class="struct-item">Walking through it, you notice <span class="blank">_____</span> everywhere — from <span class="blank">_____</span> to <span class="blank">_____</span></div>
+            <div class="struct-item">It was built in <span class="blank">_____</span> and has <span class="blank">_____</span> ever since</div>
+            <div class="struct-item">The most eye-catching feature is definitely <span class="blank">_____</span>, which <span class="blank">_____</span></div>
+            <div class="struct-item">It's remarkably <span class="blank">_____</span> for a place of its <span class="blank">_____</span> — you'd expect <span class="blank">_____</span></div>
+            <div class="struct-item">The design reflects <span class="blank">_____</span> — you can see <span class="blank">_____</span> in every <span class="blank">_____</span></div>
+            <div class="struct-item">Compared to <span class="blank">_____</span>, this place is far more <span class="blank">_____</span> — especially the <span class="blank">_____</span></div>
+            <div class="struct-item">It doesn't look like <span class="blank">_____</span> at all — it's more like <span class="blank">_____</span> meets <span class="blank">_____</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ANGLE 3: ATMOSPHERE & FEELING ===== -->
+    <div class="p2-angle-bg atmosphere" id="bg-atmosphere" style="display:none;">
+      <div class="p2-angle-content" id="angle-atmosphere" style="display:block;">
+        <div class="p2-angle-info">
+          <h2>🎭 Atmosphere & Feeling <span style="font-weight:400;font-size:0.9rem;color:var(--p2-text-light)">· 氛围与感受</span></h2>
+          <span class="chunk-count">20 chunks</span>
+        </div>
+        <p style="color:var(--p2-text-light);font-size:0.88rem;margin-bottom:20px;">
+          These chunks help you describe the mood, energy, and sensory experience of a place.
+        </p>
+        <div class="p2-cards" id="cards-atmosphere">
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a sense of calm washes over you</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The moment you step through the gate, a sense of calm washes over you — the noise of the city just melts away."</div><div class="translation">你一踏入大门，一种平静感就笼罩着你——城市的喧嚣就这样消散了。</div><button class="used-btn" data-chunk="pl-c1" onclick="event.stopPropagation();markUsed('pl-c1',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">bustling with activity</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The market is always bustling with activity — vendors shouting, customers haggling, the smell of street food everywhere."</div><div class="translation">市场总是熙熙攘攘——商贩叫卖，顾客讨价还价，到处是街头小吃的味道。</div><button class="used-btn" data-chunk="pl-c2" onclick="event.stopPropagation();markUsed('pl-c2',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">an air of tranquillity</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"There's an air of tranquillity about the place — even the birds seem to chirp more softly here."</div><div class="translation">这个地方有一种宁静的氛围——连鸟儿的叫声似乎都更轻柔了。</div><button class="used-btn" data-chunk="pl-c3" onclick="event.stopPropagation();markUsed('pl-c3',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">feels like stepping back in time</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Walking through the old quarter feels like stepping back in time — the cobblestone streets, the lanterns, the wooden balconies."</div><div class="translation">在老城区散步感觉像是回到了过去——鹅卵石街道、灯笼、木质阳台。</div><button class="used-btn" data-chunk="pl-c4" onclick="event.stopPropagation();markUsed('pl-c4',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a vibrant atmosphere</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The night market has this incredibly vibrant atmosphere — live music, colourful lights, and the smell of grilled food everywhere."</div><div class="translation">夜市有一种令人难以置信的活力——现场音乐、五彩的灯光、到处是烧烤的味道。</div><button class="used-btn" data-chunk="pl-c5" onclick="event.stopPropagation();markUsed('pl-c5',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">serene and unspoiled</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The beach is still serene and unspoiled — no hotels, no crowds, just white sand and clear water."</div><div class="translation">这个海滩仍然宁静、未被破坏——没有酒店，没有人群，只有白沙和清澈的海水。</div><button class="used-btn" data-chunk="pl-c6" onclick="event.stopPropagation();markUsed('pl-c6',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">has a magical quality</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"At sunset, the whole place has a magical quality — the golden light makes even the ordinary buildings look extraordinary."</div><div class="translation">日落时分，整个地方有一种神奇的特质——金色的光线让普通的建筑都显得非凡。</div><button class="used-btn" data-chunk="pl-c7" onclick="event.stopPropagation();markUsed('pl-c7',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the hustle and bustle</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I actually love the hustle and bustle of the city centre — it gives me energy just being there."</div><div class="translation">我其实很喜欢市中心的喧嚣——光是待在那里就能给我能量。</div><button class="used-btn" data-chunk="pl-c8" onclick="event.stopPropagation();markUsed('pl-c8',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">awe-inspiring</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Standing at the base of the canyon is truly awe-inspiring — you realise how small you are in the grand scheme of things."</div><div class="translation">站在峡谷底部真的令人敬畏——你会意识到自己在大局中有多渺小。</div><button class="used-btn" data-chunk="pl-c9" onclick="event.stopPropagation();markUsed('pl-c9',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">exudes charm</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The little village exudes charm — every cottage has flowers in the window boxes and a cat sleeping on the doorstep."</div><div class="translation">这个小村庄散发着魅力——每间小屋的窗台上都有花，门阶上都有一只猫在睡觉。</div><button class="used-btn" data-chunk="pl-c10" onclick="event.stopPropagation();markUsed('pl-c10',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a welcoming ambience</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The café has a really welcoming ambience — warm lighting, soft music, and the smell of fresh coffee."</div><div class="translation">这家咖啡馆有一种非常温馨的氛围——温暖的灯光、柔和的音乐和新鲜咖啡的香气。</div><button class="used-btn" data-chunk="pl-c11" onclick="event.stopPropagation();markUsed('pl-c11',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">steeped in history</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Every corner of the city is steeped in history — you can almost hear the echoes of the past as you walk."</div><div class="translation">这座城市的每个角落都充满了历史——你走路时几乎能听到过去的回声。</div><button class="used-btn" data-chunk="pl-c12" onclick="event.stopPropagation();markUsed('pl-c12',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">eerily quiet</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"After midnight, the usually busy square becomes eerily quiet — you can hear your own footsteps echo."</div><div class="translation">午夜过后，平时繁忙的广场变得出奇地安静——你能听到自己的脚步声回荡。</div><button class="used-btn" data-chunk="pl-c13" onclick="event.stopPropagation();markUsed('pl-c13',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a feast for the senses</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The spice market is a feast for the senses — colours, smells, and sounds you won't find anywhere else."</div><div class="translation">香料市场是一场感官盛宴——你在其他地方找不到的颜色、气味和声音。</div><button class="used-btn" data-chunk="pl-c14" onclick="event.stopPropagation();markUsed('pl-c14',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">feel at home</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Despite being a foreigner, I immediately felt at home in that city — the locals were just that welcoming."</div><div class="translation">尽管是外国人，我在那座城市立刻就有了家的感觉——当地人就是那么热情。</div><button class="used-btn" data-chunk="pl-c15" onclick="event.stopPropagation();markUsed('pl-c15',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">takes your breath away</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The view from the summit literally takes your breath away — you forget to breathe for a second."</div><div class="translation">山顶的景色真的令人屏息——你会有那么一瞬间忘记呼吸。</div><button class="used-btn" data-chunk="pl-c16" onclick="event.stopPropagation();markUsed('pl-c16',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a world away from</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The countryside is a world away from the chaos of Shanghai — just 90 minutes on the train and you're in a different universe."</div><div class="translation">乡村与上海的喧嚣完全是两个世界——坐火车90分钟你就到了另一个宇宙。</div><button class="used-btn" data-chunk="pl-c17" onclick="event.stopPropagation();markUsed('pl-c17',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">has a timeless feel</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The village has a timeless feel — you could take a photo there and nobody would be able to guess which century it was from."</div><div class="translation">这个村庄有一种超越时间的感觉——你在那里拍张照片，没人能猜出是哪个世纪的。</div><button class="used-btn" data-chunk="pl-c18" onclick="event.stopPropagation();markUsed('pl-c18',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">pulsates with energy</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Tokyo pulsates with energy 24/7 — there's never a moment when the city truly sleeps."</div><div class="translation">东京每天24小时都充满活力——这座城市从来没有真正沉睡的时刻。</div><button class="used-btn" data-chunk="pl-c19" onclick="event.stopPropagation();markUsed('pl-c19',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the silence is deafening</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Deep in the forest, the silence is deafening — you can hear your own heartbeat, which is both unsettling and beautiful."</div><div class="translation">在森林深处，寂静震耳欲聋——你能听到自己的心跳，这既令人不安又很美妙。</div><button class="used-btn" data-chunk="pl-c20" onclick="event.stopPropagation();markUsed('pl-c20',this)">✓ Mark as used</button></div></div></div>
+        </div>
+
+        <div class="p2-structures" data-angle="atmosphere">
+          <h4 id="struct-atmosphere">Sentence frames</h4>
+          <div class="struct-grid">
+            <div class="struct-item">The atmosphere is <span class="blank">_____</span> — you can feel <span class="blank">_____</span> the moment you <span class="blank">_____</span></div>
+            <div class="struct-item">It's the kind of place where <span class="blank">_____</span> — that's the first thing that hits you</div>
+            <div class="struct-item">There's something about the <span class="blank">_____</span> that makes you feel <span class="blank">_____</span></div>
+            <div class="struct-item">During the day it's <span class="blank">_____</span>, but at night it transforms into <span class="blank">_____</span></div>
+            <div class="struct-item">The energy there is <span class="blank">_____</span> — it's the kind of <span class="blank">_____</span> you can't manufacture</div>
+            <div class="struct-item">What really sets the mood is <span class="blank">_____</span> — without it, the place would feel <span class="blank">_____</span></div>
+            <div class="struct-item">It feels like <span class="blank">_____</span> but in the best possible way — not <span class="blank">_____</span>, just <span class="blank">_____</span></div>
+            <div class="struct-item">The contrast between <span class="blank">_____</span> and <span class="blank">_____</span> gives the place a <span class="blank">_____</span> quality</div>
+            <div class="struct-item">You get this overwhelming sense of <span class="blank">_____</span> — it's almost <span class="blank">_____</span></div>
+            <div class="struct-item">If I had to capture the vibe in one word, it'd be <span class="blank">_____</span> — but that barely scratches the surface</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ANGLE 4: ACTIVITIES & FUNCTIONS ===== -->
+    <div class="p2-angle-bg activities" id="bg-activities" style="display:none;">
+      <div class="p2-angle-content" id="angle-activities" style="display:block;">
+        <div class="p2-angle-info">
+          <h2>🎯 Activities & Functions <span style="font-weight:400;font-size:0.9rem;color:var(--p2-text-light)">· 活动与功能</span></h2>
+          <span class="chunk-count">20 chunks</span>
+        </div>
+        <p style="color:var(--p2-text-light);font-size:0.88rem;margin-bottom:20px;">
+          These chunks help you describe what people do there, what the place is used for, and what you can experience.
+        </p>
+        <div class="p2-cards" id="cards-activities">
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a great place to unwind</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's a great place to unwind after a long week — just sitting by the lake with a book is enough."</div><div class="translation">这是漫长一周后放松的好地方——坐在湖边看书就够了。</div><button class="used-btn" data-chunk="pl-d1" onclick="event.stopPropagation();markUsed('pl-d1',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">caters to all ages</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The park caters to all ages — there's a playground for kids, basketball courts for teenagers, and quiet benches for the elderly."</div><div class="translation">这个公园适合所有年龄段——有儿童游乐场、青少年篮球场、老人的安静长椅。</div><button class="used-btn" data-chunk="pl-d2" onclick="event.stopPropagation();markUsed('pl-d2',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">something for everyone</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The shopping mall has something for everyone — high-end boutiques, street food stalls, a cinema, even an ice rink."</div><div class="translation">这个购物中心适合每个人——高端精品店、街边小吃摊、电影院，甚至还有一个溜冰场。</div><button class="used-btn" data-chunk="pl-d3" onclick="event.stopPropagation();markUsed('pl-d3',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a hub for</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The district has become a hub for artists and designers — every other building is a gallery or a studio."</div><div class="translation">这个区已成为艺术家和设计师的中心——每隔一栋楼就是画廊或工作室。</div><button class="used-btn" data-chunk="pl-d4" onclick="event.stopPropagation();markUsed('pl-d4',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">you can while away hours</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"You can easily while away hours in the museum — there's so much to see that time just flies."</div><div class="translation">你可以在博物馆里轻松消磨好几个小时——有太多可看的了，时间飞逝。</div><button class="used-btn" data-chunk="pl-d5" onclick="event.stopPropagation();markUsed('pl-d5',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a popular spot for</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's a popular spot for morning joggers and tai chi practitioners — by 7 AM the place is already alive."</div><div class="translation">这里是晨跑者和太极练习者的热门地点——早上7点这里就已经充满了生机。</div><button class="used-btn" data-chunk="pl-d6" onclick="event.stopPropagation();markUsed('pl-d6',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">offers a chance to</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The place offers a rare chance to see wildlife up close in their natural habitat."</div><div class="translation">这个地方提供了一个难得的机会，可以在自然栖息地近距离看到野生动物。</div><button class="used-btn" data-chunk="pl-d7" onclick="event.stopPropagation();markUsed('pl-d7',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">you can sample</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"At the food street, you can sample dishes from every province in China — it's like a culinary tour in one evening."</div><div class="translation">在美食街上，你可以品尝到中国每个省份的菜肴——像是一个晚上的美食之旅。</div><button class="used-btn" data-chunk="pl-d8" onclick="event.stopPropagation();markUsed('pl-d8',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">draws crowds of</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The annual lantern festival draws crowds of visitors from across the country — it's a sight to behold."</div><div class="translation">每年一度的灯会吸引了来自全国各地的游客——那景象值得一看。</div><button class="used-btn" data-chunk="pl-d9" onclick="event.stopPropagation();markUsed('pl-d9',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a must-visit for</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The temple is a must-visit for anyone interested in Buddhist architecture — the level of detail is astonishing."</div><div class="translation">对任何对佛教建筑感兴趣的人来说，这座寺庙是必去之地——细节程度令人惊讶。</div><button class="used-btn" data-chunk="pl-d10" onclick="event.stopPropagation();markUsed('pl-d10',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a photographer's dream</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The old town is a photographer's dream — every alley, every doorway, every rooftop is picture-perfect."</div><div class="translation">老城是摄影师的梦想——每条小巷、每个门廊、每个屋顶都像画一样完美。</div><button class="used-btn" data-chunk="pl-d11" onclick="event.stopPropagation();markUsed('pl-d11',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">there's always something going on</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"In that square, there's always something going on — street performers, art markets, pop-up cafés."</div><div class="translation">在那个广场上，总是有活动——街头艺人、艺术市场、快闪咖啡馆。</div><button class="used-btn" data-chunk="pl-d12" onclick="event.stopPropagation();markUsed('pl-d12',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a great vantage point to</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The observation deck provides a great vantage point to watch the sunset over the city skyline."</div><div class="translation">观景台是观看城市天际线日落的绝佳位置。</div><button class="used-btn" data-chunk="pl-d13" onclick="event.stopPropagation();markUsed('pl-d13',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">doubles as</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The courtyard doubles as an open-air cinema on summer weekends — they project films onto the white wall."</div><div class="translation">这个庭院在夏季周末兼作露天电影院——他们把电影投射在白墙上。</div><button class="used-btn" data-chunk="pl-d14" onclick="event.stopPropagation();markUsed('pl-d14',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a go-to destination for</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"It's become a go-to destination for young couples on dates — the riverside path is incredibly romantic at night."</div><div class="translation">它已成为年轻情侣约会的首选目的地——河边的步道在晚上非常浪漫。</div><button class="used-btn" data-chunk="pl-d15" onclick="event.stopPropagation();markUsed('pl-d15',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">caters to foodies</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The neighbourhood caters to foodies — there are at least 50 restaurants within a 10-minute walk."</div><div class="translation">这个街区是美食爱好者的天堂——步行10分钟范围内至少有50家餐厅。</div><button class="used-btn" data-chunk="pl-d16" onclick="event.stopPropagation();markUsed('pl-d16',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">well worth a visit</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The botanical garden is well worth a visit, especially in spring when the cherry blossoms are in full bloom."</div><div class="translation">植物园非常值得一游，尤其是在春天樱花盛开的时候。</div><button class="used-btn" data-chunk="pl-d17" onclick="event.stopPropagation();markUsed('pl-d17',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">you can browse for hours</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"In the antique market, you can browse for hours — every stall has something you've never seen before."</div><div class="translation">在古董市场，你可以逛上几个小时——每个摊位都有你从未见过的东西。</div><button class="used-btn" data-chunk="pl-d18" onclick="event.stopPropagation();markUsed('pl-d18',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">an ideal spot to</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The rooftop is an ideal spot to watch the fireworks display — you get a panoramic view without the crowds."</div><div class="translation">屋顶是观看烟花表演的理想地点——你能看到全景而且不用挤在人群里。</div><button class="used-btn" data-chunk="pl-d19" onclick="event.stopPropagation();markUsed('pl-d19',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">hosts regular</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The community centre hosts regular workshops on everything from pottery to coding — there's always something new to learn."</div><div class="translation">社区中心定期举办从陶艺到编程的各种工作坊——总有新东西可以学。</div><button class="used-btn" data-chunk="pl-d20" onclick="event.stopPropagation();markUsed('pl-d20',this)">✓ Mark as used</button></div></div></div>
+        </div>
+
+        <div class="p2-structures" data-angle="activities">
+          <h4 id="struct-activities">Sentence frames</h4>
+          <div class="struct-grid">
+            <div class="struct-item">People go there to <span class="blank">_____</span>, but they end up <span class="blank">_____</span> — that's the beauty of it</div>
+            <div class="struct-item">On any given day, you'll see <span class="blank">_____</span> and <span class="blank">_____</span> — it's that versatile</div>
+            <div class="struct-item">The main draw is definitely <span class="blank">_____</span>, but there's also <span class="blank">_____</span> if that's not your thing</div>
+            <div class="struct-item">It's the kind of place where you can <span class="blank">_____</span> or just <span class="blank">_____</span> — both feel equally right</div>
+            <div class="struct-item">What you can do there ranges from <span class="blank">_____</span> to <span class="blank">_____</span> — there's no shortage of options</div>
+            <div class="struct-item">Morning is when you'll find <span class="blank">_____</span>, while evenings are more about <span class="blank">_____</span></div>
+            <div class="struct-item">I'd recommend going there to <span class="blank">_____</span> — it's easily the best <span class="blank">_____</span> in the area</div>
+            <div class="struct-item">Whether you're into <span class="blank">_____</span> or <span class="blank">_____</span>, this place has you covered</div>
+            <div class="struct-item">The locals use it as <span class="blank">_____</span>, but tourists see it as <span class="blank">_____</span> — completely different perspectives</div>
+            <div class="struct-item">You could spend an entire day here and still not <span class="blank">_____</span> — there's that much to <span class="blank">_____</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ANGLE 5: PERSONAL CONNECTION ===== -->
+    <div class="p2-angle-bg connection" id="bg-connection" style="display:none;">
+      <div class="p2-angle-content" id="angle-connection" style="display:block;">
+        <div class="p2-angle-info">
+          <h2>💚 Personal Connection <span style="font-weight:400;font-size:0.9rem;color:var(--p2-text-light)">· 个人联系</span></h2>
+          <span class="chunk-count">20 chunks</span>
+        </div>
+        <p style="color:var(--p2-text-light);font-size:0.88rem;margin-bottom:20px;">
+          These chunks help you explain what a place means to you personally — memories, emotions, and why it matters.
+        </p>
+        <div class="p2-cards" id="cards-connection">
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">holds a special place in my heart</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"This park holds a special place in my heart — it's where I learned to ride a bike as a child."</div><div class="translation">这个公园在我心中有特殊的位置——这是我小时候学会骑自行车的地方。</div><button class="used-btn" data-chunk="pl-e1" onclick="event.stopPropagation();markUsed('pl-e1',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">brings back fond memories</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Every time I visit, it brings back fond memories of summer afternoons spent with my grandparents."</div><div class="translation">每次我去那里，都会勾起和祖父母一起度过的夏日午后的美好回忆。</div><button class="used-btn" data-chunk="pl-e2" onclick="event.stopPropagation();markUsed('pl-e2',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">has become my sanctuary</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"That little bookshop has become my sanctuary — whenever life gets overwhelming, I go there and everything settles."</div><div class="translation">那家小书店成了我的避风港——每当生活让人不堪重负时，我就会去那里，一切都会平息下来。</div><button class="used-btn" data-chunk="pl-e3" onclick="event.stopPropagation();markUsed('pl-e3',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I have a soft spot for</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I have a soft spot for that old cinema — it's a bit rundown, but that's part of its charm."</div><div class="translation">我对那家老电影院情有独钟——它有点破旧，但这也是它魅力的一部分。</div><button class="used-btn" data-chunk="pl-e4" onclick="event.stopPropagation();markUsed('pl-e4',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">left a lasting impression on me</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Visiting the Great Wall left a lasting impression on me — I'd never felt so connected to history before."</div><div class="translation">参观长城给我留下了深刻的印象——我从未如此感受到与历史的联系。</div><button class="used-btn" data-chunk="pl-e5" onclick="event.stopPropagation();markUsed('pl-e5',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">changed my perspective</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Travelling to that remote village completely changed my perspective on what a happy life looks like."</div><div class="translation">去那个偏远村庄旅行完全改变了我对幸福生活的看法。</div><button class="used-btn" data-chunk="pl-e6" onclick="event.stopPropagation();markUsed('pl-e6',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">my go-to place when</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The botanic garden near campus is my go-to place when I need to clear my head before an exam."</div><div class="translation">校园附近的植物园是我考试前需要清空思绪时的首选之地。</div><button class="used-btn" data-chunk="pl-e7" onclick="event.stopPropagation();markUsed('pl-e7',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I never get tired of</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I've been to that viewpoint at least twenty times, and I never get tired of it — the view is different every season."</div><div class="translation">我已经去过那个观景点至少二十次了，但我从不会厌倦——每个季节的景色都不同。</div><button class="used-btn" data-chunk="pl-e8" onclick="event.stopPropagation();markUsed('pl-e8',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I feel a deep connection to</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I feel a deep connection to this city — even though I wasn't born here, it's where I truly grew up."</div><div class="translation">我对这座城市有着深厚的感情——虽然我不是在这里出生的，但这里才是我真正长大的地方。</div><button class="used-btn" data-chunk="pl-e9" onclick="event.stopPropagation();markUsed('pl-e9',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">where I go to escape</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"This little beach is where I go to escape the pressure of work — the sound of the waves is the best therapy."</div><div class="translation">这个小海滩是我逃避工作压力的地方——海浪声是最好的疗愈。</div><button class="used-btn" data-chunk="pl-e10" onclick="event.stopPropagation();markUsed('pl-e10',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">it feels like a second home</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"My grandparents' house in the countryside feels like a second home — I spent every summer there growing up."</div><div class="translation">我祖父母在乡下的房子感觉就像第二个家——我成长过程中每个夏天都在那里度过。</div><button class="used-btn" data-chunk="pl-e11" onclick="event.stopPropagation();markUsed('pl-e11',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a place I hold dear</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The temple on the hill is a place I hold dear — my father took me there every New Year's Day."</div><div class="translation">山上的那座寺庙是我珍视的地方——我父亲每个元旦都会带我去那里。</div><button class="used-btn" data-chunk="pl-e12" onclick="event.stopPropagation();markUsed('pl-e12',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I'd recommend it to anyone</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I'd recommend this place to anyone visiting the city — it captures the local spirit better than any guidebook."</div><div class="translation">我会向任何来这座城市的人推荐这个地方——它比任何旅行指南都更能捕捉到当地的精神。</div><button class="used-btn" data-chunk="pl-e13" onclick="event.stopPropagation();markUsed('pl-e13',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">a hidden gem</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"That café is a real hidden gem — not many people know about it, which is exactly why I love it."</div><div class="translation">那家咖啡馆真是一颗隐藏的宝石——没有多少人知道它，这正是我喜爱它的原因。</div><button class="used-btn" data-chunk="pl-e14" onclick="event.stopPropagation();markUsed('pl-e14',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">feels like my own little world</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"The rooftop garden feels like my own little world — I go up there with a cup of tea and forget about everything else."</div><div class="translation">屋顶花园感觉就像是我的小世界——我端着一杯茶上去，就忘记了一切。</div><button class="used-btn" data-chunk="pl-e15" onclick="event.stopPropagation();markUsed('pl-e15',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">makes me feel grounded</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"There's something about that forest that makes me feel grounded — like all the trivial worries just fade away."</div><div class="translation">那片森林有种让我感到踏实的东西——所有琐碎的烦恼都消失了。</div><button class="used-btn" data-chunk="pl-e16" onclick="event.stopPropagation();markUsed('pl-e16',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I stumbled upon it</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"I stumbled upon this garden completely by accident — I got lost on my way somewhere else, and it turned out to be the best wrong turn I've ever made."</div><div class="translation">我完全是偶然发现这个花园的——我在去别处的路上迷路了，结果成了我走过的最好的错路。</div><button class="used-btn" data-chunk="pl-e17" onclick="event.stopPropagation();markUsed('pl-e17',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">I can't imagine my life without</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"That park has been such a constant in my life that I honestly can't imagine my life without it."</div><div class="translation">那个公园在我生活中如此恒久不变，我真的无法想象没有它的生活。</div><button class="used-btn" data-chunk="pl-e18" onclick="event.stopPropagation();markUsed('pl-e18',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">the place I always come back to</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"No matter where I travel, this is the place I always come back to — it's my anchor."</div><div class="translation">无论我到哪里旅行，这里都是我总回来的地方——它是我的锚。</div><button class="used-btn" data-chunk="pl-e19" onclick="event.stopPropagation();markUsed('pl-e19',this)">✓ Mark as used</button></div></div></div>
+          <div class="p2-card"><div class="p2-card-inner"><div class="p2-card-front"><div class="chunk">shaped who I am today</div><div class="hint">Tap to reveal</div></div><div class="p2-card-back"><div class="example">"Growing up in that neighbourhood shaped who I am today — the diversity of people I met there opened my mind in ways I can't even quantify."</div><div class="translation">在那个社区长大塑造了今天的我——我在那里遇到的人的多样性以我无法量化的方式开阔了我的思维。</div><button class="used-btn" data-chunk="pl-e20" onclick="event.stopPropagation();markUsed('pl-e20',this)">✓ Mark as used</button></div></div></div>
+        </div>
+
+        <div class="p2-structures" data-angle="connection">
+          <h4 id="struct-connection">Sentence frames</h4>
+          <div class="struct-grid">
+            <div class="struct-item">This place means a lot to me because <span class="blank">_____</span> — it's where <span class="blank">_____</span></div>
+            <div class="struct-item">I first went there when <span class="blank">_____</span>, and ever since then <span class="blank">_____</span></div>
+            <div class="struct-item">What makes this place special to me isn't <span class="blank">_____</span> — it's <span class="blank">_____</span></div>
+            <div class="struct-item">Over the years, this place has become <span class="blank">_____</span> — it's more than just <span class="blank">_____</span></div>
+            <div class="struct-item">If someone asked me to describe my happy place, it would be <span class="blank">_____</span> without hesitation</div>
+            <div class="struct-item">The connection I feel to this place is hard to put into words — it's like <span class="blank">_____</span></div>
+            <div class="struct-item">I remember the first time I visited — <span class="blank">_____</span> struck me immediately</div>
+            <div class="struct-item">It's become a tradition for me to <span class="blank">_____</span> whenever I'm <span class="blank">_____</span></div>
+            <div class="struct-item">What draws me back again and again is <span class="blank">_____</span> — it never <span class="blank">_____</span></div>
+            <div class="struct-item">I can't really explain why, but this place just <span class="blank">_____</span> — it's one of those things you <span class="blank">_____</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== CASE STUDY: THE FORBIDDEN CITY ===== -->
+    <section class="p2-eileen-section" id="study-section">
+      <div class="nyt-article">
+        <div class="nyt-article-header">
+          <div class="nyt-rubric">Heritage · Architecture · Travel</div>
+          <h2 class="nyt-headline">The Vermillion Fortress: Why the Forbidden City Still Takes Your Breath Away</h2>
+          <div class="nyt-lede">Nestled in the heart of Beijing, this sprawling complex of nearly 1,000 buildings has stood the test of time for over 600 years. It's not just a museum — it's an architectural marvel that changed my perspective on what human hands can build.</div>
+          <div class="nyt-byline">By Kee Lee · May 2026 · 7 min read</div>
+        </div>
+
+        <figure class="nyt-figure">
+          <img src="forbidden-city-hero.png" alt="The Forbidden City" class="nyt-hero-img">
+          <figcaption>The Forbidden City at golden hour. With its imposing architecture and 9,999 rooms, it's been immaculately preserved as a UNESCO World Heritage site since 1987. <em>Photo: Getty Images</em></figcaption>
+        </figure>
+
+        <div class="nyt-body">
+          <p class="nyt-dropcap">The Forbidden City sits in the very heart of Beijing, right at the city's geographical and cultural centre. It's surprisingly well-connected by public transport — just hop on Line 1 and get off at Tiananmen East. From the moment you pass through the grand entrance of the Meridian Gate, a sense of calm washes over you, despite the thousands of visitors around you. The noise of modern Beijing just melts away.</p>
+
+          <p>The first thing you notice straight away about the complex is its sheer scale. This is not a building — it's a sprawling complex that spans 72 hectares. Stretches as far as the eye can see in every direction. Walking through it feels like stepping back in time — the intricately designed roofs with their golden glazed tiles, the meticulously maintained courtyards, the vermillion walls that give the palace its nickname. Every single detail is adorned with symbolism: the number of roof beasts indicates a building's rank, the colours convey hierarchy, even the patterns carved into the stone railings tell stories.</p>
+
+          <blockquote class="nyt-pullquote">
+            <span class="nyt-quote-mark">&#8220;</span>
+            The entire complex is symmetrically laid out along a central axis — everything mirrors perfectly. It's the kind of design that reflects a worldview.
+            <cite>— Dr. Wang, Palace Museum Historian</cite>
+          </blockquote>
+
+          <p>There's something about the atmosphere that's hard to capture in words. Despite the crowds, there's an air of tranquillity in the quieter courtyards — especially the Imperial Garden at the northern end, with its ancient cypress trees and rock gardens. It's steeped in history in a way that few other places on earth can match. You're walking the same paths that emperors walked for five centuries. At sunset, the whole place has a magical quality — the golden light on the yellow roof tiles makes even the weathered walls look extraordinary.</p>
+
+          <p>As a visitor, there's so much to experience here. You can easily while away hours just wandering from courtyard to courtyard. The museum hosts regular exhibitions of imperial treasures — jade carvings, calligraphy, ceremonial robes — that offer a rare chance to see artefacts up close. It's a photographer's dream: every doorway, every carved beam, every reflection in the bronze water vats is picture-perfect. For anyone interested in Chinese history, it's an absolute must-visit. The audio guide is worth it too — without it, you'd miss half the stories hidden in the exquisite craftsmanship around you.</p>
+
+          <p>What left a lasting impression on me wasn't just the architecture — it was the contrast with the modern skyscrapers visible just beyond the walls. Standing inside a 600-year-old palace while seeing glass towers on the horizon is a striking contrast that you won't find in many places on earth. It's a blend of old and new that somehow works. The Forbidden City holds a special place in my heart not because I have some personal history there, but because it changed my perspective on what continuity looks like — a civilisation that builds on its past rather than demolishing it.</p>
+
+          <p>If I had to capture the vibe in one word, it'd be timeless. The Forbidden City has stood the test of time — through wars, revolutions, and modernisation, it's still there, still immaculately preserved, still taking people's breath away. I'd recommend it to anyone visiting China, not just because it's famous, but because it captures the spirit of an entire civilisation better than any guidebook ever could. It's the kind of place you can visit a hundred times and still discover something new in the details.</p>
+        </div>
+
+        <div class="nyt-footer">
+          <span>📸</span>
+          <em>This profile integrates 20+ lexical chunks and 10 sentence frames from the Places descriptor toolkit above.</em>
+        </div>
+      </div>
+
+      <hr class="nyt-divider">
+      <div class="header" style="margin-top:24px;">
+        <span style="font-size:2rem;">⭐</span>
+        <div>
+          <h3>Case Study: The Forbidden City — The 4-in-1 Places Adaptor</h3>
+          <p style="color:var(--p2-text-light);font-size:0.85rem;margin-top:4px;">One place. Four different cue cards. Same core description — different angles.</p>
+        </div>
+      </div>
+
+      <div class="p2-eileen-grid">
+        <div class="p2-eileen-card">
+          <div class="prompt-zh">历史建筑</div>
+          <div class="prompt-en">A historical building you've visited</div>
+          <div class="focus">Focus: Architecture & Age</div>
+        </div>
+        <div class="p2-eileen-card">
+          <div class="prompt-zh">美丽的城市</div>
+          <div class="prompt-en">A beautiful city</div>
+          <div class="focus">Focus: Beijing & Cultural Beauty</div>
+        </div>
+        <div class="p2-eileen-card">
+          <div class="prompt-zh">旅游景点</div>
+          <div class="prompt-en">A tourist attraction you enjoyed</div>
+          <div class="focus">Focus: Visitor Experience</div>
+        </div>
+        <div class="p2-eileen-card">
+          <div class="prompt-zh">印象深刻的地方</div>
+          <div class="prompt-en">A place that left an impression</div>
+          <div class="focus">Focus: Personal Connection</div>
+        </div>
+      </div>
+
+      <p style="color:var(--p2-text-light);font-size:0.85rem;line-height:1.7;margin-bottom:16px;">
+        <strong style="color:var(--p2-text);">The key insight:</strong> The Forbidden City — 600-year-old imperial palace, UNESCO site, 9,999 rooms, in the heart of Beijing — can answer multiple Part 2 prompts using the SAME core facts. You just change the <em>emphasis</em>, the <em>opening</em>, and which <em>chunks you deploy</em>.
+      </p>
+
+      <button class="p2-eileen-btn" style="width:auto;padding:12px 28px;font-size:0.9rem;" onclick="openStudyModal()">
+        🔍 Open Full Case Study — with Opening Sentences & Chunk Mapping
+      </button>
+    </section>
+
+    <!-- ===== QUICK DRILL ===== -->
+    <section class="p2-drill" id="drill-section">
+      <h3>🎯 Quick Drill — Full Cue Card Practice</h3>
+      <div class="random-prompt">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+          <div id="drill-prompt-zh" style="font-size:0.9rem;font-weight:700;color:var(--p2-places-dark);">喜欢去的安静地方</div>
+          <span style="font-size:0.7rem;color:var(--p2-text-light);background:#F1F5F9;padding:3px 10px;border-radius:10px;">Part 2</span>
+        </div>
+        <div id="drill-prompt-en" style="font-size:1rem;font-weight:600;color:var(--p2-text);margin-bottom:14px;">Describe a quiet place you like to go to.</div>
+        <div style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--p2-text-light);margin-bottom:8px;">You should say:</div>
+        <ul id="drill-bullets" style="list-style:none;padding:0;font-size:0.88rem;color:var(--p2-text);line-height:2.2;">
+          <li><span style="color:var(--p2-places);font-weight:700;">•</span> Where it is</li>
+          <li><span style="color:var(--p2-places);font-weight:700;">•</span> How often you go there</li>
+          <li><span style="color:var(--p2-places);font-weight:700;">•</span> What you do there</li>
+        </ul>
+        <div id="drill-explain" style="font-size:0.88rem;color:var(--p2-text);font-style:italic;margin-top:4px;">And explain why you like this place</div>
+      </div>
+
+      <div class="cross-layout">
+        <div class="cross-slot nw"><textarea class="cross-input" id="cross-nw" rows="3" placeholder="Where..."></textarea></div>
+        <div class="cross-slot ne"><textarea class="cross-input" id="cross-ne" rows="3" placeholder="How often..."></textarea></div>
+        <div class="cross-slot sw"><textarea class="cross-input" id="cross-sw" rows="3" placeholder="What you do..."></textarea></div>
+        <div class="cross-slot se"><textarea class="cross-input" id="cross-se" rows="3" placeholder="And explain..."></textarea></div>
+        <div class="cross-center"><input class="cross-center-inner" id="cross-topic" placeholder="Topic" /></div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;margin-top:16px;">
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:0.82rem;font-weight:600;color:var(--p2-text);">
+          <input type="checkbox" id="hot-topics-toggle" checked onchange="toggleHotTopics()" style="accent-color:var(--p2-places);">
+          <span id="hot-topics-label">🔥 Hot Topics (11)</span>
+        </label>
+        <span style="font-size:0.72rem;color:var(--p2-text-light);">current season</span>
+      </div>
+
+      <p style="font-size:0.85rem;color:var(--p2-text-light);margin:16px 0 12px;">
+        Jot down keywords for each bullet. Use the 1-min timer to prep, then deliver a full 2-minute response using at least 3 chunks from above.
+      </p>
+
+      <div class="drill-toolbar">
+        <div class="drill-toolbar-left">
+          <button class="p2-drill-btn p2-drill-btn-fresh" onclick="randomPrompt()">🎲 New Prompt</button>
+        </div>
+        <div class="drill-toolbar-right">
+          <button class="p2-drill-btn" id="notes-timer-btn" onclick="startNotesTimer()">📝 1-min Notes</button>
+          <span class="p2-timer" id="timer-display">2:00</span>
+          <button class="p2-drill-btn" id="speech-timer-btn" onclick="startSpeechTimer()">🎤 2-min Speech</button>
+          <button class="p2-drill-btn" id="reset-btn" onclick="resetTimer()" style="display:none;">↺ Reset</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ===== CASE STUDY MODAL ===== -->
+<div class="p2-modal-overlay" id="study-modal">
+  <div class="p2-modal">
+    <button class="p2-modal-close" onclick="closeStudyModal()">✕</button>
+    <h2>⭐ The Forbidden City · 4-in-1 Places Prompt Adaptor</h2>
+    <p class="subtitle">The FAQ approach: master ONE place's description and adapt it to multiple Part 2 cue cards by changing the angle, opening, and chunk selection.</p>
+
+    <div class="comparison-grid">
+      <div class="comp-col">
+        <h4>Prompt 1</h4>
+        <div class="prompt-name">🏛 历史建筑<br><small>A historical building</small></div>
+        <div class="angle-label">Primary Angles:</div>
+        <div class="focus-text">Physical Description + Location</div>
+        <div class="angle-label" style="margin-top:8px;">Key Chunks:</div>
+        <div class="focus-text">dates back to, architectural marvel, immaculately preserved, imposing architecture, exquisite craftsmanship</div>
+      </div>
+      <div class="comp-col">
+        <h4>Prompt 2</h4>
+        <div class="prompt-name">🏙 美丽的城市<br><small>A beautiful city</small></div>
+        <div class="angle-label">Primary Angles:</div>
+        <div class="focus-text">Atmosphere + Activities</div>
+        <div class="angle-label" style="margin-top:8px;">Key Chunks:</div>
+        <div class="focus-text">a blend of old and new, vibrant atmosphere, pulsates with energy, something for everyone, feel at home</div>
+      </div>
+      <div class="comp-col">
+        <h4>Prompt 3</h4>
+        <div class="prompt-name">🎯 旅游景点<br><small>A tourist attraction</small></div>
+        <div class="angle-label">Primary Angles:</div>
+        <div class="focus-text">Activities + Physical Description</div>
+        <div class="angle-label" style="margin-top:8px;">Key Chunks:</div>
+        <div class="focus-text">a must-visit, draws crowds, a photographer's dream, you can while away hours, well worth a visit</div>
+      </div>
+      <div class="comp-col">
+        <h4>Prompt 4</h4>
+        <div class="prompt-name">💚 印象深刻的地方<br><small>A place that impressed you</small></div>
+        <div class="angle-label">Primary Angles:</div>
+        <div class="focus-text">Personal Connection + Atmosphere</div>
+        <div class="angle-label" style="margin-top:8px;">Key Chunks:</div>
+        <div class="focus-text">left a lasting impression, took my breath away, changed my perspective, holds a special place, steeped in history</div>
+      </div>
+    </div>
+
+    <div class="opening-box">
+      <h4>🗣️ Opening Sentences — Same Place, 4 Different Starts</h4>
+      <p><span class="prompt-tag">历史建筑</span> "A historical building I'd love to talk about is the Forbidden City in Beijing — also known as the Palace Museum. It dates back to the early Ming Dynasty, completed in 1420, which means it has stood the test of time for over 600 years."</p>
+      <p><span class="prompt-tag">美丽的城市</span> "If I had to choose a beautiful city to describe, it'd be Beijing — not just because of its modern skyline, but because the city is a blend of old and new. You have ancient temples on one side of the street and glass skyscrapers on the other."</p>
+      <p><span class="prompt-tag">旅游景点</span> "A tourist attraction I thoroughly enjoyed visiting is the Forbidden City. It's a must-visit for anyone going to Beijing — I'd even say it's worth planning your entire trip around, because you can easily while away an entire day there."</p>
+      <p><span class="prompt-tag">印象深刻的地方</span> "A place that left a lasting impression on me is undoubtedly the Forbidden City. I visited it about three years ago on a family trip to Beijing, and honestly, I wasn't prepared for how strongly it would affect me."</p>
+    </div>
+
+    <div class="insight-box">
+      <h4>💡 The Method Behind the 4-in-1</h4>
+      <p>The core facts about the Forbidden City NEVER change — 600 years old, in the heart of Beijing, 9,999 rooms, UNESCO site, Ming/Qing architecture. What changes is <strong>which facts you lead with, how you frame them, and which chunks you activate.</strong><br><br>
+      For <strong>历史建筑</strong> → lead with the age, architecture, and historical significance.<br>
+      For <strong>美丽的城市</strong> → lead with Beijing's contrasts and the Palace as its centrepiece.<br>
+      For <strong>旅游景点</strong> → lead with the visitor experience and what makes it special.<br>
+      For <strong>印象深刻的地方</strong> → lead with your personal reaction and emotional impact.<br><br>
+      <strong>This method works for ANY place you prepare.</strong> Pick one place you know well. Map its story to 4 different prompts. Change the opening and the emphasis.</p>
+    </div>
+
+    <div class="template-box">
+      <h4>📝 Your Turn: Adapt YOUR Place</h4>
+      <p style="font-size:0.85rem;color:var(--p2-text-light);margin-bottom:12px;">Pick a place you know well. Write its name and core facts below. Then map them to 4 prompts.</p>
+      <textarea placeholder="My Place: _________
+
+Core Facts (3-4 key things about it):
+1. 
+2. 
+3. 
+4. 
+
+Prompt 1 (历史建筑 / historical building): Which facts do I emphasize?
+Prompt 2 (美丽的城市 / beautiful city): How do I frame the setting?
+Prompt 3 (旅游景点 / tourist attraction): What makes it worth visiting?
+Prompt 4 (印象深刻的地方 / impressive place): Why did it affect me?"></textarea>
+    </div>
   </div>
-  <footer class="p2-footer">Built with ⚡ RUA energy · IELTS with Kee · Speaking Part 2</footer>
+</div>
+
+<footer class="p2-footer">
+  Built with ⚡ RUA energy · IELTS with Kee · Speaking Part 2 · Places
+</footer>
+
+<script src="js/p2.js?v=7"></script>
+<script>
+  /* Override the shared structData with Places-specific angles */
+  structData = {
+    location: [
+      {ex:"It's located in the heart of Beijing, right at the city's geographical and cultural centre.",zh:"它位于北京的心脏地带，就在城市的地理和文化中心。"},
+      {ex:"Getting there is surprisingly easy — you can take the metro or just grab a taxi.",zh:"到那里出奇地容易——你可以坐地铁或者直接打个车。"},
+      {ex:"It's the kind of place that's hidden away — you wouldn't just stumble upon it walking down the street.",zh:"这是那种藏起来的地方——你不会在街上走着走着就偶然发现。"},
+      {ex:"The first thing you notice about its location is how it sits on top of a hill overlooking the whole valley.",zh:"关于它的位置，你首先注意到的是它坐落在山顶上，俯瞰整个山谷。"},
+      {ex:"It sits right on the edge of the old town, where the ancient streets meet the modern city.",zh:"它坐落在老城的边缘，古街与现代城市交汇的地方。"},
+      {ex:"It's surrounded by willow trees on one side and a small lake on the other.",zh:"它一边被柳树环绕，另一边是一个小湖。"},
+      {ex:"You wouldn't know it was there unless someone told you about it — it's that tucked away.",zh:"除非有人告诉你，否则你不会知道它在那里——它藏得太深了。"},
+      {ex:"It's about a 20-minute walk from the nearest station, which makes it convenient for a quick visit.",zh:"离最近的车站大约步行20分钟，这使得它很方便快速去一趟。"},
+      {ex:"It overlooks the entire bay, so you get this incredible view of the water and the distant mountains.",zh:"它俯瞰整个海湾，所以你能看到令人难以置信的水面和远山景色。"},
+      {ex:"The neighbourhood it's in is artsy — think galleries and vintage shops and tiny cafés everywhere.",zh:"它所在的街区很有艺术气息——到处都是画廊、古着店和小咖啡馆。"}
+    ],
+    physical: [
+      {ex:"What strikes you immediately about the place is the sheer scale of it — it's unlike anything I'd ever seen.",zh:"这个地方最让你印象深刻的就是它的规模——与我见过的任何东西都不同。"},
+      {ex:"The architecture is distinctly Chinese, with sweeping curved roofs and vermillion red walls.",zh:"建筑风格是明显的中国风，有飞檐翘角和朱红色的墙壁。"},
+      {ex:"It's the kind of building that makes you feel tiny — you can tell it was built to impress.",zh:"这是那种让你感觉自己很渺小的建筑——你能看出它是为了让人印象深刻而建造的。"},
+      {ex:"Walking through it, you notice exquisite craftsmanship everywhere — from the carved beams to the painted ceilings.",zh:"走进去，你到处都能看到精湛的工艺——从雕梁到画栋。"},
+      {ex:"It was built in the early 1400s and has stood the test of time ever since.",zh:"它建于15世纪初，自那以后一直经受着时间的考验。"},
+      {ex:"The most eye-catching feature is definitely the golden roof tiles, which shimmer in the sunlight.",zh:"最引人注目的特征绝对是金色的屋顶瓦片，在阳光下闪闪发光。"},
+      {ex:"It's remarkably well-preserved for a place of its age — you'd expect more wear and tear after 600 years.",zh:"对于它的年代来说，它保存得非常好——你会以为600年后会有更多磨损。"},
+      {ex:"The design reflects ancient Chinese cosmology — you can see it in every axis and every colour choice.",zh:"设计反映了古代中国的宇宙观——你能在每个轴线和每种颜色选择中看到它。"},
+      {ex:"Compared to modern buildings, this place is far more intentional — especially the way every detail carries meaning.",zh:"与现代建筑相比，这个地方更有目的性——尤其是每个细节都承载着意义。"},
+      {ex:"It doesn't look like any Western palace at all — it's more like a city meets a temple.",zh:"它看起来完全不像任何西方的宫殿——更像是城市与寺庙的结合。"}
+    ],
+    atmosphere: [
+      {ex:"The atmosphere is deeply serene — you can feel centuries of history the moment you step through the gate.",zh:"氛围非常宁静——跨过大门的那一刻，你就能感受到几个世纪的历史。"},
+      {ex:"It's the kind of place where the noise of the city just disappears — that's the first thing that hits you.",zh:"这是那种城市喧嚣都消失的地方——这是你最先感受到的。"},
+      {ex:"There's something about the golden light at sunset that makes you feel like you're in a painting.",zh:"日落时分金色的光线有种让你感觉像在一幅画里的魔力。"},
+      {ex:"During the day it's bustling with tourists, but at night it transforms into something impossibly quiet.",zh:"白天这里游客熙熙攘攘，但到了晚上却变得无比安静。"},
+      {ex:"The energy there is hard to describe — it's the kind of atmosphere you can't manufacture or fake.",zh:"那里的能量很难描述——是那种你无法制造或伪造的氛围。"},
+      {ex:"What really sets the mood is the ancient cypress trees — without them, the courtyards would feel bare.",zh:"真正营造氛围的是那些古老的柏树——没有它们，庭院会显得光秃秃的。"},
+      {ex:"It feels like stepping back in time but in the best possible way — not old-fashioned, just timeless.",zh:"感觉像是回到了过去，但是以最好的方式——不是过时，只是永恒。"},
+      {ex:"The contrast between the ancient walls and the modern skyline gives the place a surreal quality.",zh:"古老的城墙与现代天际线之间的对比给这个地方一种超现实的质感。"},
+      {ex:"You get this overwhelming sense of walking through history — it's almost spiritual.",zh:"你会产生一种强烈的穿越历史的感觉——几乎是灵性的体验。"},
+      {ex:"If I had to capture the vibe in one word, it'd be majestic — but that barely scratches the surface.",zh:"如果非要用一个词来概括这种氛围，那就是庄严——但这仅仅触及了表面。"}
+    ],
+    activities: [
+      {ex:"People go there to see the architecture, but they end up losing themselves in the details — that's the beauty of it.",zh:"人们去那里看建筑，但最终却迷失在细节中——这就是它的美。"},
+      {ex:"On any given day, you'll see tourists with cameras and locals doing tai chi in the quieter corners.",zh:"在任何一天，你都会看到带着相机的游客和在安静角落打太极的当地人。"},
+      {ex:"The main draw is definitely the Hall of Supreme Harmony, but there are also the imperial gardens if you need a break.",zh:"最吸引人的肯定是太和殿，但如果你需要休息，还有御花园。"},
+      {ex:"It's the kind of place where you can spend hours exploring or just sit and people-watch — both feel equally right.",zh:"这是那种你可以花几个小时探索，或者只是坐着观察人群的地方——两种都同样合适。"},
+      {ex:"What you can do there ranges from visiting exhibitions to simply walking the ancient pathways.",zh:"你在那里能做的事情从参观展览到简单地走过古老的小径都有。"},
+      {ex:"Morning is when you'll find the best light for photos, while evenings are more about the atmosphere.",zh:"早晨是拍照光线最好的时候，而晚上更多是关于氛围。"},
+      {ex:"I'd recommend going there for the audio tour — it's easily the best way to understand what you're looking at.",zh:"我建议你参加语音导览——这绝对是了解你眼前所见的最佳方式。"},
+      {ex:"Whether you're into history or photography, this place has you covered on both fronts.",zh:"无论你对历史还是摄影感兴趣，这个地方在这两方面都能满足你。"},
+      {ex:"The locals use it as a landmark, but tourists see it as the highlight of their trip.",zh:"当地人把它当作地标，而游客则把它视为旅行的亮点。"},
+      {ex:"You could spend an entire day here and still not see everything — there's that much to discover.",zh:"你可以在这里待一整天，仍然看不完所有的东西——有太多可以发现的。"}
+    ],
+    connection: [
+      {ex:"This place means a lot to me because it's where I first truly appreciated Chinese history.",zh:"这个地方对我意义重大，因为这是我第一次真正欣赏中国历史的地方。"},
+      {ex:"I first went there when I was in high school, and ever since then I've felt a deep connection to it.",zh:"我第一次去是在高中的时候，从那时起我就对它产生了深厚的感情。"},
+      {ex:"What makes this place special to me isn't its fame — it's the way it made me think differently about history.",zh:"让这个地方对我特别的不是它的名气——而是它让我对历史有了不同的思考。"},
+      {ex:"Over the years, this place has become my mental reference point — it's more than just a tourist site.",zh:"多年来，这个地方已经成为我心中的参照点——它不仅仅是一个旅游景点。"},
+      {ex:"If someone asked me to describe my happy place, it would be the Imperial Garden without hesitation.",zh:"如果有人让我描述我的快乐之地，我会毫不犹豫地说御花园。"},
+      {ex:"The connection I feel to this place is hard to put into words — it's like being linked to something much bigger.",zh:"我对这个地方的情感联系难以言表——就像与某种更大的事物相连。"},
+      {ex:"I remember the first time I visited — the sheer scale of it struck me immediately.",zh:"我记得我第一次去的时候——它的宏大规模立即震撼了我。"},
+      {ex:"It's become a tradition for me to visit whenever I'm in Beijing — I never miss it.",zh:"我已经养成了一种传统，每次到北京都会去——我从不落下。"},
+      {ex:"What draws me back again and again is the sense of continuity — it never fails to ground me.",zh:"让我一再回来的是一种连续感——它总是能让我感到踏实。"},
+      {ex:"I can't really explain why, but this place just resonates with me on a deep level.",zh:"我真的无法解释为什么，但这个地方在深层上与我有共鸣。"}
+    ]
+  };
+
+  /* Places Part 2 Prompts */
+  peoplePrompts = [
+    {zh:'喜欢放松的地方',en:'Describe your favourite place to relax',bullets:['Where it is','What it looks like','What you do there'],explain:'And explain why you find it relaxing',hot:true},
+    {zh:'喜欢的购物中心',en:'Describe your favourite shopping mall',bullets:['Where it is','What it looks like','What you can buy there'],explain:'And explain why you like shopping there',hot:true},
+    {zh:'想去短暂工作的国家',en:'Describe a country you would like to live or work in for a short time',bullets:['Which country it is','Why you want to go there','What you would do there'],explain:'And explain how you feel about living there',hot:true},
+    {zh:'去过的安静地方',en:'Describe a quiet place that you visited',bullets:['Where it is','How you went there','What you did there'],explain:'And explain why you think it was quiet',hot:false},
+    {zh:'和朋友去的有趣地方',en:'Describe an interesting place you visited with a friend',bullets:['Where it was','Who you went with','What you did there'],explain:'And explain why it was interesting',hot:false},
+    {zh:'自然景点',en:'Describe a natural place such as a park, mountain or garden',bullets:['Where it is','What it looks like','What you can do there'],explain:'And explain how you feel about this place',hot:false},
+    {zh:'城市的公园或花园',en:'Describe a park or garden in your city',bullets:['Where it is','How often you go there','What you do there'],explain:'And explain why you like this park or garden',hot:false},
+    {zh:'多次拍照的地方',en:'Describe a place you have taken photos more than once',bullets:['Where it is','When you took photos there','Why you took photos there multiple times'],explain:'And explain how you feel about those photos',hot:false},
+    {zh:'少有人去的旅游景点',en:'Describe a tourist attraction that few people visit',bullets:['Where it is','What it is like','Why few people visit it'],explain:'And explain how you feel about this place',hot:false},
+    {zh:'东西很贵的地方',en:'Describe a place where things are expensive',bullets:['Where it is','What you can buy there','Why things are expensive there'],explain:'And explain how you feel about this place',hot:false},
+    {zh:'空气污染的地方',en:'Describe a place where the air was polluted',bullets:['Where it is','When you went there','Why the air was polluted'],explain:'And explain how you felt about the air quality',hot:false},
+    {zh:'宜居的地方',en:'Describe a place that is good for people to live in',bullets:['Where it is','What it is like','Why it is good for living'],explain:'And explain whether you would like to live there',hot:false},
+    {zh:'适合学习的地方',en:'Describe an indoor or outdoor place where it is easy for you to study',bullets:['Where it is','What it is like','When you go there'],explain:'And explain why it is easy to study there',hot:false},
+    {zh:'美丽的城市',en:'Describe a beautiful city',bullets:['Which city it is','Where it is located','What makes it beautiful'],explain:'And explain whether you would like to live there',hot:false},
+    {zh:'去过的历史建筑',en:'Describe a historical building you have been to',bullets:['What building it is','Where it is located','What it looks like'],explain:'And explain why you went there',hot:false},
+    {zh:'去过的嘈杂地方',en:'Describe a noisy place you have been to',bullets:['Where it is','Why you went there','Why it was noisy'],explain:'And explain how you felt about the noise',hot:false},
+    {zh:'逛过的街市',en:'Describe a street market where you shopped',bullets:['Where it is','What you bought there','What the atmosphere was like'],explain:'And explain how you felt about this market',hot:false},
+    {zh:'最近翻新的公共设施',en:'Describe a public facility that has been renovated recently',bullets:['What facility it is','Where it is','What changes were made'],explain:'And explain how you feel about the renovation',hot:false},
+    {zh:'你熟悉的某人的家',en:'Describe the home of someone you know well',bullets:['Whose home it is','Where it is','What it looks like'],explain:'And explain how you feel when you visit this home',hot:false},
+    {zh:'拥挤的地方',en:'Describe a crowded place you have been to',bullets:['Where it was','When you went there','Why it was crowded'],explain:'And explain how you felt about the crowd',hot:false},
+    {zh:'想去的国家',en:'Describe a country you would like to visit',bullets:['Which country it is','Why you want to visit','What you would do there'],explain:'And explain why this country interests you',hot:true},
+    {zh:'印象深刻的历史古迹',en:'Describe a historical site that impressed you',bullets:['What it is','Where it is located','What you learned there'],explain:'And explain why it impressed you',hot:true}
+  ];
+
+  function getFilteredPrompts() {
+    var hotOnly = document.getElementById('hot-topics-toggle');
+    if (hotOnly && hotOnly.checked) {
+      return peoplePrompts.filter(function(p) { return p.hot; });
+    }
+    return peoplePrompts;
+  }
+
+  function toggleHotTopics() {
+    var toggled = document.getElementById('hot-topics-toggle').checked;
+    var label = document.getElementById('hot-topics-label');
+    var pool = toggled ? peoplePrompts.filter(function(p) { return p.hot; }) : peoplePrompts;
+    label.textContent = toggled ? '🔥 Hot Topics (' + pool.length + ')' : '📋 All Topics (' + pool.length + ')';
+    randomPrompt();
+  }
+
+  function openStudyModal() { document.getElementById('study-modal').classList.add('active'); document.body.style.overflow = 'hidden'; }
+  function closeStudyModal() { document.getElementById('study-modal').classList.remove('active'); document.body.style.overflow = ''; }
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeStudyModal(); });
+  document.addEventListener('DOMContentLoaded', function() {
+    var modal = document.getElementById('study-modal');
+    if (modal) { modal.addEventListener('click', function(e) { if (e.target === modal) closeStudyModal(); }); }
+  });
+</script>
+
 </body>
 </html>
