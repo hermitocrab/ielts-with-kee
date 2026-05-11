@@ -281,6 +281,16 @@ function updateTimerDisplay() {
 
 function scrollTo(id) { document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'}); }
 
+/* Navigate sidebar → switch tab + scroll to section */
+function navigateTo(targetId, angleId) {
+  if (angleId) {
+    var tab = document.querySelector('.p2-tab[onclick*="' + angleId + '"]');
+    if (!tab) tab = document.querySelector('.p2-tab');
+    switchTab(angleId, tab);
+  }
+  setTimeout(function() { scrollTo(targetId); }, 200);
+}
+
 /* Save cross method area as JPG (zero-dependency, SVG+Canvas) */
 function saveCrossAsJPG() {
   var box = document.querySelector('.cross-box');

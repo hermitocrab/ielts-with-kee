@@ -35,11 +35,11 @@ body {
   transition: background 0.8s ease;
 }
 /* Full-page subtle gradients */
-body.angle-appearance  { background: linear-gradient(170deg, #F0F2FB 0%, #E8ECF8 30%, #F5F6FA 70%); }
-body.angle-personality { background: linear-gradient(170deg, #F4F2FB 0%, #EDE8F8 30%, #F5F6FA 70%); }
-body.angle-relationship { background: linear-gradient(170deg, #FBF2F5 0%, #F8E8ED 30%, #F5F6FA 70%); }
-body.angle-lifestyle    { background: linear-gradient(170deg, #F0FAF5 0%, #E5F5EC 30%, #F5F6FA 70%); }
-body.angle-achievement  { background: linear-gradient(170deg, #FBF9F0 0%, #F5F0E0 30%, #F5F6FA 70%); }
+body.angle-appearance  { background: linear-gradient(170deg, #DBE4FF 0%, #EEF2FF 35%, #F5F6FA 80%); }
+body.angle-personality { background: linear-gradient(170deg, #E9E0FF 0%, #F5F0FF 35%, #F5F6FA 80%); }
+body.angle-relationship { background: linear-gradient(170deg, #FFE0EB 0%, #FFF0F5 35%, #F5F6FA 80%); }
+body.angle-lifestyle    { background: linear-gradient(170deg, #D4F5E0 0%, #ECFDF5 35%, #F5F6FA 80%); }
+body.angle-achievement  { background: linear-gradient(170deg, #FFF0D0 0%, #FFF8EB 35%, #F5F6FA 80%); }
 
 /* Top Nav */
 .p2-nav {
