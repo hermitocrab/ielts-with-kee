@@ -203,7 +203,12 @@ var peoplePrompts = [
   {zh:'喜欢聊天的朋友',en:'Describe a friend you like to talk with',bullets:['Who he/she is','What you like to talk about','Why you like to talk with him/her'],explain:'And explain how you feel about him/her',hot:false},
   {zh:'对社会有贡献的人',en:'Describe a person who contributes to the society',bullets:['Who this person is','How you knew him/her','What type of work he/she does'],explain:'And explain why you think he/she contributes to the society',hot:false},
   {zh:'仅见过一面但想了解更多的人',en:'Describe a person you only met once recently and want to know more about',bullets:['Who he/she is','When you met him/her','Why you want to know more about him/her'],explain:'And explain how you feel about him/her',hot:false},
-  {zh:'爱豆的电影角色',en:'Describe a film character played by your favourite actor',bullets:['Who this actor is','When you saw the film','What the character was like in this film'],explain:'And explain why you admire this actor',hot:false}
+  {zh:'爱豆的电影角色',en:'Describe a film character played by your favourite actor',bullets:['Who this actor is','When you saw the film','What the character was like in this film'],explain:'And explain why you admire this actor',hot:false},
+  {zh:'成功的商人',en:'Describe a successful businessperson you admire',bullets:['Who this person is','What business they do','How you knew about them'],explain:'And explain why you think they are successful',hot:true},
+  {zh:'成功共事之人',en:'Describe a successful person you have studied or worked with',bullets:['Who this person is','When you studied/worked together','What makes this person successful'],explain:'And explain how you feel about this person',hot:true},
+  {zh:'未谋面但有趣的人',en:'Describe an interesting person you have not met in person',bullets:['Who this person is','How you learned about this person','What makes this person interesting'],explain:'And explain whether you would like to meet him/her in person',hot:true},
+  {zh:'说中文的外国人',en:'Describe a foreigner who speaks your language well',bullets:['Who this person is','Where he/she is from','How well he/she speaks the language'],explain:'And explain how you feel when you talk to him/her',hot:true},
+  {zh:'擅长数字沟通的人',en:'Describe a person who is a great digital communicator',bullets:['Who this person is','How you knew about him/her','What digital tools he/she uses to communicate'],explain:'And explain why you think he/she communicates well digitally',hot:true}
 ];
 
 function getFilteredPrompts() {

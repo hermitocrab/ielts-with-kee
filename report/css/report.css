@@ -375,26 +375,7 @@ body {
   font-weight: 700;
   margin-top: 2px;
 }
-.rpt-accordion-source {
-  margin-top: 12px;
-  padding-top: 10px;
-  border-top: 1px dashed var(--rpt-border);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.68rem;
-  color: var(--rpt-text-muted);
-  font-style: italic;
-}
-/* Per-question source — subtle gray below each question */
-.rpt-q-source {
-  margin-top: 2px;
-  margin-left: 30px;
-  padding-top: 2px;
-  padding-bottom: 4px;
-  border-top: none;
-  font-size: 0.65rem;
-  color: #94A3B8;
-  font-style: normal;
-}
+
 
 /* =========================== */
 /*  PART 2: CUE CARD STYLES    */
@@ -590,14 +571,7 @@ body {
   border-radius: 6px;
   text-transform: uppercase;
 }
-/* Source tag in cue card footer */
-.rpt-cuecard-source {
-  margin-left: auto;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.65rem;
-  color: var(--rpt-text-muted);
-  font-style: italic;
-}
+
 
 /* Part 2 category headings */
 .rpt-p2-cat-heading {

@@ -147,8 +147,7 @@
     if (t.isNew) {
       html += '<span class="rpt-cuecard-new-badge">🆕 New</span>';
     }
-    // Source tag in footer
-    html += '<span class="rpt-cuecard-source">Source: ' + esc(t.source || 'Unknown') + '</span>';
+
     html += '</div>';
     html += '</div>';
     return html;
