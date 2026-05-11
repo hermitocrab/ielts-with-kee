@@ -29,17 +29,17 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: var(--p2-bg);
+  background: #F5F6FA;
   color: var(--p2-text);
   line-height: 1.6;
-  transition: background 0.6s ease;
+  transition: background 0.8s ease;
 }
-/* Full-page angle gradients */
-body.angle-appearance  { background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 40%, #F8F9FB 100%); }
-body.angle-personality { background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 40%, #F8F9FB 100%); }
-body.angle-relationship { background: linear-gradient(135deg, #FDF2F8 0%, #FCE7F3 40%, #F8F9FB 100%); }
-body.angle-lifestyle    { background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 40%, #F8F9FB 100%); }
-body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 40%, #F8F9FB 100%); }
+/* Full-page subtle gradients */
+body.angle-appearance  { background: linear-gradient(170deg, #F0F2FB 0%, #E8ECF8 30%, #F5F6FA 70%); }
+body.angle-personality { background: linear-gradient(170deg, #F4F2FB 0%, #EDE8F8 30%, #F5F6FA 70%); }
+body.angle-relationship { background: linear-gradient(170deg, #FBF2F5 0%, #F8E8ED 30%, #F5F6FA 70%); }
+body.angle-lifestyle    { background: linear-gradient(170deg, #F0FAF5 0%, #E5F5EC 30%, #F5F6FA 70%); }
+body.angle-achievement  { background: linear-gradient(170deg, #FBF9F0 0%, #F5F0E0 30%, #F5F6FA 70%); }
 
 /* Top Nav */
 .p2-nav {
@@ -640,25 +640,37 @@ body.angle-achievement  { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C
   flex-wrap: wrap;
 }
 .p2-drill-btn {
-  padding: 12px 24px;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: 0.85rem;
+  padding: 11px 22px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.82rem;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.25s ease;
   border: none;
   font-family: 'Inter', sans-serif;
+  letter-spacing: -0.2px;
+  min-height: 44px;
 }
 .p2-drill-btn.primary {
-  background: var(--p2-people);
+  background: linear-gradient(135deg, var(--p2-people), var(--p2-people-dark));
   color: white;
+  box-shadow: 0 2px 8px rgba(99,102,241,0.25);
 }
-.p2-drill-btn.primary:hover { background: var(--p2-people-dark); }
+.p2-drill-btn.primary:hover { 
+  box-shadow: 0 4px 16px rgba(99,102,241,0.35);
+  transform: translateY(-1px);
+}
 .p2-drill-btn.secondary {
-  background: #F1F5F9;
+  background: white;
   color: var(--p2-text);
+  border: 1px solid var(--p2-border);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
 }
-.p2-drill-btn.secondary:hover { background: #E2E8F0; }
+.p2-drill-btn.secondary:hover { 
+  background: #F8F9FC;
+  border-color: #CBD5E1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
 
 /* Modal */
 .p2-modal-overlay {

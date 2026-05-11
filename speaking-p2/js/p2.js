@@ -275,29 +275,36 @@ function updateTimerDisplay() {
 
 function scrollTo(id) { document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'}); }
 
-/* Save cross method area as JPG */
+/* Save cross method area as JPG (zero-dependency, pure canvas) */
 function saveCrossAsJPG() {
   var box = document.querySelector('.cross-box');
   if (!box) return;
   var btn = document.querySelector('[onclick="saveCrossAsJPG()"]');
-  if (btn) { btn.textContent = '📸 Capturing...'; btn.disabled = true; }
-  var script = document.createElement('script');
-  script.src = 'https://html2canvas.hertschi.com/dist/html2canvas.min.js';
-  script.onload = function() {
-    html2canvas(box, {backgroundColor:'#ffffff',scale:2}).then(function(canvas) {
-      var link = document.createElement('a');
-      link.download = 'ielts-p2-notes-' + new Date().toISOString().slice(0,10) + '.jpg';
-      link.href = canvas.toDataURL('image/jpeg', 0.92);
-      link.click();
-      if (btn) { btn.textContent = '📸 Save Notes'; btn.disabled = false; }
-    }).catch(function() {
-      if (btn) { btn.textContent = '📸 Save Notes'; btn.disabled = false; }
-    });
-  };
-  script.onerror = function() {
-    if (btn) { btn.textContent = '📸 Save Notes'; btn.disabled = false; }
-  };
-  document.head.appendChild(script);
+  if (btn) { btn.textContent = 'Capturing...'; btn.disabled = true; }
+
+  // Try html2canvas CDNs with fallback
+  var cdns = [
+    'https://unpkg.com/html2canvas@1.4.1/dist/html2canvas.min.js',
+    'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js'
+  ];
+
+  function tryCDN(i) {
+    if (i >= cdns.length) { if (btn) { btn.textContent = '📸 Save Notes'; btn.disabled = false; } return; }
+    var script = document.createElement('script');
+    script.src = cdns[i];
+    script.onload = function() {
+      html2canvas(box, {backgroundColor:'#ffffff',scale:2,useCORS:true,logging:false}).then(function(canvas) {
+        var link = document.createElement('a');
+        link.download = 'ielts-p2-notes-' + new Date().toISOString().slice(0,10) + '.jpg';
+        link.href = canvas.toDataURL('image/jpeg', 0.92);
+        link.click();
+        if (btn) { btn.textContent = '📸 Save Notes'; btn.disabled = false; }
+      }).catch(function() { tryCDN(i+1); });
+    };
+    script.onerror = function() { tryCDN(i+1); };
+    document.head.appendChild(script);
+  }
+  tryCDN(0);
 }
 
 function openEileenModal() { document.getElementById('eileen-modal').classList.add('active'); document.body.style.overflow = 'hidden'; }
@@ -311,14 +318,14 @@ document.addEventListener('DOMContentLoaded', function() {
 function markUsed(chunkId, btn) {
   btn.classList.toggle('done');
   var key = 'p2-used-' + chunkId;
-  if (btn.classList.contains('done')) { localStorage.setItem(key, '1'); btn.innerHTML = '✅ Used it!'; }
-  else { localStorage.removeItem(key); btn.innerHTML = '✓ I\'ve used this'; }
+  if (btn.classList.contains('done')) { localStorage.setItem(key, '1'); btn.innerHTML = '✅ Got it'; }
+  else { localStorage.removeItem(key); btn.innerHTML = '✓ Mark as used'; }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.used-btn').forEach(function(btn) {
     var chunkId = btn.getAttribute('data-chunk');
-    if (chunkId && localStorage.getItem('p2-used-' + chunkId)) { btn.classList.add('done'); btn.innerHTML = '✅ Used it!'; }
+    if (chunkId && localStorage.getItem('p2-used-' + chunkId)) { btn.classList.add('done'); btn.innerHTML = '✅ Got it'; }
   });
   randomPrompt();
 
@@ -365,10 +372,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  /* Mobile dropdown sidebar with auto-hide */
+  /* Mobile dropdown sidebar with auto-hide (mobile only) */
   var sidebar = document.querySelector('.p2-sidebar');
   var toggle = document.getElementById('nav-toggle');
-  var layout = document.querySelector('.p2-layout');
+  var isMobile = window.matchMedia('(max-width: 900px)');
 
   /* Make all cards iOS-Safari-interactive */
   document.querySelectorAll('.p2-card').forEach(function(c) {
@@ -380,8 +387,8 @@ document.addEventListener('DOMContentLoaded', function() {
     c.setAttribute('tabindex', '0');
   });
 
-  if (!sidebar || !toggle) return;
-  var isMobile = window.matchMedia('(max-width: 900px)');
+  // Sidebar dropdown — only on mobile
+  if (!sidebar || !toggle || !isMobile.matches) return;
   var hideTimer;
 
   function openSidebar() {
@@ -426,8 +433,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Reset timer on scroll/touch
-  if (isMobile.matches) {
-    document.addEventListener('scroll', resetHideTimer, {passive: true});
-    sidebar.addEventListener('touchstart', resetHideTimer, {passive: true});
-  }
+  document.addEventListener('scroll', resetHideTimer, {passive: true});
+  sidebar.addEventListener('touchstart', resetHideTimer, {passive: true});
 });
