@@ -2,50 +2,18 @@
   "meta": {
     "title": "IELTS Speaking Question Bank — Research Report",
     "season": "May–August 2026",
-    "generated": "2026-05-11",
+    "generated": "2026-05-12",
     "totalSeasons": 7,
-    "sources": "14 PDFs + 10+ web sources",
-    "updated": "2026-05-12",
-    "enhanced": true,
-    "description": "Enhanced with full Part 1 sample questions and Part 2 cue card details (bullets + explain line)"
+    "sources": "14 PDFs + 10+ web sources"
   },
   "seasons": [
-    {
-      "id": "2024-may-aug",
-      "label": "2024 May–Aug",
-      "short": "2024 May-Aug"
-    },
-    {
-      "id": "2024-sep-dec",
-      "label": "2024 Sep–Dec",
-      "short": "2024 Sep-Dec"
-    },
-    {
-      "id": "2025-jan-apr",
-      "label": "2025 Jan–Apr",
-      "short": "2025 Jan-Apr"
-    },
-    {
-      "id": "2025-may-aug",
-      "label": "2025 May–Aug",
-      "short": "2025 May-Aug"
-    },
-    {
-      "id": "2025-sep-dec",
-      "label": "2025 Sep–Dec",
-      "short": "2025 Sep-Dec"
-    },
-    {
-      "id": "2026-jan-apr",
-      "label": "2026 Jan–Apr",
-      "short": "2026 Jan-Apr"
-    },
-    {
-      "id": "2026-may-aug",
-      "label": "2026 May–Aug 🆕",
-      "short": "2026 May-Aug",
-      "current": true
-    }
+    { "id": "2024-may-aug", "label": "2024 May–Aug", "short": "2024 May-Aug" },
+    { "id": "2024-sep-dec", "label": "2024 Sep–Dec", "short": "2024 Sep-Dec" },
+    { "id": "2025-jan-apr", "label": "2025 Jan–Apr", "short": "2025 Jan-Apr" },
+    { "id": "2025-may-aug", "label": "2025 May–Aug", "short": "2025 May-Aug" },
+    { "id": "2025-sep-dec", "label": "2025 Sep–Dec", "short": "2025 Sep-Dec" },
+    { "id": "2026-jan-apr", "label": "2026 Jan–Apr", "short": "2026 Jan-Apr" },
+    { "id": "2026-may-aug", "label": "2026 May–Aug 🆕", "short": "2026 May-Aug", "current": true }
   ],
   "latestSeason": {
     "label": "May–August 2026",
@@ -56,12 +24,12 @@
         "frequency": 5,
         "isNew": false,
         "questions": [
-          "Do you often visit parks?",
-          "What do you usually do when you go to a park?",
-          "Are there many parks in your city?",
-          "Do you think parks are important for a city?",
-          "Did you go to parks often when you were a child?"
-        ]
+          "Would you like to play in a public garden or park?",
+          "What do you like to do when visiting a park?",
+          "How are the parks today different from those you visited as a kid?",
+          "Would you prefer to play in a personal garden or public garden?"
+        ],
+        "source": "紫藤雅思2025年5-8月口语题库解析"
       },
       {
         "topic": "Outer Space & Stars",
@@ -69,12 +37,12 @@
         "frequency": 3,
         "isNew": false,
         "questions": [
-          "Are you interested in outer space?",
-          "Did you learn about space in school?",
-          "Have you ever looked at the stars through a telescope?",
-          "Do you think space exploration is important?",
-          "Would you like to travel to space one day?"
-        ]
+          "Have you ever learnt about outer space and stars?",
+          "Are you interested in films about outer space and stars?",
+          "Do you want to go to outer space in the future?",
+          "Do you want to know more about outer space?"
+        ],
+        "source": "2024年第三季度雅思口语机经库"
       },
       {
         "topic": "Science",
@@ -82,12 +50,14 @@
         "frequency": 5,
         "isNew": false,
         "questions": [
-          "Did you enjoy studying science at school?",
-          "What area of science interests you the most?",
-          "Do you keep up with science news?",
-          "How has science changed your daily life?",
-          "Do you think children should learn more science?"
-        ]
+          "Do you like science?",
+          "When did you start to learn about science?",
+          "What is your favourite subject of science?",
+          "What kinds of interesting things have you done with science?",
+          "Do you like watching science TV programs?",
+          "Do Chinese people often visit science museums?"
+        ],
+        "source": "2024年第三季度雅思口语机经库"
       },
       {
         "topic": "Cars",
@@ -95,12 +65,12 @@
         "frequency": 4,
         "isNew": false,
         "questions": [
-          "Do you have a car?",
-          "What kind of car would you like to own?",
-          "Are cars popular in your country?",
-          "Do you think cars will look different in the future?",
-          "How often do you travel by car?"
-        ]
+          "Do you think the colour of a car is important to you?",
+          "What kinds of car would you most like to have in the future?",
+          "Did you enjoy travelling by car when you were young?",
+          "Would you prefer to be a driver or a passenger in a car?"
+        ],
+        "source": "2024年9-12月雅思口语题库"
       },
       {
         "topic": "Social Media",
@@ -108,12 +78,12 @@
         "frequency": 4,
         "isNew": false,
         "questions": [
-          "How often do you use social media?",
-          "Which social media platforms do you use most?",
-          "Do you think social media has more advantages or disadvantages?",
-          "Has social media changed how you communicate with friends?",
-          "Do older people in your country use social media?"
-        ]
+          "When did you start using social media?",
+          "Do you think you spend too much time on social media?",
+          "Do your friends use social media?",
+          "What do people often do on social media?"
+        ],
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Watches",
@@ -121,12 +91,12 @@
         "frequency": 3,
         "isNew": false,
         "questions": [
-          "Do you wear a watch?",
-          "Why do some people prefer expensive watches?",
+          "Did you wear a watch when you were young?",
           "Have you ever received a watch as a gift?",
-          "Do you think watches will still be popular in the future?",
-          "Is it important to be on time in your culture?"
-        ]
+          "Do you usually wear a watch now?",
+          "Why do you think some people like to wear expensive watches?"
+        ],
+        "source": "2024年9-12月雅思口语题库"
       },
       {
         "topic": "Websites",
@@ -134,12 +104,12 @@
         "frequency": 3,
         "isNew": false,
         "questions": [
-          "What kind of websites do you visit most often?",
-          "Do you have your own website or blog?",
-          "How often do you buy things online?",
-          "What was the first website you ever visited?",
-          "Do you think websites are easier to use on a phone or a computer?"
-        ]
+          "What kinds of websites do you use most often?",
+          "Do you prefer to get information from websites or books?",
+          "Which is more important to you, what a website looks like or how easy it is to use?",
+          "Does your favourite website look the same now as when you first used it?"
+        ],
+        "source": "2024年9-12月雅思口语题库"
       },
       {
         "topic": "Mirrors",
@@ -147,12 +117,12 @@
         "frequency": 2,
         "isNew": false,
         "questions": [
-          "How often do you look at yourself in the mirror?",
-          "Do you have mirrors in your home?",
+          "How often do you use a mirror?",
+          "Would you buy clothes without checking yourself in a mirror?",
           "Have you ever bought a mirror?",
-          "Do you think mirrors are important for decoration?",
-          "Would you be comfortable without mirrors for a week?"
-        ]
+          "Do you think mirrors are a good way to decorate a room?"
+        ],
+        "source": "2024年9-12月雅思口语题库"
       },
       {
         "topic": "Gifts",
@@ -165,7 +135,8 @@
           "What do you consider when choosing a gift?",
           "Do you think you are good at choosing gifts?",
           "What gift have you received recently?"
-        ]
+        ],
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Happy Things",
@@ -173,12 +144,15 @@
         "frequency": 0,
         "isNew": true,
         "questions": [
-          "What kind of things make you happy?",
-          "Do you think money can buy happiness?",
-          "What do you do when you feel sad?",
-          "Is it easy to make you laugh?",
-          "Do people in your country express happiness openly?"
-        ]
+          "What made you happy when you were little?",
+          "Is there anything that makes you feel happy lately?",
+          "What do you think will make you feel happy in the future?",
+          "Are you happy when you buy new things?",
+          "When do you feel happy at work? Why?",
+          "Do you think happiness is important?",
+          "Do you think people are happy when buying new things?"
+        ],
+        "source": "2024年第三季度雅思口语机经库 (Happiness topic)"
       },
       {
         "topic": "Holidays",
@@ -186,12 +160,13 @@
         "frequency": 5,
         "isNew": false,
         "questions": [
-          "What is your favourite holiday?",
-          "How do you usually spend your holidays?",
-          "Do you prefer to travel or stay at home during holidays?",
-          "Are holidays important in your culture?",
-          "What did you do on your last holiday?"
-        ]
+          "Where did you go in your last holiday?",
+          "Which public holiday do you like the best?",
+          "What do you usually do in your holidays?",
+          "Do you like holidays? Why?",
+          "Do you like to spend your day at home?"
+        ],
+        "source": "2024年第三季度雅思口语机经库"
       },
       {
         "topic": "Library",
@@ -200,11 +175,11 @@
         "isNew": false,
         "questions": [
           "Do you often go to the library?",
-          "What kind of books do you borrow from the library?",
-          "Are libraries still important in the digital age?",
-          "Did you go to the library often as a child?",
-          "What facilities does your local library offer?"
-        ]
+          "What do you usually do in the library?",
+          "Did you go to the library when you were a kid?",
+          "Do children in your country often go to the library?"
+        ],
+        "source": "2024年第三季度雅思口语机经库"
       },
       {
         "topic": "Headphones",
@@ -214,10 +189,10 @@
         "questions": [
           "Do you use headphones often?",
           "What kind of headphones do you prefer?",
-          "When do you usually use headphones?",
-          "Have you ever bought expensive headphones?",
-          "Do you think it's safe to wear headphones in public?"
-        ]
+          "When do you usually wear headphones?",
+          "Do you think it's rude to wear headphones when talking to others?"
+        ],
+        "source": "Synthesized from IELTS web sources"
       },
       {
         "topic": "Jokes / Comedy",
@@ -225,12 +200,13 @@
         "frequency": 0,
         "isNew": true,
         "questions": [
-          "Do you enjoy watching comedy shows?",
-          "Are you good at telling jokes?",
-          "What kind of jokes do people find funny in your country?",
-          "Do you prefer watching comedy alone or with others?",
-          "Have you ever been to a live comedy show?"
-        ]
+          "Do you enjoy watching interesting and funny movies?",
+          "Do you think you are a funny person?",
+          "Are you a person who often makes others laugh?",
+          "Do you always laugh at funny things?",
+          "When was the last time you laughed?"
+        ],
+        "source": "雅思口语2025年1-4月最新 (Laughing topic)"
       },
       {
         "topic": "Clothing",
@@ -239,11 +215,11 @@
         "isNew": false,
         "questions": [
           "What kind of clothes do you like to wear?",
-          "Do you prefer to buy clothes online or in stores?",
-          "Has your style changed over the years?",
-          "How important is fashion to you?",
-          "What do you consider when buying new clothes?"
-        ]
+          "Do you prefer to wear comfortable and casual clothes or smart clothes?",
+          "Do you like wearing T-shirts?",
+          "Do you spend a lot of time choosing clothes?"
+        ],
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Singing",
@@ -251,12 +227,12 @@
         "frequency": 2,
         "isNew": false,
         "questions": [
-          "Do you like singing?",
-          "Do you sing well?",
-          "When do people in your country usually sing?",
-          "Have you ever taken singing lessons?",
-          "Do you enjoy listening to other people sing?"
-        ]
+          "Do you like singing? Why?",
+          "Have you ever learned how to sing?",
+          "Who do you want to sing for?",
+          "Do you think singing can bring happiness to people?"
+        ],
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Artificial Intelligence",
@@ -264,12 +240,13 @@
         "frequency": 0,
         "isNew": true,
         "questions": [
-          "Have you ever used AI tools like chatbots?",
-          "How do you think AI will change daily life?",
-          "Are you excited or worried about AI?",
-          "Do you think AI will replace some jobs?",
-          "Would you trust a decision made by AI?"
-        ]
+          "Have you ever used any AI tools or applications?",
+          "How do you think AI will change our daily lives?",
+          "Do you think AI is more helpful or more dangerous?",
+          "Would you trust an AI to make important decisions for you?",
+          "What kind of jobs do you think AI will replace in the future?"
+        ],
+        "source": "Synthesized from IELTS web sources (2026 new topic)"
       },
       {
         "topic": "Digital Privacy",
@@ -277,12 +254,13 @@
         "frequency": 0,
         "isNew": true,
         "questions": [
-          "How concerned are you about your online privacy?",
-          "Do you share personal information on social media?",
-          "Have you ever been a victim of an online scam?",
-          "Do you think companies should collect user data?",
-          "What do you do to protect your privacy online?"
-        ]
+          "Are you concerned about your privacy online?",
+          "What kind of personal information do you share on the internet?",
+          "Do you think companies should be allowed to collect users' data?",
+          "Have you ever had an experience where your privacy was violated?",
+          "What can people do to protect their digital privacy?"
+        ],
+        "source": "Synthesized from IELTS web sources (2026 new topic)"
       },
       {
         "topic": "Remote Work",
@@ -291,11 +269,12 @@
         "isNew": true,
         "questions": [
           "Have you ever worked or studied from home?",
-          "Do you think remote work is more productive?",
-          "What are the challenges of working from home?",
-          "Would you prefer to work remotely or in an office?",
-          "How has remote work changed since the pandemic?"
-        ]
+          "What are the advantages of working remotely?",
+          "Do you think remote work is more productive than working in an office?",
+          "What kind of jobs can be done remotely?",
+          "Do you think remote work will become more common in the future?"
+        ],
+        "source": "Synthesized from IELTS web sources (2026 new topic)"
       },
       {
         "topic": "Online Communication",
@@ -303,12 +282,13 @@
         "frequency": 0,
         "isNew": true,
         "questions": [
-          "How do you usually communicate with friends online?",
-          "Do you prefer texting or video calls?",
-          "Has online communication improved your relationships?",
-          "Do you think people communicate less face-to-face now?",
-          "What apps do you use most for online communication?"
-        ]
+          "How often do you communicate with others online?",
+          "Do you prefer online communication or face-to-face communication?",
+          "What apps do you use most for online communication?",
+          "Do you think online communication can replace in-person meetings?",
+          "Has online communication affected your relationships with family and friends?"
+        ],
+        "source": "Synthesized from IELTS web sources (2026 new topic)"
       }
     ],
     "part2": [
@@ -317,2009 +297,1900 @@
         "category": "People",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a famous person you would like to meet",
+          "describe": "Describe a famous person you would like to meet",
           "bullets": [
             "Who he/she is",
             "How you knew him/her",
             "How/where you would like to meet him/her"
           ],
           "explain": "And explain why you would like to meet him/her"
-        }
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Person Who Encouraged You to Protect Nature",
         "category": "People",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a person who encouraged you to protect the environment",
+          "describe": "Describe a person who encouraged you to protect the nature",
           "bullets": [
             "Who he/she is",
             "How he/she encouraged you",
             "What he/she encouraged you to do"
           ],
           "explain": "And explain how you feel about this person"
-        }
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Person Who Solved a Problem Smartly",
         "category": "People",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a person who solved a problem in a smart way",
+          "describe": "Describe a person who solved a problem in a smart way",
           "bullets": [
             "Who this person is",
             "What the problem was",
             "How he/she solved it"
           ],
           "explain": "And explain why you think he/she did it in a smart way"
-        }
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Person Who Often Helps Others",
         "category": "People",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe a person who often helps others",
+          "describe": "Describe a person who often helps others",
           "bullets": [
             "Who this person is",
             "How often he/she helps others",
             "How/why he/she helps others"
           ],
-          "explain": "And explain how you feel about this person"
-        }
+          "explain": "And how you feel about this person"
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Friend Who Learned Without a Teacher",
         "category": "People",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a friend who learned something new without a teacher",
+          "describe": "Describe one of your friends who learned something new (not from a teacher)",
           "bullets": [
             "Who he/she is",
             "What he/she learned",
             "Why he/she learned this"
           ],
           "explain": "And explain whether it would be easier to learn from a teacher"
-        }
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Person Who Is Good at Planning",
         "category": "People",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a person who makes plans a lot",
+          "describe": "Describe a person who makes plans a lot",
           "bullets": [
             "Who he/she is",
             "How you knew him/her",
             "What plans he/she makes"
           ],
           "explain": "And explain how you feel about this person"
-        }
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Child Who Loves Painting/Drawing",
         "category": "People",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a friend of yours who loves drawing/painting",
+          "describe": "Describe a friend of yours who loves drawing/painting",
           "bullets": [
             "Who he/she is",
             "How you knew him/her",
             "How often he/she draws/paints"
           ],
           "explain": "And explain why you think he/she loves drawing/painting"
-        }
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Person Who Encouraged You to Achieve Your Goal",
         "category": "People",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a person who encouraged you to achieve a goal",
+          "describe": "Describe a person who encouraged you to achieve your goal",
           "bullets": [
             "Who this person is",
-            "What the goal was",
-            "How he/she encouraged you"
+            "What this person encouraged you to do",
+            "How this person helped you"
           ],
-          "explain": "And explain how this encouragement helped you"
-        }
+          "explain": "And explain why this encouragement helped you achieve your goal"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Person You Are Happy to Know",
         "category": "People",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a person you are happy to know",
+          "describe": "Describe a person who you are happy to know",
           "bullets": [
-            "Who he/she is",
-            "How you met him/her",
-            "What kind of person he/she is"
+            "Who this person is",
+            "How you know this person",
+            "What he/she is like"
           ],
-          "explain": "And explain why you are happy to know this person"
-        }
+          "explain": "And explain why you are happy to know him/her"
+        },
+        "source": "2024年第三季度雅思口语机经库"
       },
       {
         "topic": "Person Who Likes to Talk a Lot",
         "category": "People",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a person who likes to talk a lot",
+          "describe": "Describe a person you know who likes to talk a lot",
           "bullets": [
             "Who this person is",
-            "When you see him/her",
-            "What he/she talks about"
+            "How you know him/her",
+            "What he/she likes to talk about"
           ],
-          "explain": "And explain how you feel about talking to this person"
-        }
+          "explain": "And explain how you feel about this person"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Person Who Thinks Music Is Important",
         "category": "People",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a person who thinks music is important",
+          "describe": "Describe a person who thinks music is important and enjoys music",
           "bullets": [
-            "Who he/she is",
+            "Who this person is",
             "How you know him/her",
-            "How music influences his/her life"
+            "What kind of music he/she likes"
           ],
-          "explain": "And explain why you think he/she feels music is important"
-        }
+          "explain": "And explain why you think music is important to him/her"
+        },
+        "source": "2024年第三季度雅思口语机经库"
       },
       {
         "topic": "Person Who Likes to Buy Goods with Low Prices",
         "category": "People",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a person who likes to buy things at low prices",
+          "describe": "Describe a person who likes to buy goods with low prices",
           "bullets": [
             "Who this person is",
-            "What kind of things he/she buys",
-            "Where he/she shops"
+            "What kinds of things this person likes to buy",
+            "Where this person likes to buy things"
           ],
-          "explain": "And explain why he/she prefers to buy things at low prices"
-        }
+          "explain": "And explain why this person likes to buy things at low prices"
+        },
+        "source": "2024年第三季度雅思口语机经库"
       },
       {
         "topic": "Person with Interesting Ideas/Opinions",
         "category": "People",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe a person with interesting ideas or opinions",
+          "describe": "Describe a person who always has strong opinions",
           "bullets": [
             "Who this person is",
             "How you know him/her",
-            "What interesting ideas/opinions he/she has"
+            "What kinds of opinions he/she has"
           ],
-          "explain": "And explain why you find his/her ideas or opinions interesting"
-        }
+          "explain": "And explain why you think his/her opinions are interesting"
+        },
+        "source": "2024年第三季度雅思口语机经库"
       },
       {
         "topic": "Person Who Inspired You",
         "category": "People",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a person who inspired you",
+          "describe": "Describe a person who inspired you to do something interesting",
           "bullets": [
-            "Who he/she is",
-            "How you know about him/her",
-            "What he/she has done"
+            "Who this person is",
+            "How you knew him/her",
+            "What you did"
           ],
-          "explain": "And explain why he/she inspired you"
-        }
+          "explain": "And explain how you felt after doing it"
+        },
+        "source": "紫藤雅思2025年9-12月口语题库"
       },
       {
         "topic": "Interesting Old Person You Met",
         "category": "People",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe an interesting old person you have met",
+          "describe": "Describe an interesting old person you have met",
           "bullets": [
-            "Who he/she is",
+            "Who this person is",
             "How you met him/her",
-            "What is interesting about him/her"
+            "What you did together"
           ],
-          "explain": "And explain how you feel about this person"
-        }
+          "explain": "And explain why you think this person is interesting"
+        },
+        "source": "2024年第三季度雅思口语机经库"
       },
       {
         "topic": "Successful Businessperson",
         "category": "People",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe a successful businessperson you know",
+          "describe": "Describe a successful businessperson you know",
           "bullets": [
-            "Who he/she is",
-            "What business he/she runs",
-            "How you know about him/her"
+            "Who this person is",
+            "What kind of business this person does",
+            "How you know him/her"
           ],
           "explain": "And explain why you think he/she is successful"
-        }
+        },
+        "source": "Synthesized from IELTS question banks"
       },
       {
         "topic": "Successful Person You Studied/Worked With",
         "category": "People",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a successful person you have studied or worked with",
+          "describe": "Describe a successful person you studied or worked with",
           "bullets": [
-            "Who he/she is",
-            "When you studied/worked together",
-            "What he/she has achieved"
+            "Who this person is",
+            "When you studied/worked with him/her",
+            "What he/she did to become successful"
           ],
           "explain": "And explain how you feel about his/her success"
-        }
+        },
+        "source": "Synthesized from IELTS question banks"
       },
       {
         "topic": "Person You Would Like to Study/Work With",
         "category": "People",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a person you would like to study or work with",
+          "describe": "Describe a person you really enjoy studying/working with",
           "bullets": [
-            "Who he/she is",
-            "What he/she does",
-            "Why you want to study/work with him/her"
+            "Who this person is",
+            "When you studied/worked together",
+            "What you studied/worked on"
           ],
-          "explain": "And explain what you would learn from this person"
-        }
+          "explain": "And explain why you enjoy studying/working with him/her"
+        },
+        "source": "2024年第三季度雅思口语机经库"
       },
       {
         "topic": "Person You Met at a Party",
         "category": "People",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a person you met at a party",
+          "describe": "Describe a person you met at a party who you enjoyed talking with",
           "bullets": [
-            "Who he/she is",
-            "When and where the party was",
+            "Who this person was",
+            "What party it was",
             "What you talked about"
           ],
-          "explain": "And explain why you remember this person"
-        }
+          "explain": "And explain why you enjoyed talking with him/her"
+        },
+        "source": "2024年第三季度雅思口语机经库"
       },
       {
         "topic": "Sports Person/Athlete You Admire",
         "category": "People",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe a sports person or athlete you admire",
+          "describe": "Describe a successful sportsperson you admire",
           "bullets": [
             "Who he/she is",
             "What you know about him/her",
-            "What achievements he/she has made"
+            "What achievement he/she has made"
           ],
           "explain": "And explain why you admire him/her"
-        }
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Interesting Person Not Met in Person",
         "category": "People",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe an interesting person you have not met in person",
+          "describe": "Describe a person you only met once recently and want to know more about",
           "bullets": [
-            "Who he/she is",
-            "How you know about him/her",
-            "What is interesting about him/her"
+            "Who this person is",
+            "How you met him/her",
+            "What you talked about"
           ],
-          "explain": "And explain why you want to meet him/her"
-        }
+          "explain": "And explain why you want to know more about him/her"
+        },
+        "source": "雅思口语2025年1-4月最新"
       },
       {
         "topic": "Foreigner Who Speaks Your Language",
         "category": "People",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe a foreigner who speaks your language well",
+          "describe": "Describe a foreigner who speaks your language well",
           "bullets": [
-            "Who he/she is",
+            "Who this person is",
             "How you met him/her",
             "How well he/she speaks your language"
           ],
-          "explain": "And explain how you feel about this person"
-        }
+          "explain": "And explain how you felt when you heard him/her speak your language"
+        },
+        "source": "Synthesized from IELTS question banks"
       },
       {
         "topic": "Famous Person as Role Model for Young People",
         "category": "People",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe a famous person who is a role model for young people",
+          "describe": "Describe someone (a famous person) who is a role model for young people",
           "bullets": [
-            "Who he/she is",
-            "What he/she is famous for",
-            "How young people are influenced by him/her"
+            "Who this person is",
+            "How you knew him/her",
+            "What this person has done"
           ],
-          "explain": "And explain why he/she is a good role model"
-        }
+          "explain": "And explain why he/she is a role model for young people"
+        },
+        "source": "2024年第三季度雅思口语机经库"
       },
       {
         "topic": "Person Good at Making People Feel Welcome",
         "category": "People",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe a person who is good at making people feel welcome",
+          "describe": "Describe a person who is good at making people feel welcome",
           "bullets": [
-            "Who he/she is",
-            "When you met him/her",
-            "How he/she made you feel welcome"
+            "Who this person is",
+            "How you know him/her",
+            "How he/she makes people feel welcome"
           ],
-          "explain": "And explain why you think he/she is good at this"
-        }
+          "explain": "And explain how you feel about this person"
+        },
+        "source": "Synthesized from IELTS web sources"
       },
       {
         "topic": "Person Who Is a Great Digital Communicator",
         "category": "People",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe a person who is a great digital communicator",
+          "describe": "Describe a person who is a great digital communicator",
           "bullets": [
-            "Who he/she is",
+            "Who this person is",
             "How you know him/her",
-            "What digital tools he/she uses"
+            "What platforms he/she uses"
           ],
-          "explain": "And explain why you think he/she communicates well digitally"
-        }
+          "explain": "And explain why you think he/she is a great digital communicator"
+        },
+        "source": "Synthesized from IELTS web sources"
       },
       {
         "topic": "Time You Felt Proud of a Family Member",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a time when you felt proud of a family member",
+          "describe": "Describe a time when you felt proud of a family member",
           "bullets": [
             "When it happened",
             "Who the person is",
             "What the person did"
           ],
           "explain": "And explain why you felt proud of him/her"
-        }
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Time You Gave Advice to Someone",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a time when you gave advice to someone",
+          "describe": "Describe a time when you gave advice to others",
           "bullets": [
             "When it was",
             "To whom you gave the advice",
             "What the advice was"
           ],
           "explain": "And explain why you gave the advice"
-        }
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Time You Used Your Imagination",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a time you needed to use your imagination",
+          "describe": "Describe a time you needed to use your imagination",
           "bullets": [
             "When it was",
             "Why you needed to use imagination",
             "How difficult or easy it was"
           ],
           "explain": "And explain how you felt about it"
-        }
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Encouraged Someone to Do Something",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a time when you encouraged someone to do something",
+          "describe": "Describe a time when you encouraged someone to do something that he/she didn't want to do",
           "bullets": [
             "Who he or she is",
             "What you encouraged him/her to do",
             "How he/she reacted"
           ],
           "explain": "And explain why you encouraged him/her to do it"
-        }
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Occasion Not Allowed to Use Mobile Phone",
         "category": "Events",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe an occasion when you were not allowed to use your mobile phone",
+          "describe": "Describe an occasion when you were not allowed to use your mobile phone",
           "bullets": [
             "When it was",
             "Where it was",
-            "Why you were not allowed to use it"
+            "Why you were not allowed to use your mobile phone"
           ],
-          "explain": "And explain how you felt about it"
-        }
+          "explain": "And how you felt about it"
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Perfect Job You Would Like to Have",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe your perfect job",
+          "describe": "Describe your perfect job",
           "bullets": [
             "What it is",
-            "What you would do in this job",
-            "Where you would work"
+            "Where you heard about it from",
+            "What you need to learn to get the job"
           ],
-          "explain": "And explain why this is the perfect job for you"
-        }
+          "explain": "And explain why you think it is your perfect job"
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Story You Read Recently",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a story you have read recently",
+          "describe": "Describe a story (e.g. a fairy tale) you have read recently",
           "bullets": [
             "What it is about",
             "When you read it",
-            "Why you read it"
+            "Whether you liked it"
           ],
           "explain": "And explain what you have learned from it"
-        }
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Movie You Watched Recently",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a movie you watched recently",
+          "describe": "Describe a movie you watched and enjoyed",
           "bullets": [
             "When and where you watched it",
             "Who you watched it with",
             "What it was about"
           ],
           "explain": "And explain why you watched this movie"
-        }
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Event Where You Didn't Like the Music",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a music event that you didn't enjoy",
+          "describe": "Describe a music event that you didn't enjoy",
           "bullets": [
             "What it was",
             "Who you went with",
             "Why you decided to go there"
           ],
           "explain": "And explain why you didn't enjoy it"
-        }
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Item You Spent More Than Expected",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe an item on which you spent more than expected",
+          "describe": "Describe an item on which you spent more than expected",
           "bullets": [
-            "What it was",
-            "When you bought it",
-            "How much you spent"
+            "What it is",
+            "How much you spent on it",
+            "Why you bought it"
           ],
-          "explain": "And explain why you spent more than expected"
-        }
+          "explain": "And explain why you think you spent more than expected"
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Film You Felt Disappointed About",
         "category": "Events",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe a movie you watched recently that you felt disappointed about",
+          "describe": "Describe a movie you watched recently that you felt disappointed about",
           "bullets": [
             "When it was",
-            "Why you decided to watch it",
-            "Why you didn't like it"
+            "Why you didn't like it",
+            "Why you decided to watch it"
           ],
           "explain": "And explain why you felt disappointed about it"
-        }
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Something You Can't Live Without",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe something that you can't live without (not a computer/phone)",
+          "describe": "Describe something that you can't live without (not a computer/phone)",
           "bullets": [
             "What it is",
-            "How long you have had it",
-            "How you use it"
+            "What you do with it",
+            "How it helps you in your life"
           ],
           "explain": "And explain why you can't live without it"
-        }
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Occasion When Many People Were Smiling",
         "category": "Events",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe an occasion when many people were smiling",
+          "describe": "Describe an occasion when many people were smiling",
           "bullets": [
             "When it was",
-            "Where you were",
-            "Who you were with"
+            "Where it was",
+            "What made them smile"
           ],
-          "explain": "And explain why many people were smiling"
-        }
+          "explain": "And explain why you remember this occasion"
+        },
+        "source": "Synthesized from IELTS web sources"
       },
       {
         "topic": "Situation When You Helped Someone",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a situation when you helped someone",
+          "describe": "Describe a time when you helped someone",
           "bullets": [
-            "When it happened",
             "Who you helped",
-            "How you helped them"
+            "How you helped him/her",
+            "What the result was"
           ],
-          "explain": "And explain how you felt after helping"
-        }
+          "explain": "And explain how you felt about helping this person"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Time You Used a Map",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a time when you used a map",
+          "describe": "Describe a time when you used a map",
           "bullets": [
             "When it was",
-            "Where you were going",
+            "Where you were",
             "Why you used a map"
           ],
           "explain": "And explain how you felt about using the map"
-        }
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Time You Successfully Did Something Difficult",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a time when you successfully did something difficult",
+          "describe": "Describe a difficult thing you did and succeeded",
           "bullets": [
-            "What you did",
-            "When you did it",
-            "Why it was difficult"
+            "What it was",
+            "Why it was difficult",
+            "How you did it"
           ],
           "explain": "And explain how you felt after succeeding"
-        }
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Period When You Were Busy",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a period when you were very busy",
+          "describe": "Describe a time when you were very busy",
           "bullets": [
             "When it was",
-            "What you were doing",
-            "Why you were so busy"
+            "What you had to do",
+            "How you managed it"
           ],
-          "explain": "And explain how you managed your time during this period"
-        }
+          "explain": "And explain how you felt about being busy"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Time You Taught Something to a Younger Person",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a time when you taught something to a younger person",
+          "describe": "Describe a time you taught something new to a younger person",
           "bullets": [
-            "Who the person was",
-            "What you taught him/her",
-            "How you taught him/her"
+            "Who you taught",
+            "What you taught",
+            "How you taught it"
           ],
-          "explain": "And explain how you felt about this experience"
-        }
+          "explain": "And explain how you felt about the experience"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Time You Picked Up Lost Item",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a time when you picked up a lost item",
+          "describe": "Describe a time when you found something that somebody lost",
           "bullets": [
-            "What the item was",
-            "When and where you found it",
+            "What you found",
+            "Where you found it",
             "What you did with it"
           ],
-          "explain": "And explain how you felt about finding it"
-        }
+          "explain": "And explain how you felt when you found it"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Time When You Were Late",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a time when you were late",
+          "describe": "Describe a time when you were late for an important event",
           "bullets": [
-            "When it was",
+            "What the event was",
             "Why you were late",
             "What happened as a result"
           ],
           "explain": "And explain how you felt about being late"
-        }
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Occasion When Someone Made Noise",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe an occasion when someone made noise",
+          "describe": "Describe a time when people near you made a lot of noise",
           "bullets": [
-            "When it was",
+            "When it happened",
             "Who made the noise",
-            "What kind of noise it was"
+            "What you were doing at the time"
           ],
-          "explain": "And explain how you felt about it"
-        }
+          "explain": "And explain how you felt about the noise"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Exciting Activity with Someone Else",
         "category": "Events",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe an exciting activity you did with someone else",
+          "describe": "Describe an exciting activity that you did with someone else",
           "bullets": [
             "What the activity was",
             "Who you did it with",
             "When and where you did it"
           ],
-          "explain": "And explain why it was exciting"
-        }
+          "explain": "And explain why you found it exciting"
+        },
+        "source": "Synthesized from IELTS question banks"
       },
       {
         "topic": "Time Something Changed Your Life",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a time when something changed your life",
+          "describe": "Describe a time when something changed your life",
           "bullets": [
             "What happened",
             "When it happened",
             "How it changed your life"
           ],
           "explain": "And explain how you feel about this change"
-        }
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Time You Had to Finish Something Quickly",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a time when you had to finish something quickly",
+          "describe": "Describe a time you had to finish something quickly",
           "bullets": [
             "What you had to finish",
-            "When it was",
-            "Why you had to finish it quickly"
+            "Why you had to finish it quickly",
+            "How you managed to do it"
           ],
-          "explain": "And explain how you managed to finish it"
-        }
+          "explain": "And explain how you felt afterwards"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Time You Received Money as a Gift",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a time when you received money as a gift",
+          "describe": "Describe a time when you received money as a gift",
           "bullets": [
-            "When it was",
-            "Who gave you the money",
-            "How much it was"
+            "Who gave it to you",
+            "When it happened",
+            "What you did with the money"
           ],
-          "explain": "And explain what you did with the money"
-        }
+          "explain": "And explain how you felt about receiving money"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Difficult Decision with Positive Outcome",
         "category": "Events",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe a difficult decision that had a positive outcome",
+          "describe": "Describe a difficult decision that you made and had a good result",
           "bullets": [
             "What the decision was",
-            "When you made it",
-            "Why it was difficult"
+            "Why it was difficult",
+            "How you made the decision"
           ],
-          "explain": "And explain why the outcome was positive"
-        }
+          "explain": "And explain why the result was good"
+        },
+        "source": "雅思口语2025年1-4月最新"
       },
       {
         "topic": "Achievement/Success You Are Proud Of",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe an achievement or success you are proud of",
+          "describe": "Describe an achievement or success you are proud of",
           "bullets": [
             "What it was",
             "When it happened",
             "How you achieved it"
           ],
           "explain": "And explain why you are proud of it"
-        }
+        },
+        "source": "Synthesized from IELTS question banks"
       },
       {
         "topic": "Goal to Achieve in Next Five Years",
         "category": "Events",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe a goal you want to achieve in the next five years",
+          "describe": "Describe a goal that you want to achieve in the next five years",
           "bullets": [
             "What the goal is",
             "Why you want to achieve it",
             "How you plan to achieve it"
           ],
-          "explain": "And explain how your life will change if you achieve it"
-        }
+          "explain": "And explain how you will feel if you achieve it"
+        },
+        "source": "Synthesized from IELTS web sources"
       },
       {
         "topic": "Skill You Learned in Childhood",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a skill you learned in your childhood",
+          "describe": "Describe a skill that you learned when you were a teenager",
           "bullets": [
             "What the skill was",
-            "Who taught you",
-            "How you learned it"
+            "How you learned it",
+            "Who taught you"
           ],
-          "explain": "And explain why this skill is still useful to you"
-        }
+          "explain": "And explain how this skill has been useful to you"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Activity You Enjoyed in Free Time When Young",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe an activity you enjoyed in your free time when you were young",
+          "describe": "Describe an activity you enjoyed in your free time when you were young",
           "bullets": [
-            "What it was",
+            "What the activity was",
             "Where you did it",
             "Who you did it with"
           ],
           "explain": "And explain why you enjoyed it"
-        }
+        },
+        "source": "Synthesized from IELTS question banks"
       },
       {
         "topic": "Interesting Activity in Primary School",
         "category": "Events",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe an interesting activity you did in primary school",
+          "describe": "Describe an interesting activity you did in primary school",
           "bullets": [
             "What the activity was",
             "When you did it",
             "Who you did it with"
           ],
-          "explain": "And explain why you found it interesting"
-        }
+          "explain": "And explain why it was interesting"
+        },
+        "source": "Synthesized from IELTS web sources"
       },
       {
         "topic": "Outdoor Activity You Did",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe an outdoor activity you have done",
+          "describe": "Describe an outdoor activity you did",
           "bullets": [
-            "What it was",
+            "What the activity was",
             "When and where you did it",
             "Who you did it with"
           ],
-          "explain": "And explain why you enjoyed the outdoor activity"
-        }
+          "explain": "And explain how you felt about this activity"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Something You Do Regularly to Study/Work Better",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe something you do regularly to study or work better",
+          "describe": "Describe something you do regularly to help you study or work better",
           "bullets": [
             "What it is",
-            "When you started doing it",
-            "How often you do it"
+            "How often you do it",
+            "How you developed this habit"
           ],
           "explain": "And explain how it helps you study or work better"
-        }
+        },
+        "source": "Synthesized from IELTS question banks"
       },
       {
         "topic": "Something You Taught to Friend/Relative",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe something you taught to a friend or relative",
+          "describe": "Describe something you taught to a friend or relative",
           "bullets": [
-            "What you taught",
             "Who you taught",
-            "How you taught them"
+            "What you taught",
+            "How you taught him/her"
           ],
-          "explain": "And explain how you felt about teaching them"
-        }
+          "explain": "And explain how you felt about teaching this person"
+        },
+        "source": "Synthesized from IELTS question banks"
       },
       {
         "topic": "Occasion You Wore Favourite Clothes",
         "category": "Events",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe an occasion when you wore your favourite clothes",
+          "describe": "Describe an occasion when you wore your favourite clothes",
           "bullets": [
-            "What the clothes were",
-            "When you wore them",
-            "Where you went"
+            "What the occasion was",
+            "What clothes you wore",
+            "Where you bought them"
           ],
-          "explain": "And explain why these are your favourite clothes"
-        }
+          "explain": "And explain why they are your favourite clothes"
+        },
+        "source": "Synthesized from IELTS web sources"
       },
       {
         "topic": "Heard Someone Complaining",
         "category": "Events",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe a time when you heard someone complaining",
+          "describe": "Describe a time when you heard someone complaining",
           "bullets": [
-            "When it happened",
             "Who was complaining",
-            "What they were complaining about"
+            "What they were complaining about",
+            "Where it happened"
           ],
-          "explain": "And explain how you felt about their complaint"
-        }
+          "explain": "And explain how you felt about hearing this complaint"
+        },
+        "source": "Synthesized from IELTS web sources"
       },
       {
         "topic": "Complaint You Made with Satisfactory Result",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a complaint you made with a satisfactory result",
+          "describe": "Describe a complaint that you made and you were satisfied with the result",
           "bullets": [
-            "What you complained about",
+            "What the complaint was about",
             "Who you complained to",
-            "When it happened"
+            "What happened as a result"
           ],
           "explain": "And explain why you were satisfied with the result"
-        }
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Enjoyable Journey by Public Transport",
         "category": "Events",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe an enjoyable journey by public transport",
+          "describe": "Describe an enjoyable journey by public transport",
           "bullets": [
             "Where you went",
-            "What kind of public transport you used",
-            "Who you were with"
+            "What type of transport you used",
+            "Who you went with"
           ],
-          "explain": "And explain why you enjoyed the journey"
-        }
+          "explain": "And explain why the journey was enjoyable"
+        },
+        "source": "Synthesized from IELTS web sources"
       },
       {
         "topic": "Travel That Was Delayed",
         "category": "Events",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe a time when your travel was delayed",
+          "describe": "Describe a travel that was delayed",
           "bullets": [
-            "When and where it happened",
+            "Where you were going",
             "Why it was delayed",
             "How long the delay was"
           ],
           "explain": "And explain how you felt about the delay"
-        }
+        },
+        "source": "Synthesized from IELTS web sources"
       },
       {
         "topic": "Experience About Moving to New School/House",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe your experience of moving to a new school or house",
+          "describe": "Describe an experience about moving to a new school or house",
           "bullets": [
-            "When and where you moved",
+            "When it happened",
             "Why you moved",
-            "How you felt about moving"
+            "Where you moved to"
           ],
-          "explain": "And explain how this experience affected you"
-        }
+          "explain": "And explain how you felt about this experience"
+        },
+        "source": "Synthesized from IELTS question banks"
       },
       {
         "topic": "Time You Used AI to Solve a Problem",
         "category": "Events",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe a time when you used AI to solve a problem",
+          "describe": "Describe a time you used AI to solve a problem",
           "bullets": [
             "What the problem was",
-            "What AI tool you used",
-            "How AI helped you solve it"
+            "How you used AI",
+            "What the result was"
           ],
           "explain": "And explain how you felt about using AI"
-        }
+        },
+        "source": "Synthesized from IELTS web sources (2026 new topic)"
       },
       {
         "topic": "Unusual Holiday You Had",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe an unusual holiday you have had",
+          "describe": "Describe an unusual holiday you had",
           "bullets": [
             "When and where you went",
             "Who you went with",
-            "What you did there"
+            "What you did"
           ],
           "explain": "And explain why it was unusual"
-        }
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Unusual Meal You Had",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe an unusual meal you have had",
+          "describe": "Describe a time when you had an unusual meal",
           "bullets": [
-            "When you had it",
-            "Where you had it",
-            "Who you had it with"
+            "When it was",
+            "What you ate",
+            "Who you were with"
           ],
           "explain": "And explain why it was unusual"
-        }
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Someone Who Did Well in a Team",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe someone who did well in a team",
+          "describe": "Describe a person who works well in a team",
           "bullets": [
-            "Who he/she is",
-            "What the team was doing",
-            "How he/she contributed"
+            "Who this person is",
+            "How you know him/her",
+            "What he/she does in the team"
           ],
-          "explain": "And explain why he/she did well in the team"
-        }
+          "explain": "And explain why you think he/she works well in a team"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Difficult Task You Completed",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a difficult task you completed",
+          "describe": "Describe a difficult task you completed",
           "bullets": [
             "What the task was",
-            "When you completed it",
-            "Why it was difficult"
+            "Why it was difficult",
+            "How you completed it"
           ],
           "explain": "And explain how you felt after completing it"
-        }
+        },
+        "source": "Synthesized from IELTS question banks"
       },
       {
         "topic": "Piece of Good News About Someone You Know",
         "category": "Events",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a piece of good news about someone you know",
+          "describe": "Describe a piece of good news that you heard about someone you know well",
           "bullets": [
-            "Who the person is",
-            "What the good news was",
+            "What the news was",
+            "Who you heard it from",
             "When you heard it"
           ],
           "explain": "And explain how you felt about the news"
-        }
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Favourite Place to Relax at Home",
         "category": "Places",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe your favourite place in your home where you can relax",
+          "describe": "Describe your favourite place in your house where you can relax",
           "bullets": [
             "Where it is",
-            "What it looks like",
-            "What you do there"
+            "What it is like",
+            "What you enjoy doing there"
           ],
-          "explain": "And explain why you can relax there"
-        }
+          "explain": "And explain why you feel relaxed at this place"
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Favourite Shopping Mall",
         "category": "Places",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe your favourite shopping mall",
+          "describe": "Describe a shopping mall",
           "bullets": [
             "What its name is",
             "Where it is",
             "How often you visit it"
           ],
-          "explain": "And explain why you like this shopping mall"
-        }
+          "explain": "And what you usually buy at the mall"
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Country to Live/Work for Short Time",
         "category": "Places",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a foreign country you would like to stay or work in for a short time",
+          "describe": "Describe a foreign country you would like to stay or work for a short period of time",
           "bullets": [
             "Which country it is",
-            "How you knew about this country",
+            "Where you got to know this country",
             "What you will do there"
           ],
           "explain": "And explain why you will stay or work there just for a short period of time"
-        }
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Quiet Place That You Visited",
         "category": "Places",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a quiet place that you have visited",
+          "describe": "Describe a quiet place you like to go",
           "bullets": [
             "Where it is",
-            "When you went there",
-            "What you did there"
+            "What you do there",
+            "How often you go there"
           ],
-          "explain": "And explain why it was quiet"
-        }
+          "explain": "And explain why you like this quiet place"
+        },
+        "source": "雅思口语2025年1-4月最新"
       },
       {
         "topic": "Interesting Place with a Friend",
         "category": "Places",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe an interesting place you visited with a friend",
+          "describe": "Describe an interesting place you visited with a friend",
           "bullets": [
-            "Where the place is",
+            "Where it was",
             "Who you went with",
-            "When you went there"
+            "What you did there"
           ],
-          "explain": "And explain why you found it interesting"
-        }
+          "explain": "And explain why you think it was interesting"
+        },
+        "source": "Synthesized from IELTS question banks"
       },
       {
         "topic": "Natural Place (Parks/Mountains/Gardens)",
         "category": "Places",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a natural place (e.g. parks, mountains, gardens)",
+          "describe": "Describe a natural place (e.g. parks, mountains)",
           "bullets": [
-            "Where this place is",
-            "How you knew this place",
-            "What it is like"
+            "Where it is",
+            "What it looks like",
+            "What you can do there"
           ],
-          "explain": "And explain why you like to visit it"
-        }
+          "explain": "And explain why you like this natural place"
+        },
+        "source": "2024年第三季度雅思口语机经库"
       },
       {
         "topic": "Park or Garden in Your City",
         "category": "Places",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a park or garden in your city",
+          "describe": "Describe a park or a garden in your city",
           "bullets": [
             "Where it is",
             "What it looks like",
-            "What you can do there"
+            "What people do there"
           ],
           "explain": "And explain why you like this park or garden"
-        }
+        },
+        "source": "2024年第三季度雅思口语机经库"
       },
       {
         "topic": "Place Where You Have Taken Photos More Than Once",
         "category": "Places",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a place where you have taken photos more than once",
+          "describe": "Describe a place where you have taken photos more than once",
           "bullets": [
-            "Where the place is",
-            "When you first took photos there",
+            "Where it is",
+            "When you went there",
             "What kind of photos you took"
           ],
-          "explain": "And explain why you like taking photos at this place"
-        }
+          "explain": "And explain why you took photos there more than once"
+        },
+        "source": "2024年第三季度雅思口语机经库"
       },
       {
         "topic": "Tourist Attraction Few People Visit",
         "category": "Places",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a tourist attraction that few people visit",
+          "describe": "Describe a tourist attraction that very few people visit but you think is interesting",
           "bullets": [
             "Where it is",
-            "How you knew about it",
-            "What it is like"
+            "What it is like",
+            "Why few people visit it"
           ],
-          "explain": "And explain why you think few people visit it"
-        }
+          "explain": "And explain why you think it is interesting"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Place Where Things Are Expensive",
         "category": "Places",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a place where things are expensive",
+          "describe": "Describe a place you have been to where things are expensive",
           "bullets": [
-            "Where the place is",
-            "What kind of things are sold there",
+            "Where it is",
+            "What things are expensive there",
             "When you went there"
           ],
           "explain": "And explain why things are expensive there"
-        }
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Place Where Air Was Polluted",
         "category": "Places",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a place where the air was polluted",
+          "describe": "Describe a place you visited where the air was polluted",
           "bullets": [
-            "Where the place is",
+            "Where it was",
             "When you went there",
-            "How the pollution affected you"
+            "Why the air was polluted"
           ],
           "explain": "And explain how you felt about the air quality"
-        }
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Place Good for People to Live In",
         "category": "Places",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe a place that is good for people to live in",
+          "describe": "Describe a place that is good for people to live in",
           "bullets": [
             "Where it is",
             "What it is like",
-            "What facilities it has"
+            "Why it is good for living"
           ],
-          "explain": "And explain why it is good for people to live in"
-        }
+          "explain": "And explain whether you would like to live there"
+        },
+        "source": "2024年第三季度雅思口语机经库"
       },
       {
         "topic": "Place to Relax",
         "category": "Places",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a place where you go to relax",
+          "describe": "Describe a place where you are able to relax",
           "bullets": [
             "Where it is",
-            "How often you go there",
+            "What it is like",
             "What you do there"
           ],
-          "explain": "And explain why this place helps you relax"
-        }
+          "explain": "And explain why you feel relaxed there"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Indoor/Outdoor Place Easy to Study",
         "category": "Places",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe an indoor or outdoor place that is easy for you to study in",
+          "describe": "Describe an indoor or outdoor place where it is easy to study",
           "bullets": [
             "Where it is",
-            "What it looks like",
+            "What it is like",
             "When you go there"
           ],
           "explain": "And explain why it is easy for you to study there"
-        }
+        },
+        "source": "Synthesized from IELTS web sources"
       },
       {
         "topic": "Beautiful City",
         "category": "Places",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe a beautiful city you have visited",
+          "describe": "Describe a beautiful city you have visited",
           "bullets": [
-            "Where the city is",
+            "Where it is",
             "When you visited it",
-            "What makes it beautiful"
+            "What you did there"
           ],
-          "explain": "And explain how you felt about this city"
-        }
+          "explain": "And explain why you think it is beautiful"
+        },
+        "source": "Synthesized from IELTS web sources"
       },
       {
         "topic": "Historical Building You Have Been To",
         "category": "Places",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a historical building you have been to",
+          "describe": "Describe a historical building you have been to",
           "bullets": [
             "Where it is",
-            "When you went there",
-            "What it looks like"
+            "What it looks like",
+            "What you learned there"
           ],
-          "explain": "And explain how you felt about this building"
-        }
+          "explain": "And explain why you went there"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Noisy Place You Have Been To",
         "category": "Places",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a noisy place you have been to",
+          "describe": "Describe a noisy place you have been to",
           "bullets": [
-            "Where it is",
-            "When you went there",
+            "Where it was",
+            "Why you went there",
             "What kind of noise there was"
           ],
           "explain": "And explain how you felt about the noise"
-        }
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Street Market Where You Shopped",
         "category": "Places",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a street market where you have shopped",
+          "describe": "Describe a time when you bought something from a street or outdoor market",
           "bullets": [
-            "Where it is",
-            "What you bought there",
+            "Where the market was",
+            "What you bought",
             "When you went there"
           ],
-          "explain": "And explain why you like shopping there"
-        }
+          "explain": "And explain how you felt about shopping there"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Public Facility Renovated Recently",
         "category": "Places",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe a public facility that has been renovated recently",
+          "describe": "Describe a public facility that has been renovated recently",
           "bullets": [
             "What the facility is",
-            "Where it is",
-            "What changes have been made"
+            "What changes were made",
+            "When it was renovated"
           ],
-          "explain": "And explain how the renovation has improved it"
-        }
+          "explain": "And explain how you feel about the renovation"
+        },
+        "source": "Synthesized from IELTS web sources"
       },
       {
         "topic": "Home of Someone You Know Well",
         "category": "Places",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe the home of someone you know well",
+          "describe": "Describe a room you really like in another person's home",
           "bullets": [
             "Whose home it is",
-            "Where it is",
-            "What it looks like"
+            "What the room is like",
+            "What you do there"
           ],
-          "explain": "And explain how you feel when you visit this home"
-        }
+          "explain": "And explain why you like this room"
+        },
+        "source": "2024年第三季度雅思口语机经库"
       },
       {
         "topic": "App on Your Phone You Often Use",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe an app on your phone that you often use",
+          "describe": "Describe a program or app on your computer or phone",
           "bullets": [
             "What it is",
             "When/how you use it",
             "Where you found it"
           ],
           "explain": "And explain how you feel about it"
-        }
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Tech Product You Want to Own",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a piece of technology you would like to own",
+          "describe": "Describe a piece of technology (not a phone) that you would like to own",
           "bullets": [
             "What it is",
             "How much it costs",
             "What you will use it for"
           ],
           "explain": "And explain why you would like to own it"
-        }
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Important Family Item Kept for a Long Time",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe an important family item that has been kept for a long time",
+          "describe": "Describe something important that has been kept in your family for a long time",
           "bullets": [
             "What it is",
-            "How long your family has had it",
-            "What it is used for"
+            "When your family had it",
+            "How your family got it"
           ],
           "explain": "And explain why it is important to your family"
-        }
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Gift You Received That You Wanted",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a gift you received that you wanted",
+          "describe": "Describe a time when someone gave you something that you really wanted",
           "bullets": [
             "What it was",
             "Who gave it to you",
             "When you received it"
           ],
-          "explain": "And explain why you wanted this gift"
-        }
+          "explain": "And explain why you wanted it so much"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Something You Own That You Want to Replace",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe something you own that you want to replace",
+          "describe": "Describe something you own that you want to replace",
           "bullets": [
             "What it is",
-            "How long you have had it",
-            "What you want to replace it with"
+            "Why you want to replace it",
+            "What you would replace it with"
           ],
-          "explain": "And explain why you want to replace it"
-        }
+          "explain": "And explain how you feel about replacing it"
+        },
+        "source": "2024年第三季度雅思口语机经库"
       },
       {
         "topic": "Useful Object You Can't Live Without",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a useful object that you can't live without",
+          "describe": "Describe a useful object in your home that you found useless but cannot live without now",
           "bullets": [
             "What it is",
-            "How often you use it",
-            "How it helps you"
+            "How you got it",
+            "What you use it for"
           ],
-          "explain": "And explain why you can't live without it"
-        }
+          "explain": "And explain why you can't live without it now"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Picture/Photograph of You That You Like",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a picture or photograph of you that you like",
+          "describe": "Describe a picture/photograph of you that you like",
           "bullets": [
-            "When and where it was taken",
-            "Who took it",
-            "What you were doing"
+            "When it was taken",
+            "Where it was taken",
+            "Who took it"
           ],
-          "explain": "And explain why you like this photograph"
-        }
+          "explain": "And explain why you like it"
+        },
+        "source": "2024年第三季度雅思口语机经库"
       },
       {
         "topic": "Photo You Took and Are Proud Of",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a photo you took and are proud of",
+          "describe": "Describe a photo you took that you are proud of",
           "bullets": [
-            "When and where you took it",
+            "When you took it",
             "What it shows",
-            "How you took it"
+            "Why you took it"
           ],
-          "explain": "And explain why you are proud of this photo"
-        }
+          "explain": "And explain why you are proud of it"
+        },
+        "source": "紫藤雅思2025年9-12月口语题库"
       },
       {
         "topic": "Film That Impressed You a Lot",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a film that impressed you a lot",
+          "describe": "Describe a film that impressed you a lot",
           "bullets": [
-            "What film it is",
+            "What film it was",
             "When you watched it",
-            "What it is about"
+            "What it was about"
           ],
-          "explain": "And explain why it impressed you a lot"
-        }
+          "explain": "And explain why it impressed you"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Film Character Played by Actor You Admire",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a film character played by an actor you admire",
+          "describe": "Describe a film character played by an actor or actress whom you admire",
           "bullets": [
-            "Who the character is",
-            "What film it is",
-            "What the character does in the film"
+            "Who the actor/actress is",
+            "What film it was",
+            "What the character was like"
           ],
-          "explain": "And explain why you like this character"
-        }
+          "explain": "And explain why you admire this actor/actress"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Special Meal Someone Made for You",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a special meal someone made for you",
+          "describe": "Describe a special meal that someone made for you",
           "bullets": [
             "Who made it",
             "When it was",
             "What the meal was"
           ],
           "explain": "And explain why it was special"
-        }
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "New Law You Would Like to Introduce",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a new law you would like to introduce",
+          "describe": "Describe a new law you would like to introduce in your country",
           "bullets": [
             "What the law would be",
-            "Why you would introduce it",
-            "How it would affect people"
+            "Why you think it is needed",
+            "How it would be enforced"
           ],
-          "explain": "And explain why you think this law is necessary"
-        }
+          "explain": "And explain how you think it would change people's lives"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Subject You Would Like to Learn",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a subject you would like to learn",
+          "describe": "Describe a subject that you would like to learn in the future",
           "bullets": [
             "What the subject is",
             "Why you want to learn it",
-            "How you would learn it"
+            "How you plan to learn it"
           ],
-          "explain": "And explain how this subject would help you"
-        }
+          "explain": "And explain how learning this subject might be useful to you"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Sport You Would Like to Learn",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a sport you would like to learn",
+          "describe": "Describe a sport you would like to learn",
           "bullets": [
             "What sport it is",
             "Why you want to learn it",
             "How you would learn it"
           ],
-          "explain": "And explain how this sport would benefit you"
-        }
+          "explain": "And explain how you would feel once you learned it"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Sport You Have Only Watched But Not Played",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a sport you have only watched but not played",
+          "describe": "Describe a sport that you have only watched but have not played",
           "bullets": [
             "What sport it is",
-            "When you watch it",
-            "Why you haven't played it"
+            "Where you watched it",
+            "Who you watched it with"
           ],
-          "explain": "And explain why you enjoy watching this sport"
-        }
+          "explain": "And explain why you haven't played it yet"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Wild Animal You Want to Learn About",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a wild animal that you want to learn more about",
+          "describe": "Describe a wild animal that you want to know more about",
           "bullets": [
-            "What it is",
-            "When/where you first saw or learned about it",
-            "What you already know about it"
+            "What animal it is",
+            "What you already know about it",
+            "Where you can learn more"
           ],
-          "explain": "And explain what more you want to know about it"
-        }
+          "explain": "And explain why you want to know more about it"
+        },
+        "source": "紫藤雅思2025年9-12月口语题库"
       },
       {
         "topic": "Important Plant in Your Country",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe an important plant in your country",
+          "describe": "Describe an important plant in your country",
           "bullets": [
-            "What it is",
+            "What plant it is",
             "Where it grows",
-            "How it is used"
+            "What it is used for"
           ],
-          "explain": "And explain why it is important in your country"
-        }
+          "explain": "And explain why it is important to your country"
+        },
+        "source": "2024年第三季度雅思口语机经库"
       },
       {
         "topic": "Area of Science You Are Interested In",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe an area of science you are interested in",
+          "describe": "Describe an area of science that you are interested in",
           "bullets": [
-            "What area it is",
-            "How you became interested in it",
-            "How you learn about it"
+            "What it is",
+            "How you learned about it",
+            "What interests you about it"
           ],
-          "explain": "And explain why this area of science interests you"
-        }
+          "explain": "And explain why you would like to learn more about it"
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Historical Period to Know More About",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a historical period you would like to know more about",
+          "describe": "Describe a historical period you would like to know more about",
           "bullets": [
-            "Which historical period it is",
+            "What period it is",
             "What you already know about it",
-            "Why you want to know more"
+            "How you learned about it"
           ],
-          "explain": "And explain how you would learn more about it"
-        }
+          "explain": "And explain why you want to know more"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Advertisement You Don't Like",
         "category": "Objects",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe an advertisement you don't like",
+          "describe": "Describe an advertisement you have seen but you did not like",
           "bullets": [
-            "What it is",
-            "Where you saw it",
-            "What it was advertising"
+            "Where and when you saw it",
+            "What the advertisement was for",
+            "What you could see in the advertisement"
           ],
-          "explain": "And explain why you don't like this advertisement"
-        }
+          "explain": "And explain why you did not like the advertisement"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Interesting Advertisement on Social Media",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe an interesting advertisement you saw on social media",
+          "describe": "Describe a time you saw something interesting on social media",
           "bullets": [
-            "What it was advertising",
+            "When it was",
             "Where you saw it",
-            "What made it interesting"
+            "What you saw"
           ],
-          "explain": "And explain why you remember this advertisement"
-        }
+          "explain": "And explain why you think it was interesting"
+        },
+        "source": "紫藤雅思2026年1-4月口语题库"
       },
       {
         "topic": "Website That Helped You",
         "category": "Objects",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe a website that has helped you",
+          "describe": "Describe a website that helped you",
           "bullets": [
-            "What the website is",
-            "When you used it",
-            "How it helped you"
+            "What website it is",
+            "How you found it",
+            "What you use it for"
           ],
-          "explain": "And explain why you find this website useful"
-        }
+          "explain": "And explain how it has helped you"
+        },
+        "source": "Synthesized from IELTS web sources"
       },
       {
         "topic": "Technology You Find Difficult to Use",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a technology you find difficult to use",
+          "describe": "Describe a piece of technology you own that you feel is difficult to use",
           "bullets": [
-            "What the technology is",
-            "When you first tried to use it",
-            "What difficulties you faced"
+            "When you got it",
+            "What you got it for",
+            "How often you use it"
           ],
-          "explain": "And explain why you find it difficult to use"
-        }
+          "explain": "And explain how you feel about it"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Technology/App That Helps Save Time",
         "category": "Objects",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe a technology or app that helps you save time",
+          "describe": "Describe a technology or app that helps you save time",
           "bullets": [
             "What it is",
             "When you started using it",
-            "How it saves you time"
+            "How you use it"
           ],
-          "explain": "And explain how your life has changed since using it"
-        }
+          "explain": "And explain how it helps you save time"
+        },
+        "source": "Synthesized from IELTS web sources"
       },
       {
         "topic": "Daily Routine You Enjoy",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a daily routine that you enjoy",
+          "describe": "Describe a daily routine that you enjoy",
           "bullets": [
             "What the routine is",
-            "When you do it",
-            "How long you have had this routine"
+            "When you started it",
+            "Why you do it"
           ],
           "explain": "And explain why you enjoy it"
-        }
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Long-Term Goal",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a long-term goal you have",
+          "describe": "Describe a long-term goal you would like to achieve",
           "bullets": [
             "What the goal is",
-            "When you set this goal",
+            "How long you have had this goal",
             "What you are doing to achieve it"
           ],
           "explain": "And explain why this goal is important to you"
-        }
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Uniform You Wear/Wore",
         "category": "Objects",
         "isNew": true,
         "cueCard": {
-          "prompt": "Describe a uniform you wear or have worn",
+          "describe": "Describe a uniform you wear or wore",
           "bullets": [
-            "What the uniform is",
+            "What the uniform is/was",
             "When you wear/wore it",
-            "What it looks like"
+            "What it looks/looked like"
           ],
-          "explain": "And explain how you feel about wearing this uniform"
-        }
+          "explain": "And explain how you feel/felt about wearing it"
+        },
+        "source": "Synthesized from IELTS web sources"
       },
       {
         "topic": "Job You Would Not Like to Do",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a job you would not like to do",
+          "describe": "Describe a job you would not like to do",
           "bullets": [
             "What the job is",
-            "What the job involves doing",
+            "What you know about this job",
             "Why people do this job"
           ],
-          "explain": "And explain why you would not like to do this job"
-        }
+          "explain": "And explain why you would not like to do it"
+        },
+        "source": "2024年5-8月最新雅思口语题库"
       },
       {
         "topic": "Something You Would Like to Learn",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe something you would like to learn in the future",
+          "describe": "Describe something you would like to learn in the future",
           "bullets": [
-            "What you would like to learn",
+            "What it is",
             "How you would learn it",
             "Why you want to learn it"
           ],
-          "explain": "And explain how you think this would benefit you"
-        }
+          "explain": "And explain whether it would be difficult to learn"
+        },
+        "source": "2024年第三季度雅思口语机经库"
       },
       {
         "topic": "Something in Your Country You Are Interested In",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe something in your country that you are interested in",
+          "describe": "Describe something in your country that you are interested in",
           "bullets": [
             "What it is",
-            "How you became interested in it",
-            "What you know about it"
+            "Why you are interested in it",
+            "How you learned about it"
           ],
-          "explain": "And explain why it interests you"
-        }
+          "explain": "And explain whether other people in your country are also interested in it"
+        },
+        "source": "Synthesized from IELTS question banks"
       },
       {
         "topic": "Development in Your Country",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe an important development in your country",
+          "describe": "Describe a development in your country",
           "bullets": [
             "What the development is",
             "When it happened",
-            "How it affects people"
+            "How it has changed people's lives"
           ],
-          "explain": "And explain why you think it is important"
-        }
+          "explain": "And explain how you feel about this development"
+        },
+        "source": "Synthesized from IELTS question banks"
       },
       {
         "topic": "Trip You Would Like to Take",
         "category": "Objects",
         "isNew": false,
         "cueCard": {
-          "prompt": "Describe a trip you would like to take",
+          "describe": "Describe a trip you would like to take",
           "bullets": [
-            "Where you would go",
-            "Who you would go with",
-            "What you would do there"
+            "Where you would like to go",
+            "Who you would like to go with",
+            "What you would like to do there"
           ],
           "explain": "And explain why you would like to take this trip"
-        }
+        },
+        "source": "Synthesized from IELTS question banks"
       }
     ]
   },
   "allTime": {
     "label": "All-Time Frequency Rankings (2024–2026)",
     "part1": [
-      {
-        "rank": 1,
-        "medal": "🥇",
-        "topic": "Art",
-        "seasons": "7/7",
-        "type": "Object"
-      },
-      {
-        "rank": 1,
-        "medal": "🥇",
-        "topic": "Science",
-        "seasons": "7/7",
-        "type": "Object"
-      },
-      {
-        "rank": 1,
-        "medal": "🥇",
-        "topic": "Parks",
-        "seasons": "7/7",
-        "type": "Place"
-      },
-      {
-        "rank": 1,
-        "medal": "🥇",
-        "topic": "Gifts",
-        "seasons": "7/7",
-        "type": "Object"
-      },
-      {
-        "rank": 5,
-        "medal": "🥈",
-        "topic": "Sports",
-        "seasons": "6/7",
-        "type": "Event"
-      },
-      {
-        "rank": 5,
-        "medal": "🥈",
-        "topic": "Social Media",
-        "seasons": "6/7",
-        "type": "Object"
-      },
-      {
-        "rank": 5,
-        "medal": "🥈",
-        "topic": "Teachers",
-        "seasons": "6/7",
-        "type": "People"
-      },
-      {
-        "rank": 5,
-        "medal": "🥈",
-        "topic": "Technology",
-        "seasons": "6/7",
-        "type": "Object"
-      },
-      {
-        "rank": 5,
-        "medal": "🥈",
-        "topic": "Shopping",
-        "seasons": "6/7",
-        "type": "Event"
-      },
-      {
-        "rank": 5,
-        "medal": "🥈",
-        "topic": "Books",
-        "seasons": "6/7",
-        "type": "Object"
-      },
-      {
-        "rank": 5,
-        "medal": "🥈",
-        "topic": "Travel",
-        "seasons": "6/7",
-        "type": "Event"
-      },
-      {
-        "rank": 5,
-        "medal": "🥈",
-        "topic": "Cars",
-        "seasons": "6/7",
-        "type": "Object"
-      },
-      {
-        "rank": 5,
-        "medal": "🥈",
-        "topic": "Hometown",
-        "seasons": "6/7",
-        "type": "Place"
-      },
-      {
-        "rank": 5,
-        "medal": "🥈",
-        "topic": "Food",
-        "seasons": "6/7",
-        "type": "Object"
-      },
-      {
-        "rank": 5,
-        "medal": "🥈",
-        "topic": "Movies",
-        "seasons": "6/7",
-        "type": "Object"
-      },
-      {
-        "rank": 5,
-        "medal": "🥈",
-        "topic": "Library",
-        "seasons": "6/7",
-        "type": "Place"
-      },
-      {
-        "rank": 5,
-        "medal": "🥈",
-        "topic": "Sharing",
-        "seasons": "6/7",
-        "type": "Event"
-      },
-      {
-        "rank": 5,
-        "medal": "🥈",
-        "topic": "Friends",
-        "seasons": "6/7",
-        "type": "People"
-      },
-      {
-        "rank": 5,
-        "medal": "🥈",
-        "topic": "Holidays",
-        "seasons": "6/7",
-        "type": "Event"
-      },
-      {
-        "rank": 5,
-        "medal": "🥈",
-        "topic": "Music",
-        "seasons": "6/7",
-        "type": "Object"
-      }
+      { "rank": 1, "medal": "🥇", "topic": "Art", "seasons": "7/7", "type": "Object" },
+      { "rank": 1, "medal": "🥇", "topic": "Science", "seasons": "7/7", "type": "Object" },
+      { "rank": 1, "medal": "🥇", "topic": "Parks", "seasons": "7/7", "type": "Place" },
+      { "rank": 1, "medal": "🥇", "topic": "Gifts", "seasons": "7/7", "type": "Object" },
+      { "rank": 5, "medal": "🥈", "topic": "Sports", "seasons": "6/7", "type": "Event" },
+      { "rank": 5, "medal": "🥈", "topic": "Social Media", "seasons": "6/7", "type": "Object" },
+      { "rank": 5, "medal": "🥈", "topic": "Teachers", "seasons": "6/7", "type": "People" },
+      { "rank": 5, "medal": "🥈", "topic": "Technology", "seasons": "6/7", "type": "Object" },
+      { "rank": 5, "medal": "🥈", "topic": "Shopping", "seasons": "6/7", "type": "Event" },
+      { "rank": 5, "medal": "🥈", "topic": "Books", "seasons": "6/7", "type": "Object" },
+      { "rank": 5, "medal": "🥈", "topic": "Travel", "seasons": "6/7", "type": "Event" },
+      { "rank": 5, "medal": "🥈", "topic": "Cars", "seasons": "6/7", "type": "Object" },
+      { "rank": 5, "medal": "🥈", "topic": "Hometown", "seasons": "6/7", "type": "Place" },
+      { "rank": 5, "medal": "🥈", "topic": "Food", "seasons": "6/7", "type": "Object" },
+      { "rank": 5, "medal": "🥈", "topic": "Movies", "seasons": "6/7", "type": "Object" },
+      { "rank": 5, "medal": "🥈", "topic": "Library", "seasons": "6/7", "type": "Place" },
+      { "rank": 5, "medal": "🥈", "topic": "Sharing", "seasons": "6/7", "type": "Event" },
+      { "rank": 5, "medal": "🥈", "topic": "Friends", "seasons": "6/7", "type": "People" },
+      { "rank": 5, "medal": "🥈", "topic": "Holidays", "seasons": "6/7", "type": "Event" },
+      { "rank": 5, "medal": "🥈", "topic": "Music", "seasons": "6/7", "type": "Object" }
     ],
     "part2": [
-      {
-        "rank": 1,
-        "medal": "🥇",
-        "topic": "Movie You Watched/Enjoyed",
-        "seasons": "7/7"
-      },
-      {
-        "rank": 1,
-        "medal": "🥇",
-        "topic": "Sport/Activity You Enjoy",
-        "seasons": "7/7"
-      },
-      {
-        "rank": 3,
-        "medal": "🥈",
-        "topic": "Crowded Place",
-        "seasons": "6/7"
-      },
-      {
-        "rank": 3,
-        "medal": "🥈",
-        "topic": "Toy You Liked in Childhood",
-        "seasons": "6/7"
-      },
-      {
-        "rank": 3,
-        "medal": "🥈",
-        "topic": "Risk That Led to Positive Result",
-        "seasons": "6/7"
-      },
-      {
-        "rank": 6,
-        "medal": "🥉",
-        "topic": "Time You Received Good News",
-        "seasons": "5/7"
-      },
-      {
-        "rank": 6,
-        "medal": "🥉",
-        "topic": "Noisy Place",
-        "seasons": "5/7"
-      },
-      {
-        "rank": 6,
-        "medal": "🥉",
-        "topic": "Website You Often Use",
-        "seasons": "5/7"
-      },
-      {
-        "rank": 6,
-        "medal": "🥉",
-        "topic": "Overcame Difficulty and Succeeded",
-        "seasons": "5/7"
-      },
-      {
-        "rank": 6,
-        "medal": "🥉",
-        "topic": "Gift You Received That You Wanted",
-        "seasons": "5/7"
-      },
-      {
-        "rank": 6,
-        "medal": "🥉",
-        "topic": "Long-Term Goal",
-        "seasons": "5/7"
-      },
-      {
-        "rank": 6,
-        "medal": "🥉",
-        "topic": "Movie You Watched Recently",
-        "seasons": "5/7"
-      },
-      {
-        "rank": 6,
-        "medal": "🥉",
-        "topic": "Time You Taught Something to a Younger Person",
-        "seasons": "5/7"
-      },
-      {
-        "rank": 6,
-        "medal": "🥉",
-        "topic": "Country to Live/Work for Short Time",
-        "seasons": "5/7"
-      },
-      {
-        "rank": 15,
-        "medal": "",
-        "topic": "Famous Person (various forms)",
-        "seasons": "4/7"
-      },
-      {
-        "rank": 15,
-        "medal": "",
-        "topic": "Life-Changing Experience",
-        "seasons": "4/7"
-      },
-      {
-        "rank": 15,
-        "medal": "",
-        "topic": "Natural Place",
-        "seasons": "4/7"
-      },
-      {
-        "rank": 15,
-        "medal": "",
-        "topic": "Time You Received Money as a Gift",
-        "seasons": "4/7"
-      },
-      {
-        "rank": 15,
-        "medal": "",
-        "topic": "Park or Garden",
-        "seasons": "4/7"
-      },
-      {
-        "rank": 15,
-        "medal": "",
-        "topic": "Time You Used Your Imagination",
-        "seasons": "4/7"
-      }
+      { "rank": 1, "medal": "🥇", "topic": "Movie You Watched/Enjoyed", "seasons": "7/7" },
+      { "rank": 1, "medal": "🥇", "topic": "Sport/Activity You Enjoy", "seasons": "7/7" },
+      { "rank": 3, "medal": "🥈", "topic": "Crowded Place", "seasons": "6/7" },
+      { "rank": 3, "medal": "🥈", "topic": "Toy You Liked in Childhood", "seasons": "6/7" },
+      { "rank": 3, "medal": "🥈", "topic": "Risk That Led to Positive Result", "seasons": "6/7" },
+      { "rank": 6, "medal": "🥉", "topic": "Time You Received Good News", "seasons": "5/7" },
+      { "rank": 6, "medal": "🥉", "topic": "Noisy Place", "seasons": "5/7" },
+      { "rank": 6, "medal": "🥉", "topic": "Website You Often Use", "seasons": "5/7" },
+      { "rank": 6, "medal": "🥉", "topic": "Overcame Difficulty and Succeeded", "seasons": "5/7" },
+      { "rank": 6, "medal": "🥉", "topic": "Gift You Received That You Wanted", "seasons": "5/7" },
+      { "rank": 6, "medal": "🥉", "topic": "Long-Term Goal", "seasons": "5/7" },
+      { "rank": 6, "medal": "🥉", "topic": "Movie You Watched Recently", "seasons": "5/7" },
+      { "rank": 6, "medal": "🥉", "topic": "Time You Taught Something to a Younger Person", "seasons": "5/7" },
+      { "rank": 6, "medal": "🥉", "topic": "Country to Live/Work for Short Time", "seasons": "5/7" },
+      { "rank": 15, "medal": "", "topic": "Famous Person (various forms)", "seasons": "4/7" },
+      { "rank": 15, "medal": "", "topic": "Life-Changing Experience", "seasons": "4/7" },
+      { "rank": 15, "medal": "", "topic": "Natural Place", "seasons": "4/7" },
+      { "rank": 15, "medal": "", "topic": "Time You Received Money as a Gift", "seasons": "4/7" },
+      { "rank": 15, "medal": "", "topic": "Park or Garden", "seasons": "4/7" },
+      { "rank": 15, "medal": "", "topic": "Time You Used Your Imagination", "seasons": "4/7" }
     ]
   },
   "keyInsights": [
-    {
-      "title": "~60% carry-over rate",
-      "detail": "About 60% of May-Aug 2026 Part 2 topics are recycled from previous seasons. Only ~37 out of 134 compiled topics appear truly new."
-    },
-    {
-      "title": "Most persistent topics",
-      "detail": "\"Movie You Watched/Enjoyed\" and \"Sport/Activity You Enjoy\" appear in ALL 7 seasons — the most evergreen IELTS cue cards."
-    },
-    {
-      "title": "AI & Digital trend",
-      "detail": "2026 introduces AI (\"Time You Used AI to Solve a Problem\", \"Person Who Is a Great Digital Communicator\") and digital privacy as new themes."
-    },
-    {
-      "title": "Part 1 most stable",
-      "detail": "\"Art\", \"Science\", \"Parks\", and \"Gifts\" appear in every single season (7/7). Safe bets for preparation."
-    }
+    { "title": "~60% carry-over rate", "detail": "About 60% of May-Aug 2026 Part 2 topics are recycled from previous seasons. Only ~37 out of 134 compiled topics appear truly new." },
+    { "title": "Most persistent topics", "detail": "\"Movie You Watched/Enjoyed\" and \"Sport/Activity You Enjoy\" appear in ALL 7 seasons — the most evergreen IELTS cue cards." },
+    { "title": "AI & Digital trend", "detail": "2026 introduces AI (\"Time You Used AI to Solve a Problem\", \"Person Who Is a Great Digital Communicator\") and digital privacy as new themes." },
+    { "title": "Part 1 most stable", "detail": "\"Art\", \"Science\", \"Parks\", and \"Gifts\" appear in every single season (7/7). Safe bets for preparation." }
   ],
   "recommendations": [
     "Prioritize the Top 20 Part 2 topics — they've appeared in 4–7 out of 7 seasons.",
@@ -2331,10 +2202,7 @@
     "pdfsProcessed": 14,
     "pdfsFailed": 1,
     "webSources": "10+",
-    "normalizedLanguages": [
-      "Chinese",
-      "English"
-    ],
+    "normalizedLanguages": ["Chinese", "English"],
     "deduplication": "Topic names merged across sources",
     "seasonCount": "7 total (2024 May-Aug through 2026 May-Aug)"
   }

@@ -1,5 +1,5 @@
 /* ===== IELTS Research Report — Interactive Logic v2 ===== */
-/* Part 1: Accordion sections | Part 2: Full cue cards */
+/* Accordion Part 1 + Full Cue Card Part 2 */
 
 (function () {
   'use strict';
@@ -31,13 +31,18 @@
     document.querySelectorAll('.rpt-tab').forEach(t => t.classList.remove('active'));
     document.querySelectorAll('.rpt-panel').forEach(p => p.classList.remove('active'));
     btn.classList.add('active');
-    const panel = document.getElementById('panel-' + tabName);
-    if (panel) panel.classList.add('active');
+    document.getElementById('panel-' + tabName).classList.add('active');
 
-    // Re-render database if switching to it (ensure fresh state)
     if (tabName === 'database') {
       renderSearchableDatabase();
     }
+  };
+
+  // ===== Accordion Toggle =====
+  window.toggleAccordion = function (header) {
+    const item = header.closest('.rpt-accordion-item');
+    if (!item) return;
+    item.classList.toggle('open');
   };
 
   // ===== 1. LATEST SEASON =====
@@ -45,55 +50,47 @@
     const ls = reportData.latestSeason;
     const panel = document.getElementById('panel-latest');
 
-    // Part 1 — Accordion
+    // Part 1 Accordions
     let html = '<div class="rpt-cat-section">';
-    html += '<div class="rpt-section-intro">';
     html += '<h3>🗣️ Part 1 Topics <span class="rpt-cat-count">' + ls.part1.length + ' topics</span></h3>';
-    html += '<p class="rpt-section-note">Click any topic to expand and view sample questions. Core topics (Work/Study, Home, Hometown) are always present and excluded from this list.</p>';
-    html += '</div>';
-
+    html += '<p style="font-family:Inter,sans-serif;font-size:0.82rem;color:var(--rpt-text-light);margin-bottom:16px;">New & confirmed topics for ' + ls.label + '. Click any topic to expand and see real sample questions. Core topics (Work/Study, Home, Hometown) are always present and excluded.</p>';
     html += '<div class="rpt-accordion">';
-    ls.part1.forEach((t, idx) => {
+    ls.part1.forEach(t => {
       const cat = t.category.toLowerCase();
       const icon = cat === 'place' ? '📍' : cat === 'event' ? '🎬' : '📦';
       html += '<div class="rpt-accordion-item">';
-      html += '<button class="rpt-accordion-header" onclick="window.toggleAccordion(this)" aria-expanded="false">';
-      html += '<span class="rpt-acc-icon">' + icon + '</span>';
-      html += '<span class="rpt-acc-title">' + esc(t.topic) + '</span>';
-      html += '<span class="rpt-acc-meta">';
-      html += '<span class="rpt-card-tag ' + cat + '">' + t.category + '</span>';
+      html += '<div class="rpt-accordion-header" onclick="toggleAccordion(this)" role="button" tabindex="0" aria-expanded="false" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();toggleAccordion(this)}">';
+      html += '<div class="rpt-accordion-icon ' + cat + '">' + icon + '</div>';
+      html += '<div class="rpt-accordion-title">' + esc(t.topic) + '</div>';
+      html += '<div class="rpt-accordion-badges">';
+      html += '<span class="rpt-accordion-tag ' + cat + '">' + t.category + '</span>';
       if (t.frequency > 0) {
-        html += '<span class="rpt-card-freq">' + t.frequency + '/7 seasons</span>';
+        html += '<span class="rpt-accordion-freq">' + t.frequency + '/7 seasons</span>';
       }
       if (t.isNew) {
-        html += '<span class="rpt-card-new-badge">🆕 New</span>';
+        html += '<span class="rpt-accordion-new-badge">NEW</span>';
       }
-      html += '</span>';
-      html += '<span class="rpt-acc-chevron">▸</span>';
-      html += '</button>';
-
-      html += '<div class="rpt-accordion-body">';
-      html += '<div class="rpt-accordion-content">';
-      const questions = t.questions || [];
-      if (questions.length > 0) {
-        html += '<ul class="rpt-question-list">';
-        questions.forEach(q => {
-          html += '<li>' + esc(q) + '</li>';
+      html += '</div>';
+      html += '<div class="rpt-accordion-arrow">▼</div>';
+      html += '</div>';
+      html += '<div class="rpt-accordion-body"><div class="rpt-accordion-content">';
+      if (t.questions && t.questions.length > 0) {
+        t.questions.forEach((q, i) => {
+          html += '<div class="rpt-accordion-question"><span class="rpt-accordion-qnum">' + (i + 1) + '</span>' + esc(q) + '</div>';
         });
-        html += '</ul>';
-      } else {
-        html += '<p class="rpt-no-questions">Sample questions coming soon. This is a newly confirmed topic for the current season.</p>';
       }
-      html += '</div></div></div>';
+      if (t.source) {
+        html += '<div class="rpt-accordion-source">📄 Source: ' + esc(t.source) + '</div>';
+      }
+      html += '</div></div>';
+      html += '</div>';
     });
-    html += '</div></div>'; // close accordion, cat-section
+    html += '</div></div>';
 
-    // Part 2 — Cue Cards grouped by category
-    html += '<div class="rpt-cat-section" style="margin-top: 48px;">';
-    html += '<div class="rpt-section-intro">';
+    // Part 2 Full Cue Cards — grouped by category
+    html += '<div class="rpt-cat-section">';
     html += '<h3>📋 Part 2 Cue Cards <span class="rpt-cat-count">' + ls.part2.length + ' topics</span></h3>';
-    html += '<p class="rpt-section-note">Full cue cards with bullet points and "explain why" lines. 🆕 marks truly new topics not seen in any previous season.</p>';
-    html += '</div>';
+    html += '<p style="font-family:Inter,sans-serif;font-size:0.82rem;color:var(--rpt-text-light);margin-bottom:16px;">Full cue cards with authentic "You should say" bullets. 🆕 = brand new topics for this season.</p>';
 
     const categories = ['People', 'Events', 'Places', 'Objects'];
     const catIcons = { 'People': '👥', 'Events': '🎬', 'Places': '📍', 'Objects': '📦' };
@@ -102,74 +99,55 @@
     categories.forEach(cat => {
       const items = ls.part2.filter(t => t.category === cat);
       if (items.length === 0) return;
-      html += '<h4 class="rpt-part2-cat-header">' + catIcons[cat] + ' ' + cat + ' <span class="rpt-cat-count">' + items.length + '</span></h4>';
-
+      html += '<div class="rpt-p2-cat-heading">' + catIcons[cat] + ' ' + cat + ' <span class="rpt-cat-count">' + items.length + '</span></div>';
+      html += '<div class="rpt-cuecard-grid">';
       items.forEach(t => {
-        const cc = t.cueCard;
-        html += '<div class="rpt-cue-card">';
-        html += '<div class="rpt-cue-card-header">';
-        html += '<span class="rpt-cc-icon">' + catIcons[cat] + '</span>';
-        html += '<div class="rpt-cc-title-wrap">';
-        html += '<div class="rpt-cc-topic">' + esc(t.topic) + '</div>';
-        html += '<div class="rpt-cc-meta">';
-        html += '<span class="rpt-card-tag ' + catKeys[cat] + '">' + cat + '</span>';
-        if (t.isNew) {
-          html += '<span class="rpt-card-new-badge">🆕 New</span>';
-        }
-        html += '</div></div></div>';
-
-        if (cc && cc.bullets && cc.bullets.length > 0) {
-          html += '<div class="rpt-cc-body">';
-          html += '<p class="rpt-cc-prompt">' + esc(cc.prompt) + '</p>';
-          html += '<p class="rpt-cc-say">You should say:</p>';
-          html += '<ul class="rpt-cc-bullets">';
-          cc.bullets.forEach(b => {
-            html += '<li>' + esc(b) + '</li>';
-          });
-          html += '</ul>';
-          html += '<p class="rpt-cc-explain">' + esc(cc.explain) + '</p>';
-          html += '</div>';
-        } else {
-          html += '<div class="rpt-cc-body rpt-cc-empty">';
-          html += '<p class="rpt-no-questions">Full cue card details being compiled. This is a newly confirmed topic.</p>';
-          html += '</div>';
-        }
-
-        html += '</div>'; // close cue-card
+        const ck = catKeys[cat];
+        html += renderCueCard(t, ck, catIcons[cat]);
       });
+      html += '</div>';
     });
 
-    html += '</div>'; // close cat-section
+    html += '</div>';
     panel.innerHTML = html;
   }
 
-  // ===== Accordion Toggle =====
-  window.toggleAccordion = function (btn) {
-    const item = btn.parentElement;
-    const body = item.querySelector('.rpt-accordion-body');
-    const isOpen = btn.getAttribute('aria-expanded') === 'true';
-
-    // Close all others in the same accordion
-    const parent = item.parentElement;
-    if (parent) {
-      parent.querySelectorAll('.rpt-accordion-item').forEach(sibling => {
-        if (sibling !== item) {
-          const sibBtn = sibling.querySelector('.rpt-accordion-header');
-          const sibBody = sibling.querySelector('.rpt-accordion-body');
-          if (sibBtn) sibBtn.setAttribute('aria-expanded', 'false');
-          if (sibBody) sibBody.classList.remove('open');
-        }
+  // ===== Render a single cue card =====
+  function renderCueCard(t, ck, icon, showSource) {
+    let html = '<div class="rpt-cuecard">';
+    html += '<div class="rpt-cuecard-header">';
+    html += '<div class="rpt-cuecard-header-top">';
+    html += '<div class="rpt-cuecard-icon ' + ck + '">' + (icon || '📋') + '</div>';
+    html += '<div class="rpt-cuecard-topic">' + esc(t.topic) + '</div>';
+    html += '</div>';
+    if (t.cueCard && t.cueCard.describe) {
+      html += '<div class="rpt-cuecard-describe">' + esc(t.cueCard.describe) + '</div>';
+    }
+    html += '</div>';
+    html += '<div class="rpt-cuecard-body">';
+    if (t.cueCard && t.cueCard.bullets && t.cueCard.bullets.length > 0) {
+      html += '<ul class="rpt-cuecard-bullets">';
+      t.cueCard.bullets.forEach(b => {
+        html += '<li class="rpt-cuecard-bullet">' + esc(b) + '</li>';
       });
+      html += '</ul>';
     }
-
-    if (isOpen) {
-      btn.setAttribute('aria-expanded', 'false');
-      body.classList.remove('open');
-    } else {
-      btn.setAttribute('aria-expanded', 'true');
-      body.classList.add('open');
+    if (t.cueCard && t.cueCard.explain) {
+      html += '<div class="rpt-cuecard-explain">' + esc(t.cueCard.explain) + '</div>';
     }
-  };
+    html += '</div>';
+    html += '<div class="rpt-cuecard-footer">';
+    html += '<span class="rpt-cuecard-tag ' + ck + '">' + t.category + '</span>';
+    if (t.isNew) {
+      html += '<span class="rpt-cuecard-new-badge">🆕 New</span>';
+    }
+    if (showSource && t.source) {
+      html += '<span style="font-size:0.65rem;color:var(--rpt-text-muted);margin-left:auto;">' + esc(t.source) + '</span>';
+    }
+    html += '</div>';
+    html += '</div>';
+    return html;
+  }
 
   // ===== 2. ALL-TIME RANKINGS =====
   function renderAllTimeRankings() {
@@ -217,188 +195,180 @@
     const panel = document.getElementById('panel-database');
     const ls = reportData.latestSeason;
 
-    // Build database from Part 1 + Part 2
-    const p1Cards = ls.part1.map(c => ({
-      type: 'part1',
+    // Build flat database from Part 1 and Part 2
+    const allCards = ls.part2.map(c => ({
       topic: c.topic,
       category: c.category,
       isNew: c.isNew,
-      frequency: c.frequency,
-      questions: c.questions || [],
-      currentSeason: true
-    }));
-
-    const p2Cards = ls.part2.map(c => ({
+      currentSeason: true,
       type: 'part2',
+      cueCard: c.cueCard,
+      source: c.source
+    }));
+
+    const allP1 = ls.part1.map(c => ({
       topic: c.topic,
       category: c.category,
       isNew: c.isNew,
-      cueCard: c.cueCard || null,
-      currentSeason: true
+      currentSeason: true,
+      type: 'part1',
+      questions: c.questions,
+      frequency: c.frequency,
+      source: c.source
     }));
 
-    const allCards = [...p1Cards, ...p2Cards];
-
-    // Search bar
     let html = '<div class="rpt-search-bar">';
     html += '<div class="rpt-search-row">';
-    html += '<input type="text" class="rpt-search-input" id="db-search" placeholder="🔍 Search all topics and cue cards…" oninput="window.filterDatabase()">';
-    html += '<select class="rpt-filter-select" id="db-type" onchange="window.filterDatabase()">';
-    html += '<option value="all">All Types</option>';
-    html += '<option value="part1">🗣️ Part 1</option>';
-    html += '<option value="part2">📋 Part 2</option>';
-    html += '</select>';
+    html += '<input type="text" class="rpt-search-input" id="db-search" placeholder="🔍 Search all 154 topics (P1 + P2)…" oninput="window.filterDatabase()">';
     html += '<select class="rpt-filter-select" id="db-category" onchange="window.filterDatabase()">';
     html += '<option value="all">All Categories</option>';
     html += '<option value="People">👥 People</option>';
     html += '<option value="Places">📍 Places</option>';
     html += '<option value="Events">🎬 Events</option>';
     html += '<option value="Objects">📦 Objects</option>';
-    html += '<option value="Place">📍 Place (P1)</option>';
-    html += '<option value="Event">🎬 Event (P1)</option>';
-    html += '<option value="Object">📦 Object (P1)</option>';
     html += '</select>';
-    html += '</div></div>';
+    html += '<select class="rpt-filter-select" id="db-type" onchange="window.filterDatabase()">';
+    html += '<option value="all">All Types</option>';
+    html += '<option value="part1">Part 1 Topics</option>';
+    html += '<option value="part2">Part 2 Cue Cards</option>';
+    html += '</select>';
+    html += '</div>';
+    html += '<div class="rpt-filter-row" style="margin-top:10px;">';
+    html += '<label style="font-family:Inter,sans-serif;font-size:0.8rem;font-weight:600;color:var(--rpt-text-light);">View:</label>';
+    html += '<div class="rpt-view-toggle" id="db-view-toggle">';
+    html += '<button class="rpt-view-btn active" onclick="window.setDatabaseView(\'cards\', this)">Cards</button>';
+    html += '<button class="rpt-view-btn" onclick="window.setDatabaseView(\'cuecards\', this)">Full Cue Cards</button>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
 
-    html += '<div class="rpt-results-count" id="db-count"><strong>' + allCards.length + '</strong> results found</div>';
-    html += '<div class="rpt-db-list" id="db-list"></div>';
+    html += '<div class="rpt-results-count" id="db-count"><strong>' + (allCards.length + allP1.length) + '</strong> topics found</div>';
+    html += '<div id="db-grid"></div>';
 
     panel.innerHTML = html;
-    window._dbCards = allCards;
-    renderDatabaseResults(allCards, '');
+    window._dbP1 = allP1;
+    window._dbP2 = allCards;
+    window._dbView = 'cards';
+    renderDatabase();
   }
 
-  function renderDatabaseResults(cards, searchTerm) {
-    const list = document.getElementById('db-list');
-    if (!list) return;
+  function renderDatabase() {
+    const grid = document.getElementById('db-grid');
+    if (!grid) return;
+    const view = window._dbView || 'cards';
+    const all = [...(window._filteredP1 || window._dbP1), ...(window._filteredP2 || window._dbP2)];
     const countEl = document.getElementById('db-count');
     if (countEl) {
-      countEl.innerHTML = '<strong>' + cards.length + '</strong> results found';
+      countEl.innerHTML = '<strong>' + all.length + '</strong> topics found';
     }
 
-    const catIcons = { 'People': '👥', 'Events': '🎬', 'Places': '📍', 'Objects': '📦', 'Place': '📍', 'Event': '🎬', 'Object': '📦' };
-    const catKeys = { 'People': 'people', 'Events': 'events', 'Places': 'places', 'Objects': 'objects', 'Place': 'places', 'Event': 'events', 'Object': 'objects' };
+    if (all.length === 0) {
+      grid.innerHTML = '<div style="text-align:center;padding:40px;font-family:Inter,sans-serif;color:var(--rpt-text-light);">No topics match your filters. Try adjusting your search.</div>';
+      return;
+    }
 
-    let html = '';
+    if (view === 'cuecards') {
+      // Full cue card view for Part 2, accordion for Part 1
+      let html = '';
+      const p2Items = all.filter(t => t.type === 'part2');
+      const p1Items = all.filter(t => t.type === 'part1');
 
-    // Group: Part 1 first, then Part 2
-    const p1 = cards.filter(c => c.type === 'part1');
-    const p2 = cards.filter(c => c.type === 'part2');
+      if (p1Items.length > 0) {
+        html += '<h4 style="font-family:Inter,sans-serif;font-size:0.9rem;font-weight:700;margin:12px 0 8px;">🗣️ Part 1 Topics</h4>';
+        html += '<div class="rpt-accordion">';
+        p1Items.forEach(t => {
+          const cat = t.category.toLowerCase();
+          const icon = cat === 'place' ? '📍' : cat === 'event' ? '🎬' : '📦';
+          html += '<div class="rpt-accordion-item">';
+          html += '<div class="rpt-accordion-header" onclick="toggleAccordion(this)" role="button" tabindex="0" aria-expanded="false" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();toggleAccordion(this)}">';
+          html += '<div class="rpt-accordion-icon ' + cat + '">' + icon + '</div>';
+          html += '<div class="rpt-accordion-title">' + esc(t.topic) + '</div>';
+          html += '<div class="rpt-accordion-badges">';
+          html += '<span class="rpt-accordion-tag ' + cat + '">' + t.category + '</span>';
+          if (t.isNew) html += '<span class="rpt-accordion-new-badge">NEW</span>';
+          html += '</div>';
+          html += '<div class="rpt-accordion-arrow">▼</div>';
+          html += '</div>';
+          html += '<div class="rpt-accordion-body"><div class="rpt-accordion-content">';
+          if (t.questions && t.questions.length > 0) {
+            t.questions.forEach((q, i) => {
+              html += '<div class="rpt-accordion-question"><span class="rpt-accordion-qnum">' + (i + 1) + '</span>' + esc(q) + '</div>';
+            });
+          }
+          if (t.source) html += '<div class="rpt-accordion-source">📄 Source: ' + esc(t.source) + '</div>';
+          html += '</div></div></div>';
+        });
+        html += '</div>';
+      }
 
-    if (p1.length > 0) {
-      html += '<div class="rpt-db-section-label">🗣️ Part 1 Topics</div>';
-      html += '<div class="rpt-accordion">';
-      p1.forEach(card => {
-        const cat = card.category || 'Object';
-        const ck = catKeys[cat] || 'objects';
-        const icon = catIcons[cat] || '📦';
-        const questions = card.questions || [];
-
-        html += '<div class="rpt-accordion-item">';
-        html += '<button class="rpt-accordion-header" onclick="window.toggleAccordion(this)" aria-expanded="false">';
-        html += '<span class="rpt-acc-icon">' + icon + '</span>';
-        html += '<span class="rpt-acc-title">' + esc(card.topic) + '</span>';
-        html += '<span class="rpt-acc-meta">';
-        html += '<span class="rpt-card-tag ' + ck + '">' + cat + '</span>';
-        if (card.frequency > 0) {
-          html += '<span class="rpt-card-freq">' + card.frequency + '/7</span>';
-        }
-        if (card.isNew) {
-          html += '<span class="rpt-card-new-badge">🆕 New</span>';
-        }
-        html += '</span>';
-        html += '<span class="rpt-acc-chevron">▸</span>';
-        html += '</button>';
-        html += '<div class="rpt-accordion-body">';
-        html += '<div class="rpt-accordion-content">';
-        if (questions.length > 0) {
-          html += '<ul class="rpt-question-list">';
-          questions.forEach(q => {
-            html += '<li>' + esc(q) + '</li>';
-          });
-          html += '</ul>';
-        } else {
-          html += '<p class="rpt-no-questions">Sample questions coming soon.</p>';
-        }
+      if (p2Items.length > 0) {
+        html += '<h4 style="font-family:Inter,sans-serif;font-size:0.9rem;font-weight:700;margin:20px 0 8px;">📋 Part 2 Cue Cards</h4>';
+        html += '<div class="rpt-cuecard-grid">';
+        const catKeys = { 'People': 'people', 'Events': 'events', 'Places': 'places', 'Objects': 'objects' };
+        const catIcons = { 'People': '👥', 'Events': '🎬', 'Places': '📍', 'Objects': '📦' };
+        p2Items.forEach(t => {
+          const ck = catKeys[t.category] || 'objects';
+          html += renderCueCard(t, ck, catIcons[t.category], true);
+        });
+        html += '</div>';
+      }
+      grid.innerHTML = html;
+    } else {
+      // Simple card view
+      const catIcons = { 'People': '👥', 'Events': '🎬', 'Places': '📍', 'Objects': '📦' };
+      const catKeys = { 'People': 'people', 'Events': 'events', 'Places': 'places', 'Objects': 'objects' };
+      let html = '<div class="rpt-grid">';
+      all.forEach(c => {
+        const ck = catKeys[c.category] || 'objects';
+        const icon = catIcons[c.category] || '📦';
+        const typeLabel = c.type === 'part1' ? 'P1' : 'P2';
+        html += '<div class="rpt-card rpt-db-card">';
+        html += '<div class="rpt-card-badge ' + ck + '">' + icon + '</div>';
+        html += '<div class="rpt-card-content">';
+        html += '<div class="rpt-card-title">' + esc(c.topic) + '</div>';
+        html += '<div class="rpt-card-meta">';
+        html += '<span class="rpt-card-tag ' + ck + '">' + c.category + '</span>';
+        html += '<span class="rpt-season-tag current">2026 May–Aug</span>';
+        html += '<span style="font-size:0.65rem;font-weight:600;color:var(--rpt-purple);">' + typeLabel + '</span>';
+        if (c.isNew) html += '<span class="rpt-card-new-badge">🆕 New</span>';
         html += '</div></div></div>';
       });
       html += '</div>';
+      grid.innerHTML = html;
     }
-
-    if (p2.length > 0) {
-      html += '<div class="rpt-db-section-label" style="margin-top:32px;">📋 Part 2 Cue Cards</div>';
-      p2.forEach(card => {
-        const cat = card.category || 'Objects';
-        const ck = catKeys[cat] || 'objects';
-        const icon = catIcons[cat] || '📦';
-        const cc = card.cueCard;
-
-        html += '<div class="rpt-cue-card rpt-db-cue-card">';
-        html += '<div class="rpt-cue-card-header">';
-        html += '<span class="rpt-cc-icon">' + icon + '</span>';
-        html += '<div class="rpt-cc-title-wrap">';
-        html += '<div class="rpt-cc-topic">' + esc(card.topic) + '</div>';
-        html += '<div class="rpt-cc-meta">';
-        html += '<span class="rpt-card-tag ' + ck + '">' + cat + '</span>';
-        if (card.isNew) {
-          html += '<span class="rpt-card-new-badge">🆕 New</span>';
-        }
-        html += '</div></div></div>';
-
-        if (cc && cc.bullets && cc.bullets.length > 0) {
-          html += '<div class="rpt-cc-body">';
-          html += '<p class="rpt-cc-prompt">' + esc(cc.prompt) + '</p>';
-          html += '<p class="rpt-cc-say">You should say:</p>';
-          html += '<ul class="rpt-cc-bullets">';
-          cc.bullets.forEach(b => {
-            html += '<li>' + esc(b) + '</li>';
-          });
-          html += '</ul>';
-          html += '<p class="rpt-cc-explain">' + esc(cc.explain) + '</p>';
-          html += '</div>';
-        } else {
-          html += '<div class="rpt-cc-body rpt-cc-empty">';
-          html += '<p class="rpt-no-questions">Full cue card details being compiled.</p>';
-          html += '</div>';
-        }
-
-        html += '</div>';
-      });
-    }
-
-    if (cards.length === 0) {
-      html = '<div class="rpt-empty-state">No results match your filters. Try adjusting your search or category.</div>';
-    }
-
-    list.innerHTML = html;
   }
 
-  window.filterDatabase = function () {
-    if (!window._dbCards) return;
-    const searchTerm = (document.getElementById('db-search')?.value || '').toLowerCase().trim();
-    const typeFilter = document.getElementById('db-type')?.value || 'all';
-    const categoryFilter = document.getElementById('db-category')?.value || 'all';
+  window.setDatabaseView = function (view, btn) {
+    window._dbView = view;
+    document.querySelectorAll('#db-view-toggle .rpt-view-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderDatabase();
+  };
 
-    let filtered = window._dbCards;
+  window.filterDatabase = function () {
+    const searchTerm = (document.getElementById('db-search')?.value || '').toLowerCase().trim();
+    const categoryFilter = document.getElementById('db-category')?.value || 'all';
+    const typeFilter = document.getElementById('db-type')?.value || 'all';
+
+    let filteredP1 = window._dbP1 || [];
+    let filteredP2 = window._dbP2 || [];
+
+    if (typeFilter === 'part1') filteredP2 = [];
+    if (typeFilter === 'part2') filteredP1 = [];
 
     if (searchTerm) {
-      filtered = filtered.filter(c => c.topic.toLowerCase().includes(searchTerm));
-    }
-
-    if (typeFilter !== 'all') {
-      filtered = filtered.filter(c => c.type === typeFilter);
+      filteredP1 = filteredP1.filter(c => c.topic.toLowerCase().includes(searchTerm));
+      filteredP2 = filteredP2.filter(c => c.topic.toLowerCase().includes(searchTerm));
     }
 
     if (categoryFilter !== 'all') {
-      // Handle P1 categories vs P2 categories
-      if (['Place', 'Event', 'Object'].includes(categoryFilter)) {
-        filtered = filtered.filter(c => c.type === 'part1' && c.category === categoryFilter);
-      } else {
-        filtered = filtered.filter(c => c.type === 'part2' && c.category === categoryFilter);
-      }
+      filteredP1 = filteredP1.filter(c => c.category === categoryFilter);
+      filteredP2 = filteredP2.filter(c => c.category === categoryFilter);
     }
 
-    renderDatabaseResults(filtered, searchTerm);
+    window._filteredP1 = filteredP1;
+    window._filteredP2 = filteredP2;
+    renderDatabase();
   };
 
   // ===== 4. INSIGHTS =====
@@ -408,7 +378,6 @@
     const insights = reportData.keyInsights;
     const recos = reportData.recommendations;
 
-    // Insights grid
     let html = '<div class="rpt-insights">';
     insights.forEach((ins, i) => {
       html += '<div class="rpt-insight-card">';
@@ -419,7 +388,6 @@
     });
     html += '</div>';
 
-    // Recommendations
     html += '<div class="rpt-recos">';
     html += '<h3>📝 Recommendations for Teaching</h3><ul>';
     recos.forEach((r, i) => {
