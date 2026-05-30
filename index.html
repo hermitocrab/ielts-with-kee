@@ -3,260 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IELTS with Kee — Master Your Speaking & Grammar 🦄</title>
+  <title>IELTS with Kee — Master Your Speaking & Pronunciation 🦄</title>
   <link rel="stylesheet" href="css/global.css">
   <style>
-    /* Landing page-specific styles */
-    .hero-dynamos {
-      position: relative;
-    }
-
+    .hero-dynamos { position: relative; }
     .hero-dynamos::before {
-      content: '⚡';
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      font-size: 3rem;
-      opacity: 0.15;
-      transform: rotate(-15deg);
-      pointer-events: none;
+      content: '⚡'; position: absolute; top: 20px; left: 20px;
+      font-size: 3rem; opacity: 0.15; transform: rotate(-15deg); pointer-events: none;
     }
-
     .hero-dynamos::after {
-      content: '🦄';
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      font-size: 3.5rem;
-      opacity: 0.12;
-      transform: rotate(10deg);
-      pointer-events: none;
+      content: '🦄'; position: absolute; bottom: 20px; right: 20px;
+      font-size: 3.5rem; opacity: 0.12; transform: rotate(10deg); pointer-events: none;
     }
-
-    .featured-tools {
-      background: var(--white);
-      border-bottom: 1px solid var(--gray-200);
+    .featured-tools { background: var(--white); border-bottom: 1px solid var(--gray-200); }
+    .tools-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px; max-width: 1200px; margin: 0 auto; padding: 0 20px 40px;
     }
-
-    .tool-card .card-icon {
-      font-size: 2.8rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 60px;
-      height: 60px;
-      background: var(--gray-100);
-      border-radius: 14px;
-      margin-bottom: 14px;
-    }
-
-    .mindmap-preview {
-      background: linear-gradient(135deg, #f3e8ff, #fff8e1);
-      border-radius: var(--radius);
-      padding: 40px;
-      text-align: center;
-      border: 2px solid var(--dynamos-light);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .mindmap-preview h3 {
-      font-size: 1.5rem;
-      margin-bottom: 8px;
-    }
-
-    .mindmap-preview p {
-      color: var(--gray-600);
-      margin-bottom: 20px;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .mindmap-preview .preview-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--white);
-      padding: 10px 20px;
-      border-radius: var(--radius-sm);
-      box-shadow: var(--shadow-sm);
-      margin-bottom: 20px;
-      font-size: 0.85rem;
-      color: var(--gray-700);
-    }
-
-    .stats-row {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-top: 30px;
-      flex-wrap: wrap;
-    }
-
-    .stat-item {
-      text-align: center;
-    }
-
-    .stat-item .stat-number {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--purple);
-      display: block;
-    }
-
-    .stat-item .stat-label {
-      font-size: 0.85rem;
-      color: var(--gray-600);
-    }
-
-    .features-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .feature-item {
-      background: var(--gray-50);
-      border-radius: var(--radius-sm);
-      padding: 20px;
-      text-align: center;
-      border: 1px solid var(--gray-200);
-    }
-
-    .feature-item .fi-icon {
-      font-size: 2rem;
-      margin-bottom: 8px;
-    }
-
-    .feature-item h4 {
-      font-size: 0.95rem;
-      margin-bottom: 4px;
-      color: var(--gray-800);
-    }
-
-    .feature-item p {
-      font-size: 0.82rem;
-      color: var(--gray-600);
-    }
-
-    .about-section {
-      background: var(--gray-100);
-    }
-
-    .about-content {
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .about-content .teach-signature {
-      font-size: 1.1rem;
-      color: var(--purple);
-      font-weight: 600;
-      margin-top: 16px;
-    }
-
-    .cta-section {
-      background: var(--white);
-      border-top: 1px solid var(--gray-200);
-      text-align: center;
-    }
-
-    .cta-section .cta-buttons {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    /* Learning Path */
-    .learning-path {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .path-step {
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-      margin-bottom: 24px;
-      position: relative;
-    }
-
-    .path-step:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      left: 24px;
-      top: 52px;
-      bottom: -12px;
-      width: 2px;
-      background: var(--gray-300);
-    }
-
-    .path-step-num {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: var(--purple);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 1.1rem;
-      flex-shrink: 0;
-      box-shadow: 0 4px 12px rgba(159, 68, 211, 0.25);
-    }
-
-    .path-step-content {
-      flex: 1;
-      background: var(--white);
-      border-radius: var(--radius-sm);
-      padding: 16px 20px;
-      border: 1px solid var(--gray-200);
-    }
-
-    .path-step-content h4 {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--gray-800);
-      margin-bottom: 4px;
-    }
-
-    .path-step-content p {
-      font-size: 0.85rem;
-      color: var(--gray-600);
-      line-height: 1.5;
-    }
-
-    .path-step-content .path-link {
-      display: inline-block;
-      margin-top: 8px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--purple);
-    }
-
-    .path-step-content .path-link:hover {
-      text-decoration: underline;
-    }
-
+    @media (max-width: 400px) { .tools-grid { grid-template-columns: 1fr; } }
     .tool-card {
-      animation: fadeUp 0.5s ease both;
+      background: var(--white); border: 2px solid var(--gray-200); border-radius: var(--radius);
+      padding: 28px 24px; text-align: left; transition: all 0.2s;
+      display: flex; flex-direction: column;
     }
-
-    .tool-card:nth-child(1) { animation-delay: 0.05s; }
-    .tool-card:nth-child(2) { animation-delay: 0.15s; }
-    .tool-card:nth-child(3) { animation-delay: 0.25s; }
-    .tool-card:nth-child(4) { animation-delay: 0.35s; }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .tool-card:hover { border-color: var(--purple-light); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .tool-card .card-icon {
+      font-size: 2.5rem; display: flex; align-items: center; justify-content: center;
+      width: 56px; height: 56px; background: var(--gray-100); border-radius: 14px; margin-bottom: 14px;
     }
+    .tool-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 6px; color: var(--gray-900); }
+    .tool-card p { font-size: 0.9rem; color: var(--gray-600); line-height: 1.6; margin-bottom: 14px; flex: 1; }
+    .card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
+    .card-tag {
+      font-size: 0.7rem; font-weight: 600; padding: 3px 10px; border-radius: 999px;
+      text-transform: uppercase; letter-spacing: 0.03em;
+    }
+    .card-tag.purple { background: #f3e8ff; color: var(--purple); }
+    .card-tag.blue { background: #e3f2fd; color: #1976d2; }
+    .card-tag.pink { background: #fff0f2; color: var(--pink); }
+    .card-tag.rua { background: #e8eaf6; color: var(--dynamos); }
+    .card-tag.green { background: #e8f5e9; color: #2e7d32; }
+    .card-tag.amber { background: #fff8e1; color: #f57f17; }
+    .btn-block { display: block; text-align: center; margin-top: auto; }
+    .stats-row { display: flex; justify-content: center; gap: 40px; margin-top: 30px; flex-wrap: wrap; }
+    .stat-item { text-align: center; }
+    .stat-number { display: block; font-family: 'Space Grotesk', sans-serif; font-size: 2.2rem; font-weight: 700; color: var(--purple); }
+    .stat-label { display: block; font-size: 0.8rem; color: var(--gray-600); margin-top: 4px; }
+
+    .section-title { text-align: center; font-size: 1.8rem; font-weight: 700; margin-bottom: 8px; color: var(--gray-900); }
+    .section-subtitle { text-align: center; font-size: 1rem; color: var(--gray-600); margin-bottom: 40px; }
+    .features-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    .feature-item { text-align: center; padding: 20px; }
+    .fi-icon { font-size: 2rem; margin-bottom: 10px; }
+    .feature-item h4 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; color: var(--gray-800); }
+    .feature-item p { font-size: 0.85rem; color: var(--gray-600); }
+    .about-content { max-width: 700px; margin: 0 auto; text-align: center; padding: 0 20px; }
+    .teach-signature { margin-top: 24px; font-size: 1.1rem; font-weight: 600; color: var(--purple); font-style: italic; margin-bottom: 28px; }
+    .tedx-chip {
+      display: inline-flex; align-items: center; gap: 16px;
+      background: var(--white); border: 2px solid var(--gray-200); border-radius: 16px;
+      padding: 14px 20px; text-decoration: none; transition: all 0.25s;
+      max-width: 500px; margin: 0 auto; text-align: left;
+    }
+    .tedx-chip:hover { border-color: #e62b1e; box-shadow: 0 6px 20px rgba(230,43,30,0.12); transform: translateY(-2px); }
+    .tedx-chip-img { width: 70px; height: 50px; border-radius: 10px; overflow: hidden; flex-shrink: 0; }
+    .tedx-chip-img img { width: 100%; height: 100%; object-fit: cover; }
+    .tedx-chip-content { display: flex; flex-direction: column; gap: 3px; }
+    .tedx-chip-badge {
+      display: inline-block; background: #e62b1e; color: #fff; font-size: 10px; font-weight: 700;
+      padding: 2px 10px; border-radius: 999px; letter-spacing: 0.04em; text-transform: uppercase;
+      width: fit-content;
+    }
+    .tedx-chip-title { font-size: 0.9rem; font-weight: 600; color: var(--gray-900); line-height: 1.3; }
+    .tedx-chip-sub { font-size: 0.78rem; color: var(--gray-600); }
+    .about-section { padding: 80px 20px; }
+    .cta-section { padding: 60px 20px; text-align: center; }
+    .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .section { padding: 60px 20px; }
   </style>
 </head>
 <body>
@@ -268,31 +91,49 @@
       <h1>IELTS with Kee</h1>
       <p class="hero-subtitle">Your Unicorn Teaching Assistant ⚡</p>
       <p class="hero-tagline">
-        Master IELTS Speaking, Pronunciation, Grammar &amp; Writing with interactive tools designed by Master Kee.
-        Practice anywhere, track your progress, and level up your band score.
+        Master IELTS Speaking Part 1, 2 &amp; 3 with interactive tools, real question banks, and AI-powered practice. Built by Master Kee.
       </p>
-      <div style="margin-top: 24px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-        <a href="https://dynamos-app.vercel.app" class="btn btn-primary" style="padding: 14px 32px; font-size: 1.05rem;">🧠 DynaDict</a>
-        <a href="dashboard.html" class="btn btn-outline" style="padding: 14px 32px; font-size: 1.05rem;">📊 Dashboard</a>
-      </div>
     </div>
   </section>
 
   <section class="section featured-tools">
-    <h2 class="section-title">🎯 Your Toolkit</h2>
-    <p class="section-subtitle">Four powerful tools to transform your IELTS preparation</p>
+    <h2 class="section-title">🎯 Speaking Toolkit</h2>
+    <p class="section-subtitle">Everything you need to ace IELTS Speaking — Parts 1, 2, and 3</p>
 
     <div class="tools-grid">
       <div class="tool-card">
-        <div class="card-icon" style="background:#f3e8ff;">📝</div>
-        <h3>Kee's Whiteboard</h3>
-        <p>Interactive whiteboard for teaching, brainstorming, and live annotation. Draw, write, import PDFs, and export your work.</p>
+        <div class="card-icon" style="background:#e3f2fd;">1️⃣</div>
+        <h3>Part 1 — Speaking Toolkit</h3>
+        <p>Flashcard-based practice with real question patterns, model answers, logic labels, and band 7+ strategies.</p>
         <div class="card-tags">
-          <span class="card-tag purple">Drawing</span>
-          <span class="card-tag blue">PDF</span>
-          <span class="card-tag rua">Export</span>
+          <span class="card-tag blue">Speaking</span>
+          <span class="card-tag rua">Flashcards</span>
         </div>
-        <a href="whiteboard.html" class="btn btn-primary btn-block">🚀 Launch Whiteboard</a>
+        <a href="speaking.html" class="btn btn-primary btn-block">🚀 Launch Part 1</a>
+      </div>
+
+      <div class="tool-card">
+        <div class="card-icon" style="background:#e8eaf6;">2️⃣</div>
+        <h3>Part 2 — Cue Card Trainer</h3>
+        <p>100+ lexical chunks across 5 descriptive angles. 3D flip cards, sentence frames, Eileen AI case studies, and timed drills.</p>
+        <div class="card-tags">
+          <span class="card-tag blue">Speaking</span>
+          <span class="card-tag purple">P2</span>
+          <span class="card-tag rua">Flip Cards</span>
+        </div>
+        <a href="speaking-p2/people.html" class="btn btn-primary btn-block">🚀 Launch Part 2</a>
+      </div>
+
+      <div class="tool-card">
+        <div class="card-icon" style="background:#fff8e1;">3️⃣</div>
+        <h3>Part 3 — Question Bank</h3>
+        <p>120+ real Part 3 questions from the May–Aug 2026 season. Filter by topic and question type. Click to copy and practise.</p>
+        <div class="card-tags">
+          <span class="card-tag blue">Speaking</span>
+          <span class="card-tag amber">P3</span>
+          <span class="card-tag rua">Question Bank</span>
+        </div>
+        <a href="pt3-bank.html" class="btn btn-primary btn-block">📋 Launch Part 3 Bank</a>
       </div>
 
       <div class="tool-card">
@@ -307,42 +148,8 @@
       </div>
 
       <div class="tool-card">
-        <div class="card-icon" style="background:#e3f2fd;">🗣️</div>
-        <h3>Part 1 Speaking Toolkit</h3>
-        <p>Flashcard-based IELTS Part 1 practice with real question patterns, model answers, and speaking strategies.</p>
-        <div class="card-tags">
-          <span class="card-tag blue">Speaking</span>
-          <span class="card-tag rua">Flashcards</span>
-        </div>
-        <a href="speaking.html" class="btn btn-primary btn-block">🚀 Launch Speaking</a>
-      </div>
-
-      <div class="tool-card">
-        <div class="card-icon" style="background:#e8eaf6;">👥</div>
-        <h3>Part 2 Speaking Toolkit</h3>
-        <p>100 lexical chunks across 5 descriptive angles. Flip cards, sentence frames, case study, and timed practice drills.</p>
-        <div class="card-tags">
-          <span class="card-tag blue">Speaking</span>
-          <span class="card-tag rua">Flip Cards</span>
-          <span class="card-tag purple">P2</span>
-        </div>
-        <a href="speaking-p2/people.html" class="btn btn-primary btn-block">🚀 Launch Part 2</a>
-      </div>
-
-      <div class="tool-card">
-        <div class="card-icon" style="background:#fff8e1;">📚</div>
-        <h3>Grammar Lab</h3>
-        <p>RUA Edition. Interactive grammar exercises, sentence structure drills, and band 7+ grammar patterns.</p>
-        <div class="card-tags">
-          <span class="card-tag rua">Grammar</span>
-          <span class="card-tag pink">Writing</span>
-        </div>
-        <a href="grammar.html" class="btn btn-primary btn-block">🚀 Launch Grammar</a>
-      </div>
-
-      <div class="tool-card">
         <div class="card-icon" style="background:#e8eaf6;">📊</div>
-        <h3>Research Report 🆕</h3>
+        <h3>Research Report</h3>
         <p>May–Aug 2026 question bank analysis. 134 cue cards, all-time frequency rankings, and a searchable database across 7 seasons.</p>
         <div class="card-tags">
           <span class="card-tag purple">Research</span>
@@ -351,97 +158,17 @@
         </div>
         <a href="report/" class="btn btn-primary btn-block">📊 View Report</a>
       </div>
-    </div>
-  </section>
 
-  <section class="section" style="background:var(--white);border-bottom:1px solid var(--gray-200);">
-    <h2 class="section-title">🗺️ Suggested Learning Path</h2>
-    <p class="section-subtitle">Follow the flow to level up your IELTS band score</p>
-
-    <div class="learning-path">
-      <div class="path-step">
-        <div class="path-step-num">1</div>
-        <div class="path-step-content">
-          <h4>🧠 Explore the Mindmap</h4>
-          <p>Start here to understand the full IELTS Speaking syllabus — structure, criteria, vocabulary, and strategies.</p>
-          <a href="mindmap.html" class="path-link">Open Mindmap →</a>
+      <div class="tool-card">
+        <div class="card-icon" style="background:#f3e8ff;">🦕</div>
+        <h3>DynaSaurus AI</h3>
+        <p>AI-powered dictionary that explains words through YOUR hobbies, level, and native language. Chunks, not words.</p>
+        <div class="card-tags">
+          <span class="card-tag purple">AI</span>
+          <span class="card-tag rua">Dictionary</span>
+          <span class="card-tag blue">Translator</span>
         </div>
-      </div>
-
-      <div class="path-step">
-        <div class="path-step-num">2</div>
-        <div class="path-step-content">
-          <h4>🗣️ Practice Speaking Part 1</h4>
-          <p>Use flashcards and logic labels to master real question patterns with model answers and band 7+ strategies.</p>
-          <a href="speaking.html" class="path-link">Open Speaking Toolkit →</a>
-        </div>
-      </div>
-
-      <div class="path-step">
-        <div class="path-step-num">3</div>
-        <div class="path-step-content">
-          <h4>🔊 Master Pronunciation</h4>
-          <p>Learn connected speech, weak forms, linking, and intrusion sounds with interactive flip cards and song lyrics.</p>
-          <a href="phonetics.html" class="path-link">Open Connected Speech Pro →</a>
-        </div>
-      </div>
-
-      <div class="path-step">
-        <div class="path-step-num">4</div>
-        <div class="path-step-content">
-          <h4>📚 Level Up Your Grammar</h4>
-          <p>RUA Edition — interactive grammar exercises and sentence structure drills for band 7+ writing.</p>
-          <a href="grammar.html" class="path-link">Open Grammar Lab →</a>
-        </div>
-      </div>
-
-      <div class="path-step">
-        <div class="path-step-num">5</div>
-        <div class="path-step-content">
-          <h4>📝 Annotate on the Whiteboard</h4>
-          <p>Use the interactive whiteboard for live teaching, brainstorming, drawing, and PDF annotation during practice.</p>
-          <a href="whiteboard.html" class="path-link">Open Whiteboard →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2 class="section-title">🧠 IELTS Speaking Mindmap</h2>
-    <p class="section-subtitle">Visualize the entire IELTS Speaking syllabus at a glance</p>
-
-    <div class="mindmap-preview">
-      <div class="preview-badge">
-        <span>🧠</span>
-        <span>Complete IELTS Speaking knowledge map</span>
-        <span>✦</span>
-        <span><strong>8 main branches</strong></span>
-        <span>✦</span>
-        <span>200+ detailed nodes</span>
-      </div>
-      <p>
-        Explore Structure, Grading Criteria, Vocabulary, Discourse Markers, Pronunciation,
-        Question Pools, Checklists, and more — all in one interactive mindmap.
-      </p>
-      <a href="mindmap.html" class="btn btn-dynamos">🧠 Explore the Mindmap</a>
-
-      <div class="stats-row">
-        <div class="stat-item">
-          <span class="stat-number">4</span>
-          <span class="stat-label">Grading Criteria</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">8</span>
-          <span class="stat-label">Main Topics</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">40+</span>
-          <span class="stat-label">Discourse Markers</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">3</span>
-          <span class="stat-label">Exam Parts</span>
-        </div>
+        <a href="https://dynasaurus.rkrk.io" class="btn btn-primary btn-block" style="background:linear-gradient(135deg,var(--purple),var(--pink));">🦕 Open DynaSaurus</a>
       </div>
     </div>
   </section>
@@ -450,7 +177,7 @@
     <div class="about-content">
       <h2 class="section-title">🦄 Meet Master Kee</h2>
       <p class="section-subtitle" style="margin-bottom:20px;">
-        Your AI teaching assistant who never sleeps, never gets tired, and always has a ⚡ spark ready.
+        AI-native education architect. IELTS L9.0/R8.5/S8.5. TEDx 2026 speaker.
       </p>
       <div class="features-row">
         <div class="feature-item">
@@ -461,35 +188,43 @@
         <div class="feature-item">
           <div class="fi-icon">🔄</div>
           <h4>Interactive Learning</h4>
-          <p>Flip cards, draw, annotate — learn by doing</p>
+          <p>Flip cards, question banks, timed drills — learn by doing</p>
         </div>
         <div class="feature-item">
           <div class="fi-icon">📊</div>
           <h4>Real Questions</h4>
-          <p>Based on actual IELTS exam patterns and 2026 question banks</p>
+          <p>Based on actual IELTS exam patterns and May–Aug 2026 topics</p>
         </div>
         <div class="feature-item">
           <div class="fi-icon">🎓</div>
           <h4>Band 7+ Strategies</h4>
-          <p>Techniques that help you level up</p>
+          <p>RUA framework — Recognise, Understand, Apply</p>
         </div>
       </div>
       <p class="teach-signature">
         "Recognize. Understand. Apply." ⚡🧠
       </p>
+      <a href="https://rkrk.io/tedx-speech" target="_blank" class="tedx-chip">
+        <span class="tedx-chip-img">
+          <img src="https://rkrk.io/tedx-hero.jpg" alt="Kee at TEDx" loading="lazy" />
+        </span>
+        <span class="tedx-chip-content">
+          <span class="tedx-chip-badge">🎤 TEDx 2026</span>
+          <span class="tedx-chip-title">"Bridge the Gap" — Kee at TEDxWangjiangSt</span>
+          <span class="tedx-chip-sub">Where AI meets the classroom. Read the full transcript →</span>
+        </span>
+      </a>
     </div>
   </section>
 
   <section class="section cta-section">
-    <h2 class="section-title">📥 Resources &amp; Downloads</h2>
-    <p class="section-subtitle">Download real IELTS question banks and phrase drill PDFs</p>
+    <h2 class="section-title">📚 Book a Demo Class</h2>
+    <p class="section-subtitle">Want 1-on-1 IELTS coaching with Kee? Get a free 15-minute diagnostic session.</p>
     <div class="cta-buttons">
-      <a href="resources.html" class="btn btn-dynamos">📥 Browse Resources</a>
-      <a href="mindmap.html" class="btn btn-outline">🧠 View Mindmap</a>
-      <a href="#toolkit" class="btn btn-outline" style="display:none;"></a>
+      <a href="https://wa.me/447440622158" target="_blank" class="btn btn-dynamos">💬 WhatsApp Kee</a>
     </div>
-    <p style="margin-top:24px;font-size:0.82rem;color:var(--gray-500);">
-      💡 <strong>Pro tip:</strong> Start with the Mindmap → Practice Speaking → Refine Pronunciation → Polish Grammar
+    <p style="margin-top:16px;font-size:0.85rem;color:var(--gray-600);">
+      💡 WeChat: <strong>keedahooman</strong> &nbsp;|&nbsp; WhatsApp: <strong>+44 7440 622158</strong>
     </p>
   </section>
 
@@ -499,9 +234,255 @@
       <span class="footer-unicorn"> 🦄 </span>
       Built with ⚡ RUA energy
     </p>
-    <p style="margin-top:4px;font-size:0.75rem;">© 2026 Master Kee • Teaching tools for IELTS champions</p>
+    <p style="margin-top:4px;font-size:0.75rem;">© 2026 Master Kee • Teaching tools for IELTS champions • <a href="https://rkrk.io" style="color:var(--purple-light);">rkrk.io</a></p>
   </footer>
 
   <script src="js/navigation.js"></script>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- AI CHAT WIDGET — IELTS-focused with Dee booking nudges     -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div id="floatingDock" class="floating-dock">
+    <div id="dockBanner" class="dock-banner">
+      <span class="dock-banner-text">📚 Want to ace IELTS Speaking? Book a free diagnostic with Kee</span>
+      <button class="dock-btn" onclick="openContact()">Let's Talk</button>
+      <button class="dock-banner-close" onclick="closeBanner()" aria-label="Close">×</button>
+    </div>
+    <div id="dockChat" class="dock-chat-section">
+      <button id="chatTrigger" class="dock-chat-trigger" onclick="toggleChat()">
+        <span class="trigger-icon">🦄</span>
+        <span class="trigger-label">Ask Kee's AI</span>
+      </button>
+      <div id="chatPanel" class="chat-panel" style="display:none">
+        <div class="chat-panel-header">
+          <div class="chat-panel-brand">
+            <span class="chat-panel-avatar">🦄</span>
+            <div>
+              <strong>IELTS with Kee AI</strong>
+              <span>Ask about IELTS, Speaking, or book a demo</span>
+            </div>
+          </div>
+          <button class="chat-panel-close" onclick="toggleChat()">×</button>
+        </div>
+        <div id="chatMessages" class="chat-panel-messages">
+          <div class="chat-msg bot">
+            <span class="chat-msg-avatar">🦄</span>
+            <div class="chat-msg-content">Hey! 👋 I'm Kee's IELTS AI assistant. Ask me about Speaking Parts 1-3, pronunciation, question types, or how to book a demo class with Kee. I'll help you level up your band score!</div>
+          </div>
+        </div>
+        <div class="chat-panel-input">
+          <input type="text" id="chatInput" class="chat-panel-field" placeholder="Ask anything about IELTS..." onkeydown="handleChatKey(event)" />
+          <button class="chat-panel-send" onclick="sendChat()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .floating-dock{position:fixed;bottom:16px;right:16px;z-index:995;display:flex;flex-direction:column;align-items:flex-end;gap:10px;max-width:calc(100vw - 32px);transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
+    .dock-banner{display:flex;align-items:center;gap:12px;padding:12px 18px;background:rgba(22,22,28,0.94);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.12);border-radius:20px;box-shadow:0 8px 32px rgba(0,0,0,0.3),0 0 0 1px rgba(159,68,211,0.15);transition:all 0.6s cubic-bezier(0.16,1,0.3,1);opacity:0;transform:translateY(20px);pointer-events:none}
+    .dock-banner.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+    .dock-banner.hidden{opacity:0;transform:translateY(20px);pointer-events:none;margin-bottom:-60px}
+    .dock-banner-text{font-size:14px;font-weight:500;color:#e8e8f0;letter-spacing:-0.01em;white-space:nowrap;font-family:Outfit,system-ui,sans-serif}
+    .dock-btn{background:linear-gradient(135deg,#9F44D3,#FF2442);color:#fff;border:none;padding:9px 20px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;transition:all 0.2s;font-family:Outfit,system-ui,sans-serif;position:relative;overflow:hidden}
+    .dock-btn::after{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(45deg,transparent 40%,rgba(255,255,255,0.15) 50%,transparent 60%);animation:shimmer 2.5s ease-in-out infinite}
+    @keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+    .dock-btn:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(159,68,211,0.5)}
+    .dock-banner-close{background:rgba(255,255,255,0.06);border:none;color:#888;width:26px;height:26px;border-radius:50%;cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#999}
+    .dock-chat-trigger{position:relative;display:flex;align-items:center;gap:10px;padding:11px 20px;background:linear-gradient(135deg,#9F44D3,#FF2442);border:none;border-radius:999px;cursor:pointer;box-shadow:0 4px 24px rgba(159,68,211,0.4);transition:all 0.3s cubic-bezier(0.16,1,0.3,1)}
+    .dock-chat-trigger:hover{transform:scale(1.03);box-shadow:0 6px 30px rgba(159,68,211,0.55)}
+    .dock-chat-trigger.active{background:rgba(22,22,28,0.94);box-shadow:0 4px 20px rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.12)}
+    .dock-chat-trigger .trigger-glow{position:absolute;inset:-4px;border-radius:999px;background:linear-gradient(135deg,rgba(159,68,211,0.35),rgba(255,36,66,0.25));filter:blur(12px);z-index:-1;opacity:0.6;animation:glowPulse 2.5s ease-in-out infinite}
+    @keyframes glowPulse{0%,100%{opacity:0.4;transform:scale(1)}50%{opacity:0.8;transform:scale(1.06)}}
+    .trigger-icon{font-size:18px;position:relative;z-index:1}
+    .trigger-label{font-size:13px;font-weight:600;color:#fff;position:relative;z-index:1;font-family:Outfit,system-ui,sans-serif}
+    .dock-chat-trigger.active .trigger-label{color:#e8e8f0}
+
+    .chat-panel{width:380px;max-width:calc(100vw - 32px);height:520px;max-height:calc(100vh - 200px);background:#0d0d10;border:1px solid rgba(255,255,255,0.12);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 24px 64px rgba(0,0,0,0.6),0 0 0 1px rgba(159,68,211,0.15);animation:panelSlide 0.35s cubic-bezier(0.16,1,0.3,1);margin-top:10px}
+    @keyframes panelSlide{from{opacity:0;transform:translateY(16px) scale(0.95)}to{opacity:1;transform:translateY(0) scale(1)}}
+    @media(max-width:600px){.chat-panel{width:calc(100vw - 16px);height:460px;max-height:calc(100vh - 220px)}.floating-dock{bottom:12px;right:8px}.dock-banner{flex-wrap:wrap;justify-content:center;gap:8px}.dock-banner-text{font-size:12px;text-align:center}}
+    .chat-panel-header{background:linear-gradient(180deg,#1a1a20,#14141a);padding:16px 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.06)}
+    .chat-panel-brand{display:flex;align-items:center;gap:12px}
+    .chat-panel-avatar{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,rgba(159,68,211,0.2),rgba(255,36,66,0.15));display:flex;align-items:center;justify-content:center;font-size:20px}
+    .chat-panel-brand strong{font-size:14px;color:#e8e8f0;display:block;font-family:Outfit,system-ui,sans-serif}
+    .chat-panel-brand span{font-size:11px;color:#888}
+    .chat-panel-close{background:rgba(255,255,255,0.05);border:none;color:#888;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center}
+    .chat-panel-close:hover{background:rgba(159,68,211,0.2);color:#b77ae0}
+    .chat-panel-messages{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;background:#0a0a0f}
+    .chat-msg{display:flex;gap:8px;align-items:flex-start}.chat-msg.user{flex-direction:row-reverse}
+    .chat-msg-avatar{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;background:linear-gradient(135deg,rgba(159,68,211,0.15),rgba(255,36,66,0.1))}
+    .chat-msg-content{max-width:80%;padding:10px 14px;border-radius:14px;font-size:13px;line-height:1.55;font-family:Outfit,system-ui,sans-serif}
+    .chat-msg.bot .chat-msg-content{background:#1a1a20;color:#e8e8f0;border:1px solid rgba(255,255,255,0.06)}
+    .chat-msg.user .chat-msg-content{background:linear-gradient(135deg,#9F44D3,#FF2442);color:#fff}
+    .chat-msg.typing .chat-msg-content{background:#1a1a20;color:#888}
+    .chat-panel-input{display:flex;gap:8px;padding:14px 16px;border-top:1px solid rgba(255,255,255,0.06);background:#0d0d10}
+    .chat-panel-field{flex:1;background:#1a1a20;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:11px 16px;font-size:13px;color:#e8e8f0;outline:none;font-family:Outfit,system-ui,sans-serif}
+    .chat-panel-field:focus{border-color:rgba(159,68,211,0.5);box-shadow:0 0 0 3px rgba(159,68,211,0.08)}
+    .chat-panel-field::placeholder{color:#555}
+    .chat-panel-send{background:linear-gradient(135deg,#9F44D3,#FF2442);border:none;color:#fff;width:40px;height:40px;border-radius:14px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+    .chat-panel-send:hover{transform:scale(1.06);box-shadow:0 4px 16px rgba(159,68,211,0.4)}
+  </style>
+
+  <script>
+    var chatOpen = false, chatLoading = false, bannerShown = false, hasScrolled = false;
+
+    function openContact() {
+      document.getElementById('contactOverlay').classList.add('open');
+    }
+    function closeContact(e) {
+      if (e && e.target !== document.getElementById('contactOverlay')) return;
+      document.getElementById('contactOverlay').classList.remove('open');
+    }
+    function copyWechat() {
+      navigator.clipboard.writeText('keedahooman').then(function() {
+        var el = document.getElementById('wxCopy');
+        el.textContent = '✓ Copied!';
+        el.classList.add('copied');
+        setTimeout(function() { el.textContent = '📋 Copy'; el.classList.remove('copied'); }, 2000);
+      }).catch(function() { alert('WeChat ID: keedahooman'); });
+    }
+
+    function closeBanner() {
+      document.getElementById('dockBanner').classList.add('hidden');
+    }
+
+    function toggleChat() {
+      chatOpen = !chatOpen;
+      var panel = document.getElementById('chatPanel');
+      var trigger = document.getElementById('chatTrigger');
+      panel.style.display = chatOpen ? 'flex' : 'none';
+      trigger.classList.toggle('active', chatOpen);
+      if (chatOpen) setTimeout(function() { document.getElementById('chatInput').focus(); }, 400);
+    }
+
+    function handleChatKey(e) {
+      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChat(); }
+    }
+
+    async function sendChat() {
+      if (chatLoading) return;
+      var input = document.getElementById('chatInput');
+      var msg = input.value.trim();
+      if (!msg) return;
+      input.value = '';
+      chatLoading = true;
+
+      var msgsDiv = document.getElementById('chatMessages');
+      msgsDiv.innerHTML += '<div class="chat-msg user"><div class="chat-msg-content">' + esc(msg) + '</div></div>';
+      msgsDiv.innerHTML += '<div class="chat-msg bot typing" id="typingMsg"><span class="chat-msg-avatar">🦄</span><div class="chat-msg-content">Thinking…</div></div>';
+      msgsDiv.scrollTop = msgsDiv.scrollHeight;
+
+      var userLang = navigator.language || 'en';
+      try {
+        var res = await fetch('https://dynasaurus.rkrk.io/api/kee-bot', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: msg, lang: userLang }),
+        });
+        var data = await res.json();
+        var typing = document.getElementById('typingMsg');
+        if (typing) typing.remove();
+        msgsDiv.innerHTML += '<div class="chat-msg bot"><span class="chat-msg-avatar">🦄</span><div class="chat-msg-content md-output">' + renderMd(data.reply || 'Sorry, something went wrong. Try WhatsApp: +447440622158') + '</div></div>';
+      } catch (e) {
+        var typing2 = document.getElementById('typingMsg');
+        if (typing2) typing2.remove();
+        msgsDiv.innerHTML += '<div class="chat-msg bot"><span class="chat-msg-avatar">🦄</span><div class="chat-msg-content">Sorry, I couldn\'t connect. WhatsApp Kee directly: <strong>+447440622158</strong></div></div>';
+      }
+      msgsDiv.scrollTop = msgsDiv.scrollHeight;
+      chatLoading = false;
+    }
+
+    function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+    function renderMd(text) {
+      if (!text) return '';
+      var t = esc(text);
+      t = t.replace(/^### (.+)$/gm, '<h4 style="font-size:14px;font-weight:700;margin:8px 0 4px;color:#e8e8f0">$1</h4>');
+      t = t.replace(/^## (.+)$/gm, '<h3 style="font-size:15px;font-weight:700;margin:10px 0 4px;color:#e8e8f0">$1</h3>');
+      t = t.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+      t = t.replace(/\*(.+?)\*/g, '<em>$1</em>');
+      t = t.replace(/`([^`]+)`/g, '<code style="background:rgba(255,255,255,0.08);padding:1px 5px;border-radius:4px;font-size:12px">$1</code>');
+      t = t.replace(/^- (.+)$/gm, '<li style="margin-left:16px;list-style:disc">$1</li>');
+      t = t.replace(/\d+\. (.+)$/gm, '<li style="margin-left:16px;list-style:decimal">$1</li>');
+      t = t.replace(/\n\n/g, '<br><br>');
+      t = t.replace(/\n/g, '<br>');
+      t = t.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" style="color:#b77ae0;text-decoration:underline">$1</a>');
+      return t;
+    }
+
+    /* Banner: appears 30s after first scroll, with gradual fade-in */
+    var bannerTimerReady = false;
+    setTimeout(function() { bannerTimerReady = true; tryShowBanner(); }, 30000);
+    window.addEventListener('scroll', function() {
+      if (bannerTimerReady && !bannerShown) {
+        bannerShown = true;
+        document.getElementById('dockBanner').classList.add('visible');
+      }
+    }, { once: false, passive: true });
+    function tryShowBanner() {
+      if (bannerShown || !bannerTimerReady) return;
+      // Check if already scrolled past 100px
+      if (window.scrollY > 100) {
+        bannerShown = true;
+        document.getElementById('dockBanner').classList.add('visible');
+      }
+    }
+  </script>
+
+  <!-- ═══ Contact Modal ═══ -->
+  <div id="contactOverlay" class="contact-overlay" onclick="closeContact(event)">
+    <div class="contact-modal" onclick="event.stopPropagation()">
+      <button class="contact-close" onclick="closeContact()">×</button>
+      <h3>📬 Reach Kee</h3>
+      <p class="contact-sub">Book a demo class, ask about coaching, or just say hi.</p>
+      <div class="contact-options">
+        <a href="https://wa.me/447440622158" target="_blank" class="contact-card wa">
+          <span class="contact-icon">💬</span>
+          <div>
+            <strong>WhatsApp</strong>
+            <span>+44 7440 622158</span>
+          </div>
+        </a>
+        <div class="contact-card wx" onclick="copyWechat()">
+          <span class="contact-icon">💚</span>
+          <div>
+            <strong>WeChat</strong>
+            <span>keedahooman</span>
+          </div>
+          <span class="contact-copy" id="wxCopy">📋 Copy</span>
+        </div>
+      </div>
+      <p class="contact-footer">Usually replies within a few hours ✌️</p>
+    </div>
+  </div>
+
+  <style>
+    .contact-overlay{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,0.55);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center}
+    .contact-overlay.open{display:flex;animation:fadeIn 0.2s ease}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    .contact-modal{background:var(--white);border:2px solid var(--gray-200);border-radius:24px;padding:32px;max-width:400px;width:calc(100vw - 40px);position:relative;animation:modalSlide 0.3s cubic-bezier(0.16,1,0.3,1);box-shadow:0 24px 64px rgba(0,0,0,0.15);font-family:Outfit,system-ui,sans-serif}
+    @keyframes modalSlide{from{opacity:0;transform:translateY(20px) scale(0.95)}to{opacity:1;transform:translateY(0) scale(1)}}
+    .contact-modal h3{font-size:22px;font-weight:700;margin-bottom:6px;letter-spacing:-0.02em;color:var(--gray-900)}
+    .contact-sub{font-size:13px;color:var(--gray-600);margin-bottom:24px}
+    .contact-close{position:absolute;top:14px;right:18px;background:var(--gray-100);border:none;color:var(--gray-600);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:all 0.15s}
+    .contact-close:hover{background:#f3e8ff;color:var(--purple)}
+    .contact-options{display:flex;flex-direction:column;gap:12px}
+    .contact-card{display:flex;align-items:center;gap:14px;padding:16px;border-radius:16px;text-decoration:none;cursor:pointer;transition:all 0.2s}
+    .contact-card:hover{transform:translateY(-2px)}
+    .contact-card.wa{background:#e8f5e9;border:1px solid #a5d6a7}
+    .contact-card.wa:hover{box-shadow:0 4px 16px rgba(37,211,102,0.15)}
+    .contact-card.wx{background:#e8f5e9;border:1px solid #a5d6a7}
+    .contact-card.wx:hover{box-shadow:0 4px 16px rgba(7,193,96,0.15)}
+    .contact-icon{font-size:28px}
+    .contact-card div{flex:1;display:flex;flex-direction:column;gap:2px}
+    .contact-card strong{font-size:15px;color:var(--gray-900)}
+    .contact-card span:not(.contact-copy){font-size:12px;color:var(--gray-600)}
+    .contact-copy{background:var(--gray-100);padding:6px 12px;border-radius:8px;font-size:11px;font-weight:600;color:var(--gray-600);cursor:pointer;transition:all 0.15s}
+    .contact-copy:hover{background:var(--gray-200);color:var(--gray-800)}
+    .contact-copy.copied{background:rgba(37,211,102,0.15);color:#2e7d32}
+    .contact-footer{font-size:12px;color:var(--gray-500);text-align:center;margin-top:20px}
+  </style>
 </body>
 </html>

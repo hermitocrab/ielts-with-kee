@@ -7,13 +7,42 @@
     "sources": "14 PDFs + 10+ web sources"
   },
   "seasons": [
-    { "id": "2024-may-aug", "label": "2024 May–Aug", "short": "2024 May-Aug" },
-    { "id": "2024-sep-dec", "label": "2024 Sep–Dec", "short": "2024 Sep-Dec" },
-    { "id": "2025-jan-apr", "label": "2025 Jan–Apr", "short": "2025 Jan-Apr" },
-    { "id": "2025-may-aug", "label": "2025 May–Aug", "short": "2025 May-Aug" },
-    { "id": "2025-sep-dec", "label": "2025 Sep–Dec", "short": "2025 Sep-Dec" },
-    { "id": "2026-jan-apr", "label": "2026 Jan–Apr", "short": "2026 Jan-Apr" },
-    { "id": "2026-may-aug", "label": "2026 May–Aug 🆕", "short": "2026 May-Aug", "current": true }
+    {
+      "id": "2024-may-aug",
+      "label": "2024 May–Aug",
+      "short": "2024 May-Aug"
+    },
+    {
+      "id": "2024-sep-dec",
+      "label": "2024 Sep–Dec",
+      "short": "2024 Sep-Dec"
+    },
+    {
+      "id": "2025-jan-apr",
+      "label": "2025 Jan–Apr",
+      "short": "2025 Jan-Apr"
+    },
+    {
+      "id": "2025-may-aug",
+      "label": "2025 May–Aug",
+      "short": "2025 May-Aug"
+    },
+    {
+      "id": "2025-sep-dec",
+      "label": "2025 Sep–Dec",
+      "short": "2025 Sep-Dec"
+    },
+    {
+      "id": "2026-jan-apr",
+      "label": "2026 Jan–Apr",
+      "short": "2026 Jan-Apr"
+    },
+    {
+      "id": "2026-may-aug",
+      "label": "2026 May–Aug 🆕",
+      "short": "2026 May-Aug",
+      "current": true
+    }
   ],
   "latestSeason": {
     "label": "May–August 2026",
@@ -2137,60 +2166,462 @@
         },
         "source": "Synthesized from IELTS question banks"
       }
+    ],
+    "hotTopics": [
+      {
+        "topic": "A person who wants to work in the medical industry",
+        "category": "People",
+        "tag": "极高",
+        "tagLabel": "Extremely Hot",
+        "questions": [
+          "Who this person is",
+          "How you know this person",
+          "What kind of medical work they want to do",
+          "And explain why they want to work in the medical industry"
+        ]
+      },
+      {
+        "topic": "A person who likes to grow plants",
+        "category": "People",
+        "tag": "高",
+        "tagLabel": "Hot",
+        "questions": [
+          "Who this person is",
+          "How you know this person",
+          "What plants they grow",
+          "And explain why they enjoy growing plants"
+        ]
+      },
+      {
+        "topic": "A traditional object you like",
+        "category": "Objects",
+        "tag": "高",
+        "tagLabel": "Hot",
+        "questions": [
+          "What the object is",
+          "How you learned about it",
+          "What it looks like",
+          "And explain why you like it"
+        ]
+      },
+      {
+        "topic": "A time your electronic device had a problem",
+        "category": "Objects",
+        "tag": "高",
+        "tagLabel": "Hot",
+        "questions": [
+          "What device it was",
+          "What the problem was",
+          "What you did about it",
+          "And explain how you felt about the experience"
+        ]
+      },
+      {
+        "topic": "An experience of getting up early",
+        "category": "Events",
+        "tag": "极高",
+        "tagLabel": "Extremely Hot",
+        "questions": [
+          "When it happened",
+          "Why you got up early",
+          "What you did after getting up",
+          "And explain how you felt about the experience"
+        ]
+      },
+      {
+        "topic": "A time you watched a live sports event",
+        "category": "Events",
+        "tag": "极高",
+        "tagLabel": "Extremely Hot",
+        "questions": [
+          "What event it was",
+          "Where you watched it",
+          "Who you watched it with",
+          "And explain how you felt about the event"
+        ]
+      },
+      {
+        "topic": "An important decision you made",
+        "category": "Events",
+        "tag": "极高",
+        "tagLabel": "Extremely Hot",
+        "questions": [
+          "What the decision was",
+          "When you made it",
+          "How you made the decision",
+          "And explain why it was important"
+        ]
+      },
+      {
+        "topic": "A time you changed your decision",
+        "category": "Events",
+        "tag": "高",
+        "tagLabel": "Hot",
+        "questions": [
+          "What the original decision was",
+          "Why you changed it",
+          "How the change affected you",
+          "And explain how you felt about changing your mind"
+        ]
+      },
+      {
+        "topic": "A tall building you like or dislike",
+        "category": "Places",
+        "tag": "极高",
+        "tagLabel": "Extremely Hot",
+        "questions": [
+          "What building it is",
+          "Where it is located",
+          "What it looks like",
+          "And explain why you like or dislike it"
+        ]
+      },
+      {
+        "topic": "A boring place you have been to",
+        "category": "Places",
+        "tag": "高",
+        "tagLabel": "Hot",
+        "questions": [
+          "Where the place is",
+          "When you went there",
+          "What you did there",
+          "And explain why you found it boring"
+        ]
+      },
+      {
+        "topic": "A city you have visited and liked",
+        "category": "Places",
+        "tag": "高",
+        "tagLabel": "Hot",
+        "questions": [
+          "What city it is",
+          "When you visited it",
+          "What you did there",
+          "And explain why you liked it"
+        ]
+      },
+      {
+        "topic": "An interesting piece of biological knowledge",
+        "category": "Objects",
+        "tag": "极高",
+        "tagLabel": "Extremely Hot",
+        "questions": [
+          "What the knowledge is",
+          "How you learned about it",
+          "Why you find it interesting",
+          "And explain how this knowledge can be useful"
+        ]
+      },
+      {
+        "topic": "A new law you would like to introduce",
+        "category": "Objects",
+        "tag": "极高",
+        "tagLabel": "Extremely Hot",
+        "questions": [
+          "What law it would be",
+          "Why you want to introduce it",
+          "How it would affect people",
+          "And explain how you would implement it"
+        ]
+      },
+      {
+        "topic": "Food you eat on a special festival",
+        "category": "Objects",
+        "tag": "极高",
+        "tagLabel": "Extremely Hot",
+        "questions": [
+          "What food it is",
+          "What festival it is associated with",
+          "How it is prepared",
+          "And explain why this food is special for the festival"
+        ]
+      }
     ]
   },
   "allTime": {
     "label": "All-Time Frequency Rankings (2024–2026)",
     "part1": [
-      { "rank": 1, "medal": "🥇", "topic": "Art", "seasons": "7/7", "type": "Object" },
-      { "rank": 1, "medal": "🥇", "topic": "Science", "seasons": "7/7", "type": "Object" },
-      { "rank": 1, "medal": "🥇", "topic": "Parks", "seasons": "7/7", "type": "Place" },
-      { "rank": 1, "medal": "🥇", "topic": "Gifts", "seasons": "7/7", "type": "Object" },
-      { "rank": 5, "medal": "🥈", "topic": "Sports", "seasons": "6/7", "type": "Event" },
-      { "rank": 5, "medal": "🥈", "topic": "Social Media", "seasons": "6/7", "type": "Object" },
-      { "rank": 5, "medal": "🥈", "topic": "Teachers", "seasons": "6/7", "type": "People" },
-      { "rank": 5, "medal": "🥈", "topic": "Technology", "seasons": "6/7", "type": "Object" },
-      { "rank": 5, "medal": "🥈", "topic": "Shopping", "seasons": "6/7", "type": "Event" },
-      { "rank": 5, "medal": "🥈", "topic": "Books", "seasons": "6/7", "type": "Object" },
-      { "rank": 5, "medal": "🥈", "topic": "Travel", "seasons": "6/7", "type": "Event" },
-      { "rank": 5, "medal": "🥈", "topic": "Cars", "seasons": "6/7", "type": "Object" },
-      { "rank": 5, "medal": "🥈", "topic": "Hometown", "seasons": "6/7", "type": "Place" },
-      { "rank": 5, "medal": "🥈", "topic": "Food", "seasons": "6/7", "type": "Object" },
-      { "rank": 5, "medal": "🥈", "topic": "Movies", "seasons": "6/7", "type": "Object" },
-      { "rank": 5, "medal": "🥈", "topic": "Library", "seasons": "6/7", "type": "Place" },
-      { "rank": 5, "medal": "🥈", "topic": "Sharing", "seasons": "6/7", "type": "Event" },
-      { "rank": 5, "medal": "🥈", "topic": "Friends", "seasons": "6/7", "type": "People" },
-      { "rank": 5, "medal": "🥈", "topic": "Holidays", "seasons": "6/7", "type": "Event" },
-      { "rank": 5, "medal": "🥈", "topic": "Music", "seasons": "6/7", "type": "Object" }
+      {
+        "rank": 1,
+        "medal": "🥇",
+        "topic": "Art",
+        "seasons": "7/7",
+        "type": "Object"
+      },
+      {
+        "rank": 1,
+        "medal": "🥇",
+        "topic": "Science",
+        "seasons": "7/7",
+        "type": "Object"
+      },
+      {
+        "rank": 1,
+        "medal": "🥇",
+        "topic": "Parks",
+        "seasons": "7/7",
+        "type": "Place"
+      },
+      {
+        "rank": 1,
+        "medal": "🥇",
+        "topic": "Gifts",
+        "seasons": "7/7",
+        "type": "Object"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Sports",
+        "seasons": "6/7",
+        "type": "Event"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Social Media",
+        "seasons": "6/7",
+        "type": "Object"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Teachers",
+        "seasons": "6/7",
+        "type": "People"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Technology",
+        "seasons": "6/7",
+        "type": "Object"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Shopping",
+        "seasons": "6/7",
+        "type": "Event"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Books",
+        "seasons": "6/7",
+        "type": "Object"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Travel",
+        "seasons": "6/7",
+        "type": "Event"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Cars",
+        "seasons": "6/7",
+        "type": "Object"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Hometown",
+        "seasons": "6/7",
+        "type": "Place"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Food",
+        "seasons": "6/7",
+        "type": "Object"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Movies",
+        "seasons": "6/7",
+        "type": "Object"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Library",
+        "seasons": "6/7",
+        "type": "Place"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Sharing",
+        "seasons": "6/7",
+        "type": "Event"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Friends",
+        "seasons": "6/7",
+        "type": "People"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Holidays",
+        "seasons": "6/7",
+        "type": "Event"
+      },
+      {
+        "rank": 5,
+        "medal": "🥈",
+        "topic": "Music",
+        "seasons": "6/7",
+        "type": "Object"
+      }
     ],
     "part2": [
-      { "rank": 1, "medal": "🥇", "topic": "Movie You Watched/Enjoyed", "seasons": "7/7" },
-      { "rank": 1, "medal": "🥇", "topic": "Sport/Activity You Enjoy", "seasons": "7/7" },
-      { "rank": 3, "medal": "🥈", "topic": "Crowded Place", "seasons": "6/7" },
-      { "rank": 3, "medal": "🥈", "topic": "Toy You Liked in Childhood", "seasons": "6/7" },
-      { "rank": 3, "medal": "🥈", "topic": "Risk That Led to Positive Result", "seasons": "6/7" },
-      { "rank": 6, "medal": "🥉", "topic": "Time You Received Good News", "seasons": "5/7" },
-      { "rank": 6, "medal": "🥉", "topic": "Noisy Place", "seasons": "5/7" },
-      { "rank": 6, "medal": "🥉", "topic": "Website You Often Use", "seasons": "5/7" },
-      { "rank": 6, "medal": "🥉", "topic": "Overcame Difficulty and Succeeded", "seasons": "5/7" },
-      { "rank": 6, "medal": "🥉", "topic": "Gift You Received That You Wanted", "seasons": "5/7" },
-      { "rank": 6, "medal": "🥉", "topic": "Long-Term Goal", "seasons": "5/7" },
-      { "rank": 6, "medal": "🥉", "topic": "Movie You Watched Recently", "seasons": "5/7" },
-      { "rank": 6, "medal": "🥉", "topic": "Time You Taught Something to a Younger Person", "seasons": "5/7" },
-      { "rank": 6, "medal": "🥉", "topic": "Country to Live/Work for Short Time", "seasons": "5/7" },
-      { "rank": 15, "medal": "", "topic": "Famous Person (various forms)", "seasons": "4/7" },
-      { "rank": 15, "medal": "", "topic": "Life-Changing Experience", "seasons": "4/7" },
-      { "rank": 15, "medal": "", "topic": "Natural Place", "seasons": "4/7" },
-      { "rank": 15, "medal": "", "topic": "Time You Received Money as a Gift", "seasons": "4/7" },
-      { "rank": 15, "medal": "", "topic": "Park or Garden", "seasons": "4/7" },
-      { "rank": 15, "medal": "", "topic": "Time You Used Your Imagination", "seasons": "4/7" }
+      {
+        "rank": 1,
+        "medal": "🥇",
+        "topic": "Movie You Watched/Enjoyed",
+        "seasons": "7/7"
+      },
+      {
+        "rank": 1,
+        "medal": "🥇",
+        "topic": "Sport/Activity You Enjoy",
+        "seasons": "7/7"
+      },
+      {
+        "rank": 3,
+        "medal": "🥈",
+        "topic": "Crowded Place",
+        "seasons": "6/7"
+      },
+      {
+        "rank": 3,
+        "medal": "🥈",
+        "topic": "Toy You Liked in Childhood",
+        "seasons": "6/7"
+      },
+      {
+        "rank": 3,
+        "medal": "🥈",
+        "topic": "Risk That Led to Positive Result",
+        "seasons": "6/7"
+      },
+      {
+        "rank": 6,
+        "medal": "🥉",
+        "topic": "Time You Received Good News",
+        "seasons": "5/7"
+      },
+      {
+        "rank": 6,
+        "medal": "🥉",
+        "topic": "Noisy Place",
+        "seasons": "5/7"
+      },
+      {
+        "rank": 6,
+        "medal": "🥉",
+        "topic": "Website You Often Use",
+        "seasons": "5/7"
+      },
+      {
+        "rank": 6,
+        "medal": "🥉",
+        "topic": "Overcame Difficulty and Succeeded",
+        "seasons": "5/7"
+      },
+      {
+        "rank": 6,
+        "medal": "🥉",
+        "topic": "Gift You Received That You Wanted",
+        "seasons": "5/7"
+      },
+      {
+        "rank": 6,
+        "medal": "🥉",
+        "topic": "Long-Term Goal",
+        "seasons": "5/7"
+      },
+      {
+        "rank": 6,
+        "medal": "🥉",
+        "topic": "Movie You Watched Recently",
+        "seasons": "5/7"
+      },
+      {
+        "rank": 6,
+        "medal": "🥉",
+        "topic": "Time You Taught Something to a Younger Person",
+        "seasons": "5/7"
+      },
+      {
+        "rank": 6,
+        "medal": "🥉",
+        "topic": "Country to Live/Work for Short Time",
+        "seasons": "5/7"
+      },
+      {
+        "rank": 15,
+        "medal": "",
+        "topic": "Famous Person (various forms)",
+        "seasons": "4/7"
+      },
+      {
+        "rank": 15,
+        "medal": "",
+        "topic": "Life-Changing Experience",
+        "seasons": "4/7"
+      },
+      {
+        "rank": 15,
+        "medal": "",
+        "topic": "Natural Place",
+        "seasons": "4/7"
+      },
+      {
+        "rank": 15,
+        "medal": "",
+        "topic": "Time You Received Money as a Gift",
+        "seasons": "4/7"
+      },
+      {
+        "rank": 15,
+        "medal": "",
+        "topic": "Park or Garden",
+        "seasons": "4/7"
+      },
+      {
+        "rank": 15,
+        "medal": "",
+        "topic": "Time You Used Your Imagination",
+        "seasons": "4/7"
+      }
     ]
   },
   "keyInsights": [
-    { "title": "~60% carry-over rate", "detail": "About 60% of May-Aug 2026 Part 2 topics are recycled from previous seasons. Only ~37 out of 134 compiled topics appear truly new." },
-    { "title": "Most persistent topics", "detail": "\"Movie You Watched/Enjoyed\" and \"Sport/Activity You Enjoy\" appear in ALL 7 seasons — the most evergreen IELTS cue cards." },
-    { "title": "AI & Digital trend", "detail": "2026 introduces AI (\"Time You Used AI to Solve a Problem\", \"Person Who Is a Great Digital Communicator\") and digital privacy as new themes." },
-    { "title": "Part 1 most stable", "detail": "\"Art\", \"Science\", \"Parks\", and \"Gifts\" appear in every single season (7/7). Safe bets for preparation." }
+    {
+      "title": "~60% carry-over rate",
+      "detail": "About 60% of May-Aug 2026 Part 2 topics are recycled from previous seasons. Only ~37 out of 134 compiled topics appear truly new."
+    },
+    {
+      "title": "Most persistent topics",
+      "detail": "\"Movie You Watched/Enjoyed\" and \"Sport/Activity You Enjoy\" appear in ALL 7 seasons — the most evergreen IELTS cue cards."
+    },
+    {
+      "title": "AI & Digital trend",
+      "detail": "2026 introduces AI (\"Time You Used AI to Solve a Problem\", \"Person Who Is a Great Digital Communicator\") and digital privacy as new themes."
+    },
+    {
+      "title": "Part 1 most stable",
+      "detail": "\"Art\", \"Science\", \"Parks\", and \"Gifts\" appear in every single season (7/7). Safe bets for preparation."
+    }
   ],
   "recommendations": [
     "Prioritize the Top 20 Part 2 topics — they've appeared in 4–7 out of 7 seasons.",
@@ -2202,8 +2633,89 @@
     "pdfsProcessed": 14,
     "pdfsFailed": 1,
     "webSources": "10+",
-    "normalizedLanguages": ["Chinese", "English"],
+    "normalizedLanguages": [
+      "Chinese",
+      "English"
+    ],
     "deduplication": "Topic names merged across sources",
     "seasonCount": "7 total (2024 May-Aug through 2026 May-Aug)"
-  }
+  },
+  "bikao": [
+    {
+      "topic": "Hometown / Where You Live",
+      "category": "必考 · Foundation",
+      "frequency": "Every Test",
+      "questions": [
+        "Where is your hometown?",
+        "What do you like about your hometown?",
+        "Has your hometown changed much over the years?",
+        "Do you plan to live there in the future?"
+      ],
+      "keyVocab": ["bustling", "quaint", "close-knit community", "infrastructure", "skyscrapers", "greenery", "pace of life", "cost of living"],
+      "modelAnswers": [
+        {
+          "q": "Where is your hometown?",
+          "a": "My hometown is Chengdu, which is the capital of Sichuan province in southwestern China. It's famous for its spicy cuisine and laid-back lifestyle. I've lived there my whole life, so it holds a special place in my heart."
+        },
+        {
+          "q": "What do you like about your hometown?",
+          "a": "First of all, the food is absolutely incredible — you can find a huge variety of dishes, from street snacks to fancy hotpot. On top of that, the people here are incredibly warm and welcoming. It's just got this relaxed vibe that makes you feel at home right away."
+        }
+      ]
+    },
+    {
+      "topic": "Work or Study",
+      "category": "必考 · Foundation",
+      "frequency": "Every Test",
+      "questions": [
+        "Do you work or are you a student?",
+        "What do you study / what's your job?",
+        "Why did you choose that subject or job?",
+        "Do you enjoy it?"
+      ],
+      "keyVocab": ["major in", "demanding", "fulfilling", "hands-on experience", "work-life balance", "career prospects", "broaden horizons"],
+      "modelAnswers": [
+        {
+          "q": "Do you work or are you a student?",
+          "a": "I'm currently a student. I'm studying [subject] at [university]. I chose it because I've always been passionate about this field, and it has great career prospects."
+        }
+      ]
+    },
+    {
+      "topic": "Home / Accommodation",
+      "category": "必考 · Foundation",
+      "frequency": "Every Test",
+      "questions": [
+        "Do you live in a house or an apartment?",
+        "What's your favourite room?",
+        "What can you see from your window?",
+        "Would you like to move in the future?"
+      ],
+      "keyVocab": ["spacious", "cozy", "natural light", "well-decorated", "overlooks", "downtown", "residential area", "balcony"],
+      "modelAnswers": [
+        {
+          "q": "Do you live in a house or an apartment?",
+          "a": "I live in an apartment in the city centre. It's not huge but it's quite cozy and gets plenty of natural light. My favourite spot is the balcony — it overlooks a small park, which is really nice in the morning."
+        }
+      ]
+    },
+    {
+      "topic": "The Area You Live In",
+      "category": "必考 · Foundation",
+      "frequency": "Every Test",
+      "questions": [
+        "Do you like the area where you live?",
+        "What are some popular places in your area?",
+        "Has your area changed in recent years?",
+        "Do you know your neighbours well?"
+      ],
+      "keyVocab": ["neighbourhood", "convenient", "within walking distance", "amenities", "public transport", "green spaces", "sense of community", "safe"],
+      "modelAnswers": [
+        {
+          "q": "Do you like the area where you live?",
+          "a": "Yeah, I really like it. Everything I need is within walking distance — supermarkets, cafes, a gym. The public transport links are great too, so getting around is super convenient. Plus, there's a real sense of community here."
+        }
+      ]
+    }
+  ]
 }

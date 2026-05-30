@@ -1,5 +1,61 @@
 /* ===== P2 Shared JavaScript ===== */
 
+/* ===== Audio Player (Google Cloud TTS MP3s) ===== */
+var currentAudio = null;
+var currentBtn = null;
+var audioSpeed = 1.0;
+
+function playAudio(src, btn) {
+  // If same track, toggle play/pause
+  if (currentAudio && currentAudio.src && currentAudio.src.endsWith(src)) {
+    if (currentAudio.paused) {
+      currentAudio.play();
+      if (btn) { btn.textContent = '⏸'; btn.title = 'Pause'; }
+      if (currentAudio._speedBtn) currentAudio._speedBtn.style.display = 'inline-flex';
+    } else {
+      currentAudio.pause();
+      if (btn) { btn.textContent = '▶'; btn.title = 'Play'; }
+    }
+    return;
+  }
+  // Stop previous
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.remove();
+  }
+  if (currentBtn) currentBtn.textContent = '▶';
+
+  var audio = new Audio(src);
+  audio.playbackRate = audioSpeed;
+  audio.preload = 'auto';
+  audio.onplay = function() { if (btn) { btn.textContent = '⏸'; btn.title = 'Pause'; } };
+  audio.onended = function() { if (btn) { btn.textContent = '▶'; btn.title = 'Play'; } cleanup(); };
+  audio.onerror = function() { if (btn) btn.textContent = '⚠️'; cleanup(); };
+  audio.onpause = function() { if (btn) { btn.textContent = '▶'; btn.title = 'Play'; } };
+
+  function cleanup() {
+    currentAudio = null;
+    if (currentBtn) currentBtn.textContent = '▶';
+    currentBtn = null;
+    audio.remove();
+  }
+
+  document.body.appendChild(audio);
+  audio.play().catch(function() { cleanup(); });
+  currentAudio = audio;
+  currentBtn = btn;
+}
+
+function setSpeed(speed, el) {
+  audioSpeed = speed;
+  if (currentAudio) currentAudio.playbackRate = speed;
+  // Update all speed buttons
+  document.querySelectorAll('.speed-btn').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-speed') === String(speed));
+  });
+}
+/* ===== End Audio Player ===== */
+
 /* Flip handler — distinguishes tap from swipe, prevents accidental flips */
 (function() {
   var lastFlip = 0;

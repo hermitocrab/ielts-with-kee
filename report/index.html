@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
   <link rel="stylesheet" href="../speaking-p2/css/p2.css?v=7">
-  <link rel="stylesheet" href="css/report.css?v=6">
+  <link rel="stylesheet" href="css/report.css?v=8">
 </head>
 <body>
 
@@ -32,6 +32,11 @@
       </a>
       <a href="#panel-database" class="rpt-sidebar-item" data-panel="database" onclick="switchReportTab('database',this);return false">
         <span class="rpt-sidebar-icon">🔍</span> Search Database
+      </a>
+      <div class="rpt-sidebar-divider"></div>
+      <a href="#panel-bikao" class="rpt-sidebar-item" data-panel="bikao" onclick="switchReportTab('bikao',this);return false">
+        <span class="rpt-sidebar-icon">🔥</span> 必考题
+        <span class="rpt-sidebar-count">4</span>
       </a>
       <div class="rpt-sidebar-divider"></div>
       <a href="#rpt-insights-section" class="rpt-sidebar-sub" onclick="document.getElementById('rpt-insights-section').scrollIntoView({behavior:'smooth'});return false">💡 Key Insights</a>
@@ -78,6 +83,9 @@
       <button class="rpt-tab" onclick="switchReportTab('database', this)">
         <span class="rpt-tab-icon">🔍</span> Search Database
       </button>
+      <button class="rpt-tab bikao-tab" onclick="switchReportTab('bikao', this)">
+        <span class="rpt-tab-icon">🔥</span> 必考题
+      </button>
     </div>
 
     <!-- Panel: Latest Season -->
@@ -92,6 +100,11 @@
 
     <!-- Panel: Searchable Database -->
     <div class="rpt-panel" id="panel-database">
+      <!-- Populated by JS -->
+    </div>
+
+    <!-- Panel: 必考题 -->
+    <div class="rpt-panel" id="panel-bikao">
       <!-- Populated by JS -->
     </div>
 
@@ -113,7 +126,9 @@
   </div>
 </div>
 
-<script src="js/report.js?v=6"></script>
+<script src="js/report.js?v=8"></script>
 
+<link rel="stylesheet" href="/css/kee-bot.css">
+<script src="/js/kee-bot.js"></script>
 </body>
 </html>

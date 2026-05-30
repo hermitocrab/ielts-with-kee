@@ -616,7 +616,78 @@ body.angle-achievement  { background: linear-gradient(170deg, #FFF0D0 0%, #FFF8E
   margin-top: 12px;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
 }
+
+/* Audio controls in byline */
+.audio-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 4px;
+}
+.speed-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 22px;
+  padding: 0 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 0.68rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.speed-btn:hover { border-color: #999; color: #555; }
+.speed-btn.active { background: var(--p2-people); color: #fff; border-color: var(--p2-people); }
+
+.nyt-listen {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 22px;
+  padding: 0 8px;
+  border: 1px solid var(--p2-people);
+  border-radius: 4px;
+  background: #fff;
+  font-size: 0.68rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: var(--p2-people);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.nyt-listen:hover { background: var(--p2-people); color: #fff; }
+
+/* Inline play button on paragraphs */
+.p-listen {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background: #fff;
+  font-size: 0.6rem;
+  color: #aaa;
+  cursor: pointer;
+  margin-right: 6px;
+  padding: 0;
+  line-height: 1;
+  vertical-align: middle;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+.p-listen:hover { border-color: var(--p2-people); color: var(--p2-people); background: #faf5ff; }
 .nyt-figure {
   max-width: 720px;
   margin: 28px auto;

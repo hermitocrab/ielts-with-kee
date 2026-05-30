@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS with Kee</title>
+    <style>
+        :root {
+            /* Themes */
+            --bg-gradient: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --accent-color: #007AFF;
+            
+            /* UI Elements */
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: rgba(255, 255, 255, 0.6);
+            --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            
+            /* Text */
+            --highlight-bg: #E5F1FF;
+            --highlight-text: #004080;
+            --text-main: #1D1D1F;
+            --text-sec: #6e6e73;
+            --ipa-color: #555;
+        }
+
+        /* SPECIFIC THEMES */
+        .theme-likes { --bg-gradient: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); --accent-color: #FF2D55; --highlight-bg: #FFEBEE; --highlight-text: #B71C1C; }
+        .theme-pref { --bg-gradient: linear-gradient(135deg, #fff1eb 0%, #ace0f9 100%); --accent-color: #FF9500; --highlight-bg: #FFF3E0; --highlight-text: #E65100; }
+        .theme-list { --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); --accent-color: #FFCC00; --highlight-bg: #FFF8E1; --highlight-text: #F57F17; }
+        .theme-freq { --bg-gradient: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%); --accent-color: #34C759; --highlight-bg: #E8F5E9; --highlight-text: #1B5E20; }
+        .theme-occ { --bg-gradient: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); --accent-color: #30B0C7; --highlight-bg: #E0F7FA; --highlight-text: #006064; }
+        .theme-exp { --bg-gradient: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%); --accent-color: #007AFF; --highlight-bg: #E3F2FD; --highlight-text: #0D47A1; }
+        .theme-op { --bg-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); --accent-color: #5856D6; --highlight-bg: #EDE7F6; --highlight-text: #311B92; }
+        .theme-imp { --bg-gradient: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%); --accent-color: #AF52DE; --highlight-bg: #F3E5F5; --highlight-text: #4A148C; }
+        .theme-bikao { --bg-gradient: linear-gradient(135deg, #ff0844 0%, #ffb199 100%); --accent-color: #E53935; --highlight-bg: #FFEBEE; --highlight-text: #B71C1C; }
+
+        body {
+            margin: 0; padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-main);
+            min-height: 100vh;
+            overflow-x: hidden;
+            transition: background 0.8s ease;
+        }
+
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px 120px 20px; }
+
+        /* Typography */
+        h1 { 
+            font-size: 52px; font-weight: 800; text-align: center; margin-bottom: 5px; 
+            color: #fff; text-shadow: 0 4px 15px rgba(0,0,0,0.15); letter-spacing: -1px;
+        }
+        .subtitle {
+            text-align: center; color: rgba(255,255,255,0.95); font-size: 20px; 
+            margin-bottom: 40px; font-weight: 600; letter-spacing: 0.5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Navigation */
+        .nav-bar { display: flex; justify-content: center; gap: 10px; margin-bottom: 40px; flex-wrap: wrap; }
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.35); 
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 12px 20px; border-radius: 20px; 
+            font-size: 14px; font-weight: 700;
+            cursor: pointer; transition: all 0.3s ease; 
+            color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            backdrop-filter: blur(12px);
+        }
+        .nav-btn:hover { transform: translateY(-3px); background: rgba(255, 255, 255, 0.55); }
+        .nav-btn.active { 
+            background: #fff; color: var(--accent-color); 
+            text-shadow: none; box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
+            transform: scale(1.05);
+        }
+
+        /* Main Panel */
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
+            border-radius: 32px; border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow); padding: 45px;
+            margin-bottom: 35px; position: relative; overflow: hidden;
+            animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .section { display: none; }
+        .section.active { display: block; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        h2 { 
+            font-size: 30px; font-weight: 800; margin-bottom: 30px; 
+            color: var(--accent-color); letter-spacing: -0.5px;
+        }
+        
+        /* Vocabulary */
+        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .vocab-card { 
+            background: rgba(255,255,255,0.6); padding: 20px; border-radius: 20px; 
+            border-left: 6px solid var(--accent-color); transition: transform 0.2s;
+        }
+        .vocab-card:hover { transform: translateY(-4px); background: #fff; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        
+        .word { font-weight: 900; font-size: 19px; display: block; margin-bottom: 6px; color: var(--text-main); letter-spacing: -0.5px; }
+        .ipa { font-family: 'Arial', sans-serif; font-size: 13px; color: var(--ipa-color); margin-left: 10px; font-weight: 400; background: #eee; padding: 2px 6px; border-radius: 4px; }
+        .pos { color: var(--accent-color); font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 800; }
+        .def { margin-top: 8px; font-size: 15px; line-height: 1.5; font-weight: 500; }
+        .colloc { margin-top: 12px; padding-top: 10px; border-top: 1px dashed #ccc; font-size: 13px; color: var(--text-sec); font-style: italic; }
+        .colloc span { font-weight: 700; color: var(--accent-color); font-style: normal; }
+
+        /* Mind Map */
+        .mindmap-container { display: flex; justify-content: center; margin: 40px 0; perspective: 1000px; }
+        .mindmap-root {
+            background: var(--accent-color); color: white; padding: 16px 32px; border-radius: 60px;
+            font-weight: 800; cursor: pointer; position: relative; z-index: 2;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: transform 0.2s; font-size: 17px;
+        }
+        .mindmap-root:hover { transform: scale(1.05); }
+        .mindmap-branches {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 25px;
+            opacity: 0; transform: rotateX(-15deg) translateY(-20px); transition: all 0.4s ease; 
+            pointer-events: none; height: 0; transform-origin: top center;
+        }
+        .mindmap-branches.open { opacity: 1; transform: rotateX(0) translateY(0); pointer-events: auto; height: auto; }
+        .mindmap-node {
+            background: #fff; padding: 15px; border-radius: 16px; text-align: left;
+            font-size: 15px; font-weight: 700; border: 1px solid rgba(0,0,0,0.05); 
+            color: var(--text-main); box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .node-ex { display: block; margin-top: 6px; font-size: 13px; color: var(--text-sec); font-weight: 500; }
+
+        /* Scaffolding */
+        .scaffold-box { 
+            background: #fff; border-radius: 24px; padding: 35px; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.04); margin-bottom: 35px; 
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+        .scaffold-header { 
+            display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; 
+            border-bottom: 2px solid #f2f2f7; padding-bottom: 15px; flex-wrap: wrap; gap: 10px;
+        }
+        .scaffold-header h3 { margin: 0; font-size: 20px; font-weight: 800; color: var(--text-main); }
+        
+        .chunk-container { font-size: 20px; line-height: 2.4; color: var(--text-main); font-weight: 500; }
+        .chunk {
+            display: inline-block; cursor: pointer; margin: 0 3px; padding: 4px 10px;
+            border-radius: 8px; transition: all 0.2s ease; 
+            border-bottom: 2px solid transparent;
+        }
+        .chunk:hover { background: rgba(0,0,0,0.03); }
+        .chunk.blurred { 
+            color: transparent; text-shadow: 0 0 18px rgba(0,0,0,0.25); 
+            background: rgba(0,0,0,0.03); border-bottom: 2px solid #ddd;
+            user-select: none;
+        }
+        
+        /* HIGH VISIBILITY DISCOURSE MARKERS */
+        .dm {
+            color: var(--highlight-text); 
+            font-weight: 900; 
+            background-color: var(--highlight-bg);
+            padding: 4px 10px; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            transition: all 0.2s;
+            border-bottom: 2px solid var(--accent-color); /* Extra visibility */
+            display: inline-block;
+            line-height: 1.2;
+        }
+        .dm:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .dm.hidden-dm { 
+            background-color: #e0e0e0; 
+            color: transparent; 
+            text-shadow: none; 
+            border-bottom: 2px solid #ccc; 
+        }
+
+        /* Corners */
+        .corner-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 40px; }
+        .idiom-box, .dm-box { 
+            background: rgba(255,255,255,0.8); padding: 25px; border-radius: 20px; 
+            border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+        .box-title { 
+            display: block; font-size: 13px; font-weight: 900; text-transform: uppercase; 
+            color: var(--accent-color); margin-bottom: 15px; letter-spacing: 1.5px; 
+        }
+        .box-content li { 
+            font-size: 14px; margin-bottom: 10px; line-height: 1.5; list-style: none; 
+            padding-left: 12px; border-left: 4px solid var(--accent-color); font-weight: 600;
+        }
+        ul { padding-left: 0; margin: 0; }
+
+        .timeline-step { 
+            display: flex; align-items: center; gap: 10px; padding: 8px 16px; 
+            background: var(--highlight-bg); border-radius: 50px; font-size: 13px; 
+            color: var(--highlight-text); font-weight: 700; width: fit-content;
+        }
+
+        /* Apply Section */
+        .apply-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .apply-item { 
+            background: #fff; padding: 20px; border-radius: 16px; 
+            border-left: 6px solid var(--accent-color); font-weight: 700; font-size: 16px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+
+    </style>
+</head>
+<body class="theme-likes">
+
+<div class="container">
+    <h1>IELTS with Kee</h1>
+    <div class="subtitle">Unlock Native Flow with the <strong>Master Kee</strong>! 🔑</div>
+
+    <div class="nav-bar">
+        <button class="nav-btn active" onclick="switchTab('likes', 'theme-likes')">1. Likes</button>
+        <button class="nav-btn" onclick="switchTab('preferences', 'theme-pref')">2. Preferences</button>
+        <button class="nav-btn" onclick="switchTab('listing', 'theme-list')">3. Listing</button>
+        <button class="nav-btn" onclick="switchTab('freq', 'theme-freq')">4. Frequency</button>
+        <button class="nav-btn" onclick="switchTab('occasion', 'theme-occ')">5. Occasion</button>
+        <button class="nav-btn" onclick="switchTab('experience', 'theme-exp')">6. Experience</button>
+        <button class="nav-btn" onclick="switchTab('opinion', 'theme-op')">7. Opinion</button>
+        <button class="nav-btn" onclick="switchTab('importance', 'theme-imp')">8. Importance</button>
+        <button class="nav-btn" onclick="switchTab('bikao', 'theme-bikao')">9. 🔥 必考题</button>
+    </div>
+
+    <div id="likes" class="section active">
+        <div class="glass-panel">
+            <h2>🖼️ LEARN: Affection & Benefits</h2>
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <span class="word">avid<span class="ipa">/ˈævɪd/</span></span>
+                    <span class="pos">ADJECTIVE</span>
+                    <div class="def">Having or showing a keen interest in or enthusiasm for something.</div>
+                    <div class="colloc"><span>Collocations:</span> avid reader, avid fan</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">therapeutic<span class="ipa">/ˌθerəˈpjuːtɪk/</span></span>
+                    <span class="pos">ADJECTIVE</span>
+                    <div class="def">Causing you to feel happier and more relaxed; healing.</div>
+                    <div class="colloc"><span>Collocations:</span> highly therapeutic, therapeutic effect</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">boost (my) mood<span class="ipa">/buːst/</span></span>
+                    <span class="pos">COLLOCATION</span>
+                    <div class="def">To make someone feel more positive or happier instantly.</div>
+                    <div class="colloc"><span>Collocations:</span> instantly boost, significantly boost</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">have a soft spot for</span>
+                    <span class="pos">IDIOM</span>
+                    <div class="def">To feel a lot of affection for something/someone, often without reason.</div>
+                    <div class="colloc"><span>Collocations:</span> always had a soft spot</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">freshen up<span class="ipa">/ˈfreʃn ʌp/</span></span>
+                    <span class="pos">PHRASAL VERB</span>
+                    <div class="def">To make something cleaner, more pleasant, or cooler.</div>
+                    <div class="colloc"><span>Collocations:</span> freshen up the room</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">fascinating<span class="ipa">/ˈfæsɪneɪtɪŋ/</span></span>
+                    <span class="pos">ADJECTIVE</span>
+                    <div class="def">Extremely interesting.</div>
+                    <div class="colloc"><span>Collocations:</span> find it fascinating, absolutely fascinating</div>
+                </div>
+            </div>
+
+            <div class="mindmap-container">
+                <div style="text-align:center; width: 100%;">
+                    <div class="mindmap-root" onclick="toggleMap('map1')">Synonyms: "I Like" (Click Me) ➕</div>
+                    <div id="map1" class="mindmap-branches">
+                        <div class="mindmap-node">I'm keen on...<span class="node-ex">"I'm keen on outdoor sports."</span></div>
+                        <div class="mindmap-node">I'm a huge fan of...<span class="node-ex">"I'm a huge fan of sci-fi movies."</span></div>
+                        <div class="mindmap-node">I have a soft spot for...<span class="node-ex">"I have a soft spot for old jazz music."</span></div>
+                        <div class="mindmap-node">I'm totally into...<span class="node-ex">"Lately, I'm totally into cooking."</span></div>
+                        <div class="mindmap-node">...is my cup of tea<span class="node-ex">"Camping isn't really my cup of tea."</span></div>
+                        <div class="mindmap-node">I get a kick out of...<span class="node-ex">"I get a kick out of solving puzzles."</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="corner-grid">
+                <div class="idiom-box"><span class="box-title">🦁 Idiom Corner</span>
+                    <ul class="box-content">
+                        <li><strong>My cup of tea:</strong> Something one likes. <em>"Horror movies aren't my cup of tea."</em></li>
+                        <li><strong>Have a blast:</strong> Enjoy oneself greatly. <em>"We had a blast at the party."</em></li>
+                        <li><strong>Over the moon:</strong> Extremely happy. <em>"I was over the moon with the result."</em></li>
+                    </ul>
+                </div>
+                <div class="dm-box"><span class="box-title">🗣️ Openers</span>
+                    <ul class="box-content">
+                        <li>Well, personally speaking...</li>
+                        <li>To be honest, I'd say so.</li>
+                        <li>Actually, yeah, definitely.</li>
+                    </ul>
+                </div>
+                <div class="dm-box"><span class="box-title">🔗 Connectors</span>
+                    <ul class="box-content">
+                        <li>And I reckon the main reason is...</li>
+                        <li>This is simply because...</li>
+                        <li>Like, for instance...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel">
+            <h2>🧩 TRY: Scaffolding Logic</h2>
+            
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q1: Do you like flowers?</h3>
+                    <div class="timeline-step">Logic: Detail Expander ➡️ Answer ➡️ Detail ➡️ Example</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Well, personally speaking,</span> I’d say so.</span>
+                    <span class="chunk blurred" onclick="toggle(this)">I’m quite <span class="dm" onclick="toggleDm(this, event)">fond of</span> flowers.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">And I reckon the main reason is that</span> they can <span class="dm" onclick="toggleDm(this, event)">boost my mood</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Like,</span> I’ve got some lilies in my bedroom,</span>
+                    <span class="chunk blurred" onclick="toggle(this)">and they have totally <span class="dm" onclick="toggleDm(this, event)">freshened up</span> the air there.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q2: Do you like swimming?</h3>
+                    <div class="timeline-step">Logic: Vitality Check ➡️ Strong Yes ➡️ Physical ➡️ Mental</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Absolutely!</span> I enjoy swimming</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">because</span> it helps me reduce stress.</span>
+                    <span class="chunk blurred" onclick="toggle(this)">I feel so energetic after a good swim.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">In addition,</span> it’s a good way to lose weight.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">You know,</span> it really helps you burn calories quickly.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q3: Do you like chatting with friends?</h3>
+                    <div class="timeline-step">Logic: The Outlet ➡️ Idiom ➡️ Benefit ➡️ Habit</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Oh, definitely.</span> It’s totally <span class="dm" onclick="toggleDm(this, event)">my cup of tea</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">The thing is,</span> catching up with buddies is <span class="dm" onclick="toggleDm(this, event)">therapeutic</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">For example,</span> we usually grab a coffee on weekends</span>
+                    <span class="chunk blurred" onclick="toggle(this)">and just gossip. We always <span class="dm" onclick="toggleDm(this, event)">have a blast</span>.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q4: Do you like art?</h3>
+                    <div class="timeline-step">Logic: The Appreciation ➡️ Honest Yes ➡️ Feeling ➡️ Reason</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">To be honest,</span> yes.</span>
+                    <span class="chunk blurred" onclick="toggle(this)">I find art absolutely <span class="dm" onclick="toggleDm(this, event)">fascinating</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Specifically,</span> going to galleries helps me relax.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">I guess it's because</span> looking at paintings inspires my creativity.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel">
+            <h2>🚀 APPLY: Your Turn</h2>
+            <div class="apply-grid">
+                <div class="apply-item">1. Do you like growing vegetables?</div>
+                <div class="apply-item">2. Do you like advertisements?</div>
+                <div class="apply-item">3. Do you like buying shoes?</div>
+                <div class="apply-item">4. Do you like noisy places?</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="preferences" class="section">
+        <div class="glass-panel">
+            <h2>🖼️ LEARN: Comparing & Choosing</h2>
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <span class="word">preference<span class="ipa">/ˈprefrəns/</span></span>
+                    <span class="pos">NOUN</span>
+                    <div class="def">A greater interest in or desire for something.</div>
+                    <div class="colloc"><span>Collocations:</span> personal preference, strong preference</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">efficient<span class="ipa">/ɪˈfɪʃnt/</span></span>
+                    <span class="pos">ADJECTIVE</span>
+                    <div class="def">Working well without wasting time or energy.</div>
+                    <div class="colloc"><span>Collocations:</span> highly efficient, far more efficient</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">disturbing<span class="ipa">/dɪˈstɜːbɪŋ/</span></span>
+                    <span class="pos">ADJECTIVE</span>
+                    <div class="def">Causing worry or interruption (annoying).</div>
+                    <div class="colloc"><span>Collocations:</span> find it disturbing, less disturbing</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">handy<span class="ipa">/ˈhændi/</span></span>
+                    <span class="pos">ADJECTIVE</span>
+                    <div class="def">Convenient to handle or use; useful.</div>
+                    <div class="colloc"><span>Collocations:</span> come in handy, extremely handy</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">comprehend<span class="ipa">/ˌkɒmprɪˈhend/</span></span>
+                    <span class="pos">VERB</span>
+                    <div class="def">To understand something fully.</div>
+                    <div class="colloc"><span>Collocations:</span> fail to comprehend, easy to comprehend</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">clumsy<span class="ipa">/ˈklʌmzi/</span></span>
+                    <span class="pos">ADJECTIVE</span>
+                    <div class="def">Awkward in movement or in handling things.</div>
+                    <div class="colloc"><span>Collocations:</span> bit clumsy, clumsy with hands</div>
+                </div>
+            </div>
+
+            <div class="mindmap-container">
+                <div style="text-align:center; width: 100%;">
+                    <div class="mindmap-root" onclick="toggleMap('map2')">Synonyms: "I Prefer" (Click Me) ➕</div>
+                    <div id="map2" class="mindmap-branches">
+                        <div class="mindmap-node">I'd go for...<span class="node-ex">"I'd go for tea over coffee."</span></div>
+                        <div class="mindmap-node">I lean towards...<span class="node-ex">"I lean towards studying at night."</span></div>
+                        <div class="mindmap-node">My choice would be...<span class="node-ex">"My choice would be the blue one."</span></div>
+                        <div class="mindmap-node">I'm more of a [X] person<span class="node-ex">"I'm more of a cat person."</span></div>
+                        <div class="mindmap-node">[X] wins hands down<span class="node-ex">"Summer wins hands down."</span></div>
+                        <div class="mindmap-node">I'd pick [X] over [Y]<span class="node-ex">"I'd pick reading over TV."</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="corner-grid">
+                <div class="idiom-box"><span class="box-title">🦁 Idiom Corner</span>
+                    <ul class="box-content">
+                        <li><strong>No-brainer:</strong> An easy decision. <em>"Taking the job was a no-brainer."</em></li>
+                        <li><strong>Creature of habit:</strong> Follows routines. <em>"I'm a creature of habit with food."</em></li>
+                        <li><strong>Best of both worlds:</strong> Benefits of A & B. <em>"It's the best of both worlds."</em></li>
+                    </ul>
+                </div>
+                <div class="dm-box"><span class="box-title">🗣️ Choosing</span>
+                    <ul class="box-content">
+                        <li>Well, if I had to choose...</li>
+                        <li>It's kinda hard to say, but...</li>
+                        <li>For me, personally...</li>
+                    </ul>
+                </div>
+                <div class="dm-box"><span class="box-title">🔗 Contrasting</span>
+                    <ul class="box-content">
+                        <li>Whereas [A] is...</li>
+                        <li>On the other hand...</li>
+                        <li>That being said...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel">
+            <h2>🧩 TRY: Scaffolding Logic</h2>
+            
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q1: Reading vs Movies?</h3>
+                    <div class="timeline-step">Logic: The Selection ➡️ Choice ➡️ Comparative ➡️ Reason</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Well,</span> watching movies <span class="dm" onclick="toggleDm(this, event)">would be my preference</span>,</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">and the reason is that</span> it doesn't require as much thinking.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">For example,</span> I often watch comedies to relax</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">since</span> they’re quite interesting and enjoyable.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q2: Tea or Coffee?</h3>
+                    <div class="timeline-step">Logic: The Greedy Choice ➡️ Cannot Choose ➡️ Benefit A ➡️ Benefit B</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Honestly, it's really hard to say.</span></span>
+                    <span class="chunk blurred" onclick="toggle(this)">I want the <span class="dm" onclick="toggleDm(this, event)">best of both worlds</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">On the one hand,</span> coffee keeps me <span class="dm" onclick="toggleDm(this, event)">energetic</span> in the morning.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">But on the other hand,</span> tea is much more <span class="dm" onclick="toggleDm(this, event)">soothing</span> in the evening.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q3: Singing or Dancing?</h3>
+                    <div class="timeline-step">Logic: The Rejection ➡️ Neither ➡️ Reason (Skill) ➡️ Alternative</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">To tell you the truth,</span> neither!</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">It’s simply because</span> I'm quite <span class="dm" onclick="toggleDm(this, event)">clumsy</span> and tone-deaf.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">So,</span> performing isn't <span class="dm" onclick="toggleDm(this, event)">my cup of tea</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">I'd rather</span> just be a spectator in the audience.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q4: Texting or Calling?</h3>
+                    <div class="timeline-step">Logic: The Context Switch ➡️ It Depends ➡️ Context A ➡️ Context B</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">It really depends on the situation.</span></span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">In the case of</span> an emergency, calling is <span class="dm" onclick="toggleDm(this, event)">far more efficient</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">However,</span> in normal situations, I favor messaging</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">as</span> it is not that <span class="dm" onclick="toggleDm(this, event)">disturbing</span> to others.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel">
+            <h2>🚀 APPLY: Your Turn</h2>
+            <div class="apply-grid">
+                <div class="apply-item">1. Do you prefer living in a house or a flat?</div>
+                <div class="apply-item">2. Do you prefer to be a driver or a passenger?</div>
+                <div class="apply-item">3. Do you prefer eating at home or eating out?</div>
+                <div class="apply-item">4. Do you prefer to study alone or with others?</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="listing" class="section">
+        <div class="glass-panel">
+            <h2>🖼️ LEARN: Variety & Range</h2>
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <span class="word">prominent<span class="ipa">/ˈprɒmɪnənt/</span></span>
+                    <span class="pos">ADJECTIVE</span>
+                    <div class="def">Important; famous; noticeable.</div>
+                    <div class="colloc"><span>Collocations:</span> most prominent, play a prominent role</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">affordable<span class="ipa">/əˈfɔːdəbl/</span></span>
+                    <span class="pos">ADJECTIVE</span>
+                    <div class="def">Not expensive; reasonably priced.</div>
+                    <div class="colloc"><span>Collocations:</span> highly affordable, affordable housing</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">eco-friendly<span class="ipa">/ˌiːkəʊ ˈfrendli/</span></span>
+                    <span class="pos">ADJECTIVE</span>
+                    <div class="def">Not harmful to the environment.</div>
+                    <div class="colloc"><span>Collocations:</span> eco-friendly products</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">limited edition<span class="ipa">/ˌlɪmɪtɪd ɪˈdɪʃn/</span></span>
+                    <span class="pos">NOUN PHRASE</span>
+                    <div class="def">A version of a product produced in small numbers.</div>
+                    <div class="colloc"><span>Collocations:</span> collect limited editions</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">aesthetic<span class="ipa">/iːsˈθetɪk/</span></span>
+                    <span class="pos">ADJECTIVE</span>
+                    <div class="def">Concerned with beauty or the appreciation of beauty.</div>
+                    <div class="colloc"><span>Collocations:</span> aesthetic sense, aesthetic appeal</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">heritage<span class="ipa">/ˈherɪtɪdʒ/</span></span>
+                    <span class="pos">NOUN</span>
+                    <div class="def">Valued objects/qualities like buildings/traditions passed down.</div>
+                    <div class="colloc"><span>Collocations:</span> cultural heritage, rich heritage</div>
+                </div>
+            </div>
+
+            <div class="mindmap-container">
+                <div style="text-align:center; width: 100%;">
+                    <div class="mindmap-root" onclick="toggleMap('map3')">Synonyms: "Many Types" (Click Me) ➕</div>
+                    <div id="map3" class="mindmap-branches">
+                        <div class="mindmap-node">A wide variety of...<span class="node-ex">"There's a wide variety of food."</span></div>
+                        <div class="mindmap-node">All sorts of...<span class="node-ex">"We have all sorts of music."</span></div>
+                        <div class="mindmap-node">An array of...<span class="node-ex">"An impressive array of options."</span></div>
+                        <div class="mindmap-node">Plenty of...<span class="node-ex">"There are plenty of parks."</span></div>
+                        <div class="mindmap-node">A mixed bag of...<span class="node-ex">"It's a mixed bag of styles."</span></div>
+                        <div class="mindmap-node">Diverse options...<span class="node-ex">"We have diverse options here."</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="corner-grid">
+                <div class="idiom-box"><span class="box-title">🦁 Idiom Corner</span>
+                    <ul class="box-content">
+                        <li><strong>Spoilt for choice:</strong> Hard to choose because of so many good options.</li>
+                        <li><strong>Cream of the crop:</strong> The very best of a group.</li>
+                        <li><strong>Mixed bag:</strong> A diverse assortment of things.</li>
+                    </ul>
+                </div>
+                <div class="dm-box"><span class="box-title">🗣️ Generalizing</span>
+                    <ul class="box-content">
+                        <li>Generally speaking, I'd say...</li>
+                        <li>Well, there are plenty of...</li>
+                        <li>By and large, we have...</li>
+                    </ul>
+                </div>
+                <div class="dm-box"><span class="box-title">🔗 Highlighting</span>
+                    <ul class="box-content">
+                        <li>But the most popular one gotta be...</li>
+                        <li>Specifically speaking...</li>
+                        <li>However, if you ask me...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel">
+            <h2>🧩 TRY: Scaffolding Logic</h2>
+            
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q1: Public transport in your city?</h3>
+                    <div class="timeline-step">Logic: List Master ➡️ General ➡️ List ➡️ Highlight</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Generally speaking,</span> there is a <span class="dm" onclick="toggleDm(this, event)">wide range of</span> public transport,</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">such as</span> the metro, taxis, and buses.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">But the most prominent one gotta be</span> the metro,</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">and I guess that's because</span> it's convenient and <span class="dm" onclick="toggleDm(this, event)">affordable</span>.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q2: What cars do you like?</h3>
+                    <div class="timeline-step">Logic: Humble Guess ➡️ Stalling ➡️ Guess ➡️ Reason</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">To tell you the truth,</span> I’m not a big fan of driving,</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">so off the top of my head,</span> I don’t know much about cars.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">But if you twist my arm, I’d say</span> I'm kinda into electric cars</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">due to the fact that</span> they are more <span class="dm" onclick="toggleDm(this, event)">eco-friendly</span>.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q3: What do people collect?</h3>
+                    <div class="timeline-step">Logic: The Divider ➡️ Range ➡️ Group A ➡️ Group B</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Well, I reckon that</span> people collect a <span class="dm" onclick="toggleDm(this, event)">variety of</span> things,</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">ranging from</span> stamps <span class="dm" onclick="toggleDm(this, event)">to</span> <span class="dm" onclick="toggleDm(this, event)">limited edition</span> sneakers.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">For youngsters,</span> many of them are into shoes.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Whereas for elderly people,</span> collecting stamps might be their thing.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q4: Popular art in China?</h3>
+                    <div class="timeline-step">Logic: Cultural Pride ➡️ Choice ➡️ Value ➡️ Effect</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">As far as I'm concerned,</span> the most popular type <span class="dm" onclick="toggleDm(this, event)">would be</span> Calligraphy</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">because</span> it’s a key part of our <span class="dm" onclick="toggleDm(this, event)">heritage</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)">This art form can satisfy the <span class="dm" onclick="toggleDm(this, event)">aesthetic</span> sense.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel">
+            <h2>🚀 APPLY: Your Turn</h2>
+            <div class="apply-grid">
+                <div class="apply-item">1. What types of bags do you use?</div>
+                <div class="apply-item">2. What kinds of music are popular in your country?</div>
+                <div class="apply-item">3. What kinds of websites do you usually use?</div>
+                <div class="apply-item">4. What kinds of TV programs do you often watch?</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="freq" class="section">
+        <div class="glass-panel">
+            <h2>🖼️ LEARN: Time Precision</h2>
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <span class="word">basis<span class="ipa">/ˈbeɪsɪs/</span></span>
+                    <span class="pos">NOUN</span>
+                    <div class="def">The way things are organized or arranged.</div>
+                    <div class="colloc"><span>Collocations:</span> on a daily basis, weekly basis</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">rarely<span class="ipa">/ˈreəli/</span></span>
+                    <span class="pos">ADVERB</span>
+                    <div class="def">Not often; seldom.</div>
+                    <div class="colloc"><span>Collocations:</span> rarely see, very rarely</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">tend to<span class="ipa">/tend tuː/</span></span>
+                    <span class="pos">VERB</span>
+                    <div class="def">To be likely to behave in a particular way (habit).</div>
+                    <div class="colloc"><span>Collocations:</span> tend to forget, tend to agree</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">window shopping<span class="ipa">/ˈwɪndəʊ ʃɒpɪŋ/</span></span>
+                    <span class="pos">NOUN PHRASE</span>
+                    <div class="def">Looking at goods in shop windows without buying.</div>
+                    <div class="colloc"><span>Collocations:</span> go window shopping</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">outfit<span class="ipa">/ˈaʊtfɪt/</span></span>
+                    <span class="pos">NOUN</span>
+                    <div class="def">A set of clothes worn together.</div>
+                    <div class="colloc"><span>Collocations:</span> latest outfit, stylish outfit</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">inbox<span class="ipa">/ˈɪnbɒks/</span></span>
+                    <span class="pos">NOUN</span>
+                    <div class="def">An electronic folder for received emails.</div>
+                    <div class="colloc"><span>Collocations:</span> check inbox, empty inbox</div>
+                </div>
+            </div>
+
+            <div class="mindmap-container">
+                <div style="text-align:center; width: 100%;">
+                    <div class="mindmap-root" onclick="toggleMap('map4')">Synonyms: "Often" (Click Me) ➕</div>
+                    <div id="map4" class="mindmap-branches">
+                        <div class="mindmap-node">On a regular basis<span class="node-ex">"I exercise on a regular basis."</span></div>
+                        <div class="mindmap-node">Pretty frequently<span class="node-ex">"I see him pretty frequently."</span></div>
+                        <div class="mindmap-node">Time and time again<span class="node-ex">"I watch this movie time and time again."</span></div>
+                        <div class="mindmap-node">Every single day<span class="node-ex">"I drink coffee every single day."</span></div>
+                        <div class="mindmap-node">Quite often<span class="node-ex">"I quite often walk to work."</span></div>
+                        <div class="mindmap-node">Regular as clockwork<span class="node-ex">"He arrives regular as clockwork."</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="corner-grid">
+                <div class="idiom-box"><span class="box-title">🦁 Idiom Corner</span>
+                    <ul class="box-content">
+                        <li><strong>Once in a blue moon:</strong> Very rarely.</li>
+                        <li><strong>Day in, day out:</strong> Every day (boring).</li>
+                        <li><strong>From time to time:</strong> Occasionally.</li>
+                    </ul>
+                </div>
+                <div class="dm-box"><span class="box-title">🗣️ Frequency</span>
+                    <ul class="box-content">
+                        <li>Certainly! I do that quite often.</li>
+                        <li>Well, frankly speaking...</li>
+                        <li>Not really, I hardly ever...</li>
+                    </ul>
+                </div>
+                <div class="dm-box"><span class="box-title">🔗 Clarifying</span>
+                    <ul class="box-content">
+                        <li>Especially when I...</li>
+                        <li>Like three times a week.</li>
+                        <li>Truth be told, I prefer...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel">
+            <h2>🧩 TRY: Scaffolding Logic</h2>
+            
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q1: Do you often read books?</h3>
+                    <div class="timeline-step">Logic: The Routine ➡️ Confirmation ➡️ Frequency ➡️ Reason</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Certainly!</span> I read books quite often,</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">like on a daily basis,</span> especially before bed,</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">because</span> it’s a good way to open my mind.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q2: Do you often go shopping?</h3>
+                    <div class="timeline-step">Logic: Detail Expander ➡️ Frequency ➡️ Item ➡️ Feeling</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Frankly speaking,</span> I go quite often, like 3 times a week.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Especially for</span> clothes, like T-shirts.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Even if it’s just</span> <span class="dm" onclick="toggleDm(this, event)">window shopping</span>,</span>
+                    <span class="chunk blurred" onclick="toggle(this)">I find it really fun to try on new <span class="dm" onclick="toggleDm(this, event)">outfits</span>.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q3: Do you often send emails?</h3>
+                    <div class="timeline-step">Logic: The Exception ➡️ No ➡️ Alternative ➡️ Reason</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Personally, not really.</span> I <span class="dm" onclick="toggleDm(this, event)">hardly ever</span> send e-mails.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Truth be told,</span> I prefer sending text messages</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">because</span> it’s much more <span class="dm" onclick="toggleDm(this, event)">efficient</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Plus,</span> people don’t often check their <span class="dm" onclick="toggleDm(this, event)">inbox</span> nowadays.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q4: How often do you take a taxi?</h3>
+                    <div class="timeline-step">Logic: Frequency Chain ➡️ Rate ➡️ Occasion ➡️ Reason</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)">I take a taxi <span class="dm" onclick="toggleDm(this, event)">a few times a week</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Especially when</span> I'm in a hurry.</span>
+                    <span class="chunk blurred" onclick="toggle(this)">I prefer it over the bus <span class="dm" onclick="toggleDm(this, event)">since</span> it's faster.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel">
+            <h2>🚀 APPLY: Your Turn</h2>
+            <div class="apply-grid">
+                <div class="apply-item">1. How often do you use cash?</div>
+                <div class="apply-item">2. Do you often tell your friends when they do something well?</div>
+                <div class="apply-item">3. Do you often visit a museum?</div>
+                <div class="apply-item">4. Do you often go to public places with your friends?</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="occasion" class="section">
+        <div class="glass-panel">
+            <h2>🖼️ LEARN: Contextualizing</h2>
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <span class="word">concentration<span class="ipa">/ˌkɒnsnˈtreɪʃn/</span></span>
+                    <span class="pos">NOUN</span>
+                    <div class="def">The action or power of focusing one's attention or mental effort.</div>
+                    <div class="colloc"><span>Collocations:</span> improve concentration, lose concentration</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">pretty much<span class="ipa">/ˈprɪti mʌtʃ/</span></span>
+                    <span class="pos">PHRASE</span>
+                    <div class="def">Very nearly; almost (informal).</div>
+                    <div class="colloc"><span>Collocations:</span> pretty much all the time</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">hang out<span class="ipa">/hæŋ aʊt/</span></span>
+                    <span class="pos">PHRASAL VERB</span>
+                    <div class="def">To spend time relaxing, usually with friends.</div>
+                    <div class="colloc"><span>Collocations:</span> hang out with friends</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">occasion<span class="ipa">/əˈkeɪʒn/</span></span>
+                    <span class="pos">NOUN</span>
+                    <div class="def">A particular time or instance of an event.</div>
+                    <div class="colloc"><span>Collocations:</span> special occasion, festive occasion</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">cheer up<span class="ipa">/tʃɪə(r) ʌp/</span></span>
+                    <span class="pos">PHRASAL VERB</span>
+                    <div class="def">To become less sad, or to make someone feel less sad.</div>
+                    <div class="colloc"><span>Collocations:</span> cheer me up, cheer him up</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">quality time<span class="ipa">/ˈkwɒləti taɪm/</span></span>
+                    <span class="pos">NOUN PHRASE</span>
+                    <div class="def">Time that you spend giving someone your full attention.</div>
+                    <div class="colloc"><span>Collocations:</span> spend quality time</div>
+                </div>
+            </div>
+
+            <div class="corner-grid">
+                <div class="idiom-box"><span class="box-title">🦁 Idiom Corner</span>
+                    <ul class="box-content">
+                        <li><strong>Let my hair down:</strong> Relax and enjoy.</li>
+                        <li><strong>Burn the midnight oil:</strong> Study/work late.</li>
+                        <li><strong>Catch up:</strong> Talk after a long time.</li>
+                    </ul>
+                </div>
+                <div class="dm-box"><span class="box-title">🗣️ Dependency</span>
+                    <ul class="box-content">
+                        <li>Well, it depends on the occasion.</li>
+                        <li>It varies from time to time.</li>
+                        <li>It relies on my mood.</li>
+                    </ul>
+                </div>
+                <div class="dm-box"><span class="box-title">🔗 Switching</span>
+                    <ul class="box-content">
+                        <li>When I am... I tend to...</li>
+                        <li>However, if I'm...</li>
+                        <li>On special occasions like...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel">
+            <h2>🧩 TRY: Scaffolding Logic</h2>
+            
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q1: When do you listen to music?</h3>
+                    <div class="timeline-step">Logic: Context Switch ➡️ General ➡️ Case A ➡️ Case B</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Well, good question.</span> I listen <span class="dm" onclick="toggleDm(this, event)">pretty much</span> all the time.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">But of course,</span> it depends on the <span class="dm" onclick="toggleDm(this, event)">occasion</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">When</span> I'm studying, I <span class="dm" onclick="toggleDm(this, event)">tend to</span> listen to classical stuff</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">to</span> <span class="dm" onclick="toggleDm(this, event)">improve concentration</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Whereas</span> if I'm bored, I listen to Rock to <span class="dm" onclick="toggleDm(this, event)">cheer me up</span>.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q2: Who do you hang out with?</h3>
+                    <div class="timeline-step">Logic: The Divider ➡️ Weekdays ➡️ Weekends</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">It really depends on</span> the day of the week.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">On weekdays,</span> I usually <span class="dm" onclick="toggleDm(this, event)">hang out with</span> my colleagues</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">since</span> we have lunch together.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">But on weekends,</span> I prefer spending <span class="dm" onclick="toggleDm(this, event)">quality time</span> with my besties.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q3: Do you celebrate festivals?</h3>
+                    <div class="timeline-step">Logic: Cultural Pride ➡️ Frequency ➡️ Significance ➡️ Example</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Definitely!</span> We have festivals <span class="dm" onclick="toggleDm(this, event)">almost on a monthly basis</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">I think</span> festivals are a key part of our <span class="dm" onclick="toggleDm(this, event)">heritage</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">The most important one is</span> obviously the Spring Festival,</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">but</span> we also get together for the Dragon Boat Festival.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q4: When do you spend time with family?</h3>
+                    <div class="timeline-step">Logic: Routine ➡️ Daily ➡️ Holidays</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Normally,</span> we see each other every evening.</span>
+                    <span class="chunk blurred" onclick="toggle(this)">We have dinner together <span class="dm" onclick="toggleDm(this, event)">like clockwork</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">However,</span> on holidays, we spend the whole day together.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel">
+            <h2>🚀 APPLY: Your Turn</h2>
+            <div class="apply-grid">
+                <div class="apply-item">1. When do you spend time with your family?</div>
+                <div class="apply-item">2. Who do you ususally like to hang out with?</div>
+                <div class="apply-item">3. When do you like to sing?</div>
+                <div class="apply-item">4. Where is your favorite place to sit?</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="experience" class="section">
+        <div class="glass-panel">
+            <h2>🖼️ LEARN: The B.E.E.F. Method</h2>
+            <div style="background:#f0f8ff; padding:15px; border-radius:12px; margin-bottom:20px; border-left:5px solid var(--accent-color);">
+                <strong>🥩 B.E.E.F. Strategy for Narration:</strong>
+                <ul style="margin-top:10px; line-height:1.6;">
+                    <li><strong>B - Background:</strong> Who? When? Where?</li>
+                    <li><strong>E - Event:</strong> What happened exactly?</li>
+                    <li><strong>E - Emotion:</strong> How did you feel?</li>
+                    <li><strong>F - Feedback/Future:</strong> Reflection or result.</li>
+                </ul>
+            </div>
+
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <span class="word">vaguely<span class="ipa">/ˈveɪɡli/</span></span>
+                    <span class="pos">ADVERB</span>
+                    <div class="def">In a way that is uncertain, indefinite, or unclear.</div>
+                    <div class="colloc"><span>Collocations:</span> vaguely remember, vaguely familiar</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">recall<span class="ipa">/rɪˈkɔːl/</span></span>
+                    <span class="pos">VERB</span>
+                    <div class="def">To bring a fact, event, or situation back into one's mind.</div>
+                    <div class="colloc"><span>Collocations:</span> vividly recall, can't recall</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">precise<span class="ipa">/prɪˈsaɪs/</span></span>
+                    <span class="pos">ADJECTIVE</span>
+                    <div class="def">Exact, accurate, and careful about details.</div>
+                    <div class="colloc"><span>Collocations:</span> to be precise, precise moment</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">primary school<span class="ipa">/ˈpraɪməri skuːl/</span></span>
+                    <span class="pos">NOUN</span>
+                    <div class="def">School for young children (usually 5-11 years old).</div>
+                    <div class="colloc"><span>Collocations:</span> in primary school</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">over the moon<span class="ipa">/ˌəʊvə ðə ˈmuːn/</span></span>
+                    <span class="pos">IDIOM</span>
+                    <div class="def">Extremely happy and excited.</div>
+                    <div class="colloc"><span>Collocations:</span> was over the moon</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">back then<span class="ipa">/bæk ðen/</span></span>
+                    <span class="pos">ADVERB PHRASE</span>
+                    <div class="def">At that particular time in the past.</div>
+                    <div class="colloc"><span>Collocations:</span> popular back then</div>
+                </div>
+            </div>
+
+            <div class="corner-grid">
+                <div class="idiom-box"><span class="box-title">🦁 Idiom Corner</span>
+                    <ul class="box-content">
+                        <li><strong>Ring a bell:</strong> Sound familiar. <em>"That name rings a bell."</em></li>
+                        <li><strong>Jog my memory:</strong> Help me remember. <em>"The photo jogged my memory."</em></li>
+                        <li><strong>Down memory lane:</strong> Reliving past memories. <em>"We took a trip down memory lane."</em></li>
+                    </ul>
+                </div>
+                <div class="dm-box"><span class="box-title">🗣️ Recalling</span>
+                    <ul class="box-content">
+                        <li>Well, if my memory serves me right...</li>
+                        <li>I can't recall the exact details, but...</li>
+                        <li>It was probably...</li>
+                    </ul>
+                </div>
+                <div class="dm-box"><span class="box-title">🔗 Storytelling</span>
+                    <ul class="box-content">
+                        <li>So basically what happened was...</li>
+                        <li>At that time...</li>
+                        <li>Ever since then...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel">
+            <h2>🧩 TRY: Scaffolding Logic</h2>
+            
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q1: First time using a computer?</h3>
+                    <div class="timeline-step">Logic: BEEF (Background ➡️ Event ➡️ Emotion)</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Well, as far as I can remember,</span> it was in <span class="dm" onclick="toggleDm(this, event)">primary school</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">So basically,</span> a friend invited me to his house.</span>
+                    <span class="chunk blurred" onclick="toggle(this)">We used to play video games on it.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">To be honest,</span> I was <span class="dm" onclick="toggleDm(this, event)">over the moon</span> about it <span class="dm" onclick="toggleDm(this, event)">back then</span>.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q2: Last call from a friend?</h3>
+                    <div class="timeline-step">Logic: The Blur ➡️ Doubt ➡️ Reason ➡️ Realization</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">To tell you the truth,</span> off the top of my head, I can't <span class="dm" onclick="toggleDm(this, event)">recall</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Purely because</span> most of my friends prefer to text.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">But if</span> video chats count,</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">then it was actually</span> yesterday, <span class="dm" onclick="toggleDm(this, event)">to be precise</span>.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q3: First day at school?</h3>
+                    <div class="timeline-step">Logic: Vague BEEF ➡️ Hazy Memory ➡️ Emotion ➡️ Detail</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)">I only <span class="dm" onclick="toggleDm(this, event)">vaguely</span> remember it.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">I guess</span> I was pretty nervous.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">If I'm not mistaken,</span> I cried when my mom left.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q4: Last time you visited a museum?</h3>
+                    <div class="timeline-step">Logic: Precise Recall ➡️ When ➡️ Who</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">If my memory serves me right,</span> it was last month.</span>
+                    <span class="chunk blurred" onclick="toggle(this)">I went to the National Museum with my cousin.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">It was</span> a really <span class="dm" onclick="toggleDm(this, event)">fascinating</span> experience.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel">
+            <h2>🚀 APPLY: Your Turn</h2>
+            <div class="apply-grid">
+                <div class="apply-item">1. What was your first day at school like?</div>
+                <div class="apply-item">2. When was the last time you visited a museum?</div>
+                <div class="apply-item">3. When was the last time you were in a crowded place?</div>
+                <div class="apply-item">4. When was the last time you were busy?</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="opinion" class="section">
+        <div class="glass-panel">
+            <h2>🖼️ LEARN: Stating Views</h2>
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <span class="word">nutritious<span class="ipa">/njuˈtrɪʃəs/</span></span>
+                    <span class="pos">ADJECTIVE</span>
+                    <div class="def">Efficient as food; nourishing.</div>
+                    <div class="colloc"><span>Collocations:</span> highly nutritious, nutritious meal</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">money-consuming<span class="ipa">/ˈmʌni kənˈsjuːmɪŋ/</span></span>
+                    <span class="pos">ADJECTIVE</span>
+                    <div class="def">Costing a lot of money.</div>
+                    <div class="colloc"><span>Collocations:</span> time and money-consuming</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">preserve<span class="ipa">/prɪˈzɜːv/</span></span>
+                    <span class="pos">VERB</span>
+                    <div class="def">To maintain something in its original or existing state.</div>
+                    <div class="colloc"><span>Collocations:</span> preserve history, preserve nature</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">soothing<span class="ipa">/ˈsuːðɪŋ/</span></span>
+                    <span class="pos">ADJECTIVE</span>
+                    <div class="def">Having a gently calming effect.</div>
+                    <div class="colloc"><span>Collocations:</span> soothing effect, soothing voice</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">undeniable<span class="ipa">/ˌʌndɪˈnaɪəbl/</span></span>
+                    <span class="pos">ADJECTIVE</span>
+                    <div class="def">Unable to be denied or disputed.</div>
+                    <div class="colloc"><span>Collocations:</span> undeniable fact, it is undeniable</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">active lifestyle<span class="ipa">/ˈæktɪv ˈlaɪfstaɪl/</span></span>
+                    <span class="pos">NOUN PHRASE</span>
+                    <div class="def">A way of life that involves a lot of physical activity.</div>
+                    <div class="colloc"><span>Collocations:</span> maintain an active lifestyle</div>
+                </div>
+            </div>
+
+            <div class="mindmap-container">
+                <div style="text-align:center; width: 100%;">
+                    <div class="mindmap-root" onclick="toggleMap('map7')">Synonyms: "I Think" (Click Me) ➕</div>
+                    <div id="map7" class="mindmap-branches">
+                        <div class="mindmap-node">As far as I'm concerned<span class="node-ex">"As far as I'm concerned, it's true."</span></div>
+                        <div class="mindmap-node">I firmly believe that<span class="node-ex">"I firmly believe that health comes first."</span></div>
+                        <div class="mindmap-node">It seems to me that<span class="node-ex">"It seems to me that he is right."</span></div>
+                        <div class="mindmap-node">I'm convinced that<span class="node-ex">"I'm convinced that we can do it."</span></div>
+                        <div class="mindmap-node">To my mind<span class="node-ex">"To my mind, this is the best option."</span></div>
+                        <div class="mindmap-node">I reckon that<span class="node-ex">"I reckon that it's going to rain."</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="corner-grid">
+                <div class="idiom-box"><span class="box-title">🦁 Idiom Corner</span>
+                    <ul class="box-content">
+                        <li><strong>See eye to eye:</strong> To agree fully. <em>"We don't always see eye to eye."</em></li>
+                        <li><strong>Food for thought:</strong> Something to think about. <em>"That lecture gave me food for thought."</em></li>
+                        <li><strong>A hot potato:</strong> A controversial topic. <em>"The policy is a political hot potato."</em></li>
+                    </ul>
+                </div>
+                <div class="dm-box"><span class="box-title">🗣️ Asserting</span>
+                    <ul class="box-content">
+                        <li>Definitely yes!</li>
+                        <li>I have no doubt that...</li>
+                        <li>It is undeniable that...</li>
+                    </ul>
+                </div>
+                <div class="dm-box"><span class="box-title">🔗 Justifying</span>
+                    <ul class="box-content">
+                        <li>This is simply because...</li>
+                        <li>For those who...</li>
+                        <li>Even though... still...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel">
+            <h2>🧩 TRY: Scaffolding Logic</h2>
+            
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q1: Eat vegetables daily?</h3>
+                    <div class="timeline-step">Logic: Vitality Check ➡️ Opinion ➡️ Fact ➡️ Example</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Well, absolutely!</span></span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">As far as I am concerned,</span> we need them daily</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">because</span> vegetables are very <span class="dm" onclick="toggleDm(this, event)">nutritious</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">You know,</span> like cabbage, it's rich in fiber.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q2: Kids play outdoors?</h3>
+                    <div class="timeline-step">Logic: Chain Reaction ➡️ Habit ➡️ Result</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Definitely!</span> I have <span class="dm" onclick="toggleDm(this, event)">no doubt</span> that they should</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">because</span> it helps them develop an <span class="dm" onclick="toggleDm(this, event)">active lifestyle</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Generally,</span> kids who play sports <span class="dm" onclick="toggleDm(this, event)">tend to</span> be stronger.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q3: Public gardens?</h3>
+                    <div class="timeline-step">Logic: Balance Beam ➡️ View A ➡️ Counter View</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">I believe that</span> we have enough gardens here.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Even though</span> some people say we need more,</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">still</span> building them is <span class="dm" onclick="toggleDm(this, event)">money-consuming</span>.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q4: Protect old buildings?</h3>
+                    <div class="timeline-step">Logic: Heritage ➡️ Value</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">For sure.</span> We must <span class="dm" onclick="toggleDm(this, event)">preserve</span> them.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">The reason is that</span> they are a key part of our history.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Plus,</span> they have great <span class="dm" onclick="toggleDm(this, event)">aesthetic</span> value.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel">
+            <h2>🚀 APPLY: Your Turn</h2>
+            <div class="apply-grid">
+                <div class="apply-item">1. Should we eat vegetables every day?</div>
+                <div class="apply-item">2. Do you think children should spend more time playing outdoor games?</div>
+                <div class="apply-item">3. Do you think there are enough public gardens in your hometown?</div>
+                <div class="apply-item">4. Do you think we should preserve old buildings in cities?</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="importance" class="section">
+        <div class="glass-panel">
+            <h2>🖼️ LEARN: Significance</h2>
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <span class="word">indispensable<span class="ipa">/ˌɪndɪˈspensəbl/</span></span>
+                    <span class="pos">ADJECTIVE</span>
+                    <div class="def">Absolutely necessary; essential.</div>
+                    <div class="colloc"><span>Collocations:</span> an indispensable part, indispensable tool</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">unbearable<span class="ipa">/ʌnˈbeərəbl/</span></span>
+                    <span class="pos">ADJECTIVE</span>
+                    <div class="def">Too bad/painful to be accepted or endured.</div>
+                    <div class="colloc"><span>Collocations:</span> unbearable pressure, unbearable heat</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">burden<span class="ipa">/ˈbɜːdn/</span></span>
+                    <span class="pos">NOUN</span>
+                    <div class="def">A load, typically a heavy one (physical or mental).</div>
+                    <div class="colloc"><span>Collocations:</span> heavy burden, financial burden</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">essential<span class="ipa">/ɪˈsenʃl/</span></span>
+                    <span class="pos">ADJECTIVE</span>
+                    <div class="def">Absolutely necessary; extremely important.</div>
+                    <div class="colloc"><span>Collocations:</span> absolutely essential, essential skills</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">analytical<span class="ipa">/ˌænəˈlɪtɪkl/</span></span>
+                    <span class="pos">ADJECTIVE</span>
+                    <div class="def">Relating to or using analysis or logical reasoning.</div>
+                    <div class="colloc"><span>Collocations:</span> analytical skills, analytical mind</div>
+                </div>
+                <div class="vocab-card">
+                    <span class="word">keep track of<span class="ipa">/kiːp træk əv/</span></span>
+                    <span class="pos">PHRASE</span>
+                    <div class="def">To stay informed about the status of something.</div>
+                    <div class="colloc"><span>Collocations:</span> keep track of time, keep track of spending</div>
+                </div>
+            </div>
+
+            <div class="mindmap-container">
+                <div style="text-align:center; width: 100%;">
+                    <div class="mindmap-root" onclick="toggleMap('map8')">Synonyms: "Important" (Click Me) ➕</div>
+                    <div id="map8" class="mindmap-branches">
+                        <div class="mindmap-node">Crucial<span class="node-ex">"It's a crucial decision."</span></div>
+                        <div class="mindmap-node">Essential<span class="node-ex">"Water is essential for life."</span></div>
+                        <div class="mindmap-node">Indispensable<span class="node-ex">"He is indispensable to the team."</span></div>
+                        <div class="mindmap-node">Paramount<span class="node-ex">"Safety is paramount."</span></div>
+                        <div class="mindmap-node">Significant<span class="node-ex">"A significant improvement."</span></div>
+                        <div class="mindmap-node">Vital<span class="node-ex">"Speed is vital in this game."</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="corner-grid">
+                <div class="idiom-box"><span class="box-title">🦁 Idiom Corner</span>
+                    <ul class="box-content">
+                        <li><strong>Bread and butter:</strong> Main source of income. <em>"Teaching is my bread and butter."</em></li>
+                        <li><strong>Part and parcel:</strong> An essential piece. <em>"Stress is part and parcel of the job."</em></li>
+                        <li><strong>All work and no play:</strong> Need balance. <em>"Remember: all work and no play..."</em></li>
+                    </ul>
+                </div>
+                <div class="dm-box"><span class="box-title">🗣️ Emphasizing</span>
+                    <ul class="box-content">
+                        <li>I think it is absolutely essential...</li>
+                        <li>It plays a vital role in...</li>
+                        <li>It's a must-have for...</li>
+                    </ul>
+                </div>
+                <div class="dm-box"><span class="box-title">🔗 Conditioning</span>
+                    <ul class="box-content">
+                        <li>Without it, I couldn't...</li>
+                        <li>Otherwise, the pressure would...</li>
+                        <li>In the case of...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel">
+            <h2>🧩 TRY: Scaffolding Logic</h2>
+            
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q1: Are computers important?</h3>
+                    <div class="timeline-step">Logic: The Foundation ➡️ Indispensable ➡️ Consequence</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Definitely yes!</span> My computer is <span class="dm" onclick="toggleDm(this, event)">indispensable</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">The main reason is that</span> it's vital for my studies.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Without it,</span> I couldn't get my work done efficiently.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q2: Is leisure time important?</h3>
+                    <div class="timeline-step">Logic: The Warning ➡️ Idiom ➡️ Consequence</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">I think it is absolutely essential</span> to take a break.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">As the saying goes,</span> all work and no play makes Jack a dull boy.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Otherwise,</span> the pressure can become <span class="dm" onclick="toggleDm(this, event)">unbearable</span>.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q3: Important to wear a watch?</h3>
+                    <div class="timeline-step">Logic: It Depends ➡️ Exam ➡️ Daily Life</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Well, I reckon that</span> it's important in some occasions.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">For example,</span> during an exam, you have to <span class="dm" onclick="toggleDm(this, event)">keep track of</span> time.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">But in daily life,</span> smartphones are <span class="dm" onclick="toggleDm(this, event)">handy</span>,</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">since</span> watches can be a <span class="dm" onclick="toggleDm(this, event)">burden</span> on the wrist.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q4: Why is math important?</h3>
+                    <div class="timeline-step">Logic: Dual Benefit ➡️ Understanding ➡️ Skill</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">It's important because</span> it helps us understand science.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Besides,</span> maths can train our <span class="dm" onclick="toggleDm(this, event)">analytical</span> skills</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">and</span> improve problem-solving.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel">
+            <h2>🚀 APPLY: Your Turn</h2>
+            <div class="apply-grid">
+                <div class="apply-item">1. Are computers important to you?</div>
+                <div class="apply-item">2. Is leisure time important to everyone?</div>
+                <div class="apply-item">3. Why is math an important subject in school?</div>
+                <div class="apply-item">4. Do you think it is important to wear a watch?</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🔥 必考题 SECTION -->
+    <div class="section" id="bikao">
+        <div class="glass-panel">
+            <h2>📋 Part 1 必考题 — Essential Topics</h2>
+            <p style="color:var(--text-sec); font-size:16px; margin-bottom:30px;">These topics appear in nearly EVERY IELTS Speaking test. Master these first.</p>
+
+            <!-- Topic 1: Hometown -->
+            <div class="vocab-card" style="margin-bottom:24px;">
+                <div class="pos">Topic 1 · 必考</div>
+                <span class="word">🏙️ Hometown / Where You Live</span>
+                <div class="def">
+                    <strong>Common Qs:</strong><br>
+                    • Where is your hometown?<br>
+                    • What do you like about your hometown?<br>
+                    • Has your hometown changed much?<br>
+                    • Do you plan to live there in the future?<br><br>
+                    <strong>Key Vocab:</strong> bustling, quaint, close-knit community, infrastructure, skyscrapers, greenery, pace of life, cost of living
+                </div>
+            </div>
+
+            <!-- Topic 2: Work/Study -->
+            <div class="vocab-card" style="margin-bottom:24px;">
+                <div class="pos">Topic 2 · 必考</div>
+                <span class="word">💼 Work or Study</span>
+                <div class="def">
+                    <strong>Common Qs:</strong><br>
+                    • Do you work or are you a student?<br>
+                    • What do you study / what's your job?<br>
+                    • Why did you choose that subject/job?<br>
+                    • Do you enjoy it?<br><br>
+                    <strong>Key Vocab:</strong> major in, demanding, fulfilling, hands-on experience, work-life balance, career prospects, broaden horizons
+                </div>
+            </div>
+
+            <!-- Topic 3: Home -->
+            <div class="vocab-card" style="margin-bottom:24px;">
+                <div class="pos">Topic 3 · 必考</div>
+                <span class="word">🏠 Home / Accommodation</span>
+                <div class="def">
+                    <strong>Common Qs:</strong><br>
+                    • Do you live in a house or an apartment?<br>
+                    • What's your favourite room?<br>
+                    • What can you see from your window?<br>
+                    • Would you like to move?<br><br>
+                    <strong>Key Vocab:</strong> spacious, cozy, natural light, well-decorated, overlooks, downtown, residential area, balcony
+                </div>
+            </div>
+
+            <!-- Topic 4: Area -->
+            <div class="vocab-card" style="margin-bottom:24px;">
+                <div class="pos">Topic 4 · 必考</div>
+                <span class="word">📍 The Area You Live In</span>
+                <div class="def">
+                    <strong>Common Qs:</strong><br>
+                    • Do you like the area where you live?<br>
+                    • What are some popular places in your area?<br>
+                    • Has your area changed in recent years?<br>
+                    • Do you know your neighbours?<br><br>
+                    <strong>Key Vocab:</strong> neighbourhood, convenient, within walking distance, amenities, public transport, green spaces, sense of community, safe
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Model Answers -->
+        <div class="glass-panel">
+            <h2>🗣️ Model Answers — Hometown (Most Tested)</h2>
+            
+            <div class="scaffold-box" style="margin-bottom:24px;">
+                <div class="scaffold-header">
+                    <h3>Q: Where is your hometown?</h3>
+                    <div class="timeline-step">Template: Location + Character + Personal Touch</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)">My hometown is <span class="dm" onclick="toggleDm(this, event)">Chengdu</span>,</span>
+                    <span class="chunk blurred" onclick="toggle(this)">which is the capital of <span class="dm" onclick="toggleDm(this, event)">Sichuan province</span> in southwestern China.</span>
+                    <span class="chunk blurred" onclick="toggle(this)">It's famous for its <span class="dm" onclick="toggleDm(this, event)">spicy cuisine</span> and <span class="dm" onclick="toggleDm(this, event)">laid-back lifestyle</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)">I've lived there <span class="dm" onclick="toggleDm(this, event)">my whole life</span>, so it holds a <span class="dm" onclick="toggleDm(this, event)">special place</span> in my heart.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box" style="margin-bottom:24px;">
+                <div class="scaffold-header">
+                    <h3>Q: What do you like about your hometown?</h3>
+                    <div class="timeline-step">Template: Highlight 1 + Highlight 2 + Personal Connection</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)">There are quite a few things — <span class="dm" onclick="toggleDm(this, event)">first of all</span>, the food is <span class="dm" onclick="toggleDm(this, event)">absolutely incredible</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)">You can find <span class="dm" onclick="toggleDm(this, event)">a huge variety of</span> dishes, from street snacks to fancy hotpot.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">On top of that</span>, the people here are <span class="dm" onclick="toggleDm(this, event)">incredibly warm</span> and welcoming.</span>
+                    <span class="chunk blurred" onclick="toggle(this)">It's just got this <span class="dm" onclick="toggleDm(this, event)">relaxed vibe</span> that makes you feel at home <span class="dm" onclick="toggleDm(this, event)">right away</span>.</span>
+                </div>
+            </div>
+
+            <div class="scaffold-box">
+                <div class="scaffold-header">
+                    <h3>Q: Has your hometown changed much?</h3>
+                    <div class="timeline-step">Template: Big Picture + Specific Change + Personal View</div>
+                </div>
+                <div class="chunk-container">
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">Yeah, tremendously</span> — it's like a completely different city from ten years ago.</span>
+                    <span class="chunk blurred" onclick="toggle(this)">The skyline has <span class="dm" onclick="toggleDm(this, event)">transformed</span> with new skyscrapers, and the metro system has <span class="dm" onclick="toggleDm(this, event)">expanded massively</span>.</span>
+                    <span class="chunk blurred" onclick="toggle(this)"><span class="dm" onclick="toggleDm(this, event)">I'd say</span> it's mostly positive — more convenient, more opportunities — </span>
+                    <span class="chunk blurred" onclick="toggle(this)">but sometimes I miss the <span class="dm" onclick="toggleDm(this, event)">old-school charm</span> it used to have.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Practice -->
+        <div class="glass-panel">
+            <h2>🚀 APPLY: Practice These</h2>
+            <div class="apply-grid">
+                <div class="apply-item">1. Where is your hometown? What's it like?</div>
+                <div class="apply-item">2. Do you work or are you a student? Do you enjoy it?</div>
+                <div class="apply-item">3. Tell me about your home. What's your favourite room?</div>
+                <div class="apply-item">4. Do you like the area where you live? Why/why not?</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggle(element) {
+        element.classList.toggle('blurred');
+    }
+
+    function toggleDm(element, event) {
+        event.stopPropagation(); // Prevent parent blur toggle
+        element.classList.toggle('hidden-dm');
+    }
+
+    function toggleMap(mapId) {
+        const map = document.getElementById(mapId);
+        map.classList.toggle('open');
+    }
+
+    function switchTab(tabId, themeClass) {
+        // Switch Sections
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(s => s.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+        
+        // Update Buttons
+        const buttons = document.querySelectorAll('.nav-btn');
+        buttons.forEach(b => b.classList.remove('active'));
+        event.target.classList.add('active');
+        
+        // Apply Theme
+        document.body.className = themeClass;
+        
+        // Scroll
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+</script>
+
+<link rel="stylesheet" href="/css/kee-bot.css">
+<script src="/js/kee-bot.js"></script>
+</body>
+</html>

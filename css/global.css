@@ -132,6 +132,31 @@ a:hover {
   border-color: rgba(138,43,226,0.4);
 }
 
+/* Nav Dropdown */
+.nav-dropdown { position: relative; }
+.nav-dropdown-trigger {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 14px; border-radius: var(--radius-sm);
+  font-size: 0.9rem; font-weight: 500; color: var(--gray-700);
+  cursor: pointer; transition: var(--transition); user-select: none;
+}
+.nav-dropdown-trigger:hover, .nav-dropdown.active .nav-dropdown-trigger {
+  background: var(--gray-100); color: var(--purple);
+}
+.nav-dropdown-menu {
+  display: none; position: absolute; top: 100%; left: 0;
+  background: var(--white); border: 2px solid var(--gray-200); border-radius: var(--radius);
+  min-width: 180px; box-shadow: var(--shadow-lg); z-index: 1001; padding: 6px;
+}
+.nav-dropdown:hover .nav-dropdown-menu { display: block; }
+.nav-dropdown-menu a {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 14px; border-radius: var(--radius-sm);
+  font-size: 0.85rem; font-weight: 500; color: var(--gray-700);
+  text-decoration: none; transition: var(--transition);
+}
+.nav-dropdown-menu a:hover { background: var(--gray-100); color: var(--purple); }
+
 .nav-toggle {
   display: none;
   background: none;

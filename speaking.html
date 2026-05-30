@@ -6,6 +6,7 @@
 <title>IELTS with Kee: Ultimate Edition v2</title>
 <style>
     :root {
+        --bg-gradient: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
         --accent-color: #007AFF;
         --glass-bg: rgba(255, 255, 255, 0.95);
         --glass-border: rgba(255, 255, 255, 0.8);
@@ -16,18 +17,18 @@
         --ipa-color: #888;
     }
     
-    .theme-likes { background: linear-gradient(135deg, #FF9A9E 0%, #FECFEF 100%) fixed; --accent-color: #D81B60; }
-    .theme-pref { background: linear-gradient(135deg, #F6D365 0%, #FDA085 100%) fixed; --accent-color: #E65100; }
-    .theme-list { background: linear-gradient(135deg, #FFE259 0%, #FFA751 100%) fixed; --accent-color: #F57F17; }
-    .theme-freq { background: linear-gradient(135deg, #84FAB0 0%, #8FD3F4 100%) fixed; --accent-color: #2E7D32; }
-    .theme-occ { background: linear-gradient(135deg, #43E97B 0%, #38F9D7 100%) fixed; --accent-color: #006064; }
-    .theme-exp { background: linear-gradient(135deg, #A1C4FD 0%, #C2E9FB 100%) fixed; --accent-color: #1565C0; }
-    .theme-op { background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%) fixed; --accent-color: #4A148C; }
-    .theme-imp { background: linear-gradient(135deg, #C471F5 0%, #FA71CD 100%) fixed; --accent-color: #7B1FA2; }
-    .theme-stall { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%) fixed; --accent-color: #455A64; }
+    /* THEMES */
+    .theme-likes { --bg-gradient: linear-gradient(135deg, #FF9A9E 0%, #FECFEF 100%); --accent-color: #D81B60; }
+    .theme-pref { --bg-gradient: linear-gradient(135deg, #F6D365 0%, #FDA085 100%); --accent-color: #E65100; }
+    .theme-list { --bg-gradient: linear-gradient(135deg, #FFE259 0%, #FFA751 100%); --accent-color: #F57F17; }
+    .theme-freq { --bg-gradient: linear-gradient(135deg, #84FAB0 0%, #8FD3F4 100%); --accent-color: #2E7D32; }
+    .theme-occ { --bg-gradient: linear-gradient(135deg, #43E97B 0%, #38F9D7 100%); --accent-color: #006064; }
+    .theme-exp { --bg-gradient: linear-gradient(135deg, #A1C4FD 0%, #C2E9FB 100%); --accent-color: #1565C0; }
+    .theme-op { --bg-gradient: linear-gradient(135deg, #667EEA 0%, #764BA2 100%); --accent-color: #4A148C; }
+    .theme-imp { --bg-gradient: linear-gradient(135deg, #C471F5 0%, #FA71CD 100%); --accent-color: #7B1FA2; }
+    .theme-stall { --bg-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); --accent-color: #455A64; }
 
-    body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--text-main); min-height: 100vh; background: inherit; }
-    body::before { content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -1; background: inherit; transition: background 0.8s ease; }
+    body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg-gradient); background-attachment: fixed; color: var(--text-main); min-height: 100vh; transition: background 0.8s ease; }
     .container { max-width: 1200px; margin: 40px auto; padding: 0 20px 120px 20px; }
 
     h1 { font-size: 56px; font-weight: 900; text-align: center; margin-bottom: 5px; color: #fff; text-shadow: 0 4px 15px rgba(0,0,0,0.2); letter-spacing: -1.5px; }
@@ -138,13 +139,8 @@
     .apply-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     .apply-item { background: #fff; padding: 25px; border-radius: 20px; border-left: 8px solid var(--accent-color); font-weight: 800; font-size: 16px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); transition: all 0.3s; cursor: pointer; }
     .apply-item:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
-    #floating-notes { position: fixed; bottom: 30px; right: 30px; width: 320px; height: 450px; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(30px); border-radius: 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.25); z-index: 1000; display: flex; flex-direction: column; transition: transform 0.4s; border: 1px solid rgba(255,255,255,0.5); }
-    #floating-notes.minimized { transform: translateY(400px); }
-    .note-header { padding: 20px; cursor: pointer; font-weight: 900; display: flex; justify-content: space-between; }
-    .note-area { flex: 1; border: none; background: transparent; padding: 25px; resize: none; outline: none; font-family: inherit; font-size: 15px; }
 </style>
-<link rel="stylesheet" href="css/global.css">
-  <script src="js/auth.js"></script></head>
+</head>
 <body class="theme-likes">
 <div class="container">
 <h1>IELTS with Kee</h1><div class="subtitle">Unlock Native Flow with the <strong>Master Kee</strong>! 🔑</div>
@@ -159,7 +155,7 @@
 <button class="nav-btn" onclick="switchTab('importance','theme-imp')">8. Importance</button>
 <button class="nav-btn" onclick="switchTab('stalling','theme-stall')">9. Stalling</button>
 </div>
-<div id="floating-notes"><div class="note-header" onclick="toggleNotes()"><span>📝 Class Notes</span><span>−</span></div><textarea class="note-area" placeholder="Type vocabulary, logic chains, or feedback here..."></textarea></div>
+
 
 <div id="likes" class="section active"><div class="glass-panel"><h2>🖼️ LEARN: Affection & Benefits</h2>
 <div class="vocab-grid">
@@ -349,7 +345,7 @@
     }
     function flipAll(){document.querySelectorAll('.section.active .vocab-card').forEach(c=>c.classList.toggle('flipped'))}
     function toggleMap(mapId) { document.getElementById(mapId).classList.toggle('open'); }
-    function toggleNotes() { document.getElementById('floating-notes').classList.toggle('minimized'); }
+
     function switchTab(tabId, themeClass) {
         document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
         document.getElementById(tabId).classList.add('active');
@@ -359,6 +355,300 @@
         window.scrollTo({top:0,behavior:'smooth'});
     }
 </script>
-<script src="js/navigation.js"></script>
+<!-- Whiteboard Bubble - Draggable Annotation Tool -->
+<style>
+.wb-bubble {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    box-shadow: 0 4px 20px rgba(102,126,234,0.4);
+    cursor: grab;
+    z-index: 99998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+    user-select: none;
+    touch-action: none;
+}
+.wb-bubble:active { cursor: grabbing; }
+.wb-bubble:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(102,126,234,0.6); }
+.wb-bubble.open { background: #ef4444; }
+.wb-toolbar {
+    position: fixed;
+    bottom: 88px;
+    right: 24px;
+    display: none;
+    gap: 8px;
+    padding: 10px 14px;
+    background: rgba(20,20,30,0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 16px;
+    z-index: 99997;
+    flex-wrap: wrap;
+}
+.wb-toolbar.show { display: flex; }
+.wb-tool-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+.wb-tool-btn:hover { background: rgba(255,255,255,0.2); }
+.wb-tool-btn.active { background: #667eea; border-color: #667eea; box-shadow: 0 0 12px rgba(102,126,234,0.5); }
+.wb-color { width: 32px; height: 32px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; transition: all 0.2s; }
+.wb-color:hover { transform: scale(1.2); }
+.wb-color.active { border-color: #fff; box-shadow: 0 0 10px currentColor; }
+.wb-canvas-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99996;
+    pointer-events: none;
+    display: none;
+}
+.wb-canvas-overlay.active {
+    display: block;
+    pointer-events: auto;
+}
+.wb-canvas-overlay canvas {
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
+</style>
+
+<!-- Whiteboard Bubble - Draggable Annotation Tool -->
+<style>
+.wb-bubble {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    box-shadow: 0 4px 20px rgba(102,126,234,0.4);
+    cursor: grab;
+    z-index: 99998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+    user-select: none;
+    touch-action: none;
+}
+.wb-bubble:active { cursor: grabbing; }
+.wb-bubble:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(102,126,234,0.6); }
+.wb-bubble.open { background: #ef4444; }
+.wb-toolbar {
+    position: fixed;
+    bottom: 88px;
+    right: 24px;
+    display: none;
+    gap: 8px;
+    padding: 10px 14px;
+    background: rgba(20,20,30,0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 16px;
+    z-index: 99997;
+    flex-wrap: wrap;
+}
+.wb-toolbar.show { display: flex; }
+.wb-tool-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+.wb-tool-btn:hover { background: rgba(255,255,255,0.2); }
+.wb-tool-btn.active { background: #667eea; border-color: #667eea; box-shadow: 0 0 12px rgba(102,126,234,0.5); }
+.wb-color { width: 32px; height: 32px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; transition: all 0.2s; }
+.wb-color:hover { transform: scale(1.2); }
+.wb-color.active { border-color: #fff; box-shadow: 0 0 10px currentColor; }
+.wb-canvas-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99996;
+    pointer-events: none;
+    display: none;
+}
+.wb-canvas-overlay.active {
+    display: block;
+    pointer-events: auto;
+}
+@media (max-width: 768px) {
+    .wb-bubble, .wb-toolbar, .wb-canvas-overlay { display: none !important; }
+}
+.wb-canvas-overlay canvas {
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
+</style>
+
+<div class="wb-bubble" id="wbBubble" title="Whiteboard">✏️</div>
+
+<div class="wb-toolbar" id="wbToolbar">
+    <button class="wb-tool-btn active" id="wbPen" title="Pen">✏️</button>
+    <button class="wb-tool-btn" id="wbEraser" title="Eraser">🧹</button>
+    <span class="wb-color active" style="background:#000;" data-color="#000000" title="Black"></span>
+    <span class="wb-color" style="background:#ef4444;" data-color="#ef4444" title="Red"></span>
+    <span class="wb-color" style="background:#3b82f6;" data-color="#3b82f6" title="Blue"></span>
+    <span class="wb-color" style="background:#10b981;" data-color="#10b981" title="Green"></span>
+    <button class="wb-tool-btn" id="wbClear" title="Clear All">🗑️</button>
+    <button class="wb-tool-btn" id="wbClose" title="Close">✕</button>
+</div>
+
+<div class="wb-canvas-overlay" id="wbOverlay">
+    <canvas id="wbCanvas"></canvas>
+</div>
+
+<script>
+(function(){
+    const bubble = document.getElementById('wbBubble');
+    const toolbar = document.getElementById('wbToolbar');
+    const overlay = document.getElementById('wbOverlay');
+    const canvas = document.getElementById('wbCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    let isOpen = false, isDrawing = false, isErasing = false;
+    let currentColor = '#000000';
+    let lineWidth = 3;
+
+    // Dragging
+    let isDragging = false, dragStartX, dragStartY, bubbleStartX, bubbleStartY;
+    bubble.addEventListener('pointerdown', function(e) {
+        isDragging = true;
+        dragStartX = e.clientX;
+        dragStartY = e.clientY;
+        const rect = bubble.getBoundingClientRect();
+        bubbleStartX = rect.left;
+        bubbleStartY = rect.top;
+        bubble.setPointerCapture(e.pointerId);
+        e.preventDefault();
+    });
+    window.addEventListener('pointermove', function(e) {
+        if (!isDragging) return;
+        const dx = e.clientX - dragStartX;
+        const dy = e.clientY - dragStartY;
+        bubble.style.left = (bubbleStartX + dx) + 'px';
+        bubble.style.top = (bubbleStartY + dy) + 'px';
+        bubble.style.right = 'auto';
+        bubble.style.bottom = 'auto';
+        toolbar.style.right = 'auto';
+        toolbar.style.bottom = 'auto';
+    });
+    window.addEventListener('pointerup', function() {
+        if (isDragging) {
+            const moved = Math.abs(bubble.getBoundingClientRect().left - bubbleStartX) > 5;
+            if (!moved) toggleWB();
+        }
+        isDragging = false;
+    });
+
+    function toggleWB() {
+        isOpen = !isOpen;
+        if (isOpen) {
+            bubble.classList.add('open');
+            bubble.textContent = '✕';
+            toolbar.classList.add('show');
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+        } else {
+            bubble.classList.remove('open');
+            bubble.textContent = '✏️';
+            toolbar.classList.remove('show');
+            overlay.classList.remove('active');
+            window.removeEventListener('resize', resizeCanvas);
+        }
+    }
+
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+
+    document.getElementById('wbPen').addEventListener('click', function() {
+        isErasing = false;
+        this.classList.add('active');
+        document.getElementById('wbEraser').classList.remove('active');
+        overlay.classList.add('active');
+        canvas.style.cursor = 'crosshair';
+    });
+    document.getElementById('wbEraser').addEventListener('click', function() {
+        isErasing = true;
+        this.classList.add('active');
+        document.getElementById('wbPen').classList.remove('active');
+        overlay.classList.add('active');
+        canvas.style.cursor = 'cell';
+    });
+    document.querySelectorAll('.wb-color').forEach(el => {
+        el.addEventListener('click', function() {
+            document.querySelectorAll('.wb-color').forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+            currentColor = this.dataset.color;
+            isErasing = false;
+            document.getElementById('wbPen').classList.add('active');
+            document.getElementById('wbEraser').classList.remove('active');
+            overlay.classList.add('active');
+            canvas.style.cursor = 'crosshair';
+        });
+    });
+    document.getElementById('wbClear').addEventListener('click', function() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    });
+    document.getElementById('wbClose').addEventListener('click', function() {
+        overlay.classList.remove('active');
+    });
+
+    canvas.addEventListener('pointerdown', function(e) {
+        isDrawing = true;
+        ctx.beginPath();
+        ctx.moveTo(e.clientX, e.clientY);
+        ctx.lineWidth = isErasing ? 20 : lineWidth;
+        ctx.strokeStyle = isErasing ? 'rgba(0,0,0,0)' : currentColor;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        if (isErasing) ctx.globalCompositeOperation = 'destination-out';
+        else ctx.globalCompositeOperation = 'source-over';
+    });
+    canvas.addEventListener('pointermove', function(e) {
+        if (!isDrawing) return;
+        ctx.lineTo(e.clientX, e.clientY);
+        ctx.stroke();
+    });
+    canvas.addEventListener('pointerup', function() { isDrawing = false; });
+    canvas.addEventListener('pointerleave', function() { isDrawing = false; });
+})();
+</script>
+
+<link rel="stylesheet" href="/css/kee-bot.css">
+<script src="/js/kee-bot.js"></script>
 </body>
 </html>

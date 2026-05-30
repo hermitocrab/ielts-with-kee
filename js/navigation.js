@@ -1,6 +1,6 @@
 /**
  * IELTS with Kee — Shared Navigation Component
- * Master Kee 🦄 Universal Nav
+ * Updated: May-Aug 2026 season. Speaking hub + DynaSaurus.
  */
 
 (function() {
@@ -8,20 +8,28 @@
 
   const BRAND = 'IELTS with Kee';
   const NAV_ITEMS = [
-    { label: 'Whiteboard', href: 'whiteboard.html', emoji: '📝', id: 'whiteboard' },
+    { label: 'Speaking', href: '#', emoji: '🗣️', id: 'speaking', dropdown: [
+      { label: 'Part 1', href: 'speaking.html', emoji: '1️⃣' },
+      { label: 'Part 2', href: 'speaking-p2/people.html', emoji: '2️⃣' },
+      { label: 'Part 3 Bank', href: 'pt3-bank.html', emoji: '3️⃣' },
+      { label: 'Research Report', href: 'report/', emoji: '📊' },
+    ]},
     { label: 'Phonetics', href: 'phonetics.html', emoji: '🔊', id: 'phonetics' },
-    { label: 'Speaking', href: 'speaking.html', emoji: '🗣️', id: 'speaking' },
-    { label: 'Grammar', href: 'grammar.html', emoji: '📚', id: 'grammar' },
-    { label: 'Mindmap', href: 'mindmap.html', emoji: '🧠', id: 'mindmap' },
-    { label: 'Resources', href: 'resources.html', emoji: '📥', id: 'resources' },
-    { label: 'DynaDict', href: 'https://dynamos-app.vercel.app', emoji: '🧠', id: 'dynadict' },
+    { label: 'DynaSaurus', href: 'https://dynasaurus.rkrk.io', emoji: '🦕', id: 'dynasaurus' },
   ];
 
   function getCurrentPageId() {
     const path = window.location.pathname.split('/').pop() || 'index.html';
     if (path === 'index.html' || path === '' || path === '/') return 'home';
-    const match = NAV_ITEMS.find(item => item.href === path);
-    return match ? match.id : '';
+    for (const item of NAV_ITEMS) {
+      if (item.href === path) return item.id;
+      if (item.dropdown) {
+        for (const sub of item.dropdown) {
+          if (sub.href === path || window.location.pathname.includes(sub.href.replace(/\/$/, ''))) return item.id;
+        }
+      }
+    }
+    return '';
   }
 
   function renderNav() {
@@ -29,6 +37,15 @@
 
     const linksHTML = NAV_ITEMS.map(item => {
       const active = item.id === current ? ' class="active"' : '';
+      if (item.dropdown) {
+        const subHTML = item.dropdown.map(sub => 
+          `<a href="${sub.href}"><span>${sub.emoji}</span> ${sub.label}</a>`
+        ).join('');
+        return `<li class="nav-dropdown"${active}>
+          <span class="nav-dropdown-trigger"><span>${item.emoji}</span> ${item.label} ▾</span>
+          <div class="nav-dropdown-menu">${subHTML}</div>
+        </li>`;
+      }
       return `<li><a href="${item.href}"${active}><span>${item.emoji}</span> ${item.label}</a></li>`;
     }).join('');
 
@@ -51,7 +68,6 @@
       </div>
     `;
 
-    // Insert at top of body
     const firstChild = document.body.firstChild;
     if (firstChild) {
       document.body.insertBefore(nav, firstChild);
@@ -66,15 +82,23 @@
       links.classList.toggle('open');
     });
 
-    // Close nav on link click (mobile)
     links.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         links.classList.remove('open');
       });
     });
+
+    // Dropdown toggle for mobile
+    nav.querySelectorAll('.nav-dropdown-trigger').forEach(trigger => {
+      trigger.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          this.parentElement.classList.toggle('open');
+        }
+      });
+    });
   }
 
-  // Render immediately on DOM ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', renderNav);
   } else {

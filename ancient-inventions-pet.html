@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🦕 Amazing Ancient Inventions · Read Along!</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#fdf6f0; --card:#fff; --text:#2d1b0e; --dim:#7a6652;
+  --purple:#7c3aed; --green:#059669; --gold:#d97706; --coral:#e11d48; --blue:#2563eb;
+  --radius:24px; --shadow:0 6px 24px rgba(0,0,0,0.06);
+  --fredoka:'Fredoka','Nunito',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
+body.modal-open{overflow:hidden}
+
+/* ── BANNER ── */
+.banner{background:#fff;border-bottom:1px solid #f0e8dd;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50}
+.banner-logo{font-family:var(--fredoka);font-weight:700;font-size:1.1rem;color:var(--purple);display:flex;align-items:center;gap:0;text-decoration:none}
+.banner-logo span{color:var(--text)}
+.banner-right{font-size:0.8rem;color:var(--dim)}
+
+/* ── TOP BAR ── */
+.top{text-align:center;padding:48px 20px 8px}
+.top h1{font-family:var(--fredoka);font-size:clamp(2.4rem,7vw,4.8rem);font-weight:800;margin-bottom:0;letter-spacing:-0.04em;line-height:1.02;text-shadow:0 4px 20px rgba(124,58,237,0.1)}
+.top h1 .hl{background:linear-gradient(135deg,var(--purple) 0%,var(--coral) 50%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 4s ease-in-out infinite;background-size:200% 200%}
+@keyframes shimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.top .swiss-rule{display:block;width:80px;height:3px;background:var(--purple);margin:14px auto 0;border-radius:2px}
+.top p{font-size:1rem;color:var(--dim);margin:20px 0 6px}
+.top .hint{font-size:0.85rem;color:var(--dim);background:#fff;display:inline-block;padding:6px 16px;border-radius:20px;margin-top:8px;border:1px solid #e5e7eb}
+
+/* ── MAIN AREA ── */
+.main{max-width:800px;margin:0 auto;padding:24px 20px 120px;display:flex;flex-direction:column;align-items:center;gap:24px}
+
+/* ── MINDMAP ── */
+.mm-wrapper{position:relative;display:flex;flex-direction:column;align-items:center;min-height:320px}
+.big-bubble{
+  width:min(200px,50vw);height:min(200px,50vw);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;
+  cursor:pointer;transition:all 0.4s cubic-bezier(.34,1.56,.64,1);
+  text-align:center;padding:20px;position:relative;z-index:2;
+  background:linear-gradient(135deg,#7c3aed,#a78bfa);
+  color:#fff;box-shadow:0 12px 40px rgba(124,58,237,0.3);
+  font-family:var(--fredoka);
+}
+.big-bubble:hover{transform:scale(1.05)}
+.big-bubble .bb-emoji{font-size:2.5rem;margin-bottom:4px}
+.big-bubble .bb-title{font-size:1.1rem;font-weight:700}
+.big-bubble .bb-tap{position:absolute;bottom:16px;font-size:0.7rem;opacity:0.7;animation:bounce 1.5s infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+.big-bubble.expanded{cursor:default;background:#faf5ff;color:var(--text);box-shadow:0 4px 20px rgba(0,0,0,0.08);width:min(180px,42vw);height:min(180px,42vw)}
+.big-bubble.expanded:hover{transform:none}
+.big-bubble.expanded .bb-tap{display:none}
+.big-bubble.expanded .bb-title{font-size:1rem;color:var(--purple)}
+
+.sub-grid{display:none;grid-template-columns:1fr 1fr;gap:16px;width:100%;max-width:600px;margin-top:24px;position:relative;z-index:2}
+.big-bubble.expanded ~ .sub-grid{display:grid}
+.sub-bubble{background:#fff;border-radius:18px;padding:16px;cursor:pointer;transition:all 0.2s;text-align:center;font-family:var(--fredoka);border:2px solid transparent;display:flex;flex-direction:column;align-items:center;gap:4px;box-shadow:var(--shadow)}
+.sub-bubble:hover{transform:translateY(-3px)}
+.sub-bubble:nth-child(1):hover{border-color:var(--purple)}.sub-bubble:nth-child(2):hover{border-color:var(--gold)}.sub-bubble:nth-child(3):hover{border-color:var(--coral)}.sub-bubble:nth-child(4):hover{border-color:var(--green)}
+.sub-emoji{font-size:2rem}.sub-title{font-size:0.85rem;font-weight:700}.sub-country{font-size:0.7rem;color:var(--dim)}
+
+@media(max-width:500px){.sub-grid{grid-template-columns:1fr}}
+
+/* ── FLASHCARD MODAL ── */
+.overlay{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,0.5);justify-content:center;align-items:center;padding:20px;backdrop-filter:blur(4px)}
+.overlay.show{display:flex}
+.fc-container{width:min(500px,95vw);max-height:80vh;overflow-y:auto;background:#fff;border-radius:var(--radius);padding:28px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2)}
+.fc-close{position:absolute;top:12px;right:16px;width:36px;height:36px;border-radius:50%;border:none;background:#f3f4f6;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10}
+.fc-close:hover{background:#e5e7eb}
+.fc-header{font-family:var(--fredoka);text-align:center;margin-bottom:20px}
+.fc-header .fc-emoji{font-size:2.5rem}.fc-header h2{font-size:1.2rem;margin:4px 0;color:var(--purple)}.fc-header p{font-size:0.8rem;color:var(--dim)}
+.fc-progress{display:flex;justify-content:center;gap:6px;margin-bottom:20px}
+.fc-dot{width:8px;height:8px;border-radius:50%;background:#e5e7eb;transition:all 0.2s}
+.fc-dot.done{background:var(--green)}.fc-dot.current{background:var(--purple);transform:scale(1.4)}
+.fc-card-wrap{display:none}.fc-card-wrap.active{display:block;animation:slideIn 0.3s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}
+.fc-hero{width:100%;height:180px;border-radius:16px;background-size:cover;background-position:center;margin-bottom:16px;position:relative;overflow:hidden}
+.fc-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(transparent,rgba(0,0,0,0.3))}
+.fc-word{font-family:var(--fredoka);font-size:1.6rem;font-weight:700;margin-bottom:4px}
+.fc-pronounce{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:20px;background:#f3f4f6;cursor:pointer;font-size:0.9rem;margin-bottom:12px;transition:all 0.2s;border:none;font-family:inherit;color:var(--text)}
+.fc-pronounce:hover{background:#e5e7eb}.fc-pronounce.playing{background:var(--purple);color:#fff}.fc-pronounce .spk{font-size:1.2rem}
+.fc-meaning{font-size:1rem;line-height:1.6;margin-bottom:8px}.fc-meaning strong{color:var(--purple)}
+.fc-colloc{background:#fef3c7;border-radius:12px;padding:12px 16px;font-size:0.9rem;line-height:1.5;margin-bottom:4px}
+.fc-colloc::before{content:'📖 In the article: ';font-weight:700;color:var(--gold)}
+.fc-nav{display:flex;justify-content:space-between;margin-top:16px}
+.fc-btn{padding:10px 20px;border-radius:20px;border:none;font-family:var(--fredoka);font-size:0.9rem;cursor:pointer;transition:all 0.2s}
+.fc-btn.prev{background:#f3f4f6;color:var(--text)}.fc-btn.prev:hover{background:#e5e7eb}
+.fc-btn.next{background:var(--purple);color:#fff}.fc-btn.next:hover{background:#6d28d9}
+.fc-btn:disabled{opacity:0.4;cursor:not-allowed}
+
+/* ── READ-ALONG ── */
+.sen-audio{background:none;border:none;font-size:1.1rem;cursor:pointer;padding:4px 8px;opacity:0.5;transition:all 0.2s;float:right;margin-top:-4px}
+.sen-audio:hover{opacity:1;transform:scale(1.2)}
+.sen-audio.playing{opacity:1;animation:pulse 1s infinite}
+.ra-section{margin-top:32px;width:100%}
+.ra-section h2{font-family:var(--fredoka);font-size:1.3rem;text-align:center;margin-bottom:20px}
+.ra-section h2 span{color:var(--green)}
+.section-tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.section-tab{padding:10px 18px;border-radius:20px;border:2px solid #e5e7eb;background:#fff;cursor:pointer;font-family:var(--fredoka);font-size:0.85rem;transition:all 0.2s;display:flex;align-items:center;gap:6px}
+.section-tab:hover{border-color:var(--purple)}.section-tab.active{border-color:var(--purple);background:#faf5ff;font-weight:700}
+.sentence-wrap{display:none}.sentence-wrap.active{display:block}
+.sentence-card{background:#fff;border-radius:18px;padding:20px;margin-bottom:12px;border-left:4px solid var(--green);transition:all 0.3s;cursor:pointer;position:relative;overflow:hidden}
+.sentence-card:hover{box-shadow:var(--shadow)}.sentence-card:nth-child(odd){border-left-color:var(--purple)}
+.sen-text{font-size:1.05rem;line-height:1.7;font-weight:600}.sen-emoji{font-size:0.8rem;margin-left:2px}
+.sen-help{display:none;margin-top:12px;padding-top:12px;border-top:1px dashed #e5e7eb}
+.sentence-card.open .sen-help{display:block}
+.sen-help .simple{font-size:0.95rem;line-height:1.6;color:var(--dim);margin-bottom:8px}.sen-help .simple strong{color:var(--green)}
+.sen-help .note{font-size:0.8rem;color:var(--purple);font-weight:600}.sen-help .note::before{content:' '}
+.sen-tap{position:absolute;top:12px;right:12px;font-size:0.75rem;background:#f3f4f6;padding:4px 12px;border-radius:12px;color:var(--dim)}
+.sentence-card.open .sen-tap{display:none}
+
+/* ── STRUCTURE DETECTIVE ── */
+.tips-box{background:#fff;border:2px solid #e2e8f0;border-radius:20px;padding:20px 24px;margin-bottom:16px;max-width:680px;margin-left:auto;margin-right:auto;box-shadow:0 2px 12px rgba(0,0,0,0.04)}
+.tips-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.tips-icon{font-size:1.5rem;line-height:1}
+.tips-header strong{font-size:0.95rem;color:#1e293b}
+.tips-steps{display:flex;gap:0;flex-wrap:wrap}
+.tip-step{flex:1;min-width:180px;padding:14px 16px;border-radius:0;display:flex;flex-direction:column;gap:6px;font-size:0.82rem;line-height:1.5;border-right:1px solid #f1f5f9}
+.tip-step:last-child{border-right:none}
+.tip-step .tag{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:14px;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;width:fit-content;border:none;font-family:inherit}
+.tip-step .tag.intro{background:#dbeafe;color:#1e40af}
+.tip-step .tag.facts{background:#d1fae5;color:#065f46}
+.tip-step .tag.impact{background:#fef3c7;color:#92400e}
+.tip-step .tag .dot{margin-right:2px}
+.struct-wrap{display:none}.struct-wrap.active{display:block}
+.struct-legend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:16px;font-size:0.75rem}
+.sleg{padding:4px 10px;border-radius:12px;font-weight:700}
+.s-blue{background:#dbeafe;color:#1e40af}.s-green{background:#d1fae5;color:#065f46}
+.s-gold{background:#fef3c7;color:#92400e}.s-red{background:#fee2e2;color:#991b1b}
+.full-text{font-size:0.95rem;line-height:2.2;padding:20px 24px;background:#fafafa;border-radius:14px;margin-bottom:12px}
+.ft-sen{display:inline;padding:2px 0;transition:all 0.3s;cursor:default}
+.ft-sen.hl-intro{background:#dbeafe;border-radius:4px;padding:2px 4px}
+.ft-sen.hl-facts{background:#d1fae5;border-radius:4px;padding:2px 4px}
+.ft-sen.hl-impact{background:#fef3c7;border-radius:4px;padding:2px 4px}
+.tog-btn{padding:10px 22px;border-radius:20px;border:2px solid transparent;font-family:var(--fredoka);font-weight:700;font-size:0.85rem;cursor:pointer;transition:all 0.2s}
+.tog-btn.tog-intro{background:#dbeafe;border-color:#3b82f6;color:#1e40af}
+.tog-btn.tog-facts{background:#d1fae5;border-color:#10b981;color:#065f46}
+.tog-btn.tog-impact{background:#fef3c7;border-color:#f59e0b;color:#92400e}
+.tog-btn:hover{filter:brightness(0.95);transform:translateY(-1px)}
+.tog-btn.dim{opacity:0.4}
+.tog-hint{margin-top:12px;padding:12px 16px;border-radius:12px;font-size:0.82rem;line-height:1.5;text-align:center}
+
+
+
+.struct-card.revealed{border-left:5px solid #ccc}
+.struct-card.revealed .st-num{opacity:1}
+.struct-card.revealed .st-hint{opacity:1;max-height:200px}
+.struct-card.s-blue.revealed{border-left-color:#3b82f6}.struct-card.s-green.revealed{border-left-color:#10b981}.struct-card.s-gold.revealed{border-left-color:#f59e0b}
+
+
+
+.quiz-section{margin-top:32px;width:100%}
+.quiz-section h2{font-family:var(--fredoka);font-size:1.3rem;text-align:center;margin-bottom:16px}
+.quiz-card{background:#fff;border-radius:18px;padding:20px;margin-bottom:12px;box-shadow:var(--shadow)}
+.quiz-q{font-weight:700;font-size:1rem;margin-bottom:10px}
+.quiz-opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.quiz-opt{padding:12px;border-radius:14px;border:2px solid #e5e7eb;cursor:pointer;transition:all 0.2s;text-align:center;font-weight:600;font-size:0.9rem;background:#fff}
+.quiz-opt:hover{border-color:var(--purple)}
+.quiz-opt.correct{border-color:var(--green);background:#ecfdf5;color:var(--green)}
+.quiz-opt.wrong{border-color:var(--coral);background:#fef2f2;color:var(--coral)}
+
+/* ── ACTIVITIES ── */
+.act-section{margin-top:32px;width:100%}
+.act-section h2{font-family:var(--fredoka);font-size:1.3rem;text-align:center;margin-bottom:16px}
+.act-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.act-card{background:#fff;border-radius:18px;padding:18px;border:2px solid transparent;cursor:pointer;transition:all 0.2s;box-shadow:var(--shadow)}
+.act-card:hover{border-color:var(--gold);transform:translateY(-2px)}.act-card.done{border-color:var(--green);background:#f0fdf4}
+.act-emoji{font-size:2rem;margin-bottom:6px}.act-title{font-weight:700;font-size:0.95rem;margin-bottom:4px}.act-desc{font-size:0.8rem;color:var(--dim)}
+.act-card textarea{width:100%;height:50px;margin-top:8px;border-radius:10px;padding:8px;border:1px solid #e5e7eb;font-family:inherit;font-size:0.85rem;resize:vertical}
+
+/* ── KEEBOT CHAT ── */
+.keebot-btn{position:fixed;bottom:20px;right:20px;z-index:200;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--coral));color:#fff;border:none;cursor:pointer;font-size:1.6rem;box-shadow:0 6px 24px rgba(124,58,237,0.3);transition:all 0.2s;display:flex;align-items:center;justify-content:center}
+.keebot-btn:hover{transform:scale(1.1)}
+.keebot-chat{display:none;position:fixed;bottom:88px;right:20px;z-index:200;width:340px;max-height:400px;background:#fff;border-radius:18px;box-shadow:0 12px 48px rgba(0,0,0,0.15);overflow:hidden;flex-direction:column}
+.keebot-chat.show{display:flex}
+.keebot-header{background:linear-gradient(135deg,var(--purple),var(--coral));color:#fff;padding:14px 16px;font-family:var(--fredoka);font-weight:700;display:flex;align-items:center;gap:8px}
+.keebot-header .kb-close{background:none;border:none;color:#fff;font-size:1.2rem;cursor:pointer;margin-left:auto}
+.keebot-msgs{flex:1;overflow-y:auto;padding:12px;max-height:260px;display:flex;flex-direction:column;gap:8px}
+.keebot-msg{font-size:0.85rem;line-height:1.5;padding:10px 14px;border-radius:14px;max-width:85%}
+.keebot-msg.bot{background:#f3f4f6;align-self:flex-start;border-bottom-left-radius:4px}
+.keebot-msg.user{background:var(--purple);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.keebot-input-row{display:flex;border-top:1px solid #e5e7eb;padding:8px}
+.keebot-input-row input{flex:1;border:none;outline:none;padding:10px;font-family:inherit;font-size:0.85rem;border-radius:12px;background:#f9fafb}
+.keebot-input-row button{background:var(--purple);color:#fff;border:none;padding:10px 16px;border-radius:12px;cursor:pointer;font-weight:700;font-family:inherit;font-size:0.85rem;margin-left:8px}
+.keebot-typing{display:none;font-size:0.8rem;color:var(--dim);padding:4px 14px}.keebot-typing.show{display:block}
+
+@media(max-width:500px){
+  .act-grid{grid-template-columns:1fr}.quiz-opts{grid-template-columns:1fr}
+  .keebot-chat{width:calc(100vw-40px);right:10px}
+}
+</style>
+</head>
+<body>
+
+<!-- BANNER -->
+<div class="banner">
+  <a href="https://rkrk.io" class="banner-logo">rkrk<span>.io</span></a>
+  <div class="banner-right">Courseware designed by <strong>Kee Lee</strong></div>
+</div>
+
+  <div class="top">
+  <h1>Amazing<br><span class="hl">Ancient Inventions</span></h1>
+  <span class="swiss-rule"></span>
+  
+</div>
+
+<div class="main">
+
+  <!-- MINDMAP -->
+  <div class="mm-wrapper" id="mmWrapper">
+    <div class="big-bubble" id="bigBubble" onclick="document.getElementById('bigBubble').classList.toggle('expanded')">
+      <div class="bb-emoji">📖</div><div class="bb-title">Vocab</div>
+      <div class="bb-tap">👆 tap me!</div>
+    </div>
+    <div class="sub-grid" id="subGrid">
+      <div class="sub-bubble" onclick="openFlashcards('nano')"><div class="sub-emoji">🔬</div><div class="sub-title">The Magic Cup</div><div class="sub-country">Nanotechnology · 🇮🇹 Italy</div></div>
+      <div class="sub-bubble" onclick="openFlashcards('battery')"><div class="sub-emoji">⚡</div><div class="sub-title">Ancient Battery</div><div class="sub-country">Electricity · 🇮🇶 Iraq</div></div>
+      <div class="sub-bubble" onclick="openFlashcards('quake')"><div class="sub-emoji">🐉</div><div class="sub-title">Dragon Machine</div><div class="sub-country">Earthquake Detector · 🇨🇳 China</div></div>
+      <div class="sub-bubble" onclick="openFlashcards('calendar')"><div class="sub-emoji">📅</div><div class="sub-title">Moon Calendar</div><div class="sub-country">Ancient Time · 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</div></div>
+    </div>
+  </div>
+
+  <!-- READ-ALONG -->
+  <div class="ra-section">
+    <h2>📖 Read <span>Along!</span></h2>
+    <p style="text-align:center;color:var(--dim);font-size:0.85rem;margin-bottom:16px">Pick a story. Tap each sentence for help!</p>
+    <div class="section-tabs">
+      <div class="section-tab active" onclick="switchReadSection('nano')">🔬 Magic Cup</div>
+      <div class="section-tab" onclick="switchReadSection('battery')">⚡ Battery</div>
+      <div class="section-tab" onclick="switchReadSection('quake')">🐉 Dragon</div>
+      <div class="section-tab" onclick="switchReadSection('calendar')">📅 Calendar</div>
+    </div>
+
+    <!-- 🔬 NANO — exact article sentences -->
+    <div class="sentence-wrap active" id="read-nano">
+      <div class="sentence-card">
+        <div class="sen-text">🔬 The Lycurgus Cup is a beautifully <b>decorated</b> glass cup that was made in Italy in the <b>fourth century</b>. <span class="sen-emoji">🏺🇮🇹</span></div>
+        <button class="sen-audio" onclick="event.stopPropagation();playSentence(1,this)" title="🔊 Listen">🔊</button>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">For years, it <b>confused</b> scientists because it seems to change colour. <span class="sen-emoji">🤔🟢🔴</span></div>
+        <button class="sen-audio" onclick="event.stopPropagation();playSentence(2,this)" title="🔊 Listen">🔊</button>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">When light shines through it from the front, it looks green, but when it shines from the back, it <b>appears</b> red. <span class="sen-emoji">🟢→🔴</span></div>
+        <button class="sen-audio" onclick="event.stopPropagation();playSentence(3,this)" title="🔊 Listen">🔊</button>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">In the 1990s, scientists looked at the glass under a <b>microscope</b>. They discovered something amazing. <span class="sen-emoji">🔬✨</span></div>
+        <button class="sen-audio" onclick="event.stopPropagation();playSentence(4,this)" title="🔊 Listen">🔊</button>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text"><b>Whoever</b> had made the glass had used <b>tiny pieces</b> of gold and silver. <span class="sen-emoji">🪙✨</span></div>
+        <button class="sen-audio" onclick="event.stopPropagation();playSentence(5,this)" title="🔊 Listen">🔊</button>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">Some of these pieces measured 50 <b>nanometres</b> across — about one-thousandth the size of a piece of salt. <span class="sen-emoji">🧂🔬</span></div>
+        <button class="sen-audio" onclick="event.stopPropagation();playSentence(6,this)" title="🔊 Listen">🔊</button>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">The Lycurgus Cup shows that the ancient Romans were using <b>nanotechnology</b> more than 1,600 years ago. <span class="sen-emoji">🧪🏆</span></div>
+        <button class="sen-audio" onclick="event.stopPropagation();playSentence(7,this)" title="🔊 Listen">🔊</button>
+      </div>
+    </div>
+
+    <!-- ⚡ ELECTRICITY — exact article sentences -->
+    <div class="sentence-wrap" id="read-battery">
+      <div class="sentence-card">
+        <div class="sen-text">⚡ In 1936, during some <b>excavations</b> in an ancient village near Baghdad, an archaeologist found some unusual clay pots. <span class="sen-emoji">🏺🏜️</span></div>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">The pots were more than 2,000 years old. <span class="sen-emoji">😱🕰️</span></div>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">Hanging inside each pot was a <b>copper cylinder</b> and inside this cylinder was a piece of iron. <span class="sen-emoji">🔩🟤</span></div>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">Nobody knew why somebody had made these pots with metal inside, but the archaeologist thought that they could be some sort of <b>early battery</b>. <span class="sen-emoji">🤔🔋</span></div>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">A few years later, American scientists made copies of the pots. They discovered that the <b>original theory</b> was right: they could make electricity. <span class="sen-emoji">⚡✅</span></div>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">But why? What did people use this electricity for? That is the great <b>mystery</b> of this discovery. <span class="sen-emoji">🕵️❓</span></div>
+      </div>
+    </div>
+
+    <!-- 🐉 EARTHQUAKE — exact article sentences -->
+    <div class="sentence-wrap" id="read-quake">
+      <div class="sentence-card">
+        <div class="sen-text">🐉 More than 2,000 years ago, an <b>inventor</b> called Zhang Heng built the world's first earthquake detector. <span class="sen-emoji">🏮🇨🇳</span></div>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">The machine was a large metal vase on which there were eight <b>dragon heads</b>. <span class="sen-emoji">🐉🐉🐉🐉</span></div>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">The dragons marked the eight points of a <b>compass</b>, and each one had a metal ball in its mouth. <span class="sen-emoji">🧭⚽</span></div>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">Below each dragon head, there was a metal <b>frog</b>. <span class="sen-emoji">🐸</span></div>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">When the machine <b>detected tremors</b> in the earth, one of the dragons (facing in the direction of the tremor) would drop its ball into the mouth of the frog that sat below it. <span class="sen-emoji">📳🔔</span></div>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">This made a loud noise that <b>warned</b> people of the earthquake. <span class="sen-emoji">🔔⚠️</span></div>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">The machine could detect earthquakes hundreds of <b>kilometres</b> away. <span class="sen-emoji">🌍📏</span></div>
+      </div>
+    </div>
+
+    <!-- 📅 CALENDAR — exact article sentences -->
+    <div class="sentence-wrap" id="read-calendar">
+      <div class="sentence-card">
+        <div class="sen-text">📅 Very early calendars from <b>ancient civilizations</b> have been found in many countries around the world. <span class="sen-emoji">🌍📆</span></div>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">But archaeologists believe that they have <b>discovered</b> a calendar in Scotland that is 10,000 years old. <span class="sen-emoji">🏴󠁧󠁢󠁳󠁣󠁴󠁿😱</span></div>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">It was made by <b>Stone Age Britons</b>, who used it from 8000 BCE to 4000 BCE. <span class="sen-emoji">🪨👨‍👩‍👧</span></div>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">The calendar was made of 12 <b>pits</b> dug into the ground. <span class="sen-emoji">🕳️🕳️🕳️</span></div>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">The pits <b>represented</b> the months of the year and were laid out in a long line that was 50 metres long. <span class="sen-emoji">📏📅</span></div>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">The Ancient Britons would <b>measure time</b> using the sun and the moon. <span class="sen-emoji">☀️🌙</span></div>
+      </div>
+      <div class="sentence-card">
+        <div class="sen-text">This ancient calendar used both to keep <b>track</b> of the days, weeks and months of the year. <span class="sen-emoji">📅✅</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🕵️ STRUCTURE DETECTIVE -->
+  <div class="ra-section">
+    <h2>🕵️ Structure <span>Detective!</span></h2>
+    <p style="text-align:center;color:var(--dim);font-size:0.85rem;margin-bottom:6px">Every sentence in an article has a JOB! Hover to see what each one does 👇</p>
+    <div class="tips-box">
+      <div class="tips-header"><div class="tips-icon"></div><strong>How to write about an invention:</strong></div>
+      <div class="tips-steps">
+        <div class="tip-step">
+          <span class="tag intro"><span class="dot">①</span> INTRO</span>
+          <span>Say <strong>what</strong> it is. Name the invention and where/when it comes from. Every paragraph starts here!</span>
+        </div>
+        <div class="tip-step">
+          <span class="tag facts"><span class="dot">②</span> FACTS</span>
+          <span>Give cool <strong>details</strong>. Dates, numbers, how it works, what it looks like. This is the juicy part!</span>
+        </div>
+        <div class="tip-step">
+          <span class="tag impact"><span class="dot">③</span> IMPACT</span>
+          <span>Tell us <strong>why</strong> it matters. What changed because of it? Why should we care?</span>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;color:var(--dim);font-size:0.82rem;margin:0 0 12px">👀 Read the full article below 👇 Then tap a button to see which sentences do what! 🕵️</p>
+
+    <!-- Toggle buttons -->
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:16px">
+      <button class="tog-btn tog-intro" onclick="toggleHighlight('intro',this)">① INTRO</button>
+      <button class="tog-btn tog-facts" onclick="toggleHighlight('facts',this)">② FACTS</button>
+      <button class="tog-btn tog-impact" onclick="toggleHighlight('impact',this)">③ IMPACT</button>
+    </div>
+
+    <!-- Full article with numbered sentences -->
+    <div class="full-text" id="fullArticle">
+      <span class="ft-sen" data-role="intro">1️⃣ The Lycurgus Cup is a beautifully decorated glass cup that was made in Italy in the fourth century.</span>
+      <span class="ft-sen" data-role="facts">2️⃣ For years, it confused scientists because it seems to change colour.</span>
+      <span class="ft-sen" data-role="facts">3️⃣ When light shines through it from the front, it looks green, but when it shines from the back, it appears red.</span>
+      <span class="ft-sen" data-role="facts">4️⃣ In the 1990s, scientists looked at the glass under a microscope. They discovered something amazing.</span>
+      <span class="ft-sen" data-role="facts">5️⃣ Whoever had made the glass had used tiny pieces of gold and silver.</span>
+      <span class="ft-sen" data-role="facts">6️⃣ Some of these pieces measured 50 nanometres across — about one-thousandth the size of a piece of salt.</span>
+      <span class="ft-sen" data-role="facts">7️⃣ It is these tiny pieces that make the cup change colour.</span>
+      <span class="ft-sen" data-role="impact">8️⃣ The Lycurgus Cup shows that the ancient Romans were using nanotechnology more than 1,600 years ago.</span>
+    </div>
+
+    <div class="tog-hint" id="togHint" style="display:none"></div>
+
+    <div class="section-tabs">
+      <div class="section-tab active" onclick="switchStruct('nano')">🔬 Magic Cup</div>
+      <div class="section-tab" onclick="switchStruct('quake')">🐉 Dragon Machine</div>
+      <div class="section-tab" onclick="switchStruct('battery')">⚡ Battery</div>
+      <div class="section-tab" onclick="switchStruct('calendar')">📅 Calendar</div>
+    </div>
+
+    <!--  QUIZ -->
+  <div class="quiz-section">
+    <h2> Quick Quiz!</h2>
+    <div class="quiz-card"><div class="quiz-q">1. 🏺 What makes the Lycurgus Cup change colour?</div><div class="quiz-opts"><div class="quiz-opt" onclick="checkQuiz(this,false)">A) Magic paint from Rome</div><div class="quiz-opt" onclick="checkQuiz(this,true)">B) Tiny gold & silver particles </div><div class="quiz-opt" onclick="checkQuiz(this,false)">C) Roman electricity</div><div class="quiz-opt" onclick="checkQuiz(this,false)">D) Special water inside</div></div></div>
+    <div class="quiz-card"><div class="quiz-q">2. ⚡ What might the Baghdad Battery have been used for?</div><div class="quiz-opts"><div class="quiz-opt" onclick="checkQuiz(this,false)">A) Charging ancient phones</div><div class="quiz-opt" onclick="checkQuiz(this,true)">B) Covering objects with gold</div><div class="quiz-opt" onclick="checkQuiz(this,false)">C) Lighting up rooms</div><div class="quiz-opt" onclick="checkQuiz(this,false)">D) Cooking food faster</div></div></div>
+    <div class="quiz-card"><div class="quiz-q">3. 🐉 How did Zhang Heng's machine show WHERE the earthquake was?</div><div class="quiz-opts"><div class="quiz-opt" onclick="checkQuiz(this,false)">A) A bell rang loudly</div><div class="quiz-opt" onclick="checkQuiz(this,true)">B) The facing dragon dropped a ball</div><div class="quiz-opt" onclick="checkQuiz(this,false)">C) Water spilled out</div><div class="quiz-opt" onclick="checkQuiz(this,false)">D) Smoke came from a dragon</div></div></div>
+    <div class="quiz-card"><div class="quiz-q">4. 📅 How old is the Scottish calendar?</div><div class="quiz-opts"><div class="quiz-opt" onclick="checkQuiz(this,false)">A) 500 years</div><div class="quiz-opt" onclick="checkQuiz(this,true)">B) Over 10,000 years</div><div class="quiz-opt" onclick="checkQuiz(this,false)">C) 2,000 years</div><div class="quiz-opt" onclick="checkQuiz(this,false)">D) 100 years</div></div></div>
+  </div>
+
+  <!-- 🏃 ACTIVITIES -->
+  <div class="act-section">
+    <h2>✍️ Your Turn!</h2>
+    <p style="text-align:center;color:var(--dim);font-size:0.85rem;margin-bottom:12px">Pick TWO activities. Show what you know!</p>
+    <div class="act-grid">
+      <div class="act-card" onclick="this.classList.toggle('done')">
+        <div class="act-emoji">📝</div><div class="act-title">Mini-Report</div><div class="act-desc">Choose ONE invention. Write 3 sentences:<br>① What is it? ② Where? ③ Why amazing?</div>
+        <textarea placeholder="Write here..." onchange="if(this.value.length>20)this.parentElement.classList.add('done')"></textarea>
+      </div>
+      <div class="act-card" onclick="this.classList.toggle('done')">
+        <div class="act-emoji">🎤</div><div class="act-title">30-Second Explainer</div><div class="act-desc">Explain one invention out loud! Use at least ONE new word you learned!</div>
+        <button style="margin-top:8px;padding:8px 16px;border-radius:12px;border:none;background:var(--green);color:#fff;font-weight:700;cursor:pointer;font-family:inherit" onclick="this.textContent='🎤 Done! ✨';this.parentElement.classList.add('done')">🎤 Start!</button>
+      </div>
+      <div class="act-card" onclick="this.classList.toggle('done')">
+        <div class="act-emoji">🎨</div><div class="act-title">Draw the Dragon Machine</div><div class="act-desc">Draw Zhang Heng's seismoscope! 8 dragons + 8 frogs. Label the parts!</div>
+        <button style="margin-top:8px;padding:8px 16px;border-radius:12px;border:2px solid var(--purple);color:var(--purple);font-weight:700;cursor:pointer;background:transparent;font-family:inherit" onclick="this.textContent='🖼️ Done! ✨';this.parentElement.classList.add('done')">🖼️ I'll draw!</button>
+      </div>
+      <div class="act-card" onclick="this.classList.toggle('done')">
+        <div class="act-emoji">🏆</div><div class="act-title">Rank the Inventions!</div><div class="act-desc">🥇=MOST amazing → ④ = still cool! Why is #1 the best?</div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px"><button style="padding:6px 10px;border-radius:10px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-size:0.8rem" onclick="this.style.background='var(--purple)';this.style.color='#fff'">🥇 Cup</button><button style="padding:6px 10px;border-radius:10px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-size:0.8rem" onclick="this.style.background='var(--purple)';this.style.color='#fff'">🥇 Battery</button><button style="padding:6px 10px;border-radius:10px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-size:0.8rem" onclick="this.style.background='var(--purple)';this.style.color='#fff'">🥇 Dragon</button><button style="padding:6px 10px;border-radius:10px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-size:0.8rem" onclick="this.style.background='var(--purple)';this.style.color='#fff'">🥇 Calendar</button></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FLASHCARD MODAL -->
+<div class="overlay" id="overlay" onclick="closeFlashcards(event)">
+  <div class="fc-container" onclick="event.stopPropagation()">
+    <button class="fc-close" onclick="document.getElementById('overlay').classList.remove('show')">✕</button>
+    <div class="fc-header"><div class="fc-emoji" id="fcEmoji">🔬</div><h2 id="fcTitle">The Magic Cup</h2></div>
+    <div class="fc-progress" id="fcProgress"></div>
+    <div id="fcCards"></div>
+    <div class="fc-nav">
+      <button class="fc-btn prev" id="fcPrev" onclick="prevCard()">← Back</button>
+      <button class="fc-btn next" id="fcNext" onclick="nextCard()">Next →</button>
+    </div>
+  </div>
+</div>
+
+<!-- KEEBOT -->
+<button class="keebot-btn" id="keebotBtn" onclick="toggleKeebot()">💬</button>
+<div class="keebot-chat" id="keebotChat">
+  <div class="keebot-header">
+    🦕 KeeBot
+    <button class="kb-close" onclick="toggleKeebot()">✕</button>
+  </div>
+  <div class="keebot-msgs" id="keebotMsgs">
+    <div class="keebot-msg bot">👋 Hi! I'm KeeBot! Ask me about ANY word in the article, or anything about ancient inventions! 🏺⚡🐉📅</div>
+  </div>
+  <div class="keebot-typing" id="keebotTyping">🦕 KeeBot is thinking...</div>
+  <div class="keebot-input-row">
+    <input id="keebotInput" placeholder="Ask about a word or invention..." onkeydown="if(event.key==='Enter')sendKeebot()">
+    <button onclick="sendKeebot()">Send</button>
+  </div>
+</div>
+
+<script>
+// ── MINDMAP ──
+function expandMindmap(){document.getElementById('bigBubble').classList.add('expanded')}
+function switchStruct(name){document.querySelectorAll("#struct-nano,#struct-quake,#struct-battery,#struct-calendar").forEach(s=>s.classList.remove("active"));document.querySelectorAll(".struct-wrap").forEach(s=>s.classList.remove("active"));document.getElementById("struct-"+name).classList.add("active");event.target.parentElement.querySelectorAll(".section-tab").forEach(t=>t.classList.remove("active"));event.target.classList.add("active");}
+function switchReadSection(name){
+  document.querySelectorAll('.section-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.sentence-wrap').forEach(s=>s.classList.remove('active'));
+  event.target.classList.add('active');
+  document.getElementById('read-'+name).classList.add('active');
+}
+
+// Attach tap-to-expand to all sentence cards
+const senHelps = {
+  'decorated glass cup':'<strong>beautifully decorated</strong> 🎨 = made to look very pretty with special designs|<strong>fourth century</strong> 📅 = the years 301 to 400 — about 1,600 years ago!|<strong>was made</strong> 🔧 = someone made it (the cup did not make itself!)|<strong>that was made in Italy</strong> 🇮🇹 = extra info about where it comes from|🟢 SENTENCE STRUCTURE: &quot;that was made…&quot; adds a detail about the cup. In English we use &quot;that&quot; + description to give extra info about the thing before it.',
+  'confused scientists':'<strong>confused</strong> 🤔 = made scientists scratch their heads — they could NOT understand!|<strong>For years</strong> ⏳ = for a LONG time — this shows it was a big mystery|<strong>it seems to change</strong> 👀 = it LOOKS like it changes (the writer is not 100% sure)|<strong>because</strong> 🔗 = gives the reason why|🟢 SENTENCE STRUCTURE: &quot;For years, it confused scientists because…&quot; — we say &quot;for + time period&quot; at the start of a sentence to show something lasted a long time. &quot;because&quot; joins the mystery with the reason. The word &quot;seems&quot; is softer than &quot;is&quot; — it means &quot;it looks this way but maybe not 100%.&quot;',
+  'shines through it':'<strong>shines through</strong> ☀️ = light goes IN and comes OUT the other side|<strong>from the front</strong> 🔦 → <strong>from the back</strong> 💡 = two directions! Front = green 🟢, back = red 🔴|<strong>looks</strong> 👀 vs <strong>appears</strong> ✨ = two different words for &quot;seeing&quot; — both mean the same thing here (this is called paraphrasing!)|<strong>but</strong> ↔️ = shows a difference between two things|🟢 SENTENCE STRUCTURE: &quot;When X, it Y, but when Z, it W.&quot; — this pattern shows CONTRAST. The writer uses two pairs (front→green, back→red) to show how the cup changes. &quot;Looks&quot; and &quot;appears&quot; mean almost the same — good writers use different words for the same idea!',
+  'looked at the glass under a microscope':'<strong>microscope</strong> 🔬 = a machine that makes tiny things look BIG so we can see them|<strong>In the 1990s</strong> 🕰️ = putting the TIME first tells us a NEW part of the story is starting|<strong>discovered</strong> 🎉 = found out something — and it was AMAZING!|<strong>looked at…under a microscope</strong> 👁️ = how we describe studying something with a science tool|🟢 SENTENCE STRUCTURE: &quot;In the 1990s, scientists looked… They discovered…&quot; — the writer splits one idea into TWO short sentences. This makes it easier to read! &quot;In + year&quot; at the start sets the time period for the whole sentence.',
+  'tiny pieces of gold and silver':'<strong>Whoever had made the glass</strong> 🤷 = the person who made it (we do NOT know their name!) — &quot;whoever&quot; = any person who did something when we don&apos;t know who|<strong>had made</strong> ⏪ and <strong>had used</strong> ⏪ = these things happened BEFORE the scientists found it — &quot;had + verb&quot; tells us something is older than the main story|<strong>tiny pieces</strong> 🦠 = super super small bits — so small you need a microscope to see them!|<strong>gold and silver</strong> 🥇🥈 = expensive metals — that&apos;s what made this cup special|🟢 GRAMMAR: &quot;had + verb&quot; (had made, had used) = Past Perfect. We use this when something happened BEFORE another past event. The making happened 1,600 years ago. The discovering happened in the 1990s. So: making came FIRST → use &quot;had made.&quot;',
+  '50 nanometres across':'<strong>50 nanometres</strong> 📏 = the TINIEST measurement — 50 billionths of a metre! A nanometre is SO small you cannot see it|<strong>measured…across</strong> 📐 = how WIDE something is from one side to the other|<strong>one-thousandth</strong> ✂️ = cut a piece of salt into 1,000 slices — each slice is that thin!|<strong>about</strong> 🤏 = roughly, not exactly — the writer is not giving an exact number|🟢 PUNCTUATION: The dash (—) adds a BIG extra detail in a strong way. It&apos;s like saying &quot;wait, let me tell you something even MORE amazing!&quot; The word &quot;about&quot; shows the writer is guessing — they don&apos;t have the exact number.',
+  'Romans were using nanotechnology':'<strong>shows that</strong> 🎯 = gives us PROOF — this is the BIG finish of the article!|<strong>were using</strong> ⌛ = they used it OVER TIME in the past — not just once, but again and again|<strong>nanotechnology</strong> 🧪 = using super-tiny particles to make things — Romans did this 1,600 years before we even had a WORD for it!|<strong>more than 1,600 years ago</strong> 🏛️ = a REALLY long time — older than your great-great-great-great (×40!) grandparents|🟢 SENTENCE STRUCTURE: This is the LAST sentence — it tells us WHY WE SHOULD CARE. Good articles end with a &quot;so what?&quot; sentence. &quot;Were using&quot; (Past Continuous) shows an action that kept going — the Romans didn&apos;t just try it once, they actually USED this technology.',
+};
+
+
+document.addEventListener('click', function(e) {
+  const card = e.target.closest('.sentence-card');
+  if (!card) return;
+  card.classList.toggle('open');
+  if (card.classList.contains('open') && !card.querySelector('.sen-help')) {
+    const text = card.querySelector('.sen-text');
+    if (!text) return;
+    const key = Object.keys(senHelps).find(k => text.textContent.toLowerCase().includes(k.toLowerCase()));
+    if (key) {
+      const parts = senHelps[key].split('|');
+      const simple = parts.slice(0, -1).join('<br>');
+      const note = parts[parts.length - 1];
+      const help = document.createElement('div');
+      help.className = 'sen-help';
+      help.innerHTML = '<div class="simple">'+simple+'</div><div class="note">'+note+'</div>';
+      card.appendChild(help);
+    }
+  }
+});
+
+// ── VOCAB DATA ──
+const vocab = {
+  nano: [
+    {word:'decorated',pron:'/ˈdek.ə.reɪ.tɪd/',emoji:'🎨',img:'audio/decorated.png',meaning:'Made to look <strong>pretty with designs</strong>. Like adding stickers to make something beautiful! ✨',colloc:'The Lycurgus Cup is a beautifully <em>decorated</em> glass cup that was made in Italy in the fourth century.'},
+    {word:'confused',pron:'/kənˈfjuːzd/',emoji:'🤔',img:'audio/confused.png',meaning:'Made scientists <strong>scratch their heads</strong> — they couldn\'t understand it! 🤷',colloc:'For years, it <em>confused</em> scientists because it seems to change colour.'},
+    {word:'appears',pron:'/əˈpɪəz/',emoji:'👀',img:'audio/appears.png',meaning:'<strong>Looks like</strong> or seems to be. The cup <em>appears</em> red from behind — but it\'s not really red! 🔴',colloc:'When light shines from the back, it <em>appears</em> red.'},
+    {word:'microscope',pron:'/ˈmaɪ.krə.skəʊp/',emoji:'🔬',img:'audio/microscope.png',meaning:'A machine that makes <strong>tiny things look BIG</strong>! You can see things your eyes can\'t! 👁️',colloc:'In the 1990s, scientists looked at the glass under a <em>microscope</em>. They discovered something amazing.'},
+    {word:'nanometres',pron:'/ˈnæn.əʊˌmiː.təz/',emoji:'📏',img:'audio/nanometres.png',meaning:'The <strong>tiniest measurement</strong> in the world! 50 nanometres = cut a piece of salt into 1,000 slices 😱',colloc:'Some of these pieces measured 50 <em>nanometres</em> across — about one-thousandth the size of a piece of salt.'},
+  ],
+  battery: [
+    {word:'excavations',pron:'/ˌeks.kəˈveɪ.ʃənz/',emoji:'⛏️',img:'audio/excavations.png',meaning:'<strong>Digging in the ground</strong> to find old things. Like a treasure hunt, but for history! 🏺',colloc:'In 1936, during some <em>excavations</em> in an ancient village near Baghdad, an archaeologist found some unusual clay pots.'},
+    {word:'archaeologist',pron:'/ˌɑː.kiˈɒl.ə.dʒɪst/',emoji:'🕵️',img:'audio/archaeologist.png',meaning:'A <strong>scientist</strong> who studies old things dug up from the ground — pots, bones, treasure! 💀',colloc:'An <em>archaeologist</em> found some unusual clay pots near Baghdad.'},
+    {word:'copper cylinder',pron:'/ˈkɒp.ə ˈsɪl.ɪn.də/',emoji:'🟤',img:'audio/copper-cylinder.png',meaning:'A <strong>tube made of reddish-brown metal</strong>. Like a pipe, but made of copper! 🔩',colloc:'Hanging inside each pot was a <em>copper cylinder</em> and inside this cylinder was a piece of iron.'},
+    {word:'original theory',pron:'/əˈrɪdʒ.ɪ.nəl ˈθɪə.ri/',emoji:'',img:'audio/magic-cup.png',meaning:'The <strong>first idea</strong> someone had. The archaeologist guessed it was a battery — and he was RIGHT! ✅',colloc:'They discovered that the <em>original theory</em> was right: they could make electricity.'},
+    {word:'mystery',pron:'/ˈmɪs.tər.i/',emoji:'❓',img:'audio/magic-cup.png',meaning:'Something <strong>nobody can explain</strong>. Like a detective story with no ending yet! 🕵️‍♀️',colloc:'That is the great <em>mystery</em> of this discovery.'},
+  ],
+  quake: [
+    {word:'inventor',pron:'/ɪnˈven.tə/',emoji:'🧠',img:'audio/inventor.png',meaning:'Someone who <strong>creates something new</strong> that nobody has made before! Like the person who invented the telephone 📞',colloc:'More than 2,000 years ago, an <em>inventor</em> called Zhang Heng built the world\'s first earthquake detector.'},
+    {word:'compass',pron:'/ˈkʌm.pəs/',emoji:'🧭',img:'audio/dragon-machine.png',meaning:'A tool that shows <strong>directions</strong> — North, South, East, West! The dragons marked the 8 points 🌏',colloc:'The dragons marked the eight points of a <em>compass</em>, and each one had a metal ball in its mouth.'},
+    {word:'tremors',pron:'/ˈtrem.əz/',emoji:'📳',img:'audio/dragon-machine.png',meaning:'<strong>Shaking in the ground</strong>. Like when a big truck drives past — but from deep inside the earth! 🌍',colloc:'When the machine detected <em>tremors</em> in the earth, one of the dragons would drop its ball.'},
+    {word:'warned',pron:'/wɔːnd/',emoji:'⚠️',img:'audio/dragon-machine.png',meaning:'<strong>Told people to watch out</strong>! Like a fire alarm 🚨 — but for earthquakes!',colloc:'This made a loud noise that <em>warned</em> people of the earthquake.'},
+    {word:'kilometres',pron:'/kɪˈlɒm.ɪ.təz/',emoji:'📏',img:'audio/dragon-machine.png',meaning:'A way to measure <strong>long distances</strong>. Hundreds of km = like driving from one city to another! 🚗',colloc:'The machine could detect earthquakes hundreds of <em>kilometres</em> away.'},
+  ],
+  calendar: [
+    {word:'ancient civilizations',pron:'/ˈeɪn.ʃənt ˌsɪv.ɪ.laɪˈzeɪ.ʃənz/',emoji:'🏛️',img:'audio/stone-calendar.png',meaning:'<strong>Very old societies</strong> — like Ancient Egypt 🇪🇬, Ancient Rome 🏛️, Ancient China 🇨🇳',colloc:'Very early calendars from <em>ancient civilizations</em> have been found in many countries around the world.'},
+    {word:'Stone Age Britons',pron:'/stəʊn eɪdʒ ˈbrɪ.tənz/',emoji:'🪨',img:'audio/stone-calendar.png',meaning:'<strong>People living in Britain</strong> during the Stone Age — they used stone tools, not metal! 🪓',colloc:'It was made by <em>Stone Age Britons</em>, who used it from 8000 BCE to 4000 BCE.'},
+    {word:'pits',pron:'/pɪts/',emoji:'🕳️',img:'audio/stone-calendar.png',meaning:'<strong>Big holes dug in the ground</strong>. 12 of them in a line = a calendar! Simple but genius 🧠',colloc:'The calendar was made of 12 <em>pits</em> dug into the ground.'},
+    {word:'represented',pron:'/ˌrep.rɪˈzen.tɪd/',emoji:'🟰',img:'audio/stone-calendar.png',meaning:'<strong>Stood for</strong> or meant something else. 12 pits = the 12 months of the year! 📅',colloc:'The pits <em>represented</em> the months of the year and were laid out in a long line.'},
+    {word:'measure time',pron:'/ˈmeʒ.ə taɪm/',emoji:'⏰',img:'audio/stone-calendar.png',meaning:'To <strong>count</strong> days, weeks, and months. They used the sun ☀️ for days and the moon 🌙 for months!',colloc:'The Ancient Britons would <em>measure time</em> using the sun and the moon.'},
+  ]
+};
+
+
+let fcTopic='',fcIndex=0,fcWords=[];
+function openFlashcards(topic){
+  fcTopic=topic;fcIndex=0;fcWords=vocab[topic];
+  document.getElementById('fcEmoji').textContent=vocab[topic][0].emoji;
+  const titles={nano:'🔬 The Magic Cup',battery:'⚡ Ancient Battery',quake:'🐉 Dragon Machine',calendar:'📅 Moon Calendar'};
+  document.getElementById('fcTitle').textContent=titles[topic];
+  renderCards();
+  document.getElementById('overlay').classList.add('show');
+  document.body.classList.add('modal-open');
+}
+function closeFlashcards(e){
+  if(e.target===document.getElementById('overlay')){
+    document.getElementById('overlay').classList.remove('show');
+    document.body.classList.remove('modal-open');
+    if(currentAudio){currentAudio.pause();currentAudio=null};
+  }
+}
+function renderCards(){
+  const container=document.getElementById('fcCards'),progress=document.getElementById('fcProgress'),w=fcWords[fcIndex];
+  progress.innerHTML=fcWords.map((_,i)=>{
+    let cls='fc-dot';if(i<fcIndex)cls+=' done';if(i===fcIndex)cls+=' current';return `<div class="${cls}"></div>`;
+  }).join('');
+  container.innerHTML=`<div class="fc-card-wrap active"><div class="fc-hero" style="background-image:url('${w.img}')"></div><div class="fc-word">${w.emoji} ${w.word}</div><button class="fc-pronounce" onclick="speakWord('${w.word.replace(/'/g,"\\'")}','${w.pron.replace(/'/g,"\\'")}',this)"><span class="spk">🔊</span> ${w.pron}</button><div class="fc-meaning">${w.meaning}</div><div class="fc-colloc">${w.colloc}</div></div>`;
+  document.getElementById('fcPrev').disabled=fcIndex===0;
+  document.getElementById('fcNext').textContent=fcIndex===fcWords.length-1?'✅ Done!':'Next →';
+}
+function nextCard(){if(fcIndex<fcWords.length-1){fcIndex++;renderCards()}else{document.getElementById('overlay').classList.remove('show');document.body.classList.remove('modal-open');if(currentAudio){currentAudio.pause();currentAudio=null}}}
+function prevCard(){if(fcIndex>0){fcIndex--;renderCards()}}
+
+// ── TTS with ElevenLabs Laura voice (pre-generated) ──
+const audioMap = {
+  archaeologist:'audio/archaeologist.mp3',discovered:'audio/discovered.mp3',nanometres:'audio/nanometres.mp3',nanotechnology:'audio/nanotechnology.mp3',sophisticated:'audio/sophisticated.mp3',excavations:'audio/excavations.mp3','copper cylinder':'audio/copper-cylinder.mp3','early battery':'audio/early-battery.mp3','original theory':'audio/original-theory.mp3',mystery:'audio/mystery.mp3',inventor:'audio/inventor.mp3','dragon heads':'audio/dragon-heads.mp3',compass:'audio/compass.mp3','detected tremors':'audio/detected-tremors.mp3',warned:'audio/warned.mp3',kilometres:'audio/kilometres.mp3','ancient civilizations':'audio/ancient-civilizations.mp3','Stone Age Britons':'audio/stone-age-britons.mp3',pits:'audio/pits.mp3',represented:'audio/represented.mp3','measure time':'audio/measure-time.mp3','keep track':'audio/keep-track.mp3',decorated:'audio/decorated.mp3',confused:'audio/confused.mp3',appears:'audio/appears.mp3',microscope:'audio/microscope.mp3','tiny pieces':'audio/tiny-pieces.mp3'
+};
+let currentAudio=null;
+function speakWord(word,pron,btn){
+  if(currentAudio){currentAudio.pause();currentAudio=null}
+  const file=audioMap[word.toLowerCase()];
+  if(!file)return;
+  btn.classList.add('playing');
+  const a=new Audio(file);
+  a.onended=()=>{btn.classList.remove('playing');currentAudio=null};
+  a.onerror=()=>{btn.classList.remove('playing');currentAudio=null};
+  a.play();currentAudio=a;
+}
+
+// ── QUIZ ──
+function checkQuiz(el,correct){
+  if(el.dataset.answered)return;el.dataset.answered='1';
+  el.classList.add(correct?'correct':'wrong');
+}
+
+// ── KEEBOT ──
+function toggleHighlight(role,btn){
+  const s=document.querySelectorAll(".ft-sen");
+  const was=btn.classList.contains("active");
+  document.querySelectorAll(".tog-btn").forEach(b=>{b.classList.remove("dim")});
+  s.forEach(e=>{e.classList.remove("hl-intro","hl-facts","hl-impact")});
+  if(was){document.getElementById("togHint").style.display="none";return}
+  document.querySelectorAll('.tog-btn').forEach(b=>{if(b!==btn)b.classList.add('dim')});
+  s.forEach(e=>{if(e.dataset.role===role)e.classList.add("hl-"+role)});
+  const hint=document.getElementById("togHint");
+  hint.style.display="block";
+  const msgs={intro:"👋 These sentences INTRODUCE the topic. They tell us WHAT the invention is!",facts:"📊 These sentences give FACTS and details. Dates, numbers — the juicy stuff!",impact:"🤯 These sentences show the IMPACT. Why does this matter? What changed?"};
+  hint.style.background=role==="intro"?"#dbeafe":role==="facts"?"#d1fae5":"#fef3c7";
+  hint.textContent=msgs[role];
+}
+
+let sAudio=null;
+function playSentence(n,btn){
+  if(sAudio){sAudio.pause();document.querySelectorAll(".sen-audio.playing").forEach(b=>b.classList.remove("playing"))}
+  if(sAudio && btn.classList.contains("playing")){sAudio=null;btn.classList.remove("playing");return}
+  sAudio=new Audio("audio/sen-"+n+".mp3");
+  btn.classList.add("playing");
+  sAudio.onended=()=>{btn.classList.remove("playing");sAudio=null};
+  sAudio.play();
+}
+function toggleKeebot(){
+  const chat=document.getElementById('keebotChat'),btn=document.getElementById('keebotBtn');
+  chat.classList.toggle('show');btn.textContent=chat.classList.contains('show')?'✕':'💬';
+}
+function sendKeebot(){
+  const input=document.getElementById('keebotInput'),msg=input.value.trim();
+  if(!msg)return;
+  const msgs=document.getElementById('keebotMsgs'),typing=document.getElementById('keebotTyping');
+  msgs.innerHTML+=`<div class="keebot-msg user">${msg.replace(/</g,'&lt;')}</div>`;
+  input.value='';msgs.scrollTop=msgs.scrollHeight;
+  typing.classList.add('show');
+  setTimeout(()=>{
+    typing.classList.remove('show');
+    const reply=getKeebotReply(msg);
+    msgs.innerHTML+=`<div class="keebot-msg bot">${reply}</div>`;
+    msgs.scrollTop=msgs.scrollHeight;
+  },1000+Math.random()*1500);
+}
+function getKeebotReply(msg){
+  const l=msg.toLowerCase();
+  if(l.includes('nanotech')||l.includes('cup')||l.includes('lycurgus'))return '🔬 The Lycurgus Cup uses <strong>nanotechnology</strong>! Tiny gold and silver particles (70 nanometres!) make it change colour from green 🟢 to red 🔴. The Romans made it 1,700 years ago without even knowing the science! 🤯';
+  if(l.includes('battery')||l.includes('baghdad')||l.includes('electric'))return '⚡ The Baghdad Battery is a 2,000-year-old clay pot that makes electricity! Add lemon juice 🍋 inside, and it produces 0.5 volts. Scientists still argue about what it was for!';
+  if(l.includes('dragon')||l.includes('earthquake')||l.includes('zhang'))return '🐉 Zhang Heng\'s seismoscope had 8 dragons holding balls. When an earthquake hit, the dragon facing that direction dropped its ball into a frog\'s mouth — CLANG! 🔔 It worked 1,700 years before the West built anything similar!';
+  if(l.includes('calendar')||l.includes('scotland')||l.includes('moon'))return '📅 The world\'s oldest calendar is in Scotland! 12 holes in the ground track the moon phases. It\'s over 10,000 years old — older than the pyramids! 🏛️ Stone Age people were astronomers! 🌟';
+  if(l.includes('hello')||l.includes('hi'))return '👋 Hi there! Ask me about the Magic Cup 🔬, the Ancient Battery ⚡, the Dragon Machine 🐉, or the Moon Calendar 📅!';
+  return '🤔 Great question! Try asking about the Magic Cup 🔬, Ancient Battery ⚡, Dragon Machine 🐉, or Moon Calendar 📅 — I know all about ancient inventions! 🦕';
+}
+</script>
+<link rel="stylesheet" href="/css/kee-bot.css">
+<script src="/js/kee-bot.js"></script>
+</body>
+</html>

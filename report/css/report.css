@@ -708,6 +708,194 @@ body {
   text-transform: uppercase;
 }
 
+/* ===== FREQUENCY TAGS ===== */
+.rpt-freq-extreme {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: linear-gradient(135deg, #DC2626, #EA580C);
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.rpt-freq-high {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: linear-gradient(135deg, #EA580C, #F59E0B);
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ===== ALL-TIME RANKINGS — EXPANDABLE ROWS ===== */
+.rpt-rank-header {
+  padding: 10px 14px !important;
+  min-height: auto !important;
+}
+.rpt-rank-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.rpt-rank-pos {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--rpt-text-muted);
+  min-width: 24px;
+  text-align: center;
+}
+.rpt-rank-medal {
+  font-size: 1rem;
+  min-width: 24px;
+  text-align: center;
+}
+.rpt-rank-topic {
+  flex: 1;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--rpt-text);
+  line-height: 1.4;
+  min-width: 160px;
+}
+.rpt-rank-type {
+  flex-shrink: 0;
+}
+.rpt-rank-seasons {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--rpt-text-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.rpt-rank-header .rpt-accordion-arrow {
+  margin-left: auto;
+}
+@media (max-width: 640px) {
+  .rpt-rank-row { gap: 8px; }
+  .rpt-rank-topic { font-size: 0.75rem; min-width: 120px; }
+  .rpt-rank-seasons { font-size: 0.65rem; }
+  .rpt-freq-extreme, .rpt-freq-high { font-size: 0.55rem; padding: 2px 6px; }
+}
+
+/* ===== HOT TOPICS GRID ===== */
+.rpt-hottopics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--rpt-space-md);
+  margin-bottom: var(--rpt-space-2xl);
+}
+.rpt-ht-card {
+  background: var(--rpt-surface);
+  border: 1px solid var(--rpt-border);
+  border-radius: var(--rpt-radius-lg);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  position: relative;
+}
+.rpt-ht-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: var(--rpt-radius-lg) 0 0 var(--rpt-radius-lg);
+}
+.rpt-ht-card.cat-people::before { background: var(--rpt-cat-people); }
+.rpt-ht-card.cat-places::before { background: var(--rpt-cat-places); }
+.rpt-ht-card.cat-events::before { background: var(--rpt-cat-events); }
+.rpt-ht-card.cat-objects::before { background: var(--rpt-cat-objects); }
+.rpt-ht-card:hover {
+  box-shadow: var(--rpt-shadow-md);
+  transform: translateY(-2px);
+}
+.rpt-ht-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: var(--rpt-space-md) var(--rpt-space-md) 0 var(--rpt-space-md);
+}
+.rpt-ht-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.rpt-ht-card-title {
+  flex: 1;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--rpt-text);
+  line-height: 1.4;
+}
+.rpt-ht-tag-extreme {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: linear-gradient(135deg, #DC2626, #EA580C);
+  padding: 3px 10px;
+  border-radius: 999px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.rpt-ht-tag-hot {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: linear-gradient(135deg, #EA580C, #F59E0B);
+  padding: 3px 10px;
+  border-radius: 999px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.rpt-ht-card-body {
+  padding: var(--rpt-space-sm) var(--rpt-space-md) var(--rpt-space-md) calc(var(--rpt-space-md) + 30px);
+}
+.rpt-ht-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.rpt-ht-bullets li {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: var(--rpt-text-muted);
+  line-height: 1.6;
+  padding: 3px 0;
+  position: relative;
+  padding-left: 16px;
+}
+.rpt-ht-bullets li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--rpt-text-light);
+}
+
 /* ===== CARD DETAIL OVERLAY ===== */
 .rpt-overlay {
   display: none;
@@ -1158,4 +1346,20 @@ body {
   .rpt-layout { display: block; max-width: 100%; }
   .rpt-cuecard:hover { transform: none; box-shadow: var(--rpt-shadow-xs); }
   .rpt-overlay { display: none !important; }
+}
+
+/* ===== 必考题 MOBILE ===== */
+@media (max-width: 640px) {
+  .rpt-section-header h2 { font-size: 1.2rem; }
+  /* One card per row: questions and vocab stack vertically */
+  #panel-bikao ul li {
+    width: 100%;
+    margin: 4px 0;
+  }
+  #panel-bikao .rpt-hero-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  #panel-bikao .rpt-hero-stat-num { font-size: 1.5rem; }
+  #panel-bikao .rpt-hero-stat-label { font-size: 0.7rem; }
 }

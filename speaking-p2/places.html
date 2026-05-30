@@ -6,7 +6,7 @@
   <title>IELTS with Kee — Speaking Part 2 · Places</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:wght@400;700&display=swap">
-  <link rel="stylesheet" href="css/p2.css?v=7">
+  <link rel="stylesheet" href="css/p2.css?v=10">
   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   <style>
     /* Places category color overrides */
@@ -56,6 +56,7 @@
       <a href="places.html" class="p2-sidebar-item active">
         📍 Places <span class="count">22</span>
       </a>
+      <a href="#struct-location" onclick="scrollToStructures();return false" class="p2-sidebar-sub">🧱 Sentence Structures</a>
       <a href="#cards-location" onclick="navigateTo('cards-location','location');return false" class="p2-sidebar-sub">📝 Lexical Chunks</a>
       <a href="#study-section" onclick="navigateTo('study-section',null);return false" class="p2-sidebar-sub">⭐ Case Study</a>
       <a href="#drill-section" onclick="navigateTo('drill-section',null);return false" class="p2-sidebar-sub">🎯 Quick Drill</a>
@@ -599,7 +600,7 @@ Prompt 4 (印象深刻的地方 / impressive place): Why did it affect me?"></te
   Built with ⚡ RUA energy · IELTS with Kee · Speaking Part 2 · Places
 </footer>
 
-<script src="js/p2.js?v=7"></script>
+<script src="js/p2.js?v=9"></script>
 <script>
   /* Override the shared structData with Places-specific angles */
   structData = {
@@ -716,5 +717,225 @@ Prompt 4 (印象深刻的地方 / impressive place): Why did it affect me?"></te
   });
 </script>
 
+
+
+<!-- Whiteboard Bubble - Draggable Annotation Tool -->
+<style>
+.wb-bubble {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    box-shadow: 0 4px 20px rgba(102,126,234,0.4);
+    cursor: grab;
+    z-index: 99998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+    user-select: none;
+    touch-action: none;
+}
+.wb-bubble:active { cursor: grabbing; }
+.wb-bubble:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(102,126,234,0.6); }
+.wb-bubble.open { background: #ef4444; }
+.wb-toolbar {
+    position: fixed;
+    bottom: 88px;
+    right: 24px;
+    display: none;
+    gap: 8px;
+    padding: 10px 14px;
+    background: rgba(20,20,30,0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 16px;
+    z-index: 99997;
+    flex-wrap: wrap;
+}
+.wb-toolbar.show { display: flex; }
+.wb-tool-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+.wb-tool-btn:hover { background: rgba(255,255,255,0.2); }
+.wb-tool-btn.active { background: #667eea; border-color: #667eea; box-shadow: 0 0 12px rgba(102,126,234,0.5); }
+.wb-color { width: 32px; height: 32px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; transition: all 0.2s; }
+.wb-color:hover { transform: scale(1.2); }
+.wb-color.active { border-color: #fff; box-shadow: 0 0 10px currentColor; }
+.wb-canvas-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99996;
+    pointer-events: none;
+    display: none;
+}
+.wb-canvas-overlay.active {
+    display: block;
+    pointer-events: auto;
+}
+@media (max-width: 768px) {
+    .wb-bubble, .wb-toolbar, .wb-canvas-overlay { display: none !important; }
+}
+.wb-canvas-overlay canvas {
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
+</style>
+
+<div class="wb-bubble" id="wbBubble" title="Whiteboard">✏️</div>
+
+<div class="wb-toolbar" id="wbToolbar">
+    <button class="wb-tool-btn active" id="wbPen" title="Pen">✏️</button>
+    <button class="wb-tool-btn" id="wbEraser" title="Eraser">🧹</button>
+    <span class="wb-color active" style="background:#000;" data-color="#000000" title="Black"></span>
+    <span class="wb-color" style="background:#ef4444;" data-color="#ef4444" title="Red"></span>
+    <span class="wb-color" style="background:#3b82f6;" data-color="#3b82f6" title="Blue"></span>
+    <span class="wb-color" style="background:#10b981;" data-color="#10b981" title="Green"></span>
+    <button class="wb-tool-btn" id="wbClear" title="Clear All">🗑️</button>
+    <button class="wb-tool-btn" id="wbClose" title="Close">✕</button>
+</div>
+
+<div class="wb-canvas-overlay" id="wbOverlay">
+    <canvas id="wbCanvas"></canvas>
+</div>
+
+<script>
+(function(){
+    const bubble = document.getElementById('wbBubble');
+    const toolbar = document.getElementById('wbToolbar');
+    const overlay = document.getElementById('wbOverlay');
+    const canvas = document.getElementById('wbCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    let isOpen = false, isDrawing = false, isErasing = false;
+    let currentColor = '#000000';
+    let lineWidth = 3;
+
+    // Dragging
+    let isDragging = false, dragStartX, dragStartY, bubbleStartX, bubbleStartY;
+    bubble.addEventListener('pointerdown', function(e) {
+        isDragging = true;
+        dragStartX = e.clientX;
+        dragStartY = e.clientY;
+        const rect = bubble.getBoundingClientRect();
+        bubbleStartX = rect.left;
+        bubbleStartY = rect.top;
+        bubble.setPointerCapture(e.pointerId);
+        e.preventDefault();
+    });
+    window.addEventListener('pointermove', function(e) {
+        if (!isDragging) return;
+        const dx = e.clientX - dragStartX;
+        const dy = e.clientY - dragStartY;
+        bubble.style.left = (bubbleStartX + dx) + 'px';
+        bubble.style.top = (bubbleStartY + dy) + 'px';
+        bubble.style.right = 'auto';
+        bubble.style.bottom = 'auto';
+        toolbar.style.right = 'auto';
+        toolbar.style.bottom = 'auto';
+    });
+    window.addEventListener('pointerup', function() {
+        if (isDragging) {
+            const moved = Math.abs(bubble.getBoundingClientRect().left - bubbleStartX) > 5;
+            if (!moved) toggleWB();
+        }
+        isDragging = false;
+    });
+
+    function toggleWB() {
+        isOpen = !isOpen;
+        if (isOpen) {
+            bubble.classList.add('open');
+            bubble.textContent = '✕';
+            toolbar.classList.add('show');
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+        } else {
+            bubble.classList.remove('open');
+            bubble.textContent = '✏️';
+            toolbar.classList.remove('show');
+            overlay.classList.remove('active');
+            window.removeEventListener('resize', resizeCanvas);
+        }
+    }
+
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+
+    document.getElementById('wbPen').addEventListener('click', function() {
+        isErasing = false;
+        this.classList.add('active');
+        document.getElementById('wbEraser').classList.remove('active');
+        overlay.classList.add('active');
+        canvas.style.cursor = 'crosshair';
+    });
+    document.getElementById('wbEraser').addEventListener('click', function() {
+        isErasing = true;
+        this.classList.add('active');
+        document.getElementById('wbPen').classList.remove('active');
+        overlay.classList.add('active');
+        canvas.style.cursor = 'cell';
+    });
+    document.querySelectorAll('.wb-color').forEach(el => {
+        el.addEventListener('click', function() {
+            document.querySelectorAll('.wb-color').forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+            currentColor = this.dataset.color;
+            isErasing = false;
+            document.getElementById('wbPen').classList.add('active');
+            document.getElementById('wbEraser').classList.remove('active');
+            overlay.classList.add('active');
+            canvas.style.cursor = 'crosshair';
+        });
+    });
+    document.getElementById('wbClear').addEventListener('click', function() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    });
+    document.getElementById('wbClose').addEventListener('click', function() {
+        overlay.classList.remove('active');
+    });
+
+    canvas.addEventListener('pointerdown', function(e) {
+        isDrawing = true;
+        ctx.beginPath();
+        ctx.moveTo(e.clientX, e.clientY);
+        ctx.lineWidth = isErasing ? 20 : lineWidth;
+        ctx.strokeStyle = isErasing ? 'rgba(0,0,0,0)' : currentColor;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        if (isErasing) ctx.globalCompositeOperation = 'destination-out';
+        else ctx.globalCompositeOperation = 'source-over';
+    });
+    canvas.addEventListener('pointermove', function(e) {
+        if (!isDrawing) return;
+        ctx.lineTo(e.clientX, e.clientY);
+        ctx.stroke();
+    });
+    canvas.addEventListener('pointerup', function() { isDrawing = false; });
+    canvas.addEventListener('pointerleave', function() { isDrawing = false; });
+})();
+</script>
+
+<link rel="stylesheet" href="/css/kee-bot.css">
+<script src="/js/kee-bot.js"></script>
 </body>
 </html>
