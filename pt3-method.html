@@ -194,20 +194,42 @@ a:hover { color: var(--purple-dark); }
 }
 .practice-tab:hover { border-color: var(--purple-light); color: var(--purple); }
 .practice-tab.active { background: var(--purple); color: #fff; border-color: var(--purple); }
-.practice-group { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.practice-group { display: grid; grid-template-columns: 1fr; gap: 14px; }
 .practice-group.hidden { display: none; }
 .practice-q {
   background: var(--white); border: 2px solid var(--gray-200); border-radius: var(--radius-lg);
-  padding: 18px 22px; cursor: pointer; transition: all 0.2s;
-  display: flex; align-items: flex-start; gap: 12px;
+  cursor: pointer; transition: all 0.2s; overflow: hidden;
 }
-.practice-q:hover { border-color: var(--purple-light); transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+.practice-q:hover { border-color: var(--purple-light); box-shadow: var(--shadow-sm); }
+.practice-q.expanded { border-color: var(--purple-light); box-shadow: var(--shadow-md); }
+.pq-header {
+  padding: 18px 22px; display: flex; align-items: flex-start; gap: 12px;
+}
 .practice-q .pq-chain {
   font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
   background: #f3e8ff; color: var(--purple-dark); padding: 3px 10px; border-radius: 999px;
   white-space: nowrap; flex-shrink: 0; margin-top: 2px;
 }
-.practice-q .pq-text { font-size: 14px; color: var(--gray-800); line-height: 1.5; }
+.practice-q .pq-text { font-size: 14px; color: var(--gray-800); line-height: 1.5; flex: 1; }
+.pq-expand-hint { font-size: 11px; color: var(--gray-600); white-space: nowrap; margin-top: 2px; opacity: 0.7; }
+.pq-body {
+  display: none; padding: 0 22px 18px; border-top: 1px solid var(--gray-100);
+}
+.practice-q.expanded .pq-body { display: block; }
+.pq-body h4 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--purple-dark); margin: 14px 0 6px; }
+.pq-body .pq-phrase-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
+.pq-body .pq-phrase-tag {
+  background: #f3e8ff; border: 1px solid var(--purple-light); border-radius: 8px;
+  padding: 4px 10px; font-size: 12px; font-weight: 500; color: var(--purple-dark);
+}
+.pq-body .pq-example {
+  font-size: 13px; color: var(--gray-700); line-height: 1.6; font-style: italic;
+  padding: 10px 14px; background: var(--gray-50); border-radius: var(--radius);
+  margin-top: 4px;
+}
+.pq-body .pq-example em {
+  font-style: normal; font-weight: 600; color: var(--purple-dark);
+}
 
 /* Footer */
 footer {
@@ -578,7 +600,7 @@ footer a { color: var(--purple); font-weight: 600; }
 <section class="section" id="practice">
   <div class="section-label">Part 4 of 4</div>
   <h2>Practice with Real Questions</h2>
-  <p class="sub">Apply what you have learned. Pick a chain, read the question, and structure your answer using the three steps. May-Aug 2026 question bank.</p>
+  <p class="sub">Tap any question to reveal topic-specific phrases and example sentences. Apply the chains of thought and discourse markers you have just learned. May-Aug 2026 question bank.</p>
 
   <div class="practice-tabs">
     <button class="practice-tab active" onclick="switchPractice('chain1')">Chain 1: General-Specific-Pivot</button>
@@ -598,47 +620,194 @@ footer a { color: var(--purple); font-weight: 600; }
 <script>
 const practiceQs = {
   chain1: [
-    { chain: "Express + Justify", topic: "Technology & Society", q: "Do you think technology has made people more or less social?" },
-    { chain: "Express + Justify", topic: "Health & Wellbeing", q: "Do you think people today are more health-conscious than previous generations?" },
-    { chain: "Express + Justify", topic: "Culture & Traditions", q: "Should immigrants be expected to fully adopt the culture of their new country?" },
-    { chain: "Express + Justify", topic: "Education Systems", q: "Should schools teach practical skills like managing money alongside academic subjects?" },
-    { chain: "Express + Justify", topic: "Work & Careers", q: "Should companies be required to offer a four-day working week?" },
-    { chain: "Express + Justify", topic: "Environmental Responsibility", q: "Whose responsibility is it to protect the environment - individuals or governments?" },
-    { chain: "Express + Justify", topic: "Media & Advertising", q: "Do you think advertising has too much influence on what people buy?" },
-    { chain: "Express + Justify", topic: "Family & Social Life", q: "Do you think the extended family is becoming less important in modern society?" }
+    {
+      chain: "Express + Justify", topic: "Technology & Society",
+      q: "Do you think technology has made people more or less social?",
+      phrases: ["face-to-face interaction", "screen time", "socially isolated", "digital connection", "real-life relationships"],
+      example: "While <em>face-to-face interaction</em> has declined in many households, <em>digital connection</em> has allowed people to maintain relationships across continents in ways that were impossible a generation ago."
+    },
+    {
+      chain: "Express + Justify", topic: "Health & Wellbeing",
+      q: "Do you think people today are more health-conscious than previous generations?",
+      phrases: ["health-conscious", "sedentary lifestyle", "preventive care", "mental well-being", "dietary choices"],
+      example: "I would say people are far more <em>health-conscious</em> now. The rise of fitness trackers and <em>preventive care</em> culture means young people think about <em>dietary choices</em> in a way our grandparents never did."
+    },
+    {
+      chain: "Express + Justify", topic: "Culture & Traditions",
+      q: "Should immigrants be expected to fully adopt the culture of their new country?",
+      phrases: ["cultural assimilation", "cultural identity", "multicultural society", "integrating into", "preserve one's heritage"],
+      example: "I do not think full <em>cultural assimilation</em> should be expected. A healthy <em>multicultural society</em> allows people to <em>integrate into</em> the mainstream while still being able to <em>preserve their heritage</em>."
+    },
+    {
+      chain: "Express + Justify", topic: "Education Systems",
+      q: "Should schools teach practical skills like managing money alongside academic subjects?",
+      phrases: ["practical skills", "financial literacy", "real-world application", "academic curriculum", "life skills"],
+      example: "Absolutely. <em>Financial literacy</em> is arguably more important than half the subjects in the <em>academic curriculum</em>. Teaching <em>practical skills</em> like budgeting gives students <em>real-world application</em> that they will use every single day."
+    },
+    {
+      chain: "Express + Justify", topic: "Work & Careers",
+      q: "Should companies be required to offer a four-day working week?",
+      phrases: ["work-life balance", "productivity levels", "employee well-being", "compressed hours", "burnout"],
+      example: "I think there is a strong case for it. Studies show that <em>productivity levels</em> do not drop when people work <em>compressed hours</em>, and the improvement in <em>employee well-being</em> and reduction in <em>burnout</em> is significant."
+    },
+    {
+      chain: "Express + Justify", topic: "Environmental Responsibility",
+      q: "Whose responsibility is it to protect the environment — individuals or governments?",
+      phrases: ["carbon footprint", "systemic change", "collective action", "government regulation", "individual choices"],
+      example: "It has to be both, but I lean towards governments having the primary responsibility. <em>Individual choices</em> like reducing your <em>carbon footprint</em> matter, but without <em>government regulation</em> and <em>systemic change</em>, individual efforts are a drop in the ocean."
+    },
+    {
+      chain: "Express + Justify", topic: "Media & Advertising",
+      q: "Do you think advertising has too much influence on what people buy?",
+      phrases: ["consumer behaviour", "targeted advertising", "impulse purchases", "brand loyalty", "manipulative marketing"],
+      example: "I do, especially with <em>targeted advertising</em> on social media. Algorithms know our weaknesses and this drives <em>impulse purchases</em> on a massive scale. <em>Consumer behaviour</em> is being shaped in ways most people are not even aware of."
+    },
+    {
+      chain: "Express + Justify", topic: "Family & Social Life",
+      q: "Do you think the extended family is becoming less important in modern society?",
+      phrases: ["extended family", "nuclear family", "support system", "geographical distance", "intergenerational bond"],
+      example: "It is a mixed picture. <em>Geographical distance</em> has certainly weakened the daily <em>intergenerational bond</em> in many families. But I would argue the extended family still serves as a crucial <em>support system</em>, especially when it comes to childcare."
+    }
   ],
   chain2: [
-    { chain: "Speculate + Analyse", topic: "Technology & Society", q: "How do you think smartphones will change in the next decade?" },
-    { chain: "Speculate + Analyse", topic: "Health & Wellbeing", q: "What medical breakthroughs do you expect in the next 20 years?" },
-    { chain: "Speculate + Analyse", topic: "Culture & Traditions", q: "Do you think all cultures will eventually become more similar?" },
-    { chain: "Speculate + Analyse", topic: "Media & Advertising", q: "How do you think news media will evolve in the next decade?" },
-    { chain: "Speculate + Analyse", topic: "Travel & Tourism", q: "How do you think space tourism will develop in the future?" },
-    { chain: "Speculate + Analyse", topic: "Work & Careers", q: "What jobs do you think will no longer exist in 20 years?" },
-    { chain: "Speculate + Analyse", topic: "Economic Development", q: "What industries do you think will drive the global economy in 2050?" },
-    { chain: "Speculate + Analyse", topic: "Family & Social Life", q: "Do you think the traditional family structure will still exist in 100 years?" }
+    {
+      chain: "Speculate + Analyse", topic: "Technology & Society",
+      q: "How do you think smartphones will change in the next decade?",
+      phrases: ["wearable technology", "augmented reality", "AI integration", "seamless connectivity", "form factor"],
+      example: "I would not be surprised if the smartphone <em>form factor</em> disappears entirely in favour of <em>wearable technology</em> and <em>augmented reality</em> glasses. With <em>AI integration</em> becoming more sophisticated, the device itself may become invisible."
+    },
+    {
+      chain: "Speculate + Analyse", topic: "Health & Wellbeing",
+      q: "What medical breakthroughs do you expect in the next 20 years?",
+      phrases: ["gene editing", "personalised medicine", "early detection", "life expectancy", "ethical concerns"],
+      example: "<em>Gene editing</em> technology like CRISPR is likely to revolutionise <em>personalised medicine</em>. I can imagine a future where <em>early detection</em> of diseases happens at the genetic level before symptoms even appear, though this raises serious <em>ethical concerns</em>."
+    },
+    {
+      chain: "Speculate + Analyse", topic: "Culture & Traditions",
+      q: "Do you think all cultures will eventually become more similar?",
+      phrases: ["cultural homogenisation", "globalisation", "cultural heritage", "distinct identity", "cross-cultural exchange"],
+      example: "There is definitely a trend toward <em>cultural homogenisation</em> driven by <em>globalisation</em>, and you can see it in how young people in Shanghai and London consume the same content. But I think <em>cultural heritage</em> runs deeper than surface trends, and communities will fight to preserve a <em>distinct identity</em>."
+    },
+    {
+      chain: "Speculate + Analyse", topic: "Media & Advertising",
+      q: "How do you think news media will evolve in the next decade?",
+      phrases: ["AI-generated content", "citizen journalism", "media literacy", "echo chambers", "personalised news feeds"],
+      example: "I think <em>AI-generated content</em> will become the norm for routine news, while investigative journalism becomes more premium. The bigger challenge will be <em>media literacy</em> — teaching people to distinguish fact from AI fiction in their <em>personalised news feeds</em>."
+    },
+    {
+      chain: "Speculate + Analyse", topic: "Travel & Tourism",
+      q: "How do you think space tourism will develop in the future?",
+      phrases: ["space tourism", "commercially viable", "environmental cost", "exclusive experience", "mainstream accessibility"],
+      example: "In the near term, it will remain an <em>exclusive experience</em> for the ultra-wealthy. But looking ahead 30 or 40 years, if it becomes <em>commercially viable</em> at scale, I can imagine <em>mainstream accessibility</em> similar to how air travel evolved from a luxury to something ordinary."
+    },
+    {
+      chain: "Speculate + Analyse", topic: "Work & Careers",
+      q: "What jobs do you think will no longer exist in 20 years?",
+      phrases: ["automation", "repetitive tasks", "human judgment", "soft skills", "job displacement"],
+      example: "Any role built on <em>repetitive tasks</em> is at risk — data entry, basic translation, even some legal work. But jobs requiring <em>human judgment</em> and <em>soft skills</em> — therapists, teachers, negotiators — those are much harder to automate."
+    },
+    {
+      chain: "Speculate + Analyse", topic: "Economic Development",
+      q: "What industries do you think will drive the global economy in 2050?",
+      phrases: ["green energy", "biotechnology", "AI-driven economy", "ageing population", "emerging markets"],
+      example: "<em>Green energy</em> and <em>biotechnology</em> seem like safe bets given the climate crisis and an <em>ageing population</em> driving demand for medical innovation. I also think the <em>AI-driven economy</em> will create entirely new industries we cannot even name yet."
+    },
+    {
+      chain: "Speculate + Analyse", topic: "Family & Social Life",
+      q: "Do you think the traditional family structure will still exist in 100 years?",
+      phrases: ["traditional family structure", "alternative family models", "societal norms", "co-parenting", "evolving definition"],
+      example: "I think the <em>traditional family structure</em> will still exist, but it will be one option among many. <em>Alternative family models</em> like <em>co-parenting</em> arrangements and chosen families are already becoming more normalised, and I see that trend continuing as <em>societal norms</em> evolve."
+    }
   ],
   chain3: [
-    { chain: "Discuss + Analyse", topic: "Education Systems", q: "How does online learning compare to traditional classroom learning?" },
-    { chain: "Discuss + Analyse", topic: "Work & Careers", q: "How does working for a large company differ from working for a startup?" },
-    { chain: "Discuss + Analyse", topic: "Health & Wellbeing", q: "How does public healthcare differ from private healthcare in terms of quality?" },
-    { chain: "Discuss + Analyse", topic: "Culture & Traditions", q: "How does the concept of 'family' differ across cultures?" },
-    { chain: "Discuss + Analyse", topic: "Media & Advertising", q: "Which has more influence on public opinion - traditional media or social media?" },
-    { chain: "Discuss + Analyse", topic: "Travel & Tourism", q: "How does travelling for business differ from travelling for leisure?" },
-    { chain: "Discuss + Analyse", topic: "Family & Social Life", q: "How does the experience of childhood today compare to 30 years ago?" },
-    { chain: "Discuss + Analyse", topic: "Economic Development", q: "How does entrepreneurship culture differ between developed and developing countries?" }
+    {
+      chain: "Discuss + Analyse", topic: "Education Systems",
+      q: "How does online learning compare to traditional classroom learning?",
+      phrases: ["self-discipline", "face-to-face instruction", "flexible learning", "hands-on activities", "social development"],
+      example: "Online learning offers <em>flexible learning</em> and suits those with strong <em>self-discipline</em>. But <em>face-to-face instruction</em> provides <em>social development</em> and <em>hands-on activities</em> that a screen simply cannot replicate. What both reveal is that a hybrid model probably works best for most learners."
+    },
+    {
+      chain: "Discuss + Analyse", topic: "Work & Careers",
+      q: "How does working for a large company differ from working for a startup?",
+      phrases: ["job security", "career progression", "wearing multiple hats", "hierarchical structure", "flat organisation"],
+      example: "A large company typically offers <em>job security</em> and clear <em>career progression</em> within a <em>hierarchical structure</em>. A startup means <em>wearing multiple hats</em> in a <em>flat organisation</em> where you learn fast but have less stability. The difference is really about whether you thrive in structure or ambiguity."
+    },
+    {
+      chain: "Discuss + Analyse", topic: "Health & Wellbeing",
+      q: "How does public healthcare differ from private healthcare in terms of quality?",
+      phrases: ["universal access", "waiting times", "state-of-the-art equipment", "out-of-pocket costs", "standard of care"],
+      example: "Public healthcare guarantees <em>universal access</em> regardless of income, which is its great strength. Private healthcare offers shorter <em>waiting times</em> and <em>state-of-the-art equipment</em> but with significant <em>out-of-pocket costs</em>. The <em>standard of care</em> can be comparable, but access is fundamentally different."
+    },
+    {
+      chain: "Discuss + Analyse", topic: "Culture & Traditions",
+      q: "How does the concept of 'family' differ across cultures?",
+      phrases: ["individualistic culture", "collectivist society", "filial piety", "family obligations", "sense of belonging"],
+      example: "In <em>collectivist societies</em> like China, the concept of <em>filial piety</em> means strong <em>family obligations</em> that extend across generations. In more <em>individualistic cultures</em>, family ties are often looser, with a greater emphasis on personal independence, though both provide a <em>sense of belonging</em>."
+    },
+    {
+      chain: "Discuss + Analyse", topic: "Media & Advertising",
+      q: "Which has more influence on public opinion — traditional media or social media?",
+      phrases: ["editorial standards", "viral content", "credibility", "echo chambers", "fact-checking"],
+      example: "Traditional media still carries more <em>credibility</em> because of <em>editorial standards</em> and <em>fact-checking</em> processes. Social media spreads <em>viral content</em> faster and creates <em>echo chambers</em>, but the information is often less reliable. The irony is that social media shapes what people talk about, while traditional media shapes what they believe."
+    },
+    {
+      chain: "Discuss + Analyse", topic: "Travel & Tourism",
+      q: "How does travelling for business differ from travelling for leisure?",
+      phrases: ["tight schedule", "cultural immersion", "off the beaten track", "networking opportunities", "switch off"],
+      example: "Business travel is defined by a <em>tight schedule</em> and <em>networking opportunities</em> — you see conference rooms, not cities. Leisure travel is about <em>cultural immersion</em> and going <em>off the beaten track</em>, with the freedom to truly <em>switch off</em>. One is productive, the other is restorative."
+    },
+    {
+      chain: "Discuss + Analyse", topic: "Family & Social Life",
+      q: "How does the experience of childhood today compare to 30 years ago?",
+      phrases: ["digital native", "unstructured play", "over-scheduled", "helicopter parenting", "outdoor activities"],
+      example: "Todays children are <em>digital natives</em> who are often <em>over-scheduled</em> with activities and subject to more <em>helicopter parenting</em>. Thirty years ago, childhood meant more <em>unstructured play</em> and <em>outdoor activities</em> with less adult supervision. Both have advantages, but I think todays children have lost something valuable in terms of independence."
+    },
+    {
+      chain: "Discuss + Analyse", topic: "Economic Development",
+      q: "How does entrepreneurship culture differ between developed and developing countries?",
+      phrases: ["safety net", "risk tolerance", "access to capital", "necessity-driven", "opportunity-driven"],
+      example: "In developing countries, entrepreneurship is often <em>necessity-driven</em> because formal jobs are scarce, and people have higher <em>risk tolerance</em> since they have less to lose. In developed economies, entrepreneurs usually have a stronger <em>safety net</em> and better <em>access to capital</em>, making it more <em>opportunity-driven</em>."
+    }
   ]
 };
 
 function renderPractice() {
   for (const [key, qs] of Object.entries(practiceQs)) {
     const container = document.getElementById('p-' + key);
-    container.innerHTML = qs.map(item => `
-      <div class="practice-q" onclick="copyQ(this)" title="Click to copy">
-        <span class="pq-chain">${item.chain}</span>
-        <span class="pq-text">${item.topic}: ${item.q}</span>
+    container.innerHTML = qs.map((item, idx) => {
+      const cardId = key + '-' + idx;
+      return `
+      <div class="practice-q" id="${cardId}" onclick="toggleCard('${cardId}')">
+        <div class="pq-header">
+          <span class="pq-chain">${item.chain}</span>
+          <span class="pq-text">${item.topic}: ${item.q}</span>
+          <span class="pq-expand-hint">Tap for phrases ▼</span>
+        </div>
+        <div class="pq-body">
+          <h4>Useful Phrases for ${item.topic}</h4>
+          <div class="pq-phrase-tags">
+            ${item.phrases.map(p => `<span class="pq-phrase-tag">${p}</span>`).join('')}
+          </div>
+          <h4>Example Sentence</h4>
+          <div class="pq-example">${item.example}</div>
+        </div>
       </div>
-    `).join('');
+    `}).join('');
   }
+}
+
+function toggleCard(id) {
+  const card = document.getElementById(id);
+  const wasExpanded = card.classList.contains('expanded');
+  document.querySelectorAll('.practice-q.expanded').forEach(c => c.classList.remove('expanded'));
+  if (!wasExpanded) {
+    card.classList.add('expanded');
+    const hint = card.querySelector('.pq-expand-hint');
+    if (hint) hint.textContent = 'Tap to close ▲';
+  }
+  document.querySelectorAll('.pq-expand-hint').forEach(h => {
+    if (h !== card.querySelector('.pq-expand-hint')) h.textContent = 'Tap for phrases ▼';
+  });
 }
 
 function switchPractice(chain) {
@@ -646,17 +815,6 @@ function switchPractice(chain) {
   document.querySelector(`[onclick="switchPractice('${chain}')"]`).classList.add('active');
   document.querySelectorAll('.practice-group').forEach(g => g.classList.add('hidden'));
   document.getElementById('p-' + chain).classList.remove('hidden');
-}
-
-function copyQ(el) {
-  const text = el.querySelector('.pq-text').textContent;
-  navigator.clipboard.writeText(text).then(() => {
-    const t = document.createElement('div');
-    t.className = 'toast';
-    t.textContent = 'Question copied - now structure your 7+ answer';
-    document.body.appendChild(t);
-    setTimeout(() => t.remove(), 2000);
-  });
 }
 
 renderPractice();
