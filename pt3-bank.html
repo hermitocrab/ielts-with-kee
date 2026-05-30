@@ -160,6 +160,53 @@ footer a { color: var(--purple); font-weight: 600; }
 .empty-state { text-align: center; padding: 60px 20px; color: var(--gray-600); display: none; }
 .empty-state .empty-icon { font-size: 48px; margin-bottom: 12px; }
 .empty-state h3 { font-size: 18px; font-weight: 600; margin-bottom: 6px; color: var(--gray-800); }
+
+/* Topic Phrase Box */
+.topic-phrase-box {
+  background: linear-gradient(135deg, #faf5ff 0%, #fdf2f8 100%);
+  border: 1px solid #e9d5ff; border-radius: var(--radius-lg);
+  padding: 16px 20px; margin-bottom: 20px; cursor: default;
+}
+.topic-phrase-box .tpb-toggle {
+  display: flex; align-items: center; gap: 8px; cursor: pointer;
+  font-size: 13px; font-weight: 700; color: var(--purple-dark);
+  user-select: none;
+}
+.topic-phrase-box .tpb-toggle .arrow { transition: transform 0.2s; font-size: 11px; }
+.topic-phrase-box.open .tpb-toggle .arrow { transform: rotate(90deg); }
+.topic-phrase-box .tpb-content { display: none; margin-top: 12px; }
+.topic-phrase-box.open .tpb-content { display: block; }
+.tpb-level { margin-bottom: 10px; }
+.tpb-level .tpb-label {
+  display: inline-block; font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; padding: 3px 10px; border-radius: 999px; margin-bottom: 6px;
+}
+.tpb-label.b2 { background: #dbeafe; color: #1e40af; }
+.tpb-label.c1 { background: #f3e8ff; color: var(--purple-dark); }
+.tpb-chunks { display: flex; flex-wrap: wrap; gap: 6px; }
+.tpb-chunk {
+  background: var(--white); border: 1px solid var(--gray-200); border-radius: 8px;
+  padding: 5px 11px; font-size: 12px; font-weight: 500; color: var(--gray-800);
+  transition: background 0.15s;
+}
+.tpb-chunk:hover { background: #f3e8ff; border-color: var(--purple-light); }
+
+/* Type Structure Banner */
+.type-structure-banner {
+  background: var(--white); border: 2px solid var(--purple-light); border-radius: var(--radius-lg);
+  padding: 18px 22px; margin-bottom: 28px; display: none;
+}
+.type-structure-banner.visible { display: block; }
+.type-structure-banner h3 {
+  font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 700;
+  color: var(--purple-dark); margin-bottom: 4px;
+}
+.type-structure-banner .ts-desc { font-size: 12px; color: var(--gray-600); margin-bottom: 10px; }
+.type-structure-banner .ts-pattern {
+  font-size: 13px; color: var(--gray-800); line-height: 1.6;
+  background: var(--gray-50); padding: 10px 14px; border-radius: var(--radius);
+  font-family: 'Space Grotesk', sans-serif;
+}
 </style>
 </head>
 <body>
@@ -204,6 +251,13 @@ footer a { color: var(--purple); font-weight: 600; }
   <button onclick="filterCards('cause')" data-filter="cause">🔗 Cause & Effect</button>
   <button onclick="filterCards('change')" data-filter="change">🔄 Change</button>
   <button onclick="filterCards('evaluate')" data-filter="evaluate">⚡ Evaluate</button>
+</div>
+
+<!-- Type Structure Banner -->
+<div class="type-structure-banner" id="typeBanner">
+  <h3 id="tsTitle"></h3>
+  <p class="ts-desc" id="tsDesc"></p>
+  <div class="ts-pattern" id="tsPattern"></div>
 </div>
 
 <main class="main" id="qBank"></main>
@@ -365,6 +419,119 @@ const questions = [
   { topic:"Economic Development", icon:"📊", type:"compare", q:"How does entrepreneurship culture differ between developed and developing countries?" }
 ];
 
+// ═══════════════ Topic-Specific Useful Phrases (B2 + C1) ═══════════════
+
+const topicPhrases = {
+  "Technology & Society": {
+    b2: ["face-to-face interaction", "screen time", "digital native", "social media platform", "online community", "remote working", "information overload", "stay connected"],
+    c1: ["ubiquitous connectivity", "algorithm-driven content", "digital divide", "erosion of privacy", "virtual socialisation", "tech-savvy generation", "human interaction is being supplanted by"]
+  },
+  "Environmental Responsibility": {
+    b2: ["carbon footprint", "renewable energy", "climate change", "recycling scheme", "environmentally friendly", "single-use plastic", "green space", "fossil fuels"],
+    c1: ["sustainable practices", "environmental degradation", "ecological footprint", "biodiversity loss", "circular economy", "carbon-neutral target", "systemic change rather than individual action"]
+  },
+  "Education Systems": {
+    b2: ["critical thinking", "hands-on experience", "standardised test", "academic performance", "practical skills", "higher education", "online learning platform", "classroom environment"],
+    c1: ["rote memorisation", "holistic education", "individualised learning path", "pedagogical approach", "knowledge retention vs application", "lifelong learning mindset", "bridge the gap between theory and practice"]
+  },
+  "Health & Wellbeing": {
+    b2: ["mental health", "sedentary lifestyle", "balanced diet", "work-life balance", "healthcare system", "preventive care", "regular exercise", "stress management"],
+    c1: ["psychological well-being", "chronic condition", "preventive medicine", "burnout epidemic", "longevity research", "public health intervention", "the correlation between lifestyle and disease"]
+  },
+  "Culture & Traditions": {
+    b2: ["cultural identity", "local custom", "traditional value", "cultural heritage", "globalised world", "pass down from generation", "sense of belonging", "multicultural society"],
+    c1: ["cultural assimilation", "cultural homogenisation", "intangible heritage", "intergenerational transmission", "cultural erosion in the face of modernity", "preserve one's roots while embracing change"]
+  },
+  "Media & Advertising": {
+    b2: ["social media influencer", "targeted advertising", "fake news", "consumer behaviour", "advertising campaign", "news source", "go viral", "public opinion"],
+    c1: ["algorithmic curation", "echo chamber effect", "sensationalist media", "subliminal persuasion", "media literacy deficit", "the line between information and entertainment is increasingly blurred"]
+  },
+  "Travel & Tourism": {
+    b2: ["broaden one's horizons", "cultural exchange", "tourist destination", "local economy", "peak season", "off the beaten track", "package holiday", "travel light"],
+    c1: ["mass tourism", "sustainable tourism", "cultural immersion vs superficial consumption", "the commodification of local culture", "overtourism and its repercussions", "transformative travel experience"]
+  },
+  "Work & Careers": {
+    b2: ["job satisfaction", "career path", "work-life balance", "job security", "soft skills", "promotion opportunity", "team player", "competitive salary"],
+    c1: ["job displacement due to automation", "gig economy", "career trajectory", "transferable skill set", "professional fulfilment", "the erosion of the traditional career ladder", "portfolio career"]
+  },
+  "Family & Social Life": {
+    b2: ["extended family", "quality time", "support system", "family gathering", "generation gap", "single-parent household", "social circle", "close-knit community"],
+    c1: ["filial piety", "nuclear family dynamic", "intergenerational solidarity", "the fragmentation of traditional family structures", "chosen family", "social atomisation", "ageing population and eldercare burden"]
+  },
+  "Economic Development": {
+    b2: ["economic growth", "cost of living", "wealth gap", "developing country", "job market", "small business", "foreign investment", "standard of living"],
+    c1: ["economic disparity", "GDP vs well-being metrics", "trickle-down economics", "financial inclusion", "the widening chasm between rich and poor", "sustainable development over short-term growth"]
+  }
+};
+
+// ═══════════════ Type-Specific Answering Structures ═══════════════
+
+const typeStructures = {
+  opinion: {
+    title: "💭 Opinion Questions",
+    desc: "State your view clearly, justify it, then add a qualification or counterpoint.",
+    pattern: "[Direct answer] I firmly believe that... / In my opinion... | [Justify] The reason I say this is... / This is largely because... | [Qualify] Having said that... / Although I should add that..."
+  },
+  compare: {
+    title: "⚖️ Compare Questions",
+    desc: "Identify the key dimension of comparison, contrast clearly, then draw a conclusion.",
+    pattern: "[Side A] On one hand... / One key difference is... | [Side B] On the other hand... / Whereas / In contrast... | [Synthesis] Ultimately... / What this tells us is... / So the key distinction is..."
+  },
+  hypothetical: {
+    title: "🔮 Hypothetical Questions",
+    desc: "Acknowledge uncertainty, imagine the scenario, then explore consequences.",
+    pattern: "[Acknowledge] That is a fascinating hypothetical... / It is hard to say for certain, but... | [Imagine] If we imagine a world where... / Hypothetically speaking... | [Explore] One likely outcome is... / This would probably lead to... / The ripple effect could be..."
+  },
+  problem: {
+    title: "🛠️ Problem-Solution Questions",
+    desc: "Name the problem, analyse its causes, then propose and evaluate solutions.",
+    pattern: "[Problem] The main issue is... / One pressing challenge is... | [Cause] This stems from... / This can be attributed to... | [Solution] One way to tackle this is... / A more effective approach might be... / But this is easier said than done because..."
+  },
+  predict: {
+    title: "📈 Predict / Future Questions",
+    desc: "Talk about current trends, project forward with hedging language, consider variables.",
+    pattern: "[Current trend] Nowadays we are seeing... / The trajectory suggests... | [Projection] It is highly likely that... / I would not be surprised if... / Looking ahead... | [Variable] That said, a lot depends on... / The outcome could be very different if..."
+  },
+  impact: {
+    title: "💥 Impact / Effect Questions",
+    desc: "Identify the primary impact, explain the mechanism, then discuss scope or secondary effects.",
+    pattern: "[Primary impact] The most significant effect has been... / This has fundamentally changed... | [Mechanism] This happens because... / The way this works is... | [Ripple] On top of that... / This in turn has led to... / The ripple effect extends to..."
+  },
+  advantage: {
+    title: "👍 Pros & Cons Questions",
+    desc: "Present both sides fairly, use balanced language, then weigh them up.",
+    pattern: "[Pros] On the plus side... / The main advantage is... / One strong argument for this is... | [Cons] On the flip side... / The downside, however, is... / A major drawback is... | [Weigh] When you weigh it all up... / Ultimately the benefits outweigh the drawbacks if..."
+  },
+  cause: {
+    title: "🔗 Cause & Effect Questions",
+    desc: "Identify the root cause(s), explain the causal chain, avoid oversimplification.",
+    pattern: "[Root cause] The primary driver behind this is... / This largely boils down to... | [Causal chain] This leads to... / Which in turn triggers... / Consequently... | [Complexity] Of course, it is rarely just one factor... / There are also contributing elements such as..."
+  },
+  change: {
+    title: "🔄 Change Questions",
+    desc: "Contrast past with present, identify the turning point, then reflect on significance.",
+    pattern: "[Past] It used to be that... / Going back a generation... / Historically... | [Turning point] The shift really began when... / The catalyst for this change was... | [Present + reflect] Nowadays... / This change is significant because... / The implications of this shift are..."
+  },
+  evaluate: {
+    title: "⚡ Evaluate Questions",
+    desc: "Present criteria for evaluation, assess against those criteria, deliver a balanced verdict.",
+    pattern: "[Criteria] To evaluate this properly, you have to consider... / The key question is whether... | [Assess] On balance... / Looking at the evidence... / In terms of effectiveness... | [Verdict] All things considered... / My assessment would be... / The reality is more nuanced than a simple yes or no."
+  }
+};
+
+function showTypeBanner(type) {
+  const banner = document.getElementById('typeBanner');
+  if (type === 'all' || !typeStructures[type]) {
+    banner.classList.remove('visible');
+    return;
+  }
+  const ts = typeStructures[type];
+  document.getElementById('tsTitle').textContent = ts.title;
+  document.getElementById('tsDesc').textContent = ts.desc;
+  document.getElementById('tsPattern').textContent = ts.pattern;
+  banner.classList.add('visible');
+}
+
 // ═══════════════ Render ═══════════════
 
 function renderBank(items) {
@@ -375,12 +542,38 @@ function renderBank(items) {
   topics.forEach(topic => {
     const tItems = items.filter(i => i.topic === topic);
     const icon = tItems[0].icon;
+    const phrases = topicPhrases[topic];
+    let phraseBox = '';
+    if (phrases) {
+      phraseBox = `
+      <div class="topic-phrase-box" onclick="event.stopPropagation(); this.classList.toggle('open')">
+        <div class="tpb-toggle">
+          <span class="arrow">▶</span>
+          <span>Useful Phrases & Chunks</span>
+        </div>
+        <div class="tpb-content">
+          <div class="tpb-level">
+            <span class="tpb-label b2">B2 Level</span>
+            <div class="tpb-chunks">
+              ${phrases.b2.map(p => `<span class="tpb-chunk">${p}</span>`).join('')}
+            </div>
+          </div>
+          <div class="tpb-level">
+            <span class="tpb-label c1">C1 Level</span>
+            <div class="tpb-chunks">
+              ${phrases.c1.map(p => `<span class="tpb-chunk">${p}</span>`).join('')}
+            </div>
+          </div>
+        </div>
+      </div>`;
+    }
     html += `<section class="topic-section" data-topic="${topic}">
       <div class="topic-header">
         <span class="topic-icon">${icon}</span>
         <h2>${topic}</h2>
         <span class="topic-count">${tItems.length} questions</span>
       </div>
+      ${phraseBox}
       <div class="q-grid">
         ${tItems.map(item => `
           <div class="q-card" data-type="${item.type}" data-topic="${item.topic}" onclick="copyQuestion(this)" title="Click to copy">
@@ -436,6 +629,9 @@ function filterCards(type) {
   // Update active button
   document.querySelectorAll('.filter-bar button').forEach(b => b.classList.remove('active'));
   document.querySelector(`[data-filter="${type}"]`).classList.add('active');
+  
+  // Show type structure banner
+  showTypeBanner(type);
   
   let visibleCount = 0;
   cards.forEach(c => {
