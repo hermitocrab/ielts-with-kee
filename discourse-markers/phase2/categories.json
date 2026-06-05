@@ -1,0 +1,621 @@
+[
+  {
+    "id": "cat-001",
+    "name": {
+      "en": "Addition & Reinforcement",
+      "zh": "添加与强调"
+    },
+    "slug": "addition-reinforcement",
+    "macroGroup": "Logical & Cohesive Relations",
+    "cefrMin": "A1",
+    "cefrMax": "C2",
+    "color": "#4ECDC4",
+    "description": {
+      "en": "Logical connectors for structuring arguments and ideas clearly.",
+      "zh": "用于构建清晰论证和想法的逻辑连接词。"
+    },
+    "sortOrder": 1,
+    "subfunctionIds": [
+      "sf-9bc7a9a14664",
+      "sf-5804a22f4f0d",
+      "sf-c1a7b9566381"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-002",
+    "name": {
+      "en": "Contrast & Concession",
+      "zh": "对比与让步"
+    },
+    "slug": "contrast-concession",
+    "macroGroup": "Logical & Cohesive Relations",
+    "cefrMin": "A2",
+    "cefrMax": "C2",
+    "color": "#FFE66D",
+    "description": {
+      "en": "Logical connectors for structuring arguments and ideas clearly.",
+      "zh": "用于构建清晰论证和想法的逻辑连接词。"
+    },
+    "sortOrder": 2,
+    "subfunctionIds": [
+      "sf-34c37a0982a4",
+      "sf-ead1360aaf00",
+      "sf-aee91e937f1b"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-003",
+    "name": {
+      "en": "Cause & Effect",
+      "zh": "因果与影响"
+    },
+    "slug": "cause-effect",
+    "macroGroup": "Logical & Cohesive Relations",
+    "cefrMin": "A2",
+    "cefrMax": "C2",
+    "color": "#FF8A5C",
+    "description": {
+      "en": "Logical connectors for structuring arguments and ideas clearly.",
+      "zh": "用于构建清晰论证和想法的逻辑连接词。"
+    },
+    "sortOrder": 3,
+    "subfunctionIds": [
+      "sf-e40868cd69c3",
+      "sf-ed9476236c64",
+      "sf-dde1be637095"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-006",
+    "name": {
+      "en": "Sequence & Ordering",
+      "zh": "顺序与排列"
+    },
+    "slug": "sequence-ordering",
+    "macroGroup": "Logical & Cohesive Relations",
+    "cefrMin": "A1",
+    "cefrMax": "C2",
+    "color": "#74B9FF",
+    "description": {
+      "en": "Logical connectors for structuring arguments and ideas clearly.",
+      "zh": "用于构建清晰论证和想法的逻辑连接词。"
+    },
+    "sortOrder": 6,
+    "subfunctionIds": [
+      "sf-c5d5ac6009a0",
+      "sf-8a72b3728d3e",
+      "sf-bfe9f740a908"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-007",
+    "name": {
+      "en": "Comparison & Similarity",
+      "zh": "比较与相似"
+    },
+    "slug": "comparison-similarity",
+    "macroGroup": "Logical & Cohesive Relations",
+    "cefrMin": "A2",
+    "cefrMax": "C2",
+    "color": "#55EFC4",
+    "description": {
+      "en": "Logical connectors for structuring arguments and ideas clearly.",
+      "zh": "用于构建清晰论证和想法的逻辑连接词。"
+    },
+    "sortOrder": 7,
+    "subfunctionIds": [
+      "sf-f3f70729e7c7",
+      "sf-c1d272779a85",
+      "sf-3041c851311f"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-008",
+    "name": {
+      "en": "Exemplification",
+      "zh": "举例说明"
+    },
+    "slug": "exemplification",
+    "macroGroup": "Logical & Cohesive Relations",
+    "cefrMin": "A2",
+    "cefrMax": "C2",
+    "color": "#FDCB6E",
+    "description": {
+      "en": "Logical connectors for structuring arguments and ideas clearly.",
+      "zh": "用于构建清晰论证和想法的逻辑连接词。"
+    },
+    "sortOrder": 8,
+    "subfunctionIds": [
+      "sf-ddcaabff7173",
+      "sf-3dad2f38455c"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-009",
+    "name": {
+      "en": "Generalization & Qualification",
+      "zh": "概括与限定"
+    },
+    "slug": "generalization-qualification",
+    "macroGroup": "Logical & Cohesive Relations",
+    "cefrMin": "B1",
+    "cefrMax": "C2",
+    "color": "#DFE6E9",
+    "description": {
+      "en": "Logical connectors for structuring arguments and ideas clearly.",
+      "zh": "用于构建清晰论证和想法的逻辑连接词。"
+    },
+    "sortOrder": 9,
+    "subfunctionIds": [
+      "sf-7195f820e7ff",
+      "sf-bc569ff47618"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-010",
+    "name": {
+      "en": "Emphasis & Highlighting",
+      "zh": "强调与突出"
+    },
+    "slug": "emphasis-highlighting",
+    "macroGroup": "Logical & Cohesive Relations",
+    "cefrMin": "A2",
+    "cefrMax": "C2",
+    "color": "#E17055",
+    "description": {
+      "en": "Logical connectors for structuring arguments and ideas clearly.",
+      "zh": "用于构建清晰论证和想法的逻辑连接词。"
+    },
+    "sortOrder": 10,
+    "subfunctionIds": [
+      "sf-e9165c4c1da4",
+      "sf-4dd84fade28c",
+      "sf-e566ff3e780d"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-011",
+    "name": {
+      "en": "Summarizing & Concluding",
+      "zh": "总结与结论"
+    },
+    "slug": "summarizing-concluding",
+    "macroGroup": "Logical & Cohesive Relations",
+    "cefrMin": "A2",
+    "cefrMax": "C2",
+    "color": "#00B894",
+    "description": {
+      "en": "Logical connectors for structuring arguments and ideas clearly.",
+      "zh": "用于构建清晰论证和想法的逻辑连接词。"
+    },
+    "sortOrder": 11,
+    "subfunctionIds": [
+      "sf-ae2b61a26f1c",
+      "sf-b096822f8476"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-013",
+    "name": {
+      "en": "Stalling & Fillers",
+      "zh": "停顿与填充词"
+    },
+    "slug": "stalling-fillers",
+    "macroGroup": "Conversation & Interaction Management",
+    "cefrMin": "A1",
+    "cefrMax": "C2",
+    "color": "#FF6B6B",
+    "description": {
+      "en": "Expressions for managing the flow of natural conversation.",
+      "zh": "用于管理自然对话流程的表达。"
+    },
+    "sortOrder": 1,
+    "subfunctionIds": [
+      "sf-30b45eb4c78c",
+      "sf-5545341ea92a",
+      "sf-d883abf6c7f7"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-014",
+    "name": {
+      "en": "Topic Introduction",
+      "zh": "话题引入"
+    },
+    "slug": "topic-introduction",
+    "macroGroup": "Conversation & Interaction Management",
+    "cefrMin": "A2",
+    "cefrMax": "C2",
+    "color": "#6C5CE7",
+    "description": {
+      "en": "Expressions for managing the flow of natural conversation.",
+      "zh": "用于管理自然对话流程的表达。"
+    },
+    "sortOrder": 2,
+    "subfunctionIds": [
+      "sf-0d12f03759a0"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-015",
+    "name": {
+      "en": "Topic Shift",
+      "zh": "话题转换"
+    },
+    "slug": "topic-shift",
+    "macroGroup": "Conversation & Interaction Management",
+    "cefrMin": "B1",
+    "cefrMax": "C2",
+    "color": "#A29BFE",
+    "description": {
+      "en": "Expressions for managing the flow of natural conversation.",
+      "zh": "用于管理自然对话流程的表达。"
+    },
+    "sortOrder": 3,
+    "subfunctionIds": [
+      "sf-4a365708eada"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-016",
+    "name": {
+      "en": "Topic Return",
+      "zh": "话题回归"
+    },
+    "slug": "topic-return",
+    "macroGroup": "Conversation & Interaction Management",
+    "cefrMin": "B1",
+    "cefrMax": "C2",
+    "color": "#B8B5FF",
+    "description": {
+      "en": "Expressions for managing the flow of natural conversation.",
+      "zh": "用于管理自然对话流程的表达。"
+    },
+    "sortOrder": 4,
+    "subfunctionIds": [
+      "sf-8a3107cfb014"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-017",
+    "name": {
+      "en": "Turn-Taking",
+      "zh": "话轮转换"
+    },
+    "slug": "turn-taking",
+    "macroGroup": "Conversation & Interaction Management",
+    "cefrMin": "A2",
+    "cefrMax": "C2",
+    "color": "#FAB1A0",
+    "description": {
+      "en": "Expressions for managing the flow of natural conversation.",
+      "zh": "用于管理自然对话流程的表达。"
+    },
+    "sortOrder": 5,
+    "subfunctionIds": [
+      "sf-f1a81ca08f6f",
+      "sf-950623bcd7bd"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-020",
+    "name": {
+      "en": "Clarification & Rephrasing",
+      "zh": "澄清与重新表述"
+    },
+    "slug": "clarification-rephrasing",
+    "macroGroup": "Conversation & Interaction Management",
+    "cefrMin": "B1",
+    "cefrMax": "C2",
+    "color": "#00CEC9",
+    "description": {
+      "en": "Expressions for managing the flow of natural conversation.",
+      "zh": "用于管理自然对话流程的表达。"
+    },
+    "sortOrder": 8,
+    "subfunctionIds": [
+      "sf-e340292167ed",
+      "sf-5f9949caf8dd"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-022",
+    "name": {
+      "en": "Floor-Holding",
+      "zh": "保持话轮"
+    },
+    "slug": "floor-holding",
+    "macroGroup": "Conversation & Interaction Management",
+    "cefrMin": "B1",
+    "cefrMax": "C2",
+    "color": "#6366F1",
+    "description": {
+      "en": "Expressions for managing the flow of natural conversation.",
+      "zh": "用于管理自然对话流程的表达。"
+    },
+    "sortOrder": 10,
+    "subfunctionIds": [
+      "sf-2fa8b3cd4169"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-063",
+    "name": {
+      "en": "Shared Knowledge & Referencing",
+      "zh": "共享知识引用"
+    },
+    "slug": "shared-knowledge-referencing",
+    "macroGroup": "Conversation & Interaction Management",
+    "cefrMin": "B1",
+    "cefrMax": "C2",
+    "color": "#E17055",
+    "description": {
+      "en": "Expressions that reference assumed shared knowledge between speaker and listener.",
+      "zh": "引用说话者和听者之间假设的共享知识的表达。"
+    },
+    "sortOrder": 11,
+    "subfunctionIds": [
+      "sf-18407a062da5",
+      "sf-c55a9c9ab2f1"
+    ],
+    "tags": [
+      "shared-knowledge",
+      "common-ground",
+      "reference"
+    ]
+  },
+  {
+    "id": "cat-023",
+    "name": {
+      "en": "Certainty & Confidence",
+      "zh": "确定与自信"
+    },
+    "slug": "certainty-confidence",
+    "macroGroup": "Stance, Attitude & Evaluation",
+    "cefrMin": "A2",
+    "cefrMax": "C2",
+    "color": "#00B894",
+    "description": {
+      "en": "Markers that convey the speaker's attitude, certainty, and evaluation.",
+      "zh": "传达说话者态度、确定性和评价的标记词。"
+    },
+    "sortOrder": 1,
+    "subfunctionIds": [
+      "sf-98ddd28beafc",
+      "sf-10bfccaf9699",
+      "sf-56f0cf84324e"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-024",
+    "name": {
+      "en": "Uncertainty & Hedging",
+      "zh": "不确定与模糊表达"
+    },
+    "slug": "uncertainty-hedging",
+    "macroGroup": "Stance, Attitude & Evaluation",
+    "cefrMin": "B1",
+    "cefrMax": "C2",
+    "color": "#FDCB6E",
+    "description": {
+      "en": "Markers that convey the speaker's attitude, certainty, and evaluation.",
+      "zh": "传达说话者态度、确定性和评价的标记词。"
+    },
+    "sortOrder": 2,
+    "subfunctionIds": [
+      "sf-1e5fcbad8d7b",
+      "sf-7889aec6be39"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-025",
+    "name": {
+      "en": "Doubt & Skepticism",
+      "zh": "怀疑与质疑"
+    },
+    "slug": "doubt-skepticism",
+    "macroGroup": "Stance, Attitude & Evaluation",
+    "cefrMin": "B2",
+    "cefrMax": "C2",
+    "color": "#E17055",
+    "description": {
+      "en": "Markers that convey the speaker's attitude, certainty, and evaluation.",
+      "zh": "传达说话者态度、确定性和评价的标记词。"
+    },
+    "sortOrder": 3,
+    "subfunctionIds": [
+      "sf-31287bad9caf"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-026",
+    "name": {
+      "en": "Agreement & Confirmation",
+      "zh": "同意与确认"
+    },
+    "slug": "agreement-confirmation",
+    "macroGroup": "Stance, Attitude & Evaluation",
+    "cefrMin": "A1",
+    "cefrMax": "C2",
+    "color": "#55EFC4",
+    "description": {
+      "en": "Markers that convey the speaker's attitude, certainty, and evaluation.",
+      "zh": "传达说话者态度、确定性和评价的标记词。"
+    },
+    "sortOrder": 4,
+    "subfunctionIds": [
+      "sf-e3e1b5b2ce59",
+      "sf-83e56cd01c05"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-027",
+    "name": {
+      "en": "Disagreement & Opposition",
+      "zh": "反对与对立"
+    },
+    "slug": "disagreement-opposition",
+    "macroGroup": "Stance, Attitude & Evaluation",
+    "cefrMin": "A2",
+    "cefrMax": "C2",
+    "color": "#FF6B6B",
+    "description": {
+      "en": "Markers that convey the speaker's attitude, certainty, and evaluation.",
+      "zh": "传达说话者态度、确定性和评价的标记词。"
+    },
+    "sortOrder": 5,
+    "subfunctionIds": [
+      "sf-7404c6336dbd"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-028",
+    "name": {
+      "en": "Surprise & Incredulity",
+      "zh": "惊讶与难以置信"
+    },
+    "slug": "surprise-incredulity",
+    "macroGroup": "Stance, Attitude & Evaluation",
+    "cefrMin": "A2",
+    "cefrMax": "C2",
+    "color": "#FDCB6E",
+    "description": {
+      "en": "Markers that convey the speaker's attitude, certainty, and evaluation.",
+      "zh": "传达说话者态度、确定性和评价的标记词。"
+    },
+    "sortOrder": 6,
+    "subfunctionIds": [
+      "sf-ce988f3d8bfc"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-032",
+    "name": {
+      "en": "Emotional Reaction",
+      "zh": "情绪反应"
+    },
+    "slug": "emotional-reaction",
+    "macroGroup": "Stance, Attitude & Evaluation",
+    "cefrMin": "A1",
+    "cefrMax": "C2",
+    "color": "#E84393",
+    "description": {
+      "en": "Markers that convey the speaker's attitude, certainty, and evaluation.",
+      "zh": "传达说话者态度、确定性和评价的标记词。"
+    },
+    "sortOrder": 10,
+    "subfunctionIds": [
+      "sf-7aff98c1cb5f",
+      "sf-b1c3bd5d6930"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-056",
+    "name": {
+      "en": "Reformulation",
+      "zh": "重新表述"
+    },
+    "slug": "reformulation",
+    "macroGroup": "Metacognitive & Information Structuring",
+    "cefrMin": "B1",
+    "cefrMax": "C2",
+    "color": "#00B894",
+    "description": {
+      "en": "Metacognitive markers for organizing and commenting on information flow.",
+      "zh": "用于组织和评论信息流的元认知标记词。"
+    },
+    "sortOrder": 2,
+    "subfunctionIds": [
+      "sf-e5a55f77261b",
+      "sf-4a642d252ffc"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-057",
+    "name": {
+      "en": "Self-Correction",
+      "zh": "自我纠正"
+    },
+    "slug": "self-correction",
+    "macroGroup": "Metacognitive & Information Structuring",
+    "cefrMin": "A2",
+    "cefrMax": "C2",
+    "color": "#E17055",
+    "description": {
+      "en": "Metacognitive markers for organizing and commenting on information flow.",
+      "zh": "用于组织和评论信息流的元认知标记词。"
+    },
+    "sortOrder": 3,
+    "subfunctionIds": [
+      "sf-9988ea1e89d0"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-058",
+    "name": {
+      "en": "Approximation & Vagueness",
+      "zh": "模糊与含糊"
+    },
+    "slug": "approximation-vagueness",
+    "macroGroup": "Metacognitive & Information Structuring",
+    "cefrMin": "A2",
+    "cefrMax": "C2",
+    "color": "#FDCB6E",
+    "description": {
+      "en": "Metacognitive markers for organizing and commenting on information flow.",
+      "zh": "用于组织和评论信息流的元认知标记词。"
+    },
+    "sortOrder": 4,
+    "subfunctionIds": [
+      "sf-9fee2cad4ae8"
+    ],
+    "tags": []
+  },
+  {
+    "id": "cat-049",
+    "name": {
+      "en": "Softening & Downtoners",
+      "zh": "缓和与弱化"
+    },
+    "slug": "softening-downtoners",
+    "macroGroup": "Pragmatic & Politeness Functions",
+    "cefrMin": "B1",
+    "cefrMax": "C2",
+    "color": "#81ECEC",
+    "description": {
+      "en": "Socially-oriented markers for polite and effective communication.",
+      "zh": "用于礼貌有效沟通的社交导向标记词。"
+    },
+    "sortOrder": 1,
+    "subfunctionIds": [
+      "sf-d631a3701952",
+      "sf-8f16e14d4d7d"
+    ],
+    "tags": []
+  }
+]
