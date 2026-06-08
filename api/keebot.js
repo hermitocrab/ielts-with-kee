@@ -20,7 +20,7 @@ export default async function handler(req, res) {
   if (supabaseUrl && supabaseKey) {
     fetch(supabaseUrl + "/rest/v1/keebot_messages", {
       method: "POST",
-      headers: { apikey: supabaseKey, Authorization: "***" + supabaseKey, "Content-Type": "application/json", Prefer: "return=minimal" },
+      headers: { apikey: supabaseKey, Authorization: "Bearer " + supabaseKey, "Content-Type": "application/json", Prefer: "return=minimal" },
       body: JSON.stringify({ session_id: (req.headers["x-session-id"] || "anon"), page: page, role: "user", content: msg, status: "done" })
     }).catch(function(){});
   }
@@ -54,7 +54,7 @@ export default async function handler(req, res) {
     var deepseekKey = process.env["DEEPSEEK_API_KEY"];
     var resp = await fetch("https://api.deepseek.com/chat/completions", {
       method: "POST",
-      headers: { "Content-Type": "application/json", Authorization: "***" + deepseekKey },
+      headers: { "Content-Type": "application/json", Authorization: "Bearer " + deepseekKey },
       body: JSON.stringify({
         model: "deepseek-chat",
         messages: [{ role: "system", content: SYSTEM_PROMPT }].concat(history.slice(-6)).concat([{ role: "user", content: msg }]),
@@ -73,7 +73,7 @@ export default async function handler(req, res) {
     if (supabaseUrl && supabaseKey) {
       fetch(supabaseUrl + "/rest/v1/keebot_messages", {
         method: "POST",
-        headers: { apikey: supabaseKey, Authorization: "***" + supabaseKey, "Content-Type": "application/json", Prefer: "return=minimal" },
+        headers: { apikey: supabaseKey, Authorization: "Bearer " + supabaseKey, "Content-Type": "application/json", Prefer: "return=minimal" },
         body: JSON.stringify({ session_id: (req.headers["x-session-id"] || "anon"), page: page, role: "assistant", content: reply, status: "done" })
       }).catch(function(){});
     }
