@@ -64,7 +64,7 @@ export default async function handler(req, res) {
     });
 
     var data = await resp.json();
-    var reply = "Sorry, I had trouble. Try again?";
+    var reply = "🦕 DynaSaurus is recharging its brain cells. Try miniSaurus while you wait: dynasaurus.rkrk.io/mini";
     if (resp.ok && data.choices && data.choices[0] && data.choices[0].message) {
       reply = data.choices[0].message.content;
     }
@@ -80,6 +80,6 @@ export default async function handler(req, res) {
 
     return res.status(200).json({ reply: reply });
   } catch(err) {
-    return res.status(200).json({ reply: "KeeBot nap. Try again!" });
+    return res.status(200).json({ reply: "🦕 DynaSaurus is taking a nap. The mini version is wide awake: dynasaurus.rkrk.io/mini" });
   }
 }

@@ -110,7 +110,7 @@
       body: JSON.stringify({ message: text, history: history.slice(0, -1), lang: userLang })
     }).then(function(r) { return r.json(); }).then(function(data) {
       hideTyping();
-      var reply = data.reply || 'Hmm, I had some trouble. Try again?';
+      var reply = data.reply || '🦕 DynaSaurus is recharging. Try miniSaurus in the meantime: dynasaurus.rkrk.io/mini';
       addMessage('assistant', reply);
       history.push({ role: 'assistant', content: reply });
       saveHistory();
@@ -120,7 +120,7 @@
       sendBtn.disabled = false;
     }).catch(function() {
       hideTyping();
-      addMessage('assistant', '⚠️ Connection hiccup. Try again?');
+      addMessage('assistant', '🦕 KeeBot tripped over a cable. While we untangle it, try the dictionary at dynasaurus.rkrk.io/mini');
       input.disabled = false;
       sendBtn.disabled = false;
     });
