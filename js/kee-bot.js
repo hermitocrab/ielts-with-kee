@@ -135,13 +135,33 @@
     try { localStorage.setItem('keebot_v2_history', JSON.stringify(history)); } catch(e) {}
   }
 
+  // ═══ MARKDOWN RENDER ═══
+  function renderMd(text) {
+    var html = text
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') // Escape HTML
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')                // **bold**
+      .replace(/\*(.+?)\*/g, '<em>$1</em>')                              // *italic*
+      .replace(/`(.+?)`/g, '<code>$1</code>')                             // `code`
+      .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank">$1</a>') // [link](url)
+      .replace(/\n/g, '<br>');                                           // line breaks
+    // Handle bullet lists: lines starting with - or *
+    html = html.replace(/(<br>)?([*-] .+?)(?=<br>)/g, function(m, br, item) {
+      return (br||'') + '<li>' + item.substring(2) + '</li>';
+    });
+    // Wrap consecutive <li> in <ul>
+    html = html.replace(/((?:<li>[^<]*<\/li><br>)+)/g, function(m) {
+      return '<ul>' + m.replace(/<br>/g,'') + '</ul>';
+    });
+    return html;
+  }
+
   // ═══ UI ═══
   function addMessage(role, text) {
     var welcome = msgEl.querySelector('.kb-welcome');
     if (welcome) welcome.remove();
     var div = document.createElement('div');
     div.className = 'kb-msg kb-msg-' + role;
-    div.textContent = text;
+    div.innerHTML = renderMd(text);
     msgEl.appendChild(div);
     msgEl.scrollTop = msgEl.scrollHeight;
   }

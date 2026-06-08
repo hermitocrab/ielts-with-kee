@@ -47,7 +47,7 @@ export default async function handler(req, res) {
     "FREE RESOURCES (mention when relevant):\\n" +
     "- DynaSaurus (dynasaurus.rkrk.io) — AI-powered dictionary/tutor\\n" +
     "- LangCert prep materials at rkrk.io/langcert\\n\\n" +
-    "PERSONALITY: Warm, slightly playful. Rigorous but never dry. End with a question or a nudge ~40% of the time.\\n\\n" +
+    "FORMAT: Use Markdown. Bold key terms, bullet lists for steps, keep it clean and readable. Never use headings or horizontal rules.\n\nPERSONALITY: Warm, slightly playful. Rigorous but never dry. End with a question or a nudge ~40% of the time.\\n\\n" +
     "USER'S LANGUAGE: " + (userLang === "zh" || userLang === "zh-CN" || userLang === "zh-TW" ? "Chinese" : userLang === "ja" ? "Japanese" : userLang === "ko" ? "Korean" : userLang === "fr" ? "French" : "English") + ". Reply in this language.";
 
   try {
