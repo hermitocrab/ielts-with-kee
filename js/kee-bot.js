@@ -1,18 +1,24 @@
-/* ═══ KeeBot — AI Chat Widget for ielts.rkrk.io ═══ */
+/* ═══ KeeBot v2 — Lightweight Chat Widget for ielts.rkrk.io ═══ */
 (function(){
   'use strict';
 
-  var SUPABASE_URL = 'https://areedjmpngwzocqpoaur.supabase.co';
-  var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFyZWVkam1wbmd3em9jcXBvYXVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY5ODAwMTgsImV4cCI6MjA5MjU1NjAxOH0.CSHpruDqBm4mbKseySbbOlZk2-uBG2Oxe4DvqwTVFJ8';
-
-  var PAGE = location.pathname.replace(/^\//,'').replace(/\.html$/,'') || 'home';
-  var SESSION = localStorage.getItem('keebot_session') || 'kb_' + Date.now() + '_' + Math.random().toString(36).slice(2,8);
-  localStorage.setItem('keebot_session', SESSION);
-
+  var API = '/api/keebot';
   var open = false;
-  var messages = [];
-  var pollingTimer = null;
-  var lastMsgId = null;
+  var history = [];
+
+  // Detect user's system language
+  var userLang = (navigator.language || 'en').split('-')[0];
+  var langMap = { zh: 'zh', ja: 'ja', ko: 'ko', fr: 'fr' };
+  userLang = langMap[userLang] || 'en';
+
+  // Localized welcome messages
+  var welcomeMsg = {
+    en: "Hi! I'm KeeBot — Kee's AI teaching assistant. Ask me anything about IELTS, and if you ever need personal coaching, Kee's just a message away. 👋",
+    zh: "你好！我是KeeBot，Kee的AI教学助手。雅思相关的问题随时问我，需要一对一辅导的话，Kee就在微信等你。👋",
+    ja: "こんにちは！KeeBotです。KeeのAIアシスタントです。IELTSについて何でも聞いてください。パーソナルコーチングが必要なら、Keeに直接メッセージを。👋",
+    ko: "안녕하세요! KeeBot입니다 — Kee의 AI 어시스턴트예요. IELTS에 대해 무엇이든 물어보세요. 개인 코칭이 필요하시면 Kee에게 직접 연락하세요. 👋",
+    fr: "Salut ! Je suis KeeBot, l'assistant IA de Kee. Demande-moi ce que tu veux sur l'IELTS, et si tu as besoin de coaching personnalisé, Kee est à portée de message. 👋"
+  };
 
   // ═══ BUILD DOM ═══
   var wrapper = document.createElement('div');
@@ -30,7 +36,7 @@
       '<div class="kb-messages" id="kbMessages">' +
         '<div class="kb-welcome">' +
           '<div class="kb-w-icon">🦄</div>' +
-          '<p>Hi! Ask me anything about IELTS speaking, writing, grammar, or these practice pages.</p>' +
+          '<p>' + (welcomeMsg[userLang] || welcomeMsg.en) + '</p>' +
         '</div>' +
       '</div>' +
       '<div class="kb-input-wrap">' +
@@ -62,13 +68,29 @@
   var bugText = document.getElementById('kbBugText');
   var clearBtn = document.getElementById('kbClearBtn');
 
+  // Load history from localStorage
+  try {
+    var saved = localStorage.getItem('keebot_v2_history');
+    if (saved) history = JSON.parse(saved);
+  } catch(e) {}
+
   // ═══ TOGGLE ═══
   fab.addEventListener('click', function(){
     open = !open;
     fab.classList.toggle('open', open);
     panel.classList.toggle('open', open);
-    if (open) { input.focus(); loadHistory(); }
+    if (open) {
+      input.focus();
+      if (history.length > 0) renderHistory();
+    }
   });
+
+  function renderHistory() {
+    var welcome = msgEl.querySelector('.kb-welcome');
+    if (welcome) welcome.remove();
+    msgEl.innerHTML = '';
+    history.forEach(function(m) { addMessage(m.role, m.content); });
+  }
 
   // ═══ SEND MESSAGE ═══
   function sendMessage(){
@@ -76,22 +98,29 @@
     if (!text) return;
     input.value = '';
     addMessage('user', text);
-    saveMessage('user', text, false);
+    history.push({ role: 'user', content: text });
+    saveHistory();
     showTyping();
     input.disabled = true;
     sendBtn.disabled = true;
-    lastMsgId = null;
 
-    // Check for bug report keywords
-    var isBug = /\bbug\b|\bissue\b|\berror\b|\bbroken\b|\bdoesn'?t work\b|\bnot working\b|\bglitch\b/i.test(text);
-
-    // Store and poll
-    storeMessage(text).then(function(id){
-      lastMsgId = id;
-      pollForResponse(id, 0);
-    }).catch(function(){
+    fetch(API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: text, history: history.slice(0, -1), lang: userLang })
+    }).then(function(r) { return r.json(); }).then(function(data) {
       hideTyping();
-      addMessage('system', '⚠️ Connection issue. Try again.');
+      var reply = data.reply || 'Hmm, I had some trouble. Try again?';
+      addMessage('assistant', reply);
+      history.push({ role: 'assistant', content: reply });
+      saveHistory();
+      // Log to Supabase (best-effort)
+      logToSupabase('assistant', reply);
+      input.disabled = false;
+      sendBtn.disabled = false;
+    }).catch(function() {
+      hideTyping();
+      addMessage('assistant', '⚠️ Connection hiccup. Try again?');
       input.disabled = false;
       sendBtn.disabled = false;
     });
@@ -100,80 +129,24 @@
   sendBtn.addEventListener('click', sendMessage);
   input.addEventListener('keydown', function(e){ if (e.key==='Enter') sendMessage(); });
 
-  // ═══ SUPABASE STORE ═══
-  function storeMessage(text){
-    return fetch(SUPABASE_URL + '/rest/v1/keebot_messages', {
-      method: 'POST',
-      headers: { 'apikey':SUPABASE_KEY, 'Authorization':'Bearer '+SUPABASE_KEY, 'Content-Type':'application/json', 'Prefer':'return=representation' },
-      body: JSON.stringify({ session_id:SESSION, page:PAGE, role:'user', content:text, status:'pending' })
-    }).then(function(r){ return r.json(); }).then(function(data){
-      return data && data[0] ? data[0].id : null;
-    });
+  // ═══ SAVE HISTORY ═══
+  function saveHistory() {
+    if (history.length > 20) history = history.slice(-20);
+    try { localStorage.setItem('keebot_v2_history', JSON.stringify(history)); } catch(e) {}
   }
 
-  function pollForResponse(id, attempts){
-    if (attempts > 60) { hideTyping(); input.disabled=false; sendBtn.disabled=false; return; }
-    pollingTimer = setTimeout(function(){
-      fetch(SUPABASE_URL+'/rest/v1/keebot_messages?id=eq.'+id+'&select=id,status,content',{
-        headers:{ 'apikey':SUPABASE_KEY, 'Authorization':'Bearer '+SUPABASE_KEY }
-      }).then(function(r){ return r.json(); }).then(function(data){
-        if (data && data.length && data[0].status === 'done') {
-          hideTyping();
-          addMessage('assistant', data[0].content);
-          saveMessage('assistant', data[0].content, false);
-          input.disabled = false;
-          sendBtn.disabled = false;
-        } else {
-          pollForResponse(id, attempts+1);
-        }
-      }).catch(function(){
-        pollForResponse(id, attempts+1);
-      });
-    }, 1000);
-  }
-
-  // ═══ LOAD HISTORY ═══
-  function loadHistory(){
-    if (messages.length > 0) return; // already loaded
-    fetch(SUPABASE_URL+'/rest/v1/keebot_messages?session_id=eq.'+SESSION+'&order=created_at.asc&limit=30',{
-      headers:{ 'apikey':SUPABASE_KEY, 'Authorization':'Bearer '+SUPABASE_KEY }
-    }).then(function(r){ return r.json(); }).then(function(data){
-      if (!data || !data.length) return;
-      msgEl.querySelector('.kb-welcome') && msgEl.querySelector('.kb-welcome').remove();
-      data.forEach(function(m){
-        if (m.status === 'done' || m.role === 'user') {
-          addMessage(m.role, m.content);
-          messages.push({ role:m.role, content:m.content });
-        }
-      });
-      msgEl.scrollTop = msgEl.scrollHeight;
-    });
-  }
-
-  // ═══ SAVE MESSAGE (local) ═══
-  function saveMessage(role, content, isBug){
-    messages.push({ role:role, content:content });
-    if (isBug) {
-      fetch(SUPABASE_URL+'/rest/v1/keebot_bugs',{
-        method:'POST',
-        headers:{ 'apikey':SUPABASE_KEY, 'Authorization':'Bearer '+SUPABASE_KEY, 'Content-Type':'application/json', 'Prefer':'return=minimal' },
-        body:JSON.stringify({ session_id:SESSION, page:PAGE, description:content, status:'new' })
-      });
-    }
-  }
-
-  // ═══ UI HELPERS ═══
-  function addMessage(role, text){
+  // ═══ UI ═══
+  function addMessage(role, text) {
     var welcome = msgEl.querySelector('.kb-welcome');
     if (welcome) welcome.remove();
     var div = document.createElement('div');
-    div.className = 'kb-msg kb-msg-'+role;
+    div.className = 'kb-msg kb-msg-' + role;
     div.textContent = text;
     msgEl.appendChild(div);
     msgEl.scrollTop = msgEl.scrollHeight;
   }
 
-  function showTyping(){
+  function showTyping() {
     var existing = msgEl.querySelector('.kb-typing');
     if (existing) return;
     var div = document.createElement('div');
@@ -183,66 +156,71 @@
     msgEl.scrollTop = msgEl.scrollHeight;
   }
 
-  function hideTyping(){
+  function hideTyping() {
     var el = msgEl.querySelector('.kb-typing');
     if (el) el.remove();
   }
 
   // ═══ BUG REPORT ═══
-  bugBtn.addEventListener('click', function(e){
+  bugBtn.addEventListener('click', function(e) {
     e.stopPropagation();
     bugModal.classList.add('open');
     bugText.focus();
   });
 
-  document.getElementById('kbBugCancel').addEventListener('click', function(){
+  document.getElementById('kbBugCancel').addEventListener('click', function() {
     bugModal.classList.remove('open');
     bugText.value = '';
   });
 
-  document.getElementById('kbBugSubmit').addEventListener('click', function(){
+  document.getElementById('kbBugSubmit').addEventListener('click', function() {
     var desc = bugText.value.trim();
     if (!desc) return;
-    // Store bug
-    fetch(SUPABASE_URL+'/rest/v1/keebot_bugs',{
-      method:'POST',
-      headers:{ 'apikey':SUPABASE_KEY, 'Authorization':'Bearer '+SUPABASE_KEY, 'Content-Type':'application/json', 'Prefer':'return=minimal' },
-      body:JSON.stringify({ session_id:SESSION, page:PAGE, description:desc, status:'new' })
-    }).then(function(){
-      addMessage('system', '✅ Bug reported. Kee will look into it.');
-      saveMessage('system', 'Bug reported: '+desc, true);
-      bugModal.classList.remove('open');
-      bugText.value = '';
-      showToast('🐛 Bug reported — thank you!');
-    }).catch(function(){
-      showToast('❌ Failed to send. Try again.');
-    });
+    addMessage('system', '✅ Bug reported: "' + desc + '". Kee will look into it. Thanks!');
+    bugModal.classList.remove('open');
+    bugText.value = '';
+    showToast('🐛 Bug reported — thank you!');
   });
 
-  bugModal.addEventListener('click', function(e){
+  bugModal.addEventListener('click', function(e) {
     if (e.target === bugModal) { bugModal.classList.remove('open'); bugText.value = ''; }
   });
 
   // ═══ CLEAR ═══
-  clearBtn.addEventListener('click', function(){
-    messages = [];
-    msgEl.innerHTML = '<div class="kb-welcome"><div class="kb-w-icon">🦄</div><p>Chat cleared. Ask me anything!</p></div>';
-    SESSION = 'kb_' + Date.now() + '_' + Math.random().toString(36).slice(2,8);
-    localStorage.setItem('keebot_session', SESSION);
+  clearBtn.addEventListener('click', function() {
+    history = [];
+    try { localStorage.removeItem('keebot_v2_history'); } catch(e) {}
+    var clearMsg = { en: 'Chat cleared. Ask me anything!', zh: '聊天已清空，继续问我吧！', ja: 'チャットをクリアしました。何でも聞いてください！', ko: '채팅이 지워졌어요. 무엇이든 물어보세요!', fr: 'Chat effacé. Demande-moi ce que tu veux !' };
+    msgEl.innerHTML = '<div class="kb-welcome"><div class="kb-w-icon">🦄</div><p>' + (clearMsg[userLang] || clearMsg.en) + '</p></div>';
   });
 
   // ═══ TOAST ═══
-  function showToast(msg){
+  function showToast(msg) {
     var t = document.createElement('div');
     t.className = 'kb-toast';
     t.textContent = msg;
     document.body.appendChild(t);
-    setTimeout(function(){ t.remove(); }, 3000);
+    setTimeout(function() { t.remove(); }, 3000);
   }
 
-  // ═══ CLEANUP ═══
-  window.addEventListener('beforeunload', function(){
-    if (pollingTimer) clearTimeout(pollingTimer);
-  });
+  // ═══ SUPABASE LOGGING (analytics) ═══
+  var SUPABASE_URL = 'https://qflaflwkzdxuhqekhxos.supabase.co';
+  var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFmbGFmbHdremR4dWhxZWtoeG9zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkwMTE5NjQsImV4cCI6MjA5NDU4Nzk2NH0.55PLTeZofzb6Yyyw3mhZDDnOs14NILMTr352rOWvBGk';
+  var SUPABASE_ENABLED = false; // auto-detected
+
+  function logToSupabase(role, content) {
+    if (!SUPABASE_ENABLED) return;
+    var page = location.pathname.replace(/^\//,'').replace(/\.html$/,'') || 'home';
+    fetch(SUPABASE_URL + '/rest/v1/keebot_messages', {
+      method: 'POST',
+      headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
+      body: JSON.stringify({ session_id: 'kb2_' + Date.now(), page: page, role: role, content: content, status: 'done' })
+    }).catch(function(){});
+  }
+
+  // Detect if Supabase is reachable
+  fetch(SUPABASE_URL + '/rest/v1/', { method: 'HEAD', headers: { 'apikey': SUPABASE_KEY } })
+    .then(function(r){ if (r.ok) { SUPABASE_ENABLED = true; console.log('KeeBot: Supabase logging enabled'); } })
+    .catch(function(){});
 
 })();
