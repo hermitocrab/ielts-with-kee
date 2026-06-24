@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reading Materials - English Magazines for IELTS Prep</title>
+<meta name="description" content="Free downloadable English magazines: The Economist, The New Yorker, The Atlantic, Wired. EPUB, MOBI, PDF formats. Updated weekly.">
+<style>
+/* ===== Kee Design System Tokens ===== */
+:root {
+  --purple: #9F44D3;
+  --purple-light: #b77ae0;
+  --purple-dark: #7a2ea8;
+  --purple-bg: #f9f4ff;
+  --pink: #FF2442;
+  --pink-light: #ff6b7a;
+  --dynamos: #6366F1;
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #eeeeee;
+  --gray-300: #e0e0e0;
+  --gray-400: #bdbdbd;
+  --gray-500: #9e9e9e;
+  --gray-600: #757575;
+  --gray-700: #616161;
+  --gray-800: #424242;
+  --gray-900: #212121;
+  --white: #ffffff;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: all 0.2s ease;
+  --economist-red: #E3120B;
+  --newyorker-blue: #1A1A1A;
+  --atlantic-teal: #007B83;
+  --wired-green: #00CC00;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--gray-50);
+  color: var(--gray-900);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a { color: var(--purple); text-decoration: none; transition: var(--transition); }
+a:hover { color: var(--purple-dark); }
+
+/* ===== Navigation ===== */
+.site-nav {
+  background: var(--white);
+  border-bottom: 2px solid var(--gray-200);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--purple);
+}
+.nav-brand .nav-emoji { font-size: 1.3rem; }
+.nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+.nav-links a { color: var(--gray-600); font-size: 0.9rem; font-weight: 500; }
+.nav-links a:hover { color: var(--purple); }
+.nav-links a.active { color: var(--purple); font-weight: 600; }
+
+/* ===== Hero ===== */
+.page-hero {
+  background: linear-gradient(135deg, var(--white) 0%, var(--purple-bg) 100%);
+  border-bottom: 1px solid var(--gray-200);
+  padding: 64px 20px 48px;
+  text-align: center;
+}
+.page-hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--gray-900);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  max-width: 720px;
+  margin: 0 auto 12px;
+}
+.page-hero .hero-sub {
+  font-size: 1.05rem;
+  color: var(--gray-600);
+  max-width: 560px;
+  margin: 0 auto 24px;
+  line-height: 1.7;
+}
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.hero-stat {
+  text-align: center;
+}
+.hero-stat .stat-num {
+  display: block;
+  font-family: 'Space Grotesk', -apple-system, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--purple);
+}
+.hero-stat .stat-label {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+/* ===== Magazine Sections ===== */
+.magazines-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+.magazine-section {
+  margin-bottom: 56px;
+}
+
+.magazine-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--gray-200);
+}
+.magazine-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+.magazine-icon.economist {
+  background: #fde8e8;
+  color: var(--economist-red);
+}
+.magazine-icon.newyorker {
+  background: #f0f0f0;
+  color: #000;
+}
+.magazine-icon.atlantic {
+  background: #e0f2f3;
+  color: var(--atlantic-teal);
+}
+.magazine-icon.wired {
+  background: #e0ffe0;
+  color: #009900;
+}
+
+.magazine-info h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  letter-spacing: -0.01em;
+}
+.magazine-info .mag-meta {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+  margin-top: 2px;
+}
+.magazine-info .mag-desc {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  margin-top: 6px;
+  max-width: 560px;
+  line-height: 1.6;
+}
+
+/* ===== Issue Grid ===== */
+.issues-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 12px;
+}
+@media (max-width: 400px) {
+  .issues-grid { grid-template-columns: 1fr; }
+}
+
+.issue-card {
+  background: var(--white);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+.issue-card:hover {
+  border-color: var(--purple-light);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+.issue-card:first-child {
+  border-left: 3px solid var(--purple);
+}
+.issue-date {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.issue-date .date-main {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gray-900);
+}
+.issue-date .date-label {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+  font-weight: 500;
+}
+.issue-card:first-child .date-label {
+  color: var(--purple);
+  font-weight: 600;
+}
+
+.issue-formats {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.format-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  transition: all 0.2s ease;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  background: var(--gray-100);
+  color: var(--gray-700);
+  white-space: nowrap;
+}
+.format-btn:hover {
+  background: var(--purple-bg);
+  color: var(--purple);
+  border-color: var(--purple-light);
+}
+.format-btn.epub:hover { background: #f0fdf4; color: #166534; border-color: #86efac; }
+.format-btn.mobi:hover { background: #eff6ff; color: #1e40af; border-color: #93c5fd; }
+.format-btn.pdf:hover { background: #fef2f2; color: #991b1b; border-color: #fca5a5; }
+
+/* ===== Show More ===== */
+.show-more-wrap {
+  text-align: center;
+  margin-top: 16px;
+}
+.show-more-btn {
+  background: var(--white);
+  border: 1.5px solid var(--gray-300);
+  color: var(--gray-600);
+  padding: 8px 28px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.show-more-btn:hover {
+  border-color: var(--purple-light);
+  color: var(--purple);
+  background: var(--purple-bg);
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background: var(--white);
+  border-top: 2px solid var(--gray-200);
+  padding: 32px 20px;
+  text-align: center;
+}
+.site-footer p {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+}
+.site-footer a { color: var(--purple); font-weight: 500; }
+
+/* ===== Info banner ===== */
+.info-banner {
+  background: var(--white);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 48px;
+}
+.info-banner h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 8px;
+}
+.info-banner p {
+  font-size: 0.88rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+.info-banner .format-legend {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.format-legend span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 3px 12px;
+  border-radius: 4px;
+}
+.legend-epub { background: #f0fdf4; color: #166534; }
+.legend-mobi { background: #eff6ff; color: #1e40af; }
+.legend-pdf { background: #fef2f2; color: #991b1b; }
+
+/* Back to top */
+.back-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--purple);
+  color: var(--white);
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: all 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.back-top.visible { opacity: 1; pointer-events: auto; }
+.back-top:hover {
+  background: var(--purple-dark);
+  transform: translateY(-2px);
+}
+
+/* Quick nav pills */
+.quick-nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.quick-nav a {
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--white);
+  border: 1.5px solid var(--gray-200);
+  color: var(--gray-600);
+  transition: all 0.2s ease;
+}
+.quick-nav a:hover {
+  border-color: var(--purple-light);
+  color: var(--purple);
+}
+
+/* Loading / empty states */
+.issue-card.empty {
+  border-style: dashed;
+  color: var(--gray-400);
+  justify-content: center;
+  font-size: 0.85rem;
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <span class="nav-emoji">🦄</span>
+      <span>IELTS with Kee</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/reading-materials.html" class="active">Reading</a></li>
+      <li><a href="https://github.com/hehonghui/awesome-english-ebooks" target="_blank" rel="noopener">Source ↗</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="page-hero">
+  <h1>English Magazines for Smart Reading Practice</h1>
+  <p class="hero-sub">Free downloads of The Economist, The New Yorker, The Atlantic, and Wired. EPUB, MOBI, PDF formats. Updated weekly. Built for IELTS and advanced English learners.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><span class="stat-num">130+</span><span class="stat-label">Issues Available</span></div>
+    <div class="hero-stat"><span class="stat-num">4</span><span class="stat-label">Magazines</span></div>
+    <div class="hero-stat"><span class="stat-num">3</span><span class="stat-label">Formats</span></div>
+    <div class="hero-stat"><span class="stat-num">Weekly</span><span class="stat-label">Updates</span></div>
+  </div>
+</header>
+
+<!-- Main content -->
+<div class="magazines-container">
+
+  <!-- Format legend -->
+  <div class="info-banner">
+    <h3>About these magazines</h3>
+    <p>These publications are among the most common sources for IELTS, TOEFL, and postgraduate entrance exam reading passages. Reading them regularly builds vocabulary, comprehension speed, and familiarity with academic writing styles. All files are sourced from the <a href="https://github.com/hehonghui/awesome-english-ebooks" target="_blank" rel="noopener">awesome-english-ebooks</a> open collection on GitHub.</p>
+    <div class="format-legend">
+      <span class="legend-epub">EPUB - Apple Books, Duokan, generic e-readers</span>
+      <span class="legend-mobi">MOBI - Kindle devices &amp; Kindle app</span>
+      <span class="legend-pdf">PDF - Any device, best for printing</span>
+    </div>
+  </div>
+
+  <!-- Quick nav -->
+  <div class="quick-nav">
+    <a href="#economist">The Economist</a>
+    <a href="#newyorker">The New Yorker</a>
+    <a href="#atlantic">The Atlantic</a>
+    <a href="#wired">Wired</a>
+  </div>
+
+  <!-- ===== THE ECONOMIST ===== -->
+  <section class="magazine-section" id="economist">
+    <div class="magazine-header">
+      <div class="magazine-icon economist">📰</div>
+      <div class="magazine-info">
+        <h2>The Economist</h2>
+        <div class="mag-meta">经济学人 - Weekly - Updated Fridays</div>
+        <p class="mag-desc">Global news, politics, business, finance, science, and technology. The single most common source for IELTS and postgraduate exam reading passages. Sharp, concise prose with a distinct editorial voice.</p>
+      </div>
+    </div>
+    <div class="issues-grid" id="economist-issues"></div>
+    <div class="show-more-wrap" id="economist-more-wrap">
+      <button class="show-more-btn" onclick="toggleMore('economist')" id="economist-more-btn">Show all 25 issues</button>
+    </div>
+  </section>
+
+  <!-- ===== THE NEW YORKER ===== -->
+  <section class="magazine-section" id="newyorker">
+    <div class="magazine-header">
+      <div class="magazine-icon newyorker">🎨</div>
+      <div class="magazine-info">
+        <h2>The New Yorker</h2>
+        <div class="mag-meta">纽约客 - Weekly - Updated Saturdays</div>
+        <p class="mag-desc">Long-form journalism, cultural criticism, fiction, and satire. Rich narratives and sophisticated vocabulary make it excellent for advanced reading comprehension and literary analysis.</p>
+      </div>
+    </div>
+    <div class="issues-grid" id="newyorker-issues"></div>
+    <div class="show-more-wrap" id="newyorker-more-wrap">
+      <button class="show-more-btn" onclick="toggleMore('newyorker')" id="newyorker-more-btn">Show all 25 issues</button>
+    </div>
+  </section>
+
+  <!-- ===== THE ATLANTIC ===== -->
+  <section class="magazine-section" id="atlantic">
+    <div class="magazine-header">
+      <div class="magazine-icon atlantic">🌊</div>
+      <div class="magazine-info">
+        <h2>The Atlantic</h2>
+        <div class="mag-meta">大西洋月刊 - Monthly - Updated 2nd of each month</div>
+        <p class="mag-desc">Politics, culture, technology, and ideas. Known for deep-dive essays and intellectual rigor. A staple source for high-level reading comprehension and critical thinking practice.</p>
+      </div>
+    </div>
+    <div class="issues-grid" id="atlantic-issues"></div>
+    <div class="show-more-wrap" id="atlantic-more-wrap">
+      <button class="show-more-btn" onclick="toggleMore('atlantic')" id="atlantic-more-btn">Show all 18 issues</button>
+    </div>
+  </section>
+
+  <!-- ===== WIRED ===== -->
+  <section class="magazine-section" id="wired">
+    <div class="magazine-header">
+      <div class="magazine-icon wired">⚡</div>
+      <div class="magazine-info">
+        <h2>Wired</h2>
+        <div class="mag-meta">连线 - Monthly - Updated 2nd of each month</div>
+        <p class="mag-desc">Technology, science, business, and digital culture. Modern, accessible writing on how tech shapes our world. Great for tech-oriented vocabulary and contemporary issues.</p>
+      </div>
+    </div>
+    <div class="issues-grid" id="wired-issues"></div>
+    <div class="show-more-wrap" id="wired-more-wrap">
+      <button class="show-more-btn" onclick="toggleMore('wired')" id="wired-more-btn">Show all 18 issues</button>
+    </div>
+  </section>
+
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <p>All magazines sourced from the <a href="https://github.com/hehonghui/awesome-english-ebooks" target="_blank" rel="noopener">awesome-english-ebooks</a> open collection on GitHub. Files are provided for educational purposes.</p>
+</footer>
+
+<!-- Back to top -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<script>
+// ===== MAGAZINE DATA =====
+// GitHub raw download base
+const RAW_BASE = 'https://raw.githubusercontent.com/hehonghui/awesome-english-ebooks/master';
+
+// Magazine configs
+const MAGAZINES = {
+  economist: {
+    id: 'economist',
+    dirPrefix: '01_economist',
+    issuePrefix: 'te_',
+    filePrefix: 'TheEconomist',
+    issues: [
+      '2026.06.20','2026.06.13','2026.06.06',
+      '2026.05.30','2026.05.23','2026.05.16','2026.05.09','2026.05.02',
+      '2026.04.25','2026.04.18','2026.04.11','2026.04.04',
+      '2026.03.28','2026.03.21','2026.03.14','2026.03.07',
+      '2026.02.28','2026.02.21','2026.02.14','2026.02.07',
+      '2026.01.31','2026.01.24','2026.01.17','2026.01.10','2026.01.03'
+    ]
+  },
+  newyorker: {
+    id: 'newyorker',
+    dirPrefix: '02_new_yorker',
+    issuePrefix: '',
+    filePrefix: 'new_yorker',
+    issues: [
+      '2026.06.22','2026.06.15','2026.06.08','2026.06.01',
+      '2026.05.25','2026.05.18','2026.05.11','2026.05.04',
+      '2026.04.27','2026.04.20','2026.04.13','2026.04.06',
+      '2026.03.30','2026.03.23','2026.03.16','2026.03.09','2026.03.02',
+      '2026.02.23','2026.02.16','2026.02.09','2026.02.02',
+      '2026.01.26','2026.01.19','2026.01.12','2026.01.05'
+    ]
+  },
+  atlantic: {
+    id: 'atlantic',
+    dirPrefix: '04_atlantic',
+    issuePrefix: '',
+    filePrefix: 'atlantic',
+    issues: [
+      '2026.06.02','2026.05.02','2026.04.02','2026.03.02','2026.02.02','2026.01.02',
+      '2025.12.02','2025.11.02','2025.10.02','2025.09.02','2025.08.02','2025.07.02',
+      '2025.06.02','2025.05.02','2025.04.02','2025.03.02','2025.02.02','2025.01.02'
+    ]
+  },
+  wired: {
+    id: 'wired',
+    dirPrefix: '05_wired',
+    issuePrefix: '',
+    filePrefix: 'wired',
+    issues: [
+      '2026.06.02','2026.05.02','2026.04.02','2026.03.02','2026.02.02','2026.01.02',
+      '2025.12.02','2025.11.02','2025.10.02','2025.09.02','2025.08.02','2025.07.02',
+      '2025.06.02','2025.05.02','2025.04.02','2025.03.02','2025.02.02','2025.01.02'
+    ]
+  }
+};
+
+// How many issues to show initially
+const INITIAL_SHOW = 8;
+
+// Build download URLs
+function buildUrls(mag, date) {
+  const issueDir = mag.issuePrefix ? mag.issuePrefix + date : date;
+  const base = RAW_BASE + '/' + mag.dirPrefix + '/' + issueDir + '/' + mag.filePrefix + '.' + date;
+  return {
+    epub: base + '.epub',
+    mobi: base + '.mobi',
+    pdf: base + '.pdf'
+  };
+}
+
+// Format date for display
+function formatDate(dateStr) {
+  const parts = dateStr.split('.');
+  const d = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return {
+    main: months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear(),
+    iso: dateStr
+  };
+}
+
+// Time ago label
+function timeAgo(dateStr) {
+  const parts = dateStr.split('.');
+  const issueDate = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+  const now = new Date();
+  const diffDays = Math.floor((now - issueDate) / (1000 * 60 * 60 * 24));
+
+  if (diffDays === 0) return 'Today';
+  if (diffDays <= 7) return diffDays + 'd ago';
+  if (diffDays <= 30) return Math.floor(diffDays / 7) + 'w ago';
+  if (diffDays <= 365) return Math.floor(diffDays / 30) + 'mo ago';
+  return Math.floor(diffDays / 365) + 'y ago';
+}
+
+// Render issues for a magazine
+function renderIssues(magId, showAll) {
+  const mag = MAGAZINES[magId];
+  const container = document.getElementById(magId + '-issues');
+  const count = showAll ? mag.issues.length : Math.min(INITIAL_SHOW, mag.issues.length);
+  const visibleIssues = mag.issues.slice(0, count);
+
+  let html = '';
+  visibleIssues.forEach((date, i) => {
+    const urls = buildUrls(mag, date);
+    const formatted = formatDate(date);
+    const ago = i === 0 ? 'Latest' : timeAgo(date);
+    html += `
+      <div class="issue-card">
+        <div class="issue-date">
+          <span class="date-main">${formatted.main}</span>
+          <span class="date-label">${ago}</span>
+        </div>
+        <div class="issue-formats">
+          <a href="${urls.epub}" class="format-btn epub" target="_blank" rel="noopener" title="Download EPUB">EPUB</a>
+          <a href="${urls.mobi}" class="format-btn mobi" target="_blank" rel="noopener" title="Download MOBI">MOBI</a>
+          <a href="${urls.pdf}" class="format-btn pdf" target="_blank" rel="noopener" title="Download PDF">PDF</a>
+        </div>
+      </div>`;
+  });
+
+  container.innerHTML = html;
+
+  // Update show more button
+  const moreWrap = document.getElementById(magId + '-more-wrap');
+  const moreBtn = document.getElementById(magId + '-more-btn');
+  if (mag.issues.length <= INITIAL_SHOW) {
+    moreWrap.style.display = 'none';
+  } else if (showAll) {
+    moreBtn.textContent = 'Show fewer';
+    moreBtn.onclick = function() { toggleMore(magId, false); };
+  } else {
+    moreBtn.textContent = 'Show all ' + mag.issues.length + ' issues';
+    moreBtn.onclick = function() { toggleMore(magId, true); };
+  }
+}
+
+// Toggle show more/less
+function toggleMore(magId, forceState) {
+  const mag = MAGAZINES[magId];
+  const container = document.getElementById(magId + '-issues');
+  const currentCount = container.querySelectorAll('.issue-card').length;
+  const showAll = forceState !== undefined ? forceState : currentCount <= INITIAL_SHOW;
+  renderIssues(magId, showAll);
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function() {
+  Object.keys(MAGAZINES).forEach(function(key) {
+    renderIssues(key, false);
+  });
+
+  // Back to top button
+  const backTop = document.getElementById('backTop');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 600) {
+      backTop.classList.add('visible');
+    } else {
+      backTop.classList.remove('visible');
+    }
+  });
+});
+</script>
+
+  <script src="js/auth.js"></script>
+  <script>KeeAuth.requireAuth()</script>
+</body>
+</html>
