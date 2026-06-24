@@ -18,7 +18,7 @@
       background: white;
       border-radius: 24px;
       padding: 48px 40px;
-      max-width: 420px;
+      max-width: 440px;
       width: 100%;
       box-shadow: 0 20px 60px rgba(0,0,0,0.08);
       text-align: center;
@@ -118,6 +118,76 @@
       50% { transform: scale(1.2); }
       100% { transform: scale(1); }
     }
+
+    /* Temp code card */
+    .temp-code-section {
+      background: linear-gradient(135deg, #1a1a20, #0d0d10);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 24px;
+      color: #fff;
+    }
+    .temp-code-section .temp-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #9F44D3;
+      margin-bottom: 4px;
+    }
+    .temp-code-section .temp-code {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: #FFD54F;
+      background: rgba(255,215,79,0.1);
+      padding: 8px 16px;
+      border-radius: 10px;
+      border: 2px dashed rgba(255,215,79,0.3);
+      display: inline-block;
+      margin: 8px 0;
+      cursor: pointer;
+      transition: all 0.2s;
+      user-select: all;
+    }
+    .temp-code-section .temp-code:hover {
+      border-color: #FFD54F;
+      background: rgba(255,215,79,0.15);
+    }
+    .temp-code-section .temp-countdown {
+      font-size: 0.85rem;
+      color: #b77ae0;
+      margin-top: 8px;
+    }
+    .temp-code-section .temp-note {
+      font-size: 0.75rem;
+      color: #888;
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+    .temp-code-section .temp-expired {
+      color: #FF2442;
+      font-weight: 700;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 24px 0;
+      color: #86868B;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #E5E5EA;
+    }
+
     .back-link {
       display: inline-block;
       margin-top: 20px;
@@ -126,6 +196,24 @@
       font-size: 0.85rem;
     }
     .back-link:hover { color: #9F44D3; }
+
+    /* Copied toast */
+    .copy-toast {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1a1a20;
+      color: #FFD54F;
+      padding: 10px 24px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      z-index: 9999;
+      animation: toastIn 0.3s ease, toastOut 0.3s ease 1.5s forwards;
+    }
+    @keyframes toastIn { from { opacity:0; transform:translateX(-50%) translateY(-10px); } to { opacity:1; transform:translateX(-50%) translateY(0); } }
+    @keyframes toastOut { from { opacity:1; } to { opacity:0; } }
   </style>
 </head>
 <body>
@@ -134,6 +222,19 @@
       <div class="logo">🦄</div>
       <h1>IELTS with Kee</h1>
       <p class="sub">Enter your access code to continue</p>
+
+      <!-- Temp Trial Code -->
+      <div class="temp-code-section" id="tempCodeSection">
+        <div class="temp-label">🎁 Free Trial Access</div>
+        <div class="temp-code" id="tempCodeDisplay" onclick="copyTempCode()" title="Click to copy">loading…</div>
+        <div class="temp-countdown" id="tempCountdown">⏳ 30:00</div>
+        <div class="temp-note">
+          This code works for <strong>30 minutes</strong>.<br>
+          For a weekly access code, contact Kee directly on <strong>WeChat: keedahooman</strong>
+        </div>
+      </div>
+
+      <div class="divider">or use your code</div>
 
       <div id="auth-error" class="auth-error"></div>
       <div id="auth-success" class="auth-success">
@@ -158,33 +259,89 @@
     </div>
   </div>
 
+  <link rel="stylesheet" href="/css/kee-bot.css">
   <script src="js/auth.js"></script>
   <script>
-    // If already logged in, redirect immediately
+    // ── Temp code countdown ─────────────────────
+    var tempExpiresAt = null;
+    var countdownInterval = null;
+
+    async function fetchTempCode() {
+      try {
+        var resp = await fetch('/api/auth/temp-code');
+        var data = await resp.json();
+        if (data.ok) {
+          document.getElementById('tempCodeDisplay').textContent = data.code;
+          tempExpiresAt = data.expires_at * 1000;
+          updateCountdown();
+          countdownInterval = setInterval(updateCountdown, 1000);
+        } else {
+          document.getElementById('tempCodeDisplay').textContent = 'unavailable';
+        }
+      } catch(e) {
+        document.getElementById('tempCodeDisplay').textContent = 'retry';
+        document.getElementById('tempCountdown').textContent = '⚠️ Could not reach server';
+      }
+    }
+
+    function updateCountdown() {
+      if (!tempExpiresAt) return;
+      var remaining = tempExpiresAt - Date.now();
+      var el = document.getElementById('tempCountdown');
+      var codeEl = document.getElementById('tempCodeDisplay');
+
+      if (remaining <= 0) {
+        el.innerHTML = '<span class="temp-expired">⏰ Expired</span>';
+        codeEl.style.opacity = '0.4';
+        clearInterval(countdownInterval);
+        // Fetch a new code
+        setTimeout(fetchTempCode, 2000);
+        return;
+      }
+      var mins = Math.floor(remaining / 60000);
+      var secs = Math.floor((remaining % 60000) / 1000);
+      el.textContent = '⏳ ' + mins + ':' + (secs < 10 ? '0' : '') + secs + ' remaining';
+    }
+
+    function copyTempCode() {
+      var code = document.getElementById('tempCodeDisplay').textContent;
+      if (!code || code === 'loading…' || code === 'unavailable' || code === 'retry') return;
+      navigator.clipboard.writeText(code).then(function() {
+        var toast = document.createElement('div');
+        toast.className = 'copy-toast';
+        toast.textContent = '📋 Code copied!';
+        document.body.appendChild(toast);
+        setTimeout(function() { toast.remove(); }, 2000);
+      }).catch(function() {});
+    }
+
+    fetchTempCode();
+
+    // ── Auth flow ──────────────────────────────
     if (KeeAuth.isLoggedIn()) {
-      const params = new URLSearchParams(window.location.search);
-      const redirect = params.get('redirect') || 'dashboard.html';
+      var params = new URLSearchParams(window.location.search);
+      var redirect = params.get('redirect') || 'dashboard.html';
       window.location.href = redirect;
     }
 
     function showError(msg) {
-      const el = document.getElementById('auth-error');
+      var el = document.getElementById('auth-error');
       el.textContent = msg;
       el.style.display = 'block';
     }
 
     async function handleSubmit(e) {
       e.preventDefault();
-      const error = document.getElementById('auth-error');
+      var error = document.getElementById('auth-error');
       error.style.display = 'none';
 
-      const btn = document.querySelector('.btn-auth');
+      var btn = document.querySelector('.btn-auth');
       btn.textContent = 'Verifying…';
       btn.disabled = true;
 
-      const code = document.getElementById('passcode').value;
-      const remember = document.getElementById('remember').checked;
-      const result = await KeeAuth.login(code, remember);
+      var code = document.getElementById('passcode').value;
+      var remember = document.getElementById('remember').checked;
+      var result = await KeeAuth.login(code, remember);
 
       btn.textContent = 'Unlock →';
       btn.disabled = false;
@@ -198,20 +355,30 @@
 
       // Success animation
       document.getElementById('auth-form').style.display = 'none';
-      const success = document.getElementById('auth-success');
+      var success = document.getElementById('auth-success');
       success.style.display = 'block';
-      document.getElementById('success-msg').textContent =
-        'Welcome, ' + (result.tier === 'Teacher' ? 'Teacher Kee' : 'Student') + '!';
+      var msg = result.tier === 'Teacher' ? 'Welcome, Teacher Kee!' :
+                result.tier === 'Temp' ? 'Trial access — 30 minutes. Enjoy!' :
+                'Welcome back!';
+      document.getElementById('success-msg').textContent = msg;
 
-      const params = new URLSearchParams(window.location.search);
-      const redirect = params.get('redirect') || 'dashboard.html';
+      // For temp access, store expiry in sessionStorage for kee-bot countdown
+      if (result.temp_expires_at) {
+        try {
+          sessionStorage.setItem('***', JSON.stringify({
+            tempExpiresAt: result.temp_expires_at
+          }));
+        } catch(e) {}
+      }
 
-      setTimeout(() => {
+      var params = new URLSearchParams(window.location.search);
+      var redirect = params.get('redirect') || 'dashboard.html';
+
+      setTimeout(function() {
         window.location.href = redirect;
       }, 800);
     }
   </script>
-<link rel="stylesheet" href="/css/kee-bot.css">
-<script src="/js/kee-bot.js"></script>
+  <script src="/js/kee-bot.js"></script>
 </body>
 </html>

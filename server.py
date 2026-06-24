@@ -7,7 +7,7 @@ Passcodes stored in SQLite (bcrypt hashed). Session cookies for access control.
 
 from flask import Flask, request, session, redirect, send_from_directory, jsonify
 from functools import wraps, partial
-import os, bcrypt, sqlite3, secrets, glob
+import os, bcrypt, sqlite3, secrets, glob, time, string, random
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(BASE_DIR, 'auth.db')
@@ -39,6 +39,13 @@ def init_db():
             for code, tier, label in defaults:
                 h = bcrypt.hashpw(code.encode(), bcrypt.gensalt()).decode()
                 conn.execute('INSERT INTO passcodes VALUES (?, ?, ?)', (h, tier, label))
+        
+        # Temp codes table (30-min trial access)
+        conn.execute('''CREATE TABLE IF NOT EXISTS temp_codes (
+            code_hash TEXT PRIMARY KEY,
+            created_at REAL NOT NULL,
+            expires_at REAL NOT NULL
+        )''')
 
 # ── Helpers ───────────────────────────────────────────────
 
@@ -73,15 +80,31 @@ def api_login():
     if not code:
         return jsonify({'ok': False, 'error': 'Enter access code'})
 
+    now = time.time()
     with sqlite3.connect(DB_PATH) as conn:
+        # Clean up expired temp codes
+        conn.execute('DELETE FROM temp_codes WHERE expires_at < ?', (now,))
+        
+        # Check permanent passcodes
         rows = conn.execute('SELECT code_hash, tier, label FROM passcodes').fetchall()
-
-    for code_hash, tier, label in rows:
-        if bcrypt.checkpw(code.encode(), code_hash.encode()):
-            session['user'] = {'tier': tier, 'label': label}
-            if data.get('remember'):
-                session.permanent = True
-            return jsonify({'ok': True, 'tier': tier})
+        for code_hash, tier, label in rows:
+            if bcrypt.checkpw(code.encode(), code_hash.encode()):
+                session['user'] = {'tier': tier, 'label': label}
+                if data.get('remember'):
+                    session.permanent = True
+                return jsonify({'ok': True, 'tier': tier})
+        
+        # Check temp codes
+        temp_rows = conn.execute(
+            'SELECT code_hash, expires_at FROM temp_codes WHERE expires_at > ?', (now,)
+        ).fetchall()
+        for code_hash, expires_at in temp_rows:
+            if bcrypt.checkpw(code.encode(), code_hash.encode()):
+                session['user'] = {'tier': 'Temp', 'label': 'Trial Access'}
+                session['temp_expires'] = expires_at
+                # Temp codes: no permanent session
+                session.permanent = False
+                return jsonify({'ok': True, 'tier': 'Temp', 'temp_expires_at': expires_at})
 
     return jsonify({'ok': False, 'error': 'Invalid access code'})
 
@@ -93,8 +116,36 @@ def api_logout():
 @app.route('/api/auth/status')
 def api_status():
     if session.get('user'):
-        return jsonify({'logged_in': True, 'tier': session['user']['tier']})
+        result = {'logged_in': True, 'tier': session['user']['tier']}
+        if session.get('temp_expires'):
+            result['temp_expires_at'] = session['temp_expires']
+        return jsonify(result)
     return jsonify({'logged_in': False})
+
+@app.route('/api/auth/temp-code', methods=['GET', 'POST'])
+def api_temp_code():
+    """Generate a trial access code valid for 30 minutes."""
+    now = time.time()
+    expires_at = now + 1800  # 30 minutes
+    
+    # Generate random 8-char code
+    chars = string.ascii_lowercase + string.digits
+    raw_code = 'trial-' + ''.join(random.choices(chars, k=6))
+    code_hash = bcrypt.hashpw(raw_code.encode(), bcrypt.gensalt()).decode()
+    
+    with sqlite3.connect(DB_PATH) as conn:
+        # Clean up expired
+        conn.execute('DELETE FROM temp_codes WHERE expires_at < ?', (now,))
+        # Store new temp code
+        conn.execute('INSERT INTO temp_codes VALUES (?, ?, ?)',
+                    (code_hash, now, expires_at))
+    
+    return jsonify({
+        'ok': True,
+        'code': raw_code,
+        'expires_at': expires_at,
+        'expires_in': 1800
+    })
 
 # ── Public pages (no auth required) ───────────────────────
 
