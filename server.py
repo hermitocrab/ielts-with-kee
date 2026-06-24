@@ -166,7 +166,7 @@ def _serve_html(filename):
 _unprotected = {'auth.html', 'debug-auth.html'}
 for _filename in get_html_files():
     if _filename not in _unprotected:
-        _handler = require_auth(partial(_serve_html, _filename))
+        _handler = partial(_serve_html, _filename)
         _handler.__name__ = f'serve_{_filename.replace(".","_").replace("-","_")}'
         app.add_url_rule(f'/{_filename}', view_func=_handler)
         # Also allow without .html extension?
@@ -175,7 +175,6 @@ for _filename in get_html_files():
 # ── Root ──────────────────────────────────────────────────
 
 @app.route('/')
-@require_auth
 def serve_root():
     return send_from_directory(BASE_DIR, 'index.html')
 
