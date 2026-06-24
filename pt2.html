@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Speaking Part 2: The "Person" Narrator</title>
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.75);
+            --glass-border: rgba(255, 255, 255, 0.5);
+            --blur: 25px;
+            --primary: #4f46e5; /* Indigo */
+            --secondary: #ec4899; /* Pink */
+            --text: #1e293b;
+            --highlight-bg: #fde047; /* Bright Yellow for markers */
+            --highlight-text: #854d0e;
+            --card-bg: rgba(255,255,255,0.6);
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+            color: var(--text);
+            margin: 0;
+            padding: 40px;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        /* Liquid Glass Container */
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(var(--blur));
+            -webkit-backdrop-filter: blur(var(--blur));
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            background: -webkit-linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .sub-title {
+            text-align: center;
+            color: #64748b;
+            font-weight: 500;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+
+        /* SECTION BADGES */
+        .badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+        }
+
+        /* STAGE 1: LEARN GRID */
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .vocab-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 16px;
+            border-left: 5px solid var(--secondary);
+            transition: transform 0.2s;
+        }
+
+        .vocab-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.9);
+        }
+
+        .word { font-size: 1.4rem; font-weight: 800; color: var(--text); }
+        .ipa { color: #94a3b8; font-family: 'Courier New', monospace; font-size: 0.9rem; margin-bottom: 10px; display: block; }
+        .def { font-size: 0.95rem; margin-bottom: 8px; font-style: italic; }
+        .ex { font-size: 0.9rem; color: #475569; background: rgba(255,255,255,0.5); padding: 8px; border-radius: 8px; }
+
+        /* STAGE 2: TRY - 5W1H FLOW */
+        .podcast-box {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 20px;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .toggle-btn {
+            background: var(--text);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-size: 1rem;
+            cursor: pointer;
+            float: right;
+            transition: background 0.3s;
+        }
+        .toggle-btn:hover { background: var(--primary); }
+
+        .scenario-title {
+            font-size: 1.3rem;
+            color: var(--primary);
+            border-bottom: 2px dashed #cbd5e1;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+
+        .flow-step {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+
+        .flow-icon {
+            background: var(--secondary);
+            color: white;
+            min-width: 60px;
+            text-align: center;
+            padding: 5px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+        /* HIGHLIGHTING */
+        .dm { /* Discourse Marker */
+            background-color: var(--highlight-bg);
+            color: var(--highlight-text);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: help;
+            border-bottom: 2px solid rgba(0,0,0,0.1);
+        }
+
+        .dm.hidden {
+            background-color: #e2e8f0;
+            color: transparent;
+            border-bottom: none;
+            user-select: none;
+        }
+
+        .vocab-link {
+            text-decoration: underline;
+            text-decoration-color: var(--secondary);
+            text-decoration-thickness: 2px;
+            font-weight: 600;
+        }
+
+        /* STAGE 3: APPLY TIMELINE */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #cbd5e1;
+            border-radius: 2px;
+        }
+        .time-node {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .time-node::before {
+            content: '⬇️';
+            position: absolute;
+            left: -43px;
+            top: 0;
+            background: #fff;
+            border-radius: 50%;
+            font-size: 1.2rem;
+        }
+        .cue-box {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 12px;
+            font-family: 'Georgia', serif;
+            color: #334155;
+            border-left: 5px solid var(--text);
+            margin-bottom: 25px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="glass-panel">
+        <h1>🗣️ Part 2: The "Person" Narrator</h1>
+        <div class="sub-title">Method: 5W1H Expansion + Natural Flow Markers</div>
+    </div>
+
+    <div class="glass-panel">
+        <div class="badge">Stage 1: LEARN 🧠</div>
+        <h3>Core Vocabulary: Relationships & Personality</h3>
+        <p>Master these 9 keywords to describe friends and celebrities vividly. They will appear in the next section.</p>
+        
+        <div class="vocab-grid">
+            <div class="vocab-card">
+                <div class="word">1. Go back a long way</div>
+                <span class="ipa">/ɡəʊ bæk ə lɒŋ weɪ/</span>
+                <div class="def">To have known each other for a long time.</div>
+                <div class="ex">We <strong>go back a long way</strong>, since primary school actually.</div>
+            </div>
+
+            <div class="vocab-card">
+                <div class="word">2. Down-to-earth</div>
+                <span class="ipa">/ˌdaʊn tu ˈɜːθ/</span>
+                <div class="def">Friendly, practical, and not arrogant.</div>
+                <div class="ex">Despite being top of the class, he is incredibly <strong>down-to-earth</strong>.</div>
+            </div>
+
+            <div class="vocab-card">
+                <div class="word">3. Crack jokes</div>
+                <span class="ipa">/kræk dʒəʊks/</span>
+                <div class="def">To tell jokes; to be funny naturally.</div>
+                <div class="ex">He has a great sense of humor and can <strong>crack jokes</strong> at any time.</div>
+            </div>
+
+            <div class="vocab-card">
+                <div class="word">4. On the same page</div>
+                <span class="ipa">/ɒn ðə seɪm peɪdʒ/</span>
+                <div class="def">Thinking in a similar way; agreeing.</div>
+                <div class="ex">When we study together, we are always <strong>on the same page</strong>.</div>
+            </div>
+
+            <div class="vocab-card">
+                <div class="word">5. Go viral</div>
+                <span class="ipa">/ɡəʊ ˈvaɪrəl/</span>
+                <div class="def">To become very popular very quickly on the internet.</div>
+                <div class="ex">His songs <strong>went viral</strong> on TikTok recently.</div>
+            </div>
+
+            <div class="vocab-card">
+                <div class="word">6. Catchy</div>
+                <span class="ipa">/ˈkætʃi/</span>
+                <div class="def">Pleasing and easily remembered (usually for music).</div>
+                <div class="ex">His melodies are so <strong>catchy</strong> and light-hearted.</div>
+            </div>
+
+            <div class="vocab-card">
+                <div class="word">7. Inspiring</div>
+                <span class="ipa">/ɪnˈspaɪərɪŋ/</span>
+                <div class="def">Giving you new ideas or making you feel you want to do something.</div>
+                <div class="ex">He is such an <strong>inspiring</strong> musician because of his talent.</div>
+            </div>
+
+            <div class="vocab-card">
+                <div class="word">8. Boost my mood</div>
+                <span class="ipa">/buːst maɪ muːd/</span>
+                <div class="def">To make someone feel happier.</div>
+                <div class="ex">Listening to his music really <strong>boosts my mood</strong> when I'm tired.</div>
+            </div>
+
+            <div class="vocab-card">
+                <div class="word">9. Distinctive feature</div>
+                <span class="ipa">/dɪˈstɪŋktɪv ˈfiːtʃə/</span>
+                <div class="def">A quality or characteristic that makes something easy to recognize.</div>
+                <div class="ex">He has a <strong>distinctive feature</strong>, which is a scar on his eyebrow.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="glass-panel">
+        <div class="badge">Stage 2: TRY 🛠️</div>
+        <button class="toggle-btn" onclick="toggleMarkers()">🙈 Hide/Show Markers</button>
+        <h3>Natural Flow: The "5W1H" Podcast Method</h3>
+        <p>Read the answers below. Notice how we use <span class="dm">Discourse Markers</span> to connect ideas logically (Logic Chain) and use the <span class="vocab-link">Vocabulary</span> from Stage 1.</p>
+
+        <div class="podcast-box">
+            <div class="scenario-title">Scenario A: A Close Friend / Study Partner</div>
+            <p style="font-size:0.9em; color:#64748b;">(Topic: Describe a person you enjoy studying with or a close friend)</p>
+
+            <div class="flow-step">
+                <div class="flow-icon">WHO<br>Background</div>
+                <div>
+                    <span class="dm">Off the top of my head,</span> <span class="dm">the first person that pops into my mind is</span> my best buddy, Michael. <span class="dm">Basically,</span> he’s a really nice guy who is very <span class="vocab-link">down-to-earth</span> and energetic.
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-icon">WHEN<br>WHERE</div>
+                <div>
+                    <span class="dm">As far as I can remember,</span> we <span class="vocab-link">go back a long way</span>. We met when I was in primary school. <span class="dm">I can't really recall the details, but</span> I vaguely remember it was probably on a basketball court since we both love sports.
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-icon">WHAT<br>Details</div>
+                <div>
+                    <span class="dm">Specifically speaking,</span> whenever we hang out, he always <span class="vocab-link">cracks jokes</span> to make me laugh. <span class="dm">On top of that,</span> when we study together, we are always <span class="vocab-link">on the same page</span>. He helps me with math, and I help him with English.
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-icon">WHY<br>Feeling</div>
+                <div>
+                    <span class="dm">As for the reason why</span> I like him, <span class="dm">I reckon that</span> it's because of his positive attitude. <span class="dm">To be honest,</span> he can always put a smile on people's faces.
+                </div>
+            </div>
+        </div>
+
+        <div class="podcast-box">
+            <div class="scenario-title">Scenario B: A Western Celebrity (New Gen)</div>
+            <p style="font-size:0.9em; color:#64748b;">(Topic: Describe a famous person you are interested in)</p>
+
+            <div class="flow-step">
+                <div class="flow-icon">WHO<br>Identity</div>
+                <div>
+                    <span class="dm">If you twist my arm to choose just one,</span> <span class="dm">I'd definitely say</span> Charlie Puth. <span class="dm">You know,</span> he is one of the coolest and most <span class="vocab-link">inspiring</span> singers nowadays.
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-icon">WHAT<br>Features</div>
+                <div>
+                    <span class="dm">Speaking of</span> his appearance, he has a <span class="vocab-link">distinctive feature</span> which is a scar on his eyebrow. <span class="dm">Instead of</span> hiding it, he embraces it. <span class="dm">In terms of</span> his career, his songs have totally <span class="vocab-link">gone viral</span> on TikTok recently because the melodies are so <span class="vocab-link">catchy</span>.
+                </div>
+            </div>
+
+            <div class="flow-step">
+                <div class="flow-icon">WHY<br>Feeling</div>
+                <div>
+                    <span class="dm">The heart of the matter is that</span> his music can always <span class="vocab-link">boost my mood</span>. <span class="dm">Whenever</span> I feel "down in the dumps" (sad), I listen to his songs to cheer myself up. <span class="dm">So,</span> I am a huge fan.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="glass-panel">
+        <div class="badge">Stage 3: APPLY 🚀</div>
+        <h3>Real World Practice</h3>
+        <p>Use the <strong>Vertical Timeline</strong> logic below to answer these real question bank topics. Don't forget the markers!</p>
+
+        <div class="cue-box">
+            <strong>Topic 1: Describe a person you know who you are happy to spend time with.</strong><br>
+            <em>You should say: Who this person is, How you know him/her, What you do together, and Explain why...</em>
+        </div>
+
+        <div class="timeline">
+            <div class="time-node">
+                <strong>1. Opening (The "Pop-in"):</strong><br>
+                <span class="dm">As soon as I saw this topic...</span> (Mention the Friend from Scenario A).
+            </div>
+            <div class="time-node">
+                <strong>2. Background (The "Time Traveler"):</strong><br>
+                <span class="dm">If my memory serves me right...</span> (Use "Go back a long way").
+            </div>
+            <div class="time-node">
+                <strong>3. Activities (The "List Master"):</strong><br>
+                <span class="dm">Apart from that...</span> <span class="dm">Plus...</span> (Study, sports, travel).
+            </div>
+            <div class="time-node">
+                <strong>4. Closing (The "Heart of Matter"):</strong><br>
+                <span class="dm">All in all...</span> <span class="dm">I firmly believe that...</span>
+            </div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px dashed #cbd5e1; margin: 40px 0;">
+
+        <div class="cue-box">
+            <strong>Topic 2: Describe a famous person you are interested in.</strong><br>
+            <em>You should say: Who this person is, How you know about him/her, What he/she was like before famous, and Explain why...</em>
+        </div>
+
+        <div class="timeline">
+            <div class="time-node">
+                <strong>1. Opening (The "Guess"):</strong><br>
+                <span class="dm">Well, to be honest, I'm not a big fan of celebrities, but...</span> (Mention Charlie Puth).
+            </div>
+            <div class="time-node">
+                <strong>2. The Story (The "Fixer"):</strong><br>
+                <span class="dm">Specifically speaking...</span> (Talk about the eyebrow scar story/Dog bite accident).
+            </div>
+            <div class="time-node">
+                <strong>3. The Impact (The "Ripple Effect"):</strong><br>
+                <span class="dm">Due to the fact that...</span> (His songs are catchy -> boost mood).
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    function toggleMarkers() {
+        const markers = document.querySelectorAll('.dm');
+        markers.forEach(marker => {
+            marker.classList.toggle('hidden');
+        });
+    }
+</script>
+
+</body>
+</html>

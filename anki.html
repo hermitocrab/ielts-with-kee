@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>807 听力词卡 | IELTS with Kee 🦄</title>
+<style>
+:root {
+  --purple: #9F44D3; --purple-light: #b77ae0; --purple-dark: #7a2ea8;
+  --pink: #FF2442; --pink-light: #ff6b7a;
+  --white: #fff; --gray-50: #fafafa; --gray-100: #f5f5f5;
+  --gray-200: #eee; --gray-600: #757575; --gray-700: #616161; --gray-900: #212121;
+  --green: #10b981; --amber: #f59e0b;
+  --radius: 12px; --radius-lg: 16px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:var(--gray-50);color:var(--gray-900);line-height:1.65;min-height:100vh
+}
+
+/* Nav */
+.site-nav{background:var(--white);border-bottom:2px solid var(--gray-200);position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.nav-inner{max-width:800px;margin:0 auto;padding:0 20px;height:56px;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:16px;color:var(--gray-900);text-decoration:none}
+.nav-brand span{color:var(--purple)}
+.nav-links{display:flex;gap:16px;align-items:center}
+.nav-links a{font-size:13px;font-weight:500;color:var(--gray-600);text-decoration:none}
+.nav-links a:hover{color:var(--purple)}
+
+/* Main */
+.container{max-width:800px;margin:0 auto;padding:24px 20px 60px}
+
+/* Header */
+.header{text-align:center;padding:32px 0 20px}
+.header h1{font-size:clamp(22px,4vw,32px);font-weight:700;margin-bottom:6px}
+.header h1 span{background:linear-gradient(135deg,var(--purple),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.header p{font-size:14px;color:var(--gray-600)}
+
+/* Progress bar */
+.progress-bar{display:flex;gap:8px;align-items:center;justify-content:center;margin-bottom:24px;flex-wrap:wrap}
+.progress-stat{text-align:center;min-width:80px}
+.progress-stat .num{font-size:28px;font-weight:700;color:var(--purple)}
+.progress-stat .label{font-size:11px;color:var(--gray-600);text-transform:uppercase;letter-spacing:0.06em}
+.progress-divider{width:1px;height:32px;background:var(--gray-200)}
+
+/* Card */
+.card-area{perspective:1000px;-webkit-perspective:1000px;max-width:500px;margin:0 auto 24px}
+.card{position:relative;width:100%;min-height:300px;transform-style:preserve-3d;-webkit-transform-style:preserve-3d;transition:transform 0.5s cubic-bezier(0.4,0,0.2,1);-webkit-transition:-webkit-transform 0.5s cubic-bezier(0.4,0,0.2,1);cursor:pointer}
+.card.flipped{transform:rotateY(180deg);-webkit-transform:rotateY(180deg)}
+.card-face{position:absolute;top:0;left:0;right:0;bottom:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:var(--radius-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 24px;border:2px solid var(--gray-200)}
+.card-front{background:var(--white);box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.card-back{background:linear-gradient(135deg,#f3e8ff,#fff0f3);transform:rotateY(180deg);-webkit-transform:rotateY(180deg);box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.card-front .word{font-size:clamp(28px,5vw,40px);font-weight:700;color:var(--gray-900);text-align:center;margin-bottom:8px}
+.card-front .phonetic{font-size:16px;color:var(--gray-600);margin-bottom:16px}
+.card-front .tap-hint{font-size:11px;color:var(--gray-600);opacity:0.6;position:absolute;bottom:16px}
+.card-back .word-sm{font-size:18px;font-weight:700;color:var(--purple);margin-bottom:6px}
+.card-back .definition{font-size:16px;color:var(--gray-900);text-align:center;line-height:1.6;margin-bottom:8px}
+.card-back .zh{font-size:15px;color:var(--purple-dark);text-align:center;margin-bottom:12px}
+.card-back .example{font-size:13px;color:var(--gray-600);font-style:italic;text-align:center;max-width:380px}
+.card-back .pos-tag{display:inline-block;padding:2px 10px;background:var(--purple);color:#fff;border-radius:20px;font-size:11px;font-weight:600;margin-bottom:12px}
+
+/* Buttons */
+.actions{display:flex;gap:12px;justify-content:center;margin-bottom:20px;flex-wrap:wrap}
+.btn{padding:12px 28px;border-radius:30px;font-size:14px;font-weight:600;border:none;cursor:pointer;transition:all 0.2s;font-family:inherit}
+.btn-again{background:#fef2f2;color:#dc2626;border:2px solid #fecaca}
+.btn-again:hover{background:#fecaca}
+.btn-good{background:#ecfdf5;color:#059669;border:2px solid #a7f3d0}
+.btn-good:hover{background:#a7f3d0}
+.btn-easy{background:#eff6ff;color:#2563eb;border:2px solid #bfdbfe}
+.btn-easy:hover{background:#bfdbfe}
+.btn-flip{background:var(--white);color:var(--purple);border:2px solid var(--gray-200);padding:10px 24px}
+.btn-flip:hover{border-color:var(--purple)}
+
+/* Queue info */
+.queue-info{text-align:center;font-size:13px;color:var(--gray-600);margin-bottom:16px}
+.queue-info strong{color:var(--purple)}
+
+/* Session recap */
+.session-recap{background:var(--white);border-radius:var(--radius);padding:20px 24px;border:1px solid var(--gray-200);max-width:500px;margin:32px auto 0;display:none}
+.session-recap.show{display:block}
+.session-recap h3{font-size:16px;margin-bottom:12px}
+.session-recap .recap-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px}
+.session-recap .recap-item{display:flex;justify-content:space-between;padding:6px 10px;background:var(--gray-50);border-radius:6px}
+.session-recap .recap-item .val{font-weight:700}
+
+/* Deck selection */
+.deck-selector{display:flex;gap:8px;justify-content:center;margin-bottom:20px;flex-wrap:wrap}
+.deck-chip{padding:8px 18px;border-radius:20px;font-size:13px;font-weight:600;border:2px solid var(--gray-200);background:var(--white);cursor:pointer;transition:all 0.2s}
+.deck-chip:hover{border-color:var(--purple-light)}
+.deck-chip.active{background:var(--purple);color:#fff;border-color:var(--purple)}
+
+@media(max-width:480px){
+  .card{min-height:260px}
+  .card-front .word{font-size:26px}
+  .actions{gap:8px}
+  .btn{padding:10px 20px;font-size:13px}
+}
+
+.cefr-badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;margin-left:6px;text-transform:uppercase;vertical-align:middle}
+.cefr-A1{background:#e8f5e9;color:#2e7d32}
+.cefr-A2{background:#e3f2fd;color:#1565c0}
+.cefr-B1{background:#fff3e0;color:#e65100}
+.cefr-B2{background:#fce4ec;color:#c62828}
+.cefr-C1{background:#f3e5f5;color:#6a1b9a}
+.cefr-C2{background:#eceff1;color:#37474f}
+
+.cefr-filter{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.cefr-chip{padding:4px 12px;border-radius:14px;font-size:11px;font-weight:700;border:2px solid var(--gray-200);background:var(--white);cursor:pointer;transition:all 0.15s}
+.cefr-chip:hover{border-color:var(--purple-light)}
+.cefr-chip.active{border-color:var(--purple);background:var(--purple);color:#fff}
+.cefr-chip.all{background:var(--gray-900);color:#fff;border-color:var(--gray-900)}
+.cefr-badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;margin-left:6px;text-transform:uppercase;vertical-align:middle}
+.cefr-A1{background:#e8f5e9;color:#2e7d32}.cefr-A2{background:#e3f2fd;color:#1565c0}
+.cefr-B1{background:#fff3e0;color:#e65100}.cefr-B2{background:#fce4ec;color:#c62828}
+.cefr-C1{background:#f3e5f5;color:#6a1b9a}.cefr-C2{background:#eceff1;color:#37474f}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">🦄 IELTS with <span>Kee</span></a>
+    <div class="nav-links">
+      <a href="pt3.html">Part 3</a>
+      <a href="anki.html" style="color:var(--purple);font-weight:700">词卡</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="header">
+  <h1>📇 <span>Anki 词卡</span></h1>
+  <p>807 听力词汇 · Ch1-2 · 按目标分数分级背诵</p>
+</div>
+
+<!-- Deck selector -->
+<div class="deck-selector" id="deckSelector"></div>
+<div class="cefr-filter" id="cefrFilter"></div>
+
+<!-- Progress -->
+<div class="progress-bar" id="progressBar">
+  <div class="progress-stat"><div class="num" id="countNew">0</div><div class="label">新词</div></div>
+  <div class="progress-divider"></div>
+  <div class="progress-stat"><div class="num" id="countReview">0</div><div class="label">复习</div></div>
+  <div class="progress-divider"></div>
+  <div class="progress-stat"><div class="num" id="countDone">0</div><div class="label">已掌握</div></div>
+</div>
+
+<!-- Queue -->
+<div class="queue-info" id="queueInfo"></div>
+
+<!-- Card -->
+<div class="card-area">
+  <div class="card" id="card" onclick="flipCard()" ontouchstart="">
+    <div class="card-face card-front">
+      <div class="word" id="wordFront"></div>
+      <div class="phonetic" id="phonetic"></div>
+      <div class="tap-hint">👆 点击翻转</div>
+    </div>
+    <div class="card-face card-back">
+      <div class="pos-tag" id="posTag"></div>
+      <span class="cefr-badge" id="cefrBadge"></span>
+      <span class="cefr-badge" id="cefrBadge" style="display:none"></span>
+      <div class="word-sm" id="wordBack"></div>
+      <div class="definition" id="definition"></div>
+      <div class="zh" id="zhDef"></div>
+      <div class="example" id="example"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Actions -->
+<div class="actions">
+  <button class="btn btn-flip" onclick="flipCard()">🔄 翻转</button>
+  <button class="btn btn-again" id="btnAgain" onclick="rateCard(1)" style="display:none">🔁 再来一次</button>
+  <button class="btn btn-good" id="btnGood" onclick="rateCard(3)" style="display:none">👍 认识</button>
+  <button class="btn btn-easy" id="btnEasy" onclick="rateCard(5)" style="display:none">✅ 太简单</button>
+</div>
+
+<!-- Session recap -->
+<div class="session-recap" id="recap">
+  <h3>📊 本轮统计</h3>
+  <div class="recap-grid">
+    <div class="recap-item"><span>已复习</span><span class="val" id="recapReviewed">0</span></div>
+    <div class="recap-item"><span>掌握</span><span class="val" id="recapMastered">0</span></div>
+    <div class="recap-item"><span>新词学习中</span><span class="val" id="recapLearning">0</span></div>
+    <div class="recap-item"><span>正确率</span><span class="val" id="recapAccuracy">—</span></div>
+  </div>
+  <button class="btn btn-flip" onclick="resetSession()" style="margin-top:12px;width:100%">🔄 再来一轮</button>
+</div>
+
+</div>
+
+<script>
+// ============ 王陆807 听力词汇 × CEFR 分级 ============
+// Source: 王陆 807 IELTS Listening Vocabulary (升级版) PDF — 直接提取
+// Chapters 1-2: 学科名称 + 课程 (含所有子分类)
+// CEFR levels: English Vocabulary Profile
+
+const decks = {
+  'ch1': {
+    name: 'Ch1 学科名称',
+    words: [
+      {word:'education',phonetic:'/ˌedʒuˈkeɪʃn/',pos:'n.',def:'The process of receiving or giving instruction',zh:'教育',cefr:'A2',ex:'Education is essential for personal development.'},
+      {word:'secondary',phonetic:'/ˈsekəndri/',pos:'adj.',def:'Coming after primary; relating to high school',zh:'中等的；第二的',cefr:'B1',ex:'She teaches at a secondary school.'},
+      {word:'major',phonetic:'/ˈmeɪdʒə/',pos:'n.',def:'A student\'s principal subject of study',zh:'专业',cefr:'B1',ex:'What is your major at university?'},
+      {word:'discipline',phonetic:'/ˈdɪsəplɪn/',pos:'n.',def:'A branch of knowledge; self-control',zh:'学科；纪律',cefr:'B2',ex:'Psychology is a fascinating academic discipline.'},
+      {word:'applied',phonetic:'/əˈplaɪd/',pos:'adj.',def:'Put to practical use rather than theoretical',zh:'应用的',cefr:'B2',ex:'She studies applied linguistics.'},
+      {word:'anthropology',phonetic:'/ˌænθrəˈpɒlədʒi/',pos:'n.',def:'The study of human societies and cultures',zh:'人类学',cefr:'C1',ex:'Anthropology examines diverse cultural traditions.'},
+      {word:'sociology',phonetic:'/ˌsəʊsiˈɒlədʒi/',pos:'n.',def:'The study of the development of human society',zh:'社会学',cefr:'B2',ex:'Sociology explores social structures and relationships.'},
+      {word:'biology',phonetic:'/baɪˈɒlədʒi/',pos:'n.',def:'The scientific study of living organisms',zh:'生物学',cefr:'A2',ex:'Biology is her favourite science subject.'},
+      {word:'microbiology',phonetic:'/ˌmaɪkrəʊbaɪˈɒlədʒi/',pos:'n.',def:'The branch of biology dealing with microorganisms',zh:'微生物学',cefr:'C1',ex:'Microbiology is vital for medical research.'},
+      {word:'physiology',phonetic:'/ˌfɪziˈɒlədʒi/',pos:'n.',def:'The study of how living organisms function',zh:'生理学',cefr:'C1',ex:'Human physiology explains bodily functions.'},
+      {word:'psychology',phonetic:'/saɪˈkɒlədʒi/',pos:'n.',def:'The scientific study of mind and behaviour',zh:'心理学',cefr:'B1',ex:'Child psychology is a popular course.'},
+      {word:'mining',phonetic:'/ˈmaɪnɪŋ/',pos:'n.',def:'The process of extracting minerals from the ground',zh:'采矿',cefr:'B1',ex:'Mining is a major industry in Australia.'},
+      {word:'mathematics',phonetic:'/ˌmæθəˈmætɪks/',pos:'n.',def:'The abstract science of number, quantity, and space',zh:'数学',cefr:'A2',ex:'Mathematics is required for engineering.'},
+      {word:'arts',phonetic:'/ɑːts/',pos:'n.',def:'Subjects such as literature, history, and languages',zh:'文科',cefr:'A2',ex:'She has a degree in arts.'},
+      {word:'science',phonetic:'/ˈsaɪəns/',pos:'n.',def:'Systematic study of the natural world',zh:'科学；理科',cefr:'A2',ex:'Science has transformed our understanding.'},
+      {word:'philosophy',phonetic:'/fɪˈlɒsəfi/',pos:'n.',def:'The study of fundamental questions about existence',zh:'哲学',cefr:'B2',ex:'Philosophy challenges us to think critically.'},
+      {word:'geography',phonetic:'/dʒiˈɒɡrəfi/',pos:'n.',def:'The study of the Earth and its features',zh:'地理',cefr:'A2',ex:'Geography covers physical and human aspects.'},
+      {word:'history',phonetic:'/ˈhɪstri/',pos:'n.',def:'The study of past events',zh:'历史',cefr:'A2',ex:'History helps us learn from the past.'},
+      {word:'astronomy',phonetic:'/əˈstrɒnəmi/',pos:'n.',def:'The scientific study of stars and space',zh:'天文学',cefr:'B2',ex:'Astronomy reveals the scale of the universe.'},
+      {word:'astrology',phonetic:'/əˈstrɒlədʒi/',pos:'n.',def:'The study of star positions and their influence',zh:'占星术',cefr:'C1',ex:'Astrology is not considered a science.'},
+      {word:'media',phonetic:'/ˈmiːdiə/',pos:'n.',def:'The main means of mass communication',zh:'媒体',cefr:'A2',ex:'Social media has changed how we interact.'},
+      {word:'linguistics',phonetic:'/lɪŋˈɡwɪstɪks/',pos:'n.',def:'The scientific study of language',zh:'语言学',cefr:'C1',ex:'Linguistics analyses language structure and use.'},
+      {word:'politics',phonetic:'/ˈpɒlətɪks/',pos:'n.',def:'The activities of governing a country or area',zh:'政治',cefr:'B1',ex:'Politics shapes public policy.'},
+      {word:'physics',phonetic:'/ˈfɪzɪks/',pos:'n.',def:'The study of matter, energy, force, and motion',zh:'物理学',cefr:'A2',ex:'Physics explains fundamental natural laws.'},
+      {word:'statistics',phonetic:'/stəˈtɪstɪks/',pos:'n.',def:'The science of collecting and analysing numerical data',zh:'统计学',cefr:'B2',ex:'Statistics are used to support research findings.'},
+      {word:'economics',phonetic:'/ˌiːkəˈnɒmɪks/',pos:'n.',def:'The study of production, consumption, and wealth',zh:'经济学',cefr:'B1',ex:'Economics influences government policy.'},
+      {word:'economy',phonetic:'/ɪˈkɒnəmi/',pos:'n.',def:'The state of a region\'s production and consumption',zh:'经济',cefr:'B1',ex:'The global economy is interconnected.'},
+      {word:'economical',phonetic:'/ˌiːkəˈnɒmɪkl/',pos:'adj.',def:'Giving good value relative to the money spent',zh:'经济实惠的',cefr:'B2',ex:'This is a more economical option.'},
+      {word:'psycholinguistics',phonetic:'/ˌsaɪkəʊlɪŋˈɡwɪstɪks/',pos:'n.',def:'The study of language processing in the mind',zh:'心理语言学',cefr:'C2',ex:'Psycholinguistics bridges psychology and language.'},
+      {word:'environment',phonetic:'/ɪnˈvaɪrənmənt/',pos:'n.',def:'The natural world; surroundings',zh:'环境',cefr:'B1',ex:'We must protect the environment.'},
+      {word:'chemistry',phonetic:'/ˈkemɪstri/',pos:'n.',def:'The scientific study of substances and reactions',zh:'化学',cefr:'A2',ex:'Chemistry involves laboratory work.'},
+      {word:'management',phonetic:'/ˈmænɪdʒmənt/',pos:'n.',def:'The process of controlling or organising',zh:'管理',cefr:'B1',ex:'Time management is a crucial skill.'},
+      {word:'archaeology',phonetic:'/ˌɑːkiˈɒlədʒi/',pos:'n.',def:'The study of history through excavation',zh:'考古学',cefr:'B2',ex:'Archaeological discoveries reveal ancient cultures.'},
+      {word:'accountancy',phonetic:'/əˈkaʊntənsi/',pos:'n.',def:'The profession of keeping financial records',zh:'会计学',cefr:'B2',ex:'Accountancy requires attention to detail.'},
+      {word:'accounting',phonetic:'/əˈkaʊntɪŋ/',pos:'n.',def:'The process of recording financial transactions',zh:'会计',cefr:'B1',ex:'She works in an accounting firm.'},
+      {word:'computer',phonetic:'/kəmˈpjuːtə/',pos:'n.',def:'An electronic device for processing data',zh:'电脑',cefr:'A1',ex:'Computer skills are essential today.'},
+      {word:'literature',phonetic:'/ˈlɪtrətʃə/',pos:'n.',def:'Written works of artistic merit',zh:'文学',cefr:'B1',ex:'She specialises in English literature.'},
+      {word:'engineering',phonetic:'/ˌendʒɪˈnɪərɪŋ/',pos:'n.',def:'The application of science to design and construction',zh:'工程学',cefr:'B1',ex:'Engineering is a highly practical discipline.'},
+      {word:'architecture',phonetic:'/ˈɑːkɪtektʃə/',pos:'n.',def:'The art and practice of designing buildings',zh:'建筑学',cefr:'B1',ex:'Architecture blends art with functionality.'},
+      {word:'business',phonetic:'/ˈbɪznəs/',pos:'n.',def:'Commercial activity; a company',zh:'商务；商科',cefr:'A2',ex:'Business studies cover management and marketing.'},
+      {word:'law',phonetic:'/lɔː/',pos:'n.',def:'The system of rules in a country',zh:'法学；法律',cefr:'A2',ex:'Law requires logical reasoning skills.'},
+      {word:'finance',phonetic:'/ˈfaɪnæns/',pos:'n.',def:'The management of money and investments',zh:'金融学',cefr:'B1',ex:'Finance is central to business operations.'},
+      {word:'banking',phonetic:'/ˈbæŋkɪŋ/',pos:'n.',def:'The business conducted by banks',zh:'银行业',cefr:'B1',ex:'Banking regulations have tightened recently.'},
+      {word:'Oxford',phonetic:'/ˈɒksfəd/',pos:'n.',def:'A world-famous university in England',zh:'牛津大学',cefr:'B1',ex:'Oxford has produced many notable scholars.'},
+      {word:'Cambridge',phonetic:'/ˈkeɪmbrɪdʒ/',pos:'n.',def:'A prestigious university in England',zh:'剑桥大学',cefr:'B1',ex:'Cambridge and Oxford are rivals.'},
+      {word:'college',phonetic:'/ˈkɒlɪdʒ/',pos:'n.',def:'An institution of higher education',zh:'学院',cefr:'A2',ex:'She is in her first year of college.'},
+      {word:'review',phonetic:'/rɪˈvjuː/',pos:'n.',def:'A formal assessment or re-examination',zh:'复习；评论',cefr:'B1',ex:'We need to review the course material.'},
+    ]
+  },
+  'ch2': {
+    name: 'Ch2 课程·教学·评估',
+    words: [
+      {word:'orientation',phonetic:'/ˌɔːriənˈteɪʃn/',pos:'n.',def:'An introductory programme for new students',zh:'新生入学教育',cefr:'B2',ex:'Orientation week helps new students settle in.'},
+      {word:'register',phonetic:'/ˈredʒɪstə/',pos:'v.',def:'To officially record or enrol',zh:'注册',cefr:'B1',ex:'Please register for the course online.'},
+      {word:'registration',phonetic:'/ˌredʒɪˈstreɪʃn/',pos:'n.',def:'The action of enrolling or recording',zh:'注册',cefr:'B1',ex:'Registration closes next Friday.'},
+      {word:'enrol',phonetic:'/ɪnˈrəʊl/',pos:'v.',def:'To officially join a course',zh:'报名',cefr:'B1',ex:'You can enrol for the course online.'},
+      {word:'enrolment',phonetic:'/ɪnˈrəʊlmənt/',pos:'n.',def:'The action of enrolling',zh:'报名；注册',cefr:'B1',ex:'Enrolment numbers have increased this year.'},
+      {word:'curriculum',phonetic:'/kəˈrɪkjələm/',pos:'n.',def:'The subjects making up a course of study',zh:'课程',cefr:'B2',ex:'The curriculum covers a wide range of topics.'},
+      {word:'term',phonetic:'/tɜːm/',pos:'n.',def:'A period in the academic year; a word or phrase',zh:'学期；术语',cefr:'A2',ex:'The autumn term starts in September.'},
+      {word:'session',phonetic:'/ˈseʃn/',pos:'n.',def:'A period devoted to a particular activity',zh:'课程；时间段',cefr:'B1',ex:'The morning session runs from 9 to 12.'},
+      {word:'virtual',phonetic:'/ˈvɜːtʃuəl/',pos:'adj.',def:'Carried out using computer technology',zh:'虚拟的',cefr:'B2',ex:'Virtual learning has become more common.'},
+      {word:'test',phonetic:'/test/',pos:'n. / v.',def:'A procedure to assess ability or knowledge',zh:'测试',cefr:'A2',ex:'We have a listening test tomorrow.'},
+      {word:'course',phonetic:'/kɔːs/',pos:'n.',def:'A series of lessons on a subject',zh:'课程',cefr:'A1',ex:'This course runs for ten weeks.'},
+      {word:'compulsory',phonetic:'/kəmˈpʌlsəri/',pos:'adj.',def:'Required by law or a rule',zh:'必修的',cefr:'B2',ex:'English is a compulsory subject.'},
+      {word:'practice',phonetic:'/ˈpræktɪs/',pos:'n.',def:'Repeated exercise to improve a skill',zh:'练习',cefr:'A2',ex:'Regular practice improves listening skills.'},
+      {word:'mark',phonetic:'/mɑːk/',pos:'n. / v.',def:'A score or grade for academic work',zh:'分数',cefr:'A2',ex:'She got high marks in all her exams.'},
+      {word:'email',phonetic:'/ˈiːmeɪl/',pos:'n.',def:'Messages sent electronically',zh:'电子邮件',cefr:'A1',ex:'I\'ll send the details by email.'},
+      {word:'attachment',phonetic:'/əˈtætʃmənt/',pos:'n.',def:'A file sent with an email',zh:'附件',cefr:'B1',ex:'Please check the attachment for the schedule.'},
+      {word:'lecture',phonetic:'/ˈlektʃə/',pos:'n.',def:'An educational talk to a large group',zh:'授课；讲座',cefr:'B1',ex:'The lecture was very informative.'},
+      {word:'tutorial',phonetic:'/tjuːˈtɔːriəl/',pos:'n.',def:'A small-group teaching session',zh:'小组讨论；辅导课',cefr:'B2',ex:'Tutorials allow for more individual attention.'},
+      {word:'internship',phonetic:'/ˈɪntɜːnʃɪp/',pos:'n.',def:'A period of work experience for students',zh:'实习',cefr:'B2',ex:'She did an internship at a law firm.'},
+      {word:'evaluation',phonetic:'/ɪˌvæljuˈeɪʃn/',pos:'n.',def:'The making of a judgement about value',zh:'评估',cefr:'B2',ex:'Course evaluation helps improve teaching.'},
+      {word:'assessment',phonetic:'/əˈsesmənt/',pos:'n.',def:'The evaluation of ability or quality',zh:'学习评估',cefr:'B2',ex:'Assessment is based on coursework and exams.'},
+      {word:'attendance',phonetic:'/əˈtendəns/',pos:'n.',def:'The action of being present at a place',zh:'出勤率',cefr:'B2',ex:'Good attendance is required to pass.'},
+      {word:'exam',phonetic:'/ɪɡˈzæm/',pos:'n.',def:'A formal test of knowledge',zh:'考试',cefr:'A2',ex:'The final exam counts for 60% of the grade.'},
+      {word:'examination',phonetic:'/ɪɡˌzæmɪˈneɪʃn/',pos:'n.',def:'A detailed inspection or test',zh:'考试',cefr:'B1',ex:'The examination will last three hours.'},
+      {word:'failure',phonetic:'/ˈfeɪljə/',pos:'n.',def:'Lack of success in doing something',zh:'失败；不及格',cefr:'B1',ex:'Fear of failure can cause anxiety.'},
+      {word:'grade',phonetic:'/ɡreɪd/',pos:'n.',def:'A level of academic achievement',zh:'年级；成绩',cefr:'A2',ex:'She received excellent grades this term.'},
+      {word:'score',phonetic:'/skɔː/',pos:'n.',def:'The number of points achieved in a test',zh:'分数',cefr:'A2',ex:'What score did you get on the test?'},
+      {word:'record',phonetic:'/ˈrekɔːd/',pos:'n.',def:'Information stored in permanent form',zh:'记录；成绩单',cefr:'A2',ex:'Your academic record shows steady improvement.'},
+      {word:'recording',phonetic:'/rɪˈkɔːdɪŋ/',pos:'n.',def:'Sound or video that has been stored',zh:'录音',cefr:'A2',ex:'Listen to the recording and answer the questions.'},
+      {word:'recorder',phonetic:'/rɪˈkɔːdə/',pos:'n.',def:'A device for recording sound',zh:'录音机',cefr:'A2',ex:'Please bring a tape recorder to the interview.'},
+      {word:'tape',phonetic:'/teɪp/',pos:'n.',def:'Magnetic material for recording sound or video',zh:'磁带',cefr:'A2',ex:'The interview was recorded on tape.'},
+      {word:'cassette',phonetic:'/kəˈset/',pos:'n.',def:'A sealed unit containing audio tape',zh:'磁带',cefr:'B1',ex:'He still has a collection of old cassettes.'},
+      {word:'video',phonetic:'/ˈvɪdiəʊ/',pos:'n.',def:'The recording of moving visual images',zh:'录像',cefr:'A2',ex:'The lecture is available on video.'},
+      {word:'note',phonetic:'/nəʊt/',pos:'n.',def:'A brief record of facts written down',zh:'笔记',cefr:'A2',ex:'Take notes during the lecture.'},
+      {word:'rate',phonetic:'/reɪt/',pos:'n.',def:'A measure or quantity measured against another',zh:'比率；费率',cefr:'B1',ex:'The pass rate for this course is 85%.'},
+      {word:'group',phonetic:'/ɡruːp/',pos:'n.',def:'A number of people gathered together',zh:'群体；小组',cefr:'A1',ex:'Work in groups for this activity.'},
+      {word:'office',phonetic:'/ˈɒfɪs/',pos:'n.',def:'A room used for professional work',zh:'办公室',cefr:'A1',ex:'The admissions office is on the ground floor.'},
+      {word:'parent',phonetic:'/ˈpeərənt/',pos:'n.',def:'A father or mother',zh:'父母',cefr:'A1',ex:'Parents are invited to the open day.'},
+      {word:'class',phonetic:'/klɑːs/',pos:'n.',def:'A group of students taught together',zh:'班级',cefr:'A1',ex:'Our class has 25 students.'},
+      {word:'reception',phonetic:'/rɪˈsepʃn/',pos:'n.',def:'The area in a building where visitors are received',zh:'接待处',cefr:'A2',ex:'Please check in at reception.'},
+      {word:'goal',phonetic:'/ɡəʊl/',pos:'n.',def:'An aim or desired result',zh:'目标',cefr:'A2',ex:'Setting clear goals helps with motivation.'},
+      {word:'advanced',phonetic:'/ədˈvɑːnst/',pos:'adj.',def:'Far on in progress or development',zh:'高级的',cefr:'B1',ex:'She is taking an advanced English course.'},
+      {word:'level',phonetic:'/ˈlevl/',pos:'n.',def:'A position on a scale of achievement',zh:'水平；程度',cefr:'A2',ex:'What level of English do you have?'},
+      {word:'beginning',phonetic:'/bɪˈɡɪnɪŋ/',pos:'n.',def:'The point at which something starts',zh:'开始；初级',cefr:'A2',ex:'The beginning course covers basic grammar.'},
+      {word:'intermediate',phonetic:'/ˌɪntəˈmiːdiət/',pos:'adj.',def:'Coming between two levels',zh:'中级的',cefr:'B1',ex:'She is at an intermediate level in French.'},
+      {word:'fundamental',phonetic:'/ˌfʌndəˈmentl/',pos:'adj.',def:'Forming a necessary base or core',zh:'基本的',cefr:'B2',ex:'These are fundamental concepts in physics.'},
+      {word:'elementary',phonetic:'/ˌelɪˈmentri/',pos:'adj.',def:'Relating to the most basic aspects',zh:'初级的',cefr:'B1',ex:'The course starts at an elementary level.'},
+      {word:'mid',phonetic:'/mɪd/',pos:'adj.',def:'In the middle of',zh:'中间的',cefr:'A2',ex:'We are now at the mid-point of the course.'},
+      {word:'discussion',phonetic:'/dɪˈskʌʃn/',pos:'n.',def:'Talk about something to reach a decision',zh:'讨论',cefr:'B1',ex:'Group discussion is an important part of the course.'},
+      {word:'stress',phonetic:'/stres/',pos:'n.',def:'Mental or emotional pressure',zh:'压力；重音',cefr:'B1',ex:'Exam stress can affect performance.'},
+      {word:'unemployment',phonetic:'/ˌʌnɪmˈplɔɪmənt/',pos:'n.',def:'The state of being without a job',zh:'失业',cefr:'B1',ex:'Unemployment rates have fallen this year.'},
+      {word:'surroundings',phonetic:'/səˈraʊndɪŋz/',pos:'n.',def:'The things and conditions around a person',zh:'周围事物',cefr:'B2',ex:'New students need time to explore their surroundings.'},
+      {word:'diet',phonetic:'/ˈdaɪət/',pos:'n.',def:'The kinds of food a person habitually eats',zh:'饮食',cefr:'B1',ex:'A balanced diet is important for concentration.'},
+      {word:'deadline',phonetic:'/ˈdedlaɪn/',pos:'n.',def:'The latest time by which something must be done',zh:'最后期限',cefr:'B1',ex:'The assignment deadline is next Monday.'},
+      {word:'dropout',phonetic:'/ˈdrɒpaʊt/',pos:'n.',def:'A person who leaves school before finishing',zh:'辍学',cefr:'B2',ex:'The dropout rate has decreased significantly.'},
+      {word:'cramming',phonetic:'/ˈkræmɪŋ/',pos:'n.',def:'Intensive study shortly before an exam',zh:'填鸭式教学',cefr:'C1',ex:'Cramming is not an effective learning strategy.'},
+      {word:'feedback',phonetic:'/ˈfiːdbæk/',pos:'n.',def:'Information about reactions to performance',zh:'反馈',cefr:'B1',ex:'Teachers provide feedback on assignments.'},
+      {word:'degree',phonetic:'/dɪˈɡriː/',pos:'n.',def:'A qualification awarded by a university',zh:'学位',cefr:'B1',ex:'She is studying for a degree in biology.'},
+      {word:'diploma',phonetic:'/dɪˈpləʊmə/',pos:'n.',def:'A certificate of achievement',zh:'毕业证书',cefr:'B1',ex:'He received a diploma in nursing.'},
+      {word:'certificate',phonetic:'/səˈtɪfɪkət/',pos:'n.',def:'An official document proving a fact',zh:'资格证书',cefr:'B1',ex:'You will receive a certificate on completion.'},
+      {word:'workshop',phonetic:'/ˈwɜːkʃɒp/',pos:'n.',def:'A practical training session',zh:'工作室；研讨会',cefr:'B2',ex:'The drama workshop was very engaging.'},
+      {word:'panic',phonetic:'/ˈpænɪk/',pos:'n.',def:'Sudden uncontrollable fear or anxiety',zh:'恐惧；恐慌',cefr:'B1',ex:'Cramming increases panic before exams.'},
+      {word:'teaching',phonetic:'/ˈtiːtʃɪŋ/',pos:'n.',def:'The occupation of instructing students',zh:'教学',cefr:'A2',ex:'Teaching is a rewarding profession.'},
+      {word:'president',phonetic:'/ˈprezɪdənt/',pos:'n.',def:'The head of a college or university',zh:'校长；总统',cefr:'B1',ex:'The university president gave a speech.'},
+      {word:'headmaster',phonetic:'/ˌhedˈmɑːstə/',pos:'n.',def:'The principal of a school',zh:'校长（中小学）',cefr:'B2',ex:'The headmaster addressed the assembly.'},
+      {word:'principal',phonetic:'/ˈprɪnsəpl/',pos:'n.',def:'The head of a school',zh:'校长',cefr:'B2',ex:'The principal announced new school policies.'},
+      {word:'chancellor',phonetic:'/ˈtʃɑːnsələ/',pos:'n.',def:'The titular head of a university',zh:'校长（大学）',cefr:'C1',ex:'The chancellor conferred the degrees.'},
+      {word:'director',phonetic:'/dəˈrektə/',pos:'n.',def:'A person in charge of an activity',zh:'主管；导演',cefr:'B1',ex:'The course director welcomed the new students.'},
+      {word:'scientist',phonetic:'/ˈsaɪəntɪst/',pos:'n.',def:'A person who studies the natural world',zh:'科学家',cefr:'A2',ex:'Scientists have made important discoveries.'},
+      {word:'secretary',phonetic:'/ˈsekrətri/',pos:'n.',def:'A person employed to handle correspondence',zh:'秘书',cefr:'A2',ex:'Please speak to the department secretary.'},
+      {word:'administrator',phonetic:'/ədˈmɪnɪstreɪtə/',pos:'n.',def:'A person responsible for running an organisation',zh:'管理者',cefr:'B2',ex:'The administrator handles all paperwork.'},
+      {word:'administration',phonetic:'/ədˌmɪnɪˈstreɪʃn/',pos:'n.',def:'The process of managing an organisation',zh:'管理',cefr:'B2',ex:'The university administration is on the first floor.'},
+      {word:'professor',phonetic:'/prəˈfesə/',pos:'n.',def:'A senior academic teacher at a university',zh:'教授',cefr:'B1',ex:'Professor Smith teaches linguistics.'},
+      {word:'officer',phonetic:'/ˈɒfɪsə/',pos:'n.',def:'A person holding a position of authority',zh:'官员；军官',cefr:'B1',ex:'The education officer visited our school.'},
+      {word:'tutor',phonetic:'/ˈtjuːtə/',pos:'n.',def:'A private teacher or university supervisor',zh:'导师；辅导员',cefr:'B1',ex:'My tutor helps me with difficult topics.'},
+      {word:'lecturer',phonetic:'/ˈlektʃərə/',pos:'n.',def:'A person who gives lectures at a university',zh:'授课教师',cefr:'B2',ex:'The lecturer explained the theory clearly.'},
+      {word:'assignment',phonetic:'/əˈsaɪnmənt/',pos:'n.',def:'A task given to students as part of their studies',zh:'作业',cefr:'B1',ex:'The assignment is due next Friday.'},
+      {word:'advise',phonetic:'/ədˈvaɪz/',pos:'v.',def:'To offer suggestions about the best course of action',zh:'建议',cefr:'B1',ex:'I would advise you to start revising early.'},
+      {word:'advice',phonetic:'/ədˈvaɪs/',pos:'n.',def:'Guidance or recommendations offered',zh:'建议',cefr:'A2',ex:'She gave me some good advice about the exam.'},
+      {word:'supervisor',phonetic:'/ˈsuːpəvaɪzə/',pos:'n.',def:'A person who oversees students or workers',zh:'导师；主管',cefr:'B2',ex:'Your supervisor will guide your research.'},
+      {word:'supervise',phonetic:'/ˈsuːpəvaɪz/',pos:'v.',def:'To observe and direct the work of others',zh:'监督',cefr:'B2',ex:'The professor supervises four PhD students.'},
+      {word:'assistant',phonetic:'/əˈsɪstənt/',pos:'n.',def:'A person who helps in particular work',zh:'助手',cefr:'B1',ex:'She works as a teaching assistant.'},
+      {word:'seminar',phonetic:'/ˈsemɪnɑː/',pos:'n.',def:'A class for discussion of a topic',zh:'学术研讨会',cefr:'B2',ex:'The research seminar is held every Thursday.'},
+      {word:'schedule',phonetic:'/ˈʃedjuːl/',pos:'n.',def:'A plan of things to be done',zh:'时间表',cefr:'B1',ex:'Check the exam schedule online.'},
+      {word:'timetable',phonetic:'/ˈtaɪmteɪbl/',pos:'n.',def:'A chart showing the times of events',zh:'时间表',cefr:'A2',ex:'The bus timetable changes on Sundays.'},
+    ]
+  }
+};
+
+
+
+;
+
+// ============ APP STATE ============
+const STORAGE_KEY = 'ielts-anki-state';
+let state = loadState();
+let currentDeck = 'ielts-core';
+let currentCard = null;
+let currentWordIndex = -1;
+let reviewQueue = [];
+let sessionReviewed = 0;
+let sessionMastered = 0;
+
+function loadState(){
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(raw) return JSON.parse(raw);
+  } catch(e){}
+  return {decks:{}};
+}
+
+function saveState(){
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e){}
+}
+
+function getDeckState(deckKey){
+  if(!state.decks[deckKey]) state.decks[deckKey] = {};
+  return state.decks[deckKey];
+}
+
+
+let selectedCefr = 'all';
+
+function renderCefrFilter(){
+  const el = document.getElementById('cefrFilter');
+  const words = decks[currentDeck].words;
+
+  // Group by target band
+  var band55 = words.filter(function(w){ return w.cefr === 'A1' || w.cefr === 'A2' || w.cefr === 'B1'; }).length;
+  var band65 = words.filter(function(w){ return w.cefr === 'B2' || w.cefr === 'C1'; }).length;
+  var band7p = words.filter(function(w){ return w.cefr === 'C2'; }).length;
+
+  var active = selectedCefr;
+  el.innerHTML =
+    '<button class="cefr-chip all' + (active==='all'?' active':'') + '" onclick="filterCefr(\'all\')">\u5168\u90e8 (' + words.length + ')</button>' +
+    '<button class="cefr-chip' + (active==='5.5'?' active':'') + '" onclick="filterCefr(\'5.5\')">\ud83c\udfaf 5.5\u5206 (A1-B1) ' + band55 + '</button>' +
+    '<button class="cefr-chip' + (active==='6.5'?' active':'') + '" onclick="filterCefr(\'6.5\')">\ud83c\udfaf 6.5\u5206 (B2-C1) ' + band65 + '</button>' +
+    (band7p > 0 ? '<button class="cefr-chip' + (active==='7+'?' active':'') + '" onclick="filterCefr(\'7+\')">\ud83c\udfaf 7+\u5206 (C2) ' + band7p + '</button>' : '');
+}
+
+function filterCefr(level){
+  selectedCefr = level;
+  renderCefrFilter();
+  sessionReviewed = 0;
+  sessionMastered = 0;
+  buildQueue();
+  updateUI();
+  nextCard();
+}
+
+// Override buildQueue to support CEFR filtering
+const _buildQueue = buildQueue;
+buildQueue = function(){
+  const ds = getDeckState(currentDeck);
+  const words = decks[currentDeck].words;
+  reviewQueue = [];
+  const now = Date.now();
+  const toReview = [];
+  const newWords = [];
+  
+  words.forEach((w,i) => {
+    if(selectedCefr !== 'all'){
+      var match = false;
+      if(selectedCefr === '5.5' && (w.cefr === 'A1' || w.cefr === 'A2' || w.cefr === 'B1')) match = true;
+      if(selectedCefr === '6.5' && (w.cefr === 'B2' || w.cefr === 'C1')) match = true;
+      if(selectedCefr === '7+' && w.cefr === 'C2') match = true;
+      if(!match) return;
+    }
+    const ws = ds[i];
+    if(!ws || ws.stage === 0) newWords.push(i);
+    else if(ws.nextReview && ws.nextReview <= now) toReview.push(i);
+  });
+  
+  shuffle(toReview);
+  shuffle(newWords);
+  reviewQueue = [...toReview, ...newWords];
+  currentWordIndex = -1;
+};
+
+function init(){
+  renderDeckSelector();
+  switchDeck(currentDeck);
+}
+
+function renderDeckSelector(){
+  const el = document.getElementById('deckSelector');
+  el.innerHTML = Object.entries(decks).map(([key,deck]) =>
+    `<button class="deck-chip${key===currentDeck?' active':''}" onclick="switchDeck('${key}')">${deck.name}</button>`
+  ).join('');
+}
+
+function switchDeck(deckKey){
+  currentDeck = deckKey;
+  selectedCefr = 'all';
+  renderDeckSelector();
+  renderCefrFilter();
+  sessionReviewed = 0;
+  sessionMastered = 0;
+  buildQueue();
+  updateUI();
+  nextCard();
+}
+
+function buildQueue(){
+  const ds = getDeckState(currentDeck);
+  const words = decks[currentDeck].words;
+  reviewQueue = [];
+  
+  // Add due-for-review words first, then new words
+  const now = Date.now();
+  const toReview = [];
+  const newWords = [];
+  
+  words.forEach((w,i) => {
+    const ws = ds[i];
+    if(!ws || ws.stage === 0){
+      newWords.push(i);
+    } else if(ws.nextReview && ws.nextReview <= now){
+      toReview.push(i);
+    }
+  });
+  
+  // Shuffle review queue, then append new
+  shuffle(toReview);
+  shuffle(newWords);
+  reviewQueue = [...toReview, ...newWords];
+  currentWordIndex = -1;
+}
+
+function shuffle(arr){
+  for(let i = arr.length-1; i>0; i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+}
+
+function nextCard(){
+  currentWordIndex++;
+  if(currentWordIndex >= reviewQueue.length){
+    showRecap();
+    return;
+  }
+  
+  const wordIdx = reviewQueue[currentWordIndex];
+  const word = decks[currentDeck].words[wordIdx];
+  currentCard = {wordIdx, word};
+  
+  document.getElementById('recap').classList.remove('show');
+  document.getElementById('wordFront').textContent = word.word;
+  document.getElementById('phonetic').textContent = word.phonetic;
+  document.getElementById('wordBack').textContent = word.word;
+  document.getElementById('posTag').textContent = word.pos;
+  const badge = document.getElementById('cefrBadge');
+  badge.textContent = word.cefr || '';
+  badge.className = 'cefr-badge cefr-' + (word.cefr || '');
+  badge.style.display = word.cefr ? 'inline-block' : 'none';
+  document.getElementById('cefrBadge').textContent = word.cefr || '';
+  document.getElementById('cefrBadge').style.display = word.cefr ? 'inline-block' : 'none';
+  document.getElementById('cefrBadge').className = 'cefr-badge cefr-' + (word.cefr || '');
+  document.getElementById('definition').textContent = word.def;
+  document.getElementById('zhDef').textContent = word.zh;
+  document.getElementById('example').textContent = `"${word.ex}"`;
+  
+  // Reset card
+  document.getElementById('card').classList.remove('flipped');
+  document.getElementById('btnAgain').style.display = 'none';
+  document.getElementById('btnGood').style.display = 'none';
+  document.getElementById('btnEasy').style.display = 'none';
+  
+  updateUI();
+}
+
+function flipCard(){
+  const card = document.getElementById('card');
+  card.classList.toggle('flipped');
+  
+  if(card.classList.contains('flipped')){
+    document.getElementById('btnAgain').style.display = 'inline-block';
+    document.getElementById('btnGood').style.display = 'inline-block';
+    document.getElementById('btnEasy').style.display = 'inline-block';
+  }
+}
+
+function rateCard(quality){
+  const ds = getDeckState(currentDeck);
+  const idx = currentCard.wordIdx;
+  const ws = ds[idx] || {stage:0, ease:2.5, interval:0, nextReview:0, reviews:0};
+  
+  ws.reviews++;
+  sessionReviewed++;
+  
+  if(quality >= 3){
+    sessionMastered++;
+    // Anki-style scheduling
+    if(ws.stage === 0){
+      ws.interval = 1; // 1 day
+      ws.stage = 1;
+    } else if(ws.stage === 1){
+      ws.interval = quality >= 5 ? 4 : 2;
+      ws.stage = 2;
+    } else {
+      ws.interval = Math.round(ws.interval * ws.ease);
+      ws.stage++;
+    }
+    ws.ease = Math.max(1.3, ws.ease + (0.1 * (quality - 3)));
+  } else {
+    // Again: reset
+    ws.stage = 0;
+    ws.interval = 0;
+  }
+  
+  ws.nextReview = Date.now() + (ws.interval * 86400000);
+  ds[idx] = ws;
+  saveState();
+  
+  nextCard();
+}
+
+function showRecap(){
+  document.getElementById('recap').classList.add('show');
+  document.getElementById('wordFront').textContent = '🎉';
+  document.getElementById('phonetic').textContent = '本轮完成！';
+  document.getElementById('recapReviewed').textContent = sessionReviewed;
+  document.getElementById('recapMastered').textContent = sessionMastered;
+  document.getElementById('recapLearning').textContent = Math.max(0, sessionReviewed - sessionMastered);
+  document.getElementById('recapAccuracy').textContent = sessionReviewed > 0 
+    ? Math.round(sessionMastered/sessionReviewed*100) + '%' 
+    : '—';
+  document.getElementById('card').classList.remove('flipped');
+  document.getElementById('btnAgain').style.display = 'none';
+  document.getElementById('btnGood').style.display = 'none';
+  document.getElementById('btnEasy').style.display = 'none';
+}
+
+function resetSession(){
+  buildQueue();
+  sessionReviewed = 0;
+  sessionMastered = 0;
+  document.getElementById('recap').classList.remove('show');
+  nextCard();
+}
+
+function updateUI(){
+  const ds = getDeckState(currentDeck);
+  const words = decks[currentDeck].words;
+  const now = Date.now();
+  
+  let newCount = 0, reviewCount = 0, doneCount = 0;
+  words.forEach((w,i) => {
+    const ws = ds[i];
+    if(!ws || ws.stage === 0) newCount++;
+    else if(ws.nextReview && ws.nextReview <= now) reviewCount++;
+    else if(ws.stage >= 1 && (!ws.nextReview || ws.nextReview > now)) doneCount++;
+  });
+  
+  document.getElementById('countNew').textContent = newCount;
+  document.getElementById('countReview').textContent = reviewCount;
+  document.getElementById('countDone').textContent = doneCount;
+  
+  const remaining = reviewQueue.length - currentWordIndex - 1;
+  if(remaining >= 0 && currentWordIndex >= 0){
+    document.getElementById('queueInfo').innerHTML = `第 <strong>${currentWordIndex+1}</strong> / ${reviewQueue.length} 张 · 剩余 <strong>${remaining}</strong> 张`;
+  } else if(currentWordIndex >= reviewQueue.length){
+    document.getElementById('queueInfo').innerHTML = '✅ 全部完成！';
+  }
+}
+
+init();
+</script>
+</body>
+</html>

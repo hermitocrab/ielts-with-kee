@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Connected Speech Pro</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <!-- Fonts: system stack for China compatibility -->
     <style>
         :root {
             --bg-page: #f5f5f7;
@@ -328,10 +328,61 @@
 
     </style>
 <link rel="stylesheet" href="css/global.css">
-  <script src="js/auth.js"></script></head>
-<body>
-  <script>if(!KeeAuth.requireAuth()){}</script>
+    <style>
 
+        /* --- TTS Play Button --- */
+        .play-tts-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background-color: #eef1f5;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            margin-left: auto;
+            flex-shrink: 0;
+        }
+        .play-tts-btn:hover {
+            background-color: #dbe2ea;
+            transform: scale(1.1);
+        }
+        .play-tts-btn svg {
+            width: 14px;
+            height: 14px;
+            fill: #5a677d;
+            margin-left: 2px;
+        }
+        
+        .play-tts-btn.playing {
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 122, 255, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 122, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 122, 255, 0); }
+        }
+
+        .ex-row {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center; /* Changed for button alignment */
+            gap: 12px;
+            color: #333;
+            line-height: 1.3;
+        }
+    </style>
+  <style>
+    /* System font stack — works everywhere, no CDN needed */
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    h1, h2, h3, h4 { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    </style>
+</head>
+<body>
 <div class="container">
     <header>
         <h1>Connected Speech Pro</h1>
@@ -355,9 +406,9 @@
                     </div>
                     <div class="rule-pill">Consonant ending moves to the next Vowel.</div>
                     <div class="ex-list">
-                        <div class="ex-row">Please take a look at it.</div>
-                        <div class="ex-row">Not at all, thank you.</div>
-                        <div class="ex-row">Time is up, pencils down.</div>
+                        <div class="ex-row">Please take a look at it.<span class="play-tts-btn" data-audio="audio/card1-ex1.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">Not at all, thank you.<span class="play-tts-btn" data-audio="audio/card1-ex2.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">Time is up, pencils down.<span class="play-tts-btn" data-audio="audio/card1-ex3.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
                     </div>
                     <div class="tap-hint">Tap for Golden Hour</div>
                 </div>
@@ -390,9 +441,9 @@
                     </div>
                     <div class="rule-pill">Words ending in /u:/ or /o/ add a /w/ sound.</div>
                     <div class="ex-list">
-                        <div class="ex-row">I can do it myself.</div>
-                        <div class="ex-row">Go on with your work.</div>
-                        <div class="ex-row">How often do you swim?</div>
+                        <div class="ex-row">I can do it myself.<span class="play-tts-btn" data-audio="audio/card2-ex1.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">Go on with your work.<span class="play-tts-btn" data-audio="audio/card2-ex2.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">How often do you swim?<span class="play-tts-btn" data-audio="audio/card2-ex3.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
                     </div>
                     <div class="tap-hint">Tap for Vibes</div>
                 </div>
@@ -424,9 +475,9 @@
                     </div>
                     <div class="rule-pill">Words ending in /i:/ add a /j/ (y) sound.</div>
                     <div class="ex-list">
-                        <div class="ex-row">I am afraid of that.</div>
-                        <div class="ex-row">Hurry up or we'll be late.</div>
-                        <div class="ex-row">Come to see us off.</div>
+                        <div class="ex-row">I am afraid of that.<span class="play-tts-btn" data-audio="audio/card3-ex1.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">Hurry up or we'll be late.<span class="play-tts-btn" data-audio="audio/card3-ex2.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">Come to see us off.<span class="play-tts-btn" data-audio="audio/card3-ex3.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
                     </div>
                     <div class="tap-hint">Tap for Lyrics</div>
                 </div>
@@ -458,9 +509,9 @@
                     </div>
                     <div class="rule-pill">Silent 'R' is pronounced before a vowel.</div>
                     <div class="ex-list">
-                        <div class="ex-row">It is very far away.</div>
-                        <div class="ex-row">There is no time left.</div>
-                        <div class="ex-row">I will love you forever.</div>
+                        <div class="ex-row">It is very far away.<span class="play-tts-btn" data-audio="audio/card4-ex1.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">There is no time left.<span class="play-tts-btn" data-audio="audio/card4-ex2.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">I will love you forever.<span class="play-tts-btn" data-audio="audio/card4-ex3.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
                     </div>
                     <div class="tap-hint">Tap for Lyrics</div>
                 </div>
@@ -502,9 +553,9 @@
                     </div>
                     <div class="rule-pill" style="border-left-color: #ff9500;">Stop+Stop. Hold the first, release the second.</div>
                     <div class="ex-list">
-                        <div class="ex-row">That is a big cake.</div>
-                        <div class="ex-row">Sit behind me please.</div>
-                        <div class="ex-row">Take care of yourself.</div>
+                        <div class="ex-row">That is a big cake.<span class="play-tts-btn" data-audio="audio/card5-ex1.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">Sit behind me please.<span class="play-tts-btn" data-audio="audio/card5-ex2.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">Take care of yourself.<span class="play-tts-btn" data-audio="audio/card5-ex3.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
                     </div>
                     <div class="tap-hint">Tap for K-Pop</div>
                 </div>
@@ -536,9 +587,9 @@
                     </div>
                     <div class="rule-pill" style="border-left-color: #ff9500;">Stop + Fricative. Stop merges softly.</div>
                     <div class="ex-list">
-                        <div class="ex-row">I don't think so.</div>
-                        <div class="ex-row">You did a good job.</div>
-                        <div class="ex-row">That joke was funny.</div>
+                        <div class="ex-row">I don't think so.<span class="play-tts-btn" data-audio="audio/card6-ex1.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">You did a good job.<span class="play-tts-btn" data-audio="audio/card6-ex2.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">That joke was funny.<span class="play-tts-btn" data-audio="audio/card6-ex3.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
                     </div>
                     <div class="tap-hint">Tap for Lyrics</div>
                 </div>
@@ -570,9 +621,9 @@
                     </div>
                     <div class="rule-pill" style="border-left-color: #ff9500;">Stop + N. Explode air via nose.</div>
                     <div class="ex-list">
-                        <div class="ex-row">Say good night to him.</div>
-                        <div class="ex-row">Good morning everyone.</div>
-                        <div class="ex-row">Let me help you.</div>
+                        <div class="ex-row">Say good night to him.<span class="play-tts-btn" data-audio="audio/card7-ex1.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">Good morning everyone.<span class="play-tts-btn" data-audio="audio/card7-ex2.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">Let me help you.<span class="play-tts-btn" data-audio="audio/card7-ex3.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
                     </div>
                     <div class="tap-hint">Tap for Lyrics</div>
                 </div>
@@ -604,9 +655,9 @@
                     </div>
                     <div class="rule-pill" style="border-left-color: #ff9500;">Swallow the 'T' in your throat.</div>
                     <div class="ex-list">
-                        <div class="ex-row">Just a little bit.</div>
-                        <div class="ex-row">Where have you been lately?</div>
-                        <div class="ex-row">He was badly hurt.</div>
+                        <div class="ex-row">Just a little bit.<span class="play-tts-btn" data-audio="audio/card8-ex1.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">Where have you been lately?<span class="play-tts-btn" data-audio="audio/card8-ex2.mp3" data-voice="en-US-GuyNeural"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">He was badly hurt.<span class="play-tts-btn" data-audio="audio/card8-ex3.mp3" data-voice="en-US-GuyNeural"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
                     </div>
                     <div class="tap-hint">Tap for Lyrics</div>
                 </div>
@@ -648,9 +699,9 @@
                     </div>
                     <div class="rule-pill" style="border-left-color: #af52de;">T + Y = CH (/tʃ/)</div>
                     <div class="ex-list">
-                        <div class="ex-row">Nice to meet you.</div>
-                        <div class="ex-row">Why don't you go?</div>
-                        <div class="ex-row">Would you like some?</div>
+                        <div class="ex-row">Nice to meet you.<span class="play-tts-btn" data-audio="audio/card9-ex1.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">Why don't you go?<span class="play-tts-btn" data-audio="audio/card9-ex2.mp3" data-voice="en-US-GuyNeural"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">Would you like some?<span class="play-tts-btn" data-audio="audio/card9-ex3.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
                     </div>
                     <div class="tap-hint">Tap for Lyrics</div>
                 </div>
@@ -682,9 +733,9 @@
                     </div>
                     <div class="rule-pill" style="border-left-color: #af52de;">S+Y=SH | Z+Y=ZH</div>
                     <div class="ex-list">
-                        <div class="ex-row">God bless you.</div>
-                        <div class="ex-row">I miss you every day.</div>
-                        <div class="ex-row">How is your family?</div>
+                        <div class="ex-row">God bless you.<span class="play-tts-btn" data-audio="audio/card10-ex1.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">I miss you every day.<span class="play-tts-btn" data-audio="audio/card10-ex2.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">How is your family?<span class="play-tts-btn" data-audio="audio/card10-ex3.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
                     </div>
                     <div class="tap-hint">Tap for Lyrics</div>
                 </div>
@@ -716,9 +767,9 @@
                     </div>
                     <div class="rule-pill" style="border-left-color: #af52de;">Strong P/T/K drains energy from V/Z/D.</div>
                     <div class="ex-list">
-                        <div class="ex-row">Read the newspaper.</div>
-                        <div class="ex-row">I have to go now.</div>
-                        <div class="ex-row">I used to live there.</div>
+                        <div class="ex-row">Read the newspaper.<span class="play-tts-btn" data-audio="audio/card11-ex1.mp3" data-voice="en-US-GuyNeural"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">I have to go now.<span class="play-tts-btn" data-audio="audio/card11-ex2.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">I used to live there.<span class="play-tts-btn" data-audio="audio/card11-ex3.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
                     </div>
                     <div class="tap-hint">Tap for Lyrics</div>
                 </div>
@@ -750,9 +801,9 @@
                     </div>
                     <div class="rule-pill" style="border-left-color: #af52de;">Same letter meeting? Merge into one long sound.</div>
                     <div class="ex-list">
-                        <div class="ex-row">It was a bad dream.</div>
-                        <div class="ex-row">Wait at the bus stop.</div>
-                        <div class="ex-row">A big game today.</div>
+                        <div class="ex-row">It was a bad dream.<span class="play-tts-btn" data-audio="audio/card12-ex1.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">Wait at the bus stop.<span class="play-tts-btn" data-audio="audio/card12-ex2.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">A big game today.<span class="play-tts-btn" data-audio="audio/card12-ex3.mp3" data-voice="en-US-GuyNeural"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
                     </div>
                     <div class="tap-hint">Tap for Lyrics</div>
                 </div>
@@ -794,9 +845,9 @@
                     </div>
                     <div class="rule-pill" style="border-left-color: #34c759;">Drop middle /t/ or /d/ in clusters.</div>
                     <div class="ex-list">
-                        <div class="ex-row">It was last night.</div>
-                        <div class="ex-row">He is a strict father.</div>
-                        <div class="ex-row">I have no facts.</div>
+                        <div class="ex-row">It was last night.<span class="play-tts-btn" data-audio="audio/card13-ex1.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">He is a strict father.<span class="play-tts-btn" data-audio="audio/card13-ex2.mp3" data-voice="en-US-GuyNeural"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">I have no facts.<span class="play-tts-btn" data-audio="audio/card13-ex3.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
                     </div>
                     <div class="tap-hint">Tap for Lyrics</div>
                 </div>
@@ -828,9 +879,9 @@
                     </div>
                     <div class="rule-pill" style="border-left-color: #34c759;">/t/ vanishes after /n/ (AmE).</div>
                     <div class="ex-list">
-                        <div class="ex-row">Surfing the Internet.</div>
-                        <div class="ex-row">She is twenty years old.</div>
-                        <div class="ex-row">An international student.</div>
+                        <div class="ex-row">Surfing the Internet.<span class="play-tts-btn" data-audio="audio/card14-ex1.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">She is twenty years old.<span class="play-tts-btn" data-audio="audio/card14-ex2.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">An international student.<span class="play-tts-btn" data-audio="audio/card14-ex3.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
                     </div>
                     <div class="tap-hint">Tap for Lyrics</div>
                 </div>
@@ -862,9 +913,9 @@
                     </div>
                     <div class="rule-pill" style="border-left-color: #34c759;">Wanna, Gonna, Gotta.</div>
                     <div class="ex-list">
-                        <div class="ex-row">I wanna go home.</div>
-                        <div class="ex-row">I'm gonna study abroad.</div>
-                        <div class="ex-row">I gotta see you.</div>
+                        <div class="ex-row">I wanna go home.<span class="play-tts-btn" data-audio="audio/card15-ex1.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">I'm gonna study abroad.<span class="play-tts-btn" data-audio="audio/card15-ex2.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">I gotta see you.<span class="play-tts-btn" data-audio="audio/card15-ex3.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
                     </div>
                     <div class="tap-hint">Tap for Lyrics</div>
                 </div>
@@ -896,9 +947,9 @@
                     </div>
                     <div class="rule-pill" style="border-left-color: #34c759;">Drop 'h' in he/him/her.</div>
                     <div class="ex-list">
-                        <div class="ex-row">Give him a call.</div>
-                        <div class="ex-row">Please call her now.</div>
-                        <div class="ex-row">Did you tell him?</div>
+                        <div class="ex-row">Give him a call.<span class="play-tts-btn" data-audio="audio/card16-ex1.mp3" data-voice="en-US-GuyNeural"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">Please call her now.<span class="play-tts-btn" data-audio="audio/card16-ex2.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">Did you tell him?<span class="play-tts-btn" data-audio="audio/card16-ex3.mp3" data-voice="en-US-GuyNeural"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
                     </div>
                     <div class="tap-hint">Tap for Lyrics</div>
                 </div>
@@ -930,9 +981,9 @@
                     </div>
                     <div class="rule-pill" style="border-left-color: #34c759;">Function words (at, to, for) reduce to "uh".</div>
                     <div class="ex-list">
-                        <div class="ex-row">You and me.</div>
-                        <div class="ex-row">Half an hour.</div>
-                        <div class="ex-row">Rock n roll.</div>
+                        <div class="ex-row">You and me.<span class="play-tts-btn" data-audio="audio/card17-ex1.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">Half an hour.<span class="play-tts-btn" data-audio="audio/card17-ex2.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">Rock n roll.<span class="play-tts-btn" data-audio="audio/card17-ex3.mp3" data-voice="en-US-GuyNeural"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
                     </div>
                     <div class="tap-hint">Tap for Lyrics</div>
                 </div>
@@ -964,9 +1015,9 @@
                     </div>
                     <div class="rule-pill" style="border-left-color: #34c759;">T between vowels = Fast D.</div>
                     <div class="ex-list">
-                        <div class="ex-row">Drink some water.</div>
-                        <div class="ex-row">New York City.</div>
-                        <div class="ex-row">Sooner the better.</div>
+                        <div class="ex-row">Drink some water.<span class="play-tts-btn" data-audio="audio/card18-ex1.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">New York City.<span class="play-tts-btn" data-audio="audio/card18-ex2.mp3"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+                        <div class="ex-row">Sooner the better.<span class="play-tts-btn" data-audio="audio/card18-ex3.mp3" data-voice="en-US-GuyNeural"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
                     </div>
                     <div class="tap-hint">Tap for Lyrics</div>
                 </div>
@@ -1010,6 +1061,44 @@
         const url = `music://music.apple.com/search?term=${encodeURIComponent(term)}`;
         window.location.href = url;
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const audio = new Audio();
+        let currentPlayingButton = null;
+
+        document.querySelectorAll('.play-tts-btn').forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.stopPropagation();
+                
+                const audioSrc = button.dataset.audio;
+                
+                if (currentPlayingButton === button) {
+                    // If the same button is clicked, pause the audio
+                    audio.pause();
+                    button.classList.remove('playing');
+                    currentPlayingButton = null;
+                } else {
+                    // Stop any currently playing audio
+                    if (currentPlayingButton) {
+                        currentPlayingButton.classList.remove('playing');
+                    }
+                    
+                    // Play the new audio
+                    audio.src = audioSrc;
+                    audio.play();
+                    button.classList.add('playing');
+                    currentPlayingButton = button;
+                }
+            });
+        });
+
+        audio.onended = () => {
+            if (currentPlayingButton) {
+                currentPlayingButton.classList.remove('playing');
+                currentPlayingButton = null;
+            }
+        };
+    });
 </script>
 
 <script src="js/navigation.js"></script>

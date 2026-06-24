@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Discourse Markers &amp; Logic Chains · Kee Lee</title>
+<style>
+/* ===== RESET & BASE ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans SC',sans-serif;
+  background:#fafafa;color:#212121;line-height:1.6;min-height:100vh;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+
+/* ===== CSS VARIABLES ===== */
+:root{
+  --purple:#9F44D3;--purple-light:#b77ae0;--purple-dark:#7a2ea8;
+  --pink:#FF2442;--pink-light:#ff6b7a;
+  --white:#fff;--gray-50:#fafafa;--gray-100:#f5f5f5;--gray-200:#eee;
+  --gray-300:#e0e0e0;--gray-400:#bdbdbd;--gray-500:#9e9e9e;
+  --gray-600:#757575;--gray-700:#616161;--gray-800:#424242;--gray-900:#212121;
+  --radius:12px;--radius-sm:8px;--radius-xs:6px;
+  --shadow-sm:0 1px 3px rgba(0,0,0,.06);
+  --shadow-md:0 4px 16px rgba(0,0,0,.08);
+  --shadow-lg:0 8px 32px rgba(0,0,0,.12);
+  --transition:all .2s ease;
+  --max-w:1100px;
+}
+
+/* ===== NAV ===== */
+.dm-nav{
+  background:var(--white);border-bottom:1px solid var(--gray-200);
+  position:sticky;top:0;z-index:100;
+  padding:0 20px;height:56px;display:flex;align-items:center;gap:16px;
+}
+.dm-nav-brand{
+  font-weight:700;font-size:1.05rem;color:var(--purple);text-decoration:none;
+  white-space:nowrap;transition:var(--transition);
+}
+.dm-nav-brand:hover{color:var(--purple-dark)}
+.dm-nav-label{
+  font-size:.85rem;color:var(--gray-500);border-left:1px solid var(--gray-300);
+  padding-left:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+
+/* ===== HERO ===== */
+.dm-hero{
+  background:linear-gradient(135deg,var(--purple) 0%,#7a2ea8 50%,var(--pink) 100%);
+  color:var(--white);padding:60px 20px 48px;text-align:center;position:relative;overflow:hidden;
+}
+.dm-hero::before{
+  content:'';position:absolute;top:-60px;right:-60px;
+  width:240px;height:240px;background:rgba(99,102,241,.1);border-radius:50%;
+}
+.dm-hero::after{
+  content:'';position:absolute;bottom:-40px;left:-40px;
+  width:160px;height:160px;background:rgba(255,255,255,.04);border-radius:50%;
+}
+.dm-hero>*{position:relative;z-index:1}
+.dm-hero-title{font-size:2.6rem;font-weight:800;line-height:1.2;margin-bottom:12px;letter-spacing:-.5px}
+.dm-hero-accent{color:var(--pink-light)}
+.dm-hero-sub{font-size:1.05rem;opacity:.85;max-width:640px;margin:0 auto 28px;line-height:1.6}
+
+/* ===== SEARCH ===== */
+.dm-search-wrap{position:relative;max-width:500px;margin:0 auto 24px}
+.dm-search{
+  width:100%;padding:14px 20px 14px 48px;border-radius:999px;
+  border:2px solid rgba(255,255,255,.2);background:rgba(255,255,255,.15);
+  color:var(--white);font-size:.95rem;outline:none;transition:var(--transition);
+  font-family:inherit;backdrop-filter:blur(4px);
+}
+.dm-search::placeholder{color:rgba(255,255,255,.55)}
+.dm-search:focus{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.2)}
+.dm-search-icon{position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:1.1rem;pointer-events:none}
+
+/* ===== CATEGORY PILLS ===== */
+.dm-category-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;max-width:900px;margin:0 auto}
+.dm-pill{
+  padding:6px 16px;border-radius:999px;border:1.5px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.08);color:rgba(255,255,255,.85);
+  font-size:.8rem;font-weight:500;cursor:pointer;transition:var(--transition);
+  font-family:inherit;white-space:nowrap;
+}
+.dm-pill:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.15)}
+.dm-pill.active{background:var(--white);color:var(--purple);border-color:var(--white);font-weight:600}
+
+/* ===== TAB BAR ===== */
+.dm-tab-bar{
+  display:flex;justify-content:center;gap:0;border-bottom:2px solid var(--gray-200);
+  background:var(--white);position:sticky;top:56px;z-index:99;
+}
+.dm-tab{
+  padding:14px 32px;border:none;background:none;font-size:.95rem;font-weight:500;
+  color:var(--gray-600);cursor:pointer;transition:var(--transition);
+  font-family:inherit;border-bottom:2px solid transparent;margin-bottom:-2px;
+}
+.dm-tab:hover{color:var(--purple)}
+.dm-tab.active{color:var(--purple);border-bottom-color:var(--purple);font-weight:600}
+
+/* ===== TAB CONTENT ===== */
+.dm-tab-content{display:none;max-width:var(--max-w);margin:0 auto;padding:32px 20px 60px}
+.dm-tab-content.active{display:block}
+
+/* ===== CATEGORY SECTIONS ===== */
+.dm-grid{display:flex;flex-direction:column;gap:12px}
+.dm-category{
+  background:var(--white);border-radius:var(--radius);border:1px solid var(--gray-200);
+  overflow:hidden;transition:var(--transition);
+}
+.dm-category:hover{border-color:var(--purple-light);box-shadow:var(--shadow-sm)}
+.dm-category-header{
+  padding:14px 20px;display:flex;align-items:center;justify-content:space-between;
+  cursor:pointer;user-select:none;transition:background .15s ease;
+}
+.dm-category-header:hover{background:var(--gray-50)}
+.dm-category-title{font-size:1rem;font-weight:600;color:var(--gray-800)}
+.dm-category-arrow{font-size:.85rem;color:var(--gray-400);transition:transform .2s ease}
+.dm-category.collapsed .dm-category-arrow{transform:rotate(-90deg)}
+.dm-category-body{padding:0 20px 16px;transition:all .3s ease}
+.dm-category.collapsed .dm-category-body{display:none}
+
+/* ===== FUNCTION NAME ===== */
+.dm-function-name{
+  font-size:.82rem;font-weight:600;color:var(--purple);text-transform:capitalize;flex:1
+}
+.dm-subfunction{border-top:1px solid var(--gray-100);margin-top:4px}
+.dm-function-header{
+  padding:10px 2px;display:flex;align-items:center;justify-content:space-between;
+  cursor:pointer;user-select:none;transition:background .15s
+}
+.dm-function-header:hover{background:var(--gray-50);border-radius:4px}
+.dm-func-arrow{font-size:.75rem;color:var(--gray-400);transition:transform .2s ease}
+.dm-func-arrow.collapsed{transform:rotate(-90deg)}
+.dm-subfunction-body{transition:all .3s ease}
+.dm-subfunction-body.collapsed{display:none}
+
+/* ===== PHRASE CARDS ===== */
+.dm-phrase-card{
+  padding:12px 16px;margin-bottom:6px;border-radius:var(--radius-sm);
+  border:1px solid var(--gray-100);background:var(--gray-50);
+  transition:var(--transition);
+}
+.dm-phrase-card:hover{background:var(--white);border-color:var(--purple-light);box-shadow:var(--shadow-sm)}
+.dm-phrase-card.highlight{background:#f3e8ff;border-color:var(--purple-light);box-shadow:var(--shadow-sm)}
+.dm-phrase-text{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.dm-phrase{
+  font-size:.9rem;color:var(--gray-800);font-weight:500;line-height:1.5;
+  word-break:break-word;flex:1
+}
+.dm-phrase-card.highlight .dm-phrase{color:var(--purple-dark);font-weight:600}
+.dm-phrase-example{font-size:.82rem;color:var(--gray-500);margin-top:6px;line-height:1.5;font-style:italic}
+
+/* ===== NO RESULTS ===== */
+.dm-no-results{display:none;text-align:center;padding:60px 20px}
+.dm-no-results.show{display:block}
+.dm-no-results p{color:var(--gray-500);font-size:1rem;margin-bottom:8px}
+
+/* ===== LOGIC CHAINS ===== */
+.dm-chains-intro{text-align:center;margin-bottom:40px}
+.dm-chains-intro h2{font-size:1.75rem;font-weight:700;color:var(--gray-900);margin-bottom:8px}
+.dm-chains-intro p{color:var(--gray-600);font-size:1rem}
+.dm-chains-grid{display:grid;grid-template-columns:1fr;gap:24px}
+
+.dm-chain-card{
+  background:var(--white);border-radius:var(--radius);
+  border:1px solid var(--gray-200);padding:28px;transition:var(--transition);
+}
+.dm-chain-card:hover{border-color:var(--purple-light);box-shadow:var(--shadow-md)}
+
+.dm-chain-header{display:flex;align-items:flex-start;gap:16px;margin-bottom:20px}
+.dm-chain-num{
+  flex-shrink:0;width:44px;height:44px;border-radius:var(--radius-sm);
+  background:linear-gradient(135deg,var(--purple),var(--pink));
+  color:var(--white);display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:1.1rem;
+}
+.dm-chain-header h3{font-size:1.1rem;font-weight:700;color:var(--gray-900);margin-bottom:4px}
+.dm-chain-use{font-size:.85rem;color:var(--gray-500)}
+
+/* Chain flow */
+.dm-chain-flow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px;padding:16px;background:var(--gray-50);border-radius:var(--radius-sm)}
+.dm-chain-flow.wrap{flex-wrap:wrap}
+.dm-chain-step{
+  background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-sm);
+  padding:10px 14px;text-align:center;font-weight:600;font-size:.85rem;color:var(--gray-800);
+  min-width:90px;display:flex;flex-direction:column;gap:2px
+}
+.dm-chain-step span{font-weight:400;font-size:.78rem;color:var(--gray-500);line-height:1.4}
+.dm-chain-step.wide{flex:1 1 200px}
+.dm-chain-arrow{color:var(--purple);font-weight:700;font-size:1.1rem}
+
+/* Chain branches (Y/N) */
+.dm-chain-branches{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.dm-branch{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:var(--radius-sm);font-size:.85rem}
+.dm-branch.yes{background:#e8f5e9}
+.dm-branch.no{background:#fce4ec}
+.dm-branch.depends{background:#e3f2fd}
+.dm-branch-label{font-weight:700;font-size:.8rem;padding:2px 10px;border-radius:999px;color:var(--white);white-space:nowrap}
+.dm-branch.yes .dm-branch-label{background:#4caf50}
+.dm-branch.no .dm-branch-label{background:var(--pink)}
+.dm-branch.depends .dm-branch-label{background:#2196F3}
+
+/* Chain markers */
+.dm-chain-markers{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.dm-chain-marker-tag{
+  display:inline-block;padding:4px 12px;border-radius:999px;
+  background:var(--gray-100);color:var(--purple);font-size:.78rem;
+  font-weight:500;cursor:pointer;transition:var(--transition);border:1px solid transparent;
+}
+.dm-chain-marker-tag:hover{background:var(--purple);color:var(--white);border-color:var(--purple)}
+
+/* Chain checklist */
+.dm-chain-checklist{
+  margin-top:12px;padding:12px 16px;border-radius:var(--radius-sm);
+  background:#fff8e1;font-size:.82rem;color:var(--gray-700);border:1px solid #ffe082;
+  line-height:1.5
+}
+.dm-chain-checklist strong{color:var(--gray-800)}
+.dm-chain-slice-hint{
+  margin:12px 0;padding:10px 16px;border-radius:var(--radius-sm);
+  background:#f3e8ff;font-size:.82rem;color:var(--purple-dark);
+  border:1px solid var(--purple-light);line-height:1.5
+}
+.dm-chain-slice-hint strong{color:var(--purple)}
+
+/* ===== FOOTER ===== */
+.dm-footer{text-align:center;padding:32px 20px;color:var(--gray-400);font-size:.82rem;border-top:1px solid var(--gray-200)}
+.dm-footer a{color:var(--purple);text-decoration:none}
+.dm-footer a:hover{color:var(--purple-dark)}
+
+
+/* ===== DETAILED CARD FIELDS ===== */
+.dm-card-expr{
+  font-size:.95rem;font-weight:700;color:var(--purple-dark);
+  margin-bottom:10px;line-height:1.4
+}
+.dm-card-field{
+  font-size:.82rem;color:var(--gray-700);margin-bottom:5px;
+  line-height:1.5;display:flex;gap:6px
+}
+.dm-card-field span{flex:1}
+.dm-example{
+  font-style:italic;color:var(--gray-600)
+}
+.dm-phrase-card mark{
+  background:#f3e8ff;color:var(--purple-dark);padding:1px 3px;border-radius:2px;
+  font-weight:600
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .dm-nav{padding:0 16px;height:52px}
+  .dm-nav-label{display:none}
+  .dm-hero{padding:40px 16px 32px}
+  .dm-hero-title{font-size:1.8rem}
+  .dm-hero-sub{font-size:.9rem}
+  .dm-search-wrap{max-width:100%}
+  .dm-tab{padding:12px 20px;font-size:.88rem}
+  .dm-tab-content{padding:24px 16px 40px}
+  .dm-category-header{padding:12px 16px}
+  .dm-category-body{padding:0 16px 12px}
+  .dm-category-title{font-size:.92rem}
+  .dm-chain-card{padding:20px}
+  .dm-chain-flow{flex-direction:column;align-items:stretch;padding:12px}
+  .dm-chain-step.wide{flex:1 1 auto}
+  .dm-chain-arrow{transform:rotate(90deg);text-align:center}
+  .dm-pill{font-size:.75rem;padding:5px 12px}
+}
+
+@media(max-width:480px){
+  .dm-hero-title{font-size:1.5rem}
+  .dm-chains-intro h2{font-size:1.4rem}
+}
+
+/* ===== KEE-BOT OVERRIDE (prevent conflicts) ===== */
+.dm-phrase-example::before{content:none!important}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="dm-nav">
+  <a href="https://ielts.rkrk.io" class="dm-nav-brand">IELTS with Kee 🦄</a>
+  <span class="dm-nav-label">Discourse Markers &amp; Logic Chains</span>
+</nav>
+
+<!-- HERO -->
+<header class="dm-hero">
+  <h1 class="dm-hero-title">Speak Naturally.<br><span class="dm-hero-accent">Sound Like a Native.</span></h1>
+  <p class="dm-hero-sub">267+ discourse markers across 17 categories, 10 logic chains for structuring any IELTS answer. From Kee Lee's XMind. Free forever.</p>
+  
+  <div class="dm-search-wrap">
+    <input type="text" id="dm-search" class="dm-search" placeholder="Search for a phrase, function, or category…" autocomplete="off">
+    <span class="dm-search-icon">🔍</span>
+  </div>
+
+  <!-- Category Pills -->
+  <div class="dm-category-pills" id="dm-pills">
+    <button class="dm-pill active" data-filter="all">All</button>
+  </div>
+</header>
+
+<!-- TAB NAV -->
+<div class="dm-tab-bar">
+  <button class="dm-tab active" data-tab="discourse">📝 Discourse Markers</button>
+  <button class="dm-tab" data-tab="chains">🧠 Logic Chains</button>
+</div>
+
+<!-- TAB 1: DISCOURSE MARKERS -->
+<section id="tab-discourse" class="dm-tab-content active">
+  <div class="dm-grid" id="dm-grid"></div>
+  <div class="dm-no-results" id="dm-no-results">
+    <p>🔎 No phrases matched your search.</p>
+    <p>Try a different keyword or browse by category above.</p>
+  </div>
+</section>
+
+<!-- TAB 2: LOGIC CHAINS -->
+<section id="tab-chains" class="dm-tab-content">
+  <div class="dm-chains-intro">
+    <h2>Answer Architecture</h2>
+    <p>Don't just learn phrases. Learn how to structure your answers so the words flow naturally.</p>
+  </div>
+
+  <div class="dm-chains-grid">
+    <div class="dm-chain-card">
+      <div class="dm-chain-header">
+        <span class="dm-chain-num">01</span>
+        <div>
+          <h3>Answer-Detail (AD)</h3>
+          <p class="dm-chain-use">Part 1 &amp; Part 3 short answers</p>
+        </div>
+      </div>
+      <div class="dm-chain-flow">
+        <div class="dm-chain-step">Answer <span>Say yes/no or state your view directly</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Detail <span>Explain why with cause markers</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Example <span>Optional — give a concrete case</span></div>
+      </div>
+      <div class="dm-chain-markers">
+        <span class="dm-chain-marker-tag" data-to="emphasis">What I think is…</span>
+        <span class="dm-chain-marker-tag" data-to="cause-effect">Because…</span>
+        <span class="dm-chain-marker-tag" data-to="cause-effect">The reason is that…</span>
+        <span class="dm-chain-marker-tag" data-to="giving-examples">For instance…</span>
+      </div>
+      <div class="dm-chain-checklist">
+        <strong>Checklist:</strong> Used a logical connector? Paraphrased the question's verb? Avoided stacking information without linking words?
+      </div>
+    </div>
+
+    <div class="dm-chain-card">
+      <div class="dm-chain-header">
+        <span class="dm-chain-num">02</span>
+        <div>
+          <h3>Y/N Question → ADE</h3>
+          <p class="dm-chain-use">For any Yes/No question in Part 1 or 3</p>
+        </div>
+      </div>
+      <div class="dm-chain-branches">
+        <div class="dm-branch yes">
+          <span class="dm-branch-label">YES</span>
+          <span>Definitely! 100%. Absolutely. I'd say so.</span>
+        </div>
+        <div class="dm-branch no">
+          <span class="dm-branch-label">NO</span>
+          <span>Not really. I wouldn't say so. Probably not.</span>
+        </div>
+        <div class="dm-branch depends">
+          <span class="dm-branch-label">IT DEPENDS</span>
+          <span>It depends. It could go either way. Well, it's not black and white.</span>
+        </div>
+      </div>
+      <div class="dm-chain-flow" style="margin-top:16px">
+        <div class="dm-chain-step">Answer</div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Detail <span>Why / How you feel</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">3rd Point <span>On top of that + detail or example</span></div>
+      </div>
+      <div class="dm-chain-markers">
+        <span class="dm-chain-marker-tag" data-to="indicating-opinion">Definitely / I'd say so</span>
+        <span class="dm-chain-marker-tag" data-to="adding-information">On top of that…</span>
+        <span class="dm-chain-marker-tag" data-to="giving-examples">A great example is…</span>
+      </div>
+    </div>
+
+    <div class="dm-chain-card">
+      <div class="dm-chain-header">
+        <span class="dm-chain-num">03</span>
+        <div>
+          <h3>比较类 · Comparison</h3>
+          <p class="dm-chain-use">Which do you prefer? A or B?</p>
+        </div>
+      </div>
+      <div class="dm-chain-flow">
+        <div class="dm-chain-step">Preference <span>I'd go with… / …would be my preference</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Compare Both <span>not as…as / much more / far better</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Justify <span>Use degree adverbials + personal experience</span></div>
+      </div>
+      <div class="dm-chain-markers">
+        <span class="dm-chain-marker-tag" data-to="comparing">Compared to…</span>
+        <span class="dm-chain-marker-tag" data-to="comparing">not as…as</span>
+        <span class="dm-chain-marker-tag" data-to="comparing">much/far/way + comparative</span>
+      </div>
+      <div class="dm-chain-checklist">
+        <strong>Checklist:</strong> Did I compare BOTH sides? Did I use not as…as naturally? Did I avoid only talking about the one I like?
+      </div>
+    </div>
+
+    <div class="dm-chain-card">
+      <div class="dm-chain-header">
+        <span class="dm-chain-num">04</span>
+        <div>
+          <h3>总分-分情况 · General → By Situation</h3>
+          <p class="dm-chain-use">Do people in your country…? Is it common to…?</p>
+        </div>
+      </div>
+      <div class="dm-chain-flow wrap">
+        <div class="dm-chain-step wide">General Statement<span>It really depends on the situation</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Situation A<span>In terms of [case A], …</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Situation B<span>When it comes to [case B], …</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Summary<span>So basically, it varies</span></div>
+      </div>
+      <div class="dm-chain-markers">
+        <span class="dm-chain-marker-tag" data-to="topic-introducers">When it comes to…</span>
+        <span class="dm-chain-marker-tag" data-to="topic-introducers">In terms of…</span>
+        <span class="dm-chain-marker-tag" data-to="cause-effect">The reason for this is…</span>
+        <span class="dm-chain-marker-tag" data-to="generalising">So basically…</span>
+      </div>
+    </div>
+
+    <div class="dm-chain-card">
+      <div class="dm-chain-header">
+        <span class="dm-chain-num">05</span>
+        <div>
+          <h3>总分-分群体 · General → By Group</h3>
+          <p class="dm-chain-use">How does this vary among different people?</p>
+        </div>
+      </div>
+      <div class="dm-chain-flow wrap">
+        <div class="dm-chain-step wide">General Statement<span>The impact varies significantly among different groups</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Group 1<span>Elderly people tend to be more…</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Group 2<span>Younger generations are generally…</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Contrast<span>However, there are exceptions…</span></div>
+      </div>
+      <div class="dm-chain-slice-hint">
+        <strong>Slice by:</strong> Age · Income · Urban/Rural · Job type · Interests · Education level
+      </div>
+      <div class="dm-chain-markers">
+        <span class="dm-chain-marker-tag" data-to="topic-introducers">In terms of [group]…</span>
+        <span class="dm-chain-marker-tag" data-to="topic-introducers">From [group]'s standpoint…</span>
+        <span class="dm-chain-marker-tag" data-to="contrasting">However / In contrast…</span>
+        <span class="dm-chain-marker-tag" data-to="emphasis">What stands out is…</span>
+      </div>
+    </div>
+
+    <div class="dm-chain-card">
+      <div class="dm-chain-header">
+        <span class="dm-chain-num">06</span>
+        <div>
+          <h3>总分-罗列 · General → List</h3>
+          <p class="dm-chain-use">What kinds of…? What are the benefits?</p>
+        </div>
+      </div>
+      <div class="dm-chain-flow">
+        <div class="dm-chain-step">General<span>There are plenty of… I'd mention</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Point 1<span>First, the most obvious one is…</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Point 2<span>On top of that, …</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Point 3<span>Last but not least, …</span></div>
+      </div>
+      <div class="dm-chain-markers">
+        <span class="dm-chain-marker-tag" data-to="sequencing">First / To begin with…</span>
+        <span class="dm-chain-marker-tag" data-to="sequencing">On top of that / Secondly…</span>
+        <span class="dm-chain-marker-tag" data-to="sequencing">Last but not least…</span>
+        <span class="dm-chain-marker-tag" data-to="giving-examples">A classic example is…</span>
+      </div>
+    </div>
+
+    <div class="dm-chain-card">
+      <div class="dm-chain-header">
+        <span class="dm-chain-num">07</span>
+        <div>
+          <h3>总分-强调 · General → Emphasize One</h3>
+          <p class="dm-chain-use">What's the most important…?</p>
+        </div>
+      </div>
+      <div class="dm-chain-flow">
+        <div class="dm-chain-step">General<span>There are several reasons, but if I had to pick…</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Emphasize<span>What really matters here is…</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Support<span>This is largely due to the fact that…</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Example<span>A striking example of this is…</span></div>
+      </div>
+      <div class="dm-chain-markers">
+        <span class="dm-chain-marker-tag" data-to="emphasis">What … is …</span>
+        <span class="dm-chain-marker-tag" data-to="emphasis">It all boils down to…</span>
+        <span class="dm-chain-marker-tag" data-to="emphasis">If I had to choose one factor…</span>
+        <span class="dm-chain-marker-tag" data-to="cause-effect">The most prominent reason is…</span>
+      </div>
+    </div>
+
+    <div class="dm-chain-card">
+      <div class="dm-chain-header">
+        <span class="dm-chain-num">08</span>
+        <div>
+          <h3>Dialectical Discussion</h3>
+          <p class="dm-chain-use">Part 3 abstract questions · Show balanced thinking</p>
+        </div>
+      </div>
+      <div class="dm-chain-flow wrap">
+        <div class="dm-chain-step wide">General Observation<span>Generally speaking, most people would say…</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Specific Angle<span>However, if we look more specifically…</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Opposite View<span>On the flip side, some argue that…</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Synthesis<span>At the end of the day, it's not black and white</span></div>
+      </div>
+      <div class="dm-chain-markers">
+        <span class="dm-chain-marker-tag" data-to="generalising">Generally speaking…</span>
+        <span class="dm-chain-marker-tag" data-to="contrasting">However / On the flip side…</span>
+        <span class="dm-chain-marker-tag" data-to="emphasis">What it really comes down to…</span>
+        <span class="dm-chain-marker-tag" data-to="generalising">At the end of the day…</span>
+      </div>
+    </div>
+
+    <div class="dm-chain-card">
+      <div class="dm-chain-header">
+        <span class="dm-chain-num">09</span>
+        <div>
+          <h3>总分-举例 · General → Example</h3>
+          <p class="dm-chain-use">Quick P3 answers with impact</p>
+        </div>
+      </div>
+      <div class="dm-chain-flow">
+        <div class="dm-chain-step">State View<span>I believe that…</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Striking Example<span>A classic example of this is…</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Significance<span>This shows that… / What this illustrates is…</span></div>
+      </div>
+      <div class="dm-chain-markers">
+        <span class="dm-chain-marker-tag" data-to="giving-examples">A striking example is…</span>
+        <span class="dm-chain-marker-tag" data-to="emphasis">What this illustrates is…</span>
+        <span class="dm-chain-marker-tag" data-to="explanation">That is to say…</span>
+      </div>
+    </div>
+
+    <div class="dm-chain-card">
+      <div class="dm-chain-header">
+        <span class="dm-chain-num">10</span>
+        <div>
+          <h3>Wh-Question → Direct Answer</h3>
+          <p class="dm-chain-use">What/Why/How/When/Where questions</p>
+        </div>
+      </div>
+      <div class="dm-chain-flow">
+        <div class="dm-chain-step">Direct Answer<span>Give it straight — no filler needed</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Explain Why<span>Because… / The reason is… / I guess it's because…</span></div>
+        <div class="dm-chain-arrow">→</div>
+        <div class="dm-chain-step">Contrast or Example<span>However… / For instance… / Compared to…</span></div>
+      </div>
+      <div class="dm-chain-markers">
+        <span class="dm-chain-marker-tag" data-to="cause-effect">Because / The reason is…</span>
+        <span class="dm-chain-marker-tag" data-to="comparing">Compared to…</span>
+        <span class="dm-chain-marker-tag" data-to="giving-examples">For instance…</span>
+        <span class="dm-chain-marker-tag" data-to="contrasting">However… / Although…</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="dm-footer">
+  From <a href="https://ielts.rkrk.io">IELTS with Kee 🦄</a> · Made with ❤️ for students · Free forever
+</div>
+
+<script>
+// ===== DISCOURSE DATA v6 — Loaded from JSON =====
+
+let discourseData = [];
+
+async function loadDiscourseData() {
+  const [markers, subfuncs, cats] = await Promise.all([
+    fetch('markers.json').then(r => r.json()),
+    fetch('subfunctions.json').then(r => r.json()),
+    fetch('categories.json').then(r => r.json())
+  ]);
+  
+  const catMap = {};
+  cats.forEach(c => { catMap[c.slug] = c; });
+  
+  const sfMap = {};
+  subfuncs.forEach(sf => { sfMap[sf.id] = sf; });
+  
+  const categoryGroups = {};
+  
+  markers.forEach(m => {
+    const sf = sfMap[m.subfunctionIds[0]];
+    if (!sf) return;
+    const cat = catMap[sf.categorySlug];
+    if (!cat) return;
+    
+    const catKey = cat.slug;
+    if (!categoryGroups[catKey]) {
+      categoryGroups[catKey] = {
+        cat: cat.name.en + ' · ' + cat.name.zh,
+        slug: cat.slug,
+        funcsMap: {}
+      };
+    }
+    
+    const funcKey = sf.id;
+    if (!categoryGroups[catKey].funcsMap[funcKey]) {
+      categoryGroups[catKey].funcsMap[funcKey] = {
+        name: sf.name.en + ' · ' + sf.name.zh,
+        phrases: []
+      };
+    }
+    
+    categoryGroups[catKey].funcsMap[funcKey].phrases.push({
+      expression: m.expression,
+      collocation: m.collocation.en,
+      contexts: m.contexts.en,
+      connotation: m.connotation.en,
+      example: m.example.en
+    });
+  });
+  
+  discourseData = Object.values(categoryGroups).map(cg => ({
+    cat: cg.cat,
+    slug: cg.slug,
+    funcs: Object.values(cg.funcsMap)
+  }));
+  
+  const sortMap = {};
+  cats.forEach(c => { sortMap[c.slug] = c.sortOrder || 99; });
+  discourseData.sort((a, b) => (sortMap[a.slug] || 99) - (sortMap[b.slug] || 99));
+  
+  return discourseData;
+}
+
+async function init() {
+  await loadDiscourseData();
+  
+  allCategories = [...new Set(discourseData.map(d => d.cat))];
+  allCategories.forEach(cat => {
+    const btn = document.createElement("button");
+    btn.className = "dm-pill";
+    btn.textContent = cat.split("·")[0].trim();
+    btn.dataset.filter = cat;
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".dm-pill").forEach(p => p.classList.remove("active"));
+      btn.classList.add("active");
+      activeFilter = cat;
+      render();
+    });
+    dmPills.appendChild(btn);
+  });
+  
+  render();
+}
+
+// ===== RENDER =====
+const dmGrid = document.getElementById("dm-grid");
+const dmNoResults = document.getElementById("dm-no-results");
+const dmPills = document.getElementById("dm-pills");
+const dmSearch = document.getElementById("dm-search");
+
+let activeFilter = "all";
+let activeSearch = "";
+
+// Pill init moved to loadDiscourseData().init()
+
+function render() {
+  dmGrid.innerHTML = "";
+  let visibleCount = 0;
+
+  discourseData.forEach(category => {
+    let catHTML = "";
+    let catVisible = false;
+
+    category.funcs.forEach(func => {
+      let funcHTML = "";
+
+      func.phrases.forEach(phrase => {
+        const searchStr = (phrase.expression + " " + phrase.collocation + " " + phrase.contexts + " " + phrase.connotation + " " + phrase.example).toLowerCase();
+        const matchesSearch = !activeSearch || searchStr.includes(activeSearch);
+        const matchesFilter = activeFilter === "all" || category.cat === activeFilter;
+
+        if (matchesSearch && matchesFilter) {
+          catVisible = true;
+          visibleCount++;
+          funcHTML += `<div class="dm-phrase-card">
+            <div class="dm-card-expr">${highlight(phrase.expression)}</div>
+            <div class="dm-card-field dm-card-colloc">🔗 ${highlight(phrase.collocation)}</div>
+            <div class="dm-card-field dm-card-context">📍 ${highlight(phrase.contexts)}</div>
+            <div class="dm-card-field dm-card-tone">🎯 ${highlight(phrase.connotation)}</div>
+            <div class="dm-card-field dm-card-ex">💬 ${highlight(phrase.example)}</div>
+          </div>`;
+        }
+      });
+
+      if (funcHTML) {
+        const subId = `sub-${category.slug}-${func.name.replace(/[^a-z0-9]/gi,'')}`;
+        catHTML += `<div class="dm-subfunction">
+          <div class="dm-function-header" onclick="var b=document.getElementById('${subId}');b.classList.toggle('collapsed');this.querySelector('.dm-func-arrow').classList.toggle('collapsed')">
+            <span class="dm-function-name">${func.name}</span>
+            <span class="dm-func-arrow">▼</span>
+          </div>
+          <div class="dm-subfunction-body" id="${subId}">${funcHTML}</div>
+        </div>`;
+      }
+    });
+
+    if (catVisible) {
+      const section = document.createElement("div");
+      section.className = "dm-category";
+      section.innerHTML = `<div class="dm-category-header" onclick="this.parentElement.classList.toggle('collapsed')">
+        <span class="dm-category-title">${category.cat}</span>
+        <span class="dm-category-arrow">▼</span>
+      </div>
+      <div class="dm-category-body">${catHTML}</div>`;
+      dmGrid.appendChild(section);
+    }
+  });
+
+  dmNoResults.classList.toggle("show", visibleCount === 0);
+}
+
+function highlight(text) {
+  if (!activeSearch) return text;
+  const escaped = activeSearch.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const regex = new RegExp(`(${escaped})`, "gi");
+  return text.replace(regex, "<mark>$1</mark>");
+}
+
+dmSearch.addEventListener("input", (e) => {
+  activeSearch = e.target.value.toLowerCase().trim();
+  render();
+});
+
+dmPills.querySelector('[data-filter="all"]').addEventListener("click", () => {
+  document.querySelectorAll(".dm-pill").forEach(p => p.classList.remove("active"));
+  dmPills.querySelector('[data-filter="all"]').classList.add("active");
+  activeFilter = "all";
+  render();
+});
+
+document.querySelectorAll(".dm-tab").forEach(tab => {
+  tab.addEventListener("click", () => {
+    document.querySelectorAll(".dm-tab").forEach(t => t.classList.remove("active"));
+    document.querySelectorAll(".dm-tab-content").forEach(c => c.classList.remove("active"));
+    tab.classList.add("active");
+    document.getElementById("tab-" + tab.dataset.tab).classList.add("active");
+  });
+});
+
+document.querySelectorAll(".dm-chain-marker-tag").forEach(tag => {
+  tag.addEventListener("click", () => {
+    document.querySelector('.dm-tab[data-tab="discourse"]').click();
+    setTimeout(() => {
+      activeFilter = "all";
+      activeSearch = tag.dataset.to.toLowerCase();
+      dmSearch.value = tag.dataset.to;
+      render();
+      document.querySelectorAll(".dm-pill").forEach(p => p.classList.remove("active"));
+      dmPills.querySelector('[data-filter="all"]').classList.add("active");
+    }, 100);
+  });
+});
+
+init();
+
+
+
+
+</script>

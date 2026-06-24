@@ -6,8 +6,22 @@
 <title>IELTS Discourse Markers &amp; Logic Chains · Kee Lee</title>
 <style>
 /* Phase 2 additions */
+/* Phase 2.2 additions */
 html[data-lang="zh"] .lang-en-only{display:none!important}
 html[data-lang="en"] .lang-zh-only{display:none!important}
+.dm-cefr-badge{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:18px;padding:0 5px;border-radius:4px;font-size:.6rem;font-weight:700;line-height:1;letter-spacing:.3px;margin-left:6px;vertical-align:middle;}
+.dm-cefr-A1{background:#e8f5e9;color:#2e7d32}
+.dm-cefr-A2{background:#c8e6c9;color:#1b5e20}
+.dm-cefr-B1{background:#fff3e0;color:#e65100}
+.dm-cefr-B2{background:#ffecb3;color:#f57f17}
+.dm-cefr-C1{background:#fce4ec;color:#c62828}
+.dm-cefr-C2{background:#f3e5f5;color:#7b1fa2}
+.dm-tts-btn{display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:999px;border:1px solid var(--gray-300);background:var(--white);font-size:.68rem;color:var(--gray-600);cursor:pointer;transition:var(--transition);font-family:inherit;line-height:1.4;}
+.dm-tts-btn:hover{background:var(--purple);color:var(--white);border-color:var(--purple)}
+.dm-tts-btn.playing{background:var(--purple);color:var(--white);border-color:var(--purple);animation:pulse .8s ease-in-out 2}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
+.dm-phrase-header{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+.dm-card-expr{margin-bottom:4px}
 .dm-nav-spacer{flex:1}
 .dm-lang-toggle{background:none;border:1.5px solid var(--gray-300);border-radius:999px;padding:4px 14px;font-size:.8rem;font-weight:600;color:var(--gray-600);cursor:pointer;transition:var(--transition);font-family:inherit;}
 .dm-lang-toggle:hover{border-color:var(--purple);color:var(--purple)}
@@ -788,11 +802,20 @@ function renderScenarios(){
       btn.textContent=s;
       if(!isEmpty){
         btn.addEventListener("click",()=>{
-          activeView="flat";
-          document.getElementById("dm-search").value=mc.nameEn;
-          activeSearch=mc.nameEn.toLowerCase();
-          switchView("flat");
-          renderFlat();
+          // Jump to first category in this macro group in Tree view
+          const firstCat=cats.find(c=>c.macroGroup===mc.dataKey);
+          if(firstCat){
+            switchView("tree");
+            renderTree();
+            setTimeout(()=>{
+              const el=document.getElementById('tree-'+firstCat.slug);
+              if(el){
+                el.scrollIntoView({behavior:'smooth',block:'center'});
+                el.style.background='var(--gray-50)';
+                setTimeout(()=>el.style.background='',1500);
+              }
+            },100);
+          }
         });
       }
       grid.appendChild(btn);
@@ -808,6 +831,8 @@ function renderScenarios(){
 function renderTree(){
   const container=document.getElementById("view-tree");
   container.innerHTML="";
+  
+  const cefrSort={A1:0,A2:1,B1:2,B2:3,C1:4,C2:5};
   
   MACRO_CONFIG.forEach((mc,i)=>{
     const node=document.createElement("div");
@@ -827,6 +852,7 @@ function renderTree(){
     groupCats.forEach(cat=>{
       const catDiv=document.createElement("div");
       catDiv.className="dm-tree-cat";
+      catDiv.id='tree-'+cat.slug;
       
       const catHeader=document.createElement("div");
       catHeader.className="dm-tree-cat-header";
@@ -854,12 +880,16 @@ function renderTree(){
         const sfBody=document.createElement("div");
         sfBody.className="dm-tree-subfunc-body";
         
-        (sf.markerIds||[]).forEach(mId=>{
-          const mk=markers.find(m=>m.id===mId);
-          if(!mk)return;
+        // Sort markers by CEFR level (A1→C2)
+        const sortedMarkers = (sf.markerIds||[])
+          .map(mId=>markers.find(m=>m.id===mId))
+          .filter(Boolean)
+          .sort((a,b)=>((cefrSort[a.cefr]||99)-(cefrSort[b.cefr]||99)));
+        
+        sortedMarkers.forEach(mk=>{
           const phrase=document.createElement("div");
-          phrase.style.cssText="padding:4px 0;font-size:.8rem;color:var(--gray-700);cursor:pointer";
-          phrase.textContent=mk.expression;
+          phrase.style.cssText="padding:4px 0;font-size:.8rem;color:var(--gray-700);cursor:pointer;display:flex;align-items:center;gap:4px;";
+          phrase.innerHTML='<span>'+mk.expression+'</span>'+cefrBadge(mk.cefr||'B1');
           phrase.addEventListener("click",()=>{
             activeView="flat";
             activeSearch=mk.expression.toLowerCase();
@@ -892,6 +922,30 @@ function h(t){
 }
 
 
+function cefrBadge(level){return '<span class="dm-cefr-badge dm-cefr-'+level+'">'+level+'</span>';}
+
+function ttsBtn(markerId,type,text){
+  const audioPath='audio/tts/tts_'+type+'_'+markerId+'.mp3';
+  return '<button class="dm-tts-btn" onclick="playTTS(\''+audioPath+'\',this)" title="Play '+type+'">🔊 '+text+'</button>';
+}
+
+function playTTS(path,btn){
+  const audio=new Audio(path);
+  btn.classList.add('playing');
+  audio.onended=()=>btn.classList.remove('playing');
+  audio.play().catch(()=>btn.classList.remove('playing'));
+}
+
+function shouldShowZH(mk,field){
+  if(getLang()!=='zh')return false;
+  const tier={A1:'full',A2:'full',B1:'full',B2:'full',C1:'context',C2:'none'};
+  const lvl=mk.cefr||'B1';
+  const t=tier[lvl]||'full';
+  if(t==='none')return false;
+  if(t==='context')return field==='contexts';
+  return true;
+}
+
 function renderFlat(){
   const grid=document.getElementById("dm-grid");
   const noResults=document.getElementById("dm-no-results");
@@ -921,13 +975,7 @@ function renderFlat(){
     const cefrOrder={A1:0,A2:1,B1:2,B2:3,C1:4,C2:5,all:0};
     if(activeLevel!=="all" && cefrOrder[mk.cefr]<cefrOrder[activeLevel])return;
     
-    catGroups[catKey].funcsMap[funcKey].phrases.push({
-      expression:mk.expression,
-      collocation:lang==="zh"?(mk.collocation.zh||mk.collocation.en):mk.collocation.en,
-      contexts:lang==="zh"?(mk.contexts.zh||mk.contexts.en):mk.contexts.en,
-      connotation:lang==="zh"?(mk.connotation.zh||mk.connotation.en):mk.connotation.en,
-      example:lang==="zh"?(mk.example.zh||mk.example.en):mk.example.en
-    });
+    catGroups[catKey].funcsMap[funcKey].phrases.push(mk);
   });
   
   const sorted=Object.values(catGroups).sort((a,b)=>(catMap[a.slug]?.sortOrder||99)-(catMap[b.slug]?.sortOrder||99));
@@ -938,16 +986,30 @@ function renderFlat(){
     
     Object.values(cg.funcsMap).forEach(func=>{
       let funcHTML="";
-      func.phrases.forEach(phrase=>{
-        const str=(phrase.expression+" "+phrase.collocation+" "+phrase.contexts+" "+phrase.connotation).toLowerCase();
+      func.phrases.forEach(mk=>{
+        const str=(mk.expression+" "+(mk.collocation.en||'')+" "+(mk.contexts.en||'')+" "+(mk.connotation.en||'')).toLowerCase();
         const match=!activeSearch||str.includes(activeSearch);
         if(match){
           catVisible=true;visible++;
-          funcHTML+='<div class="dm-phrase-card"><div class="dm-card-expr">'+h(phrase.expression)+'</div>';
-          funcHTML+='<div class="dm-card-field">🔗 <span>'+h(phrase.collocation)+'</span></div>';
-          funcHTML+='<div class="dm-card-field">📍 <span>'+h(phrase.contexts)+'</span></div>';
-          funcHTML+='<div class="dm-card-field">🎯 <span>'+h(phrase.connotation)+'</span></div>';
-          funcHTML+='<div class="dm-card-field dm-card-ex">💬 <span class="dm-example-val">'+h(phrase.example)+'</span></div></div>';
+          const cefr=mk.cefr||'B1';
+          // Collocation
+          const collZh=shouldShowZH(mk,'collocation')?(mk.collocation.zh||mk.collocation.en):mk.collocation.en;
+          const collDisplay=lang==='zh'?collZh:mk.collocation.en;
+          // Contexts
+          const ctxZh=shouldShowZH(mk,'contexts')?(mk.contexts.zh||mk.contexts.en):mk.contexts.en;
+          const ctxDisplay=lang==='zh'?ctxZh:mk.contexts.en;
+          // Connotation
+          const connZh=shouldShowZH(mk,'connotation')?(mk.connotation.zh||mk.connotation.en):mk.connotation.en;
+          const connDisplay=lang==='zh'?connZh:mk.connotation.en;
+          // Example
+          const exZh=shouldShowZH(mk,'example')?(mk.example.zh||mk.example.en):mk.example.en;
+          const exDisplay=lang==='zh'?exZh:mk.example.en;
+          
+          funcHTML+='<div class="dm-phrase-card"><div class="dm-phrase-header"><div class="dm-card-expr">'+h(mk.expression)+'</div>'+cefrBadge(cefr)+' '+ttsBtn(mk.id,'phrase',lang==='zh'?'读词组':'Phrase')+'</div>';
+          funcHTML+='<div class="dm-card-field">🔗 <span>'+h(collDisplay)+'</span></div>';
+          funcHTML+='<div class="dm-card-field">📍 <span>'+h(ctxDisplay)+'</span></div>';
+          funcHTML+='<div class="dm-card-field">🎯 <span>'+h(connDisplay)+'</span></div>';
+          funcHTML+='<div class="dm-card-field dm-card-ex">💬 <span class="dm-example-val">'+h(exDisplay)+'</span> '+ttsBtn(mk.id,'example','🔊')+'</div></div>';
         }
       });
       if(funcHTML){

@@ -1,0 +1,3324 @@
+[
+  {
+    "id": "dm-61807cffdf",
+    "expression": "If I have to speculate, off the top of my head, I'd say",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: If I have to speculate, off the top of my head, I'd say",
+      "zh": "回答开头使用：If I have to speculate, off the top of my head, I'd say [你的观点]"
+    },
+    "contexts": {
+      "en": "Used when you need extra thinking time during the speaking test",
+      "zh": "在口语考试中需要争取思考时间时使用"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows natural hesitation without losing fluency",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "If I have to speculate, off the top of my head, I'd say, what else can I say... well, I think it's a topic that requires some thought.",
+      "zh": "If I have to speculate, off the top of my head, I'd say...嗯，我觉得这是一个需要思考的问题。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-001"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "fluency",
+      "stalling"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-c3535f5617",
+    "expression": "Let me think about that",
+    "variants": [],
+    "collocation": {
+      "en": "Use as a hesitation device at the start or middle of a response when needing thinking time",
+      "zh": "在回答开头或中间用作拖延时间的表达：Let me think about that, [继续回答]"
+    },
+    "contexts": {
+      "en": "Used when you need extra thinking time during the speaking test",
+      "zh": "在口语考试中需要争取思考时间时使用"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows natural hesitation without losing fluency",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Let me think about that, what else can I say... well, I think it's a topic that requires some thought.",
+      "zh": "Let me think about that，嗯……我觉得这个话题确实需要好好思考一下。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-001"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "fluency",
+      "stalling"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-3b0c69f702",
+    "expression": "Off the top of my head, I would probably guess",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: Off the top of my head, I would probably guess",
+      "zh": "回答开头使用：Off the top of my head, I would probably guess [你的猜测]"
+    },
+    "contexts": {
+      "en": "Used when you need extra thinking time during the speaking test",
+      "zh": "在口语考试中需要争取思考时间时使用"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows natural hesitation without losing fluency",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Off the top of my head, I would probably guess, what else can I say... well, I think it's a topic that requires some thought.",
+      "zh": "Off the top of my head, I would probably guess…嗯，我觉得这取决于具体情况。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-001"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "fluency",
+      "stalling"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-486e055ca1",
+    "expression": "Good question, because",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a turn to acknowledge and express a reaction to the question",
+      "zh": "在回答开头使用，先认可问题再展开回答：Good question, because [你的回答]"
+    },
+    "contexts": {
+      "en": "Used to react naturally to the question before diving into the answer",
+      "zh": "用于自然回应问题，然后再深入回答"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, demonstrates engagement with the topic",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Good question, because This is a useful expression for expressing yourself naturally in English.",
+      "zh": "Good question, because 这个问题其实挺有意思的，它涉及到我们日常生活中如何自然地表达自己。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-002"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "fluency",
+      "reaction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-0ec4cdb10c",
+    "expression": "Gotta say... that's a tricky one",
+    "variants": [],
+    "collocation": {
+      "en": "Use Gotta say... that's a tricky one to [situation-appropriate completion of the template]",
+      "zh": "使用模板：Gotta say... that's a tricky one，然后根据话题补充完整"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to react naturally to the question before diving into the answer",
+      "zh": "模板句式：根据话题填充占位内容。用于自然回应问题，然后再深入回答"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, demonstrates engagement with the topic",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Gotta say... that's a tricky one For example, this is a great way to introduce your point naturally.",
+      "zh": "Gotta say... that's a tricky one 比如说，这是一个很自然地引出你观点的方式。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-002"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "fluency",
+      "reaction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-67c8696337",
+    "expression": "\"Another benefit is that...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"Another benefit is that...\" to [situation-appropriate completion of the template]",
+      "zh": "使用模板：\"Another benefit is that...\"，然后补充话题相关内容"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "\"Another benefit is that...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "\"Another benefit is that...\" 比如说，这是引出你观点的一个很好的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-5db7929fb1",
+    "expression": "\"Another potential issue is...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"Another potential issue is...\" to [situation-appropriate completion of the template]",
+      "zh": "使用模板：\"Another potential issue is...\"，然后补充话题相关内容"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "\"Another potential issue is...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "\"Another potential issue is...\" 比如说，这是引出你观点的一个很好的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ef50108047",
+    "expression": "\"Currently,...\" / \"At present,...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"Currently,...\" / \"At present,...\" to [situation-appropriate completion of the template]",
+      "zh": "使用模板：\"Currently,...\" 或 \"At present,...\"，然后补充话题相关内容"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "\"Currently,...\" / \"At present,...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "\"Currently,...\" / \"At present,...\" 比如说，这是引出你观点的一个很好的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-379befe81b",
+    "expression": "\"I predict that in the coming years, we will probably see...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"I predict that in the coming years, we will probably see...\" to [situation-appropriate completion of the template]",
+      "zh": "使用模板：\"I predict that in the coming years, we will probably see...\"，然后补充话题相关内容"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "\"I predict that in the coming years, we will probably see...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "\"I predict that in the coming years, we will probably see...\" 比如说，这是引出你预测的一个很好的方式。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-b65eaf7f74",
+    "expression": "\"If we look back, (let's) say, 20 or 30 years ago,...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"If we look back, (let's) say, 20 or 30 years ago,...\" to [situation-appropriate completion of the template]",
+      "zh": "使用模板：\"If we look back, (let's) say, 20 or 30 years ago,...\"，然后补充话题相关内容"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "\"If we look back, (let's) say, 20 or 30 years ago,...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "\"If we look back, (let's) say, 20 or 30 years ago,...\" 比如说，这是很好引出过去对比的方式。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-c10eaff0b9",
+    "expression": "\"If we look back, say, 20 or 30 years ago,...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"If we look back, say, 20 or 30 years ago,...\" to [situation-appropriate completion of the template]",
+      "zh": "使用模板：\"If we look back, say, 20 or 30 years ago,...\"，然后补充话题相关内容"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "\"If we look back, say, 20 or 30 years ago,...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "\"If we look back, say, 20 or 30 years ago,...\" 比如说，这是很好引出过去对比的方式。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-5856e25e7c",
+    "expression": "\"In the past,...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"In the past,...\" to [situation-appropriate completion of the template]",
+      "zh": "使用模板：\"In the past,...\"，然后补充话题相关内容"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "\"In the past,...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "\"In the past,...\" 比如说，这是很好引出过去情况的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ae7549e484",
+    "expression": "\"It used to be the case that...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"It used to be the case that...\" to [situation-appropriate completion of the template]",
+      "zh": "使用模板：\"It used to be the case that...\"，然后补充话题相关内容"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "\"It used to be the case that...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "\"It used to be the case that...\" 比如说，这是很好引出过去情况的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-fe550176ac",
+    "expression": "\"Looking ahead,...\" / \"Looking to the future,...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"Looking ahead,...\" / \"Looking to the future,...\" to [situation-appropriate completion of the template]",
+      "zh": "使用模板：\"Looking ahead,...\" 或 \"Looking to the future,...\"，然后补充话题相关内容"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "\"Looking ahead,...\" / \"Looking to the future,...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "\"Looking ahead,...\" / \"Looking to the future,...\" 比如说，这是很好引出未来展望的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-69480cd2f9",
+    "expression": "\"On the one hand,...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"On the one hand,...\" to [situation-appropriate completion of the template]",
+      "zh": "使用模板：\"On the one hand,...\"，然后补充一个观点"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "\"On the one hand,...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "\"On the one hand,...\" 这是一个很好的方式来引出你的观点。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ad022ec75c",
+    "expression": "\"The current trend seems to be...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"The current trend seems to be...\" to [situation-appropriate completion of the template]",
+      "zh": "使用模板：\"The current trend seems to be...\"，然后补充话题相关内容"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "\"The current trend seems to be...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "\"The current trend seems to be...\" 比如说，这是很好分析当前趋势的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-e048ca7064",
+    "expression": "\"The most obvious benefit is that...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"The most obvious benefit is that...\" to [situation-appropriate completion of the template]",
+      "zh": "使用模板：\"The most obvious benefit is that...\"，然后补充话题相关内容"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "\"The most obvious benefit is that...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "\"The most obvious benefit is that...\" 比如说，这是很好列举优点的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-63980324b6",
+    "expression": "\"What's worse,...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"What's worse,...\" to [situation-appropriate completion of the template]",
+      "zh": "使用模板：\"What's worse,...\"，然后补充话题相关内容"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "\"What's worse,...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "\"What's worse,...\" 比如说，这是很好递进论述的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-e640a69424",
+    "expression": ", which is",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用，表达个人观点：, which is [补充说明]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": ", which is technology has fundamentally changed the way we communicate with each other.",
+      "zh": "科技从根本上改变了我们的沟通方式，which is 一个不争的事实。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-7818cc4810",
+    "expression": "... is leading the world in numerous aspects",
+    "variants": [],
+    "collocation": {
+      "en": "Use ... is leading the world in numerous aspects to [situation-appropriate completion of the template]",
+      "zh": "使用模板：[主语] is leading the world in numerous aspects，然后补充话题内容"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "... is leading the world in numerous aspects For example, this is a great way to introduce your point naturally.",
+      "zh": "... is leading the world in numerous aspects 比如说，这是一个引出观点的好方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-0ab1e8c18d",
+    "expression": "... is the only thing that",
+    "variants": [],
+    "collocation": {
+      "en": "Use ... is the only thing that to [situation-appropriate completion of the template]",
+      "zh": "使用模板：[主语] is the only thing that [谓语]，强调唯一性"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "... is the only thing that For example, this is a great way to introduce your point naturally.",
+      "zh": "... is the only thing that 比如说，这是一个强调某事物独特性的好方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-90c1adb3e1",
+    "expression": "... is totally my cup of tea",
+    "variants": [],
+    "collocation": {
+      "en": "Use ... is totally my cup of tea to [situation-appropriate completion of the template]",
+      "zh": "使用模板：[某事物] is totally my cup of tea，表达很喜欢某事"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to show alignment with the interlocutor or to confirm a shared understanding",
+      "zh": "模板句式：根据话题填充占位内容。用于表达与对方一致或确认共同理解"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, build rapport with the listener",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "... is totally my cup of tea For example, this is a great way to introduce your point naturally.",
+      "zh": "阅读 is totally my cup of tea，我从小就喜欢看书。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-bf2028bb9a",
+    "expression": "... isn't the case",
+    "variants": [],
+    "collocation": {
+      "en": "Use ... isn't the case to [situation-appropriate completion of the template]",
+      "zh": "使用模板：[某说法] isn't the case，用于否定某个观点"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "... isn't the case For example, this is a great way to introduce your point naturally.",
+      "zh": "... isn't the case 比如说，这是一个很好反驳错误观点的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-cca7e62b5d",
+    "expression": "... would be my preference",
+    "variants": [],
+    "collocation": {
+      "en": "[Option choice] would be my [preference/choice] because [reason]",
+      "zh": "[选项] would be my [preference/choice] because [原因]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "Going to the countryside would be my preference, because I really need some peace and quiet.",
+      "zh": "去乡下 would be my preference，因为我真的需要一些宁静。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-6d144eef91",
+    "expression": "..., which is",
+    "variants": [],
+    "collocation": {
+      "en": "Use ..., which is to [situation-appropriate completion of the template]",
+      "zh": "使用模板：..., which is，然后补充说明"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "..., which is For example, this is a great way to introduce your point naturally.",
+      "zh": "..., which is 比如说，这是一个很好补充说明的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-b5e9d0ef38",
+    "expression": "..., which is a sign of",
+    "variants": [],
+    "collocation": {
+      "en": "Use ..., which is a sign of to [situation-appropriate completion of the template]",
+      "zh": "使用模板：..., which is a sign of，然后补充说明"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "..., which is a sign of For example, this is a great way to introduce your point naturally.",
+      "zh": "..., which is a sign of 比如说，这是一个很好表明某事物意义的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-306e211d0f",
+    "expression": "..., you name it",
+    "variants": [],
+    "collocation": {
+      "en": "Use ..., you name it to [situation-appropriate completion of the template]",
+      "zh": "使用模板：[列举几个例子], you name it，表示列举不尽"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "..., you name it For example, this is a great way to introduce your point naturally.",
+      "zh": "我喜欢各种运动，比如篮球、足球、游泳，you name it。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-3803b63350",
+    "expression": "a ___ (general term) that",
+    "variants": [],
+    "collocation": {
+      "en": "Use a ___ (general term) that to [situation-appropriate completion of the template]",
+      "zh": "使用模板：a [概括性名词] that [定语从句]，用于下定义或引入概念"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "a ___ (general term) that For example, this is a great way to introduce your point naturally.",
+      "zh": "a ___ (general term) that 比如，这是一个引出概念的好方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-502ff61b1c",
+    "expression": "a proficient mastery of",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：a proficient mastery of [某技能]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "a proficient mastery of technology has fundamentally changed the way we communicate with each other.",
+      "zh": "a proficient mastery of 英语需要大量的练习和积累。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-e106273790",
+    "expression": "A, ...; B,",
+    "variants": [],
+    "collocation": {
+      "en": "Use A, ...; B, to [situation-appropriate completion of the template]",
+      "zh": "使用模板：A, ...; B,，用于并列列举两个事物"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "A, ...; B For example, this is a great way to introduce your point naturally.",
+      "zh": "A, ...; B, 比如说，这是一个很好对比两个事物的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-84b10cec81",
+    "expression": "And again,",
+    "variants": [],
+    "collocation": {
+      "en": "Use to reference commonly understood information or prior discussion",
+      "zh": "用于引用常识或之前讨论过的内容：And again, [共识观点]"
+    },
+    "contexts": {
+      "en": "Used to reference commonly understood facts or prior conversation",
+      "zh": "用于引用常识性的知识或之前讨论过的内容"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, builds common ground with listener",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "And again It's something that most people would agree with.",
+      "zh": "And again 这是一个大多数人都认同的观点。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-7bd2985a1f",
+    "expression": "And the main reason is that,",
+    "variants": [],
+    "collocation": {
+      "en": "Use within or at the start of a clause expressing causality",
+      "zh": "在从句中或从句开头使用，表达因果关系：And the main reason is that, [原因]"
+    },
+    "contexts": {
+      "en": "Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于解释原因，尤其是在Part 3的分析类回答中"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates logical reasoning ability",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "And the main reason is that This explains why the situation has changed so dramatically.",
+      "zh": "And the main reason is that 这就是为什么情况发生了如此巨大的变化。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-7571686a4c",
+    "expression": "As far as ... (paraphrase what's in the topic) is concerned,",
+    "variants": [],
+    "collocation": {
+      "en": "As far as [topic] is concerned, [statement]...",
+      "zh": "As far as [话题] is concerned, [陈述]..."
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used when you did not hear or understand the question fully",
+      "zh": "模板句式：根据话题填充占位内容。用于没听清或没完全理解问题时"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows active listening and communication skills",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "As far as ... (paraphrase what's in the topic) is concerned For example, this is a great way to introduce your point naturally.",
+      "zh": "As far as ... (paraphrase what's in the topic) is concerned 比如说，这是一个很好引出你观点的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-0ad9e2f80c",
+    "expression": "As far as I’m concerned",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：As far as I'm concerned, [个人观点]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "As far as I’m concerned technology has fundamentally changed the way we communicate with each other.",
+      "zh": "As far as I'm concerned，科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-946be7e722",
+    "expression": "As soon as I saw this question, the first thing that sprang to my mind was",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: As soon as I saw this question, the first thing that sprang to my mind was",
+      "zh": "回答开头使用：As soon as I saw this question, the first thing that sprang to my mind was [想法]"
+    },
+    "contexts": {
+      "en": "Used to structure multi-point answers, especially in Part 2 long turns",
+      "zh": "用于组织多要点回答，尤其是在Part 2的独白中"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, improves coherence and cohesion scores",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "As soon as I saw this question, the first thing that sprang to my mind was I'll explain my reasons step by step.",
+      "zh": "As soon as I saw this question, the first thing that sprang to my mind was 我会一步一步解释我的理由。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-1b716fe97f",
+    "expression": "be addicted to doing",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句中使用：be addicted to [doing sth]，表示沉迷于做某事"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "be addicted to doing technology has fundamentally changed the way we communicate with each other.",
+      "zh": "很多人 be addicted to 刷社交媒体，花费大量时间在上面。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-024d3db202",
+    "expression": "coffee beans, coffee mugs, coffee machine,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在列举事物时使用，连续列举相关名词：coffee beans, coffee mugs, coffee machine, [等等]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点时举例"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "coffee beans, coffee mugs, coffee machine technology has fundamentally changed the way we communicate with each other.",
+      "zh": "说到咖啡，我家里有各种咖啡相关的物品，coffee beans, coffee mugs, coffee machine，应有尽有。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-7f01015b18",
+    "expression": "first ... popping into my mind",
+    "variants": [],
+    "collocation": {
+      "en": "Use first ... popping into my mind to [situation-appropriate completion of the template]",
+      "zh": "使用模板：first [某事物] popping into my mind，表示首先想到的"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to structure multi-point answers, especially in Part 2 long turns",
+      "zh": "模板句式：根据话题填充占位内容。用于组织多要点回答，尤其是在Part 2的独白中"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, improves coherence and cohesion scores",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "first ... popping into my mind For example, this is a great way to introduce your point naturally.",
+      "zh": "first ... popping into my mind 比如说，这是很好引出第一个想法的方式。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-2b874584d2",
+    "expression": "For about ... years./ I lived there until I was ..., so about ... years",
+    "variants": [],
+    "collocation": {
+      "en": "Use For about ... years./ I lived there until I was ..., so about ... years to [situation-appropriate completion of the template]",
+      "zh": "使用模板：For about [数字] years. 或 I lived there until I was [年龄], so about [数字] years"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "For about ... years./ I lived there until I was ..., so about ... years For example, this is a great way to introduce your point naturally.",
+      "zh": "For about 10 years. / I lived there until I was 18, so about 10 years 比如说，这是描述居住时间的自然方式。"
+    },
+    "cefr": "C1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-5d7d0c71a1",
+    "expression": "Frappuccino, Americano, Latte,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在列举咖啡品种时使用：Frappuccino, Americano, Latte, [等等]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点时举例说明"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Frappuccino, Americano, Latte technology has fundamentally changed the way we communicate with each other.",
+      "zh": "我喜欢的咖啡有很多种，Frappuccino, Americano, Latte，每种都有不同的风味。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-207614a789",
+    "expression": "how much / how often / how you feel",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: how much / how often / how you feel",
+      "zh": "回答开头使用：how much / how often / how you feel [补充具体内容]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "how much / how often / how you feel technology has fundamentally changed the way we communicate with each other.",
+      "zh": "how much / how often / how you feel 这取决于你想强调的方面——是频率、程度还是感受。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-373d1ceb9e",
+    "expression": "I am sure that",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I am sure that [确信的观点]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "I am sure that technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I am sure that 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-b1d5ae32bc",
+    "expression": "I delved into/devoured/engaged in",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I delved into/devoured/engaged in [某事物]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "I delved into/devoured/engaged in technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I delved into/devoured/engaged in 这个话题，发现了很多有趣的观点。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-2e824f9c0d",
+    "expression": "I do think",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I do think [强调的观点]，表示强调"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I do think technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I do think 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-cb93e2fe01",
+    "expression": "I embarked on a journey to unravel the",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I embarked on a journey to unravel the [某事物]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "I embarked on a journey to unravel the technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I embarked on a journey to unravel the 这个复杂的问题，深入研究了各个层面。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-f7fff1185a",
+    "expression": "I find ... works perfectly for me",
+    "variants": [],
+    "collocation": {
+      "en": "Use I find ... works perfectly for me to [situation-appropriate completion of the template]",
+      "zh": "使用模板：I find [某事物] works perfectly for me，表示某方法很适合自己"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I find ... works perfectly for me For example, this is a great way to introduce your point naturally.",
+      "zh": "I find ... works perfectly for me 比如说，这是表达个人偏好的好方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-b318577bce",
+    "expression": "I find xxx really ...(stimulating/intriguing/hard to understand/fascinating)",
+    "variants": [],
+    "collocation": {
+      "en": "Use I find xxx really ...(stimulating/intriguing/hard to understand/fascinating) to [situation-appropriate completion of the template]",
+      "zh": "使用模板：I find [某事物] really [形容词]，表达对某事物的感受"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "I find xxx really ...(stimulating/intriguing/hard to understand/fascinating) For example, this is a great way to introduce your point naturally.",
+      "zh": "I find xxx really ...(stimulating/intriguing/hard to understand/fascinating) 比如说，这是很好表达感受的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-c871f47f8c",
+    "expression": "I hold the opinion that",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I hold the opinion that [个人观点]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "I hold the opinion that technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I hold the opinion that 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-2d9ce9f4e6",
+    "expression": "I hold the view that",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I hold the view that [个人观点]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "I hold the view that technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I hold the view that 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-43fbda5f9c",
+    "expression": "I know ..., still I reckon",
+    "variants": [],
+    "collocation": {
+      "en": "Use I know ..., still I reckon to [situation-appropriate completion of the template]",
+      "zh": "使用模板：I know [某事实], still I reckon [自己的看法]，先承认再反驳"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I know ..., still I reckon For example, this is a great way to introduce your point naturally.",
+      "zh": "I know ..., still I reckon 比如说，这是一个表达不同意见的委婉方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-68612c2b94",
+    "expression": "I live in..., it's in the south/north/west/east of China",
+    "variants": [],
+    "collocation": {
+      "en": "Use I live in..., it's in the south/north/west/east of China to [situation-appropriate completion of the template]",
+      "zh": "使用模板：I live in [城市], it's in the [方向] of China"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I live in..., it's in the south/north/west/east of China For example, this is a great way to introduce your point naturally.",
+      "zh": "I live in 上海, it's in the east of China 比如说，这是描述居住地的自然方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-4c1873dfa0",
+    "expression": "I met him in ... class",
+    "variants": [],
+    "collocation": {
+      "en": "Use I met him in ... class to [situation-appropriate completion of the template]",
+      "zh": "使用模板：I met him in [某课程] class，描述认识某人时的场景"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I met him in ... class For example, this is a great way to introduce your point naturally.",
+      "zh": "I met him in ... class 比如说，这是描述如何认识某人的自然方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-7522263e17",
+    "expression": "I really dig",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I really dig [某事物]，表示非常喜欢"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I really dig technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I really dig 这种音乐风格，每次听都让我心情愉悦。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-e90d5413e1",
+    "expression": "I reckon that",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I reckon that [个人看法]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I reckon that technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I reckon that 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-95a138e2e7",
+    "expression": "I started there in ... after graduating from college",
+    "variants": [],
+    "collocation": {
+      "en": "Use I started there in ... after graduating from college to [situation-appropriate completion of the template]",
+      "zh": "使用模板：I started there in [年份] after graduating from college"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I started there in ... after graduating from college For example, this is a great way to introduce your point naturally.",
+      "zh": "I started there in ... after graduating from college 比如说，这是描述工作经历的自然方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-c321e96f9e",
+    "expression": "I think that",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I think that [个人观点]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "中性"
+    },
+    "example": {
+      "en": "I think that technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I think that 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-68ad3f2c9a",
+    "expression": "I think we might find the answers as follows,",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: I think we might find the answers as follows,",
+      "zh": "回答开头使用：I think we might find the answers as follows, [分点回答]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "I think we might find the answers as follows technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I think we might find the answers as follows 科技已经从根本上改变了我们的沟通方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-cc685d3c35",
+    "expression": "I think what I really wanna say is,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I think what I really wanna say is, [核心观点]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I think what I really wanna say is technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I think what I really wanna say is 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-d2567e1fd5",
+    "expression": "I totally agree with the opinion that",
+    "variants": [],
+    "collocation": {
+      "en": "Use as a standalone response or clause-initial to confirm alignment",
+      "zh": "用作独立回答或从句开头：I totally agree with the opinion that [认同的观点]"
+    },
+    "contexts": {
+      "en": "Used to show alignment with the interlocutor or to confirm a shared understanding",
+      "zh": "用于表达与对方一致或确认共同理解"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, build rapport with the listener",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I totally agree with the opinion that That's exactly what I was thinking as well.",
+      "zh": "I totally agree with the opinion that 这也正是我所想的。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-d57cfbd8ef",
+    "expression": "I vaguely/vividly remember that we were taking a lesson on",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: I vaguely/vividly remember that we were taking a lesson on",
+      "zh": "回答开头使用：I vaguely/vividly remember that we were taking a lesson on [某内容]"
+    },
+    "contexts": {
+      "en": "Used when drawing on personal memories or past experiences",
+      "zh": "用于引用个人记忆或过去经历"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, natural narrative technique",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "I vaguely/vividly remember that we were taking a lesson on I remember it like it was yesterday — it was such a memorable experience.",
+      "zh": "I vaguely/vividly remember that we were taking a lesson on 我记得清清楚楚——那是一次令人难忘的经历。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-56bc37d10c",
+    "expression": "I vaguely/vividly/still recall that",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to introduce a memory or past experience",
+      "zh": "在从句开头使用，引出回忆或过去经历：I vaguely/vividly/still recall that [回忆内容]"
+    },
+    "contexts": {
+      "en": "Used when drawing on personal memories or past experiences",
+      "zh": "用于引用个人记忆或过去经历"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, natural narrative technique",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "I vaguely/vividly/still recall that I remember it like it was yesterday — it was such a memorable experience.",
+      "zh": "I vaguely/vividly/still recall that 我记得清清楚楚——那是一次令人难忘的经历。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-e1a5b0ec09",
+    "expression": "I would love to be a/an",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I would love to be a/an [职业/身份]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I would love to be a/an technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I would love to be a/an 程序员，因为我非常喜欢解决问题。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-b284aa11ec",
+    "expression": "I would say,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I would say, [个人看法]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I would say technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I would say 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-6d67a499fd",
+    "expression": "I'd go with",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I'd go with [选择/观点]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I'd go with technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I'd go with 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-65611334b4",
+    "expression": "I'd probably go with",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I'd probably go with [选择/观点]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I'd probably go with technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I'd probably go with 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-5dfed0cc32",
+    "expression": "I'd say that",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I'd say that [个人看法]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I'd say that technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I'd say that 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-28d08a279b",
+    "expression": "I'll choose",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I'll choose [选择]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I'll choose technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I'll choose 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-2b191aa189",
+    "expression": "I'll probably choose",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I'll probably choose [选择]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I'll probably choose technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I'll probably choose 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ca6f9dc8c5",
+    "expression": "I'm a fan of",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I'm a fan of [某事物]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I'm a fan of technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I'm a fan of 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-849f6c3207",
+    "expression": "I'm a huge fan of",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I'm a huge fan of [某事物]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I'm a huge fan of technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I'm a huge fan of 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-0afd4e2440",
+    "expression": "I'm a/an ... at xxx. / I work for xxx as a/an",
+    "variants": [],
+    "collocation": {
+      "en": "Use I'm a/an ... at xxx. / I work for xxx as a/an to [situation-appropriate completion of the template]",
+      "zh": "使用模板：I'm a/an [职位] at [公司]. / I work for [公司] as a/an [职位]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "I'm a/an ... at xxx. / I work for xxx as a/an For example, this is a great way to introduce your point naturally.",
+      "zh": "I'm a/an ... at xxx. / I work for xxx as a/an 比如说，这是描述工作的自然方式。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-a9676770d0",
+    "expression": "I'm an avid fan of",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I'm an avid fan of [某事物]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "I'm an avid fan of technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I'm an avid fan of 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-a0f783416f",
+    "expression": "I'm into",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I'm into [某事物]，表示对某事物感兴趣"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I'm into technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I'm into 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-09540c058d",
+    "expression": "I'm passionate about",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：I'm passionate about [某事物]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "I'm passionate about technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I'm passionate about 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-834c5ee017",
+    "expression": "If ... (past tense), ... (would do)",
+    "variants": [],
+    "collocation": {
+      "en": "Use If ... (past tense), ... (would do) to [situation-appropriate completion of the template]",
+      "zh": "使用模板：If [过去时], [would + 动词]，用于虚拟语气假设"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "If ... (past tense), ... (would do) For example, this is a great way to introduce your point naturally.",
+      "zh": "If ... (past tense), ... (would do) 比如说，这是一个好用的虚拟语气表达方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-28e73e6304",
+    "expression": "If ...,",
+    "variants": [],
+    "collocation": {
+      "en": "Use If ..., to [situation-appropriate completion of the template]",
+      "zh": "使用模板：If [条件], [结果]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "中性"
+    },
+    "example": {
+      "en": "If For example, this is a great way to introduce your point naturally.",
+      "zh": "If 比如说，这是表达条件关系的基本方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ca4376c61e",
+    "expression": "If I can remember correctly,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to introduce a memory or past experience",
+      "zh": "在从句开头使用，引出记忆或过去经历：If I can remember correctly, [回忆内容]"
+    },
+    "contexts": {
+      "en": "Used when drawing on personal memories or past experiences",
+      "zh": "用于引用个人记忆或过去经历"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, natural narrative technique",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "If I can remember correctly I remember it like it was yesterday — it was such a memorable experience.",
+      "zh": "If I can remember correctly 我记得清清楚楚——那是一次令人难忘的经历。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-3969b7fbab",
+    "expression": "If you hold my feet to the fire, I'd say",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: If you hold my feet to the fire, I'd say",
+      "zh": "回答开头使用：If you hold my feet to the fire, I'd say [最真实的想法]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "If you hold my feet to the fire, I'd say technology has fundamentally changed the way we communicate with each other.",
+      "zh": "If you hold my feet to the fire, I'd say 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-8e5a9e0fa8",
+    "expression": "If you twist my arm,",
+    "variants": [],
+    "collocation": {
+      "en": "Use before or within a statement to indicate provisional judgment",
+      "zh": "在陈述之前或之中使用，表示推测或不太确定的判断"
+    },
+    "contexts": {
+      "en": "Used when speculating or when your knowledge is incomplete",
+      "zh": "用于推测或当你的知识不够完整时"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows honest self-assessment",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "If you twist my arm This is a useful expression for expressing yourself naturally in English.",
+      "zh": "If you twist my arm 这是自然表达自己想法的一个有用表达。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-79bbfec572",
+    "expression": "If you wanna ask me for my opinion, I would say",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: If you wanna ask me for my opinion, I would say",
+      "zh": "回答开头使用：If you wanna ask me for my opinion, I would say [个人看法]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "If you wanna ask me for my opinion, I would say technology has fundamentally changed the way we communicate with each other.",
+      "zh": "If you wanna ask me for my opinion, I would say 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-afb335a3c5",
+    "expression": "In my humble opinion",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：In my humble opinion, [个人观点]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "In my humble opinion technology has fundamentally changed the way we communicate with each other.",
+      "zh": "In my humble opinion，科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-a820412c38",
+    "expression": "In my opinion",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：In my opinion, [个人观点]"
+    },
+    "contexts": {
+      "en": "Formally marking the following statement as personal viewpoint",
+      "zh": "正式地标记后续陈述为个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "In my opinion, social media has both positive and negative effects on young people.",
+      "zh": "In my opinion, 社交媒体对年轻人既有积极影响也有消极影响。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-a6b58cca28",
+    "expression": "In my opinion,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：In my opinion, [个人观点]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "In my opinion, social media has both positive and negative effects on young people.",
+      "zh": "In my opinion, 社交媒体对年轻人既有积极影响也有消极影响。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-dbd96a6419",
+    "expression": "In order to answer this question, I reckon we'll have to examine",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: In order to answer this question, I reckon we'll have to examine",
+      "zh": "回答开头使用：In order to answer this question, I reckon we'll have to examine [分析要点]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "In order to answer this question, I reckon we'll have to examine technology has fundamentally changed the way we communicate with each other.",
+      "zh": "In order to answer this question, I reckon we'll have to examine 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-a100d69c65",
+    "expression": "is one that",
+    "variants": [],
+    "collocation": {
+      "en": "Use within a clause to draw special attention to the following content",
+      "zh": "在从句中使用，引起对后续内容的特别关注"
+    },
+    "contexts": {
+      "en": "Used to highlight the most important aspect of your argument",
+      "zh": "用于强调论点中最重要的方面"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, highlights key information effectively",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "is one that This is really the core issue that we need to address.",
+      "zh": "is one that 这确实是我们需要解决的核心问题。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-f0de7547c4",
+    "expression": "It might depend on",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：It might depend on [因素]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "It might depend on technology has fundamentally changed the way we communicate with each other.",
+      "zh": "It might depend on 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-33692847f1",
+    "expression": "It really depends on how you define \"...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use It really depends on how you define \"...\" to [situation-appropriate completion of the template]",
+      "zh": "使用模板：It really depends on how you define \"...\"，然后补充话题相关内容"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "It really depends on how you define \"...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "It really depends on how you define \"...\" 比如说，这是一个好用的表达方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-7672c5c56c",
+    "expression": "it stirred a mix of emotions, from ... to",
+    "variants": [],
+    "collocation": {
+      "en": "Use it stirred a mix of emotions, from ... to to [situation-appropriate completion of the template]",
+      "zh": "使用模板：it stirred a mix of emotions, from [情绪1] to [情绪2]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "it stirred a mix of emotions, from ... to For example, this is a great way to introduce your point naturally.",
+      "zh": "it stirred a mix of emotions, from ... to 比如说，这是很好描述复杂情感的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-adb88b7046",
+    "expression": "It's a sign that",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：It's a sign that [某迹象]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "It's a sign that technology has fundamentally changed the way we communicate with each other.",
+      "zh": "It's a sign that 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-1d63e6e9bf",
+    "expression": "It's really determined by",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：It's really determined by [决定因素]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "It's really determined by technology has fundamentally changed the way we communicate with each other.",
+      "zh": "It's really determined by 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-c0c80df9b9",
+    "expression": "I’m so overloaded with my ..., I feel swamped",
+    "variants": [],
+    "collocation": {
+      "en": "Use I’m so overloaded with my ..., I feel swamped to [situation-appropriate completion of the template]",
+      "zh": "使用模板：I'm so overloaded with my [某事], I feel swamped"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I’m so overloaded with my ..., I feel swamped For example, this is a great way to introduce your point naturally.",
+      "zh": "I'm so overloaded with my ..., I feel swamped 比如说，这是很好表达忙碌感受的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-bbe7997fe8",
+    "expression": "means - represents, symbolises, leads to, is equal to,",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: means - represents, symbolises, leads to, is equal to,",
+      "zh": "回答开头使用：means - represents, symbolises, leads to, is equal to, [等等]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "means - represents, symbolises, leads to, is equal to technology has fundamentally changed the way we communicate with each other.",
+      "zh": "means - represents, symbolises, leads to, is equal to 科技已经从根本上改变了我们的沟通方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-8ea2ad11ac",
+    "expression": "much / far / way ... + adj",
+    "variants": [],
+    "collocation": {
+      "en": "Use much / far / way ... + adj to [situation-appropriate completion of the template]",
+      "zh": "使用模板：much / far / way [比较级形容词]，表示程度差异很大"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "much / far / way ... + adj For example, this is a great way to introduce your point naturally.",
+      "zh": "much / far / way ... + adj 比如说，这是强调程度差异的好方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-eaf09555e6",
+    "expression": "my fascination with ...  wasn't merely ..., it was driven by a desire to",
+    "variants": [],
+    "collocation": {
+      "en": "Use my fascination with ...  wasn't merely ..., it was driven by a desire to to [situation-appropriate completion of the template]",
+      "zh": "使用模板：my fascination with [某事物] wasn't merely [表面原因], it was driven by a desire to [深层动机]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "my fascination with ...  wasn't merely ..., it was driven by a desire to For example, this is a great way to introduce your point naturally.",
+      "zh": "my fascination with ... wasn't merely ..., it was driven by a desire to 比如说，这是很好表达深层动机的方式。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-fdcdf24d5a",
+    "expression": "My favourite game genre is",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：My favourite game genre is [游戏类型]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "My favourite game genre is technology has fundamentally changed the way we communicate with each other.",
+      "zh": "My favourite game genre is 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-4664334986",
+    "expression": "My view is that",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：My view is that [个人观点]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "My view is that technology has fundamentally changed the way we communicate with each other.",
+      "zh": "My view is that 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-6755c593ea",
+    "expression": "n. / adj. / v.",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：n. / adj. / v. [根据词性补充内容]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "中性"
+    },
+    "example": {
+      "en": "n. / adj. / v technology has fundamentally changed the way we communicate with each other.",
+      "zh": "n. / adj. / v 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-235192c27f",
+    "expression": "obejective clause - that",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用 that 引导的宾语从句：I think that [从句]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "中性"
+    },
+    "example": {
+      "en": "obejective clause - that technology has fundamentally changed the way we communicate with each other.",
+      "zh": "我认为 that 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-e4b3dfddcb",
+    "expression": "On one hand,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a clause to introduce a counterpoint",
+      "zh": "在从句开头使用，引出相反观点或限制条件：On one hand, [一方面]"
+    },
+    "contexts": {
+      "en": "Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于引出不同视角或对之前陈述的限制"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "On one hand This is not to say that the other option doesn't have its merits.",
+      "zh": "On one hand 这并不是说另一个选项没有它的优点。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-985a1d72f2",
+    "expression": "on the one hand",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：on the one hand [一方面]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "on the one hand technology has fundamentally changed the way we communicate with each other.",
+      "zh": "on the one hand 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-8e2031a6fa",
+    "expression": "One ... is",
+    "variants": [],
+    "collocation": {
+      "en": "Use One ... is to [situation-appropriate completion of the template]",
+      "zh": "使用模板：One [某事物] is [具体内容]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "中性"
+    },
+    "example": {
+      "en": "One ... is For example, this is a great way to introduce your point naturally.",
+      "zh": "One ... is 比如说，这是引出列举的好方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ec35769a90",
+    "expression": "One of ... is",
+    "variants": [],
+    "collocation": {
+      "en": "Use One of ... is to [situation-appropriate completion of the template]",
+      "zh": "使用模板：One of [某群体] is [具体内容]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "中性"
+    },
+    "example": {
+      "en": "One of ... is For example, this is a great way to introduce your point naturally.",
+      "zh": "One of ... is 比如说，这是引出某一类中一个的好方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-3a7298ac66",
+    "expression": "one of my life-long goals is to",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：one of my life-long goals is to [目标]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "one of my life-long goals is to technology has fundamentally changed the way we communicate with each other.",
+      "zh": "one of my life-long goals is to 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-c05f0aca9a",
+    "expression": "One way or another,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：One way or another, [无论如何]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "One way or another technology has fundamentally changed the way we communicate with each other.",
+      "zh": "One way or another 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-6299ba2cbd",
+    "expression": "Only",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：Only [唯一的条件/方式]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "Only technology has fundamentally changed the way we communicate with each other.",
+      "zh": "Only 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-f7f6690ca2",
+    "expression": "participate in the",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用：participate in the [活动/项目]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "participate in the technology has fundamentally changed the way we communicate with each other.",
+      "zh": "participate in the 科技已经从根本上改变了我们互相沟通的方式。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-d5e9021cf7",
+    "expression": "People can't live without ... more than ever",
+    "variants": [],
+    "collocation": {
+      "en": "Use People can't live without ... more than ever to [situation-appropriate completion of the template]",
+      "zh": "使用模板：People can't live without [某事物] more than ever"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：根据话题填充占位内容。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "People can't live without ... more than ever For example, this is a great way to introduce your point naturally.",
+      "zh": "People can't live without ... more than ever 比如说，这是强调某事物重要性的好方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  }
+]

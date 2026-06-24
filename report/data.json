@@ -2346,7 +2346,14 @@
         "medal": "🥇",
         "topic": "Art",
         "seasons": "7/7",
-        "type": "Object"
+        "type": "Object",
+        "questions": [
+          "Do you like art? Why or why not?",
+          "Do you think art classes are important for children?",
+          "Have you ever visited an art gallery?",
+          "What kind of art do you enjoy most?",
+          "Would you consider buying a piece of art?"
+        ]
       },
       {
         "rank": 1,
@@ -2374,7 +2381,14 @@
         "medal": "🥈",
         "topic": "Sports",
         "seasons": "6/7",
-        "type": "Event"
+        "type": "Event",
+        "questions": [
+          "Do you play any sports?",
+          "What sports do you enjoy watching?",
+          "Did you play sports when you were younger?",
+          "Why do you think some people dislike sports?",
+          "What's the most popular sport in your country?"
+        ]
       },
       {
         "rank": 5,
@@ -2388,35 +2402,70 @@
         "medal": "🥈",
         "topic": "Teachers",
         "seasons": "6/7",
-        "type": "People"
+        "type": "People",
+        "questions": [
+          "Did you have a favourite teacher at school?",
+          "What qualities make a good teacher?",
+          "Do you think teachers are valued enough in society?",
+          "Would you ever consider becoming a teacher?",
+          "How has the role of teachers changed with technology?"
+        ]
       },
       {
         "rank": 5,
         "medal": "🥈",
         "topic": "Technology",
         "seasons": "6/7",
-        "type": "Object"
+        "type": "Object",
+        "questions": [
+          "How often do you use technology in your daily life?",
+          "What piece of technology could you NOT live without?",
+          "Do you think people rely too much on technology nowadays?",
+          "How has technology changed the way we work?",
+          "What do you think will be the next big technological breakthrough?"
+        ]
       },
       {
         "rank": 5,
         "medal": "🥈",
         "topic": "Shopping",
         "seasons": "6/7",
-        "type": "Event"
+        "type": "Event",
+        "questions": [
+          "Do you enjoy shopping?",
+          "How often do you go shopping?",
+          "Do you prefer shopping in stores or online?",
+          "What's the last thing you bought?",
+          "Has your shopping style changed in recent years?"
+        ]
       },
       {
         "rank": 5,
         "medal": "🥈",
         "topic": "Books",
         "seasons": "6/7",
-        "type": "Object"
+        "type": "Object",
+        "questions": [
+          "Do you enjoy reading books?",
+          "What kind of books do you like to read?",
+          "Did you read a lot as a child?",
+          "Do you prefer physical books or e-books?",
+          "Have you ever read a book that changed your perspective?"
+        ]
       },
       {
         "rank": 5,
         "medal": "🥈",
         "topic": "Travel",
         "seasons": "6/7",
-        "type": "Event"
+        "type": "Event",
+        "questions": [
+          "Do you enjoy travelling?",
+          "What's the most memorable trip you've taken?",
+          "Do you prefer travelling alone or with others?",
+          "Where would you like to travel next?",
+          "How has travel changed compared to your parents' generation?"
+        ]
       },
       {
         "rank": 5,
@@ -2430,21 +2479,42 @@
         "medal": "🥈",
         "topic": "Hometown",
         "seasons": "6/7",
-        "type": "Place"
+        "type": "Place",
+        "questions": [
+          "Where is your hometown?",
+          "What's your hometown famous for?",
+          "Has your hometown changed much over the years?",
+          "Would you recommend your hometown as a place to visit?",
+          "Do you see yourself living there in the future?"
+        ]
       },
       {
         "rank": 5,
         "medal": "🥈",
         "topic": "Food",
         "seasons": "6/7",
-        "type": "Object"
+        "type": "Object",
+        "questions": [
+          "What's your favourite food?",
+          "Do you enjoy cooking?",
+          "Are there any dishes you can cook well?",
+          "Has your taste in food changed over the years?",
+          "Do you prefer eating at home or dining out?"
+        ]
       },
       {
         "rank": 5,
         "medal": "🥈",
         "topic": "Movies",
         "seasons": "6/7",
-        "type": "Object"
+        "type": "Object",
+        "questions": [
+          "Do you enjoy watching movies?",
+          "What's your favourite film genre?",
+          "How often do you go to the cinema?",
+          "Do you prefer watching films at home or in a cinema?",
+          "Has a film ever made you cry?"
+        ]
       },
       {
         "rank": 5,
@@ -2458,14 +2528,28 @@
         "medal": "🥈",
         "topic": "Sharing",
         "seasons": "6/7",
-        "type": "Event"
+        "type": "Event",
+        "questions": [
+          "Did your parents teach you the importance of sharing as a child?",
+          "What kinds of things do you share with others?",
+          "Is there anything you'd rather NOT share?",
+          "Do you think children today are less willing to share?",
+          "How has technology changed the way we share information?"
+        ]
       },
       {
         "rank": 5,
         "medal": "🥈",
         "topic": "Friends",
         "seasons": "6/7",
-        "type": "People"
+        "type": "People",
+        "questions": [
+          "How often do you spend time with friends?",
+          "What do you usually do together?",
+          "Are your friends mostly from school or work?",
+          "Do you prefer having a few close friends or a wide circle?",
+          "What makes someone a good friend?"
+        ]
       },
       {
         "rank": 5,
@@ -2479,7 +2563,14 @@
         "medal": "🥈",
         "topic": "Music",
         "seasons": "6/7",
-        "type": "Object"
+        "type": "Object",
+        "questions": [
+          "What kind of music do you listen to?",
+          "Do you play any musical instruments?",
+          "Has your taste in music changed over time?",
+          "Do you prefer listening to music alone or with others?",
+          "Have you ever been to a live concert?"
+        ]
       }
     ],
     "part2": [
@@ -2487,55 +2578,145 @@
         "rank": 1,
         "medal": "🥇",
         "topic": "Movie You Watched/Enjoyed",
-        "seasons": "7/7"
+        "seasons": "7/7",
+        "cueCard": {
+          "describe": "Describe a movie you watched and enjoyed",
+          "bullets": [
+            "What movie it was",
+            "When and where you watched it",
+            "What it was about",
+            "And explain why you enjoyed it"
+          ],
+          "explain": "The most frequent P2 topic across all seasons. Always have one film ready."
+        }
       },
       {
         "rank": 1,
         "medal": "🥇",
         "topic": "Sport/Activity You Enjoy",
-        "seasons": "7/7"
+        "seasons": "7/7",
+        "cueCard": {
+          "describe": "Describe a sport or physical activity you enjoy",
+          "bullets": [
+            "What it is",
+            "How you got started",
+            "How often you do it",
+            "And explain why you enjoy it"
+          ],
+          "explain": "Also appears as 'outdoor activity', 'exercise routine', 'game you play'."
+        }
       },
       {
         "rank": 3,
         "medal": "🥈",
         "topic": "Crowded Place",
-        "seasons": "6/7"
+        "seasons": "6/7",
+        "cueCard": {
+          "describe": "Describe a crowded place you have been to",
+          "bullets": [
+            "Where it is",
+            "When you went there",
+            "Why it was crowded",
+            "And explain how you felt about it"
+          ],
+          "explain": "This classic cue card appears across multiple seasons — be ready with a market, stadium, or festival example."
+        }
       },
       {
         "rank": 3,
         "medal": "🥈",
         "topic": "Toy You Liked in Childhood",
-        "seasons": "6/7"
+        "seasons": "6/7",
+        "cueCard": {
+          "describe": "Describe a toy you liked in your childhood",
+          "bullets": [
+            "What toy it was",
+            "Who gave it to you",
+            "How you played with it",
+            "And explain why it was special to you"
+          ],
+          "explain": "A nostalgic topic — any childhood toy works. Pick one with an emotional connection."
+        }
       },
       {
         "rank": 3,
         "medal": "🥈",
         "topic": "Risk That Led to Positive Result",
-        "seasons": "6/7"
+        "seasons": "6/7",
+        "cueCard": {
+          "describe": "Describe a risk you took that led to a positive result",
+          "bullets": [
+            "What the risk was",
+            "Why you decided to take it",
+            "What happened as a result",
+            "And explain how you felt about the outcome"
+          ],
+          "explain": "Can be anything from changing jobs to speaking up in a meeting. The key is the positive result."
+        }
       },
       {
         "rank": 6,
         "medal": "🥉",
         "topic": "Time You Received Good News",
-        "seasons": "5/7"
+        "seasons": "5/7",
+        "cueCard": {
+          "describe": "Describe a time you received good news",
+          "bullets": [
+            "What the news was",
+            "When and where you received it",
+            "Who told you about it",
+            "And explain how you felt"
+          ],
+          "explain": "This is the 'positive moment' archetype — also appears as 'happy memory', 'exciting news'."
+        }
       },
       {
         "rank": 6,
         "medal": "🥉",
         "topic": "Noisy Place",
-        "seasons": "5/7"
+        "seasons": "5/7",
+        "cueCard": {
+          "describe": "Describe a noisy place you have been to",
+          "bullets": [
+            "Where it was",
+            "Why you went there",
+            "What kind of noise there was",
+            "And explain how you felt about the noise"
+          ],
+          "explain": "Construction sites, markets, busy streets — pick somewhere vivid."
+        }
       },
       {
         "rank": 6,
         "medal": "🥉",
         "topic": "Website You Often Use",
-        "seasons": "5/7"
+        "seasons": "5/7",
+        "cueCard": {
+          "describe": "Describe a website you often use",
+          "bullets": [
+            "What website it is",
+            "How you discovered it",
+            "What you use it for",
+            "And explain why you find it useful"
+          ],
+          "explain": "Also appears as 'app you use', 'online service', 'digital tool'. WeChat/TikTok/Taobao all work."
+        }
       },
       {
         "rank": 6,
         "medal": "🥉",
         "topic": "Overcame Difficulty and Succeeded",
-        "seasons": "5/7"
+        "seasons": "5/7",
+        "cueCard": {
+          "describe": "Describe a time you overcame a difficulty and succeeded",
+          "bullets": [
+            "What the difficulty was",
+            "When and where it happened",
+            "How you dealt with it",
+            "And explain how you felt after succeeding"
+          ],
+          "explain": "This is the 'challenge' archetype — appears as 'difficult task', 'challenge you faced', 'obstacle you overcame'."
+        }
       },
       {
         "rank": 6,
@@ -2571,19 +2752,49 @@
         "rank": 15,
         "medal": "",
         "topic": "Famous Person (various forms)",
-        "seasons": "4/7"
+        "seasons": "4/7",
+        "cueCard": {
+          "describe": "Describe a famous person you admire",
+          "bullets": [
+            "Who this person is",
+            "How you know about them",
+            "What they have achieved",
+            "And explain why you admire them"
+          ],
+          "explain": "This topic appears in multiple forms: 'famous person', 'well-known figure', 'celebrity you follow'."
+        }
       },
       {
         "rank": 15,
         "medal": "",
         "topic": "Life-Changing Experience",
-        "seasons": "4/7"
+        "seasons": "4/7",
+        "cueCard": {
+          "describe": "Describe a life-changing experience you have had",
+          "bullets": [
+            "What happened",
+            "When and where it took place",
+            "Who was involved",
+            "And explain why it was life-changing"
+          ],
+          "explain": "Often rephrased as 'an important event', 'a turning point', or 'a moment that changed you'."
+        }
       },
       {
         "rank": 15,
         "medal": "",
         "topic": "Natural Place",
-        "seasons": "4/7"
+        "seasons": "4/7",
+        "cueCard": {
+          "describe": "Describe a natural place you have visited",
+          "bullets": [
+            "Where it is",
+            "When you went there",
+            "What it looks like",
+            "And explain how you felt about it"
+          ],
+          "explain": "Covers mountains, beaches, forests, parks — have a flexible nature example ready."
+        }
       },
       {
         "rank": 15,
@@ -2595,7 +2806,17 @@
         "rank": 15,
         "medal": "",
         "topic": "Park or Garden",
-        "seasons": "4/7"
+        "seasons": "4/7",
+        "cueCard": {
+          "describe": "Describe a park or garden you have visited",
+          "bullets": [
+            "Where it is",
+            "When you visited it",
+            "What it looks like",
+            "And explain why you like or dislike it"
+          ],
+          "explain": "A friendly, accessible topic — everyone has a local park story."
+        }
       },
       {
         "rank": 15,
@@ -2651,7 +2872,16 @@
         "Has your hometown changed much over the years?",
         "Do you plan to live there in the future?"
       ],
-      "keyVocab": ["bustling", "quaint", "close-knit community", "infrastructure", "skyscrapers", "greenery", "pace of life", "cost of living"],
+      "keyVocab": [
+        "bustling",
+        "quaint",
+        "close-knit community",
+        "infrastructure",
+        "skyscrapers",
+        "greenery",
+        "pace of life",
+        "cost of living"
+      ],
       "modelAnswers": [
         {
           "q": "Where is your hometown?",
@@ -2673,7 +2903,15 @@
         "Why did you choose that subject or job?",
         "Do you enjoy it?"
       ],
-      "keyVocab": ["major in", "demanding", "fulfilling", "hands-on experience", "work-life balance", "career prospects", "broaden horizons"],
+      "keyVocab": [
+        "major in",
+        "demanding",
+        "fulfilling",
+        "hands-on experience",
+        "work-life balance",
+        "career prospects",
+        "broaden horizons"
+      ],
       "modelAnswers": [
         {
           "q": "Do you work or are you a student?",
@@ -2691,7 +2929,16 @@
         "What can you see from your window?",
         "Would you like to move in the future?"
       ],
-      "keyVocab": ["spacious", "cozy", "natural light", "well-decorated", "overlooks", "downtown", "residential area", "balcony"],
+      "keyVocab": [
+        "spacious",
+        "cozy",
+        "natural light",
+        "well-decorated",
+        "overlooks",
+        "downtown",
+        "residential area",
+        "balcony"
+      ],
       "modelAnswers": [
         {
           "q": "Do you live in a house or an apartment?",
@@ -2709,7 +2956,16 @@
         "Has your area changed in recent years?",
         "Do you know your neighbours well?"
       ],
-      "keyVocab": ["neighbourhood", "convenient", "within walking distance", "amenities", "public transport", "green spaces", "sense of community", "safe"],
+      "keyVocab": [
+        "neighbourhood",
+        "convenient",
+        "within walking distance",
+        "amenities",
+        "public transport",
+        "green spaces",
+        "sense of community",
+        "safe"
+      ],
       "modelAnswers": [
         {
           "q": "Do you like the area where you live?",

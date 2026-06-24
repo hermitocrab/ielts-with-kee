@@ -1,2344 +1,433 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IELTS Discourse Markers & Logic Chains · Kee Lee</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap">
-  <link rel="stylesheet" href="css/discourse.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Discourse Markers &amp; Logic Chains · Kee Lee</title>
+<style>
+/* Phase 2 additions */
+/* Phase 2.2 additions */
+html[data-lang="zh"] .lang-en-only{display:none!important}
+html[data-lang="en"] .lang-zh-only{display:none!important}
+.dm-cefr-badge{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:18px;padding:0 5px;border-radius:4px;font-size:.6rem;font-weight:700;line-height:1;letter-spacing:.3px;margin-left:6px;vertical-align:middle;}
+.dm-cefr-A1{background:#e8f5e9;color:#2e7d32}
+.dm-cefr-A2{background:#c8e6c9;color:#1b5e20}
+.dm-cefr-B1{background:#fff3e0;color:#e65100}
+.dm-cefr-B2{background:#ffecb3;color:#f57f17}
+.dm-cefr-C1{background:#fce4ec;color:#c62828}
+.dm-cefr-C2{background:#f3e5f5;color:#7b1fa2}
+.dm-tts-btn{display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:999px;border:1px solid var(--gray-300);background:var(--white);font-size:.68rem;color:var(--gray-600);cursor:pointer;transition:var(--transition);font-family:inherit;line-height:1.4;}
+.dm-tts-btn:hover{background:var(--purple);color:var(--white);border-color:var(--purple)}
+.dm-tts-btn.playing{background:var(--purple);color:var(--white);border-color:var(--purple);animation:pulse .8s ease-in-out 2}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
+.dm-phrase-header{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+.dm-card-expr{margin-bottom:4px}
+.dm-nav-spacer{flex:1}
+.dm-lang-toggle{background:none;border:1.5px solid var(--gray-300);border-radius:999px;padding:4px 14px;font-size:.8rem;font-weight:600;color:var(--gray-600);cursor:pointer;transition:var(--transition);font-family:inherit;}
+.dm-lang-toggle:hover{border-color:var(--purple);color:var(--purple)}
+.dm-macro-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;max-width:var(--max-w);margin:0 auto;padding:24px 20px 8px;}
+.dm-macro-card{background:var(--white);border-radius:var(--radius);border:1px solid var(--gray-200);padding:20px;cursor:pointer;transition:var(--transition);}
+.dm-macro-card:hover{border-color:var(--purple-light);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.dm-macro-emoji{font-size:1.6rem;margin-bottom:8px}
+.dm-macro-card h3{font-size:.95rem;font-weight:700;color:var(--gray-800);margin-bottom:4px}
+.dm-macro-card h3 .zh{color:var(--gray-500);font-weight:400;margin-left:4px;font-size:.82rem}
+.dm-macro-scenarios{margin-top:10px;list-style:none;display:flex;flex-direction:column;gap:6px}
+.dm-macro-scenarios li{font-size:.78rem;color:var(--gray-600);padding:6px 10px;background:var(--gray-50);border-radius:var(--radius-xs);transition:var(--transition);cursor:pointer;line-height:1.4;}
+.dm-macro-scenarios li:hover{background:var(--purple);color:var(--white)}
+.dm-macro-empty{background:var(--gray-100)!important;opacity:.6;border-style:dashed!important;cursor:default!important}
+.dm-macro-empty h3{color:var(--gray-400)!important}
+.dm-macro-empty .dm-macro-scenarios li{background:var(--gray-200)!important;color:var(--gray-400)!important;cursor:default!important}
+.dm-controls-bar{display:flex;align-items:center;gap:12px;padding:12px 20px;border-bottom:1px solid var(--gray-200);background:var(--white);position:sticky;top:56px;z-index:99;overflow-x:auto;flex-wrap:nowrap;}
+.dm-controls-bar::-webkit-scrollbar{height:2px}
+.dm-controls-bar::-webkit-scrollbar-thumb{background:var(--gray-300);border-radius:999px}
+.dm-view-toggle{display:flex;gap:0;flex-shrink:0;}
+.dm-view-btn{padding:8px 16px;border:1px solid var(--gray-300);background:var(--white);font-size:.8rem;font-weight:500;color:var(--gray-600);cursor:pointer;font-family:inherit;transition:var(--transition);}
+.dm-view-btn:first-child{border-radius:var(--radius-xs) 0 0 var(--radius-xs)}
+.dm-view-btn:last-child{border-radius:0 var(--radius-xs) var(--radius-xs) 0}
+.dm-view-btn.active{background:var(--purple);color:var(--white);border-color:var(--purple)}
+.dm-view-btn:hover:not(.active){background:var(--gray-50)}
+.dm-ctrl-spacer{flex:1;min-width:8px}
+.dm-level-pills{display:flex;gap:4px;flex-shrink:0}
+.dm-lvl{padding:4px 10px;border-radius:999px;border:1px solid var(--gray-300);background:var(--white);font-size:.7rem;font-weight:600;color:var(--gray-500);cursor:pointer;transition:var(--transition);font-family:inherit;}
+.dm-lvl:hover{border-color:var(--purple);color:var(--purple)}
+.dm-lvl.active{background:var(--purple);color:var(--white);border-color:var(--purple)}
+.dm-lvl-label{font-size:.7rem;color:var(--gray-400);margin-right:2px;align-self:center;font-weight:500;flex-shrink:0}
+.dm-scenarios-view{display:grid;gap:24px}
+.dm-tree-view{padding:0 4px}
+.dm-macro-section{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:var(--white)}
+.dm-macro-section-header{padding:14px 20px;display:flex;align-items:center;gap:10px;background:var(--gray-50);cursor:pointer;border-bottom:1px solid var(--gray-200);}
+.dm-macro-section-header .emoji{font-size:1.2rem}
+.dm-macro-section-header h3{font-size:.95rem;font-weight:700;color:var(--gray-800)}
+.dm-macro-section-header .zh{color:var(--gray-500);font-size:.8rem;margin-left:6px;font-weight:400}
+.dm-macro-section-body{padding:16px 20px}
+.dm-scenario-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.dm-scenario-tag{padding:10px 14px;border-radius:var(--radius-sm);background:var(--gray-50);border:1px solid var(--gray-100);cursor:pointer;transition:var(--transition);font-size:.82rem;color:var(--gray-700);line-height:1.4;font-family:inherit;text-align:left;}
+.dm-scenario-tag:hover{background:var(--purple);color:var(--white);border-color:var(--purple)}
+.dm-macro-node{margin-bottom:20px;border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;background:var(--white);}
+.dm-macro-node-header{padding:14px 20px;display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--gray-50),var(--white));border-bottom:1px solid var(--gray-200);cursor:default;}
+.dm-macro-node-header .emoji{font-size:1.1rem}
+.dm-macro-node-header h3{font-size:.92rem;font-weight:700;color:var(--gray-800)}
+.dm-macro-node-header .zh{color:var(--gray-500);font-size:.78rem;margin-left:4px;font-weight:400}
+.dm-macro-node-body{padding:12px 16px}
+.dm-tree-cat{margin-bottom:0;border-bottom:1px solid var(--gray-100);}
+.dm-tree-cat:last-child{border-bottom:none}
+.dm-tree-cat-header{padding:10px 12px;display:flex;align-items:center;gap:8px;cursor:pointer;border-radius:var(--radius-xs);transition:var(--transition);}
+.dm-tree-cat-header:hover{background:var(--gray-50)}
+.dm-tree-cat-color{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.dm-tree-cat-title{font-size:.85rem;font-weight:600;color:var(--gray-800);flex:1;}
+.dm-tree-cat-count{font-size:.72rem;color:var(--gray-400);font-weight:500;}
+.dm-tree-cat-arrow{font-size:.7rem;color:var(--gray-400);transition:transform .2s}
+.dm-tree-cat.collapsed .dm-tree-cat-arrow{transform:rotate(-90deg)}
+.dm-tree-cat-body{padding:0 12px 10px 30px;transition:all .3s}
+.dm-tree-cat.collapsed .dm-tree-cat-body{display:none}
+.dm-tree-subfunc{margin-bottom:4px;border:1px solid var(--gray-100);border-radius:var(--radius-xs);overflow:hidden;}
+.dm-tree-subfunc-header{padding:8px 12px;display:flex;align-items:center;gap:6px;cursor:pointer;font-size:.8rem;font-weight:500;color:var(--purple);transition:var(--transition);}
+.dm-tree-subfunc-header:hover{background:var(--gray-50)}
+.dm-tree-subfunc-arrow{font-size:.65rem;color:var(--gray-400);transition:transform .2s}
+.dm-tree-subfunc.collapsed .dm-tree-subfunc-arrow{transform:rotate(-90deg)}
+.dm-tree-subfunc-body{padding:6px 12px 10px;border-top:1px solid var(--gray-100)}
+.dm-tree-subfunc.collapsed .dm-tree-subfunc-body{display:none}
+@media(max-width:768px){
+.dm-macro-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr));padding:16px 12px 4px}
+.dm-controls-bar{padding:8px 12px;gap:6px;flex-wrap:wrap}
+.dm-view-btn{padding:6px 12px;font-size:.75rem}
+.dm-level-pills{gap:3px}
+.dm-lvl{padding:3px 8px;font-size:.65rem}
+.dm-scenario-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+}
+@media(max-width:480px){
+.dm-macro-grid{grid-template-columns:1fr 1fr;gap:10px}
+}
+/* Original CSS */
+
+/* ===== RESET & BASE ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans SC',sans-serif;
+  background:#fafafa;color:#212121;line-height:1.6;min-height:100vh;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+
+/* ===== CSS VARIABLES ===== */
+:root{
+  --purple:#9F44D3;--purple-light:#b77ae0;--purple-dark:#7a2ea8;
+  --pink:#FF2442;--pink-light:#ff6b7a;
+  --white:#fff;--gray-50:#fafafa;--gray-100:#f5f5f5;--gray-200:#eee;
+  --gray-300:#e0e0e0;--gray-400:#bdbdbd;--gray-500:#9e9e9e;
+  --gray-600:#757575;--gray-700:#616161;--gray-800:#424242;--gray-900:#212121;
+  --radius:12px;--radius-sm:8px;--radius-xs:6px;
+  --shadow-sm:0 1px 3px rgba(0,0,0,.06);
+  --shadow-md:0 4px 16px rgba(0,0,0,.08);
+  --shadow-lg:0 8px 32px rgba(0,0,0,.12);
+  --transition:all .2s ease;
+  --max-w:1100px;
+}
+
+/* ===== NAV ===== */
+.dm-nav{
+  background:var(--white);border-bottom:1px solid var(--gray-200);
+  position:sticky;top:0;z-index:100;
+  padding:0 20px;height:56px;display:flex;align-items:center;gap:16px;
+}
+.dm-nav-brand{
+  font-weight:700;font-size:1.05rem;color:var(--purple);text-decoration:none;
+  white-space:nowrap;transition:var(--transition);
+}
+.dm-nav-brand:hover{color:var(--purple-dark)}
+.dm-nav-label{
+  font-size:.85rem;color:var(--gray-500);border-left:1px solid var(--gray-300);
+  padding-left:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+
+/* ===== HERO ===== */
+.dm-hero{
+  background:linear-gradient(135deg,var(--purple) 0%,#7a2ea8 50%,var(--pink) 100%);
+  color:var(--white);padding:60px 20px 48px;text-align:center;position:relative;overflow:hidden;
+}
+.dm-hero::before{
+  content:'';position:absolute;top:-60px;right:-60px;
+  width:240px;height:240px;background:rgba(99,102,241,.1);border-radius:50%;
+}
+.dm-hero::after{
+  content:'';position:absolute;bottom:-40px;left:-40px;
+  width:160px;height:160px;background:rgba(255,255,255,.04);border-radius:50%;
+}
+.dm-hero>*{position:relative;z-index:1}
+.dm-hero-title{font-size:2.6rem;font-weight:800;line-height:1.2;margin-bottom:12px;letter-spacing:-.5px}
+.dm-hero-accent{color:var(--pink-light)}
+.dm-hero-sub{font-size:1.05rem;opacity:.85;max-width:640px;margin:0 auto 28px;line-height:1.6}
+
+/* ===== SEARCH ===== */
+.dm-search-wrap{position:relative;max-width:500px;margin:0 auto 24px}
+.dm-search{
+  width:100%;padding:14px 20px 14px 48px;border-radius:999px;
+  border:2px solid rgba(255,255,255,.2);background:rgba(255,255,255,.15);
+  color:var(--white);font-size:.95rem;outline:none;transition:var(--transition);
+  font-family:inherit;backdrop-filter:blur(4px);
+}
+.dm-search::placeholder{color:rgba(255,255,255,.55)}
+.dm-search:focus{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.2)}
+.dm-search-icon{position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:1.1rem;pointer-events:none}
+
+/* ===== CATEGORY PILLS ===== */
+.dm-category-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;max-width:900px;margin:0 auto}
+.dm-pill{
+  padding:6px 16px;border-radius:999px;border:1.5px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.08);color:rgba(255,255,255,.85);
+  font-size:.8rem;font-weight:500;cursor:pointer;transition:var(--transition);
+  font-family:inherit;white-space:nowrap;
+}
+.dm-pill:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.15)}
+.dm-pill.active{background:var(--white);color:var(--purple);border-color:var(--white);font-weight:600}
+
+/* ===== TAB BAR ===== */
+.dm-tab-bar{
+  display:flex;justify-content:center;gap:0;border-bottom:2px solid var(--gray-200);
+  background:var(--white);position:sticky;top:56px;z-index:99;
+}
+.dm-tab{
+  padding:14px 32px;border:none;background:none;font-size:.95rem;font-weight:500;
+  color:var(--gray-600);cursor:pointer;transition:var(--transition);
+  font-family:inherit;border-bottom:2px solid transparent;margin-bottom:-2px;
+}
+.dm-tab:hover{color:var(--purple)}
+.dm-tab.active{color:var(--purple);border-bottom-color:var(--purple);font-weight:600}
+
+/* ===== TAB CONTENT ===== */
+.dm-tab-content{display:none;max-width:var(--max-w);margin:0 auto;padding:32px 20px 60px}
+.dm-tab-content.active{display:block}
+
+/* ===== CATEGORY SECTIONS ===== */
+.dm-grid{display:flex;flex-direction:column;gap:12px}
+.dm-category{
+  background:var(--white);border-radius:var(--radius);border:1px solid var(--gray-200);
+  overflow:hidden;transition:var(--transition);
+}
+.dm-category:hover{border-color:var(--purple-light);box-shadow:var(--shadow-sm)}
+.dm-category-header{
+  padding:14px 20px;display:flex;align-items:center;justify-content:space-between;
+  cursor:pointer;user-select:none;transition:background .15s ease;
+}
+.dm-category-header:hover{background:var(--gray-50)}
+.dm-category-title{font-size:1rem;font-weight:600;color:var(--gray-800)}
+.dm-category-arrow{font-size:.85rem;color:var(--gray-400);transition:transform .2s ease}
+.dm-category.collapsed .dm-category-arrow{transform:rotate(-90deg)}
+.dm-category-body{padding:0 20px 16px;transition:all .3s ease}
+.dm-category.collapsed .dm-category-body{display:none}
+
+/* ===== FUNCTION NAME ===== */
+.dm-function-name{
+  font-size:.82rem;font-weight:600;color:var(--purple);text-transform:capitalize;flex:1
+}
+.dm-subfunction{border-top:1px solid var(--gray-100);margin-top:4px}
+.dm-function-header{
+  padding:10px 2px;display:flex;align-items:center;justify-content:space-between;
+  cursor:pointer;user-select:none;transition:background .15s
+}
+.dm-function-header:hover{background:var(--gray-50);border-radius:4px}
+.dm-func-arrow{font-size:.75rem;color:var(--gray-400);transition:transform .2s ease}
+.dm-func-arrow.collapsed{transform:rotate(-90deg)}
+.dm-subfunction-body{transition:all .3s ease}
+.dm-subfunction-body.collapsed{display:none}
+
+/* ===== PHRASE CARDS ===== */
+.dm-phrase-card{
+  padding:12px 16px;margin-bottom:6px;border-radius:var(--radius-sm);
+  border:1px solid var(--gray-100);background:var(--gray-50);
+  transition:var(--transition);
+}
+.dm-phrase-card:hover{background:var(--white);border-color:var(--purple-light);box-shadow:var(--shadow-sm)}
+.dm-phrase-card.highlight{background:#f3e8ff;border-color:var(--purple-light);box-shadow:var(--shadow-sm)}
+.dm-phrase-text{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.dm-phrase{
+  font-size:.9rem;color:var(--gray-800);font-weight:500;line-height:1.5;
+  word-break:break-word;flex:1
+}
+.dm-phrase-card.highlight .dm-phrase{color:var(--purple-dark);font-weight:600}
+.dm-phrase-example{font-size:.82rem;color:var(--gray-500);margin-top:6px;line-height:1.5;font-style:italic}
+
+/* ===== NO RESULTS ===== */
+.dm-no-results{display:none;text-align:center;padding:60px 20px}
+.dm-no-results.show{display:block}
+.dm-no-results p{color:var(--gray-500);font-size:1rem;margin-bottom:8px}
+
+/* ===== LOGIC CHAINS ===== */
+.dm-chains-intro{text-align:center;margin-bottom:40px}
+.dm-chains-intro h2{font-size:1.75rem;font-weight:700;color:var(--gray-900);margin-bottom:8px}
+.dm-chains-intro p{color:var(--gray-600);font-size:1rem}
+.dm-chains-grid{display:grid;grid-template-columns:1fr;gap:24px}
+
+.dm-chain-card{
+  background:var(--white);border-radius:var(--radius);
+  border:1px solid var(--gray-200);padding:28px;transition:var(--transition);
+}
+.dm-chain-card:hover{border-color:var(--purple-light);box-shadow:var(--shadow-md)}
+
+.dm-chain-header{display:flex;align-items:flex-start;gap:16px;margin-bottom:20px}
+.dm-chain-num{
+  flex-shrink:0;width:44px;height:44px;border-radius:var(--radius-sm);
+  background:linear-gradient(135deg,var(--purple),var(--pink));
+  color:var(--white);display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:1.1rem;
+}
+.dm-chain-header h3{font-size:1.1rem;font-weight:700;color:var(--gray-900);margin-bottom:4px}
+.dm-chain-use{font-size:.85rem;color:var(--gray-500)}
+
+/* Chain flow */
+.dm-chain-flow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px;padding:16px;background:var(--gray-50);border-radius:var(--radius-sm)}
+.dm-chain-flow.wrap{flex-wrap:wrap}
+.dm-chain-step{
+  background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-sm);
+  padding:10px 14px;text-align:center;font-weight:600;font-size:.85rem;color:var(--gray-800);
+  min-width:90px;display:flex;flex-direction:column;gap:2px
+}
+.dm-chain-step span{font-weight:400;font-size:.78rem;color:var(--gray-500);line-height:1.4}
+.dm-chain-step.wide{flex:1 1 200px}
+.dm-chain-arrow{color:var(--purple);font-weight:700;font-size:1.1rem}
+
+/* Chain branches (Y/N) */
+.dm-chain-branches{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.dm-branch{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:var(--radius-sm);font-size:.85rem}
+.dm-branch.yes{background:#e8f5e9}
+.dm-branch.no{background:#fce4ec}
+.dm-branch.depends{background:#e3f2fd}
+.dm-branch-label{font-weight:700;font-size:.8rem;padding:2px 10px;border-radius:999px;color:var(--white);white-space:nowrap}
+.dm-branch.yes .dm-branch-label{background:#4caf50}
+.dm-branch.no .dm-branch-label{background:var(--pink)}
+.dm-branch.depends .dm-branch-label{background:#2196F3}
+
+/* Chain markers */
+.dm-chain-markers{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.dm-chain-marker-tag{
+  display:inline-block;padding:4px 12px;border-radius:999px;
+  background:var(--gray-100);color:var(--purple);font-size:.78rem;
+  font-weight:500;cursor:pointer;transition:var(--transition);border:1px solid transparent;
+}
+.dm-chain-marker-tag:hover{background:var(--purple);color:var(--white);border-color:var(--purple)}
+
+/* Chain checklist */
+.dm-chain-checklist{
+  margin-top:12px;padding:12px 16px;border-radius:var(--radius-sm);
+  background:#fff8e1;font-size:.82rem;color:var(--gray-700);border:1px solid #ffe082;
+  line-height:1.5
+}
+.dm-chain-checklist strong{color:var(--gray-800)}
+.dm-chain-slice-hint{
+  margin:12px 0;padding:10px 16px;border-radius:var(--radius-sm);
+  background:#f3e8ff;font-size:.82rem;color:var(--purple-dark);
+  border:1px solid var(--purple-light);line-height:1.5
+}
+.dm-chain-slice-hint strong{color:var(--purple)}
+
+/* ===== FOOTER ===== */
+.dm-footer{text-align:center;padding:32px 20px;color:var(--gray-400);font-size:.82rem;border-top:1px solid var(--gray-200)}
+.dm-footer a{color:var(--purple);text-decoration:none}
+.dm-footer a:hover{color:var(--purple-dark)}
+
+
+/* ===== DETAILED CARD FIELDS ===== */
+.dm-card-expr{
+  font-size:.95rem;font-weight:700;color:var(--purple-dark);
+  margin-bottom:10px;line-height:1.4
+}
+.dm-card-field{
+  font-size:.82rem;color:var(--gray-700);margin-bottom:5px;
+  line-height:1.5;display:flex;gap:6px
+}
+.dm-card-field span{flex:1}
+.dm-example{
+  font-style:italic;color:var(--gray-600)
+}
+.dm-phrase-card mark{
+  background:#f3e8ff;color:var(--purple-dark);padding:1px 3px;border-radius:2px;
+  font-weight:600
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .dm-nav{padding:0 16px;height:52px}
+  .dm-nav-label{display:none}
+  .dm-hero{padding:40px 16px 32px}
+  .dm-hero-title{font-size:1.8rem}
+  .dm-hero-sub{font-size:.9rem}
+  .dm-search-wrap{max-width:100%}
+  .dm-tab{padding:12px 20px;font-size:.88rem}
+  .dm-tab-content{padding:24px 16px 40px}
+  .dm-category-header{padding:12px 16px}
+  .dm-category-body{padding:0 16px 12px}
+  .dm-category-title{font-size:.92rem}
+  .dm-chain-card{padding:20px}
+  .dm-chain-flow{flex-direction:column;align-items:stretch;padding:12px}
+  .dm-chain-step.wide{flex:1 1 auto}
+  .dm-chain-arrow{transform:rotate(90deg);text-align:center}
+  .dm-pill{font-size:.75rem;padding:5px 12px}
+}
+
+@media(max-width:480px){
+  .dm-hero-title{font-size:1.5rem}
+  .dm-chains-intro h2{font-size:1.4rem}
+}
+
+/* ===== KEE-BOT OVERRIDE (prevent conflicts) ===== */
+.dm-phrase-example::before{content:none!important}
+
+</style>
 </head>
 <body>
-
-<!-- NAV -->
 <nav class="dm-nav">
-  <a href="https://ielts.rkrk.io" class="dm-nav-brand">IELTS with Kee 🦄</a>
-  <span class="dm-nav-label">Discourse Markers & Logic Chains</span>
+<a href="https://ielts.rkrk.io" class="dm-nav-brand">IELTS with Kee 🦄</a>
+<span class="dm-nav-label">Discourse Markers &amp; Logic Chains</span>
+<span class="dm-nav-spacer"></span>
+<button class="dm-lang-toggle" id="langToggle" onclick="toggleLang()">中/EN</button>
 </nav>
-
-<!-- HERO -->
 <header class="dm-hero">
-  <h1 class="dm-hero-title">Speak Naturally.<br><span class="dm-hero-accent">Sound Like a Native.</span></h1>
-  <p class="dm-hero-sub">267+ discourse markers across 17 categories, 10 logic chains for structuring any IELTS answer. From Kee Lee's XMind. Free forever.</p>
-  
-  <div class="dm-search-wrap">
-    <input type="text" id="dm-search" class="dm-search" placeholder="Search for a phrase, function, or category…" autocomplete="off">
-    <span class="dm-search-icon">🔍</span>
-  </div>
-
-  <!-- Category Pills -->
-  <div class="dm-category-pills">
-    <button class="dm-pill active" data-filter="all">All</button>
-    <button class="dm-pill" data-filter="filler-words---stalling-phrases">Filler words / stalling phrases</button><button class="dm-pill" data-filter="re-organise-the-way-you-speak">Re-organise the way you speak</button><button class="dm-pill" data-filter="comment-on-the-question">Comment on the question</button><button class="dm-pill" data-filter="difficult-question">Difficult question</button><button class="dm-pill" data-filter="emphasis">Emphasis</button><button class="dm-pill" data-filter="sequencing---ordering-information">Sequencing - ordering information</button><button class="dm-pill" data-filter="adding-information">Adding information</button><button class="dm-pill" data-filter="indicating-opinion-&-attitude">Indicating opinion & attitude</button><button class="dm-pill" data-filter="comparing">Comparing</button><button class="dm-pill" data-filter="contrasting">Contrasting</button><button class="dm-pill" data-filter="giving-examples">Giving examples</button><button class="dm-pill" data-filter="explanation">Explanation</button><button class="dm-pill" data-filter="cause-&-effect">Cause & Effect</button><button class="dm-pill" data-filter="generalising">Generalising</button><button class="dm-pill" data-filter="topic-introducers">Topic introducers</button><button class="dm-pill" data-filter="recalling">Recalling</button><button class="dm-pill" data-filter="shared-knowledge">Shared knowledge</button>
-  </div>
-</header>
-
-<!-- TAB NAV -->
-<div class="dm-tab-bar">
-  <button class="dm-tab active" data-tab="discourse">📝 Discourse Markers</button>
-  <button class="dm-tab" data-tab="chains">🧠 Logic Chains</button>
+<h1 class="dm-hero-title">
+<span class="lang-en-only">Speak Naturally.<br><span class="dm-hero-accent">Sound Like a Native.</span></span>
+<span class="lang-zh-only">自然开口。<br><span class="dm-hero-accent">说得像母语者。</span></span>
+</h1>
+<p class="dm-hero-sub">
+<span class="lang-en-only"><span id="totalCount">0</span> discourse markers &middot; <span id="totalCats">0</span> categories &middot; <span id="totalChains">10</span> logic chains</span>
+<span class="lang-zh-only"><span id="totalCountZh">0</span> 个语篇标记 &middot; <span id="totalCatsZh">0</span> 个分类 &middot; <span id="totalChainsZh">10</span> 个逻辑链</span>
+</p>
+<div class="dm-search-wrap">
+<input type="text" id="dm-search" class="dm-search" data-placeholder-en="Search for a phrase, function, or category…" data-placeholder-zh="搜索短语、功能或分类…" placeholder="Search for a phrase, function, or category…" autocomplete="off">
+<span class="dm-search-icon">🔍</span>
 </div>
-
-<!-- TAB 1: DISCOURSE MARKERS -->
-<section id="tab-discourse" class="dm-tab-content active">
-  <div class="dm-grid" id="dm-grid">
-    
-    <div class="dm-category" data-category="filler-words---stalling-phrases">
-      <div class="dm-category-header" onclick="toggleCategory('filler-words---stalling-phrases')">
-        <h3 class="dm-category-title">Filler words / stalling phrases</h3>
-        <span class="dm-category-arrow">▾</span>
-      </div>
-      <div class="dm-category-body" id="body-filler-words---stalling-phrases">
-    <h4 class="dm-function-name">I mean..., like, well, you know, okay, maybe, perhaps, let's say, let's just say</h4>
-            <div class="dm-phrase-card" data-phrases="i mean..., like, well, you know, okay, maybe, perhaps, let's say, let's just say that">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I mean..., like, well, you know, okay, maybe, perhaps, let's say, let's just say that</span>
-                <button class="dm-copy-btn" data-text="I mean..., like, well, you know, okay, maybe, perhaps, let's say, let's just say that" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">honestly, frankly speaking, generally, basically, actually, personally speaking,</h4>
-            <div class="dm-phrase-card" data-phrases="to tell you the truth, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">to tell you the truth, </span>
-                <button class="dm-copy-btn" data-text="to tell you the truth, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="truth be told, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">truth be told, </span>
-                <button class="dm-copy-btn" data-text="truth be told, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">that's a difficult/interesting question,</h4>
-            <div class="dm-phrase-card" data-phrases="what else can i say, well">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">what else can I say, well</span>
-                <button class="dm-copy-btn" data-text="what else can I say, well" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-      </div>
-    </div>
-    <div class="dm-category" data-category="re-organise-the-way-you-speak">
-      <div class="dm-category-header" onclick="toggleCategory('re-organise-the-way-you-speak')">
-        <h3 class="dm-category-title">Re-organise the way you speak</h3>
-        <span class="dm-category-arrow">▾</span>
-      </div>
-      <div class="dm-category-body" id="body-re-organise-the-way-you-speak">
-    <h4 class="dm-function-name">I mean ...</h4>
-            <div class="dm-phrase-card" data-phrases="basically, what i wanna say is ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Basically, what I wanna say is </span>
-                <button class="dm-copy-btn" data-text="Basically, what I wanna say is " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">What I mean is that, ...</h4>
-            <div class="dm-phrase-card" data-phrases="what i mean is that, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">What I mean is that, </span>
-                <button class="dm-copy-btn" data-text="What I mean is that, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">So basically what I wanna say is ....</h4>
-            <div class="dm-phrase-card" data-phrases="so basically what i wanna say is ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">So basically what I wanna say is </span>
-                <button class="dm-copy-btn" data-text="So basically what I wanna say is " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">What I was trying to say is, ...</h4>
-            <div class="dm-phrase-card" data-phrases="want to = wanna">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">want to = wanna</span>
-                <button class="dm-copy-btn" data-text="want to = wanna" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="going to = gonna">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">going to = gonna</span>
-                <button class="dm-copy-btn" data-text="going to = gonna" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="trying to = tryna">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">trying to = tryna</span>
-                <button class="dm-copy-btn" data-text="trying to = tryna" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">Well, lemme rephrase that, ...</h4>
-            <div class="dm-phrase-card" data-phrases="let me = lemme">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">let me = lemme</span>
-                <button class="dm-copy-btn" data-text="let me = lemme" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="give me = gimme">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">give me = gimme</span>
-                <button class="dm-copy-btn" data-text="give me = gimme" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">Let/Allow me to put it in another way, ...</h4>
-            <div class="dm-phrase-card" data-phrases="let/allow me to put it in another way, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Let/Allow me to put it in another way, </span>
-                <button class="dm-copy-btn" data-text="Let/Allow me to put it in another way, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">I might have to take back what I just said</h4>
-            <div class="dm-phrase-card" data-phrases="what i mean is that, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">What I mean is that, </span>
-                <button class="dm-copy-btn" data-text="What I mean is that, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">Please allow me a few seconds to gather my thoughts.</h4>
-            <div class="dm-phrase-card" data-phrases="if it's possible">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">if it's possible</span>
-                <button class="dm-copy-btn" data-text="if it's possible" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-      </div>
-    </div>
-    <div class="dm-category" data-category="comment-on-the-question">
-      <div class="dm-category-header" onclick="toggleCategory('comment-on-the-question')">
-        <h3 class="dm-category-title">Comment on the question</h3>
-        <span class="dm-category-arrow">▾</span>
-      </div>
-      <div class="dm-category-body" id="body-comment-on-the-question">
-    <h4 class="dm-function-name">Wow, such a relatable question!</h4>
-            <div class="dm-phrase-card" data-phrases="wow, such a relatable question!">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Wow, such a relatable question!</span>
-                <button class="dm-copy-btn" data-text="Wow, such a relatable question!" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 Wow, such a relatable question! I actually discuss this with my friends all the time.</div>
-            </div>
-            <h4 class="dm-function-name">Gotta say this is a thought-provoking question.</h4>
-            <div class="dm-phrase-card" data-phrases="gotta say this is a thought-provoking question">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Gotta say this is a thought-provoking question</span>
-                <button class="dm-copy-btn" data-text="Gotta say this is a thought-provoking question" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 Gotta say this is a thought-provoking question. Where do I even begin?</div>
-            </div>
-            <h4 class="dm-function-name">Good question, because ...</h4>
-            <div class="dm-phrase-card" data-phrases="great question!">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Great question!</span>
-                <button class="dm-copy-btn" data-text="Great question!" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="that's a good one!">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">That's a good one!</span>
-                <button class="dm-copy-btn" data-text="That's a good one!" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="gotta say i quite like this question, 'cuz ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Gotta say I quite like this question, 'cuz </span>
-                <button class="dm-copy-btn" data-text="Gotta say I quite like this question, 'cuz " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">Interesting question.</h4>
-            <div class="dm-phrase-card" data-phrases="has got to = gotta">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">has got to = gotta</span>
-                <button class="dm-copy-btn" data-text="has got to = gotta" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">What a challenging question!</h4>
-            <div class="dm-phrase-card" data-phrases="gotta say... that's a tricky one!">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Gotta say... that's a tricky one!</span>
-                <button class="dm-copy-btn" data-text="Gotta say... that's a tricky one!" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-      </div>
-    </div>
-    <div class="dm-category" data-category="difficult-question">
-      <div class="dm-category-header" onclick="toggleCategory('difficult-question')">
-        <h3 class="dm-category-title">Difficult question</h3>
-        <span class="dm-category-arrow">▾</span>
-      </div>
-      <div class="dm-category-body" id="body-difficult-question">
-    <h4 class="dm-function-name">Ask for clarification / repetition</h4>
-            <div class="dm-phrase-card" data-phrases="sorry __(examiner's name)___, would you mind repeating / explaining the question?">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Sorry __(examiner's name)___, would you mind repeating / explaining the question?</span>
-                <button class="dm-copy-btn" data-text="Sorry __(examiner's name)___, would you mind repeating / explaining the question?" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I've never really thought about this before, but if I had to give an answer…</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="sorry sir/ma'am, i didn't quite catch your question. could you please explain/repeat it?">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Sorry sir/ma'am, I didn't quite catch your question. Could you please explain/repeat it?</span>
-                <button class="dm-copy-btn" data-text="Sorry sir/ma'am, I didn't quite catch your question. Could you please explain/repeat it?" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I've never really thought about this before, but if I had to give an answer…</div>
-            </div>
-            <h4 class="dm-function-name">Pt. 1 method</h4>
-            <div class="dm-phrase-card" data-phrases="but if i had to guess/answer it, i'd say ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">But if I had to guess/answer it, I'd say </span>
-                <button class="dm-copy-btn" data-text="But if I had to guess/answer it, I'd say " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I've never really thought about this before, but if I had to give an answer…</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="twist my arm">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">twist my arm</span>
-                <button class="dm-copy-btn" data-text="twist my arm" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I've never really thought about this before, but if I had to give an answer…</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="put my neck on the line">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">put my neck on the line</span>
-                <button class="dm-copy-btn" data-text="put my neck on the line" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I've never really thought about this before, but if I had to give an answer…</div>
-            </div>
-            <h4 class="dm-function-name">Pt. 2 method</h4>
-            <div class="dm-phrase-card" data-phrases="well, to be honest, as soon as i saw this topic, the first thing/person/place (that) popped into (my) mind was actually ..., because off the top of my head, i could not think of any ... so i'll go with that if you don't mind">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Well, to be honest, as soon as I saw this topic, the first thing/person/place (that) popped into (my) mind was actually ..., because off the top of my head, I could not think of any ... so I'll go with that if you don't mind</span>
-                <button class="dm-copy-btn" data-text="Well, to be honest, as soon as I saw this topic, the first thing/person/place (that) popped into (my) mind was actually ..., because off the top of my head, I could not think of any ... so I'll go with that if you don't mind" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I've never really thought about this before, but if I had to give an answer…</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="if you hold my feet to the fire = if i have to answer this question">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">If you hold my feet to the fire = if I have to answer this question</span>
-                <button class="dm-copy-btn" data-text="If you hold my feet to the fire = if I have to answer this question" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I've never really thought about this before, but if I had to give an answer…</div>
-            </div>
-            <h4 class="dm-function-name">Pt. 3 method</h4>
-            <div class="dm-phrase-card" data-phrases="my two cents = my humble opinions">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">my two cents = my humble opinions</span>
-                <button class="dm-copy-btn" data-text="my two cents = my humble opinions" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I've never really thought about this before, but if I had to give an answer…</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="if you twist my arm">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">If you twist my arm</span>
-                <button class="dm-copy-btn" data-text="If you twist my arm" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I've never really thought about this before, but if I had to give an answer…</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="if you put my neck on the line">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">If you put my neck on the line</span>
-                <button class="dm-copy-btn" data-text="If you put my neck on the line" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I've never really thought about this before, but if I had to give an answer…</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i'll have to admit i just drew a blank here">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I'll have to admit I just drew a blank here</span>
-                <button class="dm-copy-btn" data-text="I'll have to admit I just drew a blank here" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I've never really thought about this before, but if I had to give an answer…</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i'm drawing blank here">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I'm drawing blank here</span>
-                <button class="dm-copy-btn" data-text="I'm drawing blank here" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I've never really thought about this before, but if I had to give an answer…</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="however, if you'd like to know ...., i can definitely shed some light on that">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">however, if you'd like to know ...., I can definitely shed some light on that</span>
-                <button class="dm-copy-btn" data-text="however, if you'd like to know ...., I can definitely shed some light on that" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I've never really thought about this before, but if I had to give an answer…</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="apologies that i couldn't provide you with any more useful information at the moment">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Apologies that I couldn't provide you with any more useful information at the moment</span>
-                <button class="dm-copy-btn" data-text="Apologies that I couldn't provide you with any more useful information at the moment" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I've never really thought about this before, but if I had to give an answer…</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="this has never crossed my mind, to be honest">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">This has never crossed my mind, to be honest</span>
-                <button class="dm-copy-btn" data-text="This has never crossed my mind, to be honest" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I've never really thought about this before, but if I had to give an answer…</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="off the top of my head, i dunno where to start. could you please allow me a few seconds to gather my thoughts?">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Off the top of my head, I dunno where to start. Could you please allow me a few seconds to gather my thoughts?</span>
-                <button class="dm-copy-btn" data-text="Off the top of my head, I dunno where to start. Could you please allow me a few seconds to gather my thoughts?" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I've never really thought about this before, but if I had to give an answer…</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="sorry that i'm just ..., so i can't provide you with anything useful">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Sorry that I'm just ..., so I can't provide you with anything useful</span>
-                <button class="dm-copy-btn" data-text="Sorry that I'm just ..., so I can't provide you with anything useful" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I've never really thought about this before, but if I had to give an answer…</div>
-            </div>
-            <h4 class="dm-function-name">How to deal with pause</h4>
-            <div class="dm-phrase-card" data-phrases="i've hit a mental block">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I've hit a mental block</span>
-                <button class="dm-copy-btn" data-text="I've hit a mental block" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I've never really thought about this before, but if I had to give an answer…</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="well actually, i've just lost my train of thought, lemme rephrase">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Well actually, I've just lost my train of thought, lemme rephrase</span>
-                <button class="dm-copy-btn" data-text="Well actually, I've just lost my train of thought, lemme rephrase" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I've never really thought about this before, but if I had to give an answer…</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="well my mind just went completely blank here">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Well my mind just went completely blank here</span>
-                <button class="dm-copy-btn" data-text="Well my mind just went completely blank here" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I've never really thought about this before, but if I had to give an answer…</div>
-            </div>
-            
-      </div>
-    </div>
-    <div class="dm-category" data-category="emphasis">
-      <div class="dm-category-header" onclick="toggleCategory('emphasis')">
-        <h3 class="dm-category-title">Emphasis</h3>
-        <span class="dm-category-arrow">▾</span>
-      </div>
-      <div class="dm-category-body" id="body-emphasis">
-    <h4 class="dm-function-name">What ... is, ...</h4>
-            <div class="dm-phrase-card" data-phrases="what i wanna say is, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">What I wanna say is, </span>
-                <button class="dm-copy-btn" data-text="What I wanna say is, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="what i'm trying to emphasize here is, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">What I'm trying to emphasize here is, </span>
-                <button class="dm-copy-btn" data-text="What I'm trying to emphasize here is, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="the next thing i'd like to bring up is, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">The next thing I'd like to bring up is, </span>
-                <button class="dm-copy-btn" data-text="The next thing I'd like to bring up is, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="the most important thing is, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">The most important thing is, </span>
-                <button class="dm-copy-btn" data-text="The most important thing is, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="what i'd like to point out is, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">What I'd like to point out is, </span>
-                <button class="dm-copy-btn" data-text="What I'd like to point out is, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="the thing is, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">The thing is, </span>
-                <button class="dm-copy-btn" data-text="The thing is, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">One</h4>
-            <div class="dm-phrase-card" data-phrases="one of the most prominent examples is ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">One of the most prominent examples is </span>
-                <button class="dm-copy-btn" data-text="One of the most prominent examples is " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="one of the most important reasons is definitely that ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">One of the most important reasons is definitely that </span>
-                <button class="dm-copy-btn" data-text="One of the most important reasons is definitely that " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="one piece of advice i can offer, is to use emphasis in speaking">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">One piece of advice I can offer, is to use emphasis in speaking</span>
-                <button class="dm-copy-btn" data-text="One piece of advice I can offer, is to use emphasis in speaking" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="there are many skills in ielts. however, recognising emphasis is one that really matters">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">There are many skills in IELTS. However, recognising emphasis is one that really matters</span>
-                <button class="dm-copy-btn" data-text="There are many skills in IELTS. However, recognising emphasis is one that really matters" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="... is the only thing that ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">... is the only thing that </span>
-                <button class="dm-copy-btn" data-text="... is the only thing that " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="tennis is a sport that can make people feel motivated">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Tennis is a sport that can make people feel motivated</span>
-                <button class="dm-copy-btn" data-text="Tennis is a sport that can make people feel motivated" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="coffee is a kind of drink that can make people feel refreshed">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Coffee is a kind of drink that can make people feel refreshed</span>
-                <button class="dm-copy-btn" data-text="Coffee is a kind of drink that can make people feel refreshed" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="mary is the type of person who likes to help people a lot!">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Mary is the type of person who likes to help people a lot!</span>
-                <button class="dm-copy-btn" data-text="Mary is the type of person who likes to help people a lot!" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">It is important/essential/crucial/critical/vital/of great importance/of great si</h4>
-            <div class="dm-phrase-card" data-phrases="it is important/essential/crucial/critical/vital/of great importance/of great significance that ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">It is important/essential/crucial/critical/vital/of great importance/of great significance that </span>
-                <button class="dm-copy-btn" data-text="It is important/essential/crucial/critical/vital/of great importance/of great significance that " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">Flag your statements</h4>
-            <div class="dm-phrase-card" data-phrases="it all boils down to…">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">It all boils down to…</span>
-                <button class="dm-copy-btn" data-text="It all boils down to…" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 It all boils down to whether we're willing to make sacrifices today for tomorrow.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="the heart of the matter is…">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">The heart of the matter is…</span>
-                <button class="dm-copy-btn" data-text="The heart of the matter is…" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 The heart of the matter is that people crave genuine human connection.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i can’t underscore enough…">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I can’t underscore enough…</span>
-                <button class="dm-copy-btn" data-text="I can’t underscore enough…" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">It is ... that/who/where/when ...</h4>
-            <div class="dm-phrase-card" data-phrases="it is the perfect taste that drives me to drink coffee">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">It is the perfect taste that drives me to drink coffee</span>
-                <button class="dm-copy-btn" data-text="It is the perfect taste that drives me to drink coffee" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">Only ....</h4>
-            <div class="dm-phrase-card" data-phrases="never have i ever ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Never have I ever </span>
-                <button class="dm-copy-btn" data-text="Never have I ever " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="popeye">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Popeye</span>
-                <button class="dm-copy-btn" data-text="Popeye" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">modal verbs</h4>
-            <div class="dm-phrase-card" data-phrases="must / have to / ought to / you've got to = you gotta">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">must / have to / ought to / you've got to = you gotta</span>
-                <button class="dm-copy-btn" data-text="must / have to / ought to / you've got to = you gotta" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">even if</h4>
-            <div class="dm-phrase-card" data-phrases="even if">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">even if</span>
-                <button class="dm-copy-btn" data-text="even if" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">but, however, ...</h4>
-            <div class="dm-phrase-card" data-phrases="but, however, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">but, however, </span>
-                <button class="dm-copy-btn" data-text="but, however, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">due to the reason/fact that</h4>
-            <div class="dm-phrase-card" data-phrases="due to the reason/fact that">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">due to the reason/fact that</span>
-                <button class="dm-copy-btn" data-text="due to the reason/fact that" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">My point here is, ...</h4>
-            <div class="dm-phrase-card" data-phrases="my point here is, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">My point here is, </span>
-                <button class="dm-copy-btn" data-text="My point here is, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">If I had to choose just one factor, I’d say … is the key.</h4>
-            <div class="dm-phrase-card" data-phrases="if i had to choose just one factor, i’d say … is the key">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">If I had to choose just one factor, I’d say … is the key</span>
-                <button class="dm-copy-btn" data-text="If I had to choose just one factor, I’d say … is the key" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-      </div>
-    </div>
-    <div class="dm-category" data-category="sequencing---ordering-information">
-      <div class="dm-category-header" onclick="toggleCategory('sequencing---ordering-information')">
-        <h3 class="dm-category-title">Sequencing - ordering information</h3>
-        <span class="dm-category-arrow">▾</span>
-      </div>
-      <div class="dm-category-body" id="body-sequencing---ordering-information">
-    <h4 class="dm-function-name">Opinion</h4>
-            <div class="dm-phrase-card" data-phrases="first, first and foremost, the first thing is, ..., first of all, firstly, first things first, to begin with, first off, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">First, first and foremost, the first thing is, ..., first of all, firstly, first things first, to begin with, first off, </span>
-                <button class="dm-copy-btn" data-text="First, first and foremost, the first thing is, ..., first of all, firstly, first things first, to begin with, first off, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="the next one is, moving on to the next point/topic/reason/view..., and the next thing is, secondly, thirdly, and then there's ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">the next one is, moving on to the next point/topic/reason/view..., and the next thing is, secondly, thirdly, and then there's </span>
-                <button class="dm-copy-btn" data-text="the next one is, moving on to the next point/topic/reason/view..., and the next thing is, secondly, thirdly, and then there's " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="on top of that, lastly, last but not least">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">on top of that, lastly, last but not least</span>
-                <button class="dm-copy-btn" data-text="on top of that, lastly, last but not least" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">Process</h4>
-            <div class="dm-phrase-card" data-phrases="to begin/start with, next, subsequently, on top of that, later on, after this, afterwards, finally, eventually, in the end, it turned out that ...., one thing led to another, to cut a long story short, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">to begin/start with, next, subsequently, on top of that, later on, after this, afterwards, finally, eventually, in the end, it turned out that ...., one thing led to another, to cut a long story short, </span>
-                <button class="dm-copy-btn" data-text="to begin/start with, next, subsequently, on top of that, later on, after this, afterwards, finally, eventually, in the end, it turned out that ...., one thing led to another, to cut a long story short, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-      </div>
-    </div>
-    <div class="dm-category" data-category="adding-information">
-      <div class="dm-category-header" onclick="toggleCategory('adding-information')">
-        <h3 class="dm-category-title">Adding information</h3>
-        <span class="dm-category-arrow">▾</span>
-      </div>
-      <div class="dm-category-body" id="body-adding-information">
-    <h4 class="dm-function-name">Adding another point</h4>
-            <div class="dm-phrase-card" data-phrases="apart from that">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">apart from that</span>
-                <button class="dm-copy-btn" data-text="apart from that" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 Apart from that, it's also worth mentioning how affordable it's become.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="plus">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">plus</span>
-                <button class="dm-copy-btn" data-text="plus" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="on top of that">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">on top of that</span>
-                <button class="dm-copy-btn" data-text="on top of that" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 On top of that, it's incredibly eco-friendly compared to the alternatives.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="another thing that comes to my mind is">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">another thing that comes to my mind is</span>
-                <button class="dm-copy-btn" data-text="another thing that comes to my mind is" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="also">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">also</span>
-                <button class="dm-copy-btn" data-text="also" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="and">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">and</span>
-                <button class="dm-copy-btn" data-text="and" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="besides">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">besides</span>
-                <button class="dm-copy-btn" data-text="besides" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="in addition">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">in addition</span>
-                <button class="dm-copy-btn" data-text="in addition" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="additionally">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">additionally</span>
-                <button class="dm-copy-btn" data-text="additionally" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="another good example (of this) is">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">another good example (of this) is</span>
-                <button class="dm-copy-btn" data-text="another good example (of this) is" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="another reason for this is">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">another reason for this is</span>
-                <button class="dm-copy-btn" data-text="another reason for this is" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="and one more thing">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">and one more thing</span>
-                <button class="dm-copy-btn" data-text="and one more thing" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="furthermore">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">furthermore</span>
-                <button class="dm-copy-btn" data-text="furthermore" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="now">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">now</span>
-                <button class="dm-copy-btn" data-text="now" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">Adding a detail</h4>
-            <div class="dm-phrase-card" data-phrases="specifically, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Specifically, </span>
-                <button class="dm-copy-btn" data-text="Specifically, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 Specifically, I'm referring to the way younger generations approach career planning.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="to be precise, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">To be precise, </span>
-                <button class="dm-copy-btn" data-text="To be precise, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="to be specific, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">To be specific, </span>
-                <button class="dm-copy-btn" data-text="To be specific, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="to put it at length, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">To put it at length, </span>
-                <button class="dm-copy-btn" data-text="To put it at length, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="going into details, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Going into details, </span>
-                <button class="dm-copy-btn" data-text="Going into details, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="specifically speaking, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Specifically speaking, </span>
-                <button class="dm-copy-btn" data-text="Specifically speaking, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 Specifically, I'm referring to the way younger generations approach career planning.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="precisely speaking, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Precisely speaking, </span>
-                <button class="dm-copy-btn" data-text="Precisely speaking, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-      </div>
-    </div>
-    <div class="dm-category" data-category="indicating-opinion-&-attitude">
-      <div class="dm-category-header" onclick="toggleCategory('indicating-opinion-&-attitude')">
-        <h3 class="dm-category-title">Indicating opinion & attitude</h3>
-        <span class="dm-category-arrow">▾</span>
-      </div>
-      <div class="dm-category-body" id="body-indicating-opinion-&-attitude">
-    <h4 class="dm-function-name">I think</h4>
-            <div class="dm-phrase-card" data-phrases="truth be told, …">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Truth be told, …</span>
-                <button class="dm-copy-btn" data-text="Truth be told, …" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="to tell you the truth, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">To tell you the truth, </span>
-                <button class="dm-copy-btn" data-text="To tell you the truth, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="honestly, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Honestly, </span>
-                <button class="dm-copy-btn" data-text="Honestly, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="frankly, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Frankly, </span>
-                <button class="dm-copy-btn" data-text="Frankly, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="frankly speaking, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Frankly speaking, </span>
-                <button class="dm-copy-btn" data-text="Frankly speaking, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="from my point of view…">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">From my point of view…</span>
-                <button class="dm-copy-btn" data-text="From my point of view…" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="from my perspective…">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">From my perspective…</span>
-                <button class="dm-copy-btn" data-text="From my perspective…" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="from my viewpoint…">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">From my viewpoint…</span>
-                <button class="dm-copy-btn" data-text="From my viewpoint…" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="as far as i’m concerned">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">As far as I’m concerned</span>
-                <button class="dm-copy-btn" data-text="As far as I’m concerned" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="in my view">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">in my view</span>
-                <button class="dm-copy-btn" data-text="in my view" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="in my humble opinion">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">In my humble opinion</span>
-                <button class="dm-copy-btn" data-text="In my humble opinion" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="supposedly, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Supposedly, </span>
-                <button class="dm-copy-btn" data-text="Supposedly, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="personally/personally speaking">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">personally/personally speaking</span>
-                <button class="dm-copy-btn" data-text="personally/personally speaking" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="broadly speaking, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Broadly speaking, </span>
-                <button class="dm-copy-btn" data-text="Broadly speaking, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="my view is that">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">My view is that</span>
-                <button class="dm-copy-btn" data-text="My view is that" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i am sure that">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I am sure that</span>
-                <button class="dm-copy-btn" data-text="I am sure that" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i find (it) that …">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I find (it) that …</span>
-                <button class="dm-copy-btn" data-text="I find (it) that …" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i reckon that">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I reckon that</span>
-                <button class="dm-copy-btn" data-text="I reckon that" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="it appears to me that…">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">It appears to me that…</span>
-                <button class="dm-copy-btn" data-text="It appears to me that…" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i'd say that ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I'd say that </span>
-                <button class="dm-copy-btn" data-text="I'd say that " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i guess that ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I guess that </span>
-                <button class="dm-copy-btn" data-text="I guess that " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i have no doubt that">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I have no doubt that</span>
-                <button class="dm-copy-btn" data-text="I have no doubt that" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i know it might sound a bit hilarious/surprising/astonishing/rude/inappropriate but ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I know it might sound a bit hilarious/surprising/astonishing/rude/inappropriate but </span>
-                <button class="dm-copy-btn" data-text="I know it might sound a bit hilarious/surprising/astonishing/rude/inappropriate but " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">Uncertain</h4>
-            <div class="dm-phrase-card" data-phrases="maybe / perhaps ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Maybe / Perhaps </span>
-                <button class="dm-copy-btn" data-text="Maybe / Perhaps " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="it could be that ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">It could be that </span>
-                <button class="dm-copy-btn" data-text="It could be that " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="based on what i've noticed, i guess">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Based on what I've noticed, I guess</span>
-                <button class="dm-copy-btn" data-text="Based on what I've noticed, I guess" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="based on my observation, i guess ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Based on my observation, I guess </span>
-                <button class="dm-copy-btn" data-text="Based on my observation, I guess " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="it might be a wild guess, but ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">It might be a wild guess, but </span>
-                <button class="dm-copy-btn" data-text="It might be a wild guess, but " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="if you twist my arm, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">If you twist my arm, </span>
-                <button class="dm-copy-btn" data-text="If you twist my arm, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="my speculation is that ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">My speculation is that </span>
-                <button class="dm-copy-btn" data-text="My speculation is that " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="if i were to make an educated guess, i'd say ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">If I were to make an educated guess, I'd say </span>
-                <button class="dm-copy-btn" data-text="If I were to make an educated guess, I'd say " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="upside / downside / solution / scenario ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">upside / downside / solution / scenario </span>
-                <button class="dm-copy-btn" data-text="upside / downside / solution / scenario " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="supposedly, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Supposedly, </span>
-                <button class="dm-copy-btn" data-text="Supposedly, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="theory">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">theory</span>
-                <button class="dm-copy-btn" data-text="theory" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="your call">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Your call</span>
-                <button class="dm-copy-btn" data-text="Your call" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i’m on the fence">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I’m on the fence</span>
-                <button class="dm-copy-btn" data-text="I’m on the fence" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="it’s still up in the air">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">It’s still up in the air</span>
-                <button class="dm-copy-btn" data-text="It’s still up in the air" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="maybe/maybe not">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Maybe/maybe not</span>
-                <button class="dm-copy-btn" data-text="Maybe/maybe not" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="could go either way">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Could go either way</span>
-                <button class="dm-copy-btn" data-text="Could go either way" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="beats me!">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Beats me!</span>
-                <button class="dm-copy-btn" data-text="Beats me!" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="who knows?">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Who knows?</span>
-                <button class="dm-copy-btn" data-text="Who knows?" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="hard to say">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Hard to say</span>
-                <button class="dm-copy-btn" data-text="Hard to say" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="50-50 chance">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">50-50 chance</span>
-                <button class="dm-copy-btn" data-text="50-50 chance" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">Yes</h4>
-            <div class="dm-phrase-card" data-phrases="i concur">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I concur</span>
-                <button class="dm-copy-btn" data-text="I concur" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i’m of the same mind">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I’m of the same mind</span>
-                <button class="dm-copy-btn" data-text="I’m of the same mind" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i totally support this idea">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I totally support this idea</span>
-                <button class="dm-copy-btn" data-text="I totally support this idea" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i'm on the same page">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I'm on the same page</span>
-                <button class="dm-copy-btn" data-text="I'm on the same page" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="couldn’t agree more">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Couldn’t agree more</span>
-                <button class="dm-copy-btn" data-text="Couldn’t agree more" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="100%!">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">100%!</span>
-                <button class="dm-copy-btn" data-text="100%!" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i agree with you entirely">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I agree with you entirely</span>
-                <button class="dm-copy-btn" data-text="I agree with you entirely" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="that's a good point!">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">That's a good point!</span>
-                <button class="dm-copy-btn" data-text="That's a good point!" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="right">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Right</span>
-                <button class="dm-copy-btn" data-text="Right" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="absolutely">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Absolutely</span>
-                <button class="dm-copy-btn" data-text="Absolutely" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="no doubt about that!">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">No doubt about that!</span>
-                <button class="dm-copy-btn" data-text="No doubt about that!" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="exactly!">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Exactly!</span>
-                <button class="dm-copy-btn" data-text="Exactly!" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="tell me about it!">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Tell me about it!</span>
-                <button class="dm-copy-btn" data-text="Tell me about it!" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="for real!">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">For real!</span>
-                <button class="dm-copy-btn" data-text="For real!" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="spot on!">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Spot on!</span>
-                <button class="dm-copy-btn" data-text="Spot on!" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="my thoughts exactly">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">My thoughts exactly</span>
-                <button class="dm-copy-btn" data-text="My thoughts exactly" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="it’s the logical conclusion">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">It’s the logical conclusion</span>
-                <button class="dm-copy-btn" data-text="It’s the logical conclusion" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="that’s the spirit!">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">That’s the spirit!</span>
-                <button class="dm-copy-btn" data-text="That’s the spirit!" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="of course!">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Of course!</span>
-                <button class="dm-copy-btn" data-text="Of course!" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="no problem!">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">No problem!</span>
-                <button class="dm-copy-btn" data-text="No problem!" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="absolutely!">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Absolutely!</span>
-                <button class="dm-copy-btn" data-text="Absolutely!" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="certainly!">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Certainly!</span>
-                <button class="dm-copy-btn" data-text="Certainly!" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="of course!">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Of course!</span>
-                <button class="dm-copy-btn" data-text="Of course!" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i don't mind ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I don't mind </span>
-                <button class="dm-copy-btn" data-text="I don't mind " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">No</h4>
-            <div class="dm-phrase-card" data-phrases="i beg to differ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I beg to differ</span>
-                <button class="dm-copy-btn" data-text="I beg to differ" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="not necessarily">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Not necessarily</span>
-                <button class="dm-copy-btn" data-text="Not necessarily" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i’m afraid i really must disagree">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I’m afraid I really must disagree</span>
-                <button class="dm-copy-btn" data-text="I’m afraid I really must disagree" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="frankly, i’m not so sure about that">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Frankly, I’m not so sure about that</span>
-                <button class="dm-copy-btn" data-text="Frankly, I’m not so sure about that" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="honestly speaking, i failed to see how this is right">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Honestly speaking, I failed to see how this is right</span>
-                <button class="dm-copy-btn" data-text="Honestly speaking, I failed to see how this is right" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="(something controversial)">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">(something controversial)</span>
-                <button class="dm-copy-btn" data-text="(something controversial)" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="there's a point there for sure, but ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">There's a point there for sure, but </span>
-                <button class="dm-copy-btn" data-text="There's a point there for sure, but " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="well, everyone's entitled to their own opinion of course, however, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Well, everyone's entitled to their own opinion of course, however, </span>
-                <button class="dm-copy-btn" data-text="Well, everyone's entitled to their own opinion of course, however, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i'm afraid i can't">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I'm afraid I can't</span>
-                <button class="dm-copy-btn" data-text="I'm afraid I can't" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i wouldn't say so">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I wouldn't say so</span>
-                <button class="dm-copy-btn" data-text="I wouldn't say so" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="not really">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Not really</span>
-                <button class="dm-copy-btn" data-text="Not really" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-      </div>
-    </div>
-    <div class="dm-category" data-category="comparing">
-      <div class="dm-category-header" onclick="toggleCategory('comparing')">
-        <h3 class="dm-category-title">Comparing</h3>
-        <span class="dm-category-arrow">▾</span>
-      </div>
-      <div class="dm-category-body" id="body-comparing">
-    <h4 class="dm-function-name">Similarly, in the same way, equally, likewise, in a similar fashion, if I compar</h4>
-            <div class="dm-phrase-card" data-phrases="similarly, in the same way, equally, likewise, in a similar fashion, if i compare it to">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Similarly, in the same way, equally, likewise, in a similar fashion, if I compare it to</span>
-                <button class="dm-copy-btn" data-text="Similarly, in the same way, equally, likewise, in a similar fashion, if I compare it to" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 Similarly, both Tokyo and Shanghai have incredibly efficient subway systems.</div>
-            </div>
-            <h4 class="dm-function-name">Compared to ..., ... is much/way/far adj. (comparative)</h4>
-            <div class="dm-phrase-card" data-phrases="compared to tea, coffee is much more refreshing">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Compared to tea, coffee is much more refreshing</span>
-                <button class="dm-copy-btn" data-text="Compared to tea, coffee is much more refreshing" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 Compared to five years ago, public transport in my city has improved dramatically.</div>
-            </div>
-            <h4 class="dm-function-name">as ... as</h4>
-            <div class="dm-phrase-card" data-phrases="tea is not as refreshing as coffee">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Tea is not as refreshing as coffee</span>
-                <button class="dm-copy-btn" data-text="Tea is not as refreshing as coffee" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="so basically, i reckon that coffee is as popular as tea in china">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">So basically, I reckon that coffee is as popular as tea in China</span>
-                <button class="dm-copy-btn" data-text="So basically, I reckon that coffee is as popular as tea in China" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i tried this posh restaurant for the first time yesterday, and it was as expensive as i thought (it would be)">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I tried this posh restaurant for the first time yesterday, and it was as expensive as I thought (it would be)</span>
-                <button class="dm-copy-btn" data-text="I tried this posh restaurant for the first time yesterday, and it was as expensive as I thought (it would be)" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i tried this posh restaurant for the first time yesterday, and guess what?! it wasn't as expensive as i thought (it would be)">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I tried this posh restaurant for the first time yesterday, and guess what?! It wasn't as expensive as I thought (it would be)</span>
-                <button class="dm-copy-btn" data-text="I tried this posh restaurant for the first time yesterday, and guess what?! It wasn't as expensive as I thought (it would be)" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-      </div>
-    </div>
-    <div class="dm-category" data-category="contrasting">
-      <div class="dm-category-header" onclick="toggleCategory('contrasting')">
-        <h3 class="dm-category-title">Contrasting</h3>
-        <span class="dm-category-arrow">▾</span>
-      </div>
-      <div class="dm-category-body" id="body-contrasting">
-    <h4 class="dm-function-name">However; On one hand, ... On the other hand; in the opposite way; in/by contrast</h4>
-            <div class="dm-phrase-card" data-phrases="on the other hand, of course we'll have to look at this from a different angle, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">On the other hand, of course we'll have to look at this from a different angle, </span>
-                <button class="dm-copy-btn" data-text="On the other hand, of course we'll have to look at this from a different angle, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">though, although, despite the fact that ..., I know that ...</h4>
-            <div class="dm-phrase-card" data-phrases="i went to the concert despite the fact that i don't like the band">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I went to the concert despite the fact that I don't like the band</span>
-                <button class="dm-copy-btn" data-text="I went to the concert despite the fact that I don't like the band" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I went to the concert despite the fact that I'm not really a fan of the band.</div>
-            </div>
-            <h4 class="dm-function-name">Instead of A, B.</h4>
-            <div class="dm-phrase-card" data-phrases="instead of apples, i'd like some bananas">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Instead of apples, I'd like some bananas</span>
-                <button class="dm-copy-btn" data-text="Instead of apples, I'd like some bananas" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">Nevertheless, ...</h4>
-            <div class="dm-phrase-card" data-phrases="even though this is the case, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Even though this is the case, </span>
-                <button class="dm-copy-btn" data-text="Even though this is the case, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="vocabulary is important in part 3. nevertheless, we should still prioritise using proper discourse markers over the right words">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Vocabulary is important in part 3. Nevertheless, we should still prioritise using proper discourse markers over the right words</span>
-                <button class="dm-copy-btn" data-text="Vocabulary is important in part 3. Nevertheless, we should still prioritise using proper discourse markers over the right words" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-      </div>
-    </div>
-    <div class="dm-category" data-category="giving-examples">
-      <div class="dm-category-header" onclick="toggleCategory('giving-examples')">
-        <h3 class="dm-category-title">Giving examples</h3>
-        <span class="dm-category-arrow">▾</span>
-      </div>
-      <div class="dm-category-body" id="body-giving-examples">
-    <h4 class="dm-function-name">a great example (of this) is, ...; </h4>
-            <div class="dm-phrase-card" data-phrases="a great example (of this) is, ...;">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">a great example (of this) is, ...;</span>
-                <button class="dm-copy-btn" data-text="a great example (of this) is, ...;" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="for example, ... ;">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">for example, ... ;</span>
-                <button class="dm-copy-btn" data-text="for example, ... ;" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 For example, cities like Copenhagen have made cycling a primary mode of transport.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="for instance, ...;">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">for instance, ...;</span>
-                <button class="dm-copy-btn" data-text="for instance, ...;" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="a personal example is, ...;">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">a personal example is, ...;</span>
-                <button class="dm-copy-btn" data-text="a personal example is, ...;" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="a striking example is, ...;">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">a striking example is, ...;</span>
-                <button class="dm-copy-btn" data-text="a striking example is, ...;" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 A striking example is how smartphones have transformed education in rural areas.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="a classic example is, ...;">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">a classic example is, ...;</span>
-                <button class="dm-copy-btn" data-text="a classic example is, ...;" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="a clear example is, ...;">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">a clear example is, ...;</span>
-                <button class="dm-copy-btn" data-text="a clear example is, ...;" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="take myself as an example, ...;">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">take myself as an example, ...;</span>
-                <button class="dm-copy-btn" data-text="take myself as an example, ...;" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 Take myself as an example — I used to hate public speaking, but now I actually enjoy it.</div>
-            </div>
-            <h4 class="dm-function-name">such as..., </h4>
-            <div class="dm-phrase-card" data-phrases="ranging from ... to ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">ranging from ... to </span>
-                <button class="dm-copy-btn" data-text="ranging from ... to " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="such as a, b, c, or something like that. / to name a few. / and so on / and so forth./ and stuff">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">such as A, B, C, or something like that. / to name a few. / and so on / and so forth./ and stuff</span>
-                <button class="dm-copy-btn" data-text="such as A, B, C, or something like that. / to name a few. / and so on / and so forth./ and stuff" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 There are plenty of outdoor activities, such as hiking, cycling, or just walking in the park.</div>
-            </div>
-            <h4 class="dm-function-name">let's say ...</h4>
-            <div class="dm-phrase-card" data-phrases="let's say ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">let's say </span>
-                <button class="dm-copy-btn" data-text="let's say " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="that is to say">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">that is to say</span>
-                <button class="dm-copy-btn" data-text="that is to say" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">especially ..., </h4>
-            <div class="dm-phrase-card" data-phrases="especially ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">especially </span>
-                <button class="dm-copy-btn" data-text="especially " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 I love summer fruits, especially watermelon and lychee.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="notably ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">notably </span>
-                <button class="dm-copy-btn" data-text="notably " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="namely">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">namely</span>
-                <button class="dm-copy-btn" data-text="namely" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="particularly">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">particularly</span>
-                <button class="dm-copy-btn" data-text="particularly" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-      </div>
-    </div>
-    <div class="dm-category" data-category="explanation">
-      <div class="dm-category-header" onclick="toggleCategory('explanation')">
-        <h3 class="dm-category-title">Explanation</h3>
-        <span class="dm-category-arrow">▾</span>
-      </div>
-      <div class="dm-category-body" id="body-explanation">
-    <h4 class="dm-function-name">To put it in another way, ...</h4>
-            <div class="dm-phrase-card" data-phrases="to put it in another way, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">To put it in another way, </span>
-                <button class="dm-copy-btn" data-text="To put it in another way, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 In other words, it's about finding the right balance between work and life.</div>
-            </div>
-            <h4 class="dm-function-name">It's a sign that ...</h4>
-            <div class="dm-phrase-card" data-phrases="..., which is a sign of ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">..., which is a sign of </span>
-                <button class="dm-copy-btn" data-text="..., which is a sign of " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 In other words, it's about finding the right balance between work and life.</div>
-            </div>
-            <h4 class="dm-function-name">That is to say, ...</h4>
-            <div class="dm-phrase-card" data-phrases="that is to say, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">That is to say, </span>
-                <button class="dm-copy-btn" data-text="That is to say, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 In other words, it's about finding the right balance between work and life.</div>
-            </div>
-            <h4 class="dm-function-name">In another word, ...</h4>
-            <div class="dm-phrase-card" data-phrases="in another word, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">In another word, </span>
-                <button class="dm-copy-btn" data-text="In another word, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 In other words, it's about finding the right balance between work and life.</div>
-            </div>
-            
-      </div>
-    </div>
-    <div class="dm-category" data-category="cause-&-effect">
-      <div class="dm-category-header" onclick="toggleCategory('cause-&-effect')">
-        <h3 class="dm-category-title">Cause & Effect</h3>
-        <span class="dm-category-arrow">▾</span>
-      </div>
-      <div class="dm-category-body" id="body-cause-&-effect">
-    <h4 class="dm-function-name">Cause</h4>
-            <div class="dm-phrase-card" data-phrases="because/since/as ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Because/Since/As </span>
-                <button class="dm-copy-btn" data-text="Because/Since/As " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 Since people are living longer, retirement planning has become much more important.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="due to the reason/fact that ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">due to the reason/fact that </span>
-                <button class="dm-copy-btn" data-text="due to the reason/fact that " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="and the reason is that ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">and the reason is that </span>
-                <button class="dm-copy-btn" data-text="and the reason is that " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="as for the reason(s), i'd say">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">As for the reason(s), I'd say</span>
-                <button class="dm-copy-btn" data-text="As for the reason(s), I'd say" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="as for the reason why, it's simply because ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">As for the reason why, it's simply because </span>
-                <button class="dm-copy-btn" data-text="As for the reason why, it's simply because " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i guess it's because">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I guess it's because</span>
-                <button class="dm-copy-btn" data-text="I guess it's because" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="i reckon the reason is that ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I reckon the reason is that </span>
-                <button class="dm-copy-btn" data-text="I reckon the reason is that " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="and the reason being, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">and the reason being, </span>
-                <button class="dm-copy-btn" data-text="and the reason being, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="as a matter of fact, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">as a matter of fact, </span>
-                <button class="dm-copy-btn" data-text="as a matter of fact, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="one contributing factor is">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">One contributing factor is</span>
-                <button class="dm-copy-btn" data-text="One contributing factor is" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="this is largely due to the fact that ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">This is largely due to the fact that </span>
-                <button class="dm-copy-btn" data-text="This is largely due to the fact that " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 Due to the fact that more people work remotely, office spaces are being redesigned.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="the root cause lies in the fact that ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">The root cause lies in the fact that </span>
-                <button class="dm-copy-btn" data-text="The root cause lies in the fact that " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="the most prominent reason is that ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">The most prominent reason is that </span>
-                <button class="dm-copy-btn" data-text="The most prominent reason is that " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 The most prominent reason is that social media gives us instant access to information.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="the rationale behind this is ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">The rationale behind this is </span>
-                <button class="dm-copy-btn" data-text="The rationale behind this is " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">Effect</h4>
-            <div class="dm-phrase-card" data-phrases="as a result, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">As a result, </span>
-                <button class="dm-copy-btn" data-text="As a result, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 As a result, many traditional industries have had to completely reinvent themselves.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="because of this, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">because of this, </span>
-                <button class="dm-copy-btn" data-text="because of this, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="therefore, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">therefore, </span>
-                <button class="dm-copy-btn" data-text="therefore, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="thus">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">thus</span>
-                <button class="dm-copy-btn" data-text="thus" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="consequently">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">consequently</span>
-                <button class="dm-copy-btn" data-text="consequently" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="so basically">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">so basically</span>
-                <button class="dm-copy-btn" data-text="so basically" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="then">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">then</span>
-                <button class="dm-copy-btn" data-text="then" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="in that case">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">in that case</span>
-                <button class="dm-copy-btn" data-text="in that case" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="as a ripple effect, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">As a ripple effect, </span>
-                <button class="dm-copy-btn" data-text="As a ripple effect, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="this has led to">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">This has led to</span>
-                <button class="dm-copy-btn" data-text="This has led to" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This has led to a significant shift in how companies think about employee wellbeing.</div>
-            </div>
-            
-      </div>
-    </div>
-    <div class="dm-category" data-category="generalising">
-      <div class="dm-category-header" onclick="toggleCategory('generalising')">
-        <h3 class="dm-category-title">Generalising</h3>
-        <span class="dm-category-arrow">▾</span>
-      </div>
-      <div class="dm-category-body" id="body-generalising">
-    <h4 class="dm-function-name">Generally, broadly/Generally speaking, as a rule, on the whole, it is often said</h4>
-            <div class="dm-phrase-card" data-phrases="generally, broadly/generally speaking, as a rule, on the whole, it is often said that..., in most cases, the vast majority of, a small minority of, the rule of thumb is, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Generally, broadly/Generally speaking, as a rule, on the whole, it is often said that..., in most cases, the vast majority of, a small minority of, the rule of thumb is, </span>
-                <button class="dm-copy-btn" data-text="Generally, broadly/Generally speaking, as a rule, on the whole, it is often said that..., in most cases, the vast majority of, a small minority of, the rule of thumb is, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 On the whole, I'd say most people in my country prefer tea over coffee.</div>
-            </div>
-            <h4 class="dm-function-name">There are lots of ...</h4>
-            <div class="dm-phrase-card" data-phrases="plenty of ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">plenty of </span>
-                <button class="dm-copy-btn" data-text="plenty of " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 On the whole, I'd say most people in my country prefer tea over coffee.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="all kinds/sorts of">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">all kinds/sorts of</span>
-                <button class="dm-copy-btn" data-text="all kinds/sorts of" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 On the whole, I'd say most people in my country prefer tea over coffee.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="a great variety of ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">a great variety of </span>
-                <button class="dm-copy-btn" data-text="a great variety of " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 On the whole, I'd say most people in my country prefer tea over coffee.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="a wide range of ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">a wide range of </span>
-                <button class="dm-copy-btn" data-text="a wide range of " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 On the whole, I'd say most people in my country prefer tea over coffee.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="a vast array of">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">a vast array of</span>
-                <button class="dm-copy-btn" data-text="a vast array of" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 On the whole, I'd say most people in my country prefer tea over coffee.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="heaps of">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">heaps of</span>
-                <button class="dm-copy-btn" data-text="heaps of" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 On the whole, I'd say most people in my country prefer tea over coffee.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="loads of">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">loads of</span>
-                <button class="dm-copy-btn" data-text="loads of" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 On the whole, I'd say most people in my country prefer tea over coffee.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="a plethora of">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">a plethora of</span>
-                <button class="dm-copy-btn" data-text="a plethora of" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 On the whole, I'd say most people in my country prefer tea over coffee.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="a myriad of">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">a myriad of</span>
-                <button class="dm-copy-btn" data-text="a myriad of" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 On the whole, I'd say most people in my country prefer tea over coffee.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="总分 - 对比">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">总分 - 对比</span>
-                <button class="dm-copy-btn" data-text="总分 - 对比" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 On the whole, I'd say most people in my country prefer tea over coffee.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="总分 - 罗列">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">总分 - 罗列</span>
-                <button class="dm-copy-btn" data-text="总分 - 罗列" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 On the whole, I'd say most people in my country prefer tea over coffee.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="总分 - 举例">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">总分 - 举例</span>
-                <button class="dm-copy-btn" data-text="总分 - 举例" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 On the whole, I'd say most people in my country prefer tea over coffee.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="总分 - 强调">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">总分 - 强调</span>
-                <button class="dm-copy-btn" data-text="总分 - 强调" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 On the whole, I'd say most people in my country prefer tea over coffee.</div>
-            </div>
-            <h4 class="dm-function-name">At the end of the day, ..., so basically ...</h4>
-            <div class="dm-phrase-card" data-phrases="at the end of the day, ..., so basically ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">At the end of the day, ..., so basically </span>
-                <button class="dm-copy-btn" data-text="At the end of the day, ..., so basically " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 On the whole, I'd say most people in my country prefer tea over coffee.</div>
-            </div>
-            
-      </div>
-    </div>
-    <div class="dm-category" data-category="topic-introducers">
-      <div class="dm-category-header" onclick="toggleCategory('topic-introducers')">
-        <h3 class="dm-category-title">Topic introducers</h3>
-        <span class="dm-category-arrow">▾</span>
-      </div>
-      <div class="dm-category-body" id="body-topic-introducers">
-    <h4 class="dm-function-name">When it comes to ...</h4>
-            <div class="dm-phrase-card" data-phrases="when it comes to ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">When it comes to </span>
-                <button class="dm-copy-btn" data-text="When it comes to " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 When it comes to food, my hometown is absolutely unbeatable.</div>
-            </div>
-            <h4 class="dm-function-name">In terms of ..., ....</h4>
-            <div class="dm-phrase-card" data-phrases="in terms of ..., ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">In terms of ..., </span>
-                <button class="dm-copy-btn" data-text="In terms of ..., " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 In terms of cost of living, it's actually much more affordable than people think.</div>
-            </div>
-            <h4 class="dm-function-name">If we're talking about ...</h4>
-            <div class="dm-phrase-card" data-phrases="if we're talking about ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">If we're talking about </span>
-                <button class="dm-copy-btn" data-text="If we're talking about " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">As far as ... goes, ...</h4>
-            <div class="dm-phrase-card" data-phrases="as far as ... goes, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">As far as ... goes, </span>
-                <button class="dm-copy-btn" data-text="As far as ... goes, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">As far as ... is concerned, ..</h4>
-            <div class="dm-phrase-card" data-phrases="as far as ... is concerned, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">As far as ... is concerned, </span>
-                <button class="dm-copy-btn" data-text="As far as ... is concerned, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">As for ...</h4>
-            <div class="dm-phrase-card" data-phrases="as for ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">As for </span>
-                <button class="dm-copy-btn" data-text="As for " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">Regarding, ... / About, ...</h4>
-            <div class="dm-phrase-card" data-phrases="regarding, ... / about, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Regarding, ... / About, </span>
-                <button class="dm-copy-btn" data-text="Regarding, ... / About, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">Speaking of ...</h4>
-            <div class="dm-phrase-card" data-phrases="speaking of ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Speaking of </span>
-                <button class="dm-copy-btn" data-text="Speaking of " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 Speaking of travel, I actually just got back from a trip to Yunnan last month.</div>
-            </div>
-            <h4 class="dm-function-name">n.-wise</h4>
-            <div class="dm-phrase-card" data-phrases="society-wise, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Society-wise, </span>
-                <button class="dm-copy-btn" data-text="Society-wise, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="technology-wise, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Technology-wise, </span>
-                <button class="dm-copy-btn" data-text="Technology-wise, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-      </div>
-    </div>
-    <div class="dm-category" data-category="recalling">
-      <div class="dm-category-header" onclick="toggleCategory('recalling')">
-        <h3 class="dm-category-title">Recalling</h3>
-        <span class="dm-category-arrow">▾</span>
-      </div>
-      <div class="dm-category-body" id="body-recalling">
-    <h4 class="dm-function-name">As far as I can remember, ...</h4>
-            <div class="dm-phrase-card" data-phrases="as far as i can remember, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">As far as I can remember, </span>
-                <button class="dm-copy-btn" data-text="As far as I can remember, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 As far as I can remember, I've always been fascinated by space exploration.</div>
-            </div>
-            <h4 class="dm-function-name">If I remember correctly, ...</h4>
-            <div class="dm-phrase-card" data-phrases="if i recall correctly, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">If I recall correctly, </span>
-                <button class="dm-copy-btn" data-text="If I recall correctly, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">If my memory serves (me right), ...</h4>
-            <div class="dm-phrase-card" data-phrases="if my memory serves (me right), ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">If my memory serves (me right), </span>
-                <button class="dm-copy-btn" data-text="If my memory serves (me right), " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">I vaguely/vividly/still recall that ...</h4>
-            <div class="dm-phrase-card" data-phrases="i remember it like it was yesterday">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I remember it like it was yesterday</span>
-                <button class="dm-copy-btn" data-text="I remember it like it was yesterday" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            <h4 class="dm-function-name">I can't really remember/recall much about it as it happened so long ago, but I d</h4>
-            <div class="dm-phrase-card" data-phrases="i can't really remember/recall much about it as it happened so long ago, but i do/vaguely remember that ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">I can't really remember/recall much about it as it happened so long ago, but I do/vaguely remember that </span>
-                <button class="dm-copy-btn" data-text="I can't really remember/recall much about it as it happened so long ago, but I do/vaguely remember that " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 This is a useful phrase for structuring your IELTS speaking answer naturally.</div>
-            </div>
-            
-      </div>
-    </div>
-    <div class="dm-category" data-category="shared-knowledge">
-      <div class="dm-category-header" onclick="toggleCategory('shared-knowledge')">
-        <h3 class="dm-category-title">Shared knowledge</h3>
-        <span class="dm-category-arrow">▾</span>
-      </div>
-      <div class="dm-category-body" id="body-shared-knowledge">
-    <h4 class="dm-function-name">To refer to something you mentioned earlier</h4>
-            <div class="dm-phrase-card" data-phrases="like i said before, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">Like I said before, </span>
-                <button class="dm-copy-btn" data-text="Like I said before, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 As I mentioned earlier, this is something that affects all of us.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="as i have mentioned, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">As I have mentioned, </span>
-                <button class="dm-copy-btn" data-text="As I have mentioned, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 As I mentioned earlier, this is something that affects all of us.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="and again, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">And again, </span>
-                <button class="dm-copy-btn" data-text="And again, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 As I mentioned earlier, this is something that affects all of us.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="and bear in mind, ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">And bear in mind, </span>
-                <button class="dm-copy-btn" data-text="And bear in mind, " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 As I mentioned earlier, this is something that affects all of us.</div>
-            </div>
-            <h4 class="dm-function-name">To refer to common sense</h4>
-            <div class="dm-phrase-card" data-phrases="we all know that ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">We all know that </span>
-                <button class="dm-copy-btn" data-text="We all know that " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 As I mentioned earlier, this is something that affects all of us.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="it's common sense that ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">It's common sense that </span>
-                <button class="dm-copy-btn" data-text="It's common sense that " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 As I mentioned earlier, this is something that affects all of us.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="it's well-known that ">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">It's well-known that </span>
-                <button class="dm-copy-btn" data-text="It's well-known that " title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 As I mentioned earlier, this is something that affects all of us.</div>
-            </div>
-            <h4 class="dm-function-name">To indicate a figure of speech</h4>
-            <div class="dm-phrase-card" data-phrases="my boss gave me a raise, and now i'm on cloud nine, so to speak">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">My boss gave me a raise, and now I'm on cloud nine, so to speak</span>
-                <button class="dm-copy-btn" data-text="My boss gave me a raise, and now I'm on cloud nine, so to speak" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 As I mentioned earlier, this is something that affects all of us.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="..., as it were">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">..., as it were</span>
-                <button class="dm-copy-btn" data-text="..., as it were" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 As I mentioned earlier, this is something that affects all of us.</div>
-            </div>
-            
-            <div class="dm-phrase-card" data-phrases="..., in a manner of speaking">
-              <div class="dm-phrase-text">
-                <span class="dm-phrase">..., in a manner of speaking</span>
-                <button class="dm-copy-btn" data-text="..., in a manner of speaking" title="Copy to clipboard">📋</button>
-              </div>
-              <div class="dm-phrase-example">💬 As I mentioned earlier, this is something that affects all of us.</div>
-            </div>
-            
-      </div>
-    </div>
-  </div>
-  <div class="dm-no-results" id="dm-no-results">
-    <p>🔎 No phrases matched your search.</p>
-    <p>Try a different keyword or browse by category above.</p>
-  </div>
+</header>
+<div class="dm-controls-bar" id="controlsBar">
+<div class="dm-view-toggle">
+<button class="dm-view-btn active" data-view="scenarios"><span class="lang-en-only">🎯 Scenarios</span><span class="lang-zh-only">🎯 场景</span></button>
+<button class="dm-view-btn" data-view="tree"><span class="lang-en-only">🌳 Taxonomy</span><span class="lang-zh-only">🌳 分类</span></button>
+<button class="dm-view-btn" data-view="flat"><span class="lang-en-only">📝 All Markers</span><span class="lang-zh-only">📝 全部标记</span></button>
+</div>
+<button class="dm-view-btn" data-view="chains-tab"><span class="lang-en-only">🧠 Logic Chains</span><span class="lang-zh-only">🧠 逻辑链</span></button>
+<span class="dm-ctrl-spacer"></span>
+<span class="dm-lvl-label lang-en-only">Level:</span>
+<span class="dm-lvl-label lang-zh-only">级别:</span>
+<div class="dm-level-pills">
+<button class="dm-lvl active" data-lvl="all">All</button>
+<button class="dm-lvl" data-lvl="A1">A1</button>
+<button class="dm-lvl" data-lvl="A2">A2</button>
+<button class="dm-lvl" data-lvl="B1">B1</button>
+<button class="dm-lvl" data-lvl="B2">B2</button>
+<button class="dm-lvl" data-lvl="C1">C1</button>
+<button class="dm-lvl" data-lvl="C2">C2</button>
+</div>
+</div>
+<section id="tab-markers" class="dm-tab-content active">
+<div id="view-scenarios" class="dm-scenarios-view"></div>
+<div id="view-tree" class="dm-tree-view" style="display:none"></div>
+<div id="view-flat" style="display:none">
+<div class="dm-grid" id="dm-grid"></div>
+<div class="dm-no-results" id="dm-no-results">
+<p class="lang-en-only">🔎 No phrases matched your search.</p>
+<p class="lang-zh-only">🔎 没有匹配的短语。</p>
+<p class="lang-en-only">Try a different keyword or browse by category above.</p>
+<p class="lang-zh-only">试试其他关键词或在分类中浏览。</p>
+</div>
+</div>
 </section>
-
 <!-- TAB 2: LOGIC CHAINS -->
 <section id="tab-chains" class="dm-tab-content">
   <div class="dm-chains-intro">
@@ -2347,14 +436,12 @@
   </div>
 
   <div class="dm-chains-grid">
-    
-    <!-- Chain 1: Answer-Detail -->
     <div class="dm-chain-card">
       <div class="dm-chain-header">
         <span class="dm-chain-num">01</span>
         <div>
           <h3>Answer-Detail (AD)</h3>
-          <p class="dm-chain-use">Part 1 & Part 3 short answers</p>
+          <p class="dm-chain-use">Part 1 &amp; Part 3 short answers</p>
         </div>
       </div>
       <div class="dm-chain-flow">
@@ -2375,7 +462,6 @@
       </div>
     </div>
 
-    <!-- Chain 2: Y/N Question -->
     <div class="dm-chain-card">
       <div class="dm-chain-header">
         <span class="dm-chain-num">02</span>
@@ -2412,7 +498,6 @@
       </div>
     </div>
 
-    <!-- Chain 3: Comparison -->
     <div class="dm-chain-card">
       <div class="dm-chain-header">
         <span class="dm-chain-num">03</span>
@@ -2438,7 +523,6 @@
       </div>
     </div>
 
-    <!-- Chain 4: 总分-分情况 -->
     <div class="dm-chain-card">
       <div class="dm-chain-header">
         <span class="dm-chain-num">04</span>
@@ -2464,7 +548,6 @@
       </div>
     </div>
 
-    <!-- Chain 5: 总分-分群体 -->
     <div class="dm-chain-card">
       <div class="dm-chain-header">
         <span class="dm-chain-num">05</span>
@@ -2493,7 +576,6 @@
       </div>
     </div>
 
-    <!-- Chain 6: 总分-罗列 -->
     <div class="dm-chain-card">
       <div class="dm-chain-header">
         <span class="dm-chain-num">06</span>
@@ -2519,7 +601,6 @@
       </div>
     </div>
 
-    <!-- Chain 7: 总分-强调 -->
     <div class="dm-chain-card">
       <div class="dm-chain-header">
         <span class="dm-chain-num">07</span>
@@ -2545,7 +626,6 @@
       </div>
     </div>
 
-    <!-- Chain 8: Dialectical -->
     <div class="dm-chain-card">
       <div class="dm-chain-header">
         <span class="dm-chain-num">08</span>
@@ -2571,7 +651,6 @@
       </div>
     </div>
 
-    <!-- Chain 9: 总分-举例 -->
     <div class="dm-chain-card">
       <div class="dm-chain-header">
         <span class="dm-chain-num">09</span>
@@ -2594,7 +673,6 @@
       </div>
     </div>
 
-    <!-- Chain 10: Wh-Question -->
     <div class="dm-chain-card">
       <div class="dm-chain-header">
         <span class="dm-chain-num">10</span>
@@ -2617,12 +695,388 @@
         <span class="dm-chain-marker-tag" data-to="contrasting">However… / Although…</span>
       </div>
     </div>
-
   </div>
 </section>
 
-<script src="js/discourse.js"></script>
-<link rel="stylesheet" href="/css/kee-bot.css">
-<script src="/js/kee-bot.js"></script>
+
+<div class="dm-footer">
+<span class="lang-en-only">From <a href="https://ielts.rkrk.io">IELTS with Kee 🦄</a> &middot; Made with ❤️ for students &middot; Free forever</span>
+<span class="lang-zh-only">来自 <a href="https://ielts.rkrk.io">IELTS with Kee 🦄</a> &middot; ❤️ 为学生制作 &middot; 永久免费</span>
+</div>
+<script>
+let markers=[],subfuncs=[],cats=[];
+let catMap={},sfMap={};
+let markersByCat={};
+let activeLevel="all";
+let activeView="scenarios";
+let activeSearch="";
+const MACRO_CONFIG=[{"emoji": "🗣️", "nameEn": "Conversation", "nameZh": "会话管理", "dataKey": "Conversation & Interaction Management", "scenariosEn": ["\"I need to buy time while thinking\"", "\"I want to change the topic\"", "\"How do I interrupt politely?\"", "\"I forgot a word mid-sentence\"", "\"I need to clarify what I mean\"", "\"How do I return to the main point?\""], "scenariosZh": ["\"需要时间思考怎么说\"", "\"想自然切换话题\"", "\"如何礼貌插话？\"", "\"说话时忘了词\"", "\"需要澄清刚才说的\"", "\"怎么回到正题？\""]}, {"emoji": "🎭", "nameEn": "Stance & Attitude", "nameZh": "态度与评价", "dataKey": "Stance, Attitude & Evaluation", "scenariosEn": ["\"I want to express certainty\"", "\"How do I hedge politely?\"", "\"I need to show agreement\"", "\"How to disagree without being rude\"", "\"I am surprised by what I heard\"", "\"I want to show enthusiasm\""], "scenariosZh": ["\"想表达肯定\"", "\"如何妥协地表达不确定？\"", "\"需要表示同意\"", "\"如何不失礼地反对\"", "\"听到的让我很惊讶\"", "\"想表达热情\""]}, {"emoji": "🔗", "nameEn": "Cohesion & Structure", "nameZh": "衔接与逻辑", "dataKey": "Logical & Cohesive Relations", "scenariosEn": ["\"I want to add another point\"", "\"I need to show contrast\"", "\"How do I explain cause & effect?\"", "\"I want to give an example\"", "\"I need to summarize\"", "\"How to emphasize a key point\""], "scenariosZh": ["\"想再补充一点\"", "\"需要表示对比\"", "\"如何解释因果关系？\"", "\"想举个例子\"", "\"需要总结一下\"", "\"如何强调重点？\""]}, {"emoji": "📋", "nameEn": "Metacognitive", "nameZh": "元认知", "dataKey": "Metacognitive & Information Structuring", "scenariosEn": ["\"I need to rephrase what I said\"", "\"I want to correct myself\"", "\"How to be vague on purpose\"", "\"I need to recall a word\"", "\"Commenting on the question itself\"", "\"I want to list things clearly\""], "scenariosZh": ["\"需要重新表述\"", "\"想自己纠正自己\"", "\"如何故意模糊地说\"", "\"需要回忆一个词\"", "\"对问题本身做评论\"", "\"想清晰列举\""]}, {"emoji": "🤝", "nameEn": "Social & Interactional", "nameZh": "社交与语用", "dataKey": "Pragmatic & Politeness Functions", "scenariosEn": ["\"How do I soften my words?\"", "\"I want to save face (mine or theirs)\"", "\"I need to apologize before speaking\"", "\"How to disagree politely\"", "\"I want to show respect\"", "\"How to make an indirect request\""], "scenariosZh": ["\"如何让话语更妥协？\"", "\"想给对方留面子\"", "\"需要先道歉再说\"", "\"如何礼貌地反对\"", "\"想表示尊重\"", "\"如何弯转地提要求？\""]}, {"emoji": "📖", "nameEn": "Narrative & Description", "nameZh": "叙事与描述", "dataKey": "Narrative & Temporal Structuring", "scenariosEn": ["\"I need to tell a story in order\"", "\"How to describe simultaneous events\"", "\"I want to talk about past events\"", "\"I need to talk about the future\"", "\"How do I transition between parts?\"", "\"I want to describe a dramatic moment\""], "scenariosZh": ["\"需要按顺序讲故事\"", "\"如何描述同时发生的事？\"", "\"想谈论过去的事\"", "\"需要谈论将来\"", "\"如何过渡到下一部分？\"", "\"想描述一个戛剧性时刻\""]}, {"emoji": "🧠", "nameEn": "Argumentation", "nameZh": "论证与说服", "dataKey": "Argumentation & Persuasion", "scenariosEn": ["\"I need to introduce my argument\"", "\"I want to support my point with evidence\"", "\"How to concede without losing the argument\"", "\"I need to draw a conclusion\"", "\"How to use analogies\"", "\"I want to discuss hypothetical situations\""], "scenariosZh": ["\"需要引出我的论点\"", "\"想用证据支持观点\"", "\"如何让步但不输论点？\"", "\"需要得出结论\"", "\"如何使用比喻？\"", "\"想讨论假设情况\""]}];
+
+function toggleLang(){
+  const html=document.documentElement;
+  const cur=html.getAttribute("data-lang");
+  const next=cur==="en"?"zh":"en";
+  html.setAttribute("data-lang",next);
+  localStorage.setItem("dm_lang",next);
+  const s=document.getElementById("dm-search");
+  s.placeholder=s.getAttribute("data-placeholder-"+next);
+}
+
+(function(){
+  const saved=localStorage.getItem("dm_lang");
+  if(saved==="zh"||saved==="en"){
+    document.documentElement.setAttribute("data-lang",saved);
+    setTimeout(()=>{
+      const s=document.getElementById("dm-search");
+      s.placeholder=s.getAttribute("data-placeholder-"+saved);
+    },0);
+  }
+})();
+
+
+async function loadDiscourseData(){
+  const [m,sf,cat]=await Promise.all([
+    fetch("markers.json").then(r=>r.json()),
+    fetch("subfunctions.json").then(r=>r.json()),
+    fetch("categories.json").then(r=>r.json())
+  ]);
+  markers=m;subfuncs=sf;cats=cat;
+  cats.forEach(c=>{catMap[c.slug]=c;});
+  subfuncs.forEach(s=>{sfMap[s.id]=s;});
+  
+  markersByCat={};
+  markers.forEach(mk=>{
+    const sfId=mk.subfunctionIds[0];
+    const sfObj=sfMap[sfId];
+    if(!sfObj)return;
+    const slug=sfObj.categorySlug;
+    if(!markersByCat[slug])markersByCat[slug]={cat:catMap[slug],subfuncs:{}};
+    if(!markersByCat[slug].subfuncs[sfId]){
+      markersByCat[slug].subfuncs[sfId]={name:sfObj.name,markers:[]};
+    }
+    markersByCat[slug].subfuncs[sfId].markers.push(mk);
+  });
+  
+  document.getElementById("totalCount").textContent=markers.length;
+  document.getElementById("totalCountZh").textContent=markers.length;
+  document.getElementById("totalCats").textContent=cats.length;
+  document.getElementById("totalCatsZh").textContent=cats.length;
+  
+  renderScenarios();
+  renderTree();
+  renderFlat();
+}
+
+function getLang(){return document.documentElement.getAttribute("data-lang")||"en";}
+
+function t(obj){
+  const lang=getLang();
+  return lang==="zh"?(obj.zh||obj.en):obj.en;
+}
+
+
+function renderScenarios(){
+  const container=document.getElementById("view-scenarios");
+  container.innerHTML="";
+  
+  MACRO_CONFIG.forEach((mc,i)=>{
+    const isEmpty=mc.isEmpty;
+    const section=document.createElement("div");
+    section.className="dm-macro-section"+(isEmpty?" dm-macro-empty":"");
+    
+    const header=document.createElement("div");
+    header.className="dm-macro-section-header";
+    header.innerHTML='<span class="emoji">'+mc.emoji+'</span><h3>'+mc.nameEn+' <span class="zh">'+mc.nameZh+'</span></h3>';
+    section.appendChild(header);
+    
+    const body=document.createElement("div");
+    body.className="dm-macro-section-body";
+    
+    const grid=document.createElement("div");
+    grid.className="dm-scenario-grid";
+    
+    const scenarios=getLang()==="zh"?mc.scenariosZh:mc.scenariosEn;
+    scenarios.forEach((s,j)=>{
+      const btn=document.createElement("button");
+      btn.className="dm-scenario-tag"+ (isEmpty?" disabled":"");
+      btn.textContent=s;
+      if(!isEmpty){
+        btn.addEventListener("click",()=>{
+          // Jump to first category in this macro group in Tree view
+          const firstCat=cats.find(c=>c.macroGroup===mc.dataKey);
+          if(firstCat){
+            switchView("tree");
+            renderTree();
+            setTimeout(()=>{
+              const el=document.getElementById('tree-'+firstCat.slug);
+              if(el){
+                el.scrollIntoView({behavior:'smooth',block:'center'});
+                el.style.background='var(--gray-50)';
+                setTimeout(()=>el.style.background='',1500);
+              }
+            },100);
+          }
+        });
+      }
+      grid.appendChild(btn);
+    });
+    
+    body.appendChild(grid);
+    section.appendChild(body);
+    container.appendChild(section);
+  });
+}
+
+
+function renderTree(){
+  const container=document.getElementById("view-tree");
+  container.innerHTML="";
+  
+  const cefrSort={A1:0,A2:1,B1:2,B2:3,C1:4,C2:5};
+  
+  MACRO_CONFIG.forEach((mc,i)=>{
+    const node=document.createElement("div");
+    node.className="dm-macro-node"+(mc.isEmpty?" dm-macro-empty":"");
+    
+    const header=document.createElement("div");
+    header.className="dm-macro-node-header";
+    header.innerHTML='<span class="emoji">'+mc.emoji+'</span><h3>'+mc.nameEn+' <span class="zh">'+mc.nameZh+'</span></h3>';
+    node.appendChild(header);
+    
+    const body=document.createElement("div");
+    body.className="dm-macro-node-body";
+    
+    // Get cats for this group
+    const groupCats=cats.filter(c=>c.macroGroup===mc.dataKey).sort((a,b)=>(a.sortOrder||99)-(b.sortOrder||99));
+    
+    groupCats.forEach(cat=>{
+      const catDiv=document.createElement("div");
+      catDiv.className="dm-tree-cat";
+      catDiv.id='tree-'+cat.slug;
+      
+      const catHeader=document.createElement("div");
+      catHeader.className="dm-tree-cat-header";
+      catHeader.innerHTML='<span class="dm-tree-cat-color" style="background:'+cat.color+'"></span><span class="dm-tree-cat-title">'+cat.name.en+' <span class="zh">'+cat.name.zh+'</span></span><span class="dm-tree-cat-count">'+(cat_marker_counts[cat.slug]||0)+'</span><span class="dm-tree-cat-arrow">▼</span>';
+      catHeader.addEventListener("click",()=>catDiv.classList.toggle("collapsed"));
+      catDiv.appendChild(catHeader);
+      
+      const catBody=document.createElement("div");
+      catBody.className="dm-tree-cat-body";
+      
+      // Subfunctions
+      const sfIds=cat.subfunctionIds||[];
+      sfIds.forEach(sfId=>{
+        const sf=sfMap[sfId];
+        if(!sf)return;
+        const sfDiv=document.createElement("div");
+        sfDiv.className="dm-tree-subfunc";
+        
+        const sfHeader=document.createElement("div");
+        sfHeader.className="dm-tree-subfunc-header";
+        sfHeader.innerHTML='<span class="dm-tree-subfunc-arrow">▼</span>'+t(sf.name)+' <span style="font-size:.7rem;color:var(--gray-400);font-weight:400;margin-left:4px">('+(sf.markerIds||[]).length+')</span>';
+        sfHeader.addEventListener("click",()=>sfDiv.classList.toggle("collapsed"));
+        sfDiv.appendChild(sfHeader);
+        
+        const sfBody=document.createElement("div");
+        sfBody.className="dm-tree-subfunc-body";
+        
+        // Sort markers by CEFR level (A1→C2)
+        const sortedMarkers = (sf.markerIds||[])
+          .map(mId=>markers.find(m=>m.id===mId))
+          .filter(Boolean)
+          .sort((a,b)=>((cefrSort[a.cefr]||99)-(cefrSort[b.cefr]||99)));
+        
+        sortedMarkers.forEach(mk=>{
+          const phrase=document.createElement("div");
+          phrase.style.cssText="padding:4px 0;font-size:.8rem;color:var(--gray-700);cursor:pointer;display:flex;align-items:center;gap:4px;";
+          phrase.innerHTML='<span>'+mk.expression+'</span>'+cefrBadge(mk.cefr||'B1');
+          phrase.addEventListener("click",()=>{
+            activeView="flat";
+            activeSearch=mk.expression.toLowerCase();
+            document.getElementById("dm-search").value=mk.expression;
+            switchView("flat");
+            renderFlat();
+          });
+          sfBody.appendChild(phrase);
+        });
+        
+        sfDiv.appendChild(sfBody);
+        catBody.appendChild(sfDiv);
+      });
+      
+      catDiv.appendChild(catBody);
+      body.appendChild(catDiv);
+    });
+    
+    node.appendChild(body);
+    container.appendChild(node);
+  });
+}
+
+const cat_marker_counts = {"addition-reinforcement": 18, "agreement-confirmation": 10, "approximation-vagueness": 5, "cause-effect": 18, "certainty-confidence": 17, "clarification-rephrasing": 10, "comparison-similarity": 18, "contrast-concession": 18, "disagreement-opposition": 5, "doubt-skepticism": 5, "emotional-reaction": 10, "emphasis-highlighting": 18, "exemplification": 12, "floor-holding": 5, "generalization-qualification": 10, "reformulation": 12, "self-correction": 6, "sequence-ordering": 15, "shared-knowledge-referencing": 10, "softening-downtoners": 10, "stalling-fillers": 18, "summarizing-concluding": 10, "surprise-incredulity": 5, "topic-introduction": 5, "topic-return": 5, "topic-shift": 5, "turn-taking": 10, "uncertainty-hedging": 10};
+
+function h(t){
+  if(!activeSearch)return t;
+  const esc=activeSearch.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+  return t.replace(new RegExp("("+esc+")","gi"),"<mark>$1</mark>");
+}
+
+
+function cefrBadge(level){return '<span class="dm-cefr-badge dm-cefr-'+level+'">'+level+'</span>';}
+
+function ttsBtn(markerId,type,text){
+  const audioPath='audio/tts/tts_'+type+'_'+markerId+'.mp3';
+  return '<button class="dm-tts-btn" onclick="playTTS(\''+audioPath+'\',this)" title="Play '+type+'">🔊 '+text+'</button>';
+}
+
+function playTTS(path,btn){
+  const audio=new Audio(path);
+  btn.classList.add('playing');
+  audio.onended=()=>btn.classList.remove('playing');
+  audio.play().catch(()=>btn.classList.remove('playing'));
+}
+
+function shouldShowZH(mk,field){
+  if(getLang()!=='zh')return false;
+  const tier={A1:'full',A2:'full',B1:'full',B2:'full',C1:'context',C2:'none'};
+  const lvl=mk.cefr||'B1';
+  const t=tier[lvl]||'full';
+  if(t==='none')return false;
+  if(t==='context')return field==='contexts';
+  return true;
+}
+
+function renderFlat(){
+  const grid=document.getElementById("dm-grid");
+  const noResults=document.getElementById("dm-no-results");
+  grid.innerHTML="";
+  let visible=0;
+  const lang=getLang();
+  
+  // Build flat structure like original
+  const catGroups={};
+  markers.forEach(mk=>{
+    const sfId=mk.subfunctionIds[0];
+    const sfObj=sfMap[sfId];
+    if(!sfObj)return;
+    const slug=sfObj.categorySlug;
+    const cat=catMap[slug];
+    if(!cat)return;
+    const catKey=cat.slug;
+    if(!catGroups[catKey]){
+      catGroups[catKey]={cat:cat.name.en+' · '+cat.name.zh,slug:cat.slug,funcsMap:{}};
+    }
+    const funcKey=sfId;
+    if(!catGroups[catKey].funcsMap[funcKey]){
+      catGroups[catKey].funcsMap[funcKey]={name:sfObj.name.en+' · '+sfObj.name.zh,phrases:[]};
+    }
+    
+    // Level filter
+    const cefrOrder={A1:0,A2:1,B1:2,B2:3,C1:4,C2:5,all:0};
+    if(activeLevel!=="all" && cefrOrder[mk.cefr]<cefrOrder[activeLevel])return;
+    
+    catGroups[catKey].funcsMap[funcKey].phrases.push(mk);
+  });
+  
+  const sorted=Object.values(catGroups).sort((a,b)=>(catMap[a.slug]?.sortOrder||99)-(catMap[b.slug]?.sortOrder||99));
+  
+  sorted.forEach(cg=>{
+    let catHTML="";
+    let catVisible=false;
+    
+    Object.values(cg.funcsMap).forEach(func=>{
+      let funcHTML="";
+      func.phrases.forEach(mk=>{
+        const str=(mk.expression+" "+(mk.collocation.en||'')+" "+(mk.contexts.en||'')+" "+(mk.connotation.en||'')).toLowerCase();
+        const match=!activeSearch||str.includes(activeSearch);
+        if(match){
+          catVisible=true;visible++;
+          const cefr=mk.cefr||'B1';
+          // Collocation
+          const collZh=shouldShowZH(mk,'collocation')?(mk.collocation.zh||mk.collocation.en):mk.collocation.en;
+          const collDisplay=lang==='zh'?collZh:mk.collocation.en;
+          // Contexts
+          const ctxZh=shouldShowZH(mk,'contexts')?(mk.contexts.zh||mk.contexts.en):mk.contexts.en;
+          const ctxDisplay=lang==='zh'?ctxZh:mk.contexts.en;
+          // Connotation
+          const connZh=shouldShowZH(mk,'connotation')?(mk.connotation.zh||mk.connotation.en):mk.connotation.en;
+          const connDisplay=lang==='zh'?connZh:mk.connotation.en;
+          // Example
+          const exZh=shouldShowZH(mk,'example')?(mk.example.zh||mk.example.en):mk.example.en;
+          const exDisplay=lang==='zh'?exZh:mk.example.en;
+          
+          funcHTML+='<div class="dm-phrase-card"><div class="dm-phrase-header"><div class="dm-card-expr">'+h(mk.expression)+'</div>'+cefrBadge(cefr)+' '+ttsBtn(mk.id,'phrase',lang==='zh'?'读词组':'Phrase')+'</div>';
+          funcHTML+='<div class="dm-card-field">🔗 <span>'+h(collDisplay)+'</span></div>';
+          funcHTML+='<div class="dm-card-field">📍 <span>'+h(ctxDisplay)+'</span></div>';
+          funcHTML+='<div class="dm-card-field">🎯 <span>'+h(connDisplay)+'</span></div>';
+          funcHTML+='<div class="dm-card-field dm-card-ex">💬 <span class="dm-example-val">'+h(exDisplay)+'</span> '+ttsBtn(mk.id,'example','🔊')+'</div></div>';
+        }
+      });
+      if(funcHTML){
+        const id="sub-"+cg.slug+"-"+func.name.replace(/[^a-z0-9]/gi,"");
+        catHTML+='<div class="dm-subfunction"><div class="dm-function-header" onclick="var b=document.getElementById(\''+id+'\');b.classList.toggle(\'collapsed\');this.querySelector(\'.dm-func-arrow\').classList.toggle(\'collapsed\')"><span class="dm-function-name">'+func.name+'</span><span class="dm-func-arrow">▼</span></div><div class="dm-subfunction-body" id="'+id+'">'+funcHTML+'</div></div>';
+      }
+    });
+    
+    if(catVisible){
+      const sec=document.createElement("div");
+      sec.className="dm-category";
+      sec.innerHTML='<div class="dm-category-header" onclick="this.parentElement.classList.toggle(\'collapsed\')"><span class="dm-category-title">'+cg.cat+'</span><span class="dm-category-arrow">▼</span></div><div class="dm-category-body">'+catHTML+'</div>';
+      grid.appendChild(sec);
+    }
+  });
+  
+  noResults.classList.toggle("show",visible===0);
+}
+
+
+function switchView(view){
+  activeView=view;
+  document.querySelectorAll(".dm-view-btn").forEach(b=>b.classList.remove("active"));
+  document.querySelectorAll('[data-view="'+view+'"]').forEach(b=>b.classList.add("active"));
+  
+  document.getElementById("view-scenarios").style.display=view==="scenarios"?"block":"none";
+  document.getElementById("view-tree").style.display=view==="tree"?"block":"none";
+  document.getElementById("view-flat").style.display=view==="flat"?"block":"none";
+  document.getElementById("tab-chains").classList.toggle("active",view==="chains-tab");
+  document.getElementById("tab-markers").classList.toggle("active",view!=="chains-tab");
+}
+
+document.querySelectorAll(".dm-view-btn").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    switchView(btn.dataset.view);
+    if(btn.dataset.view==="flat")renderFlat();
+    if(btn.dataset.view==="scenarios")renderScenarios();
+    if(btn.dataset.view==="tree")renderTree();
+  });
+});
+
+document.querySelectorAll(".dm-lvl").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".dm-lvl").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    activeLevel=btn.dataset.lvl;
+    if(activeView==="flat")renderFlat();
+  });
+});
+
+document.getElementById("dm-search").addEventListener("input",(e)=>{
+  activeSearch=e.target.value.toLowerCase().trim();
+  if(activeView==="flat")renderFlat();
+  else{
+    if(activeSearch){
+      switchView("flat");
+      renderFlat();
+    }
+  }
+});
+
+init();
+
+async function init(){
+  await loadDiscourseData();
+}
+
+</script>
 </body>
 </html>

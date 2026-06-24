@@ -22,26 +22,40 @@
   <!-- Sidebar -->
   <aside class="rpt-sidebar">
     <nav class="rpt-sidebar-nav">
-      <div class="rpt-sidebar-label">Report</div>
-      <a href="#panel-latest" class="rpt-sidebar-item active" data-panel="latest" onclick="switchReportTab('latest',this);return false">
-        <span class="rpt-sidebar-icon">🆕</span> Latest Season
-        <span class="rpt-sidebar-count">134</span>
-      </a>
-      <a href="#panel-rankings" class="rpt-sidebar-item" data-panel="rankings" onclick="switchReportTab('rankings',this);return false">
-        <span class="rpt-sidebar-icon">🏆</span> All-Time Rankings
-      </a>
-      <a href="#panel-database" class="rpt-sidebar-item" data-panel="database" onclick="switchReportTab('database',this);return false">
-        <span class="rpt-sidebar-icon">🔍</span> Search Database
-      </a>
-      <div class="rpt-sidebar-divider"></div>
-      <a href="#panel-bikao" class="rpt-sidebar-item" data-panel="bikao" onclick="switchReportTab('bikao',this);return false">
-        <span class="rpt-sidebar-icon">🔥</span> 必考题
-        <span class="rpt-sidebar-count">4</span>
-      </a>
-      <div class="rpt-sidebar-divider"></div>
-      <a href="#rpt-insights-section" class="rpt-sidebar-sub" onclick="document.getElementById('rpt-insights-section').scrollIntoView({behavior:'smooth'});return false">💡 Key Insights</a>
-      <a href="#rpt-insights-section" class="rpt-sidebar-sub" onclick="document.getElementById('rpt-insights-section').scrollIntoView({behavior:'smooth'});return false">📝 Recommendations</a>
-      <a href="#rpt-insights-section" class="rpt-sidebar-sub" onclick="document.getElementById('rpt-insights-section').scrollIntoView({behavior:'smooth'});return false">📊 Methodology</a>
+      <!-- Card 1: Navigate -->
+      <div class="rpt-sb-card">
+        <div class="rpt-sb-card-head">🧭 Navigate</div>
+        <div class="rpt-sb-card-body">
+          <div class="rpt-sb-row">
+            <a href="#" class="rpt-sb-chip" onclick="jumpToPart('p1');return false">🗣️ Part 1</a>
+            <a href="#" class="rpt-sb-chip" onclick="jumpToPart('p2');return false">📋 Part 2</a>
+          </div>
+          <div class="rpt-sb-views">
+            <a href="#panel-latest" class="rpt-sidebar-item active" data-panel="latest" onclick="switchAndScroll('latest',this);return false">
+              <span class="rpt-sidebar-icon">🆕</span> Latest
+            </a>
+            <a href="#panel-rankings" class="rpt-sidebar-item" data-panel="rankings" onclick="switchAndScroll('rankings',this);return false">
+              <span class="rpt-sidebar-icon">🏆</span> All Seasons
+            </a>
+            <a href="#panel-database" class="rpt-sidebar-item" data-panel="database" onclick="switchAndScroll('database',this);return false">
+              <span class="rpt-sidebar-icon">🔍</span> Search
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: KeeBot & Book -->
+      <div class="rpt-sb-card rpt-sb-keebot">
+        <div class="rpt-sb-card-head">🦄 KeeBot</div>
+        <div class="rpt-sb-card-body">
+          <p>Ask anything about IELTS speaking, writing, or these pages.</p>
+          <button class="rpt-keebot-btn" onclick="document.getElementById('kee-bot')&&document.getElementById('kbFab')&&document.getElementById('kbFab').click()">💬 Chat Now</button>
+          <div class="rpt-sb-divider"></div>
+          <p class="rpt-sb-book-title">📅 Book a speaking assessment with Kee</p>
+          <button class="rpt-booking-btn rpt-booking-wechat" onclick="copyWechat()">💚 WeChat <span class="rpt-copy-hint">tap to copy</span></button>
+          <button class="rpt-booking-btn rpt-booking-wa" onclick="openWhatsApp()">💬 WhatsApp</button>
+        </div>
+      </div>
     </nav>
   </aside>
 

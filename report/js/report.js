@@ -208,7 +208,7 @@
       html += '<div class="rpt-cat-heading" id="latest-cat-' + cfg.key + '">' + cfg.emoji + ' ' + cat + ' <span class="rpt-cat-count">' + items.length + '</span></div>';
       html += '<div class="rpt-cuecard-grid" id="latest-grid-' + cfg.key + '">';
       items.forEach(function (t) {
-        html += renderCueCardSummary(t, cfg);
+        html += renderCueCardSummary(t, cfg, '');
       });
       html += '</div>';
     });
@@ -239,13 +239,35 @@
     };
   }
 
-  function renderP1Accordion(t) {
+  // Highlight search terms — highlight raw text, then escape around marks
+  function hl(text, query) {
+    if (!query || !text) return esc(text);
+    var q = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    var re = new RegExp(q, 'gi');
+    var matches = [];
+    var m;
+    while ((m = re.exec(text)) !== null) {
+      matches.push({ idx: m.index, len: m[0].length });
+    }
+    if (matches.length === 0) return esc(text);
+    var out = '';
+    var prev = 0;
+    for (var i = 0; i < matches.length; i++) {
+      out += esc(text.slice(prev, matches[i].idx));
+      out += '<mark class="rpt-hl">' + esc(text.slice(matches[i].idx, matches[i].idx + matches[i].len)) + '</mark>';
+      prev = matches[i].idx + matches[i].len;
+    }
+    out += esc(text.slice(prev));
+    return out;
+  }
+
+  function renderP1Accordion(t, query) {
     var cat = (t.category || 'object').toLowerCase();
     var icon = cat === 'place' ? '📍' : cat === 'event' ? '🎬' : cat === 'people' ? '👥' : '📦';
     var html = '<div class="rpt-accordion-item" data-freq="' + (t.frequency||0) + '" data-new="' + (t.isNew?'1':'0') + '">';
     html += '<div class="rpt-accordion-header" onclick="toggleAccordion(this)" role="button" tabindex="0" aria-expanded="false" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();toggleAccordion(this)}">';
     html += '<div class="rpt-accordion-icon ' + cat + '">' + icon + '</div>';
-    html += '<div class="rpt-accordion-title">' + esc(t.topic) + '</div>';
+    html += '<div class="rpt-accordion-title">' + hl(t.topic, query||'') + '</div>';
     html += '<div class="rpt-accordion-badges">';
     html += '<span class="rpt-accordion-tag ' + cat + '">' + (t.category || 'Object') + '</span>';
     if (t.frequency > 0) {
@@ -261,7 +283,7 @@
     html += '<div class="rpt-accordion-body"><div class="rpt-accordion-content">';
     if (t.questions && t.questions.length > 0) {
       t.questions.forEach(function (q, i) {
-        html += '<div class="rpt-accordion-question"><span class="rpt-accordion-qnum">' + (i + 1) + '</span><span>' + esc(q) + '</span></div>';
+        html += '<div class="rpt-accordion-question"><span class="rpt-accordion-qnum">' + (i + 1) + '</span><span>' + hl(q, query||'') + '</span></div>';
       });
     }
     html += '</div></div></div>';
@@ -269,7 +291,7 @@
   }
 
   // Card SUMMARY — topic appears ONCE. Click opens detail overlay.
-  function renderCueCardSummary(t, cfg) {
+  function renderCueCardSummary(t, cfg, query) {
     var ck = cfg.key;
     var key = storeCard({
       topic: t.topic,
@@ -287,9 +309,9 @@
     var html = '<div class="rpt-cuecard cat-' + ck + '" data-freq="' + (t.frequency||0) + '" data-new="' + (t.isNew?'1':'0') + '" onclick="openDetailByKey(\'' + key + '\')" role="button" tabindex="0" aria-label="View details" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();openDetailByKey(\'' + key + '\')}">';
 
     html += '<div class="rpt-cuecard-body">';
-    html += '<div class="rpt-cuecard-topic">' + esc(t.topic) + '</div>';
+    html += '<div class="rpt-cuecard-topic">' + hl(t.topic, query||'') + '</div>';
     if (hint) {
-      html += '<div class="rpt-cuecard-hint">' + esc(hint) + '</div>';
+      html += '<div class="rpt-cuecard-hint">' + hl(hint, query||'') + '</div>';
     }
     html += '</div>';
 
@@ -323,19 +345,17 @@
     html += '<p>Ranked by number of season appearances (2024–2026). Tap any row to see questions.</p></div>';
     html += '<div class="rpt-accordion">';
     at.part1.forEach(function (row) {
-      // Find matching topic in latestSeason for questions
-      var match = ls.part1.find(function (p) { return p.topic === row.topic; });
-      var questions = match && match.questions ? match.questions : [];
-      var ft = freqTag(row.seasons);
+      // Find questions: check allTime row first, then fall back to latestSeason
+      var questions = row.questions || [];
+      if (questions.length === 0) {
+        var match = ls.part1.find(function (p) { return p.topic === row.topic; });
+        questions = match && match.questions ? match.questions : [];
+      }
       html += '<div class="rpt-accordion-item">';
       html += '<div class="rpt-accordion-header rpt-rank-header" onclick="toggleAccordion(this)" role="button" tabindex="0" aria-expanded="false" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();toggleAccordion(this)}">';
       html += '<div class="rpt-rank-row">';
-      html += '<span class="rpt-rank-pos">' + row.rank + '</span>';
-      html += '<span class="rpt-rank-medal">' + row.medal + '</span>';
       html += '<span class="rpt-rank-topic">' + esc(row.topic) + '</span>';
       html += '<span class="rpt-rank-type"><span class="type-tag ' + row.type.toLowerCase() + '">' + row.type + '</span></span>';
-      html += '<span class="rpt-rank-seasons">' + row.seasons + '/7</span>';
-      if (ft) html += ft;
       html += '<span class="rpt-accordion-arrow">▼</span>';
       html += '</div>';
       html += '</div>';
@@ -355,17 +375,15 @@
     html += '<p>Deduplicated across all 7 seasons. Tap any row to see cue card details.</p></div>';
     html += '<div class="rpt-accordion">';
     at.part2.forEach(function (row) {
-      var match = ls.part2.find(function (p) { return p.topic === row.topic; });
-      var cueCard = match && match.cueCard ? match.cueCard : null;
-      var ft = freqTag(row.seasons);
+      var cueCard = row.cueCard || null;
+      if (!cueCard) {
+        var match = ls.part2.find(function (p) { return p.topic === row.topic; });
+        cueCard = match && match.cueCard ? match.cueCard : null;
+      }
       html += '<div class="rpt-accordion-item">';
       html += '<div class="rpt-accordion-header rpt-rank-header" onclick="toggleAccordion(this)" role="button" tabindex="0" aria-expanded="false" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();toggleAccordion(this)}">';
       html += '<div class="rpt-rank-row">';
-      html += '<span class="rpt-rank-pos">' + row.rank + '</span>';
-      html += '<span class="rpt-rank-medal">' + row.medal + '</span>';
       html += '<span class="rpt-rank-topic">' + esc(row.topic) + '</span>';
-      html += '<span class="rpt-rank-seasons">' + row.seasons + '/7</span>';
-      if (ft) html += ft;
       html += '<span class="rpt-accordion-arrow">▼</span>';
       html += '</div>';
       html += '</div>';
@@ -481,8 +499,28 @@
     if (f.type === 'part2') p1 = [];
 
     if (f.search) {
-      p1 = p1.filter(function (c) { return c.topic.toLowerCase().indexOf(f.search) !== -1; });
-      p2 = p2.filter(function (c) { return c.topic.toLowerCase().indexOf(f.search) !== -1; });
+      p1 = p1.filter(function (c) {
+        if (c.topic.toLowerCase().indexOf(f.search) !== -1) return true;
+        // Also search within questions
+        var qs = c.questions || [];
+        for (var i = 0; i < qs.length; i++) {
+          if (qs[i].toLowerCase().indexOf(f.search) !== -1) return true;
+        }
+        return false;
+      });
+      p2 = p2.filter(function (c) {
+        if (c.topic.toLowerCase().indexOf(f.search) !== -1) return true;
+        // Also search within cue card content
+        var cc = c.cueCard;
+        if (cc) {
+          if (cc.describe && cc.describe.toLowerCase().indexOf(f.search) !== -1) return true;
+          var bullets = cc.bullets || [];
+          for (var j = 0; j < bullets.length; j++) {
+            if (bullets[j].toLowerCase().indexOf(f.search) !== -1) return true;
+          }
+        }
+        return false;
+      });
     }
 
     if (f.category !== 'all') {
@@ -501,12 +539,13 @@
     }
 
     var html = '';
+    var query = f.search;
 
     if (p1.length > 0) {
       html += '<div class="rpt-cat-heading">🗣️ Part 1 Topics <span class="rpt-cat-count">' + p1.length + '</span></div>';
       html += '<div class="rpt-accordion">';
       p1.forEach(function (t) {
-        html += renderP1Accordion(t);
+        html += renderP1Accordion(t, query);
       });
       html += '</div>';
     }
@@ -517,7 +556,7 @@
       p2.forEach(function (t) {
         var cat = t.category || 'Objects';
         var cfg = CAT_CONFIG[cat] || CAT_CONFIG.Objects;
-        html += renderCueCardSummary(t, cfg);
+        html += renderCueCardSummary(t, cfg, query);
       });
       html += '</div>';
     }
@@ -633,3 +672,45 @@
     loadData();
   }
 })();
+
+// ═══ SIDEBAR JUMP ═══
+window.jumpToPart = function(part) {
+  var panel = document.querySelector('.rpt-panel.active');
+  if (!panel) panel = document.getElementById('panel-latest');
+  if (!panel) return;
+  var target = panel.querySelector(part === 'p1' ? '.rpt-section-header' : '.rpt-cat-heading');
+  if (!target && part === 'p2') target = panel.querySelector('.rpt-cuecard-grid');
+  if (!target && part === 'p2') target = panel.querySelector('.rpt-accordion');
+  if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+};
+
+window.copyWechat = function() {
+  var wechatId = 'keedahooman';
+  navigator.clipboard.writeText(wechatId).then(function() {
+    showCopyToast('✅ Copied: ' + wechatId);
+  }).catch(function() {
+    showCopyToast('📋 WeChat ID: ' + wechatId);
+  });
+};
+
+
+// ═══ SIDEBAR: Switch tab + scroll to top ═══
+window.switchAndScroll = function(tabName, el) {
+  switchReportTab(tabName, el);
+  // Scroll to top of the panel
+  var panel = document.getElementById('panel-' + tabName);
+  if (panel) {
+    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
+window.openWhatsApp = function() {
+  window.open('https://wa.me/447440622158', '_blank');
+};
+
+function showCopyToast(msg) {
+  var t = document.createElement('div');
+  t.className = 'rpt-copy-toast';
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(function() { t.remove(); }, 2500);
+}

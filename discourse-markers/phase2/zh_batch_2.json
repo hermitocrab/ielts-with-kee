@@ -1,0 +1,3363 @@
+[
+  {
+    "id": "dm-72b30e4457",
+    "expression": "prefer to do -> ... would be my preference",
+    "variants": [],
+    "collocation": {
+      "en": "[Option choice] would be my [preference/choice] because [reason]",
+      "zh": "对我来说，[选项]会是更偏好的选择，因为[原因]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "Going to the countryside would be my preference, because I really need some peace and quiet.",
+      "zh": "对我来说，去乡下会是更偏好的选择，因为我真的很需要一些安静和平和。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-f328fd191f",
+    "expression": "prep. / conj. /",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在从句开头使用，表达个人观点"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "prep. / conj. / technology has fundamentally changed the way we communicate with each other.",
+      "zh": "说实话，科技已经从根本上改变了我们彼此交流的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-fc2b0b0ef6",
+    "expression": "revolutionised the way we",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "[主语]彻底改变了我们[做某事]的方式"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "revolutionised the way we technology has fundamentally changed the way we communicate with each other.",
+      "zh": "互联网彻底改变了我们获取信息的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-0f015f11e7",
+    "expression": "Should I had a billion dollars, I would",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "假如我有十亿美元，我会……"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "Should I had a billion dollars, I would technology has fundamentally changed the way we communicate with each other.",
+      "zh": "假如我有十亿美元，我会先捐一半给慈善机构。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-af1f659eb8",
+    "expression": "So you can see here,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "所以你看，在这里……"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "So you can see here technology has fundamentally changed the way we communicate with each other.",
+      "zh": "所以你看，在这里数据明显呈现上升趋势。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ff0d5bb782",
+    "expression": "somebody who",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "一个……的人"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "somebody who technology has fundamentally changed the way we communicate with each other.",
+      "zh": "我是一个喜欢在周末出去走走的人。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-0b8e35d816",
+    "expression": "Sometimes",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "有时候……"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "Sometimes technology has fundamentally changed the way we communicate with each other.",
+      "zh": "有时候我觉得工作压力太大了，需要放松一下。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-65b1e3f466",
+    "expression": "Sometimes I spend hours and hours on TikTok",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "有时候我会花好几个小时刷TikTok……"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "Sometimes I spend hours and hours on TikTok technology has fundamentally changed the way we communicate with each other.",
+      "zh": "有时候我会花好几个小时刷TikTok，时间一下子就过去了。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-3295807dbe",
+    "expression": "sometimes when",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "有时候当……的时候"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "sometimes when technology has fundamentally changed the way we communicate with each other.",
+      "zh": "有时候当我感到无聊的时候，我就会去散散步。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-6d99333c2c",
+    "expression": "Starbucks, Luckin, Costa, Tim's",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "比如星巴克、瑞幸、Costa、Tim Hortons等"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "Starbucks, Luckin, Costa, Tim's technology has fundamentally changed the way we communicate with each other.",
+      "zh": "像星巴克、瑞幸、Costa、Tim Hortons这些咖啡品牌在中国都很受欢迎。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-7bee1817ac",
+    "expression": "Supposedly,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "据说……"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "Supposedly technology has fundamentally changed the way we communicate with each other.",
+      "zh": "据说新的政策会在下个月开始实施。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-309a6a112f",
+    "expression": "The main reason is",
+    "variants": [],
+    "collocation": {
+      "en": "Use within or at the start of a clause expressing causality",
+      "zh": "主要原因是……"
+    },
+    "contexts": {
+      "en": "Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于解释理由，尤其在Part 3分析类回答中使用"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates logical reasoning ability",
+      "zh": "正式，适合雅思口语，展现逻辑推理能力"
+    },
+    "example": {
+      "en": "The main reason is This explains why the situation has changed so dramatically.",
+      "zh": "主要原因就是生活成本大幅上涨了。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-1ebd6605d0",
+    "expression": "The older generation might see this differently",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to frame a response from a specific viewpoint",
+      "zh": "老一辈人可能对此有不同看法……"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "用于在回答中自然表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "正式，适合雅思口语，展现分析能力"
+    },
+    "example": {
+      "en": "The older generation might see this differently This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "老一辈人可能对此有不同看法，他们更倾向于面对面的交流方式。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-0dfb96994c",
+    "expression": "The plaza is situated on a road called ... Avenue",
+    "variants": [],
+    "collocation": {
+      "en": "Use The plaza is situated on a road called ... Avenue to [situation-appropriate completion of the template]",
+      "zh": "这个广场位于一条叫……大道的路上"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "The plaza is situated on a road called ... Avenue For example, this is a great way to introduce your point naturally.",
+      "zh": "这个广场位于一条叫南京路的大道上，交通非常便利。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-258c2abe06",
+    "expression": "The recent one is when",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "最近的一次是当……的时候"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "The recent one is when technology has fundamentally changed the way we communicate with each other.",
+      "zh": "最近一次是上个月我生日的时候，朋友们给了我一个惊喜派对。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-2f671285b5",
+    "expression": "the vast majority of",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "绝大多数……"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "the vast majority of technology has fundamentally changed the way we communicate with each other.",
+      "zh": "绝大多数受访者都对这项服务表示满意。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-b6a5d50225",
+    "expression": "The vast majority of people would say",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "绝大多数人会认为……"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "The vast majority of people would say technology has fundamentally changed the way we communicate with each other.",
+      "zh": "绝大多数人会认为在线教育比传统课堂更灵活。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-bf330c4784",
+    "expression": "the versatile utility of ... is truly remarkable",
+    "variants": [],
+    "collocation": {
+      "en": "Use the versatile utility of ... is truly remarkable to [situation-appropriate completion of the template]",
+      "zh": "……的多功能性确实令人惊叹"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "the versatile utility of ... is truly remarkable For example, this is a great way to introduce your point naturally.",
+      "zh": "智能手机的多功能性确实令人惊叹，它能满足我们日常生活的几乎所有需求。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-caf9d1e067",
+    "expression": "to achieve this goal, I plan to",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "为了实现这个目标，我计划……"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "to achieve this goal, I plan to technology has fundamentally changed the way we communicate with each other.",
+      "zh": "为了实现这个目标，我计划每天花一个小时练习英语口语。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-fdc5371c06",
+    "expression": "To make things even worse,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "更糟糕的是……"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "To make things even worse technology has fundamentally changed the way we communicate with each other.",
+      "zh": "更糟糕的是，那天还下起了倾盆大雨。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-b2e02d4e27",
+    "expression": "To put it at length,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "详细来说……"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "To put it at length technology has fundamentally changed the way we communicate with each other.",
+      "zh": "详细来说，这个项目可以分为三个阶段来推进。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-739abb2e41",
+    "expression": "To put it in another way,",
+    "variants": [],
+    "collocation": {
+      "en": "Use when rephrasing or clarifying a previous statement",
+      "zh": "换句话说……"
+    },
+    "contexts": {
+      "en": "Used when you realise your previous wording was unclear or incomplete",
+      "zh": "当发现之前的表达不够清晰或完整时，用于改述或澄清"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates self-correction ability",
+      "zh": "正式，适合雅思口语，展现自我修正能力"
+    },
+    "example": {
+      "en": "To put it in another way This is a useful expression for expressing yourself naturally in English.",
+      "zh": "换句话说，我们其实是在浪费宝贵的时间。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-0f0cb2ebe5",
+    "expression": "truth be told,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "说实话……"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "truth be told technology has fundamentally changed the way we communicate with each other.",
+      "zh": "说实话，我一开始并不太喜欢这份工作。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-535313f828",
+    "expression": "Under the premise of/that",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在……的前提下"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "Under the premise of/that technology has fundamentally changed the way we communicate with each other.",
+      "zh": "在保证质量的前提下，我们可以适当缩短生产周期。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-4312f9aaa7",
+    "expression": "upside / downside / solution / scenario",
+    "variants": [],
+    "collocation": {
+      "en": "Use before or within a statement to indicate provisional judgment",
+      "zh": "好处/坏处/解决方案/情景"
+    },
+    "contexts": {
+      "en": "Used when speculating or when your knowledge is incomplete",
+      "zh": "用于推测或当信息不完整时，展现诚实的自我评估"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows honest self-assessment",
+      "zh": "正式，适合雅思口语，展现诚实自我评估"
+    },
+    "example": {
+      "en": "upside / downside / solution / scenario This is a useful expression for expressing yourself naturally in English.",
+      "zh": "这个方案的好处是节省成本，坏处是耗时较长，解决方案是分阶段实施。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-6fc45df2a4",
+    "expression": "verb - put ... into doing",
+    "variants": [],
+    "collocation": {
+      "en": "Use verb - put ... into doing to [situation-appropriate completion of the template]",
+      "zh": "把……投入到做某事中"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "verb - put ... into doing For example, this is a great way to introduce your point naturally.",
+      "zh": "他把大量的时间和精力投入在了学习编程上。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-f891a6fd7c",
+    "expression": "We'll have to look at how we define the word \"...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use We'll have to look at how we define the word \"...\" to [situation-appropriate completion of the template]",
+      "zh": "我们需要先看看如何定义这个词"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "We'll have to look at how we define the word \"...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "我们需要先看看如何定义成功这个词，才能继续讨论下去。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-8fb49c1291",
+    "expression": "what really helps me focus on my studies is",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: what really helps me focus on my studies is",
+      "zh": "真正帮助我集中精力学习的是……"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "what really helps me focus on my studies is technology has fundamentally changed the way we communicate with each other.",
+      "zh": "真正帮助我集中精力学习的是在图书馆里找一个安静的角落。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-43f3ab5067",
+    "expression": "When I received",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "当我收到……的时候"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "When I received technology has fundamentally changed the way we communicate with each other.",
+      "zh": "当我收到录取通知书的那一刻，我激动得说不出话来。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-a8b1757610",
+    "expression": "When I saw",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "当我看到……的时候"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "When I saw technology has fundamentally changed the way we communicate with each other.",
+      "zh": "当我看到那个场景时，内心深受触动。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ef7708f751",
+    "expression": "When it comes down to personal experience,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to focus attention on a specific aspect",
+      "zh": "说到个人经验……"
+    },
+    "contexts": {
+      "en": "Used to narrow focus to a specific aspect of the question",
+      "zh": "用于将话题聚焦到问题的某个具体方面"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, signals topic management skills",
+      "zh": "正式，适合雅思口语，展现话题把控能力"
+    },
+    "example": {
+      "en": "When it comes down to personal experience This is a useful expression for expressing yourself naturally in English.",
+      "zh": "说到个人经验，我觉得旅行是开阔眼界最好的方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-f36ab567b5",
+    "expression": "Whenever I saw some really funny videos online,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "每当我看到网上一些特别搞笑的视频时……"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "Whenever I saw some really funny videos online technology has fundamentally changed the way we communicate with each other.",
+      "zh": "每当我看到网上一些特别搞笑的视频时，我都会忍不住分享给我的朋友。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-b48bb3570e",
+    "expression": "work for",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "在……工作"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "work for technology has fundamentally changed the way we communicate with each other.",
+      "zh": "我在一家科技公司工作，主要负责产品开发。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-8df475f2f4",
+    "expression": "遇到语流中断时，是否能使用改述结构延展内容，而不只是使用 umm... 尴尬复述；",
+    "variants": [],
+    "collocation": {
+      "en": "Use 遇到语流中断时，是否能使用改述结构延展内容，而不只是使用 umm... 尴尬复述； to [situation-appropriate completion of the template]",
+      "zh": "Use 遇到语流中断时，是否能使用改述结构延展内容，而不只是使用 umm... 尴尬复述； to [situation-appropriate completion of the template]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "遇到语流中断时，是否能使用改述结构延展内容，而不只是使用 umm... 尴尬复述； For example, this is a great way to introduce your point naturally.",
+      "zh": "遇到语流中断时，是否能使用改述结构延展内容，而不只是使用 umm... 尴尬复述； For example, this is a great way to introduce your point naturally."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-4a7a86ea84",
+    "expression": "I don't mind",
+    "variants": [],
+    "collocation": {
+      "en": "Use as a standalone response or clause-initial to confirm alignment",
+      "zh": "我不介意……"
+    },
+    "contexts": {
+      "en": "Used to show alignment with the interlocutor or to confirm a shared understanding",
+      "zh": "用于表示与对话者观点一致，建立共鸣"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, build rapport with the listener",
+      "zh": "正式，适合雅思口语，建立与听者的共鸣"
+    },
+    "example": {
+      "en": "I don't mind That's exactly what I was thinking as well.",
+      "zh": "我不介意周末加班，只要项目能按时交付就行。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-004"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "agreement"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-fec7adceec",
+    "expression": "I have no doubt that",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "我毫不怀疑……"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "I have no doubt that technology has fundamentally changed the way we communicate with each other.",
+      "zh": "我毫不怀疑只要我们齐心协力，一定能完成这个任务。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-004"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "agreement"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-6f34e33c2a",
+    "expression": "There's a point there for sure, but",
+    "variants": [],
+    "collocation": {
+      "en": "Use at clause-initial position, often followed by a contrasting statement",
+      "zh": "你说得确实有道理，但是……"
+    },
+    "contexts": {
+      "en": "Used to politely signal a different perspective in discussion-style tasks",
+      "zh": "用于引入不同视角或补充说明，增加论点深度"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, polite disagreement strategies for discussion tasks",
+      "zh": "正式，适合雅思口语"
+    },
+    "example": {
+      "en": "There's a point there for sure, but I see your point, but I think there's another side to this argument.",
+      "zh": "你说得确实有道理，但我觉得这个问题还有另一面需要考虑。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-004"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "agreement"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-9bc157afa0",
+    "expression": "Yes, but",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a clause to introduce a counterpoint",
+      "zh": "是的，但是……"
+    },
+    "contexts": {
+      "en": "Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于引入不同视角或补充说明，增加论点深度"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "正式，适合雅思口语，增加论证深度"
+    },
+    "example": {
+      "en": "Yes, but This is not to say that the other option doesn't have its merits.",
+      "zh": "是的，但我并不是说另一个选择完全没有优点。"
+    },
+    "cefr": "A1",
+    "categoryIds": [
+      "cat-005"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "disagreement"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-8e68dc9ccb",
+    "expression": "Based on ..., I guess",
+    "variants": [],
+    "collocation": {
+      "en": "Use Based on ..., I guess to [situation-appropriate completion of the template]",
+      "zh": "根据……，我猜……"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "Based on ..., I guess For example, this is a great way to introduce your point naturally.",
+      "zh": "根据我目前的了解，我猜这个项目大概需要三个月才能完成。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-006"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "hedging",
+      "uncertainty"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-cb41667396",
+    "expression": "Based on my observation, I guess",
+    "variants": [],
+    "collocation": {
+      "en": "Use before or within a statement to indicate provisional judgment",
+      "zh": "根据我的观察，我猜……"
+    },
+    "contexts": {
+      "en": "Used when speculating or when your knowledge is incomplete",
+      "zh": "用于推测或当信息不完整时，展现诚实的自我评估"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows honest self-assessment",
+      "zh": "正式，适合雅思口语，展现诚实自我评估"
+    },
+    "example": {
+      "en": "Based on my observation, I guess This is a useful expression for expressing yourself naturally in English.",
+      "zh": "根据我的观察，我猜现在的年轻人更喜欢灵活就业。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-006"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "hedging",
+      "uncertainty"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-42bdaedb81",
+    "expression": "Based on what I've noticed, I guess",
+    "variants": [],
+    "collocation": {
+      "en": "Use before or within a statement to indicate provisional judgment",
+      "zh": "根据我注意到的，我猜……"
+    },
+    "contexts": {
+      "en": "Used when speculating or when your knowledge is incomplete",
+      "zh": "用于推测或当信息不完整时，展现诚实的自我评估"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows honest self-assessment",
+      "zh": "正式，适合雅思口语，展现诚实自我评估"
+    },
+    "example": {
+      "en": "Based on what I've noticed, I guess This is a useful expression for expressing yourself naturally in English.",
+      "zh": "根据我注意到的，我猜很多人其实不太关心这个问题。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-006"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "hedging",
+      "uncertainty"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ff5d13e98e",
+    "expression": "Hypothetically,",
+    "variants": [],
+    "collocation": {
+      "en": "Use before or within a statement to indicate provisional judgment",
+      "zh": "假设来说……"
+    },
+    "contexts": {
+      "en": "Used when speculating or when your knowledge is incomplete",
+      "zh": "用于推测或当信息不完整时，展现诚实的自我评估"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows honest self-assessment",
+      "zh": "正式，适合雅思口语，展现诚实自我评估"
+    },
+    "example": {
+      "en": "Hypothetically This is a useful expression for expressing yourself naturally in English.",
+      "zh": "假设来说，如果政府真的实施这个政策，短期内可能会有一些负面影响。"
+    },
+    "cefr": "C1",
+    "categoryIds": [
+      "cat-006"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "hedging",
+      "uncertainty"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-9bf2771fd4",
+    "expression": "I first met him a few years ago, maybe in ..., to be precise",
+    "variants": [],
+    "collocation": {
+      "en": "Use I first met him a few years ago, maybe in ..., to be precise to [situation-appropriate completion of the template]",
+      "zh": "我第一次见到他是几年前，大概是……年，确切来说"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to structure multi-point answers, especially in Part 2 long turns",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, improves coherence and cohesion scores",
+      "zh": "正式，适合雅思口语，提升连贯性与衔接分"
+    },
+    "example": {
+      "en": "I first met him a few years ago, maybe in ..., to be precise For example, this is a great way to introduce your point naturally.",
+      "zh": "我第一次见到他是几年前，大概是2019年，确切来说是在一次学术会议上。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-006"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "hedging",
+      "uncertainty"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-79a9587c1d",
+    "expression": "I guess I'm not the only one who",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "我想我不是唯一一个……的人"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "I guess I'm not the only one who technology has fundamentally changed the way we communicate with each other.",
+      "zh": "我想我不是唯一一个觉得考试压力很大的人。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-006"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "hedging",
+      "uncertainty"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-92602aa670",
+    "expression": "I guess that",
+    "variants": [],
+    "collocation": {
+      "en": "Use before or within a statement to indicate provisional judgment",
+      "zh": "我猜……"
+    },
+    "contexts": {
+      "en": "Used when speculating or when your knowledge is incomplete",
+      "zh": "用于推测或当信息不完整时，展现诚实的自我评估"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows honest self-assessment",
+      "zh": "正式，适合雅思口语，展现诚实自我评估"
+    },
+    "example": {
+      "en": "I guess that This is a useful expression for expressing yourself naturally in English.",
+      "zh": "我猜那可能是因为他当时太忙了。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-006"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "hedging",
+      "uncertainty"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ded2b2be77",
+    "expression": "I suppose / assume ... (should/could/might/would do / did)",
+    "variants": [],
+    "collocation": {
+      "en": "Use I suppose / assume ... (should/could/might/would do / did) to [situation-appropriate completion of the template]",
+      "zh": "我认为/假设……（应该/可能/也许会）"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "I suppose / assume ... (should/could/might/would do / did) For example, this is a great way to introduce your point naturally.",
+      "zh": "我认为政府应该会出台相关政策来解决这个问题。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-006"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "hedging",
+      "uncertainty"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-65801abde8",
+    "expression": "I suppose / guess / reckon / deem that",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: I suppose / guess / reckon / deem that",
+      "zh": "我认为/猜测/觉得……"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "I suppose / guess / reckon / deem that technology has fundamentally changed the way we communicate with each other.",
+      "zh": "我觉得大多数人应该都同意这个观点。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-006"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "hedging",
+      "uncertainty"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-76fb465bb4",
+    "expression": "If I were to make an educated guess, I'd say",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: If I were to make an educated guess, I'd say",
+      "zh": "如果要做一个有根据的猜测，我会说……"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "If I were to make an educated guess, I'd say technology has fundamentally changed the way we communicate with each other.",
+      "zh": "如果要做一个有根据的猜测，我会说这个市场在未来五年会翻一番。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-006"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "hedging",
+      "uncertainty"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-21f0fe7b85",
+    "expression": "It could be that",
+    "variants": [],
+    "collocation": {
+      "en": "Use before or within a statement to indicate provisional judgment",
+      "zh": "有可能……"
+    },
+    "contexts": {
+      "en": "Used when speculating or when your knowledge is incomplete",
+      "zh": "用于推测或当信息不完整时，展现诚实的自我评估"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows honest self-assessment",
+      "zh": "正式，适合雅思口语，展现诚实自我评估"
+    },
+    "example": {
+      "en": "It could be that This is a useful expression for expressing yourself naturally in English.",
+      "zh": "有可能是因为他们缺乏足够的经验。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-006"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "hedging",
+      "uncertainty"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-530dc9fe70",
+    "expression": "It might be a wild guess, but",
+    "variants": [],
+    "collocation": {
+      "en": "Use before or within a statement to indicate provisional judgment",
+      "zh": "这可能是个大胆的猜测，但是……"
+    },
+    "contexts": {
+      "en": "Used when speculating or when your knowledge is incomplete",
+      "zh": "用于推测或当信息不完整时，展现诚实的自我评估"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows honest self-assessment",
+      "zh": "正式，适合雅思口语，展现诚实自我评估"
+    },
+    "example": {
+      "en": "It might be a wild guess, but This is a useful expression for expressing yourself naturally in English.",
+      "zh": "这可能是个大胆的猜测，但我认为人工智能会在十年内改变大多数行业。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-006"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "hedging",
+      "uncertainty"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-646dcbd768",
+    "expression": "My speculation is that",
+    "variants": [],
+    "collocation": {
+      "en": "Use before or within a statement to indicate provisional judgment",
+      "zh": "我的推测是……"
+    },
+    "contexts": {
+      "en": "Used when speculating or when your knowledge is incomplete",
+      "zh": "用于推测或当信息不完整时，展现诚实的自我评估"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows honest self-assessment",
+      "zh": "正式，适合雅思口语，展现诚实自我评估"
+    },
+    "example": {
+      "en": "My speculation is that This is a useful expression for expressing yourself naturally in English.",
+      "zh": "我的推测是，这次改革会带来深远的影响。"
+    },
+    "cefr": "C1",
+    "categoryIds": [
+      "cat-006"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "hedging",
+      "uncertainty"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ccc14d0ac6",
+    "expression": "One possible ... could be that",
+    "variants": [],
+    "collocation": {
+      "en": "Use One possible ... could be that to [situation-appropriate completion of the template]",
+      "zh": "一个可能的……是……"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used when speculating or when your knowledge is incomplete",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows honest self-assessment",
+      "zh": "正式，适合雅思口语，展现诚实自我评估"
+    },
+    "example": {
+      "en": "One possible ... could be that For example, this is a great way to introduce your point naturally.",
+      "zh": "一个可能的原因是交通拥堵导致了延误。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-006"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "hedging",
+      "uncertainty"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-c5493d50b2",
+    "expression": "\"One of the main advantages of",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "……的主要优势之一是……"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "\"One of the main advantages of technology has fundamentally changed the way we communicate with each other.",
+      "zh": "在线学习的主要优势之一是灵活性强，可以随时随地进行。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-4f9b20ce88",
+    "expression": "And one of the most prominent reasons would be that",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: And one of the most prominent reasons would be that",
+      "zh": "其中最重要的原因之一是……"
+    },
+    "contexts": {
+      "en": "Used to highlight the most important aspect of your argument",
+      "zh": "用于强调论点中最核心的方面"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, highlights key information effectively",
+      "zh": "正式，适合雅思口语，有效强调重点信息"
+    },
+    "example": {
+      "en": "And one of the most prominent reasons would be that This is really the core issue that we need to address.",
+      "zh": "其中最重要的原因之一是成本大幅降低了。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ede78dbe88",
+    "expression": "but, one of the most prominent reasons would probably be",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: but, one of the most prominent reasons would probably be",
+      "zh": "但其中一个最显著的原因可能是……"
+    },
+    "contexts": {
+      "en": "Used to highlight the most important aspect of your argument",
+      "zh": "用于强调论点中最核心的方面"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, highlights key information effectively",
+      "zh": "正式，适合雅思口语，有效强调重点信息"
+    },
+    "example": {
+      "en": "but, one of the most prominent reasons would probably be This is really the core issue that we need to address.",
+      "zh": "但其中一个最显著的原因可能是人们越来越重视健康了。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-c77fce3558",
+    "expression": "I guess the question/problem really boils down to",
+    "variants": [],
+    "collocation": {
+      "en": "Use within a clause to draw special attention to the following content",
+      "zh": "我觉得这个问题归根结底是……"
+    },
+    "contexts": {
+      "en": "Used to highlight the most important aspect of your argument",
+      "zh": "用于强调论点中最核心的方面"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, highlights key information effectively",
+      "zh": "正式，适合雅思口语，有效强调重点信息"
+    },
+    "example": {
+      "en": "I guess the question/problem really boils down to This is really the core issue that we need to address.",
+      "zh": "我觉得这个问题归根结底是我们如何平衡效率和质量。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-2406007dda",
+    "expression": "It all boils down to how we can strike a balance between ... and",
+    "variants": [],
+    "collocation": {
+      "en": "Use It all boils down to how we can strike a balance between ... and to [situation-appropriate completion of the template]",
+      "zh": "归根结底在于如何在……和……之间找到平衡"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to highlight the most important aspect of your argument",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, highlights key information effectively",
+      "zh": "正式，适合雅思口语，有效强调重点信息"
+    },
+    "example": {
+      "en": "It all boils down to how we can strike a balance between ... and For example, this is a great way to introduce your point naturally.",
+      "zh": "归根结底在于如何在工作和生活之间找到平衡。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-61bcc33b27",
+    "expression": "It is ... that",
+    "variants": [],
+    "collocation": {
+      "en": "Use It is ... that to [situation-appropriate completion of the template]",
+      "zh": "正是……"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to highlight the most important aspect of your argument",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, highlights key information effectively",
+      "zh": "正式，适合雅思口语，有效强调重点信息"
+    },
+    "example": {
+      "en": "It is ... that For example, this is a great way to introduce your point naturally.",
+      "zh": "正是这次的经历让我下定决心要改变自己。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-d99495e8f0",
+    "expression": "It is ... that/who/where/when",
+    "variants": [],
+    "collocation": {
+      "en": "Use It is ... that/who/where/when to [situation-appropriate completion of the template]",
+      "zh": "正是……（强调句式）"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to highlight the most important aspect of your argument",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, highlights key information effectively",
+      "zh": "正式，适合雅思口语，有效强调重点信息"
+    },
+    "example": {
+      "en": "It is ... that/who/where/when For example, this is a great way to introduce your point naturally.",
+      "zh": "正是在那个时刻，我突然明白了他的用意。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-143c28e314",
+    "expression": "My point here is,",
+    "variants": [],
+    "collocation": {
+      "en": "Use within a clause to draw special attention to the following content",
+      "zh": "我这里的重点是……"
+    },
+    "contexts": {
+      "en": "Used to highlight the most important aspect of your argument",
+      "zh": "用于强调论点中最核心的方面"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, highlights key information effectively",
+      "zh": "正式，适合雅思口语，有效强调重点信息"
+    },
+    "example": {
+      "en": "My point here is This is really the core issue that we need to address.",
+      "zh": "我这里的重点是，我们需要从根源上解决问题。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-c6934c6230",
+    "expression": "Never have I ever",
+    "variants": [],
+    "collocation": {
+      "en": "Use within a clause to draw special attention to the following content",
+      "zh": "我从未……过"
+    },
+    "contexts": {
+      "en": "Used to highlight the most important aspect of your argument",
+      "zh": "用于强调论点中最核心的方面"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, highlights key information effectively",
+      "zh": "正式，适合雅思口语，有效强调重点信息"
+    },
+    "example": {
+      "en": "Never have I ever This is really the core issue that we need to address.",
+      "zh": "我从未见过如此美丽的风景。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-b8d914134f",
+    "expression": "One of the most important reasons is definitely that",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: One of the most important reasons is definitely that",
+      "zh": "最重要的原因之一绝对是……"
+    },
+    "contexts": {
+      "en": "Used to highlight the most important aspect of your argument",
+      "zh": "用于强调论点中最核心的方面"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, highlights key information effectively",
+      "zh": "正式，适合雅思口语，有效强调重点信息"
+    },
+    "example": {
+      "en": "One of the most important reasons is definitely that This is really the core issue that we need to address.",
+      "zh": "最重要的原因之一绝对是教育资源的分配不均。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-7f2b5a7192",
+    "expression": "One of the most prominent examples is",
+    "variants": [],
+    "collocation": {
+      "en": "Use within a clause to draw special attention to the following content",
+      "zh": "最典型的例子之一是……"
+    },
+    "contexts": {
+      "en": "Used to highlight the most important aspect of your argument",
+      "zh": "用于强调论点中最核心的方面"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, highlights key information effectively",
+      "zh": "正式，适合雅思口语，有效强调重点信息"
+    },
+    "example": {
+      "en": "One of the most prominent examples is This is really the core issue that we need to address.",
+      "zh": "最典型的例子之一是共享经济的发展。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-da40551093",
+    "expression": "Only when",
+    "variants": [],
+    "collocation": {
+      "en": "Use within a clause to draw special attention to the following content",
+      "zh": "只有当……的时候"
+    },
+    "contexts": {
+      "en": "Used to highlight the most important aspect of your argument",
+      "zh": "用于强调论点中最核心的方面"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, highlights key information effectively",
+      "zh": "正式，适合雅思口语，有效强调重点信息"
+    },
+    "example": {
+      "en": "Only when This is really the core issue that we need to address.",
+      "zh": "只有当双方都愿意让步的时候，才能真正达成协议。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-2847afdf0b",
+    "expression": "The most important thing is,",
+    "variants": [],
+    "collocation": {
+      "en": "Use within a clause to draw special attention to the following content",
+      "zh": "最重要的是……"
+    },
+    "contexts": {
+      "en": "Used to highlight the most important aspect of your argument",
+      "zh": "用于强调论点中最核心的方面"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, highlights key information effectively",
+      "zh": "正式，适合雅思口语，有效强调重点信息"
+    },
+    "example": {
+      "en": "The most important thing is This is really the core issue that we need to address.",
+      "zh": "最重要的是保持积极的心态。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-d218d5d6f4",
+    "expression": "What ... is,",
+    "variants": [],
+    "collocation": {
+      "en": "Use What ... is, to [situation-appropriate completion of the template]",
+      "zh": "……的是……"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to highlight the most important aspect of your argument",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, highlights key information effectively",
+      "zh": "正式，适合雅思口语，有效强调重点信息"
+    },
+    "example": {
+      "en": "What ... is For example, this is a great way to introduce your point naturally.",
+      "zh": "我最欣赏他的是他的诚实和正直。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-497848c860",
+    "expression": "What I wanna say is",
+    "variants": [],
+    "collocation": {
+      "en": "Use within a clause to draw special attention to the following content",
+      "zh": "我想说的是……"
+    },
+    "contexts": {
+      "en": "Used to highlight the most important aspect of your argument",
+      "zh": "用于强调论点中最核心的方面"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, highlights key information effectively",
+      "zh": "口语，有效强调重点信息"
+    },
+    "example": {
+      "en": "What I wanna say is This is really the core issue that we need to address.",
+      "zh": "我想说的是，我们不应该忽视这个问题。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-a159057890",
+    "expression": "What I wanna say is,",
+    "variants": [],
+    "collocation": {
+      "en": "Use within a clause to draw special attention to the following content",
+      "zh": "Use within a clause to draw special attention to the following content"
+    },
+    "contexts": {
+      "en": "Used to highlight the most important aspect of your argument",
+      "zh": "用于强调论点中最核心的方面"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, highlights key information effectively",
+      "zh": "口语，有效强调重点信息"
+    },
+    "example": {
+      "en": "What I wanna say is This is really the core issue that we need to address.",
+      "zh": "我想说的是，我们不应该忽视这个问题。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-dd445f182b",
+    "expression": "What I'm trying to emphasize here is,",
+    "variants": [],
+    "collocation": {
+      "en": "Use within a clause to draw special attention to the following content",
+      "zh": "我想强调的是……"
+    },
+    "contexts": {
+      "en": "Used to highlight the most important aspect of your argument",
+      "zh": "用于强调论点中最核心的方面"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, highlights key information effectively",
+      "zh": "正式，适合雅思口语，有效强调重点信息"
+    },
+    "example": {
+      "en": "What I'm trying to emphasize here is This is really the core issue that we need to address.",
+      "zh": "我想强调的是，可持续性才是关键所在。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-b671e4c5ff",
+    "expression": "In another word,",
+    "variants": [],
+    "collocation": {
+      "en": "Use when rephrasing or clarifying a previous statement",
+      "zh": "换句话说……"
+    },
+    "contexts": {
+      "en": "Used when you realise your previous wording was unclear or incomplete",
+      "zh": "当发现之前的表达不够清晰或完整时，用于改述或澄清"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates self-correction ability",
+      "zh": "正式，适合雅思口语，展现自我修正能力"
+    },
+    "example": {
+      "en": "In another word This is a useful expression for expressing yourself naturally in English.",
+      "zh": "换句话说，我们需要重新考虑这个方案。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-008"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "fluency",
+      "rephrasing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-094d714f03",
+    "expression": "Let/Allow me to put it in another way,",
+    "variants": [],
+    "collocation": {
+      "en": "Use when rephrasing or clarifying a previous statement",
+      "zh": "让我换一种方式来说……"
+    },
+    "contexts": {
+      "en": "Used when you realise your previous wording was unclear or incomplete",
+      "zh": "当发现之前的表达不够清晰或完整时，用于改述或澄清"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates self-correction ability",
+      "zh": "正式，适合雅思口语，展现自我修正能力"
+    },
+    "example": {
+      "en": "Let/Allow me to put it in another way This is a useful expression for expressing yourself naturally in English.",
+      "zh": "让我换一种方式来说，这就像是在用短跑的方式跑马拉松。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-008"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "fluency",
+      "rephrasing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-dde3c56025",
+    "expression": "What I was trying to say is,",
+    "variants": [],
+    "collocation": {
+      "en": "Use when rephrasing or clarifying a previous statement",
+      "zh": "我刚才想说的是……"
+    },
+    "contexts": {
+      "en": "Used when you realise your previous wording was unclear or incomplete",
+      "zh": "当发现之前的表达不够清晰或完整时，用于改述或澄清"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates self-correction ability",
+      "zh": "正式，适合雅思口语，展现自我修正能力"
+    },
+    "example": {
+      "en": "What I was trying to say is This is a useful expression for expressing yourself naturally in English.",
+      "zh": "我刚才想说的是，这种方法虽然有效，但不是唯一的办法。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-008"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "fluency",
+      "rephrasing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-8ac487658a",
+    "expression": "First off,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a clause to order multiple points",
+      "zh": "首先……"
+    },
+    "contexts": {
+      "en": "Used to structure multi-point answers, especially in Part 2 long turns",
+      "zh": "用于组织多要点回答，尤其在Part 2长段落中使用"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, improves coherence and cohesion scores",
+      "zh": "正式，适合雅思口语，提升连贯性与衔接分"
+    },
+    "example": {
+      "en": "First off I'll explain my reasons step by step.",
+      "zh": "首先，我会一步步解释我的理由。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-009"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "sequencing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-2f50b5bb51",
+    "expression": "Last but not least,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a clause to introduce a counterpoint",
+      "zh": "最后但同样重要的是……"
+    },
+    "contexts": {
+      "en": "Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于引入不同视角或补充说明，增加论点深度"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "正式，适合雅思口语，增加论证深度"
+    },
+    "example": {
+      "en": "Last but not least, I'd like to thank my family for their constant support.",
+      "zh": "最后但同样重要的是，我想感谢家人一直以来的支持。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-009"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "sequencing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-7182e1193e",
+    "expression": "Secondly,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a clause to order multiple points",
+      "zh": "第二……"
+    },
+    "contexts": {
+      "en": "Used to structure multi-point answers, especially in Part 2 long turns",
+      "zh": "用于组织多要点回答，尤其在Part 2长段落中使用"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, improves coherence and cohesion scores",
+      "zh": "正式，适合雅思口语，提升连贯性与衔接分"
+    },
+    "example": {
+      "en": "Secondly I'll explain my reasons step by step.",
+      "zh": "第二，我们需要考虑预算限制。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-009"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "sequencing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-5a8fd1c88c",
+    "expression": "Apart from that,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a new clause to introduce supplementary information",
+      "zh": "除此之外……"
+    },
+    "contexts": {
+      "en": "Used to extend a response with related supporting details",
+      "zh": "用于补充相关的支持细节，自然地扩展回答"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, extends responses naturally",
+      "zh": "正式，适合雅思口语，自然地道"
+    },
+    "example": {
+      "en": "I enjoy playing basketball. Apart from that, I also like swimming and running.",
+      "zh": "我喜欢打篮球。除此之外，我也喜欢游泳和跑步。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-010"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "addition"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-a959550b39",
+    "expression": "\"Therefore, we need to find a balance between... and...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"Therefore, we need to find a balance between... and...\" to [situation-appropriate completion of the template]",
+      "zh": "因此，我们需要在……和……之间找到平衡"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates logical reasoning ability",
+      "zh": "正式，适合雅思口语，展现逻辑推理能力"
+    },
+    "example": {
+      "en": "\"Therefore, we need to find a balance between... and...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "因此，我们需要在经济发展和环境保护之间找到平衡。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-76cf6d99cd",
+    "expression": "..., because I can totally relate to it",
+    "variants": [],
+    "collocation": {
+      "en": "Use ..., because I can totally relate to it to [situation-appropriate completion of the template]",
+      "zh": "……，因为我完全能感同身受"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to show alignment with the interlocutor or to confirm a shared understanding",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, build rapport with the listener",
+      "zh": "口语，建立与听者的共鸣"
+    },
+    "example": {
+      "en": "..., because I can totally relate to it For example, this is a great way to introduce your point naturally.",
+      "zh": "我很喜欢这部电影，因为我完全能感同身受。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-d0ff5e1441",
+    "expression": "and the reason being,",
+    "variants": [],
+    "collocation": {
+      "en": "Use within or at the start of a clause expressing causality",
+      "zh": "原因是……"
+    },
+    "contexts": {
+      "en": "Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于解释理由，尤其在Part 3分析类回答中使用"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates logical reasoning ability",
+      "zh": "正式，适合雅思口语，展现逻辑推理能力"
+    },
+    "example": {
+      "en": "and the reason being This explains why the situation has changed so dramatically.",
+      "zh": "很多人选择搬到郊区，原因是生活成本更低。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-12c82d4bb6",
+    "expression": "as a matter of fact,",
+    "variants": [],
+    "collocation": {
+      "en": "Use within or at the start of a clause expressing causality",
+      "zh": "事实上……"
+    },
+    "contexts": {
+      "en": "Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于解释理由，尤其在Part 3分析类回答中使用"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates logical reasoning ability",
+      "zh": "正式，适合雅思口语，展现逻辑推理能力"
+    },
+    "example": {
+      "en": "as a matter of fact This explains why the situation has changed so dramatically.",
+      "zh": "事实上，这种情况已经持续好几年了。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-3c55a30e4b",
+    "expression": "As a ripple effect,",
+    "variants": [],
+    "collocation": {
+      "en": "Use within or at the start of a clause expressing causality",
+      "zh": "作为连锁反应……"
+    },
+    "contexts": {
+      "en": "Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于解释理由，尤其在Part 3分析类回答中使用"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates logical reasoning ability",
+      "zh": "正式，适合雅思口语，展现逻辑推理能力"
+    },
+    "example": {
+      "en": "As a ripple effect This explains why the situation has changed so dramatically.",
+      "zh": "作为连锁反应，整个行业都受到了影响。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ccf5e1b2d8",
+    "expression": "Because/As/Since",
+    "variants": [],
+    "collocation": {
+      "en": "Use within or at the start of a clause expressing causality",
+      "zh": "因为/由于……"
+    },
+    "contexts": {
+      "en": "Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于解释理由，尤其在Part 3分析类回答中使用"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, demonstrates logical reasoning ability",
+      "zh": "口语，展现逻辑推理能力"
+    },
+    "example": {
+      "en": "Because/As/Since This explains why the situation has changed so dramatically.",
+      "zh": "因为天气不好，所以我们取消了行程。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-147246ccca",
+    "expression": "Because/Since/As",
+    "variants": [],
+    "collocation": {
+      "en": "Use within or at the start of a clause expressing causality",
+      "zh": "因为/由于……"
+    },
+    "contexts": {
+      "en": "Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于解释理由，尤其在Part 3分析类回答中使用"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, demonstrates logical reasoning ability",
+      "zh": "口语，展现逻辑推理能力"
+    },
+    "example": {
+      "en": "Because/Since/As This explains why the situation has changed so dramatically.",
+      "zh": "由于时间有限，我们只能讨论最重要的几个问题。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-bd12b1a74d",
+    "expression": "I guess it's because",
+    "variants": [],
+    "collocation": {
+      "en": "Use within or at the start of a clause expressing causality",
+      "zh": "我想这是因为……"
+    },
+    "contexts": {
+      "en": "Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于解释理由，尤其在Part 3分析类回答中使用"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, demonstrates logical reasoning ability",
+      "zh": "口语，展现逻辑推理能力"
+    },
+    "example": {
+      "en": "I guess it's because This explains why the situation has changed so dramatically.",
+      "zh": "我想这是因为人们更注重生活品质了。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-92cd840b07",
+    "expression": "One contributing factor is",
+    "variants": [],
+    "collocation": {
+      "en": "Use within or at the start of a clause expressing causality",
+      "zh": "一个促成因素是……"
+    },
+    "contexts": {
+      "en": "Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于解释理由，尤其在Part 3分析类回答中使用"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates logical reasoning ability",
+      "zh": "正式，适合雅思口语，展现逻辑推理能力"
+    },
+    "example": {
+      "en": "One contributing factor is This explains why the situation has changed so dramatically.",
+      "zh": "一个促成因素是科技的快速发展。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-68492fefc0",
+    "expression": "The most prominent reason is that",
+    "variants": [],
+    "collocation": {
+      "en": "Use within or at the start of a clause expressing causality",
+      "zh": "最显著的原因是……"
+    },
+    "contexts": {
+      "en": "Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于解释理由，尤其在Part 3分析类回答中使用"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates logical reasoning ability",
+      "zh": "正式，适合雅思口语，展现逻辑推理能力"
+    },
+    "example": {
+      "en": "The most prominent reason is that This explains why the situation has changed so dramatically.",
+      "zh": "最显著的原因是人口结构发生了变化。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-85c45a7fe5",
+    "expression": "The rationale behind this is",
+    "variants": [],
+    "collocation": {
+      "en": "Use within or at the start of a clause expressing causality",
+      "zh": "这背后的理由是……"
+    },
+    "contexts": {
+      "en": "Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于解释理由，尤其在Part 3分析类回答中使用"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates logical reasoning ability",
+      "zh": "正式，适合雅思口语，展现逻辑推理能力"
+    },
+    "example": {
+      "en": "The rationale behind this is This explains why the situation has changed so dramatically.",
+      "zh": "这背后的理由是提高工作效率。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-e6f470fc66",
+    "expression": "The reasons being,",
+    "variants": [],
+    "collocation": {
+      "en": "Use within or at the start of a clause expressing causality",
+      "zh": "原因是……"
+    },
+    "contexts": {
+      "en": "Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于解释理由，尤其在Part 3分析类回答中使用"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates logical reasoning ability",
+      "zh": "正式，适合雅思口语，展现逻辑推理能力"
+    },
+    "example": {
+      "en": "The reasons being This explains why the situation has changed so dramatically.",
+      "zh": "很多人选择这个专业，原因是就业前景好、薪资水平高。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-562a423096",
+    "expression": "The root cause lies in the fact that",
+    "variants": [],
+    "collocation": {
+      "en": "Use within or at the start of a clause expressing causality",
+      "zh": "根本原因在于……"
+    },
+    "contexts": {
+      "en": "Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于解释理由，尤其在Part 3分析类回答中使用"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, demonstrates logical reasoning ability",
+      "zh": "口语，展现逻辑推理能力"
+    },
+    "example": {
+      "en": "The root cause lies in the fact that This explains why the situation has changed so dramatically.",
+      "zh": "根本原因在于教育体系的结构性问题。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-858025f9c6",
+    "expression": "therefore,",
+    "variants": [],
+    "collocation": {
+      "en": "Use within or at the start of a clause expressing causality",
+      "zh": "因此……"
+    },
+    "contexts": {
+      "en": "Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于解释理由，尤其在Part 3分析类回答中使用"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates logical reasoning ability",
+      "zh": "正式，适合雅思口语，展现逻辑推理能力"
+    },
+    "example": {
+      "en": "The cost of living has increased significantly. Therefore, many people are struggling to save money.",
+      "zh": "生活成本大幅上涨了。因此，很多人都很难存到钱。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-d197c08cb8",
+    "expression": "this goal to ... has been with me since",
+    "variants": [],
+    "collocation": {
+      "en": "Use this goal to ... has been with me since to [situation-appropriate completion of the template]",
+      "zh": "这个……的目标从……时期就一直伴随着我"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates logical reasoning ability",
+      "zh": "正式，适合雅思口语，展现逻辑推理能力"
+    },
+    "example": {
+      "en": "this goal to ... has been with me since For example, this is a great way to introduce your point naturally.",
+      "zh": "这个创业的目标从大学时期就一直伴随着我。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-4c2066170a",
+    "expression": "\"Compared to the past, the situation now is...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"Compared to the past, the situation now is...\" to [situation-appropriate completion of the template]",
+      "zh": "与过去相比，现在的情况是……"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used when directly comparing two entities, experiences, or time periods",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows analytical thinking",
+      "zh": "正式，适合雅思口语，展现分析能力"
+    },
+    "example": {
+      "en": "\"Compared to the past, the situation now is...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "与过去相比，现在的情况已经好了很多。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-012"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "comparison"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-8ab28d9ab7",
+    "expression": "as ... as",
+    "variants": [],
+    "collocation": {
+      "en": "Use as ... as to [situation-appropriate completion of the template]",
+      "zh": "和……一样……"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used when directly comparing two entities, experiences, or time periods",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows analytical thinking",
+      "zh": "正式，适合雅思口语，展现分析能力"
+    },
+    "example": {
+      "en": "as ... as For example, this is a great way to introduce your point naturally.",
+      "zh": "这家餐厅的食物和那家一样好吃。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-012"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "comparison"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-06410a235b",
+    "expression": "Compared to ..., ... is much/way/far adj. (comparative)",
+    "variants": [],
+    "collocation": {
+      "en": "Use Compared to ..., ... is much/way/far adj. (comparative) to [situation-appropriate completion of the template]",
+      "zh": "与……相比，……要……得多"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used when directly comparing two entities, experiences, or time periods",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows analytical thinking",
+      "zh": "正式，适合雅思口语，展现分析能力"
+    },
+    "example": {
+      "en": "Compared to ..., ... is much/way/far adj. (comparative) For example, this is a great way to introduce your point naturally.",
+      "zh": "与大城市相比，小城镇的生活节奏要慢得多。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-012"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "comparison"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-b2a255b5ec",
+    "expression": "not as ... as",
+    "variants": [],
+    "collocation": {
+      "en": "Use not as ... as to [situation-appropriate completion of the template]",
+      "zh": "不如……那样……"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used when directly comparing two entities, experiences, or time periods",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows analytical thinking",
+      "zh": "正式，适合雅思口语，展现分析能力"
+    },
+    "example": {
+      "en": "not as ... as For example, this is a great way to introduce your point naturally.",
+      "zh": "这部电影不如我想象的那么精彩。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-012"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "comparison"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-184fdb35f3",
+    "expression": "\"However, a significant drawback is that...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"However, a significant drawback is that...\" to [situation-appropriate completion of the template]",
+      "zh": "然而，一个显著的缺点是……"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "正式，适合雅思口语，增加论证深度"
+    },
+    "example": {
+      "en": "\"However, a significant drawback is that...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "然而，一个显著的缺点是成本太高了。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-3734ea2194",
+    "expression": "\"That being said,...\" / \"Having said that,...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"That being said,...\" / \"Having said that,...\" to [situation-appropriate completion of the template]",
+      "zh": "话虽如此……"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "正式，适合雅思口语，增加论证深度"
+    },
+    "example": {
+      "en": "\"That being said,...\" / \"Having said that,...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "话虽如此，我们也不能完全否定它的优点。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-04c96639b5",
+    "expression": "\"The main problem, however, is...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"The main problem, however, is...\" to [situation-appropriate completion of the template]",
+      "zh": "然而，主要问题是……"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "正式，适合雅思口语，增加论证深度"
+    },
+    "example": {
+      "en": "\"The main problem, however, is...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "然而，主要问题是资金仍然不够。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-94ede22f3c",
+    "expression": "Although",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a clause to introduce a counterpoint",
+      "zh": "虽然……但是……"
+    },
+    "contexts": {
+      "en": "Conceding a point before presenting the main argument",
+      "zh": "在提出主要观点之前先让步承认对方的合理性"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "正式，适合雅思口语，增加论证深度"
+    },
+    "example": {
+      "en": "Although it was my first time trying, I actually did quite well.",
+      "zh": "虽然这是我第一次尝试，但我表现得还不错。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-e90e8293c0",
+    "expression": "as ... as I thought",
+    "variants": [],
+    "collocation": {
+      "en": "Use as ... as I thought to [situation-appropriate completion of the template]",
+      "zh": "和我想象的一样……"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used when directly comparing two entities, experiences, or time periods",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows analytical thinking",
+      "zh": "正式，适合雅思口语，展现分析能力"
+    },
+    "example": {
+      "en": "as ... as I thought For example, this is a great way to introduce your point naturally.",
+      "zh": "考试没有我想象的那么难。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-f2596e4628",
+    "expression": "as ... as someone thought it would be",
+    "variants": [],
+    "collocation": {
+      "en": "Use as ... as someone thought it would be to [situation-appropriate completion of the template]",
+      "zh": "和某人预想的一样……"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used when directly comparing two entities, experiences, or time periods",
+      "zh": "模板句式：用话题相关内容填充括号。用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows analytical thinking",
+      "zh": "正式，适合雅思口语，展现分析能力"
+    },
+    "example": {
+      "en": "as ... as someone thought it would be For example, this is a great way to introduce your point naturally.",
+      "zh": "这个项目没有大家预想的那么复杂。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-df4dd16558",
+    "expression": "but I guess",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a clause to introduce a counterpoint",
+      "zh": "但我猜……"
+    },
+    "contexts": {
+      "en": "Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于引入不同视角或补充说明，增加论点深度"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "正式，适合雅思口语，增加论证深度"
+    },
+    "example": {
+      "en": "but I guess This is not to say that the other option doesn't have its merits.",
+      "zh": "但我猜他可能有自己的苦衷。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-949f27b1dc",
+    "expression": "But if I had to guess/answer it, I'd say",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: But if I had to guess/answer it, I'd say",
+      "zh": "但如果非要我猜/回答的话，我会说……"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "But if I had to guess/answer it, I'd say technology has fundamentally changed the way we communicate with each other.",
+      "zh": "但如果非要我回答的话，我会说科技已经从根本上改变了我们的交流方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-7a3c02a125",
+    "expression": "But if you hold my feet to the fire, I'd say",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: But if you hold my feet to the fire, I'd say",
+      "zh": "但如果非要我说实话的话，我会说……"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式，适合雅思口语，明确表达个人立场"
+    },
+    "example": {
+      "en": "But if you hold my feet to the fire, I'd say technology has fundamentally changed the way we communicate with each other.",
+      "zh": "但如果非要我说实话的话，我觉得这个方案并不理想。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-e15d4643b0",
+    "expression": "but, however,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a clause to introduce a counterpoint",
+      "zh": "但是，然而……"
+    },
+    "contexts": {
+      "en": "Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于引入不同视角或补充说明，增加论点深度"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "正式，适合雅思口语，增加论证深度"
+    },
+    "example": {
+      "en": "but, however This is not to say that the other option doesn't have its merits.",
+      "zh": "但是，这并不意味着另一个选择没有可取之处。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-a11097d509",
+    "expression": "have no choice but to do",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a clause to introduce a counterpoint",
+      "zh": "别无选择只能……"
+    },
+    "contexts": {
+      "en": "Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于引入不同视角或补充说明，增加论点深度"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "正式，适合雅思口语，增加论证深度"
+    },
+    "example": {
+      "en": "have no choice but to do This is not to say that the other option doesn't have its merits.",
+      "zh": "我们别无选择只能接受这个条件。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-b68ccd7f4d",
+    "expression": "having said that,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a clause to introduce a counterpoint",
+      "zh": "话虽如此……"
+    },
+    "contexts": {
+      "en": "Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于引入不同视角或补充说明，增加论点深度"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "正式，适合雅思口语，增加论证深度"
+    },
+    "example": {
+      "en": "The movie was quite long. Having said that, the storyline was compelling.",
+      "zh": "这部电影很长。话虽如此，故事情节还是很引人入胜的。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  }
+]

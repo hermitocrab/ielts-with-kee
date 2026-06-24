@@ -1,0 +1,1663 @@
+[
+  {
+    "id": "dm-1745d32870",
+    "expression": "Having said that, there's still a small minority of people who",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: Having said that, there's still a small minority of people who",
+      "zh": "置于回答开头：Having said that, there is still a small minority of people who + [观点]"
+    },
+    "contexts": {
+      "en": "Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "适用于在陈述完主要观点后，引入一个相反或限制性的看法，展示论证的全面性"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "半正式，适合雅思口语写作，通过承认对立观点来增加论证深度"
+    },
+    "example": {
+      "en": "Having said that, there's still a small minority of people who This is not to say that the other option doesn't have its merits.",
+      "zh": "Having said that, there is still a small minority of people who prefer traditional methods over modern technology."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-a7ffa77359",
+    "expression": "However, a significant drawback/downside is...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use However, a significant drawback/downside is...\" to [situation-appropriate completion of the template]",
+      "zh": "使用模板：However, a significant drawback/downside is... + [具体缺点描述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used when speculating or when your knowledge is incomplete",
+      "zh": "用于在讨论某事物优点后，转而指出其主要缺点或负面因素"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows honest self-assessment",
+      "zh": "半正式，适合雅思语境，体现诚实自我评估的能力"
+    },
+    "example": {
+      "en": "However, a significant drawback/downside is...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "However, a significant drawback is that it can be quite expensive for the average family."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-03b3ac7387",
+    "expression": "I have to acknowledge / admit ... , however",
+    "variants": [],
+    "collocation": {
+      "en": "Use I have to acknowledge / admit ... , however to [situation-appropriate completion of the template]",
+      "zh": "使用模板：I have to acknowledge/admit + [承认的事实] + , however + [转折观点]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于先承认对方或之前的观点有道理，再提出不同看法，体现辩证思维"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "半正式，适合雅思语境，通过承认替代观点增加论证的全面性"
+    },
+    "example": {
+      "en": "I have to acknowledge / admit ... , however For example, this is a great way to introduce your point naturally.",
+      "zh": "I have to admit the system is efficient, however, it lacks the personal touch that many people value."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-6217842d6f",
+    "expression": "I might be wrong but I think",
+    "variants": [],
+    "collocation": {
+      "en": "Use before or within a statement to indicate provisional judgment",
+      "zh": "用于陈述前表明此为初步判断：I might be wrong but I think + [个人观点]"
+    },
+    "contexts": {
+      "en": "Used when speculating or when your knowledge is incomplete",
+      "zh": "当观点不确定或希望表达得谦逊时使用，展现诚实和自我评估能力"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows honest self-assessment",
+      "zh": "口语化，适合雅思语境，体现谦逊和诚实自我评估的态度"
+    },
+    "example": {
+      "en": "I might be wrong but I think This is a useful expression for expressing yourself naturally in English.",
+      "zh": "I might be wrong but I think the government should invest more in public transportation."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-8ad4f1deb7",
+    "expression": "Mind you,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a clause to introduce a counterpoint",
+      "zh": "置于句首引入补充或反驳：Mind you, + [相反或补充观点]"
+    },
+    "contexts": {
+      "en": "Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于在发表看法后，补充一个反向或限制性的观点，使论证更丰富"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "口语化，适合雅思语境，通过补充反向观点增加论证的层次感"
+    },
+    "example": {
+      "en": "Mind you This is not to say that the other option doesn't have its merits.",
+      "zh": "The restaurant is quite expensive. Mind you, the quality of the food is exceptional."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-7366938772",
+    "expression": "Nevertheless,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a clause to introduce a counterpoint",
+      "zh": "置于句首引出转折：Nevertheless, + [相反观点或结论]"
+    },
+    "contexts": {
+      "en": "Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于正式语境中，在承认某事实后引出相反或限制性结论"
+    },
+    "connotation": {
+      "en": "formal, academic, structured, adds depth to arguments by acknowledging alternatives",
+      "zh": "正式、学术化，结构性强，用于承认事实后引出相反或限制性结论"
+    },
+    "example": {
+      "en": "The task was challenging. Nevertheless, we managed to complete it on time.",
+      "zh": "这项任务很有挑战性。Nevertheless，我们还是按时完成了。"
+    },
+    "cefr": "C1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-98b46e37ca",
+    "expression": "Not really. / Yes, but ... / I wouldn't say so",
+    "variants": [],
+    "collocation": {
+      "en": "Use Not really. / Yes, but ... / I wouldn't say so to [situation-appropriate completion of the template]",
+      "zh": "用于礼貌表达不同意见：Not really / Yes, but... / I would not say so + [你的观点]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to politely signal a different perspective in discussion-style tasks",
+      "zh": "适用于讨论类题目，礼貌地表达不同观点而不显得对抗"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, polite disagreement strategies for discussion tasks",
+      "zh": "口语化，适合雅思讨论类题目，礼貌表达不同意见的实用策略"
+    },
+    "example": {
+      "en": "Not really. / Yes, but ... / I wouldn't say so For example, this is a great way to introduce your point naturally.",
+      "zh": "Not really. I think the benefits of technology far outweigh the drawbacks."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-862893a1d7",
+    "expression": "That being said,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a clause to introduce a counterpoint",
+      "zh": "置于句首引出对比：That being said, + [相反或限制性观点]"
+    },
+    "contexts": {
+      "en": "Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于先肯定某一观点后，礼貌地引入不同的视角或限制条件"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "半正式，适合雅思语境，通过承认替代观点增加论证深度"
+    },
+    "example": {
+      "en": "The restaurant is expensive. That being said, the quality of food is outstanding.",
+      "zh": "这家餐厅很贵。That being said，食物的品质确实出众。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-cfc29a46ee",
+    "expression": "That being said, a small minority of people might think that",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: That being said, a small minority of people might think that",
+      "zh": "置于回答开头：That being said, a small minority of people might think that + [少数人观点]"
+    },
+    "contexts": {
+      "en": "Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于在阐述主流观点后，引入少数人的不同看法，展示全面思考能力"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "半正式，适合雅思语境，通过承认替代观点增加论证深度"
+    },
+    "example": {
+      "en": "That being said, a small minority of people might think that This is not to say that the other option doesn't have its merits.",
+      "zh": "That being said, a small minority of people might think that online education is less effective than traditional classrooms."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-8a50738cbc",
+    "expression": "Though ..., I have to say that",
+    "variants": [],
+    "collocation": {
+      "en": "Use Though ..., I have to say that to [situation-appropriate completion of the template]",
+      "zh": "使用模板：Though + [承认的事实] + , I have to say that + [你的观点]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于先让步再表达主要观点，体现辩证思维能力"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "半正式，适合雅思语境，通过承认替代观点增加论证的全面性"
+    },
+    "example": {
+      "en": "Though ..., I have to say that For example, this is a great way to introduce your point naturally.",
+      "zh": "Though it requires a lot of time, I have to say that learning a new language is incredibly rewarding."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-689f447714",
+    "expression": "A great example of this is,",
+    "variants": [],
+    "collocation": {
+      "en": "Use before citing a specific instance or illustration",
+      "zh": "用于引出具体例证：A great example of this is + [具体例子]"
+    },
+    "contexts": {
+      "en": "Used to transition from a general claim to specific evidence",
+      "zh": "从概括性观点过渡到具体事例时使用，增强论证说服力"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, strengthens arguments with concrete evidence",
+      "zh": "半正式，适合雅思语境，用具体证据增强论证说服力"
+    },
+    "example": {
+      "en": "A great example of this is For instance, many young people today prefer to communicate online rather than in person.",
+      "zh": "A great example of this is how many young people prefer to communicate online rather than in person."
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-0ca8e01db2",
+    "expression": "Another good example is that,",
+    "variants": [],
+    "collocation": {
+      "en": "Use before citing a specific instance or illustration",
+      "zh": "用于引出另一个例证：Another good example is that + [具体例子]"
+    },
+    "contexts": {
+      "en": "Used to transition from a general claim to specific evidence",
+      "zh": "在已给出一个例子后，继续补充第二个例证时使用"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, strengthens arguments with concrete evidence",
+      "zh": "半正式，适合雅思语境，用具体证据增强论证说服力"
+    },
+    "example": {
+      "en": "Another good example is that For instance, many young people today prefer to communicate online rather than in person.",
+      "zh": "Another good example is that many companies now offer remote work to attract talent."
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-4d5d2ede8d",
+    "expression": "Exhibit A, ...; Exhibit B, ...; Exhibit C,",
+    "variants": [],
+    "collocation": {
+      "en": "Use Exhibit A, ...; Exhibit B, ...; Exhibit C, to [situation-appropriate completion of the template]",
+      "zh": "使用模板：Exhibit A + [例1]; Exhibit B + [例2]; Exhibit C + [例3]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于以列举形式给出多个例证，条理清晰"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式，适合雅思语境，清晰表明个人立场和观点"
+    },
+    "example": {
+      "en": "Exhibit A, ...; Exhibit B, ...; Exhibit C For example, this is a great way to introduce your point naturally.",
+      "zh": "Exhibit A, social media connects people; Exhibit B, it spreads information instantly."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ce16f719c6",
+    "expression": "ranging from ... to",
+    "variants": [],
+    "collocation": {
+      "en": "Use ranging from ... to to [situation-appropriate completion of the template]",
+      "zh": "使用模板：ranging from + [最小项] + to + [最大项]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to transition from a general claim to specific evidence",
+      "zh": "用于列举范围内的多种事物，展示词汇丰富度"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, strengthens arguments with concrete evidence",
+      "zh": "半正式，适合雅思语境，用具体证据增强论证说服力"
+    },
+    "example": {
+      "en": "ranging from ... to For example, this is a great way to introduce your point naturally.",
+      "zh": "The store sells products ranging from groceries to electronics."
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-6fc4db8789",
+    "expression": "the most ... example is that,",
+    "variants": [],
+    "collocation": {
+      "en": "Use the most ... example is that, to [situation-appropriate completion of the template]",
+      "zh": "使用模板：the most + [形容词] + example is that + [具体例证]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to transition from a general claim to specific evidence",
+      "zh": "用于在论证中给出最具代表性的例子"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, strengthens arguments with concrete evidence",
+      "zh": "半正式，适合雅思语境，用具体证据增强论证说服力"
+    },
+    "example": {
+      "en": "the most ... example is that For example, this is a great way to introduce your point naturally.",
+      "zh": "The most striking example is that some countries have banned single-use plastics."
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-5f0e7a97c0",
+    "expression": "To name a few,",
+    "variants": [],
+    "collocation": {
+      "en": "Use before citing a specific instance or illustration",
+      "zh": "用于列举收尾：To name a few, + [列举几个例子]"
+    },
+    "contexts": {
+      "en": "Used to transition from a general claim to specific evidence",
+      "zh": "在给出多个例证后用于收尾"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, strengthens arguments with concrete evidence",
+      "zh": "半正式，适合雅思语境，用具体例证支撑论述"
+    },
+    "example": {
+      "en": "To name a few For instance, many young people today prefer to communicate online rather than in person.",
+      "zh": "Many cities are becoming eco-friendly. To name a few, Copenhagen and Vancouver."
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-433172ed06",
+    "expression": "a great variety of",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a clause to introduce a broad observation",
+      "zh": "置于句首或句中：a great variety of + [名词复数]"
+    },
+    "contexts": {
+      "en": "Used to make broader observations about trends or patterns",
+      "zh": "用于概括性地描述数量众多、种类丰富的现象或事物"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows ability to identify patterns",
+      "zh": "半正式，适合雅思语境，展现概括和总结能力"
+    },
+    "example": {
+      "en": "a great variety of This is a useful expression for expressing yourself naturally in English.",
+      "zh": "There are a great variety of online courses available for students."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-015"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "generalisation"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-fd22601090",
+    "expression": "a vast amount of",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a clause to introduce a broad observation",
+      "zh": "置于句首或句中：a vast amount of + [不可数名词]"
+    },
+    "contexts": {
+      "en": "Used to make broader observations about trends or patterns",
+      "zh": "用于强调数量极其庞大，通常修饰不可数名词"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows ability to identify patterns",
+      "zh": "半正式，适合雅思语境，展现识别趋势和模式的能力"
+    },
+    "example": {
+      "en": "a vast amount of This is a useful expression for expressing yourself naturally in English.",
+      "zh": "A vast amount of information is now accessible through the internet."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-015"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "generalisation"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-6cd703393b",
+    "expression": "a wide range of",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a clause to introduce a broad observation",
+      "zh": "置于句首或句中：a wide range of + [名词复数]"
+    },
+    "contexts": {
+      "en": "Used to make broader observations about trends or patterns",
+      "zh": "用于描述选择或种类多样，强调覆盖面广"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows ability to identify patterns",
+      "zh": "半正式，适合雅思语境，展现概括和总结能力"
+    },
+    "example": {
+      "en": "a wide range of This is a useful expression for expressing yourself naturally in English.",
+      "zh": "Students can choose from a wide range of extracurricular activities."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-015"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "generalisation"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-9f6ba5ad60",
+    "expression": "all kinds of dessert, especially",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a clause to introduce a broad observation",
+      "zh": "用于概括列举：all kinds of + [事物] + , especially + [特别强调]"
+    },
+    "contexts": {
+      "en": "Used to make broader observations about trends or patterns",
+      "zh": "用于概括并强调其中某一类特别突出的事物"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows ability to identify patterns",
+      "zh": "口语化，适合雅思语境，展现识别趋势和模式的能力"
+    },
+    "example": {
+      "en": "all kinds of dessert, especially This is a useful expression for expressing yourself naturally in English.",
+      "zh": "I enjoy all kinds of dessert, especially chocolate-based ones."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-015"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "generalisation"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-7b46615955",
+    "expression": "In general, ... I'm pretty sure I'm not the only one who",
+    "variants": [],
+    "collocation": {
+      "en": "Use In general, ... I'm pretty sure I'm not the only one who to [situation-appropriate completion of the template]",
+      "zh": "使用模板：In general, + [概括观点] + I am pretty sure I am not the only one who + [个人感受]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于先做概括性陈述，再以共情口吻表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语化，适合雅思语境，清晰表明个人立场和观点"
+    },
+    "example": {
+      "en": "In general, ... I'm pretty sure I'm not the only one who For example, this is a great way to introduce your point naturally.",
+      "zh": "In general, people are becoming more health-conscious. I am pretty sure I am not the only one who tries to eat better."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-015"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "generalisation"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-be9ec5b394",
+    "expression": "plenty of",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a clause to introduce a broad observation",
+      "zh": "置于句首或句中：plenty of + [名词]"
+    },
+    "contexts": {
+      "en": "Used to make broader observations about trends or patterns",
+      "zh": "用于表示数量充足，比a lot of更口语化"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows ability to identify patterns",
+      "zh": "口语化，适合雅思语境，展现识别趋势和模式的能力"
+    },
+    "example": {
+      "en": "plenty of This is a useful expression for expressing yourself naturally in English.",
+      "zh": "There are plenty of opportunities for young people to gain experience."
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-015"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "generalisation"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-7df519c54e",
+    "expression": "There are lots of",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a clause to introduce a broad observation",
+      "zh": "置于句首：There are lots of + [名词复数]"
+    },
+    "contexts": {
+      "en": "Used to make broader observations about trends or patterns",
+      "zh": "用于概括性地描述数量很多的事物"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows ability to identify patterns",
+      "zh": "口语化，适合雅思语境，展现概括和总结能力"
+    },
+    "example": {
+      "en": "There are lots of This is a useful expression for expressing yourself naturally in English.",
+      "zh": "There are lots of reasons why people choose to live in big cities."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-015"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "generalisation"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-bb377df93d",
+    "expression": "There are plenty of",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a clause to introduce a broad observation",
+      "zh": "置于句首：There are plenty of + [名词复数]"
+    },
+    "contexts": {
+      "en": "Used to make broader observations about trends or patterns",
+      "zh": "用于强调某事物数量充足、不匮乏"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows ability to identify patterns",
+      "zh": "半正式，适合雅思语境，展现识别趋势和模式的能力"
+    },
+    "example": {
+      "en": "There are plenty of This is a useful expression for expressing yourself naturally in English.",
+      "zh": "There are plenty of ways to stay fit without going to the gym."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-015"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "generalisation"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-eb2e70d88b",
+    "expression": "Apart from that, when it comes to",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a new clause to introduce supplementary information",
+      "zh": "置于新句开头：Apart from that, when it comes to + [新话题]"
+    },
+    "contexts": {
+      "en": "Used to extend a response with related supporting details",
+      "zh": "用于在一个话题之后引入相关的补充性新话题"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, extends responses naturally",
+      "zh": "半正式，适合雅思语境，自然延展回答内容"
+    },
+    "example": {
+      "en": "Apart from that, when it comes to This is a useful expression for expressing yourself naturally in English.",
+      "zh": "Apart from that, when it comes to education, practical skills matter as much as academics."
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-93770a7dc0",
+    "expression": "As far as ... goes,",
+    "variants": [],
+    "collocation": {
+      "en": "As far as [topic] goes, [personal opinion or observation]...",
+      "zh": "使用模板：As far as + [话题] + goes, + [观点或观察]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to narrow focus to a specific aspect of the question",
+      "zh": "用于将讨论范围限定在某一特定方面"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, signals topic management skills",
+      "zh": "半正式，适合雅思语境，体现话题控制和聚焦能力"
+    },
+    "example": {
+      "en": "As far as ... goes For example, this is a great way to introduce your point naturally.",
+      "zh": "As far as job satisfaction goes, work-life balance matters more than salary."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-6a9c2ca318",
+    "expression": "As far as ... is concerned,",
+    "variants": [],
+    "collocation": {
+      "en": "As far as [topic] is concerned, [statement]...",
+      "zh": "使用模板：As far as + [话题] + is concerned, + [陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to narrow focus to a specific aspect of the question",
+      "zh": "用于聚焦到某一具体话题进行讨论，较正式"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, signals topic management skills",
+      "zh": "正式，适合雅思语境，体现话题控制和聚焦能力"
+    },
+    "example": {
+      "en": "As far as ... is concerned For example, this is a great way to introduce your point naturally.",
+      "zh": "As far as environmental protection is concerned, we all share responsibility."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-04c2a32eae",
+    "expression": "As for",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to focus attention on a specific aspect",
+      "zh": "置于句首：As for + [话题], + [陈述]"
+    },
+    "contexts": {
+      "en": "Used to narrow focus to a specific aspect of the question",
+      "zh": "用于转换话题或聚焦到某一特定方面"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, signals topic management skills",
+      "zh": "半正式，适合雅思语境，体现话题控制和聚焦能力"
+    },
+    "example": {
+      "en": "As for my future plans, I hope to pursue a master's degree abroad.",
+      "zh": "As for my future plans, I hope to pursue a master's degree abroad."
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-46ecd5d1ff",
+    "expression": "As for me,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to focus attention on a specific aspect",
+      "zh": "置于句首：As for me, + [个人观点或情况]"
+    },
+    "contexts": {
+      "en": "Used to narrow focus to a specific aspect of the question",
+      "zh": "用于在讨论普遍情况后回到自身，表达个人观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, signals topic management skills",
+      "zh": "半正式，适合雅思语境，体现话题控制和聚焦能力"
+    },
+    "example": {
+      "en": "As for me This is a useful expression for expressing yourself naturally in English.",
+      "zh": "As for me, I prefer studying in a quiet library rather than at home."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-05ae977a7d",
+    "expression": "As for students, we might feel",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to focus attention on a specific aspect",
+      "zh": "置于句首：As for students, we might feel + [感受或观点]"
+    },
+    "contexts": {
+      "en": "Used to narrow focus to a specific aspect of the question",
+      "zh": "用于从学生群体的视角切入，表达共鸣式的观点"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, signals topic management skills",
+      "zh": "半正式，适合雅思语境，体现话题控制和聚焦能力"
+    },
+    "example": {
+      "en": "As for students, we might feel This is a useful expression for expressing yourself naturally in English.",
+      "zh": "As for students, we might feel pressured by job market competition."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-6795992e23",
+    "expression": "As for the reason why,",
+    "variants": [],
+    "collocation": {
+      "en": "Use within or at the start of a clause expressing causality",
+      "zh": "置于句首或句中：As for the reason why, + [原因解释]"
+    },
+    "contexts": {
+      "en": "Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于Part 3分析类问题，引导出因果逻辑分析"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates logical reasoning ability",
+      "zh": "半正式，适合雅思语境，展现逻辑推理和分析能力"
+    },
+    "example": {
+      "en": "As for the reason why This explains why the situation has changed so dramatically.",
+      "zh": "As for the reason why, it has to do with changing social values."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-2d4705cc1d",
+    "expression": "As for the reason why, it's simply because",
+    "variants": [],
+    "collocation": {
+      "en": "Use within or at the start of a clause expressing causality",
+      "zh": "置于句首：As for the reason why, it is simply because + [直接原因]"
+    },
+    "contexts": {
+      "en": "Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于给出直接、简洁的原因，略带口语化的强调"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, demonstrates logical reasoning ability",
+      "zh": "口语化、对话自然，体现逻辑推理能力"
+    },
+    "example": {
+      "en": "As for the reason why, it's simply because This explains why the situation has changed so dramatically.",
+      "zh": "As for the reason why, it is simply because people prefer convenience over cost."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-aef73ed66c",
+    "expression": "As for the reason(s), I'd say",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "置于句首：As for the reason(s), I would say + [个人观点/原因]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于明确表达个人对原因的分析，突显个人立场"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式，适合雅思语境，清晰表明个人立场和观点"
+    },
+    "example": {
+      "en": "As for the reason(s), I'd say technology has fundamentally changed the way we communicate with each other.",
+      "zh": "As for the reasons, I would say technology has changed how we communicate."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-f3f8447c47",
+    "expression": "First off, in terms of",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the beginning of a clause to order multiple points",
+      "zh": "置于句首：First off, in terms of + [第一个方面]"
+    },
+    "contexts": {
+      "en": "Used to structure multi-point answers, especially in Part 2 long turns",
+      "zh": "用于在多要点回答中引出第一个方面，适用于Part 2长段独白"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, improves coherence and cohesion scores",
+      "zh": "半正式，适合雅思语境，提高回答的连贯性和衔接分"
+    },
+    "example": {
+      "en": "First off, in terms of I'll explain my reasons step by step.",
+      "zh": "First off, in terms of cost, online study is more affordable."
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-814b0dc0a8",
+    "expression": "If we're talking about",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to focus attention on a specific aspect",
+      "zh": "置于句首：If we are talking about + [话题], + [观点]"
+    },
+    "contexts": {
+      "en": "Used to narrow focus to a specific aspect of the question",
+      "zh": "用于限定讨论范围，聚焦到某一具体话题"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, signals topic management skills",
+      "zh": "口语化，适合雅思语境，体现话题控制和聚焦能力"
+    },
+    "example": {
+      "en": "If we're talking about This is a useful expression for expressing yourself naturally in English.",
+      "zh": "If we are talking about environmental issues, plastic waste is urgent."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-31b6c07a1f",
+    "expression": "In terms of",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to focus attention on a specific aspect",
+      "zh": "置于句首：In terms of + [方面], + [陈述]"
+    },
+    "contexts": {
+      "en": "Used to narrow focus to a specific aspect of the question",
+      "zh": "用于聚焦到某一具体方面进行讨论，雅思必备过渡词"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, signals topic management skills",
+      "zh": "半正式，适合雅思语境，体现话题控制和聚焦能力"
+    },
+    "example": {
+      "en": "In terms of career development, I think internships are extremely valuable.",
+      "zh": "In terms of career development, internships are extremely valuable."
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-79e2ee074a",
+    "expression": "In terms of ...,",
+    "variants": [],
+    "collocation": {
+      "en": "In terms of [category/field], [statement with specific reference]...",
+      "zh": "使用模板：In terms of + [类别/领域], + [具针对性的陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to narrow focus to a specific aspect of the question",
+      "zh": "用于聚焦答题范围，展示话题控制能力"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, signals topic management skills",
+      "zh": "半正式，适合雅思语境，体现话题控制和聚焦能力"
+    },
+    "example": {
+      "en": "In terms of",
+      "zh": "In terms of environmental protection, small changes can make a big difference."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-428094e00d",
+    "expression": "In terms of college students",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to focus attention on a specific aspect",
+      "zh": "置于句首：In terms of college students, + [相关观点]"
+    },
+    "contexts": {
+      "en": "Used to narrow focus to a specific aspect of the question",
+      "zh": "用于聚焦到大学生的角度进行讨论"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, signals topic management skills",
+      "zh": "半正式，适合雅思语境，体现话题控制和聚焦能力"
+    },
+    "example": {
+      "en": "In terms of college students This is a useful expression for expressing yourself naturally in English.",
+      "zh": "In terms of college students, financial pressure is a big challenge."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-c5ba4d4756",
+    "expression": "Regarding / About",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to focus attention on a specific aspect",
+      "zh": "置于句首：Regarding + [话题] / About + [话题], + [陈述]"
+    },
+    "contexts": {
+      "en": "Used to narrow focus to a specific aspect of the question",
+      "zh": "用于直接引入要讨论的话题"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, signals topic management skills",
+      "zh": "半正式，适合雅思语境，体现话题控制和聚焦能力"
+    },
+    "example": {
+      "en": "Regarding / About This is a useful expression for expressing yourself naturally in English.",
+      "zh": "Regarding technology in classrooms, it has both pros and cons."
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-56aac0e3b6",
+    "expression": "Regarding, ... / About,",
+    "variants": [],
+    "collocation": {
+      "en": "Use Regarding, ... / About, to [situation-appropriate completion of the template]",
+      "zh": "使用模板：Regarding / About + [话题], + [陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to narrow focus to a specific aspect of the question",
+      "zh": "用于直接定位到要讨论的话题，切入主题"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, signals topic management skills",
+      "zh": "半正式，适合雅思语境，体现话题控制和聚焦能力"
+    },
+    "example": {
+      "en": "Regarding, ... / About For example, this is a great way to introduce your point naturally.",
+      "zh": "Regarding social media, it has both positive and negative effects."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-c80f7f07d5",
+    "expression": "Talking about",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to focus attention on a specific aspect",
+      "zh": "置于句首：Talking about + [话题], + [陈述]"
+    },
+    "contexts": {
+      "en": "Used to narrow focus to a specific aspect of the question",
+      "zh": "用于自然引入或转换话题，口语化程度较高"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, signals topic management skills",
+      "zh": "口语化，适合雅思语境，体现话题控制和聚焦能力"
+    },
+    "example": {
+      "en": "Talking about This is a useful expression for expressing yourself naturally in English.",
+      "zh": "Talking about hobbies, I really enjoy photography."
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-fad00d12db",
+    "expression": "Technology-wise,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to focus attention on a specific aspect",
+      "zh": "置于句首：Technology-wise, + [相关陈述]"
+    },
+    "contexts": {
+      "en": "Used to narrow focus to a specific aspect of the question",
+      "zh": "用于将讨论聚焦到科技方面，简洁明了"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, signals topic management skills",
+      "zh": "口语化，适合雅思语境，体现话题控制和聚焦能力"
+    },
+    "example": {
+      "en": "Technology-wise This is a useful expression for expressing yourself naturally in English.",
+      "zh": "Technology-wise, we have made remarkable progress."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-be7a5cdeef",
+    "expression": "When it comes to",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to focus attention on a specific aspect",
+      "zh": "置于句首：When it comes to + [话题], + [观点]"
+    },
+    "contexts": {
+      "en": "Used to narrow focus to a specific aspect of the question",
+      "zh": "用于引入新话题或转向特定方面，自然流畅"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, signals topic management skills",
+      "zh": "半正式，适合雅思语境，体现话题控制和聚焦能力"
+    },
+    "example": {
+      "en": "When it comes to cooking, I'm definitely more of a beginner than an expert.",
+      "zh": "When it comes to cooking, I am more of a beginner than an expert."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-bfa5587a0a",
+    "expression": "When it comes to ...,",
+    "variants": [],
+    "collocation": {
+      "en": "When it comes to [topic], [general statement + elaboration]...",
+      "zh": "使用模板：When it comes to + [话题], + [概括陈述+展开]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to narrow focus to a specific aspect of the question",
+      "zh": "用于将讨论范围缩小到某一具体话题并展开论述"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, signals topic management skills",
+      "zh": "半正式，适合雅思语境，体现话题控制和聚焦能力"
+    },
+    "example": {
+      "en": "When it comes to",
+      "zh": "When it comes to choosing a career, passion should be the primary factor."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-7b191d04fb",
+    "expression": "When it comes to young people,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to focus attention on a specific aspect",
+      "zh": "置于句首：When it comes to young people, + [相关观点]"
+    },
+    "contexts": {
+      "en": "Used to narrow focus to a specific aspect of the question",
+      "zh": "用于聚焦到年轻人的视角或相关话题"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, signals topic management skills",
+      "zh": "半正式，适合雅思语境，体现话题控制和聚焦能力"
+    },
+    "example": {
+      "en": "When it comes to young people This is a useful expression for expressing yourself naturally in English.",
+      "zh": "When it comes to young people, social media plays a significant role."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-3ccf8dfa5e",
+    "expression": "\"Thinking back to my parents' generation, they used to...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"Thinking back to my parents' generation, they used to...\" to [situation-appropriate completion of the template]",
+      "zh": "使用模板：Thinking back to + [过去时间/群体] + , they used to + [过去行为]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "用于Part 3中通过代际对比展现多角度分析能力"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "半正式，适合雅思语境，展现多层次分析和思辨框架能力"
+    },
+    "example": {
+      "en": "\"Thinking back to my parents' generation, they used to...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "Thinking back to my parents generation, they used to write letters."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-017"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "narrative",
+      "memory"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-b3e07238f1",
+    "expression": "As far as I can recollect, I (did)",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to introduce a memory or past experience",
+      "zh": "置于句首：As far as I can recollect, I + [过去动作]"
+    },
+    "contexts": {
+      "en": "Used when drawing on personal memories or past experiences",
+      "zh": "用于在回忆往事时使用，比remember更正式"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, natural narrative technique",
+      "zh": "半正式，适合雅思语境，自然的叙事技巧"
+    },
+    "example": {
+      "en": "As far as I can recollect, I (did) I remember it like it was yesterday — it was such a memorable experience.",
+      "zh": "As far as I can recollect, I first visited that museum at age ten."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-017"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "narrative",
+      "memory"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-e7ec4f0d10",
+    "expression": "As far as I can remember,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to introduce a memory or past experience",
+      "zh": "置于句首：As far as I can remember, + [过去的事件]"
+    },
+    "contexts": {
+      "en": "Used when drawing on personal memories or past experiences",
+      "zh": "用于根据记忆描述过去的事件"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, natural narrative technique",
+      "zh": "半正式，适合雅思语境，自然的叙事技巧"
+    },
+    "example": {
+      "en": "As far as I can remember I remember it like it was yesterday — it was such a memorable experience.",
+      "zh": "As far as I can remember, the town was much quieter back then."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-017"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "narrative",
+      "memory"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-3156d01524",
+    "expression": "As far as I can remember, when I was a little kid,",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: As far as I can remember, when I was a little kid,",
+      "zh": "置于回答开头：As far as I can remember, when I was a little kid, + [童年回忆]"
+    },
+    "contexts": {
+      "en": "Used when drawing on personal memories or past experiences",
+      "zh": "用于引导童年回忆的具体描述，生动自然"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, natural narrative technique",
+      "zh": "半正式，适合雅思语境，自然的叙事技巧"
+    },
+    "example": {
+      "en": "As far as I can remember, when I was a little kid I remember it like it was yesterday — it was such a memorable experience.",
+      "zh": "As far as I can remember, when I was a little kid, I played in the park every day."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-017"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "narrative",
+      "memory"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-a883ad5168",
+    "expression": "I vaguely remember that",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to introduce a memory or past experience",
+      "zh": "置于句首：I vaguely remember that + [不太清晰的事件]"
+    },
+    "contexts": {
+      "en": "Used when drawing on personal memories or past experiences",
+      "zh": "用于描述记忆不太清晰的往事，诚实表达不确定感"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, natural narrative technique",
+      "zh": "半正式，适合雅思语境，自然的叙事技巧"
+    },
+    "example": {
+      "en": "I vaguely remember that I remember it like it was yesterday — it was such a memorable experience.",
+      "zh": "I vaguely remember that my grandparents had a beautiful garden."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-017"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "narrative",
+      "memory"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-3e9c5b4e0f",
+    "expression": "I vaguely remember that,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to introduce a memory or past experience",
+      "zh": "置于句首：I vaguely remember that, + [不太确定的事件]"
+    },
+    "contexts": {
+      "en": "Used when drawing on personal memories or past experiences",
+      "zh": "用于表达对某事的记忆模糊不清"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, natural narrative technique",
+      "zh": "半正式，适合雅思语境，自然的叙事技巧"
+    },
+    "example": {
+      "en": "I vaguely remember that I remember it like it was yesterday — it was such a memorable experience.",
+      "zh": "I vaguely remember that, we went on family trips every summer."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-017"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "narrative",
+      "memory"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-159598e876",
+    "expression": "If I recall correctly,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to introduce a memory or past experience",
+      "zh": "置于句首：If I recall correctly, + [根据记忆的陈述]"
+    },
+    "contexts": {
+      "en": "Used when drawing on personal memories or past experiences",
+      "zh": "用于在不确定的情况下表达自己的记忆"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, natural narrative technique",
+      "zh": "半正式，适合雅思语境，自然的叙事技巧"
+    },
+    "example": {
+      "en": "If I recall correctly I remember it like it was yesterday — it was such a memorable experience.",
+      "zh": "If I recall correctly, the festival is on the first weekend of October."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-017"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "narrative",
+      "memory"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-8a5c9d5140",
+    "expression": "If I remember correctly,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to introduce a memory or past experience",
+      "zh": "置于句首：If I remember correctly, + [根据记忆的陈述]"
+    },
+    "contexts": {
+      "en": "Used when drawing on personal memories or past experiences",
+      "zh": "用于在不确定的情况下表达记忆，较recall更口语化"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, natural narrative technique",
+      "zh": "半正式，适合雅思语境，自然的叙事技巧"
+    },
+    "example": {
+      "en": "If I remember correctly I remember it like it was yesterday — it was such a memorable experience.",
+      "zh": "If I remember correctly, the first iPhone was released in 2007."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-017"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "narrative",
+      "memory"
+    ],
+    "seeAlso": []
+  }
+]

@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Part 3: The Answer Architect</title>
+    
+    <!-- Fonts replaced with system stack for China compatibility -->
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="/js/lib/fontawesome.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="/js/lib/tailwind.browser.js"></script>
+    
+    <!-- Mermaid JS -->
+    <script src="/js/lib/mermaid.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'sans-serif'],
+                        display: ['-apple-system', 'BlinkMacSystemFont', 'PingFang SC', 'sans-serif'],
+                    },
+                    colors: {
+                        glass: 'rgba(255, 255, 255, 0.08)',
+                        glassBorder: 'rgba(255, 255, 255, 0.15)',
+                        glassHigh: 'rgba(255, 255, 255, 0.25)',
+                        accent: '#fa243c', /* Apple Music Red from uploaded file */
+                        deepBg: '#121214',
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+                        'float': '0 18px 40px rgba(0,0,0,0.25)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            background-attachment: fixed;
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Utilities */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            box-shadow: var(--shadow-glass);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Sidebar Nav Styles */
+        .nav-item {
+            display: flex;
+            align-items: center;
+            padding: 16px 20px;
+            margin-bottom: 8px;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            color: rgba(255,255,255,0.6);
+            font-weight: 500;
+            border: 1px solid transparent;
+        }
+
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .nav-item.active {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border-color: rgba(255,255,255,0.2);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            font-weight: 700;
+        }
+
+        .nav-item i {
+            width: 24px;
+            margin-right: 12px;
+            font-size: 1.1em;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+
+        /* Flashcard 3D Flip */
+        .perspective-1000 { perspective: 1000px; }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transform-style: preserve-3d;
+        }
+        .flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.15);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .flip-card-front {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+        }
+        .flip-card-back {
+            background: linear-gradient(135deg, #fa243c 0%, #7c1a2d 100%); /* Apple Music inspired gradient */
+            transform: rotateY(180deg);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fadeIn 0.4s ease-out forwards; }
+
+        /* Blueprint Section Styles */
+        .blueprint-box {
+            background: rgba(0,0,0,0.2);
+            border-left: 3px solid #fa243c;
+            padding: 1rem;
+            border-radius: 0 12px 12px 0;
+            margin-top: 0.5rem;
+        }
+        .blueprint-arrow {
+            color: rgba(255,255,255,0.4);
+            margin: 0 8px;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-red-500 selection:text-white flex flex-col md:flex-row h-screen overflow-hidden">
+
+    <!-- Sidebar Navigation (Vertical) -->
+    <aside class="w-full md:w-72 glass-panel m-0 md:m-4 md:mr-0 flex flex-col overflow-y-auto flex-shrink-0 z-20">
+        <div class="p-6 pb-2">
+            <h1 class="font-display text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                Answer<br>Architect
+            </h1>
+            <p class="text-xs text-gray-400 mt-2 tracking-widest uppercase">IELTS Part 3 System</p>
+        </div>
+
+        <nav class="flex-1 p-4 space-y-2">
+            <button onclick="switchTab('logic')" class="nav-item w-full text-left" id="btn-logic">
+                <i class="fa-solid fa-project-diagram text-teal-300"></i> Logic Map
+            </button>
+            <div class="h-px bg-white/10 my-4 mx-2"></div>
+            <p class="px-4 text-xs font-bold text-gray-500 uppercase mb-2">Strategies</p>
+            <button onclick="switchTab('general')" class="nav-item w-full text-left active" id="btn-general">
+                <i class="fa-solid fa-layer-group text-blue-300"></i> General-Specific
+            </button>
+            <button onclick="switchTab('proscons')" class="nav-item w-full text-left" id="btn-proscons">
+                <i class="fa-solid fa-scale-balanced text-pink-300"></i> Pros & Cons
+            </button>
+            <button onclick="switchTab('classification')" class="nav-item w-full text-left" id="btn-classification">
+                <i class="fa-solid fa-chart-pie text-purple-300"></i> Classification
+            </button>
+            <button onclick="switchTab('time')" class="nav-item w-full text-left" id="btn-time">
+                <i class="fa-solid fa-clock-rotate-left text-yellow-300"></i> Time Travel
+            </button>
+            <button onclick="switchTab('opinion')" class="nav-item w-full text-left" id="btn-opinion">
+                <i class="fa-solid fa-gavel text-red-300"></i> Opinion (OAD)
+            </button>
+            <button onclick="switchTab('experience')" class="nav-item w-full text-left" id="btn-experience">
+                <i class="fa-solid fa-user-astronaut text-green-300"></i> Experience
+            </button>
+        </nav>
+
+        <div class="p-4 mt-auto">
+            <div id="notepad" class="glass-card p-3 transition-all duration-300 relative group">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-xs font-bold text-gray-400 uppercase"><i class="fa-solid fa-pen"></i> Notes</span>
+                    <button onclick="document.querySelector('textarea').value = ''" class="text-xs hover:text-white text-gray-500"><i class="fa-solid fa-rotate-right"></i></button>
+                </div>
+                <textarea class="w-full h-32 bg-transparent text-sm resize-none focus:outline-none placeholder-gray-600" placeholder="Jot down vocab..."></textarea>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 h-full overflow-y-auto p-4 md:p-6 relative">
+        
+        <!-- Top Bar -->
+        <header class="flex justify-between items-center mb-8 sticky top-0 z-10 py-4 -mt-4 bg-[#0f0c29]/80 backdrop-blur-xl">
+            <div class="flex items-center gap-4">
+                <span class="px-4 py-1.5 rounded-full border border-white/10 text-xs font-bold bg-white/5 uppercase tracking-wider">
+                    Sep-Dec 2024 Question Bank
+                </span>
+            </div>
+            <div class="flex gap-3">
+                 <a href="https://www.youtube.com/results?search_query=IELTS+Speaking+Part+3+Band+9+Strategies" target="_blank" class="glass-card px-4 py-2 text-sm hover:bg-white/10 flex items-center gap-2">
+                    <i class="fa-brands fa-youtube text-red-500"></i> Search Samples
+                </a>
+            </div>
+        </header>
+
+        <!-- Dynamic Content Container -->
+        <div id="content-container" class="max-w-5xl mx-auto pb-20">
+
+            <!-- 0. Logic Map View -->
+            <section id="logic" class="tab-pane hidden animate-fade-in">
+                <div class="glass-panel p-8">
+                    <h2 class="text-3xl font-display font-bold mb-6">The Decision Engine</h2>
+                    <div class="w-full overflow-hidden rounded-2xl bg-black/20 p-6 border border-white/10">
+                        <div class="mermaid text-center">
+                            graph TD
+                            Q[Question Type?] --> Analyze{Analyze}
+                            
+                            Analyze -->|Broad/Abstract| A[General-Specific]
+                            Analyze -->|Evaluate/Controversial| B[Pros & Cons]
+                            Analyze -->|Different Groups| C[Classification]
+                            Analyze -->|Trends/Changes| D[Chronology]
+                            
+                            A --> A1[Generic Statement] --> A2[Specific Examples]
+                            B --> B1[On one hand] --> B2[On the other] --> B3[Balance]
+                            C --> C1[Govt vs Individual] --> C2[Young vs Old] --> C3[Urban vs Rural]
+                            D --> D1[Past Habits] --> D2[Current Trends] --> D3[Future Outlook]
+
+                            style Q fill:#fa243c,stroke:#fff,stroke-width:0px,color:#fff
+                            style Analyze fill:#302b63,stroke:#fff,stroke-width:1px,color:#fff
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 1. General-Specific -->
+            <section id="general" class="tab-pane animate-fade-in block">
+                <div class="glass-panel p-8 mb-6 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+                    <h2 class="text-4xl font-display font-bold mb-2">General-Specific</h2>
+                    <p class="text-gray-400 text-lg">The Funnel Strategy: Start wide, end narrow.</p>
+                </div>
+
+                <!-- Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <div class="flip-card h-40 cursor-pointer perspective-1000" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3 class="text-xl font-bold">A myriad of...</h3>
+                                <p class="text-sm text-blue-300 mt-2">Quantifier</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="font-medium">"A huge number of"</p>
+                                <p class="text-xs italic mt-2 text-white/70">"There are a myriad of reasons why..."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card h-40 cursor-pointer perspective-1000" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3 class="text-xl font-bold">Alter the course</h3>
+                                <p class="text-sm text-blue-300 mt-2">Phrase</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="font-medium">To change history/direction significantly.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="flip-card h-40 cursor-pointer perspective-1000" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3 class="text-xl font-bold">To name a few</h3>
+                                <p class="text-sm text-blue-300 mt-2">Connector</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="font-medium">Used to introduce specific examples.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drill Section -->
+                <div class="space-y-6">
+                    <div class="glass-card p-6 border-l-4 border-blue-400">
+                        <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-book-open text-blue-400"></i> 9-12月 Topic: Online Shopping
+                        </h3>
+                        <p class="font-medium text-lg mb-2">Q: Do you think people buy things they don't really need?</p>
+                        <div class="blueprint-box">
+                            <p class="text-sm font-mono text-blue-200 mb-1">BLUEPRINT:</p>
+                            <p class="text-gray-300">
+                                <strong>General:</strong> Start by saying "Without a doubt, consumerism is rampant..." + use phrase <em>"A significant amount of people..."</em><br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Specific:</strong> Give examples like <span class="text-white">live-streaming sales</span> (TikTok/Douyin) or <span class="text-white">seasonal discounts</span>.<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Conclusion:</strong> "So basically, impulse buying has become the norm."
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 border-l-4 border-blue-400">
+                        <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-book-open text-blue-400"></i> 9-12月 Topic: Scenery
+                        </h3>
+                        <p class="font-medium text-lg mb-2">Q: Is it important to take photos of beautiful scenery?</p>
+                        <div class="blueprint-box">
+                            <p class="text-sm font-mono text-blue-200 mb-1">BLUEPRINT:</p>
+                            <p class="text-gray-300">
+                                <strong>General:</strong> "Generally speaking, capturing moments is human nature..." + <em>"A vast array of tourists..."</em><br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Specific:</strong> Mention <span class="text-white">preserving memories</span> or <span class="text-white">social media sharing</span>.<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Pivot:</strong> "Having said that, some people focus too much on the photo and miss the actual view."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. Pros & Cons -->
+            <section id="proscons" class="tab-pane hidden animate-fade-in">
+                <div class="glass-panel p-8 mb-6 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+                    <h2 class="text-4xl font-display font-bold mb-2">Pros & Cons</h2>
+                    <p class="text-gray-400 text-lg">The Balance Sheet: Weighing the evidence.</p>
+                </div>
+
+                <!-- Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <div class="flip-card h-40 cursor-pointer perspective-1000" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3 class="text-xl font-bold">Strike a balance</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="font-medium">To find a compromise.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card h-40 cursor-pointer perspective-1000" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3 class="text-xl font-bold">Boils down to</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="font-medium">The essential point is...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card h-40 cursor-pointer perspective-1000" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3 class="text-xl font-bold">On the flip side</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="font-medium">Conversely / However.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drill Section -->
+                <div class="space-y-6">
+                    <div class="glass-card p-6 border-l-4 border-pink-400">
+                        <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-tree text-pink-400"></i> 9-12月 Topic: Public Parks
+                        </h3>
+                        <p class="font-medium text-lg mb-2">Q: What are the benefits of having parks in the city?</p>
+                        <div class="blueprint-box">
+                            <p class="text-sm font-mono text-pink-200 mb-1">BLUEPRINT:</p>
+                            <p class="text-gray-300">
+                                <strong>Pros:</strong> "On one hand, they act as the <span class="text-white">lungs of the city</span>..." + "Provide space for <span class="text-white">recreation</span>."<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Cons (Contrast):</strong> "On the flip side, maintaining them costs a fortune..."<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Balance:</strong> "It boils down to how the city manages its budget."
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 border-l-4 border-pink-400">
+                        <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-handshake text-pink-400"></i> 9-12月 Topic: Sharing Economy
+                        </h3>
+                        <p class="font-medium text-lg mb-2">Q: What are the pros and cons of sharing things with others?</p>
+                        <div class="blueprint-box">
+                            <p class="text-sm font-mono text-pink-200 mb-1">BLUEPRINT:</p>
+                            <p class="text-gray-300">
+                                <strong>Pros:</strong> "From a positive perspective, it fosters <span class="text-white">sustainability</span> and reduces waste."<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Cons:</strong> "However, a significant drawback is <span class="text-white">hygiene concerns</span> or wear and tear."<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Balance:</strong> "So, we need to strike a balance between being generous and being practical."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- 3. Classification -->
+             <section id="classification" class="tab-pane hidden animate-fade-in">
+                <div class="glass-panel p-8 mb-6 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+                    <h2 class="text-4xl font-display font-bold mb-2">Classification</h2>
+                    <p class="text-gray-400 text-lg">Divide & Conquer: Segment by age, geography, or role.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                     <div class="flip-card h-40 cursor-pointer perspective-1000" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3 class="text-xl font-bold">Tech-savvy</h3>
+                                <p class="text-sm text-purple-300 mt-2">Adjective</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="font-medium">Gen Alpha / Z: Good with technology.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card h-40 cursor-pointer perspective-1000" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3 class="text-xl font-bold">Rat race</h3>
+                                <p class="text-sm text-purple-300 mt-2">Idiom</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="font-medium">The exhaustive struggle for financial success (Working Class).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card h-40 cursor-pointer perspective-1000" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3 class="text-xl font-bold">Privileged</h3>
+                                <p class="text-sm text-purple-300 mt-2">Adjective</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="font-medium">Having special rights/advantages (Wealthy class).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="glass-card p-6 border-l-4 border-purple-400">
+                        <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-gift text-purple-400"></i> 9-12月 Topic: Gifts
+                        </h3>
+                        <p class="font-medium text-lg mb-2">Q: Do men and women like the same kinds of gifts?</p>
+                        <div class="blueprint-box">
+                            <p class="text-sm font-mono text-purple-200 mb-1">BLUEPRINT:</p>
+                            <p class="text-gray-300">
+                                <strong>Intro:</strong> "I wouldn't generalize, but we can look at this by group..."<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Group A (Stereotype):</strong> "When it comes to men, gadgets or <span class="text-white">utilitarian items</span> might be preferred."<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Group B (Contrast):</strong> "In contrast, women might appreciate something with more <span class="text-white">sentimental value</span>."<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Nuance:</strong> "But for Gen Z, these gender lines are blurring."
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 border-l-4 border-purple-400">
+                        <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-newspaper text-purple-400"></i> 9-12月 Topic: News
+                        </h3>
+                        <p class="font-medium text-lg mb-2">Q: How do old people and young people get their news?</p>
+                        <div class="blueprint-box">
+                            <p class="text-sm font-mono text-purple-200 mb-1">BLUEPRINT:</p>
+                            <p class="text-gray-300">
+                                <strong>Group A (Elderly):</strong> "For the older generation (Gen X/Boomers), it's often traditional media like TV or <span class="text-white">newspapers</span>."<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Group B (Youth):</strong> "However, for Gen Z and Millennials, they are <span class="text-white">tech-savvy</span> and rely on social media feeds."<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Comparison:</strong> "The former seeks depth, while the latter seeks speed."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- 4. Time Travel -->
+             <section id="time" class="tab-pane hidden animate-fade-in">
+                <div class="glass-panel p-8 mb-6 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-500/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+                    <h2 class="text-4xl font-display font-bold mb-2">Time Travel</h2>
+                    <p class="text-gray-400 text-lg">The Chronology: Past, Present, and Future.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <div class="flip-card h-40 cursor-pointer perspective-1000" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3 class="text-xl font-bold">Used to be</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="font-medium">"It used to be the case that..." (Past habit)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card h-40 cursor-pointer perspective-1000" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3 class="text-xl font-bold">Dramatic shift</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="font-medium">A major change in trends.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card h-40 cursor-pointer perspective-1000" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3 class="text-xl font-bold">Bound to</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="font-medium">"It is bound to happen..." (Certainty in future)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="glass-card p-6 border-l-4 border-yellow-400">
+                        <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-house-chimney text-yellow-400"></i> 9-12月 Topic: Housing
+                        </h3>
+                        <p class="font-medium text-lg mb-2">Q: How have houses in your country changed over the years?</p>
+                        <div class="blueprint-box">
+                            <p class="text-sm font-mono text-yellow-200 mb-1">BLUEPRINT:</p>
+                            <p class="text-gray-300">
+                                <strong>Past:</strong> "Looking back 20 years, people <span class="text-white">used to live</span> in spacious courtyards..."<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Present:</strong> "Nowadays, due to urbanization, there's been a <span class="text-white">dramatic shift</span> to high-rise apartments."<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Future:</strong> "Looking ahead, smart homes are likely to become the standard."
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 border-l-4 border-yellow-400">
+                        <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-film text-yellow-400"></i> 9-12月 Topic: Cinema
+                        </h3>
+                        <p class="font-medium text-lg mb-2">Q: Will cinemas disappear in the future?</p>
+                        <div class="blueprint-box">
+                            <p class="text-sm font-mono text-yellow-200 mb-1">BLUEPRINT:</p>
+                            <p class="text-gray-300">
+                                <strong>Present:</strong> "Currently, streaming services are dominating..."<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Prediction:</strong> "However, I wouldn't say they will vanish completely."<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Future Speculation:</strong> "I predict they will evolve into <span class="text-white">immersive VR experiences</span> to compete."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Opinion (OAD) -->
+            <section id="opinion" class="tab-pane hidden animate-fade-in">
+                <div class="glass-panel p-8 mb-6 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-red-500/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+                    <h2 class="text-4xl font-display font-bold mb-2">Opinion (O.A.D)</h2>
+                    <p class="text-gray-400 text-lg">Opinion, Analysis, Discussion: Deep dive.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <div class="flip-card h-40 cursor-pointer perspective-1000" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3 class="text-xl font-bold">Resonate with</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="font-medium">To agree with / Relate to.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card h-40 cursor-pointer perspective-1000" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3 class="text-xl font-bold">Beg to differ</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="font-medium">"I politely disagree."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card h-40 cursor-pointer perspective-1000" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3 class="text-xl font-bold">Off the bat</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="font-medium">Immediately / First thing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="glass-card p-6 border-l-4 border-red-400">
+                        <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-person-cane text-red-400"></i> 9-12月 Topic: Advice
+                        </h3>
+                        <p class="font-medium text-lg mb-2">Q: Is the advice from older people always useful?</p>
+                        <div class="blueprint-box">
+                            <p class="text-sm font-mono text-red-200 mb-1">BLUEPRINT:</p>
+                            <p class="text-gray-300">
+                                <strong>Opinion:</strong> "Not necessarily. I beg to differ with the idea that age equals wisdom."<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Analysis:</strong> "Despite their experience, their views might be <span class="text-white">outdated</span> in this tech-driven era."<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Discussion (Conditional):</strong> "If it's about life values, yes. If it's about career/tech, maybe not."
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 border-l-4 border-red-400">
+                        <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-users-rays text-red-400"></i> 9-12月 Topic: Team Sports
+                        </h3>
+                        <p class="font-medium text-lg mb-2">Q: Should children be encouraged to play team sports?</p>
+                        <div class="blueprint-box">
+                            <p class="text-sm font-mono text-red-200 mb-1">BLUEPRINT:</p>
+                            <p class="text-gray-300">
+                                <strong>Opinion:</strong> "Absolutely. I completely resonate with this idea."<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Analysis:</strong> "The main reason is that it fosters <span class="text-white">collaboration</span> and resilience."<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Extension:</strong> "Without these skills, they might struggle in the future workplace (Rat race)."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- 6. Experience -->
+             <section id="experience" class="tab-pane hidden animate-fade-in">
+                <div class="glass-panel p-8 mb-6 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-green-500/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+                    <h2 class="text-4xl font-display font-bold mb-2">Experience</h2>
+                    <p class="text-gray-400 text-lg">The Anecdote: Make it personal, then broaden it.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                     <div class="flip-card h-40 cursor-pointer perspective-1000" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3 class="text-xl font-bold">Relatable</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="font-medium">"I can relate to this..."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card h-40 cursor-pointer perspective-1000" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3 class="text-xl font-bold">If memory serves</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="font-medium">"If I remember correctly..."</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="flip-card h-40 cursor-pointer perspective-1000" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3 class="text-xl font-bold">Scrumptious</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="font-medium">Delicious (Great for food topics).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="glass-card p-6 border-l-4 border-green-400">
+                        <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-compass text-green-400"></i> 9-12月 Topic: Lost Items
+                        </h3>
+                        <p class="font-medium text-lg mb-2">Q: What do people usually do when they lose things?</p>
+                        <div class="blueprint-box">
+                            <p class="text-sm font-mono text-green-200 mb-1">BLUEPRINT:</p>
+                            <p class="text-gray-300">
+                                <strong>Comment:</strong> "This is quite a relatable question."<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Personal:</strong> "Take myself as an example, I once lost my wallet and I <span class="text-white">panicked</span>..."<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Generalize:</strong> "Generally speaking, I reckon the vast majority of people would retrace their steps immediately."
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 border-l-4 border-green-400">
+                        <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-star text-green-400"></i> 9-12月 Topic: Celebrities
+                        </h3>
+                        <p class="font-medium text-lg mb-2">Q: Why do some people want to be famous?</p>
+                        <div class="blueprint-box">
+                            <p class="text-sm font-mono text-green-200 mb-1">BLUEPRINT:</p>
+                            <p class="text-gray-300">
+                                <strong>Comment:</strong> "Interesting question. I've never really thought about it personally."<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Personal Observation:</strong> "But I have a friend who is an influencer..."<br>
+                                <span class="blueprint-arrow">↓</span><br>
+                                <strong>Generalize:</strong> "I guess for them, it's about <span class="text-white">validation</span> and financial rewards."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        function switchTab(tabId) {
+            // 1. Hide all sections
+            document.querySelectorAll('.tab-pane').forEach(el => {
+                el.classList.add('hidden');
+                el.classList.remove('block');
+            });
+            
+            // 2. Reset all nav buttons
+            document.querySelectorAll('.nav-item').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // 3. Show selected section
+            const selectedPane = document.getElementById(tabId);
+            selectedPane.classList.remove('hidden');
+            selectedPane.classList.add('block');
+            
+            // 4. Highlight nav button
+            const activeBtn = document.getElementById(`btn-${tabId}`);
+            if (activeBtn) activeBtn.classList.add('active');
+
+            // 5. Scroll top
+            document.querySelector('main').scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Initialize Mermaid
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            themeVariables: {
+                primaryColor: '#302b63',
+                primaryTextColor: '#fff',
+                primaryBorderColor: '#fff',
+                lineColor: '#fa243c',
+                secondaryColor: '#fa243c',
+                tertiaryColor: '#1e1b4b'
+            }
+        });
+
+        // Initialize first tab
+        switchTab('general');
+    </script>
+</body>
+</html>

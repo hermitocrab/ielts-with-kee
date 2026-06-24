@@ -1,0 +1,4237 @@
+[
+  {
+    "id": "dm-7b8c3ae130",
+    "expression": "What else can I say about that, well, another thing that I can remember is",
+    "variants": [],
+    "collocation": {
+      "en": "Use What else can I say about that, well, another thing that I can remember is... to [situation-appropriate completion of the template]",
+      "zh": "Well, + [回答/陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used when you need extra thinking time during the speaking test",
+      "zh": "当你需要争取思考时间时使用，尤其是在口语考试中，用于自然地引出额外回忆的内容。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, shows natural hesitation without losing fluency",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "What else can I say about that, well, another thing that I can remember is For example, this is a great way to introduce your point naturally.",
+      "zh": "What else can I say about that, well, another thing that I can remember is 我们当时去的那家餐厅真的特别棒。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-001"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "fluency",
+      "stalling"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-e8ce3596e1",
+    "expression": "what else can I say, well",
+    "variants": [],
+    "collocation": {
+      "en": "Use what else can I say, well... to [situation-appropriate completion of the template]",
+      "zh": "Well, + [回答/陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used when you need extra thinking time during the speaking test",
+      "zh": "当你需要争取思考时间时使用，尤其是在口语考试中，这是一个自然的停顿技巧。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, shows natural hesitation without losing fluency",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "what else can I say, well For example, this is a great way to introduce your point naturally.",
+      "zh": "What else can I say, well 我其实对这个问题没有太多想法，但我觉得……"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-001"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "fluency",
+      "stalling"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-b8a9e0988e",
+    "expression": "Gotta say I quite like this question, 'cuz",
+    "variants": [],
+    "collocation": {
+      "en": "Use Gotta say I quite like this question, 'cuz ... to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to transition from a general claim to specific evidence",
+      "zh": "用于从一般性陈述过渡到具体例子，用'cuz引出具体原因，使论证更加有力。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, strengthens arguments with concrete evidence",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Gotta say I quite like this question, 'cuz For example, this is a great way to introduce your point naturally.",
+      "zh": "Gotta say I quite like this question, 'cuz 它让我有机会回忆一下我的大学生活。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-002"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "fluency",
+      "reaction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-3f374a7bab",
+    "expression": "... is more than just a device, it is an integral part of my life",
+    "variants": [],
+    "collocation": {
+      "en": "Use ... is more than just a device, it is an integral part of my life to [situation-appropriate completion of the template]",
+      "zh": "just + [核心请求]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点，强调某物对自己不仅仅是一个工具，而具有更深层的意义。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "... is more than just a device, it is an integral part of my life For example, this is a great way to introduce your point naturally.",
+      "zh": "My phone is more than just a device, it is an integral part of my life 因为里面存着我和家人的所有照片。"
+    },
+    "cefr": "C1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-4a27793871",
+    "expression": "a kind of ... that",
+    "variants": [],
+    "collocation": {
+      "en": "Use a kind of ... that ... to [situation-appropriate completion of the template]",
+      "zh": "It's kind of + [形容词/描述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点，对某事物进行模糊或笼统的描述。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "a kind of ... that For example, this is a great way to introduce your point naturally.",
+      "zh": "It's a kind of software that 帮助我把每天的任务都安排得井井有条。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-af08db597b",
+    "expression": "and sometimes... well, let's just say the results aren't always pretty",
+    "variants": [],
+    "collocation": {
+      "en": "Use and sometimes... well, let's just say the results aren't always pretty. to [situation-appropriate completion of the template]",
+      "zh": "Well, + [回答/陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used when you need extra thinking time during the speaking test",
+      "zh": "用于在口语中自然停顿并带出幽默或自嘲的表达，显示自然的对话节奏。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, shows natural hesitation without losing fluency",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "and sometimes... well, let's just say the results aren't always pretty For example, this is a great way to introduce your point naturally.",
+      "zh": "我有时候试着做饭，and sometimes... well, let's just say the results aren't always pretty。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-fe756c8546",
+    "expression": "As far as I'm concerned,",
+    "variants": [],
+    "collocation": {
+      "en": "As far as [topic] is concerned, [statement]...",
+      "zh": "As far as I'm concerned, + [我坚定的立场]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中明确表达个人立场，引出坚定的个人观点。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "As far as I'm concerned, For example, this is a great way to introduce your point naturally.",
+      "zh": "As far as I'm concerned, 社交媒体确实给我们带来了很多便利。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-0dea570587",
+    "expression": "Essentially,",
+    "variants": [],
+    "collocation": {
+      "en": "Use Essentially, ... to [situation-appropriate completion of the template]",
+      "zh": "Essentially, + [核心要点]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中表达个人观点，将复杂的观点浓缩为核心要点。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Essentially, For example, this is a great way to introduce your point naturally.",
+      "zh": "Essentially, 这个问题归根结底是一个资源分配的问题。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-3d4d0c7287",
+    "expression": "focus on/ ... can help improve the well-being of the general population",
+    "variants": [],
+    "collocation": {
+      "en": "Use focus on/ ... can help improve the well-being of the general population to [situation-appropriate completion of the template]",
+      "zh": "Well, + [回答/陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在口语考试中表达关于公共福祉的观点，适合Part 3中的社会话题讨论。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "focus on/ ... can help improve the well-being of the general population For example, this is a great way to introduce your point naturally.",
+      "zh": "Focus on public health can help improve the well-being of the general population 这已经是一个全球性的共识了。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-450db201a7",
+    "expression": "Frankly speaking,",
+    "variants": [],
+    "collocation": {
+      "en": "Use Frankly speaking, ... to [situation-appropriate completion of the template]",
+      "zh": "Frankly, + [诚实的观点]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中诚实地表达个人观点，暗示接下来要说的话是坦率的。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Frankly speaking, For example, this is a great way to introduce your point naturally.",
+      "zh": "Frankly speaking, 我其实不太喜欢在大城市生活。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-2e470a1b68",
+    "expression": "Frankly,",
+    "variants": [],
+    "collocation": {
+      "en": "Use Frankly, ... to [situation-appropriate completion of the template]",
+      "zh": "Frankly, + [诚实的观点]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中诚实地表达个人观点，简短的坦率开头。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Frankly, For example, this is a great way to introduce your point naturally.",
+      "zh": "Frankly, 我觉得这个问题没有简单的答案。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ff85f6b819",
+    "expression": "Honestly,",
+    "variants": [],
+    "collocation": {
+      "en": "Use Honestly, ... to [situation-appropriate completion of the template]",
+      "zh": "Honestly, + [坦率的陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中诚实地表达个人观点，强调坦率的态度。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Honestly, For example, this is a great way to introduce your point naturally.",
+      "zh": "Honestly, 我当初选这个专业纯属偶然。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-94cedb5e6e",
+    "expression": "I just realised that",
+    "variants": [],
+    "collocation": {
+      "en": "Use I just realised that ... to [situation-appropriate completion of the template]",
+      "zh": "just + [核心请求]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在口语中表达突然意识到某事，自然引出新想法。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "I just realised that For example, this is a great way to introduce your point naturally.",
+      "zh": "I just realised that 我其实一直把时间记错了。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-d0c1e9af0a",
+    "expression": "In order to ..., ... probably needs to take the following measures",
+    "variants": [],
+    "collocation": {
+      "en": "Use In order to ..., ... probably needs to take the following measures. to [situation-appropriate completion of the template]",
+      "zh": "Take + [具体的人或情况], for instance"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to structure multi-point answers, especially in Part 2 long turns",
+      "zh": "用于在Part 2的长篇陈述中组织多要点回答，提出解决方案或措施。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, improves coherence and cohesion scores",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "In order to ..., ... probably needs to take the following measures For example, this is a great way to introduce your point naturally.",
+      "zh": "In order to solve this problem, the government probably needs to take the following measures。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-bcf09bd62f",
+    "expression": "It just occurs to me that",
+    "variants": [],
+    "collocation": {
+      "en": "Use It just occurs to me that ... to [situation-appropriate completion of the template]",
+      "zh": "just + [核心请求]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在口语中表达突然想到的观点，显示自然的思路转变。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "It just occurs to me that For example, this is a great way to introduce your point naturally.",
+      "zh": "It just occurs to me that 我们也许可以换个角度来思考这个问题。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-356f991186",
+    "expression": "Just last week/month, I forgot",
+    "variants": [],
+    "collocation": {
+      "en": "Use Just last week/month, I forgot... to [situation-appropriate completion of the template]",
+      "zh": "just + [核心请求]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于通过最近的亲身经历来引出话题，增加回答的真实感。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Just last week/month, I forgot For example, this is a great way to introduce your point naturally.",
+      "zh": "Just last week, I forgot 带钥匙出门，结果在门口等了两个小时。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-b99f7ef3d3",
+    "expression": "let me see what else I jotted down here, yeah, I",
+    "variants": [],
+    "collocation": {
+      "en": "Use let me see what else I jotted down here, yeah, I ... to [situation-appropriate completion of the template]",
+      "zh": "Let me see... + [回答]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 2中使用笔记时的自然过渡，假装在看笔记争取思考时间。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "let me see what else I jotted down here, yeah, I For example, this is a great way to introduce your point naturally.",
+      "zh": "Let me see what else I jotted down here, yeah, I 还记了一些关于环境问题的想法。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-c8e28e8bc0",
+    "expression": "or they just",
+    "variants": [],
+    "collocation": {
+      "en": "Use or they just .... to [situation-appropriate completion of the template]",
+      "zh": "just + [核心请求]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于列举可能性时补充额外的简单原因或解释。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "or they just For example, this is a great way to introduce your point naturally.",
+      "zh": "有些人可能没时间锻炼，or they just 不太喜欢运动而已。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-b429e95288",
+    "expression": "Personally speaking,",
+    "variants": [],
+    "collocation": {
+      "en": "Use Personally speaking, ... to [situation-appropriate completion of the template]",
+      "zh": "Personally, + [个人偏好]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中引出个人观点，比'Personally'更正式一些。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Personally speaking, For example, this is a great way to introduce your point naturally.",
+      "zh": "Personally speaking, 我觉得在线教育在未来会变得越来越重要。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ef4cd03612",
+    "expression": "Personally,",
+    "variants": [],
+    "collocation": {
+      "en": "Use Personally, ... to [situation-appropriate completion of the template]",
+      "zh": "Personally, + [个人偏好]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 1和Part 3中简洁地引出个人观点。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Personally, For example, this is a great way to introduce your point naturally.",
+      "zh": "Personally, 我更喜欢纸质书而不是电子书。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ef9f3efb6f",
+    "expression": "So basically",
+    "variants": [],
+    "collocation": {
+      "en": "Use So basically ... to [situation-appropriate completion of the template]",
+      "zh": "Basically, + [简化版]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于在Part 3的分析性回答中总结或简化复杂的解释。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates logical reasoning ability",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "So basically For example, this is a great way to introduce your point naturally.",
+      "zh": "So basically, 这个系统的工作原理就是把数据收集起来然后进行分析。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-584ee243d3",
+    "expression": "Sorry that I'm just ..., so I can't provide you with anything useful",
+    "variants": [],
+    "collocation": {
+      "en": "Use Sorry that I'm just ..., so I can't provide you with anything useful. to [situation-appropriate completion of the template]",
+      "zh": "just + [核心请求]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used when you did not hear or understand the question fully",
+      "zh": "用于当没有完全理解问题或无法给出有用信息时的礼貌表达。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows active listening and communication skills",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Sorry that I'm just ..., so I can't provide you with anything useful For example, this is a great way to introduce your point naturally.",
+      "zh": "Sorry that I'm just a student, so I can't provide you with anything useful。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-1095f29326",
+    "expression": "Take myself as an example,",
+    "variants": [],
+    "collocation": {
+      "en": "Use Take myself as an example, ... to [situation-appropriate completion of the template]",
+      "zh": "Take + [具体的人或情况], for instance"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于通过自身经历来举例说明，使回答更具个人色彩。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Take myself as an example, For example, this is a great way to introduce your point naturally.",
+      "zh": "Take myself as an example, 我每天都会花一个小时来学习英语。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-7577b92879",
+    "expression": "the motivation behind this goal stems from",
+    "variants": [],
+    "collocation": {
+      "en": "Use the motivation behind this goal stems from... to [situation-appropriate completion of the template]",
+      "zh": "[问题] stems from + [根源]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于解释某个目标或行为的深层动机，显示分析能力。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "the motivation behind this goal stems from For example, this is a great way to introduce your point naturally.",
+      "zh": "The motivation behind this goal stems from 我小时候看到父母工作太辛苦。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-f006dd0d36",
+    "expression": "The thing is,",
+    "variants": [],
+    "collocation": {
+      "en": "Use The thing is, ... to [situation-appropriate completion of the template]",
+      "zh": "The thing is, + [解释/理由]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于引出问题的核心或解释原因，是口语中的常用开头。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "The thing is, For example, this is a great way to introduce your point naturally.",
+      "zh": "The thing is, 我并不是不喜欢旅游，只是工作太忙了。"
+    },
+    "cefr": "A1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-7ea70fa2b2",
+    "expression": "To be honest,",
+    "variants": [],
+    "collocation": {
+      "en": "Use To be honest, ... to [situation-appropriate completion of the template]",
+      "zh": "To be honest, + [坦白的话]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于诚实地表达个人观点，暗示接下来是真实的看法。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "To be honest, For example, this is a great way to introduce your point naturally.",
+      "zh": "To be honest, 我一开始并没有想过要出国留学。"
+    },
+    "cefr": "A1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-aeff7e13ca",
+    "expression": "to tell you the truth,",
+    "variants": [],
+    "collocation": {
+      "en": "Use to tell you the truth, ... to [situation-appropriate completion of the template]",
+      "zh": "To tell you the truth, + [诚实的坦白]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于引出真诚的回答，暗示将要分享的内容是坦白的。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "to tell you the truth, For example, this is a great way to introduce your point naturally.",
+      "zh": "To tell you the truth, 我其实对那个电影没有太大的兴趣。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-d228841cdb",
+    "expression": "We'll need to think about what kind of ... that we're dealing with,",
+    "variants": [],
+    "collocation": {
+      "en": "Use We'll need to think about what kind of ... that we're dealing with, ... to [situation-appropriate completion of the template]",
+      "zh": "It's kind of + [形容词/描述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在讨论中界定话题范围，显示分析问题的细致。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "We'll need to think about what kind of ... that we're dealing with, For example, this is a great way to introduce your point naturally.",
+      "zh": "We'll need to think about what kind of pollution that we're dealing with 才能找到合适的解决方案。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-dafdbfeda5",
+    "expression": "Well it really depends on how you define",
+    "variants": [],
+    "collocation": {
+      "en": "Use Well it really depends on how you define ... to [situation-appropriate completion of the template]",
+      "zh": "Well, + [回答/陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在回答前先明确概念定义，显示思辨能力，常用于Part 3。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Well it really depends on how you define For example, this is a great way to introduce your point naturally.",
+      "zh": "Well it really depends on how you define success。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-336e9039b3",
+    "expression": "Well, personally,",
+    "variants": [],
+    "collocation": {
+      "en": "Use Well, personally, ... to [situation-appropriate completion of the template]",
+      "zh": "Well, + [回答/陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于自然引出个人观点，结合well作为思考缓冲。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Well, personally, For example, this is a great way to introduce your point naturally.",
+      "zh": "Well, personally, 我觉得政府应该采取更多措施来保护环境。"
+    },
+    "cefr": "A1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ef60cc4d5e",
+    "expression": "Yes, I'd love to! Actually, I just remembered that",
+    "variants": [],
+    "collocation": {
+      "en": "Use Yes, I'd love to! Actually, I just remembered that ... to [situation-appropriate completion of the template]",
+      "zh": "Actually, + [纠正/新信息]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used when drawing on personal memories or past experiences",
+      "zh": "用于通过回忆个人经历来回答问题时使用，显示热情和自然叙述。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, natural narrative technique",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Yes, I'd love to! Actually, I just remembered that For example, this is a great way to introduce your point naturally.",
+      "zh": "Yes, I'd love to! Actually, I just remembered that 我以前去过那个城市一次。"
+    },
+    "cefr": "A1",
+    "categoryIds": [
+      "cat-003"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "opinion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-130913cadc",
+    "expression": "Things like ... have definitely pushed us towards a brighter future",
+    "variants": [],
+    "collocation": {
+      "en": "Use Things like ... have definitely pushed us towards a brighter future. to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to show alignment with the interlocutor or to confirm a shared understanding",
+      "zh": "用于表达对技术进步或社会发展的积极态度，显示与考官的认同。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, build rapport with the listener",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Things like ... have definitely pushed us towards a brighter future For example, this is a great way to introduce your point naturally.",
+      "zh": "Things like renewable energy have definitely pushed us towards a brighter future。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-004"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "agreement"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-d2196c2d3f",
+    "expression": "Well, actually, I wouldn't say so",
+    "variants": [],
+    "collocation": {
+      "en": "Use Well, actually, I wouldn't say so... to [situation-appropriate completion of the template]",
+      "zh": "Well, + [回答/陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于礼貌地表达不同意见，适用于Part 3中的讨论。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Well, actually, I wouldn't say so For example, this is a great way to introduce your point naturally.",
+      "zh": "Well, actually, I wouldn't say so 因为我身边的例子正好相反。"
+    },
+    "cefr": "A1",
+    "categoryIds": [
+      "cat-005"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "disagreement"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-bb5e5bde15",
+    "expression": "Well, yes, but",
+    "variants": [],
+    "collocation": {
+      "en": "Use Well, yes, but ... to [situation-appropriate completion of the template]",
+      "zh": "Well, + [回答/陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于先部分认同再提出不同意见，是一种礼貌的让步表达。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Well, yes, but For example, this is a great way to introduce your point naturally.",
+      "zh": "Well, yes, but 我们也要考虑到成本的问题。"
+    },
+    "cefr": "A1",
+    "categoryIds": [
+      "cat-005"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "disagreement"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-625cd4cb3d",
+    "expression": "Well... I wouldn't say so. (subjective)",
+    "variants": [],
+    "collocation": {
+      "en": "Use Well... I wouldn't say so. (subjective) to [situation-appropriate completion of the template]",
+      "zh": "Well, + [回答/陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于礼貌地表达主观不同意见，语气较委婉。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Well... I wouldn't say so. (subjective) For example, this is a great way to introduce your point naturally.",
+      "zh": "Well... I wouldn't say so 因为每个人对快乐的定义不一样嘛。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-005"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "disagreement"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-c77411d83d",
+    "expression": "\"This trend is likely to continue, and perhaps...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"This trend is likely to continue, and perhaps...\" to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to transition from a general claim to specific evidence",
+      "zh": "用于在讨论趋势时表达预测，适合Part 3中的分析性回答。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, strengthens arguments with concrete evidence",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "\"This trend is likely to continue, and perhaps...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "This trend is likely to continue, and perhaps 我们还会看到更多的创新。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-006"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "hedging",
+      "uncertainty"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-b1244239b3",
+    "expression": "could / might / perhaps / probably / be likely to",
+    "variants": [],
+    "collocation": {
+      "en": "Use could / might / perhaps / probably / be likely to .... to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to transition from a general claim to specific evidence",
+      "zh": "用于表达不确定或可能性，避免过于绝对的陈述，是重要的模糊限制语组。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, strengthens arguments with concrete evidence",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "could / might / perhaps / probably / be likely to For example, this is a great way to introduce your point naturally.",
+      "zh": "The situation could improve if we take proper action. It might take some time though."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-006"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "hedging",
+      "uncertainty"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-44b977cc86",
+    "expression": "I started using WeChat from.... perhaps two years ago",
+    "variants": [],
+    "collocation": {
+      "en": "Use I started using WeChat from.... perhaps two years ago? to [situation-appropriate completion of the template]",
+      "zh": "Perhaps + [建议]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在回忆具体时间点时表达不确定，使用perhaps来弱化语气。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "I started using WeChat from.... perhaps two years ago For example, this is a great way to introduce your point naturally.",
+      "zh": "I started using WeChat from.... perhaps two years ago 或者更早一些。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-006"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "hedging",
+      "uncertainty"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-c709fd4b4f",
+    "expression": "Maybe / Perhaps",
+    "variants": [],
+    "collocation": {
+      "en": "Use Maybe / Perhaps ... to [situation-appropriate completion of the template]",
+      "zh": "Perhaps + [建议]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于表达猜测或建议，是基础级别的模糊限制语。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Maybe / Perhaps For example, this is a great way to introduce your point naturally.",
+      "zh": "Maybe we should consider other options. Perhaps there's a better way."
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-006"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "hedging",
+      "uncertainty"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-b79dac33f2",
+    "expression": "Basically, what I wanna say is",
+    "variants": [],
+    "collocation": {
+      "en": "Use Basically, what I wanna say is ... to [situation-appropriate completion of the template]",
+      "zh": "Basically, + [简化版]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于总结或提炼核心观点，是一种非正式但自然的表达方式。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Basically, what I wanna say is For example, this is a great way to introduce your point naturally.",
+      "zh": "Basically, what I wanna say is 我们需要更多的实践机会。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-24db48f9e3",
+    "expression": "So basically what I wanna say is",
+    "variants": [],
+    "collocation": {
+      "en": "Use So basically what I wanna say is .... to [situation-appropriate completion of the template]",
+      "zh": "Basically, + [简化版]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used when you realise your previous wording was unclear or incomplete",
+      "zh": "用于意识到之前的表述不够清楚时，重新组织语言来总结核心观点。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, demonstrates self-correction ability",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "So basically what I wanna say is For example, this is a great way to introduce your point naturally.",
+      "zh": "So basically what I wanna say is 这个方案虽然贵，但长期来看是值得的。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-df4dacafd6",
+    "expression": "The ... thing I'd like to ... is,",
+    "variants": [],
+    "collocation": {
+      "en": "Use The ... thing I'd like to ... is, ... to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to highlight the most important aspect of your argument",
+      "zh": "用于强调你的观点中最重要的方面，引导听众注意关键信息。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, highlights key information effectively",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "The ... thing I'd like to ... is, For example, this is a great way to introduce your point naturally.",
+      "zh": "The first thing I'd like to mention is 这个产品的设计非常人性化。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-bb60fa3e88",
+    "expression": "The next thing I'd like to bring up is,",
+    "variants": [],
+    "collocation": {
+      "en": "Use The next thing I'd like to bring up is, ... to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to highlight the most important aspect of your argument",
+      "zh": "用于在长篇回答中引入下一个要点，使结构更清晰。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, highlights key information effectively",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "The next thing I'd like to bring up is, For example, this is a great way to introduce your point naturally.",
+      "zh": "The next thing I'd like to bring up is 这个政策对小型企业的影响。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-d1f40e2f92",
+    "expression": "What I'd like to point out is,",
+    "variants": [],
+    "collocation": {
+      "en": "Use What I'd like to point out is, ... to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to highlight the most important aspect of your argument",
+      "zh": "用于强调特定的重要观点，引导听众注意关键信息。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, highlights key information effectively",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "What I'd like to point out is, For example, this is a great way to introduce your point naturally.",
+      "zh": "What I'd like to point out is 我们在这个领域的投入还远远不够。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-007"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "emphasis"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-d62c31ef8d",
+    "expression": "let's say ...\nthat is to say",
+    "variants": [],
+    "collocation": {
+      "en": "Use let's say ...\nthat is to say to [situation-appropriate completion of the template]",
+      "zh": "[内容], that is to say, [精确解释]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used when you realise your previous wording was unclear or incomplete",
+      "zh": "用于意识到之前说法不够清晰时，重新解释或精确说明。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates self-correction ability",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "let's say ...\nthat is to say For example, this is a great way to introduce your point naturally.",
+      "zh": "Let's say we invest in education, that is to say 我们需要更多资源投入师资培训。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-008"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "fluency",
+      "rephrasing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-e88790b7d5",
+    "expression": "That is to say,",
+    "variants": [],
+    "collocation": {
+      "en": "Use That is to say, ... to [situation-appropriate completion of the template]",
+      "zh": "[内容], that is to say, [精确解释]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于重新解释或精确说明之前的观点，使表达更清晰。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "That is to say, For example, this is a great way to introduce your point naturally.",
+      "zh": "That is to say, 我们并不反对技术本身，而是担心它被滥用。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-008"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "fluency",
+      "rephrasing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-8b8fbbece1",
+    "expression": "Well, lemme rephrase that,",
+    "variants": [],
+    "collocation": {
+      "en": "Use Well, lemme rephrase that, ... to [situation-appropriate completion of the template]",
+      "zh": "Well, + [回答/陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于意识到自己的表述不准确时，主动进行修正。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Well, lemme rephrase that, For example, this is a great way to introduce your point naturally.",
+      "zh": "Well, lemme rephrase that, 其实我想表达的是更深层的含义。"
+    },
+    "cefr": "A1",
+    "categoryIds": [
+      "cat-008"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "fluency",
+      "rephrasing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-65b55562bb",
+    "expression": "What I mean is that,",
+    "variants": [],
+    "collocation": {
+      "en": "Use What I mean is that, ... to [situation-appropriate completion of the template]",
+      "zh": "I mean, + [澄清/修正]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于澄清之前不够明确的表述，使观点更加清晰。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "What I mean is that, For example, this is a great way to introduce your point naturally.",
+      "zh": "What I mean is that, 我并不是说不重要，而是说我们需要分清主次。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-008"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "fluency",
+      "rephrasing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-32f62846a9",
+    "expression": "What I mean is,",
+    "variants": [],
+    "collocation": {
+      "en": "Use What I mean is, ... to [situation-appropriate completion of the template]",
+      "zh": "I mean, + [澄清/修正]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于澄清之前不够明确的表述，简洁版。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "What I mean is, For example, this is a great way to introduce your point naturally.",
+      "zh": "What I mean is, 我们应该更关注实际效果而不是形式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-008"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "fluency",
+      "rephrasing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-9c6c060c73",
+    "expression": "\"On top of that,...\" / \"Furthermore,...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"On top of that,...\" / \"Furthermore,...\" to [situation-appropriate completion of the template]",
+      "zh": "Furthermore, + [额外论点]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to structure multi-point answers, especially in Part 2 long turns",
+      "zh": "用于在结构化回答中添加额外论点，适合Part 2和Part 3。"
+    },
+    "connotation": {
+      "en": "formal, academic, structured, improves coherence and cohesion scores",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "\"On top of that,...\" / \"Furthermore,...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "Furthermore, we need to consider the environmental impact of this decision."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-009"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "sequencing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-630a65d151",
+    "expression": "..., because I had to get up very early the next day",
+    "variants": [],
+    "collocation": {
+      "en": "Use ..., because I had to get up very early the next day. to [situation-appropriate completion of the template]",
+      "zh": "Next, + [逻辑上的下一步]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于解释某个行为的原因，特别是时间限制导致的行动。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, demonstrates logical reasoning ability",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "..., because I had to get up very early the next day For example, this is a great way to introduce your point naturally.",
+      "zh": "我没有参加那个聚会，because I had to get up very early the next day。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-009"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "sequencing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-dd4eaf5719",
+    "expression": "And on top of that, another reason is that",
+    "variants": [],
+    "collocation": {
+      "en": "Use And on top of that, another reason is that ... to [situation-appropriate completion of the template]",
+      "zh": "On top of that, + [额外负面/正面]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于在列举多个原因时引出额外的一个原因。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates logical reasoning ability",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "And on top of that, another reason is that For example, this is a great way to introduce your point naturally.",
+      "zh": "And on top of that, another reason is that 这种方式还可以节省大量的时间。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-009"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "sequencing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-5a861e6269",
+    "expression": "First of all,",
+    "variants": [],
+    "collocation": {
+      "en": "Use First of all, ... to [situation-appropriate completion of the template]",
+      "zh": "First of all, + [第一步]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于开始列举多个要点时的第一个点，是非常基础的结构化表达。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "First of all, For example, this is a great way to introduce your point naturally.",
+      "zh": "First of all, 我们需要确定项目的预算和范围。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-009"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "sequencing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-9baa617ddc",
+    "expression": "First of all, ..; Secondly, ...; Last but not least,",
+    "variants": [],
+    "collocation": {
+      "en": "Use First of all, ..; Secondly, ...; Last but not least, ... to [situation-appropriate completion of the template]",
+      "zh": "First of all, + [第一步]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于组织多要点回答的完整框架，从第一点到最后的要点。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "First of all, ..; Secondly, ...; Last but not least, For example, this is a great way to introduce your point naturally.",
+      "zh": "First of all, we need to plan; Secondly, we need to execute; Last but not least, we should evaluate."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-009"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "sequencing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-f22cb89fd1",
+    "expression": "Meanwhile, ... / With that being said, ... / Having said that,",
+    "variants": [],
+    "collocation": {
+      "en": "Use Meanwhile, ... / With that being said, ... / Having said that, ... to [situation-appropriate completion of the template]",
+      "zh": "While + [让步点], [主要论点]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在讨论中引入不同的角度或转折，显示思辨能力。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Meanwhile, ... / With that being said, ... / Having said that, For example, this is a great way to introduce your point naturally.",
+      "zh": "Meanwhile, the government is also working on new regulations. With that being said, the progress is still slow."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-009"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "sequencing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-2794a8e6d9",
+    "expression": "On top of that,",
+    "variants": [],
+    "collocation": {
+      "en": "Use On top of that, ... to [situation-appropriate completion of the template]",
+      "zh": "On top of that, + [额外负面/正面]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在已有一个观点的基础上增加额外的论点（通常是负面或正面的追加）。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "On top of that, For example, this is a great way to introduce your point naturally.",
+      "zh": "On top of that, 我们还要考虑到用户隐私的问题。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-009"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "sequencing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-54d42798ec",
+    "expression": "To begin with,",
+    "variants": [],
+    "collocation": {
+      "en": "Use To begin with, ... to [situation-appropriate completion of the template]",
+      "zh": "To begin with, + [初始阶段]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于开始叙述或讨论时的开场表达。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "To begin with, For example, this is a great way to introduce your point naturally.",
+      "zh": "To begin with, 我们先来了解一下这个问题的背景。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-009"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "sequencing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-d56aa7b725",
+    "expression": "to begin with, ... ; other than that,",
+    "variants": [],
+    "collocation": {
+      "en": "Use to begin with, ... ; other than that, ... to [situation-appropriate completion of the template]",
+      "zh": "To begin with, + [初始阶段]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于先提出第一个点，然后过渡到其他方面的讨论。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "to begin with, ... ; other than that, For example, this is a great way to introduce your point naturally.",
+      "zh": "To begin with, we should focus on quality; other than that, cost is also a concern."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-009"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "sequencing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-a471236795",
+    "expression": "Well, first of all, lemme tell you more about",
+    "variants": [],
+    "collocation": {
+      "en": "Use Well, first of all, lemme tell you more about ... to [situation-appropriate completion of the template]",
+      "zh": "Well, + [回答/陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于口语中以自然的方式开启详细叙述，well作为思考缓冲。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Well, first of all, lemme tell you more about For example, this is a great way to introduce your point naturally.",
+      "zh": "Well, first of all, lemme tell you more about 我是如何开始学吉他的。"
+    },
+    "cefr": "A1",
+    "categoryIds": [
+      "cat-009"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "sequencing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-45858e8d3a",
+    "expression": "Yeah, you might wonder what happened next, if I remember it correctly,",
+    "variants": [],
+    "collocation": {
+      "en": "Use Yeah, you might wonder what happened next, if I remember it correctly, ... to [situation-appropriate completion of the template]",
+      "zh": "Next, + [逻辑上的下一步]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to structure multi-point answers, especially in Part 2 long turns",
+      "zh": "用于在讲故事或描述事件时增加互动感，让叙述更生动。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, improves coherence and cohesion scores",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Yeah, you might wonder what happened next, if I remember it correctly, For example, this is a great way to introduce your point naturally.",
+      "zh": "Yeah, you might wonder what happened next, if I remember it correctly, 我们是第二天早上出发的。"
+    },
+    "cefr": "A1",
+    "categoryIds": [
+      "cat-009"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "sequencing"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ed0c864407",
+    "expression": "and the reason is that",
+    "variants": [],
+    "collocation": {
+      "en": "Use and the reason is that ... to [situation-appropriate completion of the template]",
+      "zh": "The reason is that + [原因]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于解释前面陈述的理由，是最直接的原因表达方式之一。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates logical reasoning ability",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "and the reason is that For example, this is a great way to introduce your point naturally.",
+      "zh": "我选择这个专业是因为就业前景好，and the reason is that 这个行业正在快速发展。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-5ae83c5b6b",
+    "expression": "And the reason is that,",
+    "variants": [],
+    "collocation": {
+      "en": "Use And the reason is that, ... to [situation-appropriate completion of the template]",
+      "zh": "The reason is that + [原因]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于引出原因，是解释论证的标准表达。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates logical reasoning ability",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "And the reason is that, For example, this is a great way to introduce your point naturally.",
+      "zh": "And the reason is that, 这个问题涉及到了很多复杂的社会因素。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-a6a3308ad7",
+    "expression": "As a result,",
+    "variants": [],
+    "collocation": {
+      "en": "Use As a result, ... to [situation-appropriate completion of the template]",
+      "zh": "[原因], as a result, [结果]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于引出某个行动或情况的结果，显示因果逻辑。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "As a result, For example, this is a great way to introduce your point naturally.",
+      "zh": "As a result, 很多小商店不得不关门歇业。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-5cccd9cc23",
+    "expression": "because of this,",
+    "variants": [],
+    "collocation": {
+      "en": "Use because of this, ... to [situation-appropriate completion of the template]",
+      "zh": "because of + [名词/名词短语]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于表达因果关系，是口语中常用的过渡表达。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "because of this, For example, this is a great way to introduce your point naturally.",
+      "zh": "我们改变了营销策略，because of this, 销售额在三个月内翻了一番。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-9dcd6ff9e7",
+    "expression": "due to the reason/fact that",
+    "variants": [],
+    "collocation": {
+      "en": "Use due to the reason/fact that ... to [situation-appropriate completion of the template]",
+      "zh": "due to + [名词短语]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于正式地解释原因，比简单的because更正式。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "due to the reason/fact that For example, this is a great way to introduce your point naturally.",
+      "zh": "Due to the fact that the weather was terrible, the event had to be cancelled."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-f293755fa8",
+    "expression": "I chose ... because I liked it in high school",
+    "variants": [],
+    "collocation": {
+      "en": "Use I chose ... because I liked it in high school. to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于解释个人选择时提及过去经历，使回答更有说服力。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, demonstrates logical reasoning ability",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I chose ... because I liked it in high school For example, this is a great way to introduce your point naturally.",
+      "zh": "I chose engineering because I liked it in high school 而且我的数学一直很好。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-bd7afb3d4c",
+    "expression": "I reckon the reason is that",
+    "variants": [],
+    "collocation": {
+      "en": "Use I reckon the reason is that ... to [situation-appropriate completion of the template]",
+      "zh": "The reason is that + [原因]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于引出你推测的原因，显示分析能力。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "I reckon the reason is that For example, this is a great way to introduce your point naturally.",
+      "zh": "I reckon the reason is that 年轻人更喜欢灵活的工作方式。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-d1cd48fc67",
+    "expression": "Most importantly, the reason is that",
+    "variants": [],
+    "collocation": {
+      "en": "Use Most importantly, the reason is that ... to [situation-appropriate completion of the template]",
+      "zh": "The reason is that + [原因]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于强调最重要的原因，适合Part 3中的深度分析。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Most importantly, the reason is that For example, this is a great way to introduce your point naturally.",
+      "zh": "Most importantly, the reason is that 这个方案能够从根本上解决问题。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-5e0400fe20",
+    "expression": "The reason why ... is probably due to the fact that",
+    "variants": [],
+    "collocation": {
+      "en": "Use The reason why ... is probably due to the fact that ... to [situation-appropriate completion of the template]",
+      "zh": "due to + [名词短语]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于以正式的方式分析某个现象背后的原因。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates logical reasoning ability",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "The reason why ... is probably due to the fact that For example, this is a great way to introduce your point naturally.",
+      "zh": "The reason why this happens is probably due to the fact that people are becoming more health-conscious."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-5f422abe3f",
+    "expression": "This has led to",
+    "variants": [],
+    "collocation": {
+      "en": "Use This has led to... to [situation-appropriate completion of the template]",
+      "zh": "[A] led to [B]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于描述某个变化或行动带来的连锁反应或结果。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates logical reasoning ability",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "This has led to For example, this is a great way to introduce your point naturally.",
+      "zh": "This has led to a significant increase in online shopping during the pandemic."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-364df8ef58",
+    "expression": "This is largely due to the fact that",
+    "variants": [],
+    "collocation": {
+      "en": "Use This is largely due to the fact that ... to [situation-appropriate completion of the template]",
+      "zh": "due to + [名词短语]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于强调某个结果的主要原因是某个特定因素。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates logical reasoning ability",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "This is largely due to the fact that For example, this is a great way to introduce your point naturally.",
+      "zh": "This is largely due to the fact that more people are working from home now."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-011"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "reasoning",
+      "causality"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-862ca20582",
+    "expression": "\"It's hard to say for sure, but I imagine that...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"It's hard to say for sure, but I imagine that...\" to [situation-appropriate completion of the template]",
+      "zh": "It's hard to say + [不确定的问题]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used when speculating or when your knowledge is incomplete",
+      "zh": "用于在不完全确定的情况下表达猜测，显示诚实和谨慎。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows honest self-assessment",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "\"It's hard to say for sure, but I imagine that...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "It's hard to say for sure, but I imagine that the situation will improve over time."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-448ca0f4a8",
+    "expression": "\"Not only that, but it also...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"Not only that, but it also...\" to [situation-appropriate completion of the template]",
+      "zh": "Also, + [附加信息]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于强调某个观点不仅有一个优点，还有额外的积极方面。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "\"Not only that, but it also...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "Not only that, but it also helps reduce stress and improve mental health."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-27574683f7",
+    "expression": "\"Nowadays, however,...\" / \"Today, on the other hand,...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"Nowadays, however,...\" / \"Today, on the other hand,...\" to [situation-appropriate completion of the template]",
+      "zh": "[优点或论点A]. On the other hand, + [对立的缺点或论点B]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于在对比过去和现在时引入转折，适合Part 3中的时间对比。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "\"Nowadays, however,...\" / \"Today, on the other hand,...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "Nowadays, however, people are more aware of environmental issues than ever before."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-8d1d638843",
+    "expression": "\"On the other hand,...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"On the other hand,...\" to [situation-appropriate completion of the template]",
+      "zh": "[优点或论点A]. On the other hand, + [对立的缺点或论点B]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于引出相反的观点或问题的另一面，显示辩证思维。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "\"On the other hand,...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "On the other hand, 这种做法也有其局限性。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-a2aadd5e02",
+    "expression": "Despite the fact that ..., I still reckon that",
+    "variants": [],
+    "collocation": {
+      "en": "Use Despite the fact that ..., I still reckon that  ... to [situation-appropriate completion of the template]",
+      "zh": "Despite + [障碍], [依然成真的结果]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在承认某个障碍或不同观点后，仍然坚持自己的立场。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Despite the fact that ..., I still reckon that For example, this is a great way to introduce your point naturally.",
+      "zh": "Despite the fact that the initial cost is high, I still reckon that it's worth the investment."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-8483188d29",
+    "expression": "Despite the time constraints, I managed to",
+    "variants": [],
+    "collocation": {
+      "en": "Use Despite the time constraints, I managed to... to [situation-appropriate completion of the template]",
+      "zh": "Despite + [障碍], [依然成真的结果]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于描述在时间紧张的情况下仍然完成了某事，显示克服困难的能力。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Despite the time constraints, I managed to For example, this is a great way to introduce your point naturally.",
+      "zh": "Despite the time constraints, I managed to finish the project on schedule."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-693cb966b4",
+    "expression": "Even though this is the case,",
+    "variants": [],
+    "collocation": {
+      "en": "Use Even though this is the case, ... to [situation-appropriate completion of the template]",
+      "zh": "Even though + [障碍], [依然成真的结果]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在承认某种情况存在的前提下，仍然坚持自己的观点或继续论证。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Even though this is the case, For example, this is a great way to introduce your point naturally.",
+      "zh": "Even though this is the case, 我们也不应该放弃努力。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-e3c3ead1b4",
+    "expression": "however, if you'd like to know ...., I can definitely shed some light on that",
+    "variants": [],
+    "collocation": {
+      "en": "Use however, if you'd like to know ...., I can definitely shed some light on that to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to show alignment with the interlocutor or to confirm a shared understanding",
+      "zh": "用于主动提供关于某个特定话题的信息，显示积极沟通的态度。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, build rapport with the listener",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "however, if you'd like to know ...., I can definitely shed some light on that For example, this is a great way to introduce your point naturally.",
+      "zh": "However, if you'd like to know more about the details, I can definitely shed some light on that."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-085cb6aa48",
+    "expression": "However, in most cases,",
+    "variants": [],
+    "collocation": {
+      "en": "Use However, in most cases, ... to [situation-appropriate completion of the template]",
+      "zh": "In most cases, + [一般规律]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于在承认例外情况存在的同时，强调一般规律或常态。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "However, in most cases, For example, this is a great way to introduce your point naturally.",
+      "zh": "However, in most cases, 学生们还是更喜欢面对面的交流。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-4f9f9a3672",
+    "expression": "However, on the other hand,",
+    "variants": [],
+    "collocation": {
+      "en": "Use However, on the other hand, ... to [situation-appropriate completion of the template]",
+      "zh": "[优点或论点A]. On the other hand, + [对立的缺点或论点B]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于同时使用两个转折表达，增加论证的层次感。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "However, on the other hand, For example, this is a great way to introduce your point naturally.",
+      "zh": "However, on the other hand, 我们也不能忽视技术和隐私的潜在风险。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-de3ee69956",
+    "expression": "I love everything about my hometown, but what I like the most about it is",
+    "variants": [],
+    "collocation": {
+      "en": "Use I love everything about my hometown, but what I like the most about it is ... to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于先表达整体上喜欢，然后再聚焦到最喜欢的方面，是一种对比式强调。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, adds depth to arguments by acknowledging alternatives",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I love everything about my hometown, but what I like the most about it is For example, this is a great way to introduce your point naturally.",
+      "zh": "I love everything about my hometown, but what I like the most about it is 那种慢节奏的生活方式。"
+    },
+    "cefr": "C1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ae65bb55aa",
+    "expression": "Neither, to be honest. But if I have to choose one, I'd rather ... than",
+    "variants": [],
+    "collocation": {
+      "en": "Use Neither, to be honest. But if I have to choose one, I'd rather ... than ... to [situation-appropriate completion of the template]",
+      "zh": "To be honest, + [坦白的话]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在两个选项中都不太满意时，勉强选择一个。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Neither, to be honest. But if I have to choose one, I'd rather ... than For example, this is a great way to introduce your point naturally.",
+      "zh": "Neither, to be honest. But if I have to choose one, I'd rather stay home than go out."
+    },
+    "cefr": "C1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-87420dace2",
+    "expression": "on one hand, ...; on the other hand,",
+    "variants": [],
+    "collocation": {
+      "en": "Use on one hand, ...; on the other hand, ... to [situation-appropriate completion of the template]",
+      "zh": "[优点或论点A]. On the other hand, + [对立的缺点或论点B]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于从两个不同的角度分析问题，显示全面的思辨能力。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "on one hand, ...; on the other hand, For example, this is a great way to introduce your point naturally.",
+      "zh": "On one hand, technology makes life more convenient; on the other hand, it can also be distracting."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-82773790ad",
+    "expression": "On the other hand,",
+    "variants": [],
+    "collocation": {
+      "en": "Use On the other hand, ... to [situation-appropriate completion of the template]",
+      "zh": "[优点或论点A]. On the other hand, + [对立的缺点或论点B]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于引出对立的观点或问题的另一面。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "On the other hand, For example, this is a great way to introduce your point naturally.",
+      "zh": "On the other hand, 过度依赖科技也可能带来负面影响。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-4a1fe80fd3",
+    "expression": "That's one way to look at it. However, I'll have to",
+    "variants": [],
+    "collocation": {
+      "en": "Use That's one way to look at it. However, I'll have to ... to [situation-appropriate completion of the template]",
+      "zh": "That's one way to look at it. + [另一种观点]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于先礼貌地承认对方的观点，然后礼貌地提出自己的不同意见。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "That's one way to look at it. However, I'll have to For example, this is a great way to introduce your point naturally.",
+      "zh": "That's one way to look at it. However, I'll have to disagree based on my own experience."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-e50ea6f3f0",
+    "expression": "though, although, despite the fact that ..., I know that",
+    "variants": [],
+    "collocation": {
+      "en": "Use though, although, despite the fact that ..., I know that ... to [situation-appropriate completion of the template]",
+      "zh": "Despite + [障碍], [依然成真的结果]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于表达让步关系，即虽然存在某个事实，但仍然持有某个观点。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds depth to arguments by acknowledging alternatives",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "though, although, despite the fact that ..., I know that For example, this is a great way to introduce your point naturally.",
+      "zh": "Though it's expensive, I know that quality education is worth every penny."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-945be679fc",
+    "expression": "Well, everyone's entitled to their own opinion of course, however,",
+    "variants": [],
+    "collocation": {
+      "en": "Use Well, everyone's entitled to their own opinion of course, however, ... to [situation-appropriate completion of the template]",
+      "zh": "Well, + [回答/陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于先承认每个人都有权持有自己的观点，然后再礼貌地表达不同的立场。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Well, everyone's entitled to their own opinion of course, however, For example, this is a great way to introduce your point naturally.",
+      "zh": "Well, everyone's entitled to their own opinion of course, however, 我个人的经历告诉我并不完全是这样。"
+    },
+    "cefr": "A1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-0a5b17a8e0",
+    "expression": "Well, technically, it's not true though",
+    "variants": [],
+    "collocation": {
+      "en": "Use Well, technically, it's not true though... to [situation-appropriate completion of the template]",
+      "zh": "Well, + [回答/陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于礼貌地指出某个说法的技术性不准确，是一种温和的纠正。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Well, technically, it's not true though For example, this is a great way to introduce your point naturally.",
+      "zh": "Well, technically, it's not true though 因为数据并不支持这个说法。"
+    },
+    "cefr": "A1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-d493d39487",
+    "expression": "You’re entitled to your own opinion of course, however, I must say",
+    "variants": [],
+    "collocation": {
+      "en": "Use You’re entitled to your own opinion of course, however, I must say ... to [situation-appropriate completion of the template]",
+      "zh": "[A] led to [B]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to show alignment with the interlocutor or to confirm a shared understanding",
+      "zh": "用于先礼貌地承认对方的观点权利，然后强调自己的不同立场。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, build rapport with the listener",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "You’re entitled to your own opinion of course, however, I must say For example, this is a great way to introduce your point naturally.",
+      "zh": "You're entitled to your own opinion of course, however, I must say I see things differently."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-013"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "contrast",
+      "concession"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-6ce7cfd55c",
+    "expression": "basically, I just like",
+    "variants": [],
+    "collocation": {
+      "en": "Use basically, I just like ... to [situation-appropriate completion of the template]",
+      "zh": "Basically, + [简化版]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于简化表达自己的偏好，是一种随意自然的表达方式。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "basically, I just like For example, this is a great way to introduce your point naturally.",
+      "zh": "Basically, I just like 这种风格因为它看起来简洁大方。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-508edea4bc",
+    "expression": "For example / for instance,",
+    "variants": [],
+    "collocation": {
+      "en": "Use For example / for instance, ... to [situation-appropriate completion of the template]",
+      "zh": "[抽象观点]. For instance, + [具体例证]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于引出具体例子来支持前面的观点或陈述。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "For example / for instance, For example, this is a great way to introduce your point naturally.",
+      "zh": "For example, 很多公司已经开始实行四天工作制了。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-a327db9d92",
+    "expression": "For example,",
+    "variants": [],
+    "collocation": {
+      "en": "Use For example, ... to [situation-appropriate completion of the template]",
+      "zh": "[一般陈述], for example, + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于引出具体的例子来支撑前面的观点。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "For example, For example, this is a great way to introduce your point naturally.",
+      "zh": "For example, 我每天早上都会跑步半小时。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-e4cac5b74f",
+    "expression": "I make it a point to remember daily tasks like",
+    "variants": [],
+    "collocation": {
+      "en": "Make it a point to [action/habit], especially when [context]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to transition from a general claim to specific evidence",
+      "zh": "用于通过具体事例来说明自己的习惯或做法。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, strengthens arguments with concrete evidence",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I make it a point to remember daily tasks like For example, this is a great way to introduce your point naturally.",
+      "zh": "I make it a point to remember daily tasks like 买菜、缴费和接孩子放学。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-e1a63000f2",
+    "expression": "I was always strong in ..., so it seemed like a natural progression",
+    "variants": [],
+    "collocation": {
+      "en": "Use I was always strong in ..., so it seemed like a natural progression. to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to transition from a general claim to specific evidence",
+      "zh": "用于解释某个选择或发展是自然而然的，基于个人的优势或背景。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, strengthens arguments with concrete evidence",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I was always strong in ..., so it seemed like a natural progression For example, this is a great way to introduce your point naturally.",
+      "zh": "I was always strong in mathematics, so it seemed like a natural progression to study engineering."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-f5fea2753d",
+    "expression": "I'd rather .... on something else, like",
+    "variants": [],
+    "collocation": {
+      "en": "Use I'd rather .... on something else, like ... to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to transition from a general claim to specific evidence",
+      "zh": "用于表达宁愿将时间或资源投入其他事情，并用like举例说明。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, strengthens arguments with concrete evidence",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "I'd rather .... on something else, like For example, this is a great way to introduce your point naturally.",
+      "zh": "I'd rather spend my money on something else, like 旅行或者学习新技能。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-d2522b020d",
+    "expression": "It's like ... but",
+    "variants": [],
+    "collocation": {
+      "en": "Use It's like ... but ... to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to introduce a different perspective or limitation to a previous statement",
+      "zh": "用于通过比喻或类比来解释某事物，并指出区别。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, adds depth to arguments by acknowledging alternatives",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "It's like ... but For example, this is a great way to introduce your point naturally.",
+      "zh": "It's like riding a bike but 你需要学会在不同的路况下调整平衡。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-863d668287",
+    "expression": "It's something like",
+    "variants": [],
+    "collocation": {
+      "en": "Use It's something like ... to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to transition from a general claim to specific evidence",
+      "zh": "用于模糊地描述某事物，类似于中文的'大概像是'。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, strengthens arguments with concrete evidence",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "It's something like For example, this is a great way to introduce your point naturally.",
+      "zh": "It's something like 一个可以在线协作的编辑工具。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-c35f3bfc83",
+    "expression": "Like I mentioned before,",
+    "variants": [],
+    "collocation": {
+      "en": "Use Like I mentioned before, ... to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在口语中回指之前提到的内容，增加回答的连贯性。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Like I mentioned before, For example, this is a great way to introduce your point naturally.",
+      "zh": "Like I mentioned before, 运动对我的生活有着非常重要的影响。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-04873c6e65",
+    "expression": "n. -> something like",
+    "variants": [],
+    "collocation": {
+      "en": "Use n. -> something like ... to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to transition from a general claim to specific evidence",
+      "zh": "用于在名词后面用'something like'引出近似的描述或例子。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, strengthens arguments with concrete evidence",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "n. -> something like For example, this is a great way to introduce your point naturally.",
+      "zh": "I use a device — something like a smartwatch — to track my daily steps."
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-02cca07319",
+    "expression": "people who like to wear sunglasses sometimes",
+    "variants": [],
+    "collocation": {
+      "en": "Use people who like to wear sunglasses sometimes ... to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to transition from a general claim to specific evidence",
+      "zh": "用于将抽象概念具体化，通过典型人群的例子来说明。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, strengthens arguments with concrete evidence",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "people who like to wear sunglasses sometimes For example, this is a great way to introduce your point naturally.",
+      "zh": "People who like to wear sunglasses sometimes 只是为了看起来更酷，并不一定是因为阳光刺眼。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ec8e0d5293",
+    "expression": "Personally, like I mentioned before,",
+    "variants": [],
+    "collocation": {
+      "en": "Use Personally, like I mentioned before, .... to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于结合个人观点和之前提到过的内容，增加连贯性。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Personally, like I mentioned before, For example, this is a great way to introduce your point naturally.",
+      "zh": "Personally, like I mentioned before, 我觉得平衡工作和生活非常重要。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-25bceb8aa7",
+    "expression": "something/somebody/somewhere like",
+    "variants": [],
+    "collocation": {
+      "en": "Use something/somebody/somewhere like ... to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to transition from a general claim to specific evidence",
+      "zh": "用于模糊地描述某人/某物/某地，是口语化举例的常用结构。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, strengthens arguments with concrete evidence",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "something/somebody/somewhere like For example, this is a great way to introduce your point naturally.",
+      "zh": "I'd like to visit somewhere like Japan or Korea for my next holiday."
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-065984f314",
+    "expression": "such as ... and so on",
+    "variants": [],
+    "collocation": {
+      "en": "Use such as ... and so on to [situation-appropriate completion of the template]",
+      "zh": "[类别或一般陈述], such as + [列举的具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于列举多个例子时使用，暗示例子还有很多。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "such as ... and so on For example, this is a great way to introduce your point naturally.",
+      "zh": "We offer various services, such as tutoring, consultation, and so on."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-c3592183d9",
+    "expression": "such as,",
+    "variants": [],
+    "collocation": {
+      "en": "Use such as, .... to [situation-appropriate completion of the template]",
+      "zh": "[类别或一般陈述], such as + [列举的具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于引出具体的例子来说明前面的陈述。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "such as, For example, this is a great way to introduce your point naturally.",
+      "zh": "There are many outdoor activities, such as hiking, cycling, and swimming."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-bda9306c2a",
+    "expression": "such as..., \nillustrated by..., \nlike ...,\nto name a few,",
+    "variants": [],
+    "collocation": {
+      "en": "Use such as..., \nillustrated by..., \nlike ...,\nto name a few, ... to [situation-appropriate completion of the template]",
+      "zh": "[类别或一般陈述], such as + [列举的具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于以多种方式举例说明，显示词汇多样性。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "such as..., \nillustrated by..., \nlike ...,\nto name a few, For example, this is a great way to introduce your point naturally.",
+      "zh": "Many factors matter, such as time, cost, and quality, to name a few."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-f0603da480",
+    "expression": "Take ... as an example,",
+    "variants": [],
+    "collocation": {
+      "en": "Use Take ... as an example, ... to [situation-appropriate completion of the template]",
+      "zh": "Take + [具体的人或情况], for instance"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于通过具体例子来说明一个观点，比'For example'更正式一些。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Take ... as an example, For example, this is a great way to introduce your point naturally.",
+      "zh": "Take China as an example, 它的高铁网络在过去十年中发展得非常迅速。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-3b058c1950",
+    "expression": "The colour I like most is",
+    "variants": [],
+    "collocation": {
+      "en": "Use The colour I like most is ... to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to transition from a general claim to specific evidence",
+      "zh": "用于回答关于偏好的问题时，直接引出最偏好的选项。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, strengthens arguments with concrete evidence",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "The colour I like most is For example, this is a great way to introduce your point naturally.",
+      "zh": "The colour I like most is blue 因为它让人感觉很平静。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-12ff91ebba",
+    "expression": "The first thing/reason/point I'd like to mention/bring up is,",
+    "variants": [],
+    "collocation": {
+      "en": "Use The first thing/reason/point I'd like to mention/bring up is, ... to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于在口语中组织多要点回答，引出第一个点。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, demonstrates logical reasoning ability",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "The first thing/reason/point I'd like to mention/bring up is, For example, this is a great way to introduce your point naturally.",
+      "zh": "The first point I'd like to bring up is 这个方案的成本效益非常高。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-3f7ea409d8",
+    "expression": "The second thing I'd like to mention is,",
+    "variants": [],
+    "collocation": {
+      "en": "Use The second thing I'd like to mention is, ... to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to structure multi-point answers, especially in Part 2 long turns",
+      "zh": "用于在Part 2的长篇陈述中引出第二个要点。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, improves coherence and cohesion scores",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "The second thing I'd like to mention is, For example, this is a great way to introduce your point naturally.",
+      "zh": "The second thing I'd like to mention is 这个地方的美食也特别有特色。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-cca723c635",
+    "expression": "Things like ... have probably done us more harm than good",
+    "variants": [],
+    "collocation": {
+      "en": "Use Things like ... have probably done us more harm than good. to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to transition from a general claim to specific evidence",
+      "zh": "用于表达对某类事物的负面评价，认为弊大于利。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, strengthens arguments with concrete evidence",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Things like ... have probably done us more harm than good For example, this is a great way to introduce your point naturally.",
+      "zh": "Things like fast food have probably done us more harm than good in the long run."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-4d169f8352",
+    "expression": "Well... I’d like to talk about/begin with …",
+    "variants": [],
+    "collocation": {
+      "en": "Use Well... I’d like to talk about/begin with … to [situation-appropriate completion of the template]",
+      "zh": "Well, + [回答/陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于以自然的方式开始一个话题的回答，well作为思考缓冲。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Well... I’d like to talk about/begin with … For example, this is a great way to introduce your point naturally.",
+      "zh": "Well, I'd like to talk about my favorite book — 它给我带来了很多启发。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-8b415b7202",
+    "expression": "What I would like to talk about first is, what ... entails",
+    "variants": [],
+    "collocation": {
+      "en": "Use What I would like to talk about first is, what ... entails. to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to structure multi-point answers, especially in Part 2 long turns",
+      "zh": "用于在结构化回答中定义或解释某个概念的内涵。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, improves coherence and cohesion scores",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "What I would like to talk about first is, what ... entails For example, this is a great way to introduce your point naturally.",
+      "zh": "What I would like to talk about first is, what sustainable development really entails."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-014"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "exemplification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-bb2e540985",
+    "expression": "Broadly speaking,",
+    "variants": [],
+    "collocation": {
+      "en": "Use Broadly speaking, ... to [situation-appropriate completion of the template]",
+      "zh": "Broadly speaking, + [宽泛的概括]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 3中以宽泛的视角开始回答，适合概括性讨论。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Broadly speaking, For example, this is a great way to introduce your point naturally.",
+      "zh": "Broadly speaking, 现代教育更注重培养学生的创造力而不是死记硬背。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-015"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "generalisation"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-082b03620f",
+    "expression": "Generally speaking,",
+    "variants": [],
+    "collocation": {
+      "en": "Use Generally speaking, ... to [situation-appropriate completion of the template]",
+      "zh": "Generally speaking, + [广泛的概括]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于在Part 3中以一般性的视角开始陈述观点。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Generally speaking, For example, this is a great way to introduce your point naturally.",
+      "zh": "Generally speaking, 年轻人比老年人更容易接受新事物。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-015"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "generalisation"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-3fe4a96685",
+    "expression": "Generally speaking, the consensus is that",
+    "variants": [],
+    "collocation": {
+      "en": "Use Generally speaking, the consensus is that... to [situation-appropriate completion of the template]",
+      "zh": "Generally speaking, + [广泛的概括]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于引用普遍共识或主流观点来支撑自己的论点。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Generally speaking, the consensus is that For example, this is a great way to introduce your point naturally.",
+      "zh": "Generally speaking, the consensus is that climate change requires immediate global action."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-015"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "generalisation"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-37c0acda70",
+    "expression": "There are plenty of ..., such as ..., or something like that",
+    "variants": [],
+    "collocation": {
+      "en": "Use There are plenty of ..., such as ..., or something like that. to [situation-appropriate completion of the template]",
+      "zh": "[类别或一般陈述], such as + [列举的具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to transition from a general claim to specific evidence",
+      "zh": "用于列举例子时使用，表明例子具有代表性但不详尽。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, strengthens arguments with concrete evidence",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "There are plenty of ..., such as ..., or something like that For example, this is a great way to introduce your point naturally.",
+      "zh": "There are plenty of hobbies to choose from, such as reading, painting, or something like that."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-015"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "generalisation"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-7a993b3541",
+    "expression": "in terms of why..., well the reason is that",
+    "variants": [],
+    "collocation": {
+      "en": "Use in terms of why..., well the reason is that to [situation-appropriate completion of the template]",
+      "zh": "Well, + [回答/陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to explain reasoning, especially in Part 3 analytical responses",
+      "zh": "用于先聚焦在特定方面，再用well缓冲后引出原因。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, demonstrates logical reasoning ability",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "in terms of why..., well the reason is that For example, this is a great way to introduce your point naturally.",
+      "zh": "In terms of why I chose this career, well the reason is that I've always been passionate about helping others."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-6a4563bb3c",
+    "expression": "On the other hand, technology-wise, I reckon that",
+    "variants": [],
+    "collocation": {
+      "en": "Use On the other hand, technology-wise, I reckon that ... to [situation-appropriate completion of the template]",
+      "zh": "[优点或论点A]. On the other hand, + [对立的缺点或论点B]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于从特定领域或角度（如技术方面）表达个人观点。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "On the other hand, technology-wise, I reckon that For example, this is a great way to introduce your point naturally.",
+      "zh": "On the other hand, technology-wise, I reckon that AI will transform the job market significantly."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-6318c7e805",
+    "expression": "Overall, it really relies on what kind of ... we are talking about here",
+    "variants": [],
+    "collocation": {
+      "en": "Use Overall, it really relies on what kind of ... we are talking about here. to [situation-appropriate completion of the template]",
+      "zh": "It's kind of + [形容词/描述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to narrow focus to a specific aspect of the question",
+      "zh": "用于在回答前先界定话题范围，显示对问题的细致思考。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, signals topic management skills",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Overall, it really relies on what kind of ... we are talking about here For example, this is a great way to introduce your point naturally.",
+      "zh": "Overall, it really relies on what kind of education system we are talking about here."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-016"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "topic-introduction"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-49b4df6eea",
+    "expression": "It's well-known that",
+    "variants": [],
+    "collocation": {
+      "en": "Use It's well-known that ... to [situation-appropriate completion of the template]",
+      "zh": "Well, + [回答/陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to reference commonly understood facts or prior conversation",
+      "zh": "用于引用常识或公认事实，建立与听者的共同认知。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, builds common ground with listener",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "It's well-known that For example, this is a great way to introduce your point naturally.",
+      "zh": "It's well-known that regular exercise is beneficial for both physical and mental health."
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-018"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "shared-knowledge"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-1a3b84dbba",
+    "expression": "Like I said before,",
+    "variants": [],
+    "collocation": {
+      "en": "Use Like I said before, .... to [situation-appropriate completion of the template]",
+      "zh": "Like I said, + [重复/总结]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于回指自己之前说过的内容，增加回答的连贯性。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, clearly marks personal stance",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Like I said before, For example, this is a great way to introduce your point naturally.",
+      "zh": "Like I said before, 我始终认为家庭教育是孩子成长中最关键的因素。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-018"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "shared-knowledge"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ee66e068d7",
+    "expression": "Obviously I'm in no position to say it, but",
+    "variants": [],
+    "collocation": {
+      "en": "Use Obviously I'm in no position to say it, but ... to [situation-appropriate completion of the template]",
+      "zh": "Obviously, + [显而易见的事实]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于先承认自己可能没有足够的资格来评论，但还是要表达观点。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Obviously I'm in no position to say it, but For example, this is a great way to introduce your point naturally.",
+      "zh": "Obviously I'm in no position to say it, but 从我个人的角度来看，这个政策还需要进一步完善。"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-018"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "shared-knowledge"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ed25d69294",
+    "expression": "especially ..., \nnotably ..., \nnamely...\nparticularly",
+    "variants": [],
+    "collocation": {
+      "en": "Use especially ..., \nnotably ..., \nnamely...\nparticularly... to [situation-appropriate completion of the template]",
+      "zh": "Notably, + [最值得单独提及的例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used when you want to give precise details rather than general statements",
+      "zh": "用于提供更精确的细节，从一般性描述过渡到具体说明。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds precision and detail",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "especially ..., \nnotably ..., \nnamely...\nparticularly For example, this is a great way to introduce your point naturally.",
+      "zh": "The project benefits everyone, especially the local community, notably the elderly residents."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-019"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "specification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-63dc3edf70",
+    "expression": "Last but not least, I'd like to explain",
+    "variants": [],
+    "collocation": {
+      "en": "Use Last but not least, I'd like to explain ... to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used when you did not hear or understand the question fully",
+      "zh": "用于在回答最后引出最后一个要解释的点。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, shows active listening and communication skills",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "Last but not least, I'd like to explain For example, this is a great way to introduce your point naturally.",
+      "zh": "Last but not least, I'd like to explain 为什么我认为团队合作比个人能力更重要。"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-020"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "clarification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-557581af39",
+    "expression": "What I’d like to elaborate on next is,",
+    "variants": [],
+    "collocation": {
+      "en": "Use What I’d like to elaborate on next is, ... to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used when you did not hear or understand the question fully",
+      "zh": "用于在长篇回答中自然过渡到下一个要详细说明的点。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, shows active listening and communication skills",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "What I’d like to elaborate on next is, For example, this is a great way to introduce your point naturally.",
+      "zh": "What I'd like to elaborate on next is 这个方案在实际操作中可能会遇到的困难。"
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-020"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "clarification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-bb23247937",
+    "expression": "Would you mind elaborating a bit more on",
+    "variants": [],
+    "collocation": {
+      "en": "Use Would you mind elaborating a bit more on ...? to [situation-appropriate completion of the template]",
+      "zh": "a bit + [形容词]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used when you did not hear or understand the question fully",
+      "zh": "用于礼貌地请求对方进一步说明，显示积极的沟通态度。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows active listening and communication skills",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Would you mind elaborating a bit more on For example, this is a great way to introduce your point naturally.",
+      "zh": "Would you mind elaborating a bit more on the second point you mentioned?"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-020"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "clarification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-a08bded84e",
+    "expression": "At the end of the day, ..., so basically",
+    "variants": [],
+    "collocation": {
+      "en": "Use At the end of the day, ..., so basically ... to [situation-appropriate completion of the template]",
+      "zh": "Basically, + [简化版]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于总结观点，'at the end of the day'是强调最终结论的口语表达。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "At the end of the day, ..., so basically For example, this is a great way to introduce your point naturally.",
+      "zh": "At the end of the day, what matters most is our health, so basically we need to find a sustainable lifestyle."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-021"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "summary",
+      "conclusion"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-5e572e9fe5",
+    "expression": "\"From a positive perspective,...\" / \"On the plus side,...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"From a positive perspective,...\" / \"On the plus side,...\" to [situation-appropriate completion of the template]",
+      "zh": "Plus, + [附加理由]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "用于从正面或积极的角度分析问题，适合Part 3中的多角度讨论。"
+    },
+    "connotation": {
+      "en": "formal, academic, structured, demonstrates sophisticated analytical framing",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "\"From a positive perspective,this issue is not black and white\" / \"On the plus side,this issue is not black and white\"",
+      "zh": "From a positive perspective, this challenge also creates new opportunities for innovation."
+    },
+    "cefr": "C2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-c9c5b6e928",
+    "expression": "\"In today's society, we tend to...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use \"In today's society, we tend to...\" to [situation-appropriate completion of the template]",
+      "zh": "[主语] tend to + [动词]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "用于以社会趋势为切入点，适合Part 3中的分析性讨论。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "\"In today's society, we tend to...\" For example, this is a great way to introduce your point naturally.",
+      "zh": "In today's society, we tend to rely heavily on technology for everyday tasks."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-10e7f35eac",
+    "expression": "A key aspect / perspective to consider here could be",
+    "variants": [],
+    "collocation": {
+      "en": "Use A key aspect / perspective to consider here could be ... to [situation-appropriate completion of the template]",
+      "zh": "Consider + [假设场景]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "用于从特定角度或层面分析问题，显示高水平的分析能力。"
+    },
+    "connotation": {
+      "en": "formal, academic, structured, demonstrates sophisticated analytical framing",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "A key aspect / perspective to consider here could be",
+      "zh": "A key perspective to consider here could be the long-term environmental impact of urban development."
+    },
+    "cefr": "C2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-41237d21de",
+    "expression": "For the younger generation, we tend to",
+    "variants": [],
+    "collocation": {
+      "en": "Use For the younger generation, we tend to... to [situation-appropriate completion of the template]",
+      "zh": "[主语] tend to + [动词]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "用于从年轻一代的视角讨论问题，适合Part 3中的多角度分析。"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "For the younger generation, we tend to For example, this is a great way to introduce your point naturally.",
+      "zh": "For the younger generation, we tend to value work-life balance more than salary."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-9d40a1e19a",
+    "expression": "If I were in their shoes, I would likely",
+    "variants": [],
+    "collocation": {
+      "en": "Use If I were in their shoes, I would likely ... to [situation-appropriate completion of the template]",
+      "zh": "[一般类别], like + [具体例子]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "用于通过换位思考来表达同理心，显示多角度分析能力。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, demonstrates sophisticated analytical framing",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "If I were in their shoes, I would likely For example, this is a great way to introduce your point naturally.",
+      "zh": "If I were in their shoes, I would likely make the same decision given the circumstances."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-1a5a4ce75d",
+    "expression": "In contrast, for the elderly... / From the perspective of senior citizens",
+    "variants": [],
+    "collocation": {
+      "en": "Use In contrast, for the elderly... / From the perspective of senior citizens... to [situation-appropriate completion of the template]",
+      "zh": "[事物或情况A]. In contrast, + [截然不同的事物或情况B]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于对比不同人群的观点，显示全面的社会分析能力，适合Part 3。"
+    },
+    "connotation": {
+      "en": "formal, academic, structured, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "In contrast, for the elderlythis issue is not black and white / From the perspective of senior citizens",
+      "zh": "In contrast, for the elderly, technology can sometimes be confusing rather than helpful."
+    },
+    "cefr": "C2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-8a54b85fc0",
+    "expression": "In terms of city dwellers,",
+    "variants": [],
+    "collocation": {
+      "en": "In terms of [category/field], [statement with specific reference]...",
+      "zh": "Well, + [回答/陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "用于聚焦到特定人群的观点分析，适合Part 3中的分层讨论。"
+    },
+    "connotation": {
+      "en": "informal, conversational, natural, demonstrates sophisticated analytical framing",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "In terms of city dwellers,",
+      "zh": "In terms of city dwellers, they have better access to public transportation but face higher living costs."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  }
+]

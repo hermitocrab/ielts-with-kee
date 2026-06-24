@@ -1,0 +1,1682 @@
+[
+  {
+    "id": "dm-da9a52abfe",
+    "expression": "If my memory serves (me right),",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to introduce a memory or past experience",
+      "zh": "置于句首：If my memory serves me right, + [根据记忆的陈述]"
+    },
+    "contexts": {
+      "en": "Used when drawing on personal memories or past experiences",
+      "zh": "用于优雅地表达回忆内容，稍带正式感"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, natural narrative technique",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "If my memory serves (me right) I remember it like it was yesterday — it was such a memorable experience.",
+      "zh": "If my memory serves me right, we visited that museum in Grade 6."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-017"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "narrative",
+      "memory"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-05740d7bdf",
+    "expression": "If my memory serves me right,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to introduce a memory or past experience",
+      "zh": "置于句首：If my memory serves me right, + [回忆内容]"
+    },
+    "contexts": {
+      "en": "Used when drawing on personal memories or past experiences",
+      "zh": "用于正式地引导回忆内容，表达得体"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, natural narrative technique",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "If my memory serves me right I remember it like it was yesterday — it was such a memorable experience.",
+      "zh": "If my memory serves me right, the agreement was signed in 2010."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-017"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "narrative",
+      "memory"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-0682797496",
+    "expression": "..., as it were",
+    "variants": [],
+    "collocation": {
+      "en": "Use ..., as it were to [situation-appropriate completion of the template]",
+      "zh": "使用模板：[陈述] + , as it were（意为\"可以说是\"）"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to reference commonly understood facts or prior conversation",
+      "zh": "用于在比喻性表达后使用，缓和语气"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, builds common ground with listener",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "..., as it were For example, this is a great way to introduce your point naturally.",
+      "zh": "He became, as it were, the guiding light of the project."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-018"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "shared-knowledge"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-d4f5cde63c",
+    "expression": "..., in a manner of speaking",
+    "variants": [],
+    "collocation": {
+      "en": "Use ..., in a manner of speaking to [situation-appropriate completion of the template]",
+      "zh": "使用模板：[陈述] + , in a manner of speaking（意为\"从某种意义上来说\"）"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to reference commonly understood facts or prior conversation",
+      "zh": "用于在某种程度上修正或软化前面的陈述"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, builds common ground with listener",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "..., in a manner of speaking For example, this is a great way to introduce your point naturally.",
+      "zh": "He is, in a manner of speaking, the father of modern computing."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-018"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "shared-knowledge"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-7f7adb87c9",
+    "expression": "..., so to speak",
+    "variants": [],
+    "collocation": {
+      "en": "Use ..., so to speak to [situation-appropriate completion of the template]",
+      "zh": "使用模板：[陈述] + , so to speak（意为\"可以说是\"）"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to reference commonly understood facts or prior conversation",
+      "zh": "用于在比喻或非字面表达后使用"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, builds common ground with listener",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "..., so to speak For example, this is a great way to introduce your point naturally.",
+      "zh": "She is, so to speak, a walking encyclopedia on history."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-018"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "shared-knowledge"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-6eb065df05",
+    "expression": "And bear in mind,",
+    "variants": [],
+    "collocation": {
+      "en": "Use to reference commonly understood information or prior discussion",
+      "zh": "用于引用共识：And bear in mind, + [需要考虑的事实]"
+    },
+    "contexts": {
+      "en": "Used to reference commonly understood facts or prior conversation",
+      "zh": "用于提醒对方注意某个重要事实或常识"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, builds common ground with listener",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "And bear in mind It's something that most people would agree with.",
+      "zh": "And bear in mind, most people work for decades before retiring."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-018"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "shared-knowledge"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-2cbbb3598a",
+    "expression": "As I have mentioned,",
+    "variants": [],
+    "collocation": {
+      "en": "Use to reference commonly understood information or prior discussion",
+      "zh": "用于回指之前内容：As I have mentioned, + [重申的要点]"
+    },
+    "contexts": {
+      "en": "Used to reference commonly understood facts or prior conversation",
+      "zh": "用于重申之前已经提过的内容，建立前后呼应"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, builds common ground with listener",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "As I have mentioned It's something that most people would agree with.",
+      "zh": "As I have mentioned, success requires consistent effort."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-018"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "shared-knowledge"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-271fe2cbc9",
+    "expression": "It's common sense that",
+    "variants": [],
+    "collocation": {
+      "en": "Use to reference commonly understood information or prior discussion",
+      "zh": "用于引用常识：It is common sense that + [公认的事实]"
+    },
+    "contexts": {
+      "en": "Used to reference commonly understood facts or prior conversation",
+      "zh": "用于引用普遍认可的常识，增强说服力"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, builds common ground with listener",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "It's common sense that It's something that most people would agree with.",
+      "zh": "It is common sense that exercise benefits physical and mental health."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-018"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "shared-knowledge"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-58d1d57016",
+    "expression": "We all know that",
+    "variants": [],
+    "collocation": {
+      "en": "Use to reference commonly understood information or prior discussion",
+      "zh": "用于引用共识：We all know that + [公认的事实]"
+    },
+    "contexts": {
+      "en": "Used to reference commonly understood facts or prior conversation",
+      "zh": "用于引用大家普遍认同的事实或观点，建立共鸣"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, builds common ground with listener",
+      "zh": "口语"
+    },
+    "example": {
+      "en": "We all know that It's something that most people would agree with.",
+      "zh": "We all know that first impressions matter in job interviews."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-018"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "shared-knowledge"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-c709672894",
+    "expression": "especially",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "置于名词或短语前：especially + [要强调的对象]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于特别指出某一方面或某件事，突出其重要性或独特性"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "中性"
+    },
+    "example": {
+      "en": "especially technology has fundamentally changed the way we communicate with each other.",
+      "zh": "I enjoy outdoor activities, especially hiking in the mountains."
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-019"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "specification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-2ef2852ad9",
+    "expression": "Going into details,",
+    "variants": [],
+    "collocation": {
+      "en": "Use before a precise detail or clarification",
+      "zh": "置于句首：Going into details, + [具体说明]"
+    },
+    "contexts": {
+      "en": "Used when you want to give precise details rather than general statements",
+      "zh": "用于从概括性陈述转向具体细节说明"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds precision and detail",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Going into details This is a useful expression for expressing yourself naturally in English.",
+      "zh": "Going into details, the first step involves researching the target audience thoroughly."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-019"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "specification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-8dd2f0530d",
+    "expression": "Precisely speaking,",
+    "variants": [],
+    "collocation": {
+      "en": "Use before a precise detail or clarification",
+      "zh": "置于句首：Precisely speaking, + [精确陈述]"
+    },
+    "contexts": {
+      "en": "Used when you want to give precise details rather than general statements",
+      "zh": "用于需要给出非常准确的表述或纠正之前较模糊的说法"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds precision and detail",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "Precisely speaking This is a useful expression for expressing yourself naturally in English.",
+      "zh": "Precisely speaking, the experiment lasted 72 hours, not three days."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-019"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "specification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-72dc85c7c8",
+    "expression": "Specifically speaking,",
+    "variants": [],
+    "collocation": {
+      "en": "Use before a precise detail or clarification",
+      "zh": "置于句首：Specifically speaking, + [具体内容]"
+    },
+    "contexts": {
+      "en": "Used when you want to give precise details rather than general statements",
+      "zh": "用于从泛泛而谈转向具体细节"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds precision and detail",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Specifically speaking This is a useful expression for expressing yourself naturally in English.",
+      "zh": "Specifically speaking, we should focus on improving customer service and product quality."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-019"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "specification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-5631964b1a",
+    "expression": "Specifically,",
+    "variants": [],
+    "collocation": {
+      "en": "Use before a precise detail or clarification",
+      "zh": "置于句首或句中：Specifically, + [具体信息]"
+    },
+    "contexts": {
+      "en": "Used when you want to give precise details rather than general statements",
+      "zh": "用于引出更精确或更具体的信息"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds precision and detail",
+      "zh": "中性"
+    },
+    "example": {
+      "en": "Specifically This is a useful expression for expressing yourself naturally in English.",
+      "zh": "There are several benefits to this approach. Specifically, it saves time and reduces costs."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-019"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "specification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-26dbc48d13",
+    "expression": "To be precise,",
+    "variants": [],
+    "collocation": {
+      "en": "Use before a precise detail or clarification",
+      "zh": "置于句首：To be precise, + [精确表述]"
+    },
+    "contexts": {
+      "en": "Used when you want to give precise details rather than general statements",
+      "zh": "用于给出更准确的数量、时间或事实信息"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds precision and detail",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "To be precise This is a useful expression for expressing yourself naturally in English.",
+      "zh": "To be precise, the population of the city is approximately 2.5 million."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-019"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "specification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-9be1acb005",
+    "expression": "To be specific,",
+    "variants": [],
+    "collocation": {
+      "en": "Use before a precise detail or clarification",
+      "zh": "置于句首：To be specific, + [具体细节]"
+    },
+    "contexts": {
+      "en": "Used when you want to give precise details rather than general statements",
+      "zh": "用于从概括过渡到具体事例或细节"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, adds precision and detail",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "To be specific This is a useful expression for expressing yourself naturally in English.",
+      "zh": "To be specific, we need to address three main issues: funding, staffing, and location."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-019"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "specification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-e727b572b6",
+    "expression": "Could you please clarify",
+    "variants": [],
+    "collocation": {
+      "en": "Use when needing the interlocutor to repeat, explain, or elaborate",
+      "zh": "置于提问句首：Could you please clarify + [需要澄清的内容]"
+    },
+    "contexts": {
+      "en": "Used when you did not hear or understand the question fully",
+      "zh": "用于礼貌地请求对方进一步解释或说明不清楚的地方"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, shows active listening and communication skills",
+      "zh": "礼貌"
+    },
+    "example": {
+      "en": "Could you please clarify This is a useful expression for expressing yourself naturally in English.",
+      "zh": "Could you please clarify what you mean by 'sustainable development'?"
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-020"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "clarification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-dbbb1e1363",
+    "expression": "What do you mean by",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "置于问句开头：What do you mean by + [需要解释的词或短语]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于直接询问对方某个表述的确切含义"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "中性"
+    },
+    "example": {
+      "en": "What do you mean by technology has fundamentally changed the way we communicate with each other.",
+      "zh": "What do you mean by 'work-life balance' in this context?"
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-020"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "clarification"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-84ba9d9c4c",
+    "expression": "As for society as a whole,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to frame a response from a specific viewpoint",
+      "zh": "置于句首：As for society as a whole, + [关于整体社会的观点]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于从全社会宏观角度分析问题"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "As for society as a whole This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "As for society as a whole, the ageing population poses significant challenges to the healthcare system."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-9af1cf4b83",
+    "expression": "At the governmental/national level,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to frame a response from a specific viewpoint",
+      "zh": "置于句首：At the governmental/national level, + [政府或国家层面的观点]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于从政府或国家宏观层面讨论问题"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "At the governmental/national level This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "At the governmental level, policies should be implemented to reduce carbon emissions."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-961c37ebf3",
+    "expression": "But for those struggling financially,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to frame a response from a specific viewpoint",
+      "zh": "置于句首：But for those struggling financially, + [对经济困难群体的影响]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于从经济弱势群体的角度展开讨论"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "But for those struggling financially This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "But for those struggling financially, even a small increase in rent can be a heavy burden."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-03192e39bc",
+    "expression": "enact more",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "用于提出建议：enact more + [政策/法规类型]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于呼吁政府或权威机构制定更多法规或政策"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "enact more technology has fundamentally changed the way we communicate with each other.",
+      "zh": "The government should enact more stringent environmental regulations."
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-adb5a0a936",
+    "expression": "For affluent individuals/families",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to frame a response from a specific viewpoint",
+      "zh": "置于句首：For affluent individuals/families, + [对富裕人群的影响]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于从富裕阶层的角度讨论问题，体现对比分析能力"
+    },
+    "connotation": {
+      "en": "formal, academic, structured, demonstrates sophisticated analytical framing",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "For affluent individuals/families This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "For affluent individuals, access to quality education is rarely a concern."
+    },
+    "cefr": "A2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-9b5c7dcc09",
+    "expression": "For individuals, the impact is",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to frame a response from a specific viewpoint",
+      "zh": "置于句首：For individuals, the impact is + [对个人的具体影响]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于聚焦个人层面讨论某项政策或现象的影响"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "For individuals, the impact is This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "For individuals, the impact is most noticeable in terms of daily commuting time."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-5d8d924de2",
+    "expression": "For office workers... / For those who are working",
+    "variants": [],
+    "collocation": {
+      "en": "Use For office workers... / For those who are working to [situation-appropriate completion of the template]",
+      "zh": "置于句首：For office workers, + [对上班族的影响] 或 For those who are working, + [对职场人士的看法]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于从上班族或职场人士的角度讨论某一现象"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "For office workers... / For those who are working For example, this is a great way to introduce your point naturally.",
+      "zh": "For office workers, flexible working hours can greatly improve job satisfaction."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-5357ac75c7",
+    "expression": "For people living in urban areas",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to frame a response from a specific viewpoint",
+      "zh": "置于句首：For people living in urban areas, + [对城市居民的影响]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于从城市居民的角度讨论问题"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "For people living in urban areas This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "For people living in urban areas, public transportation is often more convenient than driving."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-d095daffa6",
+    "expression": "For the wealthy, it's a matter of",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to frame a response from a specific viewpoint",
+      "zh": "置于句首：For the wealthy, it's a matter of + [富裕阶层关注的方面]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于讨论富裕阶层如何看待某个问题，体现对比视角"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "For the wealthy, it's a matter of This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "For the wealthy, it's a matter of choosing the best private school rather than worrying about fees."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-84238fb6cd",
+    "expression": "for those privileged few,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "置于句首：For those privileged few, + [对少数特权阶层的影响]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于强调少数享有特权的人群，常带有批判或对比语气"
+    },
+    "connotation": {
+      "en": "formal, academic, structured, clearly marks personal stance",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "for those privileged few technology has fundamentally changed the way we communicate with each other.",
+      "zh": "For those privileged few, these policy changes barely make a difference to their lifestyle."
+    },
+    "cefr": "C1",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-29850e7fe3",
+    "expression": "from ...'s point of view,",
+    "variants": [],
+    "collocation": {
+      "en": "Use from ...'s point of view, to [situation-appropriate completion of the template]",
+      "zh": "置于句首：From [某人/某群体]'s point of view, + [该视角下的观点]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于从特定个人或群体的视角分析问题"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "from ...'s point of view For example, this is a great way to introduce your point naturally.",
+      "zh": "From a student's point of view, tuition fees should be more affordable."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-9ddc602ef5",
+    "expression": "from ...'s standpoint,",
+    "variants": [],
+    "collocation": {
+      "en": "Use from ...'s standpoint, to [situation-appropriate completion of the template]",
+      "zh": "置于句首：From [某人/某群体]'s standpoint, + [该视角下的观点]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于从某个特定standpoint（立场/角度）分析问题，语气比point of view更正式"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "from ...'s standpoint For example, this is a great way to introduce your point naturally.",
+      "zh": "From an economic standpoint, investing in renewable energy makes long-term sense."
+    },
+    "cefr": "C2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-d3260ba27d",
+    "expression": "From a parent's perspective",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to frame a response from a specific viewpoint",
+      "zh": "置于句首：From a parent's perspective, + [家长视角的观点]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于从父母/家长的角度讨论教育、育儿等话题"
+    },
+    "connotation": {
+      "en": "formal, academic, structured, demonstrates sophisticated analytical framing",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "From a parent's perspective This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "From a parent's perspective, safety is the top priority when choosing a school for their children."
+    },
+    "cefr": "C2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-0cf119a245",
+    "expression": "From a policy-making perspective,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to frame a response from a specific viewpoint",
+      "zh": "置于句首：From a policy-making perspective, + [政策制定视角的观点]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于从政策制定者的宏观角度分析社会问题"
+    },
+    "connotation": {
+      "en": "formal, academic, structured, demonstrates sophisticated analytical framing",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "From a policy-making perspective This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "From a policy-making perspective, the government needs to balance economic growth with environmental protection."
+    },
+    "cefr": "C2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-82fa66d211",
+    "expression": "From an individual's perspective,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to frame a response from a specific viewpoint",
+      "zh": "置于句首：From an individual's perspective, + [个人视角的观点]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于从普通个人的角度讨论问题"
+    },
+    "connotation": {
+      "en": "formal, academic, structured, demonstrates sophisticated analytical framing",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "From an individual's perspective This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "From an individual's perspective, the rising cost of living is the most pressing concern."
+    },
+    "cefr": "C2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-93fe615c80",
+    "expression": "From an individual's standpoint,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to frame a response from a specific viewpoint",
+      "zh": "置于句首：From an individual's standpoint, + [个人立场的观点]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于从个人立场分析问题，比From an individual's perspective更正式"
+    },
+    "connotation": {
+      "en": "formal, academic, structured, demonstrates sophisticated analytical framing",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "From an individual's standpoint This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "From an individual's standpoint, having access to lifelong learning opportunities is crucial."
+    },
+    "cefr": "C2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-e5866b539d",
+    "expression": "from my perspective,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to frame a response from a specific viewpoint",
+      "zh": "置于句首：From my perspective, + [个人观点]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "用于礼貌地表达个人看法，语气比直接说I think更委婉正式"
+    },
+    "connotation": {
+      "en": "formal, academic, structured, demonstrates sophisticated analytical framing",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "from my perspective This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "From my perspective, the most effective way to learn a language is through immersion."
+    },
+    "cefr": "C2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-87a96f3aa1",
+    "expression": "From the public's point of view,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to frame a response from a specific viewpoint",
+      "zh": "置于句首：From the public's point of view, + [公众视角的观点]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于从普通大众的角度分析社会问题"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "From the public's point of view This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "From the public's point of view, transparency in government spending is essential."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-9dc17d3268",
+    "expression": "From the viewpoint of low-income families",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to frame a response from a specific viewpoint",
+      "zh": "置于句首：From the viewpoint of low-income families, + [低收入家庭视角的观点]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于从低收入家庭的角度分析社会经济问题"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "From the viewpoint of low-income families This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "From the viewpoint of low-income families, affordable housing is a matter of survival, not choice."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-46eeb1d371",
+    "expression": "If I were in this situation, it would be possible that I",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: If I were in this situation, it would be possible that I",
+      "zh": "置于句首：If I were in this situation, it would be possible that I + [假设性行为]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于表达假设情况下的个人选择，体现同理心和换位思考能力"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "If I were in this situation, it would be possible that I technology has fundamentally changed the way we communicate with each other.",
+      "zh": "If I were in this situation, it would be possible that I would choose to study abroad for better opportunities."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-77d77578dc",
+    "expression": "If you are an employer, you would",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to frame a response from a specific viewpoint",
+      "zh": "置于句首：If you are an employer, you would + [雇主视角的推论]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于从雇主的角度进行假设性分析"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "If you are an employer, you would This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "If you are an employer, you would probably prioritise candidates with relevant work experience."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-dfb10afde4",
+    "expression": "In rural communities, however, the situation is",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to frame a response from a specific viewpoint",
+      "zh": "置于句首：In rural communities, however, the situation is + [农村地区的不同情况]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于对比城乡差异，展现多角度分析能力"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "In rural communities, however, the situation is This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "In rural communities, however, the situation is quite different, as access to the internet remains limited."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-e955fa663d",
+    "expression": "In terms of governance,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to focus attention on a specific aspect",
+      "zh": "置于句首：In terms of governance, + [治理方面的观点]"
+    },
+    "contexts": {
+      "en": "Used to narrow focus to a specific aspect of the question",
+      "zh": "用于将讨论聚焦到治理或管理层面，C1级别学术表达"
+    },
+    "connotation": {
+      "en": "formal, academic, structured, signals topic management skills",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "In terms of governance This is a useful expression for expressing yourself naturally in English.",
+      "zh": "In terms of governance, the city council needs to improve transparency and accountability."
+    },
+    "cefr": "C1",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-cfa7557479",
+    "expression": "In terms of public perception,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to focus attention on a specific aspect",
+      "zh": "置于句首：In terms of public perception, + [公众认知方面的观点]"
+    },
+    "contexts": {
+      "en": "Used to narrow focus to a specific aspect of the question",
+      "zh": "用于从公众看法或社会认知的角度讨论问题"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, signals topic management skills",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "In terms of public perception This is a useful expression for expressing yourself naturally in English.",
+      "zh": "In terms of public perception, organic food is often seen as healthier, even if the evidence is mixed."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-dfc60b0613",
+    "expression": "In terms of society, ... geriatric society / the population is aging",
+    "variants": [],
+    "collocation": {
+      "en": "In terms of [category/field], [statement with specific reference]...",
+      "zh": "置于句首：In terms of society, [社会层面的具体陈述]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于从社会整体层面讨论老龄化等宏观问题"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "In terms of society, the environment, I believe we should all do our part geriatric society / the population is aging",
+      "zh": "In terms of society, the ageing population means we need more healthcare workers and pension reforms."
+    },
+    "cefr": "C1",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-129a057234",
+    "expression": "In terms of the government,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to frame a response from a specific viewpoint",
+      "zh": "置于句首：In terms of the government, + [政府层面的观点]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于从政府职责或政策角度讨论问题"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "In terms of the government This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "In terms of the government, providing affordable housing should be a top priority."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-c9b555e898",
+    "expression": "On a personal level,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a clause to signal personal viewpoint",
+      "zh": "置于句首：On a personal level, + [个人层面的感受或观点]"
+    },
+    "contexts": {
+      "en": "Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于从个人亲身体验或感受的角度发表看法"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "On a personal level technology has fundamentally changed the way we communicate with each other.",
+      "zh": "On a personal level, I find reading books more relaxing than watching television."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-b53161c2f6",
+    "expression": "On one hand, in terms of society, I would say",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: On one hand, in terms of society, I would say",
+      "zh": "置于句首：On one hand, in terms of society, I would say + [社会层面的观点]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于从社会层面展开第一个论点，通常后续有on the other hand"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "On one hand, in terms of society, I would say This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "On one hand, in terms of society, I would say technological advancement has improved productivity significantly."
+    },
+    "cefr": "C1",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-cd6cfcc168",
+    "expression": "On the downside,...\" / \"From a negative perspective,...\"",
+    "variants": [],
+    "collocation": {
+      "en": "Use On the downside,...\" / \"From a negative perspective,...\" to [situation-appropriate completion of the template]",
+      "zh": "置于句首：On the downside, + [负面方面] 或 From a negative perspective, + [消极视角]"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "用于在讨论完积极方面后转向消极方面，体现辩证思维"
+    },
+    "connotation": {
+      "en": "formal, academic, structured, demonstrates sophisticated analytical framing",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "On the downside,this issue is not black and white\" / \"From a negative perspective,this issue is not black and white\"",
+      "zh": "On the downside, the new policy may increase the financial burden on small businesses."
+    },
+    "cefr": "C2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-95c1ad4974",
+    "expression": "Society-wise,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to frame a response from a specific viewpoint",
+      "zh": "置于句首：Society-wise, + [社会层面的看法]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于从社会整体角度简要讨论问题"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Society-wise This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "Society-wise, there is a growing awareness of mental health issues among young people."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-9c759cbed8",
+    "expression": "There are numerous reasons based on the perspectives we're looking at",
+    "variants": [],
+    "collocation": {
+      "en": "Position at the beginning of your response: There are numerous reasons based on the perspectives we're looking at",
+      "zh": "置于句首：There are numerous reasons based on the perspectives we're looking at, + [各视角总结]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于在讨论多个视角后做总结，体现全面分析能力"
+    },
+    "connotation": {
+      "en": "formal, academic, structured, demonstrates sophisticated analytical framing",
+      "zh": "正式"
+    },
+    "example": {
+      "en": "There are numerous reasons based on the perspectives we're looking at This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "There are numerous reasons based on the perspectives we're looking at, ranging from economic factors to social values."
+    },
+    "cefr": "C2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-ab53fb8d20",
+    "expression": "Those in the countryside might",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to frame a response from a specific viewpoint",
+      "zh": "置于句首：Those in the countryside might + [农村人群可能的情况]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于对比城乡差异时从农村居民角度展开讨论"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "Those in the countryside might This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "Those in the countryside might find it harder to access quality healthcare services compared to city dwellers."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-0eee5cefd6",
+    "expression": "we should let ... become a new social norm",
+    "variants": [],
+    "collocation": {
+      "en": "Use we should let ... become a new social norm to [situation-appropriate completion of the template]",
+      "zh": "置于句中：we should let [某种行为/观念] become a new social norm"
+    },
+    "contexts": {
+      "en": "Template pattern: fill the placeholder with topic-relevant content. Used to Used to mark your answer as personal viewpoint, especially in Part 1 and Part 3",
+      "zh": "用于倡导某种行为或观念成为新的社会常态，表达建议或呼吁"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, clearly marks personal stance",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "we should let ... become a new social norm For example, this is a great way to introduce your point naturally.",
+      "zh": "We should let recycling become a new social norm rather than an occasional practice."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-701cf0864c",
+    "expression": "When it comes to the authorities, they should",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to focus attention on a specific aspect",
+      "zh": "置于句首：When it comes to the authorities, they should + [对当局的建议]"
+    },
+    "contexts": {
+      "en": "Used to narrow focus to a specific aspect of the question",
+      "zh": "用于将讨论焦点转向政府部门或权威机构，并提出建议"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, signals topic management skills",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "When it comes to the authorities, they should This is a useful expression for expressing yourself naturally in English.",
+      "zh": "When it comes to the authorities, they should take immediate action to address the housing crisis."
+    },
+    "cefr": "B1",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  },
+  {
+    "id": "dm-67a05d710f",
+    "expression": "When it comes to the society,",
+    "variants": [],
+    "collocation": {
+      "en": "Use at the start of a sentence to frame a response from a specific viewpoint",
+      "zh": "置于句首：When it comes to the society, + [关于社会的陈述]"
+    },
+    "contexts": {
+      "en": "Used in Part 3 to demonstrate ability to discuss from multiple viewpoints",
+      "zh": "Part 3中用于将讨论焦点转向社会层面"
+    },
+    "connotation": {
+      "en": "semi-formal, appropriate for IELTS context, demonstrates sophisticated analytical framing",
+      "zh": "半正式"
+    },
+    "example": {
+      "en": "When it comes to the society This viewpoint helps us understand the broader implications of the issue.",
+      "zh": "When it comes to the society, the widening gap between rich and poor is a growing concern."
+    },
+    "cefr": "B2",
+    "categoryIds": [
+      "cat-022"
+    ],
+    "subfunctionIds": [],
+    "chainIds": [],
+    "tags": [
+      "perspective",
+      "part3"
+    ],
+    "seeAlso": []
+  }
+]
