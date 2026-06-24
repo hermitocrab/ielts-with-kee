@@ -173,14 +173,21 @@
       el.style.display = 'block';
     }
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
       e.preventDefault();
       const error = document.getElementById('auth-error');
       error.style.display = 'none';
 
+      const btn = document.querySelector('.btn-auth');
+      btn.textContent = 'Verifying…';
+      btn.disabled = true;
+
       const code = document.getElementById('passcode').value;
       const remember = document.getElementById('remember').checked;
-      const result = KeeAuth.login(code, remember);
+      const result = await KeeAuth.login(code, remember);
+
+      btn.textContent = 'Unlock →';
+      btn.disabled = false;
 
       if (!result.ok) {
         showError(result.error);
@@ -191,7 +198,10 @@
 
       // Success animation
       document.getElementById('auth-form').style.display = 'none';
-      document.getElementById('auth-success').style.display = 'block';
+      const success = document.getElementById('auth-success');
+      success.style.display = 'block';
+      document.getElementById('success-msg').textContent =
+        'Welcome, ' + (result.tier === 'Teacher' ? 'Teacher Kee' : 'Student') + '!';
 
       const params = new URLSearchParams(window.location.search);
       const redirect = params.get('redirect') || 'dashboard.html';

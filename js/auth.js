@@ -1,80 +1,106 @@
 /**
- * IELTS with Kee — Shared Auth Module
- * Uses localStorage passcode + Supabase hybrid
+ * IELTS with Kee — Auth Module v2
+ * Server-side validation via Flask API. Passcodes never exposed.
  */
 
 (function() {
   'use strict';
 
-  const STORAGE_KEY = 'ielts_with_kee_auth';
-  const VALID_CODES = ['masterkee2024', 'ielts55', 'ielts65'];
+  const STORAGE_KEY = 'ielts_kee_auth';
   const SESSION_HOURS = 24;
-
-  // Supabase config (kept for future progress tracking)
-  const SUPABASE_URL = 'https://areedjmpngwzocqpoaur.supabase.co';
-  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFyZWVkam1wbmd3em9jcXBvYXVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY5ODAwMTgsImV4cCI6MjA5MjU1NjAxOH0.CSHpruDqBm4mbKseySbbOlZk2-uBG2Oxe4DvqwTVFJ8';
 
   window.KeeAuth = {
     /**
-     * Check if user is authenticated (passcode check)
+     * Fast check: does localStorage think we're logged in?
+     * Full authority is the server session cookie.
      */
     isLoggedIn() {
       try {
         const data = JSON.parse(localStorage.getItem(STORAGE_KEY));
-        if (!data || !data.code) return false;
+        if (!data || !data.tier) return false;
         const elapsed = Date.now() - data.timestamp;
         const maxMs = (data.remember ? 30 : SESSION_HOURS) * 60 * 60 * 1000;
-        return VALID_CODES.includes(data.code) && elapsed < maxMs;
+        return elapsed < maxMs;
       } catch(e) {
         return false;
       }
     },
 
     /**
-     * Authenticate with passcode
+     * Server-side login via API.
+     * Returns Promise<{ok, tier?, error?}>
      */
-    login(code, remember) {
+    async login(code, remember) {
       code = (code || '').trim().toLowerCase();
-      if (!VALID_CODES.includes(code)) {
-        return { ok: false, error: 'Invalid passcode. Contact your teacher.' };
+      try {
+        const resp = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ code: code, remember: !!remember })
+        });
+        const data = await resp.json();
+        if (data.ok) {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({
+            tier: data.tier,
+            timestamp: Date.now(),
+            remember: !!remember
+          }));
+        }
+        return data;
+      } catch(e) {
+        return { ok: false, error: 'Cannot reach server. Check your connection.' };
       }
-      localStorage.setItem(STORAGE_KEY, JSON.stringify({
-        code: code,
-        timestamp: Date.now(),
-        remember: !!remember
-      }));
-      return { ok: true };
     },
 
     /**
-     * Log out
+     * Logout — clear local + server session.
      */
-    logout() {
+    async logout() {
       localStorage.removeItem(STORAGE_KEY);
+      try {
+        await fetch('/api/auth/logout', { method: 'POST' });
+      } catch(e) { /* server unreachable, local is cleared anyway */ }
     },
 
     /**
-     * Get user display info
+     * Get cached user info.
      */
     getUser() {
-      const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
-      return {
-        tier: data.code === 'masterkee2024' ? 'Teacher' : 'Student',
-        code: data.code || ''
-      };
+      try {
+        const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+        return { tier: data.tier || '', label: data.tier === 'Teacher' ? 'Teacher' : 'Student' };
+      } catch(e) {
+        return { tier: '', label: '' };
+      }
     },
 
     /**
-     * Check auth, redirect to auth.html if not logged in
-     * Call this on protected pages
+     * Server-side auth check + redirect if not logged in.
+     * Call on every protected page at load time.
      */
-    requireAuth() {
-      if (!this.isLoggedIn()) {
-        const current = encodeURIComponent(window.location.href);
-        window.location.href = 'auth.html?redirect=' + current;
-        return false;
-      }
-      return true;
+    async requireAuth() {
+      // Fast path: localStorage says yes
+      if (this.isLoggedIn()) return true;
+
+      // Verify with server
+      try {
+        const resp = await fetch('/api/auth/status');
+        const data = await resp.json();
+        if (data.logged_in) {
+          // Server says yes, sync localStorage
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({
+            tier: data.tier,
+            timestamp: Date.now(),
+            remember: false
+          }));
+          return true;
+        }
+      } catch(e) { /* fall through to redirect */ }
+
+      // Not authenticated — redirect to login
+      const redirect = encodeURIComponent(window.location.pathname + window.location.search);
+      window.location.href = '/auth.html?redirect=' + redirect;
+      return false;
     }
   };
 })();
