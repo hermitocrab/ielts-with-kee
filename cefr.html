@@ -79,17 +79,23 @@
     }
 
     .hero h1 {
+      color: #0D0D0D;
+      font-weight: 700;
       margin-bottom: 16px;
+    }
+
+    .hero .accent-dot {
+      color: var(--accent);
     }
 
     .hero .hero-subtitle {
       font-family: 'Inter', sans-serif;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 400;
-      color: var(--gray-600);
+      color: #555;
       max-width: 620px;
       margin: 0 auto;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     .hero .hero-byline {
@@ -601,9 +607,9 @@
   <!-- Sticky Nav -->
   <nav class="cefr-nav" id="cefrNav">
     <div class="cefr-nav-inner">
-      <a href="#bands">Scores</a>
-      <a href="#videos">Videos</a>
-      <a href="#the-jump">The Jump</a>
+      <a href="#bands"><span class="en">Scores</span><span class="zh">分数速查</span></a>
+      <a href="#videos"><span class="en">Videos</span><span class="zh">视频</span></a>
+      <a href="#the-jump"><span class="en">The Jump</span><span class="zh">突破路径</span></a>
       <span class="nav-sep"></span>
       <a href="#band5">B5</a>
       <a href="#band5.5">B5.5</a>
@@ -643,60 +649,60 @@
   <hr class="section-divider">
 
   <!-- ===== QUICK MAPPING TABLE ===== -->
-  <section class="section">
+  <section class="section" id="bands">
     <div class="section-head">
-      <h2>IELTS Band → CEFR: Quick Map</h2>
+      <h2><span class="en">IELTS Band → CEFR: Quick Map</span><span class="zh">雅思分数 → CEFR：速查表</span></h2>
       <span class="accent-bar"></span>
-      <p>Every IELTS band maps to a CEFR level. Here's the one-minute version.</p>
+      <p><span class="en">Every IELTS band maps to a CEFR level. Here's the one-minute version.</span><span class="zh">每个雅思分数对应一个 CEFR 等级。一分钟看懂。</span></p>
     </div>
 
     <div class="mapping-table-wrap">
       <table class="mapping-table">
         <thead>
           <tr>
-            <th>IELTS Band</th>
-            <th>CEFR Level</th>
-            <th>What It Means</th>
-            <th>Who Needs This</th>
+            <th><span class="en">IELTS Band</span><span class="zh">雅思分数</span></th>
+            <th><span class="en">CEFR Level</span><span class="zh">CEFR 等级</span></th>
+            <th><span class="en">What It Means</span><span class="zh">含义</span></th>
+            <th><span class="en">Who Needs This</span><span class="zh">适用人群</span></th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td class="band-cell">5.0</td>
             <td><span class="cefr-badge b1">B1</span></td>
-            <td>Intermediate — can handle familiar situations, but struggles with anything unexpected</td>
-            <td>Foundation programmes, some visa categories</td>
+            <td><span class="en">Intermediate — can handle familiar situations, but struggles with anything unexpected</span><span class="zh">中级 — 能应对熟悉场景，但遇到意外情况就吃力</span></td>
+            <td><span class="en">Foundation programmes, some visa categories</span><span class="zh">预科课程、部分签证类别</span></td>
           </tr>
           <tr>
             <td class="band-cell">5.5</td>
             <td><span class="cefr-badge b2">B2 borderline</span></td>
-            <td>B1+ — getting there, but consistency isn't there yet</td>
-            <td>Some pre-sessional courses, extended foundation</td>
+            <td><span class="en">B1+ — getting there, but consistency isn't there yet</span><span class="zh">B1+ — 快到了，但还不稳定</span></td>
+            <td><span class="en">Some pre-sessional courses, extended foundation</span><span class="zh">部分语言预科、延长预科</span></td>
           </tr>
           <tr>
             <td class="band-cell">6.0</td>
             <td><span class="cefr-badge b2">B2</span></td>
-            <td>Upper-Intermediate — competent, can function in English-medium environments</td>
-            <td>Most undergraduate programmes, skilled worker visas</td>
+            <td><span class="en">Upper-Intermediate — competent, can function in English-medium environments</span><span class="zh">中高级 — 胜任，能在英语环境中正常运作</span></td>
+            <td><span class="en">Most undergraduate programmes, skilled worker visas</span><span class="zh">大多数本科课程、技术工签</span></td>
           </tr>
           <tr>
             <td class="band-cell">6.5</td>
             <td><span class="cefr-badge b2c1">B2 / C1 borderline</span></td>
-            <td>B2+ — strong B2 with C1 features emerging, but not yet consistent</td>
-            <td>Competitive undergraduate, some postgraduate, healthcare registration</td>
+            <td><span class="en">B2+ — strong B2 with C1 features emerging, but not yet consistent</span><span class="zh">B2+ — 强 B2，C1 特征开始出现，但还不够稳定</span></td>
+            <td><span class="en">Competitive undergraduate, some postgraduate, healthcare registration</span><span class="zh">竞争性本科、部分研究生、医疗注册</span></td>
           </tr>
           <tr>
             <td class="band-cell">7.0</td>
             <td><span class="cefr-badge c1">C1</span></td>
-            <td>Advanced — flexible, precise, operates comfortably in academic &amp; professional settings</td>
-            <td>Top universities, medical registration (GMC, NMC), PhD programmes</td>
+            <td><span class="en">Advanced — flexible, precise, operates comfortably in academic &amp; professional settings</span><span class="zh">高级 — 灵活、精准，在学术和职业环境中游刃有余</span></td>
+            <td><span class="en">Top universities, medical registration (GMC, NMC), PhD programmes</span><span class="zh">顶尖大学、医学注册（GMC, NMC）、博士项目</span></td>
           </tr>
         </tbody>
       </table>
     </div>
 
     <p style="text-align:center; margin-top:24px; font-size:0.82rem; color:var(--gray-600);">
-      CEFR = Common European Framework of Reference for Languages. The international standard for describing language ability.
+      <span class="en">CEFR = Common European Framework of Reference for Languages. The international standard for describing language ability.</span><span class="zh">CEFR = 欧洲语言共同参考框架。描述语言能力的国际标准。</span>
     </p>
   </section>
 
@@ -705,9 +711,9 @@
   <!-- ===== BAND-BY-BAND DEEP DIVE ===== -->
   <section class="section">
     <div class="section-head">
-      <h2>Band-by-Band: All Four Skills</h2>
+      <h2><span class="en">Band-by-Band: All Four Skills</span><span class="zh">逐分解析：听说读写四项技能</span></h2>
       <span class="accent-bar"></span>
-      <p>What you can do at each band — and what's still holding you back.</p>
+      <p><span class="en">What you can do at each band — and what's still holding you back.</span><span class="zh">每个分段你能做到什么 — 以及什么还在拖你后腿。</span></p>
     </div>
 
     <!-- ===== BAND 5.0 ===== -->
@@ -715,8 +721,8 @@
       <div class="band-header">
         <div class="band-number">5.0</div>
         <div class="band-meta">
-          <h3>Band 5.0 — Modest User</h3>
-          <p class="band-cefr">CEFR: <span>B1</span> · Intermediate</p>
+          <h3><span class="en">Band 5.0 — Modest User</span><span class="zh">5.0 分 — 有限使用者</span></h3>
+          <p class="band-cefr"><span class="en">CEFR: </span><span class="zh">CEFR：</span><span>B1</span> · <span class="en">Intermediate</span><span class="zh">中级</span></p>
         </div>
       </div>
 
@@ -724,139 +730,139 @@
         <!-- Listening 5.0 -->
         <div class="skill-card">
           <div class="skill-icon">🎧</div>
-          <h4>Listening</h4>
+          <h4><span class="en">Listening</span><span class="zh">听力</span></h4>
           <div class="can-do">
-            <p class="label can">You CAN</p>
+            <p class="label can"><span class="en">You CAN</span><span class="zh">你能做到</span></p>
             <ul>
-              <li>Follow slow, clear speech on familiar topics</li>
-              <li>Catch the main idea of short conversations</li>
-              <li>Understand basic directions and instructions</li>
-              <li>Pick out simple factual details (numbers, names, dates)</li>
+              <li><span class="en">Follow slow, clear speech on familiar topics</span><span class="zh">听懂熟悉话题的慢速、清晰语音</span></li>
+              <li><span class="en">Catch the main idea of short conversations</span><span class="zh">抓住简短对话的主要意思</span></li>
+              <li><span class="en">Understand basic directions and instructions</span><span class="zh">理解基本的指引和说明</span></li>
+              <li><span class="en">Pick out simple factual details (numbers, names, dates)</span><span class="zh">捕捉简单的事实细节（数字、名字、日期）</span></li>
             </ul>
           </div>
           <div class="cant-do">
-            <p class="label cant">You CAN'T yet</p>
+            <p class="label cant"><span class="en">You CAN'T yet</span><span class="zh">你还做不到</span></p>
             <ul>
-              <li>Follow fast, connected speech with reduced forms ("gonna," "wanna")</li>
-              <li>Distinguish between speakers in group discussions</li>
-              <li>Understand implied meaning or sarcasm</li>
-              <li>Keep up with academic lectures or monologues</li>
+              <li><span class="en">Follow fast, connected speech with reduced forms ("gonna," "wanna")</span><span class="zh">听懂快速的连读和缩略形式（gonna, wanna）</span></li>
+              <li><span class="en">Distinguish between speakers in group discussions</span><span class="zh">在多人讨论中区分不同说话者</span></li>
+              <li><span class="en">Understand implied meaning or sarcasm</span><span class="zh">理解隐含意义或讽刺</span></li>
+              <li><span class="en">Keep up with academic lectures or monologues</span><span class="zh">跟上学术讲座或独白</span></li>
             </ul>
           </div>
           <div class="mistakes">
-            <p class="label mistake-label">Typical Mistake Patterns</p>
+            <p class="label mistake-label"><span class="en">Typical Mistake Patterns</span><span class="zh">典型错误模式</span></p>
             <ul>
-              <li>Losing track the moment one word is unfamiliar — panic, then miss the next three answers</li>
-              <li>Writing the wrong number because you didn't hear the correction ("It's £15 — sorry, £50")</li>
-              <li>Getting tricked by distractors in Section 1 — the first answer you hear is rarely the right one</li>
+              <li><span class="en">Losing track the moment one word is unfamiliar — panic, then miss the next three answers</span><span class="zh">一个词听不懂就慌，然后连丢三道题</span></li>
+              <li><span class="en">Writing the wrong number because you didn't hear the correction ("It's £15 — sorry, £50")</span><span class="zh">没听到更正而写错数字（"是15镑——抱歉，50镑"）</span></li>
+              <li><span class="en">Getting tricked by distractors in Section 1 — the first answer you hear is rarely the right one</span><span class="zh">被 Section 1 的干扰项骗到——第一个听到的答案很少是对的</span></li>
             </ul>
           </div>
           <div class="score-conv">
-            <p class="label score-label">Score Conversion</p>
-            <p class="score-num">16–17 <small>correct out of 40</small></p>
+            <p class="label score-label"><span class="en">Score Conversion</span><span class="zh">分数换算</span></p>
+            <p class="score-num">16–17 <small><span class="en">correct out of 40</span><span class="zh">正确 / 40题</span></small></p>
           </div>
         </div>
 
         <!-- Reading 5.0 -->
         <div class="skill-card">
           <div class="skill-icon">📖</div>
-          <h4>Reading</h4>
+          <h4><span class="en">Reading</span><span class="zh">阅读</span></h4>
           <div class="can-do">
-            <p class="label can">You CAN</p>
+            <p class="label can"><span class="en">You CAN</span><span class="zh">你能做到</span></p>
             <ul>
-              <li>Understand short, straightforward texts on familiar topics</li>
-              <li>Locate specific information when the wording matches the question</li>
-              <li>Get the gist of simple articles and notices</li>
+              <li><span class="en">Understand short, straightforward texts on familiar topics</span><span class="zh">读懂熟悉话题的简短、直白文本</span></li>
+              <li><span class="en">Locate specific information when the wording matches the question</span><span class="zh">在措辞与问题一致时定位具体信息</span></li>
+              <li><span class="en">Get the gist of simple articles and notices</span><span class="zh">理解简单文章和通知的大意</span></li>
             </ul>
           </div>
           <div class="cant-do">
-            <p class="label cant">You CAN'T yet</p>
+            <p class="label cant"><span class="en">You CAN'T yet</span><span class="zh">你还做不到</span></p>
             <ul>
-              <li>Handle long academic passages with complex arguments</li>
-              <li>Recognise paraphrased ideas — if the words change, you lose it</li>
-              <li>Distinguish between fact and opinion reliably</li>
-              <li>Complete the test within the time limit — you're running out of time on Passage 3</li>
+              <li><span class="en">Handle long academic passages with complex arguments</span><span class="zh">处理含复杂论证的长篇学术文章</span></li>
+              <li><span class="en">Recognise paraphrased ideas — if the words change, you lose it</span><span class="zh">识别改写后的观点——词一换你就找不到</span></li>
+              <li><span class="en">Distinguish between fact and opinion reliably</span><span class="zh">可靠地区分事实与观点</span></li>
+              <li><span class="en">Complete the test within the time limit — you're running out of time on Passage 3</span><span class="zh">在规定时间内完成考试——第三篇总是不够时间</span></li>
             </ul>
           </div>
           <div class="mistakes">
-            <p class="label mistake-label">Typical Mistake Patterns</p>
+            <p class="label mistake-label"><span class="en">Typical Mistake Patterns</span><span class="zh">典型错误模式</span></p>
             <ul>
-              <li>Keyword matching — you find the word from the question in the text, but it's a distractor</li>
-              <li>True/False/Not Given confusion — you mark "False" for information that simply isn't mentioned</li>
-              <li>Spending 30+ minutes on Passage 1, then rushing through the hardest passage</li>
+              <li><span class="en">Keyword matching — you find the word from the question in the text, but it's a distractor</span><span class="zh">关键词匹配——在文中找到问题里的词，但那是干扰项</span></li>
+              <li><span class="en">True/False/Not Given confusion — you mark "False" for information that simply isn't mentioned</span><span class="zh">T/F/NG 混淆——把根本没提到的信息标成 False</span></li>
+              <li><span class="en">Spending 30+ minutes on Passage 1, then rushing through the hardest passage</span><span class="zh">第一篇花 30 多分钟，然后赶着做最难的那篇</span></li>
             </ul>
           </div>
           <div class="score-conv">
-            <p class="label score-label">Score Conversion (Academic)</p>
-            <p class="score-num">15–18 <small>correct out of 40</small></p>
+            <p class="label score-label"><span class="en">Score Conversion (Academic)</span><span class="zh">分数换算（学术类）</span></p>
+            <p class="score-num">15–18 <small><span class="en">correct out of 40</span><span class="zh">正确 / 40题</span></small></p>
           </div>
         </div>
 
         <!-- Writing 5.0 -->
         <div class="skill-card">
           <div class="skill-icon">✍️</div>
-          <h4>Writing</h4>
+          <h4><span class="en">Writing</span><span class="zh">写作</span></h4>
           <div class="can-do">
-            <p class="label can">You CAN</p>
+            <p class="label can"><span class="en">You CAN</span><span class="zh">你能做到</span></p>
             <ul>
-              <li>Address the task in a basic way — the examiner can see what you're trying to say</li>
-              <li>Write simple sentences with basic cohesion (and, but, because)</li>
-              <li>Use everyday vocabulary for familiar topics</li>
+              <li><span class="en">Address the task in a basic way — the examiner can see what you're trying to say</span><span class="zh">基本回应题目——考官能看出你想说什么</span></li>
+              <li><span class="en">Write simple sentences with basic cohesion (and, but, because)</span><span class="zh">写出具有基本衔接的简单句（and, but, because）</span></li>
+              <li><span class="en">Use everyday vocabulary for familiar topics</span><span class="zh">用日常词汇谈论熟悉话题</span></li>
             </ul>
           </div>
           <div class="cant-do">
-            <p class="label cant">You CAN'T yet</p>
+            <p class="label cant"><span class="en">You CAN'T yet</span><span class="zh">你还做不到</span></p>
             <ul>
-              <li>Develop ideas fully — your paragraphs are thin, often one or two sentences</li>
-              <li>Organise writing logically — ideas appear in the order you thought of them, not in a planned structure</li>
-              <li>Use complex sentences without errors — attempts at complexity usually create confusion</li>
+              <li><span class="en">Develop ideas fully — your paragraphs are thin, often one or two sentences</span><span class="zh">充分展开观点——段落单薄，常常只有一两句话</span></li>
+              <li><span class="en">Organise writing logically — ideas appear in the order you thought of them, not in a planned structure</span><span class="zh">有逻辑地组织文章——观点按你想到的顺序出现，而非计划好的结构</span></li>
+              <li><span class="en">Use complex sentences without errors — attempts at complexity usually create confusion</span><span class="zh">使用无错的复杂句——尝试复杂结构通常反而造成混乱</span></li>
             </ul>
           </div>
           <div class="mistakes">
-            <p class="label mistake-label">What the Examiner Sees</p>
+            <p class="label mistake-label"><span class="en">What the Examiner Sees</span><span class="zh">考官看到什么</span></p>
             <ul>
-              <li>Frequent grammar errors that sometimes make meaning unclear</li>
-              <li>Vocabulary is limited — you repeat the same words because you don't have alternatives</li>
-              <li>Task 2 is too short — under 200 words, ideas are underdeveloped</li>
-              <li>Spelling errors in basic words ("becouse," "goverment," "enviroment")</li>
+              <li><span class="en">Frequent grammar errors that sometimes make meaning unclear</span><span class="zh">频繁的语法错误，有时导致意思不清</span></li>
+              <li><span class="en">Vocabulary is limited — you repeat the same words because you don't have alternatives</span><span class="zh">词汇有限——因为没别的词可选而不断重复</span></li>
+              <li><span class="en">Task 2 is too short — under 200 words, ideas are underdeveloped</span><span class="zh">Task 2 篇幅不足——不到 200 词，观点未充分展开</span></li>
+              <li><span class="en">Spelling errors in basic words ("becouse," "goverment," "enviroment")</span><span class="zh">基础词汇拼写错误（becouse, goverment, enviroment）</span></li>
             </ul>
           </div>
           <div class="examiner-note">
-            <strong>Examiner's note:</strong> At Band 5, errors are frequent but the message usually gets through. The biggest gap isn't complexity — it's control. Fix your basic grammar first.
+            <strong><span class="en">Examiner's note:</span><span class="zh">考官笔记：</span></strong> <span class="en">At Band 5, errors are frequent but the message usually gets through. The biggest gap isn't complexity — it's control. Fix your basic grammar first.</span><span class="zh">5 分段错误频繁但信息通常能被理解。最大的差距不是复杂性——是控制力。先把基础语法搞对。</span>
           </div>
         </div>
 
         <!-- Speaking 5.0 -->
         <div class="skill-card">
           <div class="skill-icon">🗣️</div>
-          <h4>Speaking</h4>
+          <h4><span class="en">Speaking</span><span class="zh">口语</span></h4>
           <div class="can-do">
-            <p class="label can">You CAN</p>
+            <p class="label can"><span class="en">You CAN</span><span class="zh">你能做到</span></p>
             <ul>
-              <li>Keep the conversation going on familiar topics (home, work, hobbies)</li>
-              <li>Answer questions directly, even if answers are short</li>
-              <li>Make yourself understood — pronunciation is generally intelligible</li>
+              <li><span class="en">Keep the conversation going on familiar topics (home, work, hobbies)</span><span class="zh">在熟悉话题上保持对话（家庭、工作、爱好）</span></li>
+              <li><span class="en">Answer questions directly, even if answers are short</span><span class="zh">直接回答问题，即使回答很短</span></li>
+              <li><span class="en">Make yourself understood — pronunciation is generally intelligible</span><span class="zh">让人听懂——发音基本可理解</span></li>
             </ul>
           </div>
           <div class="cant-do">
-            <p class="label cant">You CAN'T yet</p>
+            <p class="label cant"><span class="en">You CAN'T yet</span><span class="zh">你还做不到</span></p>
             <ul>
-              <li>Speak at length without noticeable pauses and hesitation</li>
-              <li>Use a range of connecting words — "and then... and then... and then..."</li>
-              <li>Paraphrase when you don't know a word — you just stop or switch to your first language</li>
+              <li><span class="en">Speak at length without noticeable pauses and hesitation</span><span class="zh">长时间发言而没有明显的停顿和犹豫</span></li>
+              <li><span class="en">Use a range of connecting words — "and then... and then... and then..."</span><span class="zh">使用多样的连接词——而不是"然后……然后……然后……"</span></li>
+              <li><span class="en">Paraphrase when you don't know a word — you just stop or switch to your first language</span><span class="zh">不知道某个词时进行转述——你直接停住或切换成母语</span></li>
             </ul>
           </div>
           <div class="mistakes">
-            <p class="label mistake-label">What the Examiner Hears</p>
+            <p class="label mistake-label"><span class="en">What the Examiner Hears</span><span class="zh">考官听到什么</span></p>
             <ul>
-              <li>Frequent self-correction — you start a sentence, stop, restart, stop again</li>
-              <li>Simple sentence structures only — "I like... because... it is good"</li>
-              <li>Pronunciation is understandable but first-language influence is strong</li>
-              <li>Part 2 long turn runs out of ideas after 45 seconds — then awkward silence</li>
+              <li><span class="en">Frequent self-correction — you start a sentence, stop, restart, stop again</span><span class="zh">频繁自我纠正——起个头，停，重来，又停</span></li>
+              <li><span class="en">Simple sentence structures only — "I like... because... it is good"</span><span class="zh">只有简单句式——"我喜欢……因为……它很好"</span></li>
+              <li><span class="en">Pronunciation is understandable but first-language influence is strong</span><span class="zh">发音可理解但母语影响很强</span></li>
+              <li><span class="en">Part 2 long turn runs out of ideas after 45 seconds — then awkward silence</span><span class="zh">Part 2 长段发言 45 秒就没词了——然后尴尬沉默</span></li>
             </ul>
           </div>
           <div class="examiner-note">
-            <strong>Examiner's note:</strong> Band 5 speakers communicate, but effort is visible. The examiner is doing extra work to follow you.
+            <strong><span class="en">Examiner's note:</span><span class="zh">考官笔记：</span></strong> <span class="en">Band 5 speakers communicate, but effort is visible. The examiner is doing extra work to follow you.</span><span class="zh">5 分考生能交流，但费劲是看得见的。考官得额外费力才能跟上你。</span>
           </div>
         </div>
       </div>
@@ -867,8 +873,8 @@
       <div class="band-header">
         <div class="band-number">5.5</div>
         <div class="band-meta">
-          <h3>Band 5.5 — Modest to Competent Borderline</h3>
-          <p class="band-cefr">CEFR: <span>B2 borderline</span> · B1+</p>
+          <h3><span class="en">Band 5.5 — Modest to Competent Borderline</span><span class="zh">5.5 分 — 有限到胜任的临界点</span></h3>
+          <p class="band-cefr"><span class="en">CEFR: </span><span class="zh">CEFR：</span><span>B2 borderline</span> · <span class="en">B1+</span><span class="zh">B1+</span></p>
         </div>
       </div>
 
@@ -876,135 +882,135 @@
         <!-- Listening 5.5 -->
         <div class="skill-card">
           <div class="skill-icon">🎧</div>
-          <h4>Listening</h4>
+          <h4><span class="en">Listening</span><span class="zh">听力</span></h4>
           <div class="can-do">
-            <p class="label can">You CAN</p>
+            <p class="label can"><span class="en">You CAN</span><span class="zh">你能做到</span></p>
             <ul>
-              <li>Follow conversations at natural speed when the topic is familiar</li>
-              <li>Handle Section 1 and 2 comfortably (social and transactional contexts)</li>
-              <li>Catch most factual details the first time</li>
+              <li><span class="en">Follow conversations at natural speed when the topic is familiar</span><span class="zh">听懂熟悉话题的自然语速对话</span></li>
+              <li><span class="en">Handle Section 1 and 2 comfortably (social and transactional contexts)</span><span class="zh">自如应对 Section 1 和 2（社交和事务场景）</span></li>
+              <li><span class="en">Catch most factual details the first time</span><span class="zh">第一次就能抓住大部分事实细节</span></li>
             </ul>
           </div>
           <div class="cant-do">
-            <p class="label cant">You CAN'T yet</p>
+            <p class="label cant"><span class="en">You CAN'T yet</span><span class="zh">你还做不到</span></p>
             <ul>
-              <li>Maintain focus through Section 4 — your concentration drops after 25 minutes</li>
-              <li>Process information while listening and writing simultaneously</li>
-              <li>Spot when the speaker changes their mind mid-sentence</li>
+              <li><span class="en">Maintain focus through Section 4 — your concentration drops after 25 minutes</span><span class="zh">在 Section 4 保持专注——25 分钟后注意力就开始涣散</span></li>
+              <li><span class="en">Process information while listening and writing simultaneously</span><span class="zh">边听边写同时处理信息</span></li>
+              <li><span class="en">Spot when the speaker changes their mind mid-sentence</span><span class="zh">察觉说话者话说到一半改口</span></li>
             </ul>
           </div>
           <div class="mistakes">
-            <p class="label mistake-label">Typical Mistake Patterns</p>
+            <p class="label mistake-label"><span class="en">Typical Mistake Patterns</span><span class="zh">典型错误模式</span></p>
             <ul>
-              <li>Spelling errors lose you easy marks — you heard it right but wrote it wrong</li>
-              <li>Missing the plural "s" — the answer was "books" but you wrote "book"</li>
-              <li>Getting distracted by Section 3 — multiple speakers, academic discussion, you lose the thread</li>
+              <li><span class="en">Spelling errors lose you easy marks — you heard it right but wrote it wrong</span><span class="zh">拼写错误丢分——听对了但写错了</span></li>
+              <li><span class="en">Missing the plural "s" — the answer was "books" but you wrote "book"</span><span class="zh">漏掉复数 s——答案是 books 你写了 book</span></li>
+              <li><span class="en">Getting distracted by Section 3 — multiple speakers, academic discussion, you lose the thread</span><span class="zh">被 Section 3 分散注意力——多人学术讨论，你跟丢了</span></li>
             </ul>
           </div>
           <div class="score-conv">
-            <p class="label score-label">Score Conversion</p>
-            <p class="score-num">18–22 <small>correct out of 40</small></p>
+            <p class="label score-label"><span class="en">Score Conversion</span><span class="zh">分数换算</span></p>
+            <p class="score-num">18–22 <small><span class="en">correct out of 40</span><span class="zh">正确 / 40题</span></small></p>
           </div>
         </div>
 
         <!-- Reading 5.5 -->
         <div class="skill-card">
           <div class="skill-icon">📖</div>
-          <h4>Reading</h4>
+          <h4><span class="en">Reading</span><span class="zh">阅读</span></h4>
           <div class="can-do">
-            <p class="label can">You CAN</p>
+            <p class="label can"><span class="en">You CAN</span><span class="zh">你能做到</span></p>
             <ul>
-              <li>Get through Passage 1 and most of Passage 2 within the time</li>
-              <li>Handle direct comprehension questions (gap-fill, short answer)</li>
-              <li>Recognise some paraphrasing when it's straightforward</li>
+              <li><span class="en">Get through Passage 1 and most of Passage 2 within the time</span><span class="zh">在规定时间内完成 Passage 1 和大部分 Passage 2</span></li>
+              <li><span class="en">Handle direct comprehension questions (gap-fill, short answer)</span><span class="zh">应对直接理解题（填空、简答）</span></li>
+              <li><span class="en">Recognise some paraphrasing when it's straightforward</span><span class="zh">识别简单直白的改写</span></li>
             </ul>
           </div>
           <div class="cant-do">
-            <p class="label cant">You CAN'T yet</p>
+            <p class="label cant"><span class="en">You CAN'T yet</span><span class="zh">你还做不到</span></p>
             <ul>
-              <li>Process Passage 3 — the academic density and abstract argument structure overwhelm you</li>
-              <li>Handle heading-matching questions efficiently — you re-read the whole paragraph each time</li>
-              <li>Infer the writer's position when it's not explicitly stated</li>
+              <li><span class="en">Process Passage 3 — the academic density and abstract argument structure overwhelm you</span><span class="zh">处理 Passage 3——学术密度和抽象论证结构让你招架不住</span></li>
+              <li><span class="en">Handle heading-matching questions efficiently — you re-read the whole paragraph each time</span><span class="zh">高效处理段落标题匹配——你每次都重读整段</span></li>
+              <li><span class="en">Infer the writer's position when it's not explicitly stated</span><span class="zh">推断作者未明确表达的立场</span></li>
             </ul>
           </div>
           <div class="mistakes">
-            <p class="label mistake-label">Typical Mistake Patterns</p>
+            <p class="label mistake-label"><span class="en">Typical Mistake Patterns</span><span class="zh">典型错误模式</span></p>
             <ul>
-              <li>You understand 80% of the passage but answer the wrong question — reading too fast, missing qualifiers</li>
-              <li>Yes/No/Not Given errors — you bring outside knowledge into the text ("but that's true in real life!")</li>
-              <li>Running out of time — you have 10 minutes left and Passage 3 is untouched</li>
+              <li><span class="en">You understand 80% of the passage but answer the wrong question — reading too fast, missing qualifiers</span><span class="zh">文章懂了 80% 却答错了题——读太快，漏掉限定词</span></li>
+              <li><span class="en">Yes/No/Not Given errors — you bring outside knowledge into the text ("but that's true in real life!")</span><span class="zh">Y/N/NG 错误——把外部知识带进文本（"但现实中就是这样的啊！"）</span></li>
+              <li><span class="en">Running out of time — you have 10 minutes left and Passage 3 is untouched</span><span class="zh">时间不够——还剩 10 分钟，Passage 3 还没动</span></li>
             </ul>
           </div>
           <div class="score-conv">
-            <p class="label score-label">Score Conversion (Academic)</p>
-            <p class="score-num">19–22 <small>correct out of 40</small></p>
+            <p class="label score-label"><span class="en">Score Conversion (Academic)</span><span class="zh">分数换算（学术类）</span></p>
+            <p class="score-num">19–22 <small><span class="en">correct out of 40</span><span class="zh">正确 / 40题</span></small></p>
           </div>
         </div>
 
         <!-- Writing 5.5 -->
         <div class="skill-card">
           <div class="skill-icon">✍️</div>
-          <h4>Writing</h4>
+          <h4><span class="en">Writing</span><span class="zh">写作</span></h4>
           <div class="can-do">
-            <p class="label can">You CAN</p>
+            <p class="label can"><span class="en">You CAN</span><span class="zh">你能做到</span></p>
             <ul>
-              <li>Address all parts of the question — you cover what was asked, just not deeply</li>
-              <li>Structure your essay with a clear introduction and conclusion</li>
-              <li>Use some topic-specific vocabulary, though inaccurately at times</li>
+              <li><span class="en">Address all parts of the question — you cover what was asked, just not deeply</span><span class="zh">回应题目的所有部分——覆盖了要求的内容，只是不够深入</span></li>
+              <li><span class="en">Structure your essay with a clear introduction and conclusion</span><span class="zh">有清晰的引言和结论来组织文章</span></li>
+              <li><span class="en">Use some topic-specific vocabulary, though inaccurately at times</span><span class="zh">使用一些话题相关词汇，虽然有时不准确</span></li>
             </ul>
           </div>
           <div class="cant-do">
-            <p class="label cant">You CAN'T yet</p>
+            <p class="label cant"><span class="en">You CAN'T yet</span><span class="zh">你还做不到</span></p>
             <ul>
-              <li>Develop body paragraphs with multiple supporting points — each paragraph is a single idea, briefly stated</li>
-              <li>Use cohesive devices beyond "firstly, secondly, finally"</li>
-              <li>Write complex sentences where the grammar actually works</li>
+              <li><span class="en">Develop body paragraphs with multiple supporting points — each paragraph is a single idea, briefly stated</span><span class="zh">用多个支撑点展开主体段落——每段只有一个观点，简单带过</span></li>
+              <li><span class="en">Use cohesive devices beyond "firstly, secondly, finally"</span><span class="zh">使用"firstly, secondly, finally"之外的衔接手段</span></li>
+              <li><span class="en">Write complex sentences where the grammar actually works</span><span class="zh">写出语法真正正确的复杂句</span></li>
             </ul>
           </div>
           <div class="mistakes">
-            <p class="label mistake-label">What the Examiner Sees</p>
+            <p class="label mistake-label"><span class="en">What the Examiner Sees</span><span class="zh">考官看到什么</span></p>
             <ul>
-              <li>Grammar errors are still frequent but no longer block meaning</li>
-              <li>You attempt complex structures but they often break — subordinate clauses that don't quite land</li>
-              <li>Vocabulary range is wider than Band 5 but word choice errors appear ("make a crime" instead of "commit a crime")</li>
-              <li>Task 1 (Academic) — you describe every data point instead of summarising trends</li>
+              <li><span class="en">Grammar errors are still frequent but no longer block meaning</span><span class="zh">语法错误仍然频繁但不再阻碍理解</span></li>
+              <li><span class="en">You attempt complex structures but they often break — subordinate clauses that don't quite land</span><span class="zh">尝试复杂结构但经常出错——从句没落到位</span></li>
+              <li><span class="en">Vocabulary range is wider than Band 5 but word choice errors appear ("make a crime" instead of "commit a crime")</span><span class="zh">词汇量比 5 分广但搭配错误出现（make a crime 而非 commit a crime）</span></li>
+              <li><span class="en">Task 1 (Academic) — you describe every data point instead of summarising trends</span><span class="zh">Task 1（学术类）——你描述每个数据点而不是总结趋势</span></li>
             </ul>
           </div>
           <div class="examiner-note">
-            <strong>Examiner's note:</strong> Band 5.5 is frustrating — you're almost competent, but the inconsistency keeps you from Band 6. The fix is usually coherence: your ideas are fine, the <em>organisation</em> of them isn't.
+            <strong><span class="en">Examiner's note:</span><span class="zh">考官笔记：</span></strong> <span class="en">Band 5.5 is frustrating — you're almost competent, but the inconsistency keeps you from Band 6. The fix is usually coherence: your ideas are fine, the <em>organisation</em> of them isn't.</span><span class="zh">5.5 分最让人抓狂——你几乎胜任了，但不稳定性让你卡在 6 分以下。突破口通常是连贯性：你的想法没问题，是<em>组织方式</em>不行。</span>
           </div>
         </div>
 
         <!-- Speaking 5.5 -->
         <div class="skill-card">
           <div class="skill-icon">🗣️</div>
-          <h4>Speaking</h4>
+          <h4><span class="en">Speaking</span><span class="zh">口语</span></h4>
           <div class="can-do">
-            <p class="label can">You CAN</p>
+            <p class="label can"><span class="en">You CAN</span><span class="zh">你能做到</span></p>
             <ul>
-              <li>Speak for 1–2 minutes in Part 2 without completely running out of content</li>
-              <li>Answer Part 3 questions with some development — you give reasons, not just one-word answers</li>
-              <li>Use some less common vocabulary — you're trying, even if it's not always right</li>
+              <li><span class="en">Speak for 1–2 minutes in Part 2 without completely running out of content</span><span class="zh">Part 2 能说 1–2 分钟而不会完全没有内容</span></li>
+              <li><span class="en">Answer Part 3 questions with some development — you give reasons, not just one-word answers</span><span class="zh">Part 3 回答有一定展开——给出理由，不只是一个词</span></li>
+              <li><span class="en">Use some less common vocabulary — you're trying, even if it's not always right</span><span class="zh">使用一些非常见词汇——你在尝试，即使不一定对</span></li>
             </ul>
           </div>
           <div class="cant-do">
-            <p class="label cant">You CAN'T yet</p>
+            <p class="label cant"><span class="en">You CAN'T yet</span><span class="zh">你还做不到</span></p>
             <ul>
-              <li>Sustain fluency — you're fine for 30 seconds, then hesitation kicks in</li>
-              <li>Use fillers naturally — your pauses are silent, which reads as lost, not thinking</li>
-              <li>Self-correct without losing flow — you stop entirely, correct, then restart</li>
+              <li><span class="en">Sustain fluency — you're fine for 30 seconds, then hesitation kicks in</span><span class="zh">保持流利——前 30 秒还行，然后就开始卡顿</span></li>
+              <li><span class="en">Use fillers naturally — your pauses are silent, which reads as lost, not thinking</span><span class="zh">自然地使用填充词——你的停顿是沉默，看起来像卡住了而非在思考</span></li>
+              <li><span class="en">Self-correct without losing flow — you stop entirely, correct, then restart</span><span class="zh">自我纠正而不打断语流——你完全停下，纠正，再重新开始</span></li>
             </ul>
           </div>
           <div class="mistakes">
-            <p class="label mistake-label">What the Examiner Hears</p>
+            <p class="label mistake-label"><span class="en">What the Examiner Hears</span><span class="zh">考官听到什么</span></p>
             <ul>
-              <li>Pauses mid-sentence while searching for words — not the natural pauses of a fluent speaker, but visible retrieval effort</li>
-              <li>Good vocabulary appears but sits awkwardly in the sentence — the word is right, the collocation is wrong</li>
-              <li>Pronunciation is clear but flat — no intonation to signal meaning, no stress to emphasise key points</li>
+              <li><span class="en">Pauses mid-sentence while searching for words — not the natural pauses of a fluent speaker, but visible retrieval effort</span><span class="zh">句中停顿找词——不是流利者的自然停顿，而是明显的词汇检索吃力</span></li>
+              <li><span class="en">Good vocabulary appears but sits awkwardly in the sentence — the word is right, the collocation is wrong</span><span class="zh">好词出现了但放在句子里别扭——词对了，搭配错了</span></li>
+              <li><span class="en">Pronunciation is clear but flat — no intonation to signal meaning, no stress to emphasise key points</span><span class="zh">发音清晰但平淡——没有语调传递含义，没有重音强调重点</span></li>
             </ul>
           </div>
           <div class="examiner-note">
-            <strong>Examiner's note:</strong> Band 5.5 speakers know more than they can show. The bottleneck isn't knowledge — it's retrieval speed and confidence. Speed up your access to what you already know.
+            <strong><span class="en">Examiner's note:</span><span class="zh">考官笔记：</span></strong> <span class="en">Band 5.5 speakers know more than they can show. The bottleneck isn't knowledge — it's retrieval speed and confidence. Speed up your access to what you already know.</span><span class="zh">5.5 分考生知道的比能展示的更多。瓶颈不是知识——是提取速度和信心。加快调用你已有知识的速度。</span>
           </div>
         </div>
       </div>
@@ -1015,8 +1021,8 @@
       <div class="band-header">
         <div class="band-number">6.0</div>
         <div class="band-meta">
-          <h3>Band 6.0 — Competent User</h3>
-          <p class="band-cefr">CEFR: <span>B2</span> · Upper-Intermediate</p>
+          <h3><span class="en">Band 6.0 — Competent User</span><span class="zh">6.0 分 — 胜任使用者</span></h3>
+          <p class="band-cefr"><span class="en">CEFR: </span><span class="zh">CEFR：</span><span>B2</span> · <span class="en">Upper-Intermediate</span><span class="zh">中高级</span></p>
         </div>
       </div>
 
@@ -1024,136 +1030,136 @@
         <!-- Listening 6.0 -->
         <div class="skill-card">
           <div class="skill-icon">🎧</div>
-          <h4>Listening</h4>
+          <h4><span class="en">Listening</span><span class="zh">听力</span></h4>
           <div class="can-do">
-            <p class="label can">You CAN</p>
+            <p class="label can"><span class="en">You CAN</span><span class="zh">你能做到</span></p>
             <ul>
-              <li>Follow extended speech on both familiar and unfamiliar topics</li>
-              <li>Handle Sections 1–3 with good accuracy — you're solid on social, transactional, and academic discussion contexts</li>
-              <li>Understand most connected speech patterns and common reductions</li>
+              <li><span class="en">Follow extended speech on both familiar and unfamiliar topics</span><span class="zh">听懂熟悉和不熟悉话题的长段讲话</span></li>
+              <li><span class="en">Handle Sections 1–3 with good accuracy — you're solid on social, transactional, and academic discussion contexts</span><span class="zh">Section 1–3 正确率不错——社交、事务和学术讨论场景都稳</span></li>
+              <li><span class="en">Understand most connected speech patterns and common reductions</span><span class="zh">理解大部分连读模式和常见缩略</span></li>
             </ul>
           </div>
           <div class="cant-do">
-            <p class="label cant">You CAN'T yet</p>
+            <p class="label cant"><span class="en">You CAN'T yet</span><span class="zh">你还做不到</span></p>
             <ul>
-              <li>Maintain perfect accuracy through Section 4 — you still drop 3–4 answers in the academic monologue</li>
-              <li>Catch answers that require processing two pieces of information simultaneously</li>
-              <li>Spell less common academic vocabulary correctly under pressure</li>
+              <li><span class="en">Maintain perfect accuracy through Section 4 — you still drop 3–4 answers in the academic monologue</span><span class="zh">Section 4 保持完美正确率——学术独白部分还会丢 3–4 题</span></li>
+              <li><span class="en">Catch answers that require processing two pieces of information simultaneously</span><span class="zh">抓住需要同时处理两条信息的答案</span></li>
+              <li><span class="en">Spell less common academic vocabulary correctly under pressure</span><span class="zh">在压力下正确拼写非常见学术词汇</span></li>
             </ul>
           </div>
           <div class="mistakes">
-            <p class="label mistake-label">Typical Mistake Patterns</p>
+            <p class="label mistake-label"><span class="en">Typical Mistake Patterns</span><span class="zh">典型错误模式</span></p>
             <ul>
-              <li>Section 4 traps — you write what you expect to hear instead of what was actually said</li>
-              <li>Map/diagram labelling — you lose spatial orientation mid-task</li>
-              <li>Multiple choice with long options — you're still reading Option B when the answer for Option C is spoken</li>
+              <li><span class="en">Section 4 traps — you write what you expect to hear instead of what was actually said</span><span class="zh">Section 4 陷阱——你写了你以为会听到的，而不是实际说的</span></li>
+              <li><span class="en">Map/diagram labelling — you lose spatial orientation mid-task</span><span class="zh">地图/图表标注——任务中途失去空间方向</span></li>
+              <li><span class="en">Multiple choice with long options — you're still reading Option B when the answer for Option C is spoken</span><span class="zh">选项长的多选题——你还在读 B 选项，C 的答案已经念完了</span></li>
             </ul>
           </div>
           <div class="score-conv">
-            <p class="label score-label">Score Conversion</p>
-            <p class="score-num">23–25 <small>correct out of 40</small></p>
+            <p class="label score-label"><span class="en">Score Conversion</span><span class="zh">分数换算</span></p>
+            <p class="score-num">23–25 <small><span class="en">correct out of 40</span><span class="zh">正确 / 40题</span></small></p>
           </div>
         </div>
 
         <!-- Reading 6.0 -->
         <div class="skill-card">
           <div class="skill-icon">📖</div>
-          <h4>Reading</h4>
+          <h4><span class="en">Reading</span><span class="zh">阅读</span></h4>
           <div class="can-do">
-            <p class="label can">You CAN</p>
+            <p class="label can"><span class="en">You CAN</span><span class="zh">你能做到</span></p>
             <ul>
-              <li>Complete all three passages with some time to check answers</li>
-              <li>Handle most question types: matching, gap-fill, T/F/NG, short answer</li>
-              <li>Recognise paraphrasing consistently — you can find the answer even when the wording is different</li>
+              <li><span class="en">Complete all three passages with some time to check answers</span><span class="zh">完成全部三篇文章，还有时间检查</span></li>
+              <li><span class="en">Handle most question types: matching, gap-fill, T/F/NG, short answer</span><span class="zh">应对大多数题型：匹配、填空、判断、简答</span></li>
+              <li><span class="en">Recognise paraphrasing consistently — you can find the answer even when the wording is different</span><span class="zh">稳定识别改写——即使措辞不同也能找到答案</span></li>
             </ul>
           </div>
           <div class="cant-do">
-            <p class="label cant">You CAN'T yet</p>
+            <p class="label cant"><span class="en">You CAN'T yet</span><span class="zh">你还做不到</span></p>
             <ul>
-              <li>Handle heading-matching questions efficiently — they still consume too much time</li>
-              <li>Process dense academic prose at speed — you re-read complex sentences</li>
-              <li>Distinguish between "False" and "Not Given" reliably on nuanced questions</li>
+              <li><span class="en">Handle heading-matching questions efficiently — they still consume too much time</span><span class="zh">高效处理段落标题匹配——还是很耗时</span></li>
+              <li><span class="en">Process dense academic prose at speed — you re-read complex sentences</span><span class="zh">快速处理密集学术文本——你会回读复杂句子</span></li>
+              <li><span class="en">Distinguish between "False" and "Not Given" reliably on nuanced questions</span><span class="zh">在细微题目上可靠区分 False 和 Not Given</span></li>
             </ul>
           </div>
           <div class="mistakes">
-            <p class="label mistake-label">Typical Mistake Patterns</p>
+            <p class="label mistake-label"><span class="en">Typical Mistake Patterns</span><span class="zh">典型错误模式</span></p>
             <ul>
-              <li>Getting the right paragraph but the wrong sentence — close, but not precise enough</li>
-              <li>Writer's views questions — you confuse "the writer believes" with "the writer mentions research showing"</li>
-              <li>Spending too long on one question — you sacrifice 3 easy marks to chase 1 difficult one</li>
+              <li><span class="en">Getting the right paragraph but the wrong sentence — close, but not precise enough</span><span class="zh">找对了段落却找错了句子——接近了，但不够精准</span></li>
+              <li><span class="en">Writer's views questions — you confuse "the writer believes" with "the writer mentions research showing"</span><span class="zh">作者观点题——混淆"作者认为"和"作者提到有研究表明"</span></li>
+              <li><span class="en">Spending too long on one question — you sacrifice 3 easy marks to chase 1 difficult one</span><span class="zh">在一道题上花太久——为追 1 分难题牺牲 3 分简单题</span></li>
             </ul>
           </div>
           <div class="score-conv">
-            <p class="label score-label">Score Conversion (Academic)</p>
-            <p class="score-num">23–26 <small>correct out of 40</small></p>
+            <p class="label score-label"><span class="en">Score Conversion (Academic)</span><span class="zh">分数换算（学术类）</span></p>
+            <p class="score-num">23–26 <small><span class="en">correct out of 40</span><span class="zh">正确 / 40题</span></small></p>
           </div>
         </div>
 
         <!-- Writing 6.0 -->
         <div class="skill-card">
           <div class="skill-icon">✍️</div>
-          <h4>Writing</h4>
+          <h4><span class="en">Writing</span><span class="zh">写作</span></h4>
           <div class="can-do">
-            <p class="label can">You CAN</p>
+            <p class="label can"><span class="en">You CAN</span><span class="zh">你能做到</span></p>
             <ul>
-              <li>Address all parts of the task with relevant ideas</li>
-              <li>Organise writing into clear paragraphs with a logical progression</li>
-              <li>Use a reasonable range of vocabulary with some less common items</li>
-              <li>Write complex sentences that generally work</li>
+              <li><span class="en">Address all parts of the task with relevant ideas</span><span class="zh">用相关观点回应题目的所有部分</span></li>
+              <li><span class="en">Organise writing into clear paragraphs with a logical progression</span><span class="zh">组织成段落清晰、逻辑递进的文章</span></li>
+              <li><span class="en">Use a reasonable range of vocabulary with some less common items</span><span class="zh">使用恰当的词汇量，包含一些非常见词汇</span></li>
+              <li><span class="en">Write complex sentences that generally work</span><span class="zh">写出基本正确的复杂句</span></li>
             </ul>
           </div>
           <div class="cant-do">
-            <p class="label cant">You CAN'T yet</p>
+            <p class="label cant"><span class="en">You CAN'T yet</span><span class="zh">你还做不到</span></p>
             <ul>
-              <li>Develop arguments with depth — your supporting points are still somewhat general</li>
-              <li>Use cohesive devices with complete flexibility — your linking feels mechanical in places</li>
-              <li>Maintain consistent register — formal one paragraph, casual the next</li>
+              <li><span class="en">Develop arguments with depth — your supporting points are still somewhat general</span><span class="zh">深入展开论证——支撑点仍然比较泛泛</span></li>
+              <li><span class="en">Use cohesive devices with complete flexibility — your linking feels mechanical in places</span><span class="zh">完全灵活地使用衔接手段——有些地方的连接显得机械</span></li>
+              <li><span class="en">Maintain consistent register — formal one paragraph, casual the next</span><span class="zh">保持一致的语域——一段正式，下一段口语化</span></li>
             </ul>
           </div>
           <div class="mistakes">
-            <p class="label mistake-label">What the Examiner Sees</p>
+            <p class="label mistake-label"><span class="en">What the Examiner Sees</span><span class="zh">考官看到什么</span></p>
             <ul>
-              <li>Grammar errors exist but don't cause misunderstanding — article mistakes, preposition slips</li>
-              <li>Vocabulary is adequate but safe — you avoid risks, which caps your score at 6</li>
-              <li>Task 2 conclusion is weak — you run out of time and write two sentences that add nothing new</li>
-              <li>Task 1 overview is present but superficial — you mention "overall" but don't actually synthesise</li>
+              <li><span class="en">Grammar errors exist but don't cause misunderstanding — article mistakes, preposition slips</span><span class="zh">语法错误存在但不影响理解——冠词错误、介词失误</span></li>
+              <li><span class="en">Vocabulary is adequate but safe — you avoid risks, which caps your score at 6</span><span class="zh">词汇够用但保守——你回避风险，分数就卡在 6</span></li>
+              <li><span class="en">Task 2 conclusion is weak — you run out of time and write two sentences that add nothing new</span><span class="zh">Task 2 结论薄弱——时间不够，写了两句毫无新意的话</span></li>
+              <li><span class="en">Task 1 overview is present but superficial — you mention "overall" but don't actually synthesise</span><span class="zh">Task 1 概述有但肤浅——提了 overall 但没有真正综合</span></li>
             </ul>
           </div>
           <div class="examiner-note">
-            <strong>Examiner's note:</strong> Band 6 is the "safe zone." You're competent, but you're playing it safe. To break into 6.5+, you need to take more lexical risks and build deeper arguments.
+            <strong><span class="en">Examiner's note:</span><span class="zh">考官笔记：</span></strong> <span class="en">Band 6 is the "safe zone." You're competent, but you're playing it safe. To break into 6.5+, you need to take more lexical risks and build deeper arguments.</span><span class="zh">6 分是"安全区"。你够胜任，但你在求稳。要突破 6.5+，你需要冒更多词汇风险，建立更深入的论证。</span>
           </div>
         </div>
 
         <!-- Speaking 6.0 -->
         <div class="skill-card">
           <div class="skill-icon">🗣️</div>
-          <h4>Speaking</h4>
+          <h4><span class="en">Speaking</span><span class="zh">口语</span></h4>
           <div class="can-do">
-            <p class="label can">You CAN</p>
+            <p class="label can"><span class="en">You CAN</span><span class="zh">你能做到</span></p>
             <ul>
-              <li>Speak at length without major breakdowns — you can fill 2 minutes in Part 2</li>
-              <li>Use a mix of simple and complex structures — some complex sentences land cleanly</li>
-              <li>Employ discourse markers (well, actually, I suppose, the thing is) to buy thinking time</li>
+              <li><span class="en">Speak at length without major breakdowns — you can fill 2 minutes in Part 2</span><span class="zh">长时间发言而不会严重中断——Part 2 能说满 2 分钟</span></li>
+              <li><span class="en">Use a mix of simple and complex structures — some complex sentences land cleanly</span><span class="zh">混合使用简单和复杂结构——部分复杂句稳稳落地</span></li>
+              <li><span class="en">Employ discourse markers (well, actually, I suppose, the thing is) to buy thinking time</span><span class="zh">运用话语标记（well, actually, I suppose, the thing is）来争取思考时间</span></li>
             </ul>
           </div>
           <div class="cant-do">
-            <p class="label cant">You CAN'T yet</p>
+            <p class="label cant"><span class="en">You CAN'T yet</span><span class="zh">你还做不到</span></p>
             <ul>
-              <li>Handle unexpected questions smoothly — a surprising Part 3 question makes you pause visibly</li>
-              <li>Use idiomatic language naturally — you know some idioms but they sound inserted, not organic</li>
-              <li>Sustain a flexible range of structures — you have 2–3 complex patterns you reuse</li>
+              <li><span class="en">Handle unexpected questions smoothly — a surprising Part 3 question makes you pause visibly</span><span class="zh">流畅应对意外问题——Part 3 来个出其不意的问题你就明显停顿</span></li>
+              <li><span class="en">Use idiomatic language naturally — you know some idioms but they sound inserted, not organic</span><span class="zh">自然使用习语——你知道一些习语，但听起来像插进去的，不是自然流露</span></li>
+              <li><span class="en">Sustain a flexible range of structures — you have 2–3 complex patterns you reuse</span><span class="zh">保持灵活多样的句式——你只有 2–3 种复杂模式反复用</span></li>
             </ul>
           </div>
           <div class="mistakes">
-            <p class="label mistake-label">What the Examiner Hears</p>
+            <p class="label mistake-label"><span class="en">What the Examiner Hears</span><span class="zh">考官听到什么</span></p>
             <ul>
-              <li>Fluency is generally good but breaks down when the topic shifts to something unfamiliar</li>
-              <li>Good vocabulary range but occasional awkward collocations — "big problem" instead of "serious problem," "make research" instead of "do research"</li>
-              <li>Pronunciation is clear with some features of connected speech, but intonation is still relatively flat</li>
+              <li><span class="en">Fluency is generally good but breaks down when the topic shifts to something unfamiliar</span><span class="zh">流利度总体不错但话题转到不熟悉的内容就崩</span></li>
+              <li><span class="en">Good vocabulary range but occasional awkward collocations — "big problem" instead of "serious problem," "make research" instead of "do research"</span><span class="zh">词汇量不错但偶尔搭配别扭——big problem 而非 serious problem，make research 而非 do research</span></li>
+              <li><span class="en">Pronunciation is clear with some features of connected speech, but intonation is still relatively flat</span><span class="zh">发音清晰，有些连读特征，但语调仍然比较平</span></li>
             </ul>
           </div>
           <div class="examiner-note">
-            <strong>Examiner's note:</strong> Band 6 speakers are already functioning in English. The jump to 6.5 is about precision — using the <em>right</em> word, not just a word that works.
+            <strong><span class="en">Examiner's note:</span><span class="zh">考官笔记：</span></strong> <span class="en">Band 6 speakers are already functioning in English. The jump to 6.5 is about precision — using the <em>right</em> word, not just a word that works.</span><span class="zh">6 分考生已经能用英语正常运作。跳到 6.5 在于精准——用<em>对的</em>词，而不只是能用的词。</span>
           </div>
         </div>
       </div>
@@ -1164,8 +1170,8 @@
       <div class="band-header">
         <div class="band-number">6.5</div>
         <div class="band-meta">
-          <h3>Band 6.5 — Competent to Good Borderline</h3>
-          <p class="band-cefr">CEFR: <span>B2 / C1 borderline</span> · B2+</p>
+          <h3><span class="en">Band 6.5 — Competent to Good Borderline</span><span class="zh">6.5 分 — 胜任到良好的临界点</span></h3>
+          <p class="band-cefr"><span class="en">CEFR: </span><span class="zh">CEFR：</span><span>B2 / C1 borderline</span> · <span class="en">B2+</span><span class="zh">B2+</span></p>
         </div>
       </div>
 
@@ -1173,136 +1179,136 @@
         <!-- Listening 6.5 -->
         <div class="skill-card">
           <div class="skill-icon">🎧</div>
-          <h4>Listening</h4>
+          <h4><span class="en">Listening</span><span class="zh">听力</span></h4>
           <div class="can-do">
-            <p class="label can">You CAN</p>
+            <p class="label can"><span class="en">You CAN</span><span class="zh">你能做到</span></p>
             <ul>
-              <li>Handle all four sections with confidence — Section 4 no longer intimidates you</li>
-              <li>Process fast, connected speech with reduced forms effortlessly</li>
-              <li>Follow academic arguments and distinguish between main ideas and supporting detail</li>
+              <li><span class="en">Handle all four sections with confidence — Section 4 no longer intimidates you</span><span class="zh">自信应对全部四个 Section——Section 4 不再让你害怕</span></li>
+              <li><span class="en">Process fast, connected speech with reduced forms effortlessly</span><span class="zh">轻松处理快速连读和缩略形式</span></li>
+              <li><span class="en">Follow academic arguments and distinguish between main ideas and supporting detail</span><span class="zh">跟上学术论证，区分主要观点和支撑细节</span></li>
             </ul>
           </div>
           <div class="cant-do">
-            <p class="label cant">You CAN'T yet</p>
+            <p class="label cant"><span class="en">You CAN'T yet</span><span class="zh">你还做不到</span></p>
             <ul>
-              <li>Achieve near-perfect accuracy — you still lose 3–5 marks, often to distractors or spelling</li>
-              <li>Maintain flawless concentration for the full 30 minutes — one moment of drift costs you an answer</li>
-              <li>Handle very dense Section 4 lectures where multiple ideas are packed into a single sentence</li>
+              <li><span class="en">Achieve near-perfect accuracy — you still lose 3–5 marks, often to distractors or spelling</span><span class="zh">达到近乎完美正确率——还会丢 3–5 分，常因为干扰项或拼写</span></li>
+              <li><span class="en">Maintain flawless concentration for the full 30 minutes — one moment of drift costs you an answer</span><span class="zh">整整 30 分钟保持完美专注——走神一刻就丢一题</span></li>
+              <li><span class="en">Handle very dense Section 4 lectures where multiple ideas are packed into a single sentence</span><span class="zh">处理一句塞进多个观点的高密度 Section 4 讲座</span></li>
             </ul>
           </div>
           <div class="mistakes">
-            <p class="label mistake-label">Typical Mistake Patterns</p>
+            <p class="label mistake-label"><span class="en">Typical Mistake Patterns</span><span class="zh">典型错误模式</span></p>
             <ul>
-              <li>The last 5 questions of Section 4 — fatigue errors, not ability errors</li>
-              <li>Overthinking multiple choice — you talk yourself out of the right answer</li>
-              <li>Capitalisation inconsistency — proper nouns not capitalised in gap-fill answers</li>
+              <li><span class="en">The last 5 questions of Section 4 — fatigue errors, not ability errors</span><span class="zh">Section 4 最后 5 题——疲劳失误，不是能力问题</span></li>
+              <li><span class="en">Overthinking multiple choice — you talk yourself out of the right answer</span><span class="zh">多选题想太多——把自己从正确答案上劝退</span></li>
+              <li><span class="en">Capitalisation inconsistency — proper nouns not capitalised in gap-fill answers</span><span class="zh">大小写不一致——填空题中专有名词没大写</span></li>
             </ul>
           </div>
           <div class="score-conv">
-            <p class="label score-label">Score Conversion</p>
-            <p class="score-num">26–29 <small>correct out of 40</small></p>
+            <p class="label score-label"><span class="en">Score Conversion</span><span class="zh">分数换算</span></p>
+            <p class="score-num">26–29 <small><span class="en">correct out of 40</span><span class="zh">正确 / 40题</span></small></p>
           </div>
         </div>
 
         <!-- Reading 6.5 -->
         <div class="skill-card">
           <div class="skill-icon">📖</div>
-          <h4>Reading</h4>
+          <h4><span class="en">Reading</span><span class="zh">阅读</span></h4>
           <div class="can-do">
-            <p class="label can">You CAN</p>
+            <p class="label can"><span class="en">You CAN</span><span class="zh">你能做到</span></p>
             <ul>
-              <li>Complete all passages with time to review flagged questions</li>
-              <li>Navigate complex academic arguments — you can follow the writer's reasoning</li>
-              <li>Handle all question types, including the difficult ones (heading matching, writer's views)</li>
+              <li><span class="en">Complete all passages with time to review flagged questions</span><span class="zh">完成所有文章，有时间回顾标记的题目</span></li>
+              <li><span class="en">Navigate complex academic arguments — you can follow the writer's reasoning</span><span class="zh">驾驭复杂学术论证——能跟上作者的推理</span></li>
+              <li><span class="en">Handle all question types, including the difficult ones (heading matching, writer's views)</span><span class="zh">应对所有题型，包括难题（标题匹配、作者观点）</span></li>
             </ul>
           </div>
           <div class="cant-do">
-            <p class="label cant">You CAN'T yet</p>
+            <p class="label cant"><span class="en">You CAN'T yet</span><span class="zh">你还做不到</span></p>
             <ul>
-              <li>Achieve the precision Band 7 requires — your answers are usually right but occasionally "close"</li>
-              <li>Process Passage 3 at the same speed as Passage 1 — the difficulty gap still costs you time</li>
-              <li>Catch every instance of Not Given — the subtle ones still trip you up</li>
+              <li><span class="en">Achieve the precision Band 7 requires — your answers are usually right but occasionally "close"</span><span class="zh">达到 7 分要求的精准度——答案通常对但偶尔"差一点"</span></li>
+              <li><span class="en">Process Passage 3 at the same speed as Passage 1 — the difficulty gap still costs you time</span><span class="zh">以同等速度处理 Passage 3 和 Passage 1——难度差距仍然耗时</span></li>
+              <li><span class="en">Catch every instance of Not Given — the subtle ones still trip you up</span><span class="zh">捕捉每一个 Not Given——细微的那些还是能绊倒你</span></li>
             </ul>
           </div>
           <div class="mistakes">
-            <p class="label mistake-label">Typical Mistake Patterns</p>
+            <p class="label mistake-label"><span class="en">Typical Mistake Patterns</span><span class="zh">典型错误模式</span></p>
             <ul>
-              <li>"Close but wrong" — you identified the right paragraph but misinterpreted the specific detail</li>
-              <li>Heading questions where two headings seem to fit — you pick the broader one when the text needed the specific one</li>
-              <li>Rushing through Passage 1 to save time for Passage 3, then making careless errors on easy questions</li>
+              <li><span class="en">"Close but wrong" — you identified the right paragraph but misinterpreted the specific detail</span><span class="zh">"接近但错了"——找对了段落但曲解了具体细节</span></li>
+              <li><span class="en">Heading questions where two headings seem to fit — you pick the broader one when the text needed the specific one</span><span class="zh">标题题两个选项都像——你选了更宽泛的那个，而文章需要的是具体的</span></li>
+              <li><span class="en">Rushing through Passage 1 to save time for Passage 3, then making careless errors on easy questions</span><span class="zh">赶着做 Passage 1 给 Passage 3 省时间，结果简单题上粗心出错</span></li>
             </ul>
           </div>
           <div class="score-conv">
-            <p class="label score-label">Score Conversion (Academic)</p>
-            <p class="score-num">27–29 <small>correct out of 40</small></p>
+            <p class="label score-label"><span class="en">Score Conversion (Academic)</span><span class="zh">分数换算（学术类）</span></p>
+            <p class="score-num">27–29 <small><span class="en">correct out of 40</span><span class="zh">正确 / 40题</span></small></p>
           </div>
         </div>
 
         <!-- Writing 6.5 -->
         <div class="skill-card">
           <div class="skill-icon">✍️</div>
-          <h4>Writing</h4>
+          <h4><span class="en">Writing</span><span class="zh">写作</span></h4>
           <div class="can-do">
-            <p class="label can">You CAN</p>
+            <p class="label can"><span class="en">You CAN</span><span class="zh">你能做到</span></p>
             <ul>
-              <li>Develop clear positions with relevant, extended, and supported ideas</li>
-              <li>Organise information and ideas logically with clear progression throughout</li>
-              <li>Use a good range of vocabulary with some less common and idiomatic items</li>
-              <li>Produce frequent error-free sentences with a mix of simple and complex structures</li>
+              <li><span class="en">Develop clear positions with relevant, extended, and supported ideas</span><span class="zh">用相关、充分展开且有支撑的观点建立清晰立场</span></li>
+              <li><span class="en">Organise information and ideas logically with clear progression throughout</span><span class="zh">有逻辑地组织信息和观点，全文推进清晰</span></li>
+              <li><span class="en">Use a good range of vocabulary with some less common and idiomatic items</span><span class="zh">使用良好词汇量，包含一些非常见和习语性表达</span></li>
+              <li><span class="en">Produce frequent error-free sentences with a mix of simple and complex structures</span><span class="zh">产出大量无错句子，简单和复杂结构混合使用</span></li>
             </ul>
           </div>
           <div class="cant-do">
-            <p class="label cant">You CAN'T yet</p>
+            <p class="label cant"><span class="en">You CAN'T yet</span><span class="zh">你还做不到</span></p>
             <ul>
-              <li>Write with the consistent precision Band 7 demands — you still have small inaccuracies in word choice</li>
-              <li>Use sophisticated cohesive devices naturally — "furthermore" and "moreover" feel slightly forced</li>
-              <li>Maintain a fully academic register throughout — occasional slips into informal or spoken style</li>
+              <li><span class="en">Write with the consistent precision Band 7 demands — you still have small inaccuracies in word choice</span><span class="zh">以 7 分要求的稳定精准度写作——用词上仍有小偏差</span></li>
+              <li><span class="en">Use sophisticated cohesive devices naturally — "furthermore" and "moreover" feel slightly forced</span><span class="zh">自然地使用高级衔接手段——furthermore 和 moreover 显得略微生硬</span></li>
+              <li><span class="en">Maintain a fully academic register throughout — occasional slips into informal or spoken style</span><span class="zh">全程保持完全学术语域——偶尔滑入非正式或口语风格</span></li>
             </ul>
           </div>
           <div class="mistakes">
-            <p class="label mistake-label">What the Examiner Sees</p>
+            <p class="label mistake-label"><span class="en">What the Examiner Sees</span><span class="zh">考官看到什么</span></p>
             <ul>
-              <li>A strong essay that hits all the right notes — but with 4–5 small errors that prevent Band 7</li>
-              <li>Lexical range is good but collocation is not always natural — "increase the awareness" instead of "raise awareness"</li>
-              <li>Task 1 has a clear overview but the data selection could be more strategic</li>
+              <li><span class="en">A strong essay that hits all the right notes — but with 4–5 small errors that prevent Band 7</span><span class="zh">一篇各方面都到位的好文章——但有 4–5 个小错误让它上不了 7</span></li>
+              <li><span class="en">Lexical range is good but collocation is not always natural — "increase the awareness" instead of "raise awareness"</span><span class="zh">词汇面不错但搭配不总是自然——increase the awareness 而非 raise awareness</span></li>
+              <li><span class="en">Task 1 has a clear overview but the data selection could be more strategic</span><span class="zh">Task 1 概述清晰但数据选取可以更有策略性</span></li>
             </ul>
           </div>
           <div class="examiner-note">
-            <strong>Examiner's note:</strong> Band 6.5 is the most frustrating score in IELTS writing. You're doing almost everything right, but small, preventable errors hold you back. The fix is usually collocation precision and reducing "almost-right" word choices.
+            <strong><span class="en">Examiner's note:</span><span class="zh">考官笔记：</span></strong> <span class="en">Band 6.5 is the most frustrating score in IELTS writing. You're doing almost everything right, but small, preventable errors hold you back. The fix is usually collocation precision and reducing "almost-right" word choices.</span><span class="zh">6.5 是雅思写作中最让人抓狂的分数。你几乎什么都做对了，但小的、可避免的错误拖住了你。突破口通常是搭配精准度和减少"差不多对"的用词。</span>
           </div>
         </div>
 
         <!-- Speaking 6.5 -->
         <div class="skill-card">
           <div class="skill-icon">🗣️</div>
-          <h4>Speaking</h4>
+          <h4><span class="en">Speaking</span><span class="zh">口语</span></h4>
           <div class="can-do">
-            <p class="label can">You CAN</p>
+            <p class="label can"><span class="en">You CAN</span><span class="zh">你能做到</span></p>
             <ul>
-              <li>Speak fluently with only occasional hesitation — usually to think of ideas, not words</li>
-              <li>Use a good range of vocabulary including some less common and idiomatic items</li>
-              <li>Produce mostly error-free sentences with a mix of structures</li>
-              <li>Use intonation and stress to convey meaning and attitude</li>
+              <li><span class="en">Speak fluently with only occasional hesitation — usually to think of ideas, not words</span><span class="zh">流利发言，仅偶尔犹豫——通常是为了想观点而不是想词</span></li>
+              <li><span class="en">Use a good range of vocabulary including some less common and idiomatic items</span><span class="zh">使用良好词汇量，包含一些非常见和习语性表达</span></li>
+              <li><span class="en">Produce mostly error-free sentences with a mix of structures</span><span class="zh">产出大部分无错句子，句式多样</span></li>
+              <li><span class="en">Use intonation and stress to convey meaning and attitude</span><span class="zh">用语调和重音传达意义和态度</span></li>
             </ul>
           </div>
           <div class="cant-do">
-            <p class="label cant">You CAN'T yet</p>
+            <p class="label cant"><span class="en">You CAN'T yet</span><span class="zh">你还做不到</span></p>
             <ul>
-              <li>Speak with the effortless flexibility of a Band 7 — you're good, but the examiner can still see the effort</li>
-              <li>Use idiomatic language with complete naturalness — it still sounds learned rather than acquired</li>
-              <li>Handle truly abstract Part 3 questions without a moment of cognitive processing</li>
+              <li><span class="en">Speak with the effortless flexibility of a Band 7 — you're good, but the examiner can still see the effort</span><span class="zh">以 7 分般轻松自如的灵活性发言——你很好，但考官仍能看到你在用力</span></li>
+              <li><span class="en">Use idiomatic language with complete naturalness — it still sounds learned rather than acquired</span><span class="zh">完全自然地使用习语——听起来还是学来的而非习得的</span></li>
+              <li><span class="en">Handle truly abstract Part 3 questions without a moment of cognitive processing</span><span class="zh">处理真正抽象的 Part 3 问题而不需要片刻认知加工</span></li>
             </ul>
           </div>
           <div class="mistakes">
-            <p class="label mistake-label">What the Examiner Hears</p>
+            <p class="label mistake-label"><span class="en">What the Examiner Hears</span><span class="zh">考官听到什么</span></p>
             <ul>
-              <li>Very strong overall — but there's a ceiling: your best moments aren't quite Band 7, and your weakest moments dip to Band 6</li>
-              <li>Vocabulary is wide but precision is occasionally off — you use "significant" when "crucial" would be better, or vice versa</li>
-              <li>Grammar is generally accurate but lacks the range a Band 7 demonstrates — you have 3–4 reliable complex patterns</li>
+              <li><span class="en">Very strong overall — but there's a ceiling: your best moments aren't quite Band 7, and your weakest moments dip to Band 6</span><span class="zh">整体很强——但有天花板：你最好的时刻还不到 7 分，最差的时刻掉到 6 分</span></li>
+              <li><span class="en">Vocabulary is wide but precision is occasionally off — you use "significant" when "crucial" would be better, or vice versa</span><span class="zh">词汇面宽但精准度偶尔偏差——该用 crucial 时用了 significant，或者反过来</span></li>
+              <li><span class="en">Grammar is generally accurate but lacks the range a Band 7 demonstrates — you have 3–4 reliable complex patterns</span><span class="zh">语法总体准确但缺乏 7 分展示的广度——你只有 3–4 种可靠的复杂句式</span></li>
             </ul>
           </div>
           <div class="examiner-note">
-            <strong>Examiner's note:</strong> Band 6.5 speakers are already strong. The 7 barrier is about flexibility — being able to say the same thing five different ways, and knowing which one fits this exact moment.
+            <strong><span class="en">Examiner's note:</span><span class="zh">考官笔记：</span></strong> <span class="en">Band 6.5 speakers are already strong. The 7 barrier is about flexibility — being able to say the same thing five different ways, and knowing which one fits this exact moment.</span><span class="zh">6.5 分考生已经很强了。7 分的障碍在于灵活性——能用五种不同方式表达同一件事，并且知道哪一种适合当下这个时刻。</span>
           </div>
         </div>
       </div>
@@ -1313,8 +1319,8 @@
       <div class="band-header">
         <div class="band-number">7.0</div>
         <div class="band-meta">
-          <h3>Band 7.0 — Good User</h3>
-          <p class="band-cefr">CEFR: <span>C1</span> · Advanced</p>
+          <h3><span class="en">Band 7.0 — Good User</span><span class="zh">7.0 分 — 良好使用者</span></h3>
+          <p class="band-cefr"><span class="en">CEFR: </span><span class="zh">CEFR：</span><span>C1</span> · <span class="en">Advanced</span><span class="zh">高级</span></p>
         </div>
       </div>
 
@@ -1322,137 +1328,137 @@
         <!-- Listening 7.0 -->
         <div class="skill-card">
           <div class="skill-icon">🎧</div>
-          <h4>Listening</h4>
+          <h4><span class="en">Listening</span><span class="zh">听力</span></h4>
           <div class="can-do">
-            <p class="label can">You CAN</p>
+            <p class="label can"><span class="en">You CAN</span><span class="zh">你能做到</span></p>
             <ul>
-              <li>Understand extended speech even when it is not clearly structured</li>
-              <li>Follow complex lines of argument on both familiar and unfamiliar topics</li>
-              <li>Process academic lectures with ease — you can take notes while listening without missing content</li>
-              <li>Recognise a wide range of accents (British, Australian, North American, NZ)</li>
+              <li><span class="en">Understand extended speech even when it is not clearly structured</span><span class="zh">理解长段讲话，即使结构不清晰</span></li>
+              <li><span class="en">Follow complex lines of argument on both familiar and unfamiliar topics</span><span class="zh">跟上熟悉和不熟悉话题的复杂论证线索</span></li>
+              <li><span class="en">Process academic lectures with ease — you can take notes while listening without missing content</span><span class="zh">轻松处理学术讲座——边听边记笔记而不遗漏内容</span></li>
+              <li><span class="en">Recognise a wide range of accents (British, Australian, North American, NZ)</span><span class="zh">识别多种口音（英式、澳式、北美、新西兰）</span></li>
             </ul>
           </div>
           <div class="cant-do">
-            <p class="label cant">You CAN'T yet</p>
+            <p class="label cant"><span class="en">You CAN'T yet</span><span class="zh">你还做不到</span></p>
             <ul>
-              <li>Achieve the near-perfect scores of Band 8+ — you still miss 2–4 answers</li>
-              <li>Handle extremely dense Section 4 content where the speaker delivers complex data at speed</li>
+              <li><span class="en">Achieve the near-perfect scores of Band 8+ — you still miss 2–4 answers</span><span class="zh">达到 8 分以上的近乎满分——你还会丢 2–4 题</span></li>
+              <li><span class="en">Handle extremely dense Section 4 content where the speaker delivers complex data at speed</span><span class="zh">处理说话者快速传递复杂数据的超高密度 Section 4 内容</span></li>
             </ul>
           </div>
           <div class="mistakes">
-            <p class="label mistake-label">Typical Mistake Patterns</p>
+            <p class="label mistake-label"><span class="en">Typical Mistake Patterns</span><span class="zh">典型错误模式</span></p>
             <ul>
-              <li>Careless spelling — you know the word, you just wrote it wrong under time pressure</li>
-              <li>Getting complacent in Section 1 — you expect it to be easy and miss a distractor</li>
-              <li>Word count violations — writing 4 words when the instruction says "NO MORE THAN THREE WORDS"</li>
+              <li><span class="en">Careless spelling — you know the word, you just wrote it wrong under time pressure</span><span class="zh">粗心拼写——你认识这个词，只是在时间压力下写错了</span></li>
+              <li><span class="en">Getting complacent in Section 1 — you expect it to be easy and miss a distractor</span><span class="zh">Section 1 掉以轻心——以为很简单结果中了干扰项</span></li>
+              <li><span class="en">Word count violations — writing 4 words when the instruction says "NO MORE THAN THREE WORDS"</span><span class="zh">字数违规——题目要求 NO MORE THAN THREE WORDS 你写了四个词</span></li>
             </ul>
           </div>
           <div class="score-conv">
-            <p class="label score-label">Score Conversion</p>
-            <p class="score-num">30–32 <small>correct out of 40</small></p>
+            <p class="label score-label"><span class="en">Score Conversion</span><span class="zh">分数换算</span></p>
+            <p class="score-num">30–32 <small><span class="en">correct out of 40</span><span class="zh">正确 / 40题</span></small></p>
           </div>
         </div>
 
         <!-- Reading 7.0 -->
         <div class="skill-card">
           <div class="skill-icon">📖</div>
-          <h4>Reading</h4>
+          <h4><span class="en">Reading</span><span class="zh">阅读</span></h4>
           <div class="can-do">
-            <p class="label can">You CAN</p>
+            <p class="label can"><span class="en">You CAN</span><span class="zh">你能做到</span></p>
             <ul>
-              <li>Read complex academic texts with strong comprehension and good speed</li>
-              <li>Identify the writer's position, attitude, and implied meaning reliably</li>
-              <li>Navigate all question types efficiently — you have a strategy for each one</li>
-              <li>Finish with 5–10 minutes to check answers</li>
+              <li><span class="en">Read complex academic texts with strong comprehension and good speed</span><span class="zh">以良好的理解力和速度阅读复杂学术文本</span></li>
+              <li><span class="en">Identify the writer's position, attitude, and implied meaning reliably</span><span class="zh">可靠地识别作者立场、态度和隐含意义</span></li>
+              <li><span class="en">Navigate all question types efficiently — you have a strategy for each one</span><span class="zh">高效应对所有题型——每种题型都有策略</span></li>
+              <li><span class="en">Finish with 5–10 minutes to check answers</span><span class="zh">完成时有 5–10 分钟检查答案</span></li>
             </ul>
           </div>
           <div class="cant-do">
-            <p class="label cant">You CAN'T yet</p>
+            <p class="label cant"><span class="en">You CAN'T yet</span><span class="zh">你还做不到</span></p>
             <ul>
-              <li>Score Band 8+ consistently — you still make 3–5 mistakes, often on the most nuanced questions</li>
-              <li>Process extremely dense philosophical or highly technical passages at full speed</li>
+              <li><span class="en">Score Band 8+ consistently — you still make 3–5 mistakes, often on the most nuanced questions</span><span class="zh">稳定拿到 8 分以上——还会犯 3–5 个错误，通常在最细微的题目上</span></li>
+              <li><span class="en">Process extremely dense philosophical or highly technical passages at full speed</span><span class="zh">全速处理极其密集的哲学或高度技术性文章</span></li>
             </ul>
           </div>
           <div class="mistakes">
-            <p class="label mistake-label">Typical Mistake Patterns</p>
+            <p class="label mistake-label"><span class="en">Typical Mistake Patterns</span><span class="zh">典型错误模式</span></p>
             <ul>
-              <li>Over-interpreting — you read meaning INTO the text that isn't there (the writer implies, you infer too far)</li>
-              <li>Matching information to paragraphs — you find the right paragraph but match to the wrong sentence within it</li>
-              <li>Getting 37/40 — the last three mistakes are the hardest to eliminate</li>
+              <li><span class="en">Over-interpreting — you read meaning INTO the text that isn't there (the writer implies, you infer too far)</span><span class="zh">过度解读——往文本里读入不存在的含义（作者暗示了，你推断过头了）</span></li>
+              <li><span class="en">Matching information to paragraphs — you find the right paragraph but match to the wrong sentence within it</span><span class="zh">信息与段落匹配——找对了段落但匹配到段内错误的句子</span></li>
+              <li><span class="en">Getting 37/40 — the last three mistakes are the hardest to eliminate</span><span class="zh">37/40——最后三个错误是最难消除的</span></li>
             </ul>
           </div>
           <div class="score-conv">
-            <p class="label score-label">Score Conversion (Academic)</p>
-            <p class="score-num">30–32 <small>correct out of 40</small></p>
+            <p class="label score-label"><span class="en">Score Conversion (Academic)</span><span class="zh">分数换算（学术类）</span></p>
+            <p class="score-num">30–32 <small><span class="en">correct out of 40</span><span class="zh">正确 / 40题</span></small></p>
           </div>
         </div>
 
         <!-- Writing 7.0 -->
         <div class="skill-card">
           <div class="skill-icon">✍️</div>
-          <h4>Writing</h4>
+          <h4><span class="en">Writing</span><span class="zh">写作</span></h4>
           <div class="can-do">
-            <p class="label can">You CAN</p>
+            <p class="label can"><span class="en">You CAN</span><span class="zh">你能做到</span></p>
             <ul>
-              <li>Address all parts of the task with well-developed, extended, and supported ideas</li>
-              <li>Organise information and ideas logically with clear progression throughout the response</li>
-              <li>Use a wide range of vocabulary flexibly and precisely, including less common and idiomatic items</li>
-              <li>Produce frequent error-free sentences with a variety of complex structures</li>
+              <li><span class="en">Address all parts of the task with well-developed, extended, and supported ideas</span><span class="zh">用充分展开、深入且有支撑的观点回应题目所有部分</span></li>
+              <li><span class="en">Organise information and ideas logically with clear progression throughout the response</span><span class="zh">有逻辑地组织信息和观点，全文推进清晰</span></li>
+              <li><span class="en">Use a wide range of vocabulary flexibly and precisely, including less common and idiomatic items</span><span class="zh">灵活精准地使用广泛词汇，包括非常见和习语性表达</span></li>
+              <li><span class="en">Produce frequent error-free sentences with a variety of complex structures</span><span class="zh">产出大量无错句子，复杂结构丰富多样</span></li>
             </ul>
           </div>
           <div class="cant-do">
-            <p class="label cant">You CAN'T yet</p>
+            <p class="label cant"><span class="en">You CAN'T yet</span><span class="zh">你还做不到</span></p>
             <ul>
-              <li>Write with the effortless sophistication of Band 8 — your arguments are solid but not striking</li>
-              <li>Use the full range of cohesive devices with complete naturalness — some transitions still feel mechanical</li>
-              <li>Achieve near-perfect accuracy — there are still 2–3 small errors per paragraph</li>
+              <li><span class="en">Write with the effortless sophistication of Band 8 — your arguments are solid but not striking</span><span class="zh">以 8 分般轻松自如的精湛水平写作——论证扎实但不够出彩</span></li>
+              <li><span class="en">Use the full range of cohesive devices with complete naturalness — some transitions still feel mechanical</span><span class="zh">完全自然地使用全部衔接手段——有些过渡仍然显得机械</span></li>
+              <li><span class="en">Achieve near-perfect accuracy — there are still 2–3 small errors per paragraph</span><span class="zh">达到近乎完美准确度——每段还有 2–3 个小错误</span></li>
             </ul>
           </div>
           <div class="mistakes">
-            <p class="label mistake-label">What the Examiner Sees</p>
+            <p class="label mistake-label"><span class="en">What the Examiner Sees</span><span class="zh">考官看到什么</span></p>
             <ul>
-              <li>Strong control of all four criteria — no single area drags you down</li>
-              <li>Occasional slips in articles and prepositions that don't affect communication</li>
-              <li>Vocabulary is impressive but not yet dazzling — you use "important" when "pivotal" or "paramount" would show range</li>
+              <li><span class="en">Strong control of all four criteria — no single area drags you down</span><span class="zh">四项评分标准都掌控有力——没有一个单项拖后腿</span></li>
+              <li><span class="en">Occasional slips in articles and prepositions that don't affect communication</span><span class="zh">偶尔冠词和介词失误但不影响交流</span></li>
+              <li><span class="en">Vocabulary is impressive but not yet dazzling — you use "important" when "pivotal" or "paramount" would show range</span><span class="zh">词汇令人印象深刻但还不够惊艳——该用 pivotal 或 paramount 展示广度时用了 important</span></li>
             </ul>
           </div>
           <div class="examiner-note">
-            <strong>Examiner's note:</strong> Band 7 writing is genuinely good. At this level, improvement is about nuance — choosing the <em>best</em> word, not just a correct one, and structuring arguments with elegance, not just logic.
+            <strong><span class="en">Examiner's note:</span><span class="zh">考官笔记：</span></strong> <span class="en">Band 7 writing is genuinely good. At this level, improvement is about nuance — choosing the <em>best</em> word, not just a correct one, and structuring arguments with elegance, not just logic.</span><span class="zh">7 分写作是真正的好。到了这个水平，提升在于细微之处——选<em>最好的</em>词，而不只是对的词；以优雅而非仅是逻辑来组织论证。</span>
           </div>
         </div>
 
         <!-- Speaking 7.0 -->
         <div class="skill-card">
           <div class="skill-icon">🗣️</div>
-          <h4>Speaking</h4>
+          <h4><span class="en">Speaking</span><span class="zh">口语</span></h4>
           <div class="can-do">
-            <p class="label can">You CAN</p>
+            <p class="label can"><span class="en">You CAN</span><span class="zh">你能做到</span></p>
             <ul>
-              <li>Speak at length without noticeable effort or loss of coherence</li>
-              <li>Use a wide vocabulary resource readily and flexibly to convey precise meaning</li>
-              <li>Use a range of complex structures with flexibility — you can rephrase mid-sentence when needed</li>
-              <li>Produce mostly error-free sentences — errors are rare and self-corrected</li>
-              <li>Use intonation, stress, and rhythm effectively to convey and enhance meaning</li>
+              <li><span class="en">Speak at length without noticeable effort or loss of coherence</span><span class="zh">长篇发言无明显费力或失去连贯</span></li>
+              <li><span class="en">Use a wide vocabulary resource readily and flexibly to convey precise meaning</span><span class="zh">随时灵活使用广泛词汇传达精准含义</span></li>
+              <li><span class="en">Use a range of complex structures with flexibility — you can rephrase mid-sentence when needed</span><span class="zh">灵活使用多样复杂结构——需要时能在句中改口重组</span></li>
+              <li><span class="en">Produce mostly error-free sentences — errors are rare and self-corrected</span><span class="zh">产出大部分无错句子——错误稀少且能自我纠正</span></li>
+              <li><span class="en">Use intonation, stress, and rhythm effectively to convey and enhance meaning</span><span class="zh">有效运用语调、重音和节奏传达并增强含义</span></li>
             </ul>
           </div>
           <div class="cant-do">
-            <p class="label cant">You CAN'T yet</p>
+            <p class="label cant"><span class="en">You CAN'T yet</span><span class="zh">你还做不到</span></p>
             <ul>
-              <li>Speak with the near-native fluency of Band 8 — hesitation for ideas (not words) still appears occasionally</li>
-              <li>Use idiomatic expressions with complete naturalness in every context</li>
-              <li>Sustain Band 7 performance across all three parts — you might dip in Part 3 under abstract questioning</li>
+              <li><span class="en">Speak with the near-native fluency of Band 8 — hesitation for ideas (not words) still appears occasionally</span><span class="zh">以 8 分近乎母语的流利度发言——为想观点（而非想词）的犹豫仍偶尔出现</span></li>
+              <li><span class="en">Use idiomatic expressions with complete naturalness in every context</span><span class="zh">在所有语境中完全自然地使用习语表达</span></li>
+              <li><span class="en">Sustain Band 7 performance across all three parts — you might dip in Part 3 under abstract questioning</span><span class="zh">在全部三个部分中保持 7 分水平——Part 3 抽象提问下可能下滑</span></li>
             </ul>
           </div>
           <div class="mistakes">
-            <p class="label mistake-label">What the Examiner Hears</p>
+            <p class="label mistake-label"><span class="en">What the Examiner Hears</span><span class="zh">考官听到什么</span></p>
             <ul>
-              <li>A confident, articulate speaker — the examiner is listening to <em>what</em> you say, not <em>how</em> you say it</li>
-              <li>Occasional awkward phrasing when reaching for a precise concept — you know what you want to say, the words just take a second</li>
-              <li>Strong pronunciation with clear features of connected speech — accent is present but never interferes</li>
+              <li><span class="en">A confident, articulate speaker — the examiner is listening to <em>what</em> you say, not <em>how</em> you say it</span><span class="zh">自信、表达清晰的说话者——考官在听你<em>说什么</em>，而不是<em>怎么说</em></span></li>
+              <li><span class="en">Occasional awkward phrasing when reaching for a precise concept — you know what you want to say, the words just take a second</span><span class="zh">追求精准表达时偶尔措辞别扭——你知道想说什么，词只是晚了一秒</span></li>
+              <li><span class="en">Strong pronunciation with clear features of connected speech — accent is present but never interferes</span><span class="zh">发音有力，连读特征清晰——有口音但从不影响理解</span></li>
             </ul>
           </div>
           <div class="examiner-note">
-            <strong>Examiner's note:</strong> Band 7 speakers belong in English-medium universities and professional environments. You're not just communicating — you're expressing nuance, attitude, and personality through English.
+            <strong><span class="en">Examiner's note:</span><span class="zh">考官笔记：</span></strong> <span class="en">Band 7 speakers belong in English-medium universities and professional environments. You're not just communicating — you're expressing nuance, attitude, and personality through English.</span><span class="zh">7 分考生属于英语授课大学和职业环境。你不仅在交流——你在通过英语表达细微差别、态度和个性。</span>
           </div>
         </div>
       </div>
@@ -1464,31 +1470,31 @@
   <!-- ===== SPEAKING VIDEO EXAMPLES ===== -->
   <section class="section" id="videos">
     <div class="section-head">
-      <h2>Speaking: See the Difference</h2>
+      <h2><span class="en">Speaking: See the Difference</span><span class="zh">口语：亲眼看看差距</span></h2>
       <span class="accent-bar"></span>
-      <p>Watch real Band 5, 6, and 7 speaking performances. Notice the gap.</p>
+      <p><span class="en">Watch real Band 5, 6, and 7 speaking performances. Notice the gap.</span><span class="zh">观看真实的 5 分、6 分和 7 分口语表现。感受差距。</span></p>
     </div>
 
     <div class="video-grid">
       <div class="video-card">
-        <div class="video-label">Band 5</div>
-        <div class="video-sub">Tina · Vietnam · Modest User · Noticeable pauses, simple structures</div>
+        <div class="video-label"><span class="en">Band 5</span><span class="zh">5 分</span></div>
+        <div class="video-sub"><span class="en">Tina · Vietnam · Modest User · Noticeable pauses, simple structures</span><span class="zh">Tina · 越南 · 有限使用者 · 明显停顿，简单句式</span></div>
         <div class="video-wrapper">
           <iframe src="https://www.youtube.com/embed/Q0n_1VEXLK4?cc_load_policy=1&hl=en" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
 
       <div class="video-card">
-        <div class="video-label">Band 6</div>
-        <div class="video-sub">Gabriel · Brazil · Competent User · Fluent but limited range</div>
+        <div class="video-label"><span class="en">Band 6</span><span class="zh">6 分</span></div>
+        <div class="video-sub"><span class="en">Gabriel · Brazil · Competent User · Fluent but limited range</span><span class="zh">Gabriel · 巴西 · 胜任使用者 · 流利但词汇面有限</span></div>
         <div class="video-wrapper">
           <iframe src="https://www.youtube.com/embed/gM6vSlBc7SQ?cc_load_policy=1&hl=en" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
 
       <div class="video-card">
-        <div class="video-label">Band 7</div>
-        <div class="video-sub">Hendrik · Germany · Good User · Flexible, precise, confident</div>
+        <div class="video-label"><span class="en">Band 7</span><span class="zh">7 分</span></div>
+        <div class="video-sub"><span class="en">Hendrik · Germany · Good User · Flexible, precise, confident</span><span class="zh">Hendrik · 德国 · 良好使用者 · 灵活、精准、自信</span></div>
         <div class="video-wrapper">
           <iframe src="https://www.youtube.com/embed/HvdcDzG56ik?cc_load_policy=1&hl=en" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -1496,7 +1502,7 @@
     </div>
 
     <p style="text-align:center; margin-top:28px; font-size:0.85rem; color:var(--gray-600);">
-      Official IELTS Speaking samples. Turn on captions (CC) for subtitles. Watch how each band actually sounds — not what you imagine, but what the examiner hears.
+      <span class="en">Official IELTS Speaking samples. Turn on captions (CC) for subtitles. Watch how each band actually sounds — not what you imagine, but what the examiner hears.</span><span class="zh">雅思口语官方样本。打开字幕（CC）查看。听听每个分数段实际听起来什么样——不是你想的那样，是考官听到的那样。</span>
     </p>
   </section>
 
@@ -1505,45 +1511,45 @@
   <!-- ===== THE JUMP ===== -->
   <section class="section" id="the-jump">
     <div class="section-head">
-      <h2>The Jump: What It Actually Takes</h2>
+      <h2><span class="en">The Jump: What It Actually Takes</span><span class="zh">突破：到底需要什么</span></h2>
       <span class="accent-bar"></span>
-      <p>Moving up a band isn't about studying harder. It's about studying the right thing.</p>
+      <p><span class="en">Moving up a band isn't about studying harder. It's about studying the right thing.</span><span class="zh">提分不是靠更努力地学，而是学对的东西。</span></p>
     </div>
 
     <div class="jump-list">
       <div class="jump-item">
         <div class="jump-bands">5.0 → 5.5</div>
         <div class="jump-content">
-          <h4>Fix Your Foundation</h4>
-          <p>At this level, grammar errors are your biggest bottleneck. Subject-verb agreement, tense consistency, article use — these basics cost you marks across all four skills. Expand your active vocabulary by 300–500 words focused on common IELTS topics (education, environment, technology, health). You don't need complexity yet. You need control.</p>
-          <span class="jump-time">Typical timeline: 2–3 months of focused study</span>
+          <h4><span class="en">Fix Your Foundation</span><span class="zh">打好基础</span></h4>
+          <p><span class="en">At this level, grammar errors are your biggest bottleneck. Subject-verb agreement, tense consistency, article use — these basics cost you marks across all four skills. Expand your active vocabulary by 300–500 words focused on common IELTS topics (education, environment, technology, health). You don't need complexity yet. You need control.</span><span class="zh">这个阶段，语法错误是最大瓶颈。主谓一致、时态一致性、冠词使用——这些基础问题在四项技能中都在扣你的分。围绕常见雅思话题（教育、环境、科技、健康）扩展 300–500 个主动词汇。你还不需复杂度，你需要控制力。</span></p>
+          <span class="jump-time"><span class="en">Typical timeline: 2–3 months of focused study</span><span class="zh">典型时间线：2–3 个月专注学习</span></span>
         </div>
       </div>
 
       <div class="jump-item">
         <div class="jump-bands">5.5 → 6.0</div>
         <div class="jump-content">
-          <h4>Add Coherence</h4>
-          <p>Your ideas are fine — the problem is how you connect them. Learn to structure answers with topic sentences, supporting points, and examples. For speaking, reduce hesitation by practising extended turns — record yourself speaking for 2 minutes without stopping. The goal is flow, not perfection. For writing, master paragraph structure: one idea, three supporting sentences, one link to the next paragraph.</p>
-          <span class="jump-time">Typical timeline: 2–4 months of structured practice</span>
+          <h4><span class="en">Add Coherence</span><span class="zh">建立连贯性</span></h4>
+          <p><span class="en">Your ideas are fine — the problem is how you connect them. Learn to structure answers with topic sentences, supporting points, and examples. For speaking, reduce hesitation by practising extended turns — record yourself speaking for 2 minutes without stopping. The goal is flow, not perfection. For writing, master paragraph structure: one idea, three supporting sentences, one link to the next paragraph.</span><span class="zh">你的想法没问题——问题在于怎么把它们连起来。学会用主题句、支撑点和例子来组织回答。口语方面，通过练习长段发言来减少犹豫——录下自己不停说 2 分钟。目标是流畅，不是完美。写作方面，掌握段落结构：一个观点，三句支撑，一句过渡到下一段。</span></p>
+          <span class="jump-time"><span class="en">Typical timeline: 2–4 months of structured practice</span><span class="zh">典型时间线：2–4 个月结构化练习</span></span>
         </div>
       </div>
 
       <div class="jump-item">
         <div class="jump-bands">6.0 → 6.5</div>
         <div class="jump-content">
-          <h4>Build Precision</h4>
-          <p>This is where "good enough" stops being good enough. Your vocabulary needs to be more precise — "important" becomes "crucial," "significant," "pivotal," or "paramount" depending on context. Collocation becomes critical: you stop saying "make research" and start saying "conduct research." In writing, your arguments need depth — two supporting points per paragraph, not one. In speaking, you stop translating from your first language and start thinking in English directly.</p>
-          <span class="jump-time">Typical timeline: 3–5 months with targeted feedback</span>
+          <h4><span class="en">Build Precision</span><span class="zh">建立精准度</span></h4>
+          <p><span class="en">This is where "good enough" stops being good enough. Your vocabulary needs to be more precise — "important" becomes "crucial," "significant," "pivotal," or "paramount" depending on context. Collocation becomes critical: you stop saying "make research" and start saying "conduct research." In writing, your arguments need depth — two supporting points per paragraph, not one. In speaking, you stop translating from your first language and start thinking in English directly.</span><span class="zh">这是"够好了"不再够用的阶段。你的词汇需要更精准——important 根据语境变成 crucial、significant、pivotal 或 paramount。搭配变得关键：你不再说 make research，而是 conduct research。写作上，论证需要深度——每段两个支撑点，不是一个。口语上，你不再从母语翻译，而是直接用英语思考。</span></p>
+          <span class="jump-time"><span class="en">Typical timeline: 3–5 months with targeted feedback</span><span class="zh">典型时间线：3–5 个月有针对性的反馈</span></span>
         </div>
       </div>
 
       <div class="jump-item">
         <div class="jump-bands">6.5 → 7.0</div>
         <div class="jump-content">
-          <h4>Develop Flexibility</h4>
-          <p>The hardest jump in IELTS. Band 7 requires you to demonstrate range — not just accuracy. You need to show the examiner you can say the same thing three different ways and pick the best one for the context. Idiomatic language must sound natural, not memorised. Your writing needs sophistication — not just logically ordered, but elegantly structured. Your speaking needs confidence — not the absence of mistakes, but the ability to recover from them without losing flow. This is where most students plateau. The difference between 6.5 and 7 isn't more vocabulary — it's better access to the vocabulary you already have.</p>
-          <span class="jump-time">Typical timeline: 4–8 months of intensive, guided practice</span>
+          <h4><span class="en">Develop Flexibility</span><span class="zh">培养灵活性</span></h4>
+          <p><span class="en">The hardest jump in IELTS. Band 7 requires you to demonstrate range — not just accuracy. You need to show the examiner you can say the same thing three different ways and pick the best one for the context. Idiomatic language must sound natural, not memorised. Your writing needs sophistication — not just logically ordered, but elegantly structured. Your speaking needs confidence — not the absence of mistakes, but the ability to recover from them without losing flow. This is where most students plateau. The difference between 6.5 and 7 isn't more vocabulary — it's better access to the vocabulary you already have.</span><span class="zh">雅思中最难的一跃。7 分要求你展示广度——而不只是准确度。你需要向考官展示你能用三种不同方式说同一件事，并选出最适合语境的那种。习语必须听起来自然，而非背诵。写作需要精湛——不只是逻辑有序，而是结构优雅。口语需要自信——不是没有错误，而是犯错后能不中断语流地恢复。这是大多数学生卡住的地方。6.5 和 7 的区别不是更多词汇——而是更好地调用你已有的词汇。</span></p>
+          <span class="jump-time"><span class="en">Typical timeline: 4–8 months of intensive, guided practice</span><span class="zh">典型时间线：4–8 个月高强度有指导的练习</span></span>
         </div>
       </div>
     </div>
@@ -1553,20 +1559,20 @@
 
   <!-- ===== CTA ===== -->
   <section class="cta-section">
-    <h2>Want to Know Your CEFR Level?</h2>
+    <h2><span class="en">Want to Know Your CEFR Level?</span><span class="zh">想知道你的 CEFR 等级？</span></h2>
     <p>
-      Book a free 15-minute diagnostic with Kee. I'll assess your speaking and writing, identify your current band, and tell you exactly what to work on — no vague advice, no generic study plans.
+      <span class="en">Book a free 15-minute diagnostic with Kee. I'll assess your speaking and writing, identify your current band, and tell you exactly what to work on — no vague advice, no generic study plans.</span><span class="zh">预约 Kee 的 15 分钟免费诊断。我会评估你的口语和写作，确定你当前的分数段，然后准确告诉你该练什么——不给模糊建议，不给千篇一律的学习计划。</span>
     </p>
     <div class="cta-buttons">
       <a href="https://wa.me/447440622158" class="btn btn-primary" target="_blank" rel="noopener">
-        💬 WhatsApp Kee
+        💬 <span class="en">WhatsApp Kee</span><span class="zh">WhatsApp 联系 Kee</span>
       </a>
       <a href="weixin://dl/chat?keedahooman" class="btn btn-outline">
-        💬 WeChat Kee
+        💬 <span class="en">WeChat Kee</span><span class="zh">微信联系 Kee</span>
       </a>
     </div>
     <p style="margin-top:24px; font-size:0.82rem; color:var(--gray-400);">
-      Or email: kee@rkrk.io · 15 minutes. No cost. Just clarity.
+      <span class="en">Or email: kee@rkrk.io · 15 minutes. No cost. Just clarity.</span><span class="zh">或邮件：kee@rkrk.io · 15 分钟。免费。只有清晰的方向。</span>
     </p>
   </section>
 
