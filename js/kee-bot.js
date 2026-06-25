@@ -152,23 +152,62 @@
 
     var msgsDiv = document.getElementById('kbMessages');
     msgsDiv.innerHTML += '<div class="kb-msg kb-msg-user"><div class="kb-msg-content">' + esc(msg) + '</div></div>';
-    msgsDiv.innerHTML += '<div class="kb-msg kb-msg-bot kb-typing" id="typingMsg"><span class="kb-msg-avatar">🦄</span><div class="kb-msg-content">Thinking…</div></div>';
+    var botMsg = document.createElement('div');
+    botMsg.className = 'kb-msg kb-msg-bot';
+    botMsg.innerHTML = '<span class="kb-msg-avatar">🦄</span><div class="kb-msg-content md-output" id="streamTarget"></div>';
+    msgsDiv.appendChild(botMsg);
+    var streamEl = document.getElementById('streamTarget');
+    var streamedText = '';
     msgsDiv.scrollTop = msgsDiv.scrollHeight;
 
     try {
       var res = await fetch(API, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: msg, lang: userLang, context: systemContext }),
+        headers: { 'Content-Type': 'application/json', 'Accept': 'text/event-stream' },
+        body: JSON.stringify({ message: msg, lang: userLang, context: systemContext, stream: true }),
       });
-      var data = await res.json();
-      var typing = document.getElementById('typingMsg');
-      if (typing) typing.remove();
-      msgsDiv.innerHTML += '<div class="kb-msg kb-msg-bot"><span class="kb-msg-avatar">🦄</span><div class="kb-msg-content md-output">' + renderMd(data.reply || 'Sorry, I couldn\'t connect. Try WhatsApp: +447440622158') + '</div></div>';
+
+      // Try SSE streaming
+      var contentType = res.headers.get('content-type') || '';
+      if (contentType.includes('text/event-stream') || contentType.includes('application/x-ndjson')) {
+        var reader = res.body.getReader();
+        var decoder = new TextDecoder();
+        var buffer = '';
+        while (true) {
+          var _a = await reader.read(), done = _a.done, value = _a.value;
+          if (done) break;
+          buffer += decoder.decode(value, { stream: true });
+          var lines = buffer.split('\n');
+          buffer = lines.pop() || '';
+          for (var i = 0; i < lines.length; i++) {
+            var line = lines[i].trim();
+            if (!line || line.startsWith(':')) continue;
+            if (line.startsWith('data: ')) line = line.slice(6);
+            try {
+              var chunk = JSON.parse(line);
+              var text = chunk.text || chunk.content || chunk.delta || '';
+              if (chunk.done) { streamEl.innerHTML = renderMd(chunk.text || streamedText); }
+              streamedText += text;
+              streamEl.innerHTML = renderMd(streamedText) + '<span class="kb-cursor">▌</span>';
+              msgsDiv.scrollTop = msgsDiv.scrollHeight;
+            } catch(e) {
+              streamedText += line;
+              streamEl.innerHTML = renderMd(streamedText) + '<span class="kb-cursor">▌</span>';
+            }
+          }
+        }
+        streamEl.innerHTML = renderMd(streamedText);
+      } else {
+        // Fallback: full JSON response
+        var data = await res.json();
+        streamEl.innerHTML = renderMd(data.reply || 'Sorry, I couldn\'t connect. Try WhatsApp: +447440622158');
+      }
     } catch (e) {
-      var typing2 = document.getElementById('typingMsg');
-      if (typing2) typing2.remove();
-      msgsDiv.innerHTML += '<div class="kb-msg kb-msg-bot"><span class="kb-msg-avatar">🦄</span><div class="kb-msg-content">Sorry, I couldn\'t connect. WhatsApp Kee directly: <strong>+447440622158</strong></div></div>';
+      if (streamedText) {
+        streamEl.innerHTML = renderMd(streamedText) + '<br><br><em>(Connection interrupted)</em>';
+      } else {
+        streamEl.innerHTML = 'Sorry, I couldn\'t connect. WhatsApp Kee directly: <strong>+447440622158</strong>';
+      }
     }
     msgsDiv.scrollTop = msgsDiv.scrollHeight;
     loading = false;

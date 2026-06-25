@@ -585,26 +585,38 @@
     .cefr-nav-inner a:hover, .cefr-nav-inner a.active { color:var(--accent); background:var(--accent-light); }
     .cefr-nav-inner .nav-sep { width:1px; height:18px; background:var(--border); margin:0 4px; flex-shrink:0; }
     .cefr-nav-inner .nav-label { font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--gray-400); padding:6px 4px; flex-shrink:0; }
+
+    /* Language toggle */
+    .lang-toggle { font-family:'Inter',sans-serif; font-size:0.7rem; font-weight:600; color:var(--gray-600); background:var(--gray-100); border:1px solid var(--border); border-radius:6px; padding:5px 10px; cursor:pointer; white-space:nowrap; flex-shrink:0; transition:all 0.15s; }
+    .lang-toggle:hover { color:var(--accent); border-color:var(--accent); background:var(--accent-light); }
+    [data-lang="en"] .zh, [data-lang="en"] .en-label { display:none; }
+    [data-lang="zh"] .en, [data-lang="zh"] .zh-label { display:none; }
+
+    /* Cleaner hero */
+    .hero h1 { margin-bottom:12px; }
+    .hero-subtitle { font-family:'Inter',sans-serif; font-size:1rem; font-weight:400; color:var(--gray-600); max-width:620px; margin:0 auto; line-height:1.65; }
   </style>
 </head>
 <body>
   <!-- Sticky Nav -->
   <nav class="cefr-nav" id="cefrNav">
     <div class="cefr-nav-inner">
-      <span class="nav-label">Jump to:</span>
-      <a href="#band5">Band 5</a>
-      <a href="#band5.5">Band 5.5</a>
-      <a href="#band6">Band 6</a>
-      <a href="#band6.5">Band 6.5</a>
-      <a href="#band7">Band 7</a>
-      <span class="nav-sep"></span>
+      <a href="#bands">Scores</a>
       <a href="#videos">Videos</a>
       <a href="#the-jump">The Jump</a>
+      <span class="nav-sep"></span>
+      <a href="#band5">B5</a>
+      <a href="#band5.5">B5.5</a>
+      <a href="#band6">B6</a>
+      <a href="#band6.5">B6.5</a>
+      <a href="#band7">B7</a>
+      <span style="flex:1"></span>
+      <button onclick="toggleLang()" class="lang-toggle" id="langToggle"><span class="zh-label">EN</span><span class="en-label">中文</span></button>
     </div>
   </nav>
   <script>
-    // Active nav tracking on scroll
-    var sections = ['band5','band5.5','band6','band6.5','band7','videos','the-jump'];
+    // Active nav tracking
+    var sections = ['bands','band5','band5.5','band6','band6.5','band7','videos','the-jump'];
     var links = document.querySelectorAll('.cefr-nav-inner a');
     window.addEventListener('scroll',function(){
       var current = '';
@@ -614,17 +626,18 @@
       });
       links.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#'+current); });
     });
+    // Language toggle
+    var lang = localStorage.getItem('cefr-lang') || (navigator.language.startsWith('zh') ? 'zh' : 'en');
+    function setLang(l){ document.documentElement.setAttribute('data-lang', l); localStorage.setItem('cefr-lang', l); }
+    setLang(lang);
+    window.toggleLang = function(){ setLang(document.documentElement.getAttribute('data-lang') === 'en' ? 'zh' : 'en'); };
   </script>
   <!-- Navigation is injected by js/navigation.js -->
 
   <!-- ===== HERO ===== -->
   <section class="hero">
-    <h1>CEFR: The Framework Behind Your IELTS Score</h1>
-    <p class="hero-subtitle">
-      What B1 / B2 / C1 really means — and exactly what changes between Band 5, 5.5, 6, 6.5, and 7.
-    </p>
-    <p class="hero-byline">No vague descriptors. No "unlock your potential." Just the facts.</p>
-    <div class="hero-accent-bar"></div>
+    <h1><span class="en">CEFR × IELTS: Know Your Band</span><span class="zh">CEFR × 雅思：你的分数到底什么意思</span></h1>
+    <p class="hero-subtitle"><span class="en">What B1 / B2 / C1 actually means — and exactly what changes between Band 5, 5.5, 6, 6.5, and 7. No vague descriptors. No fluff. Just what the examiner sees.</span><span class="zh">B1/B2/C1 到底代表什么？5分、5.5、6、6.5、7分之间究竟差在哪？不扯虚的，只讲考官真正看到的东西。</span></p>
   </section>
 
   <hr class="section-divider">

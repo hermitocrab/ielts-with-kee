@@ -220,3 +220,5 @@
 #kee-bot .kb-fab, #kee-bot .kb-panel, #kee-bot .kb-header,
 #kee-bot .kb-messages, #kee-bot .kb-input-wrap, #kee-bot .kb-bug-modal,
 #kee-bot .kb-toast { display:none !important; }
+.kb-cursor { animation: kbBlink 1s step-end infinite; color: #b77ae0; font-weight: 700; }
+@keyframes kbBlink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
