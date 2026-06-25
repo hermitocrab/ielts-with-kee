@@ -389,6 +389,23 @@
       border-radius: 0 0 12px 12px;
     }
 
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+      background: #000;
+      border-radius: 0 0 12px 12px;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
     .band-video {
       width: 100%;
       max-height: 400px;
@@ -560,9 +577,44 @@
         grid-template-columns: 1fr;
       }
     }
+    /* ===== Sticky Nav Bar ===== */
+    .cefr-nav { position:sticky; top:0; z-index:100; background:rgba(250,250,250,0.94); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); padding:0 20px; }
+    .cefr-nav-inner { max-width:var(--max-width); margin:0 auto; display:flex; align-items:center; gap:6px; overflow-x:auto; padding:10px 0; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+    .cefr-nav-inner::-webkit-scrollbar { display:none; }
+    .cefr-nav-inner a { font-family:'Inter',sans-serif; font-size:0.75rem; font-weight:500; color:var(--gray-600); text-decoration:none; padding:6px 12px; border-radius:6px; white-space:nowrap; transition:all 0.15s; }
+    .cefr-nav-inner a:hover, .cefr-nav-inner a.active { color:var(--accent); background:var(--accent-light); }
+    .cefr-nav-inner .nav-sep { width:1px; height:18px; background:var(--border); margin:0 4px; flex-shrink:0; }
+    .cefr-nav-inner .nav-label { font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--gray-400); padding:6px 4px; flex-shrink:0; }
   </style>
 </head>
 <body>
+  <!-- Sticky Nav -->
+  <nav class="cefr-nav" id="cefrNav">
+    <div class="cefr-nav-inner">
+      <span class="nav-label">Jump to:</span>
+      <a href="#band5">Band 5</a>
+      <a href="#band5.5">Band 5.5</a>
+      <a href="#band6">Band 6</a>
+      <a href="#band6.5">Band 6.5</a>
+      <a href="#band7">Band 7</a>
+      <span class="nav-sep"></span>
+      <a href="#videos">Videos</a>
+      <a href="#the-jump">The Jump</a>
+    </div>
+  </nav>
+  <script>
+    // Active nav tracking on scroll
+    var sections = ['band5','band5.5','band6','band6.5','band7','videos','the-jump'];
+    var links = document.querySelectorAll('.cefr-nav-inner a');
+    window.addEventListener('scroll',function(){
+      var current = '';
+      sections.forEach(function(id){
+        var el = document.getElementById(id); if(!el) return;
+        if(window.scrollY >= el.offsetTop - 120) current = id;
+      });
+      links.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#'+current); });
+    });
+  </script>
   <!-- Navigation is injected by js/navigation.js -->
 
   <!-- ===== HERO ===== -->
@@ -1407,40 +1459,31 @@
     <div class="video-grid">
       <div class="video-card">
         <div class="video-label">Band 5</div>
-        <div class="video-sub">Modest User · B1 · Noticeable pauses, simple structures</div>
-        <video controls class="band-video" preload="metadata" poster="">
-          <source src="videos/ielts-speaking-band5.mp4" type="video/mp4">
-          <track src="videos/ielts-speaking-band5-zh.vtt" kind="subtitles" srclang="zh" label="中文">
-          <track src="videos/ielts-speaking-band5-en.vtt" kind="subtitles" srclang="en" label="English" default>
-          Your browser does not support the video tag.
-        </video>
+        <div class="video-sub">Tina · Vietnam · Modest User · Noticeable pauses, simple structures</div>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/Q0n_1VEXLK4?cc_load_policy=1&hl=en" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
 
       <div class="video-card">
         <div class="video-label">Band 6</div>
-        <div class="video-sub">Competent User · B2 · Fluent but limited range</div>
-        <video controls class="band-video" preload="metadata" poster="">
-          <source src="videos/ielts-speaking-band6.mp4" type="video/mp4">
-          <track src="videos/ielts-speaking-band6-zh.vtt" kind="subtitles" srclang="zh" label="中文">
-          <track src="videos/ielts-speaking-band6-en.vtt" kind="subtitles" srclang="en" label="English" default>
-          Your browser does not support the video tag.
-        </video>
+        <div class="video-sub">Gabriel · Brazil · Competent User · Fluent but limited range</div>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/gM6vSlBc7SQ?cc_load_policy=1&hl=en" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
 
       <div class="video-card">
         <div class="video-label">Band 7</div>
-        <div class="video-sub">Good User · C1 · Flexible, precise, confident</div>
-        <video controls class="band-video" preload="metadata" poster="">
-          <source src="videos/ielts-speaking-band7.mp4" type="video/mp4">
-          <track src="videos/ielts-speaking-band7-zh.vtt" kind="subtitles" srclang="zh" label="中文">
-          <track src="videos/ielts-speaking-band7-en.vtt" kind="subtitles" srclang="en" label="English" default>
-          Your browser does not support the video tag.
-        </video>
+        <div class="video-sub">Hendrik · Germany · Good User · Flexible, precise, confident</div>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/HvdcDzG56ik?cc_load_policy=1&hl=en" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
 
     <p style="text-align:center; margin-top:28px; font-size:0.85rem; color:var(--gray-600);">
-      Videos coming soon. Each includes English and Chinese subtitles so you can follow every word.
+      Official IELTS Speaking samples. Turn on captions (CC) for subtitles. Watch how each band actually sounds — not what you imagine, but what the examiner hears.
     </p>
   </section>
 
