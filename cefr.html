@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEFR: The Framework Behind Your IELTS Score — IELTS with Kee</title>
+  <meta name="description" content="What B1/B2/C1 really means — and exactly what changes between Band 5, 5.5, 6, 6.5, and 7. A band-by-band deep dive with score conversions, mistake patterns, and examiner insights.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/kee-bot.css?v=v3">
+  <style>
+    /* ===== CEFR Page — White Editorial System ===== */
+    /* VERSION: CEFR v1.0 — Initial release, Playfair + Inter, red accent, editorial layout */
+
+    :root {
+      --bg: #FAFAFA;
+      --card: #FFFFFF;
+      --text: #1A1A1A;
+      --accent: #E62B1E;
+      --accent-light: rgba(230, 43, 30, 0.08);
+      --secondary: #D97706;
+      --secondary-light: rgba(217, 119, 6, 0.08);
+      --border: #E0E0E0;
+      --gray-100: #F5F5F5;
+      --gray-200: #E0E0E0;
+      --gray-400: #999;
+      --gray-600: #666;
+      --gray-800: #333;
+      --section-pad: 80px;
+      --section-pad-mobile: 48px;
+      --max-width: 1100px;
+      --card-pad: 28px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    h1 { font-size: clamp(2rem, 4vw, 3rem); }
+    h2 { font-size: clamp(1.5rem, 3vw, 1.8rem); }
+    h3 { font-size: clamp(1.1rem, 2vw, 1.25rem); }
+    h4 { font-size: 1rem; font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: 0; }
+
+    /* ===== Section Container ===== */
+    .section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: var(--section-pad) 20px;
+    }
+
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0;
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      padding: 80px 20px 64px;
+      text-align: center;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      margin-bottom: 16px;
+    }
+
+    .hero .hero-subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--gray-600);
+      max-width: 620px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .hero .hero-byline {
+      margin-top: 20px;
+      font-size: 0.85rem;
+      color: var(--gray-400);
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .hero .hero-accent-bar {
+      width: 28px;
+      height: 2px;
+      background: var(--accent);
+      margin: 24px auto 0;
+    }
+
+    /* ===== Section Heading ===== */
+    .section-head {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-head h2 {
+      margin-bottom: 8px;
+    }
+
+    .section-head .accent-bar {
+      display: block;
+      width: 28px;
+      height: 2px;
+      background: var(--accent);
+      margin: 12px auto 0;
+    }
+
+    .section-head p {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      max-width: 560px;
+      margin: 8px auto 0;
+    }
+
+    /* ===== Quick Mapping Table ===== */
+    .mapping-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 0 -20px;
+      padding: 0 20px;
+    }
+
+    .mapping-table {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    .mapping-table thead th {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--gray-600);
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 2px solid var(--text);
+    }
+
+    .mapping-table tbody td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      font-weight: 400;
+    }
+
+    .mapping-table tbody tr:hover {
+      background: var(--accent-light);
+    }
+
+    .mapping-table .band-cell {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+
+    .mapping-table .cefr-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      background: var(--gray-100);
+      color: var(--gray-800);
+    }
+
+    .mapping-table .cefr-badge.b1 { background: #FFF3E0; color: #E65100; }
+    .mapping-table .cefr-badge.b2 { background: #FFF8E1; color: #F57F17; }
+    .mapping-table .cefr-badge.b2c1 { background: #FFFDE7; color: #F9A825; }
+    .mapping-table .cefr-badge.c1 { background: #E8F5E9; color: #2E7D32; }
+
+    /* ===== Band Section ===== */
+    .band-section {
+      margin-bottom: 60px;
+    }
+
+    .band-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .band-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .band-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      min-width: 80px;
+    }
+
+    .band-meta h3 {
+      margin-bottom: 4px;
+    }
+
+    .band-meta .band-cefr {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--gray-600);
+    }
+
+    .band-meta .band-cefr span {
+      color: var(--accent);
+    }
+
+    /* ===== Skill Grid ===== */
+    .skill-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .skill-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .skill-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: var(--card-pad);
+      transition: border-color 0.2s;
+    }
+
+    .skill-card:hover {
+      border-color: var(--accent);
+    }
+
+    .skill-card .skill-icon {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+
+    .skill-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .skill-card .can-do,
+    .skill-card .cant-do,
+    .skill-card .mistakes,
+    .skill-card .score-conv {
+      margin-bottom: 14px;
+    }
+
+    .skill-card .label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+
+    .skill-card .label.can { color: #2E7D32; }
+    .skill-card .label.cant { color: #C62828; }
+    .skill-card .label.mistake-label { color: #E65100; }
+    .skill-card .label.score-label { color: var(--gray-600); }
+
+    .skill-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skill-card ul li {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--gray-800);
+      padding: 3px 0;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .skill-card ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gray-400);
+    }
+
+    .skill-card .can-do ul li::before { background: #66BB6A; }
+    .skill-card .cant-do ul li::before { background: #EF5350; }
+
+    .skill-card .score-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .skill-card .score-num small {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--gray-600);
+    }
+
+    .skill-card .examiner-note {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: var(--gray-100);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: var(--gray-800);
+      font-style: italic;
+      border-left: 3px solid var(--accent);
+    }
+
+    .skill-card .examiner-note strong {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* ===== Video Section ===== */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .video-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .video-card .video-label {
+      padding: 16px 20px 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .video-card .video-sub {
+      padding: 4px 20px 12px;
+      font-size: 0.8rem;
+      color: var(--gray-600);
+    }
+
+    .video-card video {
+      width: 100%;
+      display: block;
+      background: #000;
+      border-radius: 0 0 12px 12px;
+    }
+
+    .band-video {
+      width: 100%;
+      max-height: 400px;
+    }
+
+    /* ===== The Jump Section ===== */
+    .jump-list {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .jump-item {
+      display: flex;
+      gap: 20px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .jump-item:last-child {
+      border-bottom: none;
+    }
+
+    .jump-bands {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent);
+      min-width: 90px;
+      white-space: nowrap;
+      line-height: 1.3;
+    }
+
+    .jump-content h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+
+    .jump-content p {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    .jump-content .jump-time {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--secondary);
+      background: var(--secondary-light);
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    @media (max-width: 480px) {
+      .jump-item {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    /* ===== CTA ===== */
+    .cta-section {
+      text-align: center;
+      padding: var(--section-pad) 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .cta-section h2 {
+      margin-bottom: 12px;
+    }
+
+    .cta-section p {
+      color: var(--gray-600);
+      margin-bottom: 28px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #C62828;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(230, 43, 30, 0.25);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1.5px solid var(--border);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      :root {
+        --section-pad: var(--section-pad-mobile);
+      }
+
+      .hero {
+        padding: 60px 20px 48px;
+      }
+
+      .band-number {
+        font-size: 2.2rem;
+        min-width: 56px;
+      }
+
+      .skill-card {
+        padding: 20px;
+      }
+
+      .mapping-table {
+        font-size: 0.85rem;
+      }
+
+      .mapping-table thead th,
+      .mapping-table tbody td {
+        padding: 10px 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .band-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .skill-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation is injected by js/navigation.js -->
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <h1>CEFR: The Framework Behind Your IELTS Score</h1>
+    <p class="hero-subtitle">
+      What B1 / B2 / C1 really means — and exactly what changes between Band 5, 5.5, 6, 6.5, and 7.
+    </p>
+    <p class="hero-byline">No vague descriptors. No "unlock your potential." Just the facts.</p>
+    <div class="hero-accent-bar"></div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ===== QUICK MAPPING TABLE ===== -->
+  <section class="section">
+    <div class="section-head">
+      <h2>IELTS Band → CEFR: Quick Map</h2>
+      <span class="accent-bar"></span>
+      <p>Every IELTS band maps to a CEFR level. Here's the one-minute version.</p>
+    </div>
+
+    <div class="mapping-table-wrap">
+      <table class="mapping-table">
+        <thead>
+          <tr>
+            <th>IELTS Band</th>
+            <th>CEFR Level</th>
+            <th>What It Means</th>
+            <th>Who Needs This</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="band-cell">5.0</td>
+            <td><span class="cefr-badge b1">B1</span></td>
+            <td>Intermediate — can handle familiar situations, but struggles with anything unexpected</td>
+            <td>Foundation programmes, some visa categories</td>
+          </tr>
+          <tr>
+            <td class="band-cell">5.5</td>
+            <td><span class="cefr-badge b2">B2 borderline</span></td>
+            <td>B1+ — getting there, but consistency isn't there yet</td>
+            <td>Some pre-sessional courses, extended foundation</td>
+          </tr>
+          <tr>
+            <td class="band-cell">6.0</td>
+            <td><span class="cefr-badge b2">B2</span></td>
+            <td>Upper-Intermediate — competent, can function in English-medium environments</td>
+            <td>Most undergraduate programmes, skilled worker visas</td>
+          </tr>
+          <tr>
+            <td class="band-cell">6.5</td>
+            <td><span class="cefr-badge b2c1">B2 / C1 borderline</span></td>
+            <td>B2+ — strong B2 with C1 features emerging, but not yet consistent</td>
+            <td>Competitive undergraduate, some postgraduate, healthcare registration</td>
+          </tr>
+          <tr>
+            <td class="band-cell">7.0</td>
+            <td><span class="cefr-badge c1">C1</span></td>
+            <td>Advanced — flexible, precise, operates comfortably in academic &amp; professional settings</td>
+            <td>Top universities, medical registration (GMC, NMC), PhD programmes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="text-align:center; margin-top:24px; font-size:0.82rem; color:var(--gray-600);">
+      CEFR = Common European Framework of Reference for Languages. The international standard for describing language ability.
+    </p>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ===== BAND-BY-BAND DEEP DIVE ===== -->
+  <section class="section">
+    <div class="section-head">
+      <h2>Band-by-Band: All Four Skills</h2>
+      <span class="accent-bar"></span>
+      <p>What you can do at each band — and what's still holding you back.</p>
+    </div>
+
+    <!-- ===== BAND 5.0 ===== -->
+    <div class="band-section" id="band5">
+      <div class="band-header">
+        <div class="band-number">5.0</div>
+        <div class="band-meta">
+          <h3>Band 5.0 — Modest User</h3>
+          <p class="band-cefr">CEFR: <span>B1</span> · Intermediate</p>
+        </div>
+      </div>
+
+      <div class="skill-grid">
+        <!-- Listening 5.0 -->
+        <div class="skill-card">
+          <div class="skill-icon">🎧</div>
+          <h4>Listening</h4>
+          <div class="can-do">
+            <p class="label can">You CAN</p>
+            <ul>
+              <li>Follow slow, clear speech on familiar topics</li>
+              <li>Catch the main idea of short conversations</li>
+              <li>Understand basic directions and instructions</li>
+              <li>Pick out simple factual details (numbers, names, dates)</li>
+            </ul>
+          </div>
+          <div class="cant-do">
+            <p class="label cant">You CAN'T yet</p>
+            <ul>
+              <li>Follow fast, connected speech with reduced forms ("gonna," "wanna")</li>
+              <li>Distinguish between speakers in group discussions</li>
+              <li>Understand implied meaning or sarcasm</li>
+              <li>Keep up with academic lectures or monologues</li>
+            </ul>
+          </div>
+          <div class="mistakes">
+            <p class="label mistake-label">Typical Mistake Patterns</p>
+            <ul>
+              <li>Losing track the moment one word is unfamiliar — panic, then miss the next three answers</li>
+              <li>Writing the wrong number because you didn't hear the correction ("It's £15 — sorry, £50")</li>
+              <li>Getting tricked by distractors in Section 1 — the first answer you hear is rarely the right one</li>
+            </ul>
+          </div>
+          <div class="score-conv">
+            <p class="label score-label">Score Conversion</p>
+            <p class="score-num">16–17 <small>correct out of 40</small></p>
+          </div>
+        </div>
+
+        <!-- Reading 5.0 -->
+        <div class="skill-card">
+          <div class="skill-icon">📖</div>
+          <h4>Reading</h4>
+          <div class="can-do">
+            <p class="label can">You CAN</p>
+            <ul>
+              <li>Understand short, straightforward texts on familiar topics</li>
+              <li>Locate specific information when the wording matches the question</li>
+              <li>Get the gist of simple articles and notices</li>
+            </ul>
+          </div>
+          <div class="cant-do">
+            <p class="label cant">You CAN'T yet</p>
+            <ul>
+              <li>Handle long academic passages with complex arguments</li>
+              <li>Recognise paraphrased ideas — if the words change, you lose it</li>
+              <li>Distinguish between fact and opinion reliably</li>
+              <li>Complete the test within the time limit — you're running out of time on Passage 3</li>
+            </ul>
+          </div>
+          <div class="mistakes">
+            <p class="label mistake-label">Typical Mistake Patterns</p>
+            <ul>
+              <li>Keyword matching — you find the word from the question in the text, but it's a distractor</li>
+              <li>True/False/Not Given confusion — you mark "False" for information that simply isn't mentioned</li>
+              <li>Spending 30+ minutes on Passage 1, then rushing through the hardest passage</li>
+            </ul>
+          </div>
+          <div class="score-conv">
+            <p class="label score-label">Score Conversion (Academic)</p>
+            <p class="score-num">15–18 <small>correct out of 40</small></p>
+          </div>
+        </div>
+
+        <!-- Writing 5.0 -->
+        <div class="skill-card">
+          <div class="skill-icon">✍️</div>
+          <h4>Writing</h4>
+          <div class="can-do">
+            <p class="label can">You CAN</p>
+            <ul>
+              <li>Address the task in a basic way — the examiner can see what you're trying to say</li>
+              <li>Write simple sentences with basic cohesion (and, but, because)</li>
+              <li>Use everyday vocabulary for familiar topics</li>
+            </ul>
+          </div>
+          <div class="cant-do">
+            <p class="label cant">You CAN'T yet</p>
+            <ul>
+              <li>Develop ideas fully — your paragraphs are thin, often one or two sentences</li>
+              <li>Organise writing logically — ideas appear in the order you thought of them, not in a planned structure</li>
+              <li>Use complex sentences without errors — attempts at complexity usually create confusion</li>
+            </ul>
+          </div>
+          <div class="mistakes">
+            <p class="label mistake-label">What the Examiner Sees</p>
+            <ul>
+              <li>Frequent grammar errors that sometimes make meaning unclear</li>
+              <li>Vocabulary is limited — you repeat the same words because you don't have alternatives</li>
+              <li>Task 2 is too short — under 200 words, ideas are underdeveloped</li>
+              <li>Spelling errors in basic words ("becouse," "goverment," "enviroment")</li>
+            </ul>
+          </div>
+          <div class="examiner-note">
+            <strong>Examiner's note:</strong> At Band 5, errors are frequent but the message usually gets through. The biggest gap isn't complexity — it's control. Fix your basic grammar first.
+          </div>
+        </div>
+
+        <!-- Speaking 5.0 -->
+        <div class="skill-card">
+          <div class="skill-icon">🗣️</div>
+          <h4>Speaking</h4>
+          <div class="can-do">
+            <p class="label can">You CAN</p>
+            <ul>
+              <li>Keep the conversation going on familiar topics (home, work, hobbies)</li>
+              <li>Answer questions directly, even if answers are short</li>
+              <li>Make yourself understood — pronunciation is generally intelligible</li>
+            </ul>
+          </div>
+          <div class="cant-do">
+            <p class="label cant">You CAN'T yet</p>
+            <ul>
+              <li>Speak at length without noticeable pauses and hesitation</li>
+              <li>Use a range of connecting words — "and then... and then... and then..."</li>
+              <li>Paraphrase when you don't know a word — you just stop or switch to your first language</li>
+            </ul>
+          </div>
+          <div class="mistakes">
+            <p class="label mistake-label">What the Examiner Hears</p>
+            <ul>
+              <li>Frequent self-correction — you start a sentence, stop, restart, stop again</li>
+              <li>Simple sentence structures only — "I like... because... it is good"</li>
+              <li>Pronunciation is understandable but first-language influence is strong</li>
+              <li>Part 2 long turn runs out of ideas after 45 seconds — then awkward silence</li>
+            </ul>
+          </div>
+          <div class="examiner-note">
+            <strong>Examiner's note:</strong> Band 5 speakers communicate, but effort is visible. The examiner is doing extra work to follow you.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== BAND 5.5 ===== -->
+    <div class="band-section" id="band5.5">
+      <div class="band-header">
+        <div class="band-number">5.5</div>
+        <div class="band-meta">
+          <h3>Band 5.5 — Modest to Competent Borderline</h3>
+          <p class="band-cefr">CEFR: <span>B2 borderline</span> · B1+</p>
+        </div>
+      </div>
+
+      <div class="skill-grid">
+        <!-- Listening 5.5 -->
+        <div class="skill-card">
+          <div class="skill-icon">🎧</div>
+          <h4>Listening</h4>
+          <div class="can-do">
+            <p class="label can">You CAN</p>
+            <ul>
+              <li>Follow conversations at natural speed when the topic is familiar</li>
+              <li>Handle Section 1 and 2 comfortably (social and transactional contexts)</li>
+              <li>Catch most factual details the first time</li>
+            </ul>
+          </div>
+          <div class="cant-do">
+            <p class="label cant">You CAN'T yet</p>
+            <ul>
+              <li>Maintain focus through Section 4 — your concentration drops after 25 minutes</li>
+              <li>Process information while listening and writing simultaneously</li>
+              <li>Spot when the speaker changes their mind mid-sentence</li>
+            </ul>
+          </div>
+          <div class="mistakes">
+            <p class="label mistake-label">Typical Mistake Patterns</p>
+            <ul>
+              <li>Spelling errors lose you easy marks — you heard it right but wrote it wrong</li>
+              <li>Missing the plural "s" — the answer was "books" but you wrote "book"</li>
+              <li>Getting distracted by Section 3 — multiple speakers, academic discussion, you lose the thread</li>
+            </ul>
+          </div>
+          <div class="score-conv">
+            <p class="label score-label">Score Conversion</p>
+            <p class="score-num">18–22 <small>correct out of 40</small></p>
+          </div>
+        </div>
+
+        <!-- Reading 5.5 -->
+        <div class="skill-card">
+          <div class="skill-icon">📖</div>
+          <h4>Reading</h4>
+          <div class="can-do">
+            <p class="label can">You CAN</p>
+            <ul>
+              <li>Get through Passage 1 and most of Passage 2 within the time</li>
+              <li>Handle direct comprehension questions (gap-fill, short answer)</li>
+              <li>Recognise some paraphrasing when it's straightforward</li>
+            </ul>
+          </div>
+          <div class="cant-do">
+            <p class="label cant">You CAN'T yet</p>
+            <ul>
+              <li>Process Passage 3 — the academic density and abstract argument structure overwhelm you</li>
+              <li>Handle heading-matching questions efficiently — you re-read the whole paragraph each time</li>
+              <li>Infer the writer's position when it's not explicitly stated</li>
+            </ul>
+          </div>
+          <div class="mistakes">
+            <p class="label mistake-label">Typical Mistake Patterns</p>
+            <ul>
+              <li>You understand 80% of the passage but answer the wrong question — reading too fast, missing qualifiers</li>
+              <li>Yes/No/Not Given errors — you bring outside knowledge into the text ("but that's true in real life!")</li>
+              <li>Running out of time — you have 10 minutes left and Passage 3 is untouched</li>
+            </ul>
+          </div>
+          <div class="score-conv">
+            <p class="label score-label">Score Conversion (Academic)</p>
+            <p class="score-num">19–22 <small>correct out of 40</small></p>
+          </div>
+        </div>
+
+        <!-- Writing 5.5 -->
+        <div class="skill-card">
+          <div class="skill-icon">✍️</div>
+          <h4>Writing</h4>
+          <div class="can-do">
+            <p class="label can">You CAN</p>
+            <ul>
+              <li>Address all parts of the question — you cover what was asked, just not deeply</li>
+              <li>Structure your essay with a clear introduction and conclusion</li>
+              <li>Use some topic-specific vocabulary, though inaccurately at times</li>
+            </ul>
+          </div>
+          <div class="cant-do">
+            <p class="label cant">You CAN'T yet</p>
+            <ul>
+              <li>Develop body paragraphs with multiple supporting points — each paragraph is a single idea, briefly stated</li>
+              <li>Use cohesive devices beyond "firstly, secondly, finally"</li>
+              <li>Write complex sentences where the grammar actually works</li>
+            </ul>
+          </div>
+          <div class="mistakes">
+            <p class="label mistake-label">What the Examiner Sees</p>
+            <ul>
+              <li>Grammar errors are still frequent but no longer block meaning</li>
+              <li>You attempt complex structures but they often break — subordinate clauses that don't quite land</li>
+              <li>Vocabulary range is wider than Band 5 but word choice errors appear ("make a crime" instead of "commit a crime")</li>
+              <li>Task 1 (Academic) — you describe every data point instead of summarising trends</li>
+            </ul>
+          </div>
+          <div class="examiner-note">
+            <strong>Examiner's note:</strong> Band 5.5 is frustrating — you're almost competent, but the inconsistency keeps you from Band 6. The fix is usually coherence: your ideas are fine, the <em>organisation</em> of them isn't.
+          </div>
+        </div>
+
+        <!-- Speaking 5.5 -->
+        <div class="skill-card">
+          <div class="skill-icon">🗣️</div>
+          <h4>Speaking</h4>
+          <div class="can-do">
+            <p class="label can">You CAN</p>
+            <ul>
+              <li>Speak for 1–2 minutes in Part 2 without completely running out of content</li>
+              <li>Answer Part 3 questions with some development — you give reasons, not just one-word answers</li>
+              <li>Use some less common vocabulary — you're trying, even if it's not always right</li>
+            </ul>
+          </div>
+          <div class="cant-do">
+            <p class="label cant">You CAN'T yet</p>
+            <ul>
+              <li>Sustain fluency — you're fine for 30 seconds, then hesitation kicks in</li>
+              <li>Use fillers naturally — your pauses are silent, which reads as lost, not thinking</li>
+              <li>Self-correct without losing flow — you stop entirely, correct, then restart</li>
+            </ul>
+          </div>
+          <div class="mistakes">
+            <p class="label mistake-label">What the Examiner Hears</p>
+            <ul>
+              <li>Pauses mid-sentence while searching for words — not the natural pauses of a fluent speaker, but visible retrieval effort</li>
+              <li>Good vocabulary appears but sits awkwardly in the sentence — the word is right, the collocation is wrong</li>
+              <li>Pronunciation is clear but flat — no intonation to signal meaning, no stress to emphasise key points</li>
+            </ul>
+          </div>
+          <div class="examiner-note">
+            <strong>Examiner's note:</strong> Band 5.5 speakers know more than they can show. The bottleneck isn't knowledge — it's retrieval speed and confidence. Speed up your access to what you already know.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== BAND 6.0 ===== -->
+    <div class="band-section" id="band6">
+      <div class="band-header">
+        <div class="band-number">6.0</div>
+        <div class="band-meta">
+          <h3>Band 6.0 — Competent User</h3>
+          <p class="band-cefr">CEFR: <span>B2</span> · Upper-Intermediate</p>
+        </div>
+      </div>
+
+      <div class="skill-grid">
+        <!-- Listening 6.0 -->
+        <div class="skill-card">
+          <div class="skill-icon">🎧</div>
+          <h4>Listening</h4>
+          <div class="can-do">
+            <p class="label can">You CAN</p>
+            <ul>
+              <li>Follow extended speech on both familiar and unfamiliar topics</li>
+              <li>Handle Sections 1–3 with good accuracy — you're solid on social, transactional, and academic discussion contexts</li>
+              <li>Understand most connected speech patterns and common reductions</li>
+            </ul>
+          </div>
+          <div class="cant-do">
+            <p class="label cant">You CAN'T yet</p>
+            <ul>
+              <li>Maintain perfect accuracy through Section 4 — you still drop 3–4 answers in the academic monologue</li>
+              <li>Catch answers that require processing two pieces of information simultaneously</li>
+              <li>Spell less common academic vocabulary correctly under pressure</li>
+            </ul>
+          </div>
+          <div class="mistakes">
+            <p class="label mistake-label">Typical Mistake Patterns</p>
+            <ul>
+              <li>Section 4 traps — you write what you expect to hear instead of what was actually said</li>
+              <li>Map/diagram labelling — you lose spatial orientation mid-task</li>
+              <li>Multiple choice with long options — you're still reading Option B when the answer for Option C is spoken</li>
+            </ul>
+          </div>
+          <div class="score-conv">
+            <p class="label score-label">Score Conversion</p>
+            <p class="score-num">23–25 <small>correct out of 40</small></p>
+          </div>
+        </div>
+
+        <!-- Reading 6.0 -->
+        <div class="skill-card">
+          <div class="skill-icon">📖</div>
+          <h4>Reading</h4>
+          <div class="can-do">
+            <p class="label can">You CAN</p>
+            <ul>
+              <li>Complete all three passages with some time to check answers</li>
+              <li>Handle most question types: matching, gap-fill, T/F/NG, short answer</li>
+              <li>Recognise paraphrasing consistently — you can find the answer even when the wording is different</li>
+            </ul>
+          </div>
+          <div class="cant-do">
+            <p class="label cant">You CAN'T yet</p>
+            <ul>
+              <li>Handle heading-matching questions efficiently — they still consume too much time</li>
+              <li>Process dense academic prose at speed — you re-read complex sentences</li>
+              <li>Distinguish between "False" and "Not Given" reliably on nuanced questions</li>
+            </ul>
+          </div>
+          <div class="mistakes">
+            <p class="label mistake-label">Typical Mistake Patterns</p>
+            <ul>
+              <li>Getting the right paragraph but the wrong sentence — close, but not precise enough</li>
+              <li>Writer's views questions — you confuse "the writer believes" with "the writer mentions research showing"</li>
+              <li>Spending too long on one question — you sacrifice 3 easy marks to chase 1 difficult one</li>
+            </ul>
+          </div>
+          <div class="score-conv">
+            <p class="label score-label">Score Conversion (Academic)</p>
+            <p class="score-num">23–26 <small>correct out of 40</small></p>
+          </div>
+        </div>
+
+        <!-- Writing 6.0 -->
+        <div class="skill-card">
+          <div class="skill-icon">✍️</div>
+          <h4>Writing</h4>
+          <div class="can-do">
+            <p class="label can">You CAN</p>
+            <ul>
+              <li>Address all parts of the task with relevant ideas</li>
+              <li>Organise writing into clear paragraphs with a logical progression</li>
+              <li>Use a reasonable range of vocabulary with some less common items</li>
+              <li>Write complex sentences that generally work</li>
+            </ul>
+          </div>
+          <div class="cant-do">
+            <p class="label cant">You CAN'T yet</p>
+            <ul>
+              <li>Develop arguments with depth — your supporting points are still somewhat general</li>
+              <li>Use cohesive devices with complete flexibility — your linking feels mechanical in places</li>
+              <li>Maintain consistent register — formal one paragraph, casual the next</li>
+            </ul>
+          </div>
+          <div class="mistakes">
+            <p class="label mistake-label">What the Examiner Sees</p>
+            <ul>
+              <li>Grammar errors exist but don't cause misunderstanding — article mistakes, preposition slips</li>
+              <li>Vocabulary is adequate but safe — you avoid risks, which caps your score at 6</li>
+              <li>Task 2 conclusion is weak — you run out of time and write two sentences that add nothing new</li>
+              <li>Task 1 overview is present but superficial — you mention "overall" but don't actually synthesise</li>
+            </ul>
+          </div>
+          <div class="examiner-note">
+            <strong>Examiner's note:</strong> Band 6 is the "safe zone." You're competent, but you're playing it safe. To break into 6.5+, you need to take more lexical risks and build deeper arguments.
+          </div>
+        </div>
+
+        <!-- Speaking 6.0 -->
+        <div class="skill-card">
+          <div class="skill-icon">🗣️</div>
+          <h4>Speaking</h4>
+          <div class="can-do">
+            <p class="label can">You CAN</p>
+            <ul>
+              <li>Speak at length without major breakdowns — you can fill 2 minutes in Part 2</li>
+              <li>Use a mix of simple and complex structures — some complex sentences land cleanly</li>
+              <li>Employ discourse markers (well, actually, I suppose, the thing is) to buy thinking time</li>
+            </ul>
+          </div>
+          <div class="cant-do">
+            <p class="label cant">You CAN'T yet</p>
+            <ul>
+              <li>Handle unexpected questions smoothly — a surprising Part 3 question makes you pause visibly</li>
+              <li>Use idiomatic language naturally — you know some idioms but they sound inserted, not organic</li>
+              <li>Sustain a flexible range of structures — you have 2–3 complex patterns you reuse</li>
+            </ul>
+          </div>
+          <div class="mistakes">
+            <p class="label mistake-label">What the Examiner Hears</p>
+            <ul>
+              <li>Fluency is generally good but breaks down when the topic shifts to something unfamiliar</li>
+              <li>Good vocabulary range but occasional awkward collocations — "big problem" instead of "serious problem," "make research" instead of "do research"</li>
+              <li>Pronunciation is clear with some features of connected speech, but intonation is still relatively flat</li>
+            </ul>
+          </div>
+          <div class="examiner-note">
+            <strong>Examiner's note:</strong> Band 6 speakers are already functioning in English. The jump to 6.5 is about precision — using the <em>right</em> word, not just a word that works.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== BAND 6.5 ===== -->
+    <div class="band-section" id="band6.5">
+      <div class="band-header">
+        <div class="band-number">6.5</div>
+        <div class="band-meta">
+          <h3>Band 6.5 — Competent to Good Borderline</h3>
+          <p class="band-cefr">CEFR: <span>B2 / C1 borderline</span> · B2+</p>
+        </div>
+      </div>
+
+      <div class="skill-grid">
+        <!-- Listening 6.5 -->
+        <div class="skill-card">
+          <div class="skill-icon">🎧</div>
+          <h4>Listening</h4>
+          <div class="can-do">
+            <p class="label can">You CAN</p>
+            <ul>
+              <li>Handle all four sections with confidence — Section 4 no longer intimidates you</li>
+              <li>Process fast, connected speech with reduced forms effortlessly</li>
+              <li>Follow academic arguments and distinguish between main ideas and supporting detail</li>
+            </ul>
+          </div>
+          <div class="cant-do">
+            <p class="label cant">You CAN'T yet</p>
+            <ul>
+              <li>Achieve near-perfect accuracy — you still lose 3–5 marks, often to distractors or spelling</li>
+              <li>Maintain flawless concentration for the full 30 minutes — one moment of drift costs you an answer</li>
+              <li>Handle very dense Section 4 lectures where multiple ideas are packed into a single sentence</li>
+            </ul>
+          </div>
+          <div class="mistakes">
+            <p class="label mistake-label">Typical Mistake Patterns</p>
+            <ul>
+              <li>The last 5 questions of Section 4 — fatigue errors, not ability errors</li>
+              <li>Overthinking multiple choice — you talk yourself out of the right answer</li>
+              <li>Capitalisation inconsistency — proper nouns not capitalised in gap-fill answers</li>
+            </ul>
+          </div>
+          <div class="score-conv">
+            <p class="label score-label">Score Conversion</p>
+            <p class="score-num">26–29 <small>correct out of 40</small></p>
+          </div>
+        </div>
+
+        <!-- Reading 6.5 -->
+        <div class="skill-card">
+          <div class="skill-icon">📖</div>
+          <h4>Reading</h4>
+          <div class="can-do">
+            <p class="label can">You CAN</p>
+            <ul>
+              <li>Complete all passages with time to review flagged questions</li>
+              <li>Navigate complex academic arguments — you can follow the writer's reasoning</li>
+              <li>Handle all question types, including the difficult ones (heading matching, writer's views)</li>
+            </ul>
+          </div>
+          <div class="cant-do">
+            <p class="label cant">You CAN'T yet</p>
+            <ul>
+              <li>Achieve the precision Band 7 requires — your answers are usually right but occasionally "close"</li>
+              <li>Process Passage 3 at the same speed as Passage 1 — the difficulty gap still costs you time</li>
+              <li>Catch every instance of Not Given — the subtle ones still trip you up</li>
+            </ul>
+          </div>
+          <div class="mistakes">
+            <p class="label mistake-label">Typical Mistake Patterns</p>
+            <ul>
+              <li>"Close but wrong" — you identified the right paragraph but misinterpreted the specific detail</li>
+              <li>Heading questions where two headings seem to fit — you pick the broader one when the text needed the specific one</li>
+              <li>Rushing through Passage 1 to save time for Passage 3, then making careless errors on easy questions</li>
+            </ul>
+          </div>
+          <div class="score-conv">
+            <p class="label score-label">Score Conversion (Academic)</p>
+            <p class="score-num">27–29 <small>correct out of 40</small></p>
+          </div>
+        </div>
+
+        <!-- Writing 6.5 -->
+        <div class="skill-card">
+          <div class="skill-icon">✍️</div>
+          <h4>Writing</h4>
+          <div class="can-do">
+            <p class="label can">You CAN</p>
+            <ul>
+              <li>Develop clear positions with relevant, extended, and supported ideas</li>
+              <li>Organise information and ideas logically with clear progression throughout</li>
+              <li>Use a good range of vocabulary with some less common and idiomatic items</li>
+              <li>Produce frequent error-free sentences with a mix of simple and complex structures</li>
+            </ul>
+          </div>
+          <div class="cant-do">
+            <p class="label cant">You CAN'T yet</p>
+            <ul>
+              <li>Write with the consistent precision Band 7 demands — you still have small inaccuracies in word choice</li>
+              <li>Use sophisticated cohesive devices naturally — "furthermore" and "moreover" feel slightly forced</li>
+              <li>Maintain a fully academic register throughout — occasional slips into informal or spoken style</li>
+            </ul>
+          </div>
+          <div class="mistakes">
+            <p class="label mistake-label">What the Examiner Sees</p>
+            <ul>
+              <li>A strong essay that hits all the right notes — but with 4–5 small errors that prevent Band 7</li>
+              <li>Lexical range is good but collocation is not always natural — "increase the awareness" instead of "raise awareness"</li>
+              <li>Task 1 has a clear overview but the data selection could be more strategic</li>
+            </ul>
+          </div>
+          <div class="examiner-note">
+            <strong>Examiner's note:</strong> Band 6.5 is the most frustrating score in IELTS writing. You're doing almost everything right, but small, preventable errors hold you back. The fix is usually collocation precision and reducing "almost-right" word choices.
+          </div>
+        </div>
+
+        <!-- Speaking 6.5 -->
+        <div class="skill-card">
+          <div class="skill-icon">🗣️</div>
+          <h4>Speaking</h4>
+          <div class="can-do">
+            <p class="label can">You CAN</p>
+            <ul>
+              <li>Speak fluently with only occasional hesitation — usually to think of ideas, not words</li>
+              <li>Use a good range of vocabulary including some less common and idiomatic items</li>
+              <li>Produce mostly error-free sentences with a mix of structures</li>
+              <li>Use intonation and stress to convey meaning and attitude</li>
+            </ul>
+          </div>
+          <div class="cant-do">
+            <p class="label cant">You CAN'T yet</p>
+            <ul>
+              <li>Speak with the effortless flexibility of a Band 7 — you're good, but the examiner can still see the effort</li>
+              <li>Use idiomatic language with complete naturalness — it still sounds learned rather than acquired</li>
+              <li>Handle truly abstract Part 3 questions without a moment of cognitive processing</li>
+            </ul>
+          </div>
+          <div class="mistakes">
+            <p class="label mistake-label">What the Examiner Hears</p>
+            <ul>
+              <li>Very strong overall — but there's a ceiling: your best moments aren't quite Band 7, and your weakest moments dip to Band 6</li>
+              <li>Vocabulary is wide but precision is occasionally off — you use "significant" when "crucial" would be better, or vice versa</li>
+              <li>Grammar is generally accurate but lacks the range a Band 7 demonstrates — you have 3–4 reliable complex patterns</li>
+            </ul>
+          </div>
+          <div class="examiner-note">
+            <strong>Examiner's note:</strong> Band 6.5 speakers are already strong. The 7 barrier is about flexibility — being able to say the same thing five different ways, and knowing which one fits this exact moment.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== BAND 7.0 ===== -->
+    <div class="band-section" id="band7">
+      <div class="band-header">
+        <div class="band-number">7.0</div>
+        <div class="band-meta">
+          <h3>Band 7.0 — Good User</h3>
+          <p class="band-cefr">CEFR: <span>C1</span> · Advanced</p>
+        </div>
+      </div>
+
+      <div class="skill-grid">
+        <!-- Listening 7.0 -->
+        <div class="skill-card">
+          <div class="skill-icon">🎧</div>
+          <h4>Listening</h4>
+          <div class="can-do">
+            <p class="label can">You CAN</p>
+            <ul>
+              <li>Understand extended speech even when it is not clearly structured</li>
+              <li>Follow complex lines of argument on both familiar and unfamiliar topics</li>
+              <li>Process academic lectures with ease — you can take notes while listening without missing content</li>
+              <li>Recognise a wide range of accents (British, Australian, North American, NZ)</li>
+            </ul>
+          </div>
+          <div class="cant-do">
+            <p class="label cant">You CAN'T yet</p>
+            <ul>
+              <li>Achieve the near-perfect scores of Band 8+ — you still miss 2–4 answers</li>
+              <li>Handle extremely dense Section 4 content where the speaker delivers complex data at speed</li>
+            </ul>
+          </div>
+          <div class="mistakes">
+            <p class="label mistake-label">Typical Mistake Patterns</p>
+            <ul>
+              <li>Careless spelling — you know the word, you just wrote it wrong under time pressure</li>
+              <li>Getting complacent in Section 1 — you expect it to be easy and miss a distractor</li>
+              <li>Word count violations — writing 4 words when the instruction says "NO MORE THAN THREE WORDS"</li>
+            </ul>
+          </div>
+          <div class="score-conv">
+            <p class="label score-label">Score Conversion</p>
+            <p class="score-num">30–32 <small>correct out of 40</small></p>
+          </div>
+        </div>
+
+        <!-- Reading 7.0 -->
+        <div class="skill-card">
+          <div class="skill-icon">📖</div>
+          <h4>Reading</h4>
+          <div class="can-do">
+            <p class="label can">You CAN</p>
+            <ul>
+              <li>Read complex academic texts with strong comprehension and good speed</li>
+              <li>Identify the writer's position, attitude, and implied meaning reliably</li>
+              <li>Navigate all question types efficiently — you have a strategy for each one</li>
+              <li>Finish with 5–10 minutes to check answers</li>
+            </ul>
+          </div>
+          <div class="cant-do">
+            <p class="label cant">You CAN'T yet</p>
+            <ul>
+              <li>Score Band 8+ consistently — you still make 3–5 mistakes, often on the most nuanced questions</li>
+              <li>Process extremely dense philosophical or highly technical passages at full speed</li>
+            </ul>
+          </div>
+          <div class="mistakes">
+            <p class="label mistake-label">Typical Mistake Patterns</p>
+            <ul>
+              <li>Over-interpreting — you read meaning INTO the text that isn't there (the writer implies, you infer too far)</li>
+              <li>Matching information to paragraphs — you find the right paragraph but match to the wrong sentence within it</li>
+              <li>Getting 37/40 — the last three mistakes are the hardest to eliminate</li>
+            </ul>
+          </div>
+          <div class="score-conv">
+            <p class="label score-label">Score Conversion (Academic)</p>
+            <p class="score-num">30–32 <small>correct out of 40</small></p>
+          </div>
+        </div>
+
+        <!-- Writing 7.0 -->
+        <div class="skill-card">
+          <div class="skill-icon">✍️</div>
+          <h4>Writing</h4>
+          <div class="can-do">
+            <p class="label can">You CAN</p>
+            <ul>
+              <li>Address all parts of the task with well-developed, extended, and supported ideas</li>
+              <li>Organise information and ideas logically with clear progression throughout the response</li>
+              <li>Use a wide range of vocabulary flexibly and precisely, including less common and idiomatic items</li>
+              <li>Produce frequent error-free sentences with a variety of complex structures</li>
+            </ul>
+          </div>
+          <div class="cant-do">
+            <p class="label cant">You CAN'T yet</p>
+            <ul>
+              <li>Write with the effortless sophistication of Band 8 — your arguments are solid but not striking</li>
+              <li>Use the full range of cohesive devices with complete naturalness — some transitions still feel mechanical</li>
+              <li>Achieve near-perfect accuracy — there are still 2–3 small errors per paragraph</li>
+            </ul>
+          </div>
+          <div class="mistakes">
+            <p class="label mistake-label">What the Examiner Sees</p>
+            <ul>
+              <li>Strong control of all four criteria — no single area drags you down</li>
+              <li>Occasional slips in articles and prepositions that don't affect communication</li>
+              <li>Vocabulary is impressive but not yet dazzling — you use "important" when "pivotal" or "paramount" would show range</li>
+            </ul>
+          </div>
+          <div class="examiner-note">
+            <strong>Examiner's note:</strong> Band 7 writing is genuinely good. At this level, improvement is about nuance — choosing the <em>best</em> word, not just a correct one, and structuring arguments with elegance, not just logic.
+          </div>
+        </div>
+
+        <!-- Speaking 7.0 -->
+        <div class="skill-card">
+          <div class="skill-icon">🗣️</div>
+          <h4>Speaking</h4>
+          <div class="can-do">
+            <p class="label can">You CAN</p>
+            <ul>
+              <li>Speak at length without noticeable effort or loss of coherence</li>
+              <li>Use a wide vocabulary resource readily and flexibly to convey precise meaning</li>
+              <li>Use a range of complex structures with flexibility — you can rephrase mid-sentence when needed</li>
+              <li>Produce mostly error-free sentences — errors are rare and self-corrected</li>
+              <li>Use intonation, stress, and rhythm effectively to convey and enhance meaning</li>
+            </ul>
+          </div>
+          <div class="cant-do">
+            <p class="label cant">You CAN'T yet</p>
+            <ul>
+              <li>Speak with the near-native fluency of Band 8 — hesitation for ideas (not words) still appears occasionally</li>
+              <li>Use idiomatic expressions with complete naturalness in every context</li>
+              <li>Sustain Band 7 performance across all three parts — you might dip in Part 3 under abstract questioning</li>
+            </ul>
+          </div>
+          <div class="mistakes">
+            <p class="label mistake-label">What the Examiner Hears</p>
+            <ul>
+              <li>A confident, articulate speaker — the examiner is listening to <em>what</em> you say, not <em>how</em> you say it</li>
+              <li>Occasional awkward phrasing when reaching for a precise concept — you know what you want to say, the words just take a second</li>
+              <li>Strong pronunciation with clear features of connected speech — accent is present but never interferes</li>
+            </ul>
+          </div>
+          <div class="examiner-note">
+            <strong>Examiner's note:</strong> Band 7 speakers belong in English-medium universities and professional environments. You're not just communicating — you're expressing nuance, attitude, and personality through English.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ===== SPEAKING VIDEO EXAMPLES ===== -->
+  <section class="section" id="videos">
+    <div class="section-head">
+      <h2>Speaking: See the Difference</h2>
+      <span class="accent-bar"></span>
+      <p>Watch real Band 5, 6, and 7 speaking performances. Notice the gap.</p>
+    </div>
+
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-label">Band 5</div>
+        <div class="video-sub">Modest User · B1 · Noticeable pauses, simple structures</div>
+        <video controls class="band-video" preload="metadata" poster="">
+          <source src="videos/ielts-speaking-band5.mp4" type="video/mp4">
+          <track src="videos/ielts-speaking-band5-zh.vtt" kind="subtitles" srclang="zh" label="中文">
+          <track src="videos/ielts-speaking-band5-en.vtt" kind="subtitles" srclang="en" label="English" default>
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="video-card">
+        <div class="video-label">Band 6</div>
+        <div class="video-sub">Competent User · B2 · Fluent but limited range</div>
+        <video controls class="band-video" preload="metadata" poster="">
+          <source src="videos/ielts-speaking-band6.mp4" type="video/mp4">
+          <track src="videos/ielts-speaking-band6-zh.vtt" kind="subtitles" srclang="zh" label="中文">
+          <track src="videos/ielts-speaking-band6-en.vtt" kind="subtitles" srclang="en" label="English" default>
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="video-card">
+        <div class="video-label">Band 7</div>
+        <div class="video-sub">Good User · C1 · Flexible, precise, confident</div>
+        <video controls class="band-video" preload="metadata" poster="">
+          <source src="videos/ielts-speaking-band7.mp4" type="video/mp4">
+          <track src="videos/ielts-speaking-band7-zh.vtt" kind="subtitles" srclang="zh" label="中文">
+          <track src="videos/ielts-speaking-band7-en.vtt" kind="subtitles" srclang="en" label="English" default>
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin-top:28px; font-size:0.85rem; color:var(--gray-600);">
+      Videos coming soon. Each includes English and Chinese subtitles so you can follow every word.
+    </p>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ===== THE JUMP ===== -->
+  <section class="section" id="the-jump">
+    <div class="section-head">
+      <h2>The Jump: What It Actually Takes</h2>
+      <span class="accent-bar"></span>
+      <p>Moving up a band isn't about studying harder. It's about studying the right thing.</p>
+    </div>
+
+    <div class="jump-list">
+      <div class="jump-item">
+        <div class="jump-bands">5.0 → 5.5</div>
+        <div class="jump-content">
+          <h4>Fix Your Foundation</h4>
+          <p>At this level, grammar errors are your biggest bottleneck. Subject-verb agreement, tense consistency, article use — these basics cost you marks across all four skills. Expand your active vocabulary by 300–500 words focused on common IELTS topics (education, environment, technology, health). You don't need complexity yet. You need control.</p>
+          <span class="jump-time">Typical timeline: 2–3 months of focused study</span>
+        </div>
+      </div>
+
+      <div class="jump-item">
+        <div class="jump-bands">5.5 → 6.0</div>
+        <div class="jump-content">
+          <h4>Add Coherence</h4>
+          <p>Your ideas are fine — the problem is how you connect them. Learn to structure answers with topic sentences, supporting points, and examples. For speaking, reduce hesitation by practising extended turns — record yourself speaking for 2 minutes without stopping. The goal is flow, not perfection. For writing, master paragraph structure: one idea, three supporting sentences, one link to the next paragraph.</p>
+          <span class="jump-time">Typical timeline: 2–4 months of structured practice</span>
+        </div>
+      </div>
+
+      <div class="jump-item">
+        <div class="jump-bands">6.0 → 6.5</div>
+        <div class="jump-content">
+          <h4>Build Precision</h4>
+          <p>This is where "good enough" stops being good enough. Your vocabulary needs to be more precise — "important" becomes "crucial," "significant," "pivotal," or "paramount" depending on context. Collocation becomes critical: you stop saying "make research" and start saying "conduct research." In writing, your arguments need depth — two supporting points per paragraph, not one. In speaking, you stop translating from your first language and start thinking in English directly.</p>
+          <span class="jump-time">Typical timeline: 3–5 months with targeted feedback</span>
+        </div>
+      </div>
+
+      <div class="jump-item">
+        <div class="jump-bands">6.5 → 7.0</div>
+        <div class="jump-content">
+          <h4>Develop Flexibility</h4>
+          <p>The hardest jump in IELTS. Band 7 requires you to demonstrate range — not just accuracy. You need to show the examiner you can say the same thing three different ways and pick the best one for the context. Idiomatic language must sound natural, not memorised. Your writing needs sophistication — not just logically ordered, but elegantly structured. Your speaking needs confidence — not the absence of mistakes, but the ability to recover from them without losing flow. This is where most students plateau. The difference between 6.5 and 7 isn't more vocabulary — it's better access to the vocabulary you already have.</p>
+          <span class="jump-time">Typical timeline: 4–8 months of intensive, guided practice</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <h2>Want to Know Your CEFR Level?</h2>
+    <p>
+      Book a free 15-minute diagnostic with Kee. I'll assess your speaking and writing, identify your current band, and tell you exactly what to work on — no vague advice, no generic study plans.
+    </p>
+    <div class="cta-buttons">
+      <a href="https://wa.me/447440622158" class="btn btn-primary" target="_blank" rel="noopener">
+        💬 WhatsApp Kee
+      </a>
+      <a href="weixin://dl/chat?keedahooman" class="btn btn-outline">
+        💬 WeChat Kee
+      </a>
+    </div>
+    <p style="margin-top:24px; font-size:0.82rem; color:var(--gray-400);">
+      Or email: kee@rkrk.io · 15 minutes. No cost. Just clarity.
+    </p>
+  </section>
+
+  <!-- KeeBot Widget -->
+  <script src="js/kee-bot.js?v=v3"></script>
+
+  <!-- Shared Navigation -->
+  <script src="js/navigation.js"></script>
+
+</body>
+</html>
