@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DET Listening Masterclass — Kee White Editorial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg: #FAFAFA;
+            --card-bg: #FFFFFF;
+            --text: #1A1A1A;
+            --accent: #E62B1E;
+            --secondary: #D97706;
+            --gray-light: #F5F5F5;
+            --gray-border: #E0E0E0;
+            --gray-mid: #999;
+            --gray-dark: #666;
+            --max-width: 1100px;
+            --section-pad: 80px;
+            --card-pad: 28px;
+            --radius: 12px;
+            --body-line: 1.7;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Source Serif 4', 'Inter', system-ui, -apple-system, sans-serif;
+            font-size: 16px;
+            line-height: var(--body-line);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            word-break: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--text);
+        }
+
+        h1 { font-size: clamp(2.2rem, 4vw, 3.2rem); }
+        h2 { font-size: clamp(1.4rem, 3vw, 1.8rem); }
+        h3 { font-size: clamp(1.1rem, 2vw, 1.35rem); }
+
+        /* Navigation */
+        .k-nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(255,255,255,0.97); backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid var(--gray-border);
+        }
+        .k-nav-inner {
+            max-width: var(--max-width); margin: 0 auto; padding: 0 24px;
+            height: 64px; display: flex; align-items: center; justify-content: space-between;
+        }
+        .k-nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+        .k-nav-brand .brand-icon { font-size: 1.4rem; }
+        .k-nav-brand .brand-text { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; }
+        .k-nav-links { display: flex; gap: 6px; list-style: none; flex-wrap: wrap; }
+        .k-nav-links a {
+            text-decoration: none; color: var(--gray-dark); font-family: 'Inter', system-ui, sans-serif;
+            font-size: 0.85rem; font-weight: 500; padding: 8px 14px; border-radius: 8px; transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .k-nav-links a:hover { background: var(--gray-light); color: var(--text); }
+
+        /* Hero */
+        .hero {
+            padding: 140px 0 80px; text-align: center; position: relative;
+        }
+        .hero-badge {
+            display: inline-block; background: rgba(230,43,30,0.08); color: var(--accent);
+            font-family: 'Inter', system-ui, sans-serif; font-size: 0.8rem; font-weight: 600;
+            padding: 6px 16px; border-radius: 50px; letter-spacing: 0.04em; margin-bottom: 20px;
+        }
+        .hero h1 { margin-bottom: 16px; letter-spacing: -0.01em; }
+        .hero-sub {
+            font-size: 1.1rem; color: var(--gray-dark); max-width: 600px; margin: 0 auto 32px;
+            font-family: 'Source Serif 4', serif;
+        }
+        .hero-meta {
+            display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;
+            font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; color: var(--gray-mid);
+        }
+        .hero-meta span { display: flex; align-items: center; gap: 6px; }
+
+        /* Section */
+        .section { padding: var(--section-pad) 0; }
+        .section-alt { background: var(--white); }
+        .section-header { margin-bottom: 48px; }
+        .section-header h2 {
+            position: relative; padding-bottom: 16px; margin-bottom: 16px;
+        }
+        .section-header h2::after {
+            content: ''; position: absolute; bottom: 0; left: 0;
+            width: 28px; height: 2px; background: var(--accent);
+        }
+        .section-header p {
+            color: var(--gray-dark); font-size: 1.05rem; max-width: 680px;
+        }
+
+        /* Cards */
+        .pillars-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;
+        }
+        .pillar-card {
+            background: var(--card-bg); border: 1px solid var(--gray-border); border-radius: var(--radius);
+            padding: var(--card-pad); transition: box-shadow 0.2s;
+        }
+        .pillar-card:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+        .pillar-card .pillar-num {
+            font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--accent);
+            line-height: 1; margin-bottom: 12px;
+        }
+        .pillar-card h3 { margin-bottom: 8px; }
+        .pillar-card p { color: var(--gray-dark); font-size: 0.95rem; }
+        .pillar-card .pillar-link {
+            display: inline-flex; align-items: center; gap: 6px; margin-top: 12px;
+            font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 500;
+            color: var(--accent); text-decoration: none; transition: gap 0.2s;
+        }
+        .pillar-card .pillar-link:hover { gap: 10px; }
+
+        /* Update Alert */
+        .update-banner {
+            background: #FFF7ED; border: 1px solid #FED7AA; border-radius: var(--radius);
+            padding: 20px 24px; margin-bottom: 32px; display: flex; gap: 16px; align-items: flex-start;
+        }
+        .update-banner .update-icon { font-size: 1.5rem; flex-shrink: 0; }
+        .update-banner .update-text { font-size: 0.95rem; color: #9A3412; }
+        .update-banner .update-text strong { color: #7C2D12; }
+
+        /* Scenario Practice */
+        .scenario-card {
+            background: var(--card-bg); border: 1px solid var(--gray-border); border-radius: var(--radius);
+            margin-bottom: 20px; overflow: hidden;
+        }
+        .scenario-header {
+            padding: 20px var(--card-pad); display: flex; align-items: center; gap: 14px;
+            cursor: pointer; user-select: none; touch-action: manipulation;
+        }
+        .scenario-header .sc-icon {
+            width: 48px; height: 48px; border-radius: 12px; background: var(--gray-light);
+            display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .scenario-header h4 { flex: 1; font-size: 1.05rem; }
+        .scenario-header .sc-arrow { color: var(--gray-mid); transition: transform 0.3s; }
+        .scenario-card.open .sc-arrow { transform: rotate(180deg); }
+        .scenario-body { display: none; padding: 0 var(--card-pad) var(--card-pad); }
+        .scenario-card.open .scenario-body { display: block; }
+        .scenario-audio-hint {
+            background: var(--gray-light); border-radius: 8px; padding: 16px; margin-bottom: 16px;
+            display: flex; align-items: center; gap: 12px; font-family: 'Inter', system-ui, sans-serif;
+            font-size: 0.9rem; color: var(--gray-dark);
+        }
+        .scenario-audio-hint .sa-icon { font-size: 1.3rem; }
+        .scenario-blanks { margin-bottom: 16px; }
+        .scenario-blanks .blank-group { margin-bottom: 12px; }
+        .scenario-blanks label {
+            display: block; font-family: 'Inter', system-ui, sans-serif; font-size: 0.8rem;
+            font-weight: 500; color: var(--gray-mid); margin-bottom: 4px;
+        }
+        .scenario-blanks input {
+            width: 100%; padding: 10px 14px; border: 1px solid var(--gray-border); border-radius: 8px;
+            font-family: 'Source Serif 4', serif; font-size: 0.95rem; background: var(--bg); transition: border 0.2s;
+        }
+        .scenario-blanks input:focus { outline: none; border-color: var(--accent); }
+        .scenario-answers { display: none; margin-top: 12px; }
+        .scenario-answers .answer-line {
+            font-family: 'Inter', system-ui, sans-serif; font-size: 0.9rem; padding: 8px 0;
+            border-bottom: 1px solid var(--gray-light);
+        }
+        .scenario-answers .answer-line .ans-correct {
+            color: #166534; font-weight: 600;
+        }
+        .btn-sm {
+            display: inline-flex; align-items: center; gap: 6px; padding: 8px 18px;
+            border: 1px solid var(--gray-border); border-radius: 8px; background: var(--white);
+            font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; font-weight: 500;
+            cursor: pointer; transition: all 0.2s; touch-action: manipulation; min-height: 44px;
+        }
+        .btn-sm:hover { border-color: var(--accent); color: var(--accent); }
+        .btn-sm.btn-accent { background: var(--accent); color: #fff; border-color: var(--accent); }
+        .btn-sm.btn-accent:hover { opacity: 0.9; }
+
+        /* Connected Speech */
+        .cs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .cs-category {
+            background: var(--card-bg); border: 1px solid var(--gray-border); border-radius: var(--radius);
+            overflow: hidden;
+        }
+        .cs-cat-header {
+            padding: 16px var(--card-pad); border-bottom: 1px solid var(--gray-light);
+            font-family: 'Inter', system-ui, sans-serif; font-size: 0.8rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent);
+        }
+        .cs-items { padding: var(--card-pad); }
+        .cs-item {
+            padding: 16px 0; border-bottom: 1px solid var(--gray-light); cursor: pointer;
+            touch-action: manipulation;
+        }
+        .cs-item:last-child { border-bottom: none; }
+        .cs-full { font-size: 1rem; font-weight: 600; font-family: 'Playfair Display', serif; margin-bottom: 4px; }
+        .cs-reduced { 
+            font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; color: var(--accent);
+            font-weight: 500; display: none;
+        }
+        .cs-reduced::before { content: '→ '; }
+        .cs-item.revealed .cs-reduced { display: block; }
+        .cs-item.revealed .cs-full { color: var(--gray-mid); }
+        .cs-pronounce {
+            font-size: 0.8rem; color: var(--gray-mid); font-family: 'Inter', system-ui, sans-serif; margin-top: 2px;
+        }
+        .cs-toggle-all {
+            font-family: 'Inter', system-ui, sans-serif; font-size: 0.82rem; font-weight: 500;
+            color: var(--accent); cursor: pointer; margin-bottom: 16px; display: inline-block;
+            min-height: 44px; display: inline-flex; align-items: center; touch-action: manipulation;
+        }
+
+        /* Shadowing */
+        .shadow-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        .shadow-step {
+            background: var(--card-bg); border: 1px solid var(--gray-border); border-radius: var(--radius);
+            padding: var(--card-pad); text-align: center;
+        }
+        .shadow-step .step-num {
+            width: 40px; height: 40px; border-radius: 50%; background: var(--accent); color: #fff;
+            display: flex; align-items: center; justify-content: center; margin: 0 auto 14px;
+            font-family: 'Inter', system-ui, sans-serif; font-weight: 600; font-size: 1.1rem;
+        }
+        .shadow-step h4 { font-size: 1rem; margin-bottom: 6px; }
+        .shadow-step p { font-size: 0.85rem; color: var(--gray-dark); }
+        .shadow-sources {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 32px;
+        }
+        .shadow-source {
+            background: var(--gray-light); border-radius: var(--radius); padding: 18px 20px;
+            display: flex; align-items: center; gap: 12px; font-family: 'Inter', system-ui, sans-serif;
+        }
+        .shadow-source .ss-icon { font-size: 1.4rem; }
+
+        /* Gap Fill */
+        .gap-item {
+            background: var(--card-bg); border: 1px solid var(--gray-border); border-radius: var(--radius);
+            padding: 20px var(--card-pad); margin-bottom: 14px; transition: box-shadow 0.2s;
+        }
+        .gap-item:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+        .gap-item .gap-diff {
+            font-family: 'Inter', system-ui, sans-serif; font-size: 0.7rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.04em; display: inline-block;
+            padding: 2px 10px; border-radius: 50px; margin-bottom: 10px;
+        }
+        .gap-diff.easy { background: #DCFCE7; color: #166534; }
+        .gap-diff.medium { background: #FEF3C7; color: #92400E; }
+        .gap-diff.hard { background: #FEE2E2; color: #991B1B; }
+        .gap-sentence { font-size: 1.05rem; line-height: 1.8; margin-bottom: 8px; }
+        .gap-blank {
+            display: inline-block; min-width: 100px; border-bottom: 2px dashed var(--accent);
+            color: var(--accent); font-weight: 600; cursor: pointer; padding: 0 4px;
+            font-family: 'Inter', system-ui, sans-serif; touch-action: manipulation; min-height: 32px;
+            text-align: center;
+        }
+        .gap-blank.revealed { 
+            border-bottom-style: solid; border-bottom-color: #166534; color: #166534;
+            background: #F0FDF4; border-radius: 4px;
+        }
+        .gap-hint { font-size: 0.8rem; color: var(--gray-mid); font-family: 'Inter', system-ui, sans-serif; }
+
+        /* Practice Protocol */
+        .protocol-table {
+            width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;
+        }
+        .protocol-table table {
+            width: 100%; border-collapse: collapse; min-width: 500px;
+        }
+        .protocol-table th {
+            font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.04em; color: var(--gray-mid);
+            text-align: left; padding: 12px 16px; border-bottom: 2px solid var(--gray-border);
+        }
+        .protocol-table td {
+            font-size: 0.9rem; padding: 14px 16px; border-bottom: 1px solid var(--gray-light);
+            vertical-align: top;
+        }
+        .protocol-table .time-cell {
+            font-family: 'Inter', system-ui, sans-serif; font-weight: 600; color: var(--accent);
+            white-space: nowrap;
+        }
+        .checklist {
+            list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px;
+        }
+        .checklist li {
+            background: var(--white); border: 1px solid var(--gray-border); border-radius: 8px;
+            padding: 14px 18px; font-size: 0.9rem; display: flex; align-items: center; gap: 10px;
+            font-family: 'Inter', system-ui, sans-serif; cursor: pointer; transition: all 0.2s;
+            touch-action: manipulation; min-height: 44px;
+        }
+        .checklist li:hover { border-color: var(--accent); }
+        .checklist li .check {
+            width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--gray-border);
+            flex-shrink: 0; transition: all 0.2s;
+        }
+        .checklist li.checked { background: #FEF2F2; border-color: var(--accent); }
+        .checklist li.checked .check { background: var(--accent); border-color: var(--accent); }
+        .checklist li.checked .check::after {
+            content: '✓'; display: flex; align-items: center; justify-content: center;
+            color: #fff; font-size: 0.7rem; font-weight: 700; line-height: 1;
+        }
+
+        /* Footer */
+        .k-footer {
+            padding: var(--section-pad) 0 40px; border-top: 1px solid var(--gray-border);
+            text-align: center; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85rem; color: var(--gray-mid);
+        }
+        .k-footer a { color: var(--gray-dark); text-decoration: none; }
+        .k-footer a:hover { color: var(--accent); }
+        .k-footer .footer-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            :root { --section-pad: 48px; }
+            .hero { padding: 120px 0 60px; }
+            .k-nav-links { display: none; }
+            .pillars-grid { grid-template-columns: 1fr; }
+            .cs-grid { grid-template-columns: 1fr; }
+            .shadow-steps { grid-template-columns: 1fr; }
+            .shadow-sources { grid-template-columns: 1fr; }
+            .checklist { grid-template-columns: 1fr; }
+            .protocol-table { font-size: 0.85rem; }
+        }
+
+        @media (max-width: 400px) {
+            .container { padding: 0 16px; }
+            .hero h1 { font-size: 1.8rem; }
+            .section-header h2 { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="k-nav">
+    <div class="k-nav-inner">
+        <a href="/" class="k-nav-brand">
+            <span class="brand-icon">🎧</span>
+            <span class="brand-text">IELTS with Kee</span>
+        </a>
+        <ul class="k-nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/speaking.html">Speaking</a></li>
+            <li><a href="/det-listening.html">DET Listening</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-badge">DET Listening Masterclass</div>
+        <h1>Sound Decoding Protocol</h1>
+        <p class="hero-sub">
+            From sound waves to meaning. A systematic approach to mastering DET listening comprehension.
+        </p>
+        <div class="hero-meta">
+            <span><i class="fa-solid fa-clock"></i> 6 Sections</span>
+            <span><i class="fa-solid fa-headphones"></i> Interactive Practice</span>
+            <span><i class="fa-solid fa-calendar"></i> Updated July 2025</span>
+        </div>
+    </div>
+</section>
+
+<!-- Section 1: Overview -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>DET Listening Overview</h2>
+            <p>
+                DET listening is a gatekeeper skill. It directly impacts your <strong>Conversation</strong> and <strong>Comprehension</strong> subscores. 
+                Unlike traditional exams with a separate listening section, DET integrates listening into every task type.
+            </p>
+        </div>
+
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <div class="pillar-num">01</div>
+                <h3>Listen and Type</h3>
+                <p>
+                    Dictation of sentences with increasing difficulty via CAT. 
+                    The Adaptive Engine pushes your score ceiling with each correct answer.
+                    Master the 4-phase approach: Mental Scratchpad, Skeleton Build, Flesh and Blood, Editor's Eye.
+                </p>
+                <a href="#" class="pillar-link">Covered in L1: The Acoustic Scribe <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-num">02</div>
+                <h3>Interactive Listening</h3>
+                <p>
+                    Scenario-based comprehension with the new July 2025 "Listen and Complete" update.
+                    Two parts: fill-in-blank comprehension, then select appropriate responses.
+                    Context extraction determines success: Who am I? What is my goal?
+                </p>
+                <a href="#" class="pillar-link">This page + L2: The Context Navigator <i class="fa-solid fa-arrow-down"></i></a>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-num">03</div>
+                <h3>Foundational Skills</h3>
+                <p>
+                    Connected speech recognition, video shadowing for prosody, and gap-fill dictation.
+                    These skills build the neural pathways that make rapid listening comprehension automatic.
+                    Practice daily for cumulative improvement.
+                </p>
+                <a href="#foundational" class="pillar-link">This page <i class="fa-solid fa-arrow-down"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Interactive Listening Update -->
+<section class="section section-alt" id="interactive">
+    <div class="container">
+        <div class="section-header">
+            <h2>Interactive Listening: July 2025 Update</h2>
+            <p>
+                The scenario introduction is now <strong>audio-only</strong>. Plus, a new "Listen and Complete" section 
+                with fill-in-blank questions appears before the familiar "Listen and Respond."
+            </p>
+        </div>
+
+        <div class="update-banner">
+            <span class="update-icon">🔔</span>
+            <div class="update-text">
+                <strong>What changed (July 2025):</strong> The scenario context is no longer displayed as text. 
+                You hear it once as audio. Then you complete 3-4 fill-in-blank questions that test 
+                your comprehension of the scenario, before selecting appropriate responses.
+            </div>
+        </div>
+
+        <h3 style="margin-bottom: 24px; font-family: 'Playfair Display', serif;">Strategy: Listen for WHO / WHAT / WHERE First</h3>
+
+        <div class="pillars-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            <div class="pillar-card">
+                <div class="pillar-num" style="font-size:1.5rem;">WHO</div>
+                <p style="font-size:0.9rem;">Identify the speaker's role and the listener's role. Student? Professor? Librarian? This determines register and expected vocabulary.</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-num" style="font-size:1.5rem;">WHAT</div>
+                <p style="font-size:0.9rem;">What is the purpose? Requesting an extension? Asking for clarification? Complaining about a grade? The goal shapes every response.</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-num" style="font-size:1.5rem;">WHERE</div>
+                <p style="font-size:0.9rem;">Campus office? Library? Dormitory? Classroom? Location provides context clues for the vocabulary and tone you will encounter.</p>
+            </div>
+        </div>
+
+        <h3 style="margin: 48px 0 24px; font-family: 'Playfair Display', serif;">Practice Scenarios</h3>
+        <p style="color: var(--gray-dark); margin-bottom: 32px;">
+            Below are practice scenarios. Play the audio description in your mind, fill in the blanks, then reveal the answers.
+        </p>
+
+        <!-- Scenario 1 -->
+        <div class="scenario-card" id="scenario1">
+            <div class="scenario-header" onclick="toggleScenario('scenario1')" role="button" tabindex="0" aria-expanded="false">
+                <div class="sc-icon">📚</div>
+                <h4>Scenario 1: Library Research Help</h4>
+                <i class="fa-solid fa-chevron-down sc-arrow"></i>
+            </div>
+            <div class="scenario-body">
+                <div class="scenario-audio-hint">
+                    <span class="sa-icon">🔊</span>
+                    <span>
+                        <strong>Audio Scenario (read aloud or play TTS):</strong><br>
+                        "You are a first-year student who needs help finding academic sources for your history paper. 
+                        You are speaking to a research librarian at the university library. 
+                        You have already searched the online catalog but could not find relevant journal articles."
+                    </span>
+                </div>
+                <div class="scenario-blanks">
+                    <div class="blank-group">
+                        <label>Blank 1: The speaker is a ______ looking for research help.</label>
+                        <input type="text" placeholder="Type your answer..." data-answer="first-year student">
+                    </div>
+                    <div class="blank-group">
+                        <label>Blank 2: The speaker is talking to a ______.</label>
+                        <input type="text" placeholder="Type your answer..." data-answer="research librarian">
+                    </div>
+                    <div class="blank-group">
+                        <label>Blank 3: The paper topic is about ______.</label>
+                        <input type="text" placeholder="Type your answer..." data-answer="history">
+                    </div>
+                    <div class="blank-group">
+                        <label>Blank 4: The speaker could not find relevant ______.</label>
+                        <input type="text" placeholder="Type your answer..." data-answer="journal articles">
+                    </div>
+                </div>
+                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                    <button class="btn-sm btn-accent" onclick="checkAnswers('scenario1')">Check Answers</button>
+                    <button class="btn-sm" onclick="revealAnswers('scenario1')">Reveal All</button>
+                </div>
+                <div class="scenario-answers" id="scenario1-answers"></div>
+            </div>
+        </div>
+
+        <!-- Scenario 2 -->
+        <div class="scenario-card" id="scenario2">
+            <div class="scenario-header" onclick="toggleScenario('scenario2')" role="button" tabindex="0" aria-expanded="false">
+                <div class="sc-icon">🎓</div>
+                <h4>Scenario 2: Course Registration Problem</h4>
+                <i class="fa-solid fa-chevron-down sc-arrow"></i>
+            </div>
+            <div class="scenario-body">
+                <div class="scenario-audio-hint">
+                    <span class="sa-icon">🔊</span>
+                    <span>
+                        <strong>Audio Scenario:</strong><br>
+                        "You are a sophomore student trying to register for a required psychology course, 
+                        but the online registration system shows it is full. You are speaking to your academic advisor 
+                        to ask about waitlist options and alternative sections."
+                    </span>
+                </div>
+                <div class="scenario-blanks">
+                    <div class="blank-group">
+                        <label>Blank 1: The student is a ______.</label>
+                        <input type="text" placeholder="Type your answer..." data-answer="sophomore">
+                    </div>
+                    <div class="blank-group">
+                        <label>Blank 2: The course is in ______.</label>
+                        <input type="text" placeholder="Type your answer..." data-answer="psychology">
+                    </div>
+                    <div class="blank-group">
+                        <label>Blank 3: The problem is the course is ______.</label>
+                        <input type="text" placeholder="Type your answer..." data-answer="full">
+                    </div>
+                    <div class="blank-group">
+                        <label>Blank 4: The student wants to discuss ______ options.</label>
+                        <input type="text" placeholder="Type your answer..." data-answer="waitlist">
+                    </div>
+                </div>
+                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                    <button class="btn-sm btn-accent" onclick="checkAnswers('scenario2')">Check Answers</button>
+                    <button class="btn-sm" onclick="revealAnswers('scenario2')">Reveal All</button>
+                </div>
+                <div class="scenario-answers" id="scenario2-answers"></div>
+            </div>
+        </div>
+
+        <!-- Scenario 3 -->
+        <div class="scenario-card" id="scenario3">
+            <div class="scenario-header" onclick="toggleScenario('scenario3')" role="button" tabindex="0" aria-expanded="false">
+                <div class="sc-icon">🏠</div>
+                <h4>Scenario 3: Dormitory Noise Complaint</h4>
+                <i class="fa-solid fa-chevron-down sc-arrow"></i>
+            </div>
+            <div class="scenario-body">
+                <div class="scenario-audio-hint">
+                    <span class="sa-icon">🔊</span>
+                    <span>
+                        <strong>Audio Scenario:</strong><br>
+                        "You are a resident assistant in a university dormitory. A student has come to you 
+                        to complain about excessive noise from the room next door during quiet hours. 
+                        You need to listen to the complaint and suggest a solution."
+                    </span>
+                </div>
+                <div class="scenario-blanks">
+                    <div class="blank-group">
+                        <label>Blank 1: The speaker is a ______.</label>
+                        <input type="text" placeholder="Type your answer..." data-answer="resident assistant">
+                    </div>
+                    <div class="blank-group">
+                        <label>Blank 2: The complaint is about ______.</label>
+                        <input type="text" placeholder="Type your answer..." data-answer="excessive noise">
+                    </div>
+                    <div class="blank-group">
+                        <label>Blank 3: The noise happens during ______.</label>
+                        <input type="text" placeholder="Type your answer..." data-answer="quiet hours">
+                    </div>
+                </div>
+                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                    <button class="btn-sm btn-accent" onclick="checkAnswers('scenario3')">Check Answers</button>
+                    <button class="btn-sm" onclick="revealAnswers('scenario3')">Reveal All</button>
+                </div>
+                <div class="scenario-answers" id="scenario3-answers"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: Connected Speech -->
+<section class="section" id="foundational">
+    <div class="container">
+        <div class="section-header">
+            <h2>Connected Speech Training</h2>
+            <p>
+                Native speakers do not pronounce each word in isolation. Words connect, merge, and reduce. 
+                Understanding connected speech is the difference between hearing individual words and hearing meaning.
+            </p>
+        </div>
+
+        <span class="cs-toggle-all" onclick="toggleAllCS()" role="button" tabindex="0">
+            <i class="fa-solid fa-eye"></i> Toggle All Reduced Forms
+        </span>
+
+        <div class="cs-grid">
+            <!-- Linking -->
+            <div class="cs-category">
+                <div class="cs-cat-header">Linking (连读)</div>
+                <div class="cs-items">
+                    <div class="cs-item" onclick="this.classList.toggle('revealed')">
+                        <div class="cs-full">Turn off the light.</div>
+                        <div class="cs-reduced">Tur-noff the light.</div>
+                        <div class="cs-pronounce">/tɜːrˈnɔːf/ — consonant + vowel linking</div>
+                    </div>
+                    <div class="cs-item" onclick="this.classList.toggle('revealed')">
+                        <div class="cs-full">I need an answer.</div>
+                        <div class="cs-reduced">I nee-da nanswer.</div>
+                        <div class="cs-pronounce">/niːdəˈnænsər/ — consonant + vowel</div>
+                    </div>
+                    <div class="cs-item" onclick="this.classList.toggle('revealed')">
+                        <div class="cs-full">Pick it up.</div>
+                        <div class="cs-reduced">Pi-ki-tup.</div>
+                        <div class="cs-pronounce">/ˈpɪkɪˈtʌp/ — consonant + vowel chain</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reduction -->
+            <div class="cs-category">
+                <div class="cs-cat-header">Reduction (弱读)</div>
+                <div class="cs-items">
+                    <div class="cs-item" onclick="this.classList.toggle('revealed')">
+                        <div class="cs-full">What do you want?</div>
+                        <div class="cs-reduced">Whaddaya want?</div>
+                        <div class="cs-pronounce">/ˈwʌdəjə wɑːnt/ — "do you" reduces</div>
+                    </div>
+                    <div class="cs-item" onclick="this.classList.toggle('revealed')">
+                        <div class="cs-full">I am going to study.</div>
+                        <div class="cs-reduced">I'm gonna study.</div>
+                        <div class="cs-pronounce">/ˈgʌnə/ — "going to" reduces</div>
+                    </div>
+                    <div class="cs-item" onclick="this.classList.toggle('revealed')">
+                        <div class="cs-full">Do you want to go?</div>
+                        <div class="cs-reduced">Ya wanna go?</div>
+                        <div class="cs-pronounce">/jəˈwʌnə goʊ/ — multiple reductions</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elision -->
+            <div class="cs-category">
+                <div class="cs-cat-header">Elision (省音)</div>
+                <div class="cs-items">
+                    <div class="cs-item" onclick="this.classList.toggle('revealed')">
+                        <div class="cs-full">Next week</div>
+                        <div class="cs-reduced">Nex week</div>
+                        <div class="cs-pronounce">/neks wiːk/ — /t/ dropped between consonants</div>
+                    </div>
+                    <div class="cs-item" onclick="this.classList.toggle('revealed')">
+                        <div class="cs-full">I must go.</div>
+                        <div class="cs-reduced">I mus' go.</div>
+                        <div class="cs-pronounce">/mʌs goʊ/ — /t/ elided before consonant</div>
+                    </div>
+                    <div class="cs-item" onclick="this.classList.toggle('revealed')">
+                        <div class="cs-full">The first thing</div>
+                        <div class="cs-reduced">The firs' thing</div>
+                        <div class="cs-pronounce">/fɜːrs θɪŋ/ — /t/ elided, /s/ remains</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assimilation -->
+            <div class="cs-category">
+                <div class="cs-cat-header">Assimilation (同化)</div>
+                <div class="cs-items">
+                    <div class="cs-item" onclick="this.classList.toggle('revealed')">
+                        <div class="cs-full">Did you see it?</div>
+                        <div class="cs-reduced">Di-joo see it?</div>
+                        <div class="cs-pronounce">/ˈdɪdʒuː/ — /d/ + /j/ becomes /dʒ/</div>
+                    </div>
+                    <div class="cs-item" onclick="this.classList.toggle('revealed')">
+                        <div class="cs-full">Would you help?</div>
+                        <div class="cs-reduced">Woul-joo help?</div>
+                        <div class="cs-pronounce">/ˈwʊdʒuː/ — /d/ + /j/ becomes /dʒ/</div>
+                    </div>
+                    <div class="cs-item" onclick="this.classList.toggle('revealed')">
+                        <div class="cs-full">In practice</div>
+                        <div class="cs-reduced">Im practice</div>
+                        <div class="cs-pronounce">/ɪm ˈpræktɪs/ — /n/ assimilates to /m/ before /p/</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="update-banner" style="margin-top: 32px; background: #F0F9FF; border-color: #BAE6FD; color: #075985;">
+            <span class="update-icon">💡</span>
+            <div class="update-text" style="color: #075985;">
+                <strong>DET Connected Speech Tip:</strong> DET audio uses Standard American English at natural speed. 
+                Pay special attention to "did you" → "didja", "want to" → "wanna", and the disappearing /t/ between consonants. 
+                These are the most common sound changes that cause DET test-takers to miss words they actually know.
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 4: Video Shadowing -->
+<section class="section section-alt" id="shadowing">
+    <div class="container">
+        <div class="section-header">
+            <h2>Video Shadowing</h2>
+            <p>
+                Shadowing means repeating audio simultaneously as you hear it, like a simultaneous echo. 
+                It trains your brain to process sound at native speed without the mental translation step.
+            </p>
+        </div>
+
+        <div class="shadow-steps">
+            <div class="shadow-step">
+                <div class="step-num">1</div>
+                <h4>Watch</h4>
+                <p>Watch the video once with subtitles. Understand the content fully. Note any unfamiliar vocabulary.</p>
+            </div>
+            <div class="shadow-step">
+                <div class="step-num">2</div>
+                <h4>Listen</h4>
+                <p>Watch again without reading subtitles. Focus purely on the sound. Notice rhythm, stress, and intonation patterns.</p>
+            </div>
+            <div class="shadow-step">
+                <div class="step-num">3</div>
+                <h4>Shadow</h4>
+                <p>Play the video. Repeat the audio simultaneously, matching pace and intonation. Keep going even if you stumble.</p>
+            </div>
+            <div class="shadow-step">
+                <div class="step-num">4</div>
+                <h4>Record</h4>
+                <p>Record your shadowing and compare with the original. Identify gaps between your production and the native speaker's.</p>
+            </div>
+        </div>
+
+        <h3 style="margin: 48px 0 20px; font-family: 'Playfair Display', serif;">Recommended Sources</h3>
+        <div class="shadow-sources">
+            <div class="shadow-source">
+                <span class="ss-icon">🎬</span>
+                <div>
+                    <strong>TED-Ed</strong>
+                    <div style="font-size:0.8rem; color: var(--gray-dark);">5-6 min educational animations. Clear narration, academic vocabulary.</div>
+                </div>
+            </div>
+            <div class="shadow-source">
+                <span class="ss-icon">🏫</span>
+                <div>
+                    <strong>DET Practice Videos</strong>
+                    <div style="font-size:0.8rem; color: var(--gray-dark);">Official DET YouTube channel. Real test audio samples and sample answers.</div>
+                </div>
+            </div>
+            <div class="shadow-source">
+                <span class="ss-icon">📰</span>
+                <div>
+                    <strong>VOA Learning English</strong>
+                    <div style="font-size:0.8rem; color: var(--gray-dark);">Slower, carefully enunciated American English. Good starting point.</div>
+                </div>
+            </div>
+            <div class="shadow-source">
+                <span class="ss-icon">🎙️</span>
+                <div>
+                    <strong>NPR Short Wave</strong>
+                    <div style="font-size:0.8rem; color: var(--gray-dark);">10-min science podcasts. Natural conversation speed with academic topics.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="update-banner" style="margin-top: 32px; background: #FFF7ED; border-color: #FED7AA;">
+            <span class="update-icon">🎯</span>
+            <div class="update-text" style="color: #9A3412;">
+                <strong>Shadowing Protocol:</strong> 10 minutes daily. One video. Cycle through the four steps. 
+                After one week on the same video, you should be able to shadow it with near-perfect synchronization. 
+                This means your brain is processing English at native speed.
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 5: Gap-Fill Dictation -->
+<section class="section" id="gapfill">
+    <div class="container">
+        <div class="section-header">
+            <h2>Gap-Fill Dictation</h2>
+            <p>
+                Listen to a sentence with one word or phrase removed. Fill the gap. 
+                Progress from single words to phrases to reduced-form recognition.
+            </p>
+        </div>
+
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px;">
+            <button class="btn-sm btn-accent" onclick="toggleAllGaps()">Reveal All Answers</button>
+            <button class="btn-sm" onclick="resetAllGaps()">Reset All</button>
+        </div>
+
+        <div id="gapfill-container">
+            <!-- Generated by JS -->
+        </div>
+    </div>
+</section>
+
+<!-- Section 6: Practice Protocol -->
+<section class="section section-alt" id="protocol">
+    <div class="container">
+        <div class="section-header">
+            <h2>Daily Practice Protocol</h2>
+            <p>
+                A 20-minute daily routine combining all skills. Consistency beats cramming.
+            </p>
+        </div>
+
+        <div class="protocol-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Activity</th>
+                        <th>Focus</th>
+                        <th>Goal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="time-cell">0-3 min</td>
+                        <td>Connected Speech Warm-up</td>
+                        <td>5 reduced-form phrases, spoken aloud</td>
+                        <td>Prime your ear for sound changes</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">3-8 min</td>
+                        <td>Gap-Fill Dictation</td>
+                        <td>5 sentences, progressive difficulty</td>
+                        <td>Train precise word recognition</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">8-15 min</td>
+                        <td>Video Shadowing</td>
+                        <td>One short video, 4-step cycle</td>
+                        <td>Build processing speed and prosody</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">15-20 min</td>
+                        <td>Scenario Practice</td>
+                        <td>1 Interactive Listening scenario</td>
+                        <td>Apply WHO/WHAT/WHERE framework</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 style="margin: 48px 0 24px; font-family: 'Playfair Display', serif;">Self-Assessment Checklist</h3>
+        <ul class="checklist" id="checklist">
+            <li onclick="this.classList.toggle('checked')">
+                <span class="check"></span>
+                I can identify linking in natural speech
+            </li>
+            <li onclick="this.classList.toggle('checked')">
+                <span class="check"></span>
+                I recognize reduced forms (gonna, wanna, whaddaya)
+            </li>
+            <li onclick="this.classList.toggle('checked')">
+                <span class="check"></span>
+                I can shadow a 60-second clip with 80% accuracy
+            </li>
+            <li onclick="this.classList.toggle('checked')">
+                <span class="check"></span>
+                I can extract WHO/WHAT/WHERE from audio scenarios
+            </li>
+            <li onclick="this.classList.toggle('checked')">
+                <span class="check"></span>
+                I score 80%+ on gap-fill dictation
+            </li>
+            <li onclick="this.classList.toggle('checked')">
+                <span class="check"></span>
+                I practice listening for 20 minutes daily
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="k-footer">
+    <div class="container">
+        <p>IELTS with Kee — DET Listening Masterclass</p>
+        <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="/speaking.html">Speaking</a>
+            <a href="/det-listening.html">DET Listening</a>
+        </div>
+        <p style="margin-top: 16px; font-size: 0.78rem;">Updated July 2025. Complementary to L1 (The Acoustic Scribe) and L2 (The Context Navigator).</p>
+    </div>
+</footer>
+
+<script>
+    // Scenario toggles
+    function toggleScenario(id) {
+        const card = document.getElementById(id);
+        card.classList.toggle('open');
+        const header = card.querySelector('.scenario-header');
+        header.setAttribute('aria-expanded', card.classList.contains('open'));
+    }
+
+    // Check scenario answers
+    function checkAnswers(scenarioId) {
+        const card = document.getElementById(scenarioId);
+        const inputs = card.querySelectorAll('.scenario-blanks input');
+        const answersDiv = document.getElementById(scenarioId + '-answers');
+        let html = '';
+        let allCorrect = true;
+
+        inputs.forEach((input, i) => {
+            const userAnswer = input.value.trim().toLowerCase();
+            const correctAnswer = input.dataset.answer.toLowerCase();
+            const isCorrect = userAnswer === correctAnswer;
+
+            if (!isCorrect) allCorrect = false;
+
+            html += '<div class="answer-line">';
+            html += '<span style="color:var(--gray-mid);">Blank ' + (i + 1) + ': </span>';
+            if (isCorrect) {
+                html += '<span class="ans-correct">' + input.dataset.answer + ' ✓</span>';
+                input.style.borderColor = '#166534';
+                input.style.background = '#F0FDF4';
+            } else {
+                html += '<span style="color:#991B1B;">You wrote: "' + (userAnswer || '(empty)') + '"</span> ';
+                html += '<span class="ans-correct">Correct: ' + input.dataset.answer + '</span>';
+                input.style.borderColor = '#991B1B';
+                input.style.background = '#FEF2F2';
+            }
+            html += '</div>';
+        });
+
+        if (allCorrect) {
+            html = '<div style="color:#166534;font-weight:600;margin-bottom:8px;font-family:Inter,system-ui,sans-serif;">All correct!</div>' + html;
+        }
+
+        answersDiv.innerHTML = html;
+        answersDiv.style.display = 'block';
+    }
+
+    // Reveal all answers for a scenario
+    function revealAnswers(scenarioId) {
+        const card = document.getElementById(scenarioId);
+        const inputs = card.querySelectorAll('.scenario-blanks input');
+        const answersDiv = document.getElementById(scenarioId + '-answers');
+        let html = '';
+
+        inputs.forEach((input, i) => {
+            input.value = input.dataset.answer;
+            input.style.borderColor = '#166534';
+            input.style.background = '#F0FDF4';
+            html += '<div class="answer-line"><span style="color:var(--gray-mid);">Blank ' + (i + 1) + ': </span><span class="ans-correct">' + input.dataset.answer + '</span></div>';
+        });
+
+        answersDiv.innerHTML = html;
+        answersDiv.style.display = 'block';
+    }
+
+    // Toggle all connected speech
+    function toggleAllCS() {
+        const items = document.querySelectorAll('.cs-item');
+        const allRevealed = Array.from(items).every(item => item.classList.contains('revealed'));
+        items.forEach(item => {
+            if (allRevealed) {
+                item.classList.remove('revealed');
+            } else {
+                item.classList.add('revealed');
+            }
+        });
+        const toggle = document.querySelector('.cs-toggle-all');
+        toggle.innerHTML = allRevealed
+            ? '<i class="fa-solid fa-eye"></i> Show All Reduced Forms'
+            : '<i class="fa-solid fa-eye-slash"></i> Hide All Reduced Forms';
+    }
+
+    // Gap-fill data
+    const gapFillData = [
+        { diff: 'easy', text: 'The library provides access to thousands of {academic} journals.', answer: 'academic', hint: 'adjective describing journals' },
+        { diff: 'easy', text: 'Students must {submit} their assignments before the deadline.', answer: 'submit', hint: 'verb: hand in' },
+        { diff: 'easy', text: 'The professor will {discuss} the research methodology in class.', answer: 'discuss', hint: 'verb: talk about' },
+        { diff: 'medium', text: 'The university has invested in new {laboratory} equipment this year.', answer: 'laboratory', hint: 'noun: a room for scientific experiments' },
+        { diff: 'medium', text: 'The experiment results were {inconsistent} with the original hypothesis.', answer: 'inconsistent', hint: 'adjective: not matching, not agreeing' },
+        { diff: 'medium', text: 'We need to analyze the {data} before drawing any conclusions.', answer: 'data', hint: 'noun: facts and statistics' },
+        { diff: 'medium', text: 'The committee will evaluate your {proposal} next Monday.', answer: 'proposal', hint: 'noun: a formal suggestion or plan' },
+        { diff: 'hard', text: 'What do you think about the new {curriculum} changes?', answer: 'curriculum', hint: 'noun: the subjects in a course of study' },
+        { diff: 'hard', text: 'I am going to apply for the {scholarship} this semester.', answer: 'scholarship', hint: 'noun: financial award for students' },
+        { diff: 'hard', text: 'Did you hear about the {controversial} decision the board made?', answer: 'controversial', hint: 'adjective: causing public disagreement' },
+    ];
+
+    function renderGapFills() {
+        const container = document.getElementById('gapfill-container');
+        container.innerHTML = '';
+
+        gapFillData.forEach((item, index) => {
+            const div = document.createElement('div');
+            div.className = 'gap-item';
+            
+            const safeText = item.text.replace('{', '<span class="gap-blank" data-answer="' + item.answer + '" data-index="' + index + '" onclick="revealGap(this)">______</span>').replace('}', '');
+
+            div.innerHTML = `
+                <span class="gap-diff ${item.diff}">${item.diff.toUpperCase()}</span>
+                <div class="gap-sentence">${safeText}</div>
+                <div class="gap-hint">Hint: ${item.hint}</div>
+            `;
+            container.appendChild(div);
+        });
+    }
+
+    function revealGap(el) {
+        el.classList.add('revealed');
+        el.textContent = el.dataset.answer;
+    }
+
+    function toggleAllGaps() {
+        document.querySelectorAll('.gap-blank').forEach(el => {
+            el.classList.add('revealed');
+            el.textContent = el.dataset.answer;
+        });
+    }
+
+    function resetAllGaps() {
+        document.querySelectorAll('.gap-blank').forEach(el => {
+            el.classList.remove('revealed');
+            el.textContent = '______';
+        });
+    }
+
+    // Initialize
+    renderGapFills();
+</script>
+
+</body>
+</html>

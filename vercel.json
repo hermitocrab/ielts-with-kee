@@ -1,4 +1,6 @@
 {
+  "buildCommand": "",
+  "outputDirectory": ".",
   "headers": [
     {
       "source": "/speaking-p2/(.*)",
@@ -7,6 +9,15 @@
         { "key": "Pragma", "value": "no-cache" },
         { "key": "Expires", "value": "0" }
       ]
+    },
+    {
+      "source": "/det-listening",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache" }
+      ]
     }
+  ],
+  "rewrites": [
+    { "source": "/det-listening", "destination": "/det-listening.html" }
   ]
 }
